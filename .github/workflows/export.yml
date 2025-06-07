@@ -80,6 +80,7 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5.2.0
         with:
           repository: poe1
+          push_options: '--force-with-lease'
           commit_message: "[skip ci] Export ${{ needs.version.outputs.version }}"
       - uses: actions/upload-pages-artifact@v3.0.1
         with:
