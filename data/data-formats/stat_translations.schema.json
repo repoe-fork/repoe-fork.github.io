@@ -1,0 +1,226 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "type": "array",
+    "items": {
+        "$ref": "#/definitions/StatTranslationsSchemaElement"
+    },
+    "definitions": {
+        "StatTranslationsSchemaElement": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "English": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Stat"
+                    }
+                },
+                "ids": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "trade_stats": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/TradeStat"
+                    }
+                },
+                "hidden": {
+                    "type": "boolean"
+                },
+                "French": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Stat"
+                    }
+                },
+                "German": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Stat"
+                    }
+                },
+                "Japanese": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Stat"
+                    }
+                },
+                "Korean": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Stat"
+                    }
+                },
+                "Portuguese": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Stat"
+                    }
+                },
+                "Russian": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Stat"
+                    }
+                },
+                "Spanish": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Stat"
+                    }
+                },
+                "Thai": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Stat"
+                    }
+                },
+                "Traditional Chinese": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Stat"
+                    }
+                }
+            },
+            "required": [
+                "ids"
+            ],
+            "title": "StatTranslationsSchemaElement"
+        },
+        "Stat": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "condition": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Condition"
+                    }
+                },
+                "format": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Format"
+                    }
+                },
+                "index_handlers": {
+                    "type": "array",
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/definitions/IndexHandler"
+                        }
+                    }
+                },
+                "string": {
+                    "type": "string"
+                },
+                "reminder_text": {
+                    "type": "string"
+                },
+                "is_markup": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "condition",
+                "format",
+                "index_handlers",
+                "string"
+            ],
+            "title": "Stat"
+        },
+        "Condition": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "min": {
+                    "type": "integer"
+                },
+                "max": {
+                    "type": "integer"
+                },
+                "negated": {
+                    "type": "boolean"
+                }
+            },
+            "required": [],
+            "title": "Condition"
+        },
+        "TradeStat": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "text": {
+                    "type": "string"
+                },
+                "type": {
+                    "$ref": "#/definitions/Type"
+                },
+                "option": {
+                    "$ref": "#/definitions/TradeStatOption"
+                }
+            },
+            "required": [
+                "id",
+                "text",
+                "type"
+            ],
+            "title": "TradeStat"
+        },
+        "TradeStatOption": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "options": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/OptionElement"
+                    }
+                }
+            },
+            "required": [
+                "options"
+            ],
+            "title": "TradeStatOption"
+        },
+        "OptionElement": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "text": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "text"
+            ],
+            "title": "OptionElement"
+        },
+        "Format": {
+            "type": "string",
+            "enum": [
+                "ignore",
+                "#",
+                "+#"
+            ],
+            "title": "Format"
+        },
+        "IndexHandler": {
+            "type": "string"
+        },
+        "Type": {
+            "type": "string"
+        }
+    }
+}

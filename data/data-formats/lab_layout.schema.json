@@ -1,0 +1,122 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/LabLayoutSchema",
+    "definitions": {
+        "LabLayoutSchema": {
+            "type": "object",
+            "additionalProperties": {
+                "$ref": "#/definitions/Section"
+            },
+            "title": "LabLayoutSchema"
+        },
+        "Section": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "difficulty": {
+                    "type": "integer"
+                },
+                "rooms": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Room"
+                    }
+                },
+                "section": {
+                    "type": "integer"
+                },
+                "group": {
+                    "$ref": "#/definitions/Group"
+                }
+            },
+            "required": [
+                "difficulty",
+                "rooms",
+                "section"
+            ],
+            "title": "Section"
+        },
+        "Room": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "areas": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "connections": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    }
+                },
+                "override": {
+                    "$ref": "#/definitions/Override"
+                },
+                "row_id": {
+                    "type": "integer"
+                },
+                "x": {
+                    "type": "number"
+                },
+                "y": {
+                    "type": "number"
+                },
+                "secret_1": {
+                    "$ref": "#/definitions/Secret"
+                },
+                "secret_2": {
+                    "$ref": "#/definitions/Secret"
+                }
+            },
+            "required": [
+                "areas",
+                "connections",
+                "row_id",
+                "x",
+                "y"
+            ],
+            "title": "Room"
+        },
+        "Group": {
+            "type": "string",
+            "enum": [
+                "MandatoryGoldDoor"
+            ],
+            "title": "Group"
+        },
+        "Override": {
+            "type": "string",
+            "enum": [
+                "BottleneckOverride",
+                "Weylin03",
+                "Weylin04",
+                "FinalBossEasy",
+                "FinalBoss",
+                "AirlockEntry",
+                "Boss1_Sec1",
+                "Boss2_Sec1",
+                "Weylin01",
+                "Weylin02",
+                "Boss2_Sec2",
+                "Boss1_Sec2"
+            ],
+            "title": "Override"
+        },
+        "Secret": {
+            "type": "string",
+            "enum": [
+                "SilverKey",
+                "SilverDoorReward",
+                "GoldKey",
+                "GoldDoor",
+                "Gauntlet",
+                "GoldDoorModal",
+                "Trinket"
+            ],
+            "title": "Secret"
+        }
+    }
+}

@@ -1,0 +1,264 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "type": "object",
+    "additionalProperties": {
+        "$ref": "#/definitions/BaseItemsSchemaValue"
+    },
+    "definitions": {
+        "BaseItemsSchemaValue": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "domain": {
+                    "$ref": "#/definitions/Domain"
+                },
+                "drop_level": {
+                    "type": "integer"
+                },
+                "implicits": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "inventory_height": {
+                    "type": "integer"
+                },
+                "inventory_width": {
+                    "type": "integer"
+                },
+                "inherits_from": {
+                    "type": "string"
+                },
+                "item_class": {
+                    "$ref": "#/definitions/ItemClass"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "properties": {
+                    "$ref": "#/definitions/Properties"
+                },
+                "release_state": {
+                    "$ref": "#/definitions/ReleaseState"
+                },
+                "tags": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Tag"
+                    }
+                },
+                "visual_identity": {
+                    "$ref": "#/definitions/VisualIdentity"
+                },
+                "requirements": {
+                    "$ref": "#/definitions/Requirements"
+                },
+                "grants_buff": {
+                    "$ref": "#/definitions/GrantsBuff"
+                },
+                "skills_granted": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": [
+                "domain",
+                "drop_level",
+                "implicits",
+                "inventory_height",
+                "inventory_width",
+                "item_class",
+                "name",
+                "properties",
+                "release_state",
+                "tags",
+                "visual_identity"
+            ],
+            "title": "BaseItemsSchemaValue"
+        },
+        "GrantsBuff": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "stats": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "integer"
+                    }
+                }
+            },
+            "required": [
+                "id",
+                "stats"
+            ],
+            "title": "GrantsBuff"
+        },
+        "Properties": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "armour": {
+                    "$ref": "#/definitions/Armour"
+                },
+                "energy_shield": {
+                    "$ref": "#/definitions/Armour"
+                },
+                "evasion": {
+                    "$ref": "#/definitions/Armour"
+                },
+                "movement_speed": {
+                    "type": "integer"
+                },
+                "block": {
+                    "type": "integer"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "directions": {
+                    "type": "string"
+                },
+                "stack_size": {
+                    "type": "integer"
+                },
+                "stack_size_currency_tab": {
+                    "type": "integer"
+                },
+                "full_stack_turns_into": {
+                    "type": "string"
+                },
+                "charges_max": {
+                    "type": "integer"
+                },
+                "charges_per_use": {
+                    "type": "integer"
+                },
+                "duration": {
+                    "type": "integer"
+                },
+                "life_per_use": {
+                    "type": "integer"
+                },
+                "mana_per_use": {
+                    "type": "integer"
+                },
+                "attack_time": {
+                    "type": "integer"
+                },
+                "critical_strike_chance": {
+                    "type": "integer"
+                },
+                "physical_damage_max": {
+                    "type": "integer"
+                },
+                "physical_damage_min": {
+                    "type": "integer"
+                },
+                "range": {
+                    "type": "integer"
+                },
+                "mana_burn_ms": {
+                    "type": "integer"
+                },
+                "cooldown_ms": {
+                    "type": "integer"
+                },
+                "monster_id": {
+                    "type": "string"
+                },
+                "monster_ability_text": {
+                    "type": "string"
+                },
+                "monster_category": {
+                    "type": "string"
+                }
+            },
+            "required": [],
+            "title": "Properties"
+        },
+        "Armour": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "max": {
+                    "type": "integer"
+                },
+                "min": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "max",
+                "min"
+            ],
+            "title": "Armour"
+        },
+        "Requirements": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "dexterity": {
+                    "type": "integer"
+                },
+                "intelligence": {
+                    "type": "integer"
+                },
+                "level": {
+                    "type": "integer"
+                },
+                "strength": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "dexterity",
+                "intelligence",
+                "level",
+                "strength"
+            ],
+            "title": "Requirements"
+        },
+        "VisualIdentity": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "dds_file": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "dds_file",
+                "id"
+            ],
+            "title": "VisualIdentity"
+        },
+        "Domain": {
+            "type": "string"
+        },
+        "ItemClass": {
+            "type": "string"
+        },
+        "ReleaseState": {
+            "type": "string",
+            "enum": [
+                "released",
+                "unique_only",
+                "unreleased",
+                "legacy"
+            ],
+            "title": "ReleaseState"
+        },
+        "Tag": {
+            "type": "string"
+        }
+    }
+}

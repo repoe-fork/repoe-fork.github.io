@@ -1,0 +1,76 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "type": "object",
+    "additionalProperties": {
+        "$ref": "#/definitions/AudioSchemaValue"
+    },
+    "definitions": {
+        "AudioSchemaValue": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "npcs": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Npc"
+                    }
+                },
+                "characters": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "events": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "text": {
+                    "type": "string"
+                },
+                "audio": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "mono": {
+                    "type": "string"
+                },
+                "stereo": {
+                    "type": "string"
+                },
+                "video": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "text"
+            ],
+            "title": "AudioSchemaValue"
+        },
+        "Npc": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "short_name": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "name",
+                "short_name"
+            ],
+            "title": "Npc"
+        }
+    }
+}

@@ -1,0 +1,136 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "type": "object",
+    "additionalProperties": {
+        "oneOf": [
+            {
+                "$ref": "#/definitions/IntHandler"
+            },
+            {
+                "$ref": "#/definitions/RelationalData"
+            },
+            {
+                "$ref": "#/definitions/CanonicalLine"
+            },
+            {
+                "$ref": "#/definitions/Noop"
+            }
+        ]
+    },
+    "definitions": {
+        "IntHandler": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "addend": {
+                    "type": "number"
+                },
+                "divisor": {
+                    "type": "number"
+                },
+                "multiplier": {
+                    "type": "number"
+                },
+                "precision": {
+                    "type": "integer"
+                },
+                "fixed": {
+                    "type": "boolean"
+                },
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "int"
+                    ]
+                }
+            },
+            "required": [
+                "type"
+            ],
+            "title": "IntHandler"
+        },
+        "RelationalData": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "dat_file": {
+                    "type": "string"
+                },
+                "index_column": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "relational"
+                    ]
+                },
+                "value_column": {
+                    "type": "string"
+                },
+                "values": {
+                    "type": "object",
+                    "description": "Map from integer stat values to text associated with that value",
+                    "additionalProperties": {
+                        "type": "string"
+                    }
+                },
+                "predicate": {
+                    "$ref": "#/definitions/Predicate"
+                }
+            },
+            "required": [
+                "type",
+                "dat_file",
+                "value_column",
+                "values"
+            ],
+            "title": "RelationalData"
+        },
+        "Predicate": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "column": {
+                    "type": "string"
+                },
+                "value": {
+                    "type": "integer"
+                }
+            },
+            "title": "Predicate"
+        },
+        "CanonicalLine": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "string"
+                    ]
+                }
+            },
+            "required": [
+                "type"
+            ],
+            "title": "CanonicalLine"
+        },
+        "Noop": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "noop"
+                    ]
+                }
+            },
+            "required": [
+                "type"
+            ],
+            "title": "Noop"
+        }
+    }
+}

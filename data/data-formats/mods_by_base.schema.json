@@ -1,0 +1,86 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/ItemClasses",
+    "definitions": {
+        "ItemClasses": {
+            "type": "object",
+            "additionalProperties": {
+                "$ref": "#/definitions/TagSets"
+            }
+        },
+        "TagSets": {
+            "type": "object",
+            "additionalProperties": {
+                "oneOf": [
+                    {
+                        "$ref": "#/definitions/TagSet"
+                    },
+                    {
+                        "$ref": "#/definitions/SynthModGroups"
+                    },
+                    {
+                        "$ref": "#/definitions/EssenceModLevels"
+                    }
+                ]
+            }
+        },
+        "TagSet": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "bases": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "mods": {
+                    "$ref": "#/definitions/GenerationTypes"
+                }
+            },
+            "required": [
+                "bases",
+                "mods"
+            ]
+        },
+        "GenerationTypes": {
+            "type": "object",
+            "additionalProperties": {
+                "$ref": "#/definitions/ModTypes"
+            }
+        },
+        "ModTypes": {
+            "type": "object",
+            "additionalProperties": {
+                "$ref": "#/definitions/ModWeights"
+            }
+        },
+        "ModWeights": {
+            "type": "object",
+            "additionalProperties": {
+                "type": "integer"
+            }
+        },
+        "SynthModGroups": {
+            "type": "object",
+            "additionalProperties": {
+                "type": "array",
+                "items": {
+                    "type": "string"
+                }
+            }
+        },
+        "EssenceModLevels": {
+            "type": "object",
+            "additionalProperties": {
+                "$ref": "#/definitions/EssenceMods"
+            }
+        },
+        "EssenceMods": {
+            "type": "object",
+            "additionalProperties": {
+                "type": "string"
+            }
+        }
+    }
+}

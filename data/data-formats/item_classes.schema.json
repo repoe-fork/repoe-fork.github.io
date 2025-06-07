@@ -1,0 +1,34 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/ItemClassesSchema",
+    "definitions": {
+        "ItemClassesSchema": {
+            "type": "object",
+            "additionalProperties": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "category": {
+                        "type": "string"
+                    },
+                    "category_id": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "influence_tags": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "required": [
+                    "name"
+                ]
+            },
+            "title": "ItemClassesSchema"
+        }
+    }
+}

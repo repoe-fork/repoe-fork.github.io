@@ -1,0 +1,25 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "type": "object",
+    "additionalProperties": {
+        "$ref": "#/definitions/ModTypesSchemaValue"
+    },
+    "definitions": {
+        "ModTypesSchemaValue": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "sell_price_types": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": [
+                "sell_price_types"
+            ],
+            "title": "ModTypesSchemaValue"
+        }
+    }
+}

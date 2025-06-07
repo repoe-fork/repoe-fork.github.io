@@ -1,0 +1,122 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/FossilsSchema",
+    "definitions": {
+        "FossilsSchema": {
+            "type": "object",
+            "additionalProperties": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "added_mods": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "allowed_tags": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "blocked_descriptions": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "string"
+                        }
+                    },
+                    "changes_quality": {
+                        "type": "boolean"
+                    },
+                    "corrupted_essence_chance": {
+                        "type": "integer"
+                    },
+                    "descriptions": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "string"
+                        }
+                    },
+                    "forbidden_tags": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "forced_mods": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "mirrors": {
+                        "type": "boolean"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "negative_mod_weights": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/definitions/TiveModWeight"
+                        }
+                    },
+                    "positive_mod_weights": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/definitions/TiveModWeight"
+                        }
+                    },
+                    "rolls_lucky": {
+                        "type": "boolean"
+                    },
+                    "rolls_white_sockets": {
+                        "type": "boolean"
+                    },
+                    "sell_price_mods": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "required": [
+                    "added_mods",
+                    "allowed_tags",
+                    "blocked_descriptions",
+                    "changes_quality",
+                    "corrupted_essence_chance",
+                    "descriptions",
+                    "forbidden_tags",
+                    "forced_mods",
+                    "mirrors",
+                    "name",
+                    "negative_mod_weights",
+                    "positive_mod_weights",
+                    "rolls_lucky",
+                    "rolls_white_sockets",
+                    "sell_price_mods"
+                ],
+                "title": "MetadataItemsCurrencyCurrencyDelveCraftingAbyss"
+            }
+        },
+        "TiveModWeight": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "tag": {
+                    "type": "string"
+                },
+                "weight": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "tag",
+                "weight"
+            ],
+            "title": "TiveModWeight"
+        }
+    }
+}

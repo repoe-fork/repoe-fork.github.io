@@ -1,0 +1,167 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "type": "object",
+    "additionalProperties": {
+        "$ref": "#/definitions/ModsSchemaValue"
+    },
+    "definitions": {
+        "ModsSchemaValue": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "adds_tags": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/AddsTag"
+                    }
+                },
+                "domain": {
+                    "$ref": "#/definitions/Domain"
+                },
+                "generation_type": {
+                    "$ref": "#/definitions/GenerationType"
+                },
+                "generation_weights": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/NWeight"
+                    }
+                },
+                "grants_effects": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/GrantsEffect"
+                    }
+                },
+                "groups": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "implicit_tags": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/ImplicitTag"
+                    }
+                },
+                "is_essence_only": {
+                    "type": "boolean"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "required_level": {
+                    "type": "integer"
+                },
+                "spawn_weights": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/NWeight"
+                    }
+                },
+                "stats": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Stat"
+                    }
+                },
+                "text": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string"
+                },
+                "gold_value": {
+                    "type": "number"
+                }
+            },
+            "required": [
+                "adds_tags",
+                "domain",
+                "generation_type",
+                "generation_weights",
+                "grants_effects",
+                "groups",
+                "implicit_tags",
+                "is_essence_only",
+                "name",
+                "required_level",
+                "spawn_weights",
+                "stats",
+                "type"
+            ],
+            "title": "ModsSchemaValue"
+        },
+        "NWeight": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "tag": {
+                    "$ref": "#/definitions/Tag"
+                },
+                "weight": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "tag",
+                "weight"
+            ],
+            "title": "NWeight"
+        },
+        "GrantsEffect": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "granted_effect_id": {
+                    "type": "string"
+                },
+                "level": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "granted_effect_id",
+                "level"
+            ],
+            "title": "GrantsEffect"
+        },
+        "Stat": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "max": {
+                    "type": "integer"
+                },
+                "min": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "id",
+                "max",
+                "min"
+            ],
+            "title": "Stat"
+        },
+        "AddsTag": {
+            "type": "string"
+        },
+        "Domain": {
+            "type": "string"
+        },
+        "GenerationType": {
+            "type": "string"
+        },
+        "Tag": {
+            "type": "string"
+        },
+        "ImplicitTag": {
+            "type": "string"
+        }
+    }
+}

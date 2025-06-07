@@ -1,0 +1,79 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "type": "array",
+    "items": {
+        "$ref": "#/definitions/CraftingBenchOptionsSchemaElement"
+    },
+    "definitions": {
+        "CraftingBenchOptionsSchemaElement": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "actions": {
+                    "$ref": "#/definitions/Actions"
+                },
+                "bench_tier": {
+                    "type": "integer"
+                },
+                "cost": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "integer"
+                    }
+                },
+                "item_classes": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/ItemClass"
+                    }
+                },
+                "master": {
+                    "$ref": "#/definitions/Master"
+                }
+            },
+            "required": [
+                "actions",
+                "bench_tier",
+                "cost",
+                "item_classes",
+                "master"
+            ],
+            "title": "CraftingBenchOptionsSchemaElement"
+        },
+        "Actions": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "change_socket_count": {
+                    "type": "integer"
+                },
+                "link_sockets": {
+                    "type": "integer"
+                },
+                "color_sockets": {
+                    "type": "string"
+                },
+                "add_explicit_mod": {
+                    "type": "string"
+                },
+                "remove_crafted_mods": {
+                    "type": "boolean"
+                },
+                "add_enchant_mod": {
+                    "type": "string"
+                },
+                "remove_enchantments": {
+                    "type": "boolean"
+                }
+            },
+            "required": [],
+            "title": "Actions"
+        },
+        "ItemClass": {
+            "type": "string"
+        },
+        "Master": {
+            "type": "string"
+        }
+    }
+}

@@ -1,0 +1,134 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/EssencesSchema",
+    "definitions": {
+        "EssencesSchema": {
+            "type": "object",
+            "additionalProperties": {
+                "$ref": "#/definitions/Essence"
+            },
+            "title": "EssencesSchema"
+        },
+        "Type": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "is_corruption_only": {
+                    "type": "boolean"
+                },
+                "tier": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "is_corruption_only",
+                "tier"
+            ],
+            "title": "Type"
+        },
+        "Essence": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "item_level_restriction": {
+                    "type": "integer"
+                },
+                "level": {
+                    "type": "integer"
+                },
+                "mods": {
+                    "$ref": "#/definitions/EssenceMods"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "spawn_level_min": {
+                    "type": "integer"
+                },
+                "type": {
+                    "$ref": "#/definitions/Type"
+                }
+            },
+            "required": [
+                "level",
+                "name",
+                "spawn_level_min",
+                "type"
+            ],
+            "title": "Essence"
+        },
+        "EssenceMods": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "Amulet": {
+                    "type": "string"
+                },
+                "Belt": {
+                    "type": "string"
+                },
+                "Body Armour": {
+                    "type": "string"
+                },
+                "Boots": {
+                    "type": "string"
+                },
+                "Bow": {
+                    "type": "string"
+                },
+                "Claw": {
+                    "type": "string"
+                },
+                "Dagger": {
+                    "type": "string"
+                },
+                "Gloves": {
+                    "type": "string"
+                },
+                "Helmet": {
+                    "type": "string"
+                },
+                "One Hand Axe": {
+                    "type": "string"
+                },
+                "One Hand Mace": {
+                    "type": "string"
+                },
+                "One Hand Sword": {
+                    "type": "string"
+                },
+                "Quiver": {
+                    "type": "string"
+                },
+                "Ring": {
+                    "type": "string"
+                },
+                "Sceptre": {
+                    "type": "string"
+                },
+                "Shield": {
+                    "type": "string"
+                },
+                "Staff": {
+                    "type": "string"
+                },
+                "Thrusting One Hand Sword": {
+                    "type": "string"
+                },
+                "Two Hand Axe": {
+                    "type": "string"
+                },
+                "Two Hand Mace": {
+                    "type": "string"
+                },
+                "Two Hand Sword": {
+                    "type": "string"
+                },
+                "Wand": {
+                    "type": "string"
+                }
+            },
+            "title": "EssenceMods"
+        }
+    }
+}
