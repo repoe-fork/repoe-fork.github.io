@@ -72,7 +72,7 @@ jobs:
         run: |
           find data -type d -exec tree {} -H '.' --dirsfirst -F -L 1 -T "RePoE - PoE version ${{ needs.version.outputs.version }}" -I 'index.html|schema_doc*' --noreport --charset utf-8 -o {}/index.html \;
           find data -name index.html -exec sed -i 's|<h1>RePoE|<h1><a href="https://github.com/repoe-fork/repoe-fork">RePoE</a>|' {} \;
-          mv index.html poe1.html
+          mv data/index.html data/poe1.html
           cat README.md | pipx run grip - --export data/index.html
         working-directory: poe1
       - name: commit changes
