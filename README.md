@@ -1,6 +1,7 @@
 # RePoE
 
-Repository of Path of Exile resources for tool developers. Source code available at https://github.com/repoe-fork/repoe.
+Repository of Path of Exile resources for tool developers. Source code available
+at https://github.com/repoe-fork/repoe.
 
 ## Files
 
@@ -9,24 +10,25 @@ each of which can be found at the matching subdirectory within the gh-pages doma
 except the original poe1 export, which is found at the root of the subdomain,
 for compatibility reasons:
 
- - [poe1 data export](https://repoe-fork.github.io/poe1.html) - a selection of data exported from
-the game files in json format. The output data formats are specified by json schemas that can be found in
-the [data-formats](https://repoe-fork.github.io/data-formats) - you should be able to generate data
-structures for your preferred language using [quicktype](https://quicktype.io/) or a similar tool.
- - [poe2 data export](https://repoe-fork.github.io/poe2) - poe2 data generated in the same manner.
-Uses the same data formats as the poe1 export where possible.
- - [Path of Building data export](https://repoe-fork.github.io/pob-data) - an export of data found
-within PoB's source code, for both [poe1](https://repoe-fork.github.io/pob-data/poe1) and
-[poe2](https://repoe-fork.github.io/pob-data/poe2). Of note is the `Uniques` subdirectory, which
-is hand maintained by the Path of Building team - unique data cannot be datamined from the game files,
-thus the other two exports only contain minimal information about unique items.
+- [poe1 data export](https://repoe-fork.github.io/poe1.html) - a selection of data exported from
+  the game files in json format. The output data formats are specified by json schemas that can be
+  found in [data-formats](https://repoe-fork.github.io/data-formats) - you should be able to
+  generate data structures for your preferred language using [quicktype](https://quicktype.io/) or a
+  similar tool.
+- [poe2 data export](https://repoe-fork.github.io/poe2) - poe2 data generated in the same manner.
+  Uses the same data formats as the poe1 export where possible.
+- [Path of Building data export](https://repoe-fork.github.io/pob-data) - an export of data found
+  within PoB's source code, for both [poe1](https://repoe-fork.github.io/pob-data/poe1) and
+  [poe2](https://repoe-fork.github.io/pob-data/poe2). Of note is the `Uniques` subdirectory, which
+  is hand maintained by the Path of Building team (this information is not in the game files thus
+  cannot be data-mined).
 
-Web apps using provided files should link to files in the
-[gh-pages](https://repoe-fork.github.io/), for better performance and caching behavior
-than linking to raw files in the repository.
+If you wish to access any of the asset files referenced by these datafiles, try
+[ggpk-exposed](https://github.com/ggpk-exposed). For instance, .dds files can be viewed with
+`image.ggpk.exposed/{game}/{path}`, optionally adding a `format` query parameter such as
+`?format=png` to override content negotiation. Demo:
 
-Note that the file formats are not final, they may change at any time, e.g. when the format
-of files in the GGPK changes.
+![buff on fire](https://image.ggpk.exposed/poe1/Art/2DArt/BuffIcons/buffonfire.dds)
 
 The following data is currently exported:
 
@@ -46,7 +48,7 @@ The following data is currently exported:
 - `base_items.json`: Describes base item types. Contains information applicable to
   all item types, e.g. inventory size, item class and tags, as well as attribute
   requirements and properties.
-- `tags.json`: Lists all possible item tags. These are the tags used in `base_items.json` and 
+- `tags.json`: Lists all possible item tags. These are the tags used in `base_items.json` and
   `mods.json`.
 - `item_classes.json`: Defines the item class ids and the tags added to items when they are
   Shaper/Elder items.
@@ -55,20 +57,23 @@ The following data is currently exported:
 - `default_monster_stats.json`: Describes the stat base values of monsters at specific levels.
 - `characters.json`: Describes the stat base values of the different player character classes.
 - `flavour.json`: Table containing the flavour text used throughout the game.
-- `fossils.json`: Describes fossils. Defines the mods they spawn, the tags they affect, and 
+- `fossils.json`: Describes fossils. Defines the mods they spawn, the tags they affect, and
   auxillary effects of the fossils.
 - `mod_types.json`: Describes the types of mods with sell price information and the tags
   relevant for fossil crafting.
-- `cluster_jewels.json`: Describes how cluster jewels can be generated and how they influence the passive tree. 
-- `cluster_jewel_notables.json`: Lists the notable and keystone passive skills that can appear on cluster jewels.
+- `cluster_jewels.json`: Describes how cluster jewels can be generated and how they influence the
+  passive tree.
+- `cluster_jewel_notables.json`: Lists the notable and keystone passive skills that can appear on
+  cluster jewels.
 - `cost_types.json`: Defines the resource cost types used in `gems.json`.
 - `active_skill_types.json`: List the active skill types used in `gems.json`.
 - `uniques.json`: Lists the names and art files of unique items - this is the only information
-included in the data files.
+  included in the data files.
 
 ## Credits
 
-- [Grinding Gear Games](http://www.grindinggear.com/) for [Path of Exile](https://www.pathofexile.com/).
+- [Grinding Gear Games](http://www.grindinggear.com/)
+  for [Path of Exile](https://www.pathofexile.com/).
   The contents of all `data` files obviously belong to them.
 - [OmegaK2](https://github.com/OmegaK2/) for [PyPoE](https://github.com/OmegaK2/PyPoE).
 - [Project PoE Wiki](poewiki.net) for updating PyPoE to handle the latest data format.

@@ -63,7 +63,9 @@ jobs:
             poetry run datamodel-codegen --input $i --input-file-type jsonschema --output ../model/${i/.schema.json/.py} --output-model-type pydantic_v2.BaseModel --disable-timestamp --use-double-quotes --enable-version-header
           done
         working-directory: RePoE/RePoE/schema
-      - run: poetry run generate-schema-doc --config footer_show_time=false RePoE/schema ../poe1/data/data-formats
+      - run: |
+          cp RePoE/schema/* ../poe1/data/data-formats
+          poetry run generate-schema-doc --config footer_show_time=false RePoE/schema ../poe1/data/data-formats
         working-directory: RePoE
       - name: run export
         run: poetry run repoe all -l all -o ../poe1/data
@@ -73,7 +75,7 @@ jobs:
           find data -type d -exec tree {} -H '.' --dirsfirst -F -L 1 -T "RePoE - PoE version ${{ needs.version.outputs.version }}" -I 'index.html|schema_doc*' --noreport --charset utf-8 -o {}/index.html \;
           find data -name index.html -exec sed -i 's|<h1>RePoE|<h1><a href="https://github.com/repoe-fork/repoe-fork">RePoE</a>|' {} \;
           mv data/index.html data/poe1.html
-          cat README.md | pipx run grip - --export data/index.html
+          npx -y markdown-to-html-cli --output data/index.html
         working-directory: poe1
       - name: commit changes
         id: autocommit
