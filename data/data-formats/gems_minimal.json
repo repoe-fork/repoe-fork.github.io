@@ -1,11 +1,11 @@
 {
     "$schema": "http://json-schema.org/draft-06/schema#",
-    "type": "object",
-    "additionalProperties": {
-        "$ref": "#/definitions/GemsSchemaValue"
+    "type": "array",
+    "items": {
+        "$ref": "#/definitions/GemsMinimalSchemaElement"
     },
     "definitions": {
-        "GemsSchemaValue": {
+        "GemsMinimalSchemaElement": {
             "type": "object",
             "additionalProperties": false,
             "properties": {
@@ -27,26 +27,11 @@
                 "is_support": {
                     "type": "boolean"
                 },
-                "per_level": {
-                    "type": "object",
-                    "additionalProperties": {
-                        "$ref": "#/definitions/PerLevel"
-                    }
-                },
-                "quest_reward": {
-                    "$ref": "#/definitions/QuestReward"
-                },
                 "stat_translation_file": {
                     "$ref": "#/definitions/StatTranslationFile"
                 },
                 "static": {
                     "$ref": "#/definitions/Static"
-                },
-                "tags": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/definitions/Tag"
-                    }
                 },
                 "tooltip_order": {
                     "type": "array",
@@ -54,24 +39,35 @@
                         "type": "string"
                     }
                 },
-                "discriminator": {
-                    "$ref": "#/definitions/Discriminator"
+                "tags": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Tag"
+                    }
                 },
                 "secondary_granted_effect": {
                     "type": "string"
+                },
+                "quest_reward": {
+                    "$ref": "#/definitions/QuestReward"
+                },
+                "discriminator": {
+                    "$ref": "#/definitions/Discriminator"
                 },
                 "support_gem": {
                     "$ref": "#/definitions/SupportGem"
                 }
             },
             "required": [
+                "base_item",
                 "color",
+                "display_name",
                 "is_support",
-                "per_level",
                 "stat_translation_file",
-                "static"
+                "static",
+                "tags"
             ],
-            "title": "GemsSchemaValue"
+            "title": "GemsMinimalSchemaElement"
         },
         "ActiveSkill": {
             "type": "object",
@@ -110,14 +106,14 @@
                         "$ref": "#/definitions/WeaponRestriction"
                     }
                 },
-                "skill_totem_life_multiplier": {
-                    "type": "number"
-                },
                 "minion_types": {
                     "type": "array",
                     "items": {
                         "$ref": "#/definitions/MinionTypeElement"
                     }
+                },
+                "skill_totem_life_multiplier": {
+                    "type": "number"
                 }
             },
             "required": [
@@ -127,6 +123,7 @@
                 "is_manually_casted",
                 "is_skill_totem",
                 "stat_conversions",
+                "types",
                 "weapon_restrictions"
             ],
             "title": "ActiveSkill"
@@ -159,134 +156,6 @@
                 "release_state"
             ],
             "title": "BaseItem"
-        },
-        "PerLevel": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-                "costs": {
-                    "$ref": "#/definitions/PerLevelCosts"
-                },
-                "experience": {
-                    "type": "integer"
-                },
-                "required_level": {
-                    "type": "integer"
-                },
-                "stat_requirements": {
-                    "$ref": "#/definitions/StatRequirements"
-                },
-                "stat_text": {
-                    "type": "object",
-                    "additionalProperties": {
-                        "type": "string"
-                    }
-                },
-                "stats": {
-                    "type": "array",
-                    "items": {
-                        "anyOf": [
-                            {
-                                "$ref": "#/definitions/Stat"
-                            },
-                            {
-                                "type": "null"
-                            }
-                        ]
-                    }
-                },
-                "reservations": {
-                    "$ref": "#/definitions/PerLevelReservations"
-                },
-                "damage_effectiveness": {
-                    "type": "integer"
-                },
-                "damage_multiplier": {
-                    "type": "integer"
-                },
-                "cooldown": {
-                    "type": "integer"
-                },
-                "cost_multiplier": {
-                    "type": "integer"
-                },
-                "stored_uses": {
-                    "type": "integer"
-                }
-            },
-            "required": [],
-            "title": "PerLevel"
-        },
-        "PerLevelCosts": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-                "Mana": {
-                    "type": "integer"
-                },
-                "Life": {
-                    "type": "integer"
-                },
-                "ManaPerMinute": {
-                    "type": "integer"
-                },
-                "ES": {
-                    "type": "integer"
-                }
-            },
-            "required": [],
-            "title": "PerLevelCosts"
-        },
-        "PerLevelReservations": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-                "mana_flat": {
-                    "type": "integer"
-                },
-                "mana_percent": {
-                    "type": "number"
-                }
-            },
-            "required": [],
-            "title": "PerLevelReservations"
-        },
-        "StatRequirements": {
-            "allOf": [
-                {
-                    "type": "object",
-                    "additionalProperties": {
-                        "type": "integer"
-                    }
-                },
-                {
-                    "type": "object",
-                    "properties": {
-                        "int": true,
-                        "str": true,
-                        "dex": true
-                    }
-                }
-            ],
-            "title": "StatRequirements",
-            "$comment": "workaround for https://github.com/pydantic/pydantic/issues/8240, should just be 3 integer properties"
-        },
-        "Stat": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-                "value": {
-                    "type": "integer"
-                },
-                "id": {
-                    "type": "string"
-                },
-                "type": {
-                    "$ref": "#/definitions/StatType"
-                }
-            },
-            "required": [],
-            "title": "Stat"
         },
         "QuestReward": {
             "type": "object",
@@ -350,53 +219,51 @@
                         ]
                     }
                 },
+                "vaal": {
+                    "$ref": "#/definitions/Vaal"
+                },
+                "costs": {
+                    "$ref": "#/definitions/Costs"
+                },
+                "attack_speed_multiplier": {
+                    "type": "integer"
+                },
                 "cooldown": {
                     "type": "integer"
                 },
                 "stored_uses": {
                     "type": "integer"
                 },
-                "required_level": {
-                    "type": "integer"
-                },
-                "attack_speed_multiplier": {
-                    "type": "integer"
-                },
-                "costs": {
-                    "$ref": "#/definitions/StaticCosts"
-                },
                 "cost_multiplier": {
                     "type": "integer"
                 },
-                "reservations": {
-                    "$ref": "#/definitions/StaticReservations"
+                "cooldown_bypass_type": {
+                    "$ref": "#/definitions/CooldownBypassType"
+                },
+                "required_level": {
+                    "type": "integer"
                 },
                 "experience": {
                     "type": "integer"
                 },
+                "reservations": {
+                    "$ref": "#/definitions/Reservations"
+                },
                 "damage_multiplier": {
                     "type": "integer"
-                },
-                "vaal": {
-                    "$ref": "#/definitions/Vaal"
-                },
-                "cooldown_bypass_type": {
-                    "$ref": "#/definitions/CooldownBypassType"
                 }
             },
             "required": [
-                "quality_stats"
+                "quality_stats",
+                "stat_requirements"
             ],
             "title": "Static"
         },
-        "StaticCosts": {
+        "Costs": {
             "type": "object",
             "additionalProperties": false,
             "properties": {
                 "Mana": {
-                    "type": "integer"
-                },
-                "Life": {
                     "type": "integer"
                 },
                 "ManaPercent": {
@@ -404,7 +271,7 @@
                 }
             },
             "required": [],
-            "title": "StaticCosts"
+            "title": "Costs"
         },
         "QualityStat": {
             "type": "object",
@@ -426,14 +293,11 @@
             ],
             "title": "QualityStat"
         },
-        "StaticReservations": {
+        "Reservations": {
             "type": "object",
             "additionalProperties": false,
             "properties": {
                 "mana_percent": {
-                    "type": "number"
-                },
-                "life_percent": {
                     "type": "number"
                 },
                 "mana_flat": {
@@ -441,7 +305,46 @@
                 }
             },
             "required": [],
-            "title": "StaticReservations"
+            "title": "Reservations"
+        },
+        "StatRequirements": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "integer"
+                    }
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "int": true,
+                        "str": true,
+                        "dex": true
+                    }
+                }
+            ],
+            "title": "StatRequirements",
+            "$comment": "workaround for https://github.com/pydantic/pydantic/issues/8240, should just be 3 integer properties"
+        },
+        "Stat": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "type": {
+                    "$ref": "#/definitions/StatType"
+                },
+                "value": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "type"
+            ],
+            "title": "Stat"
         },
         "Vaal": {
             "type": "object",
@@ -470,17 +373,23 @@
                         "$ref": "#/definitions/MinionTypeElement"
                     }
                 },
-                "excluded_types": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/definitions/MinionTypeElement"
-                    }
-                },
                 "letter": {
                     "type": "string"
                 },
                 "supports_gems_only": {
                     "type": "boolean"
+                },
+                "support_name": {
+                    "type": "string"
+                },
+                "support_text": {
+                    "type": "string"
+                },
+                "excluded_types": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/MinionTypeElement"
+                    }
                 },
                 "added_types": {
                     "type": "array",
@@ -522,10 +431,10 @@
         "Color": {
             "type": "string",
             "enum": [
+                "b",
                 "r",
                 "g",
-                "w",
-                "b"
+                "w"
             ],
             "title": "Color"
         },
@@ -536,17 +445,6 @@
                 "alt_y"
             ],
             "title": "Discriminator"
-        },
-        "StatType": {
-            "type": "string",
-            "enum": [
-                "float",
-                "constant",
-                "additional",
-                "implicit",
-                "flag"
-            ],
-            "title": "StatType"
         },
         "Class": {
             "type": "string"
@@ -562,6 +460,17 @@
                 "expend_endurance_charge"
             ],
             "title": "CooldownBypassType"
+        },
+        "StatType": {
+            "type": "string",
+            "enum": [
+                "float",
+                "constant",
+                "additional",
+                "implicit",
+                "flag"
+            ],
+            "title": "StatType"
         },
         "Tag": {
             "type": "string"
