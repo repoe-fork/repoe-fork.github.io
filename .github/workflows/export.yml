@@ -58,13 +58,6 @@ jobs:
         working-directory: RePoE
       - run: poetry run pypoe_schema_import -a stable
         working-directory: RePoE
-      - name: update models
-        run: |
-          for i in *.schema.json
-          do
-            poetry run datamodel-codegen --input $i --input-file-type jsonschema --output ../model/${i/.schema.json/.py} --output-model-type pydantic_v2.BaseModel --disable-timestamp --use-double-quotes --enable-version-header
-          done
-        working-directory: RePoE/RePoE/schema
       - run: |
           cp RePoE/schema/* ../poe1/data/data-formats
           poetry run generate-schema-doc --config footer_show_time=false RePoE/schema ../poe1/data/data-formats
