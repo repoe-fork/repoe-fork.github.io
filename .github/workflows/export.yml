@@ -14,6 +14,8 @@ jobs:
       - uses: actions/checkout@v4.2.2
       - run: curl --fail 'https://ggpk.exposed/version?poe=1' | sed -r 's|.*/([0-9](\.[0-9]+)+)/$|\1|' > version.txt
       - run: git ls-remote https://github.com/poe-tool-dev/dat-schema.git refs/heads/main > schema.txt
+      - name: copy version.txt to old location
+        run: cp version.txt RePoE/data/version.txt
       - id: version
         run: echo "version=$(cat version.txt)" >> "$GITHUB_OUTPUT"
       - id: autocommit
@@ -70,13 +72,6 @@ jobs:
       - name: run export
         run: poetry run repoe all -l all -o ../poe1/data
         working-directory: RePoE
-      - name: generate index.html
-        run: |
-          find data -type d -exec tree {} -H '.' --dirsfirst -F -L 1 -T "RePoE - PoE version ${{ needs.version.outputs.version }}" -I 'index.html|schema_doc*' --noreport --charset utf-8 -o {}/index.html \;
-          find data -name index.html -exec sed -i 's|<h1>RePoE|<h1><a href="https://github.com/repoe-fork/repoe-fork">RePoE</a>|' {} \;
-          mv data/index.html data/poe1.html
-          npx -y markdown-to-html-cli --output data/index.html
-        working-directory: poe1
       - name: commit changes
         id: autocommit
         uses: stefanzweifel/git-auto-commit-action@v5.2.0
@@ -84,6 +79,14 @@ jobs:
           repository: poe1
           push_options: '--force-with-lease'
           commit_message: "[skip ci] Export ${{ needs.version.outputs.version }}"
+      - name: generate index.html
+        run: |
+          find data -type d -exec tree {} -H '.' --dirsfirst -F -L 1 -T "RePoE - PoE version ${{ needs.version.outputs.version }}" -I 'index.html|schema_doc*' --noreport --charset utf-8 -o {}/index.html \;
+          find data -name index.html -exec sed -i 's|<h1>RePoE|<h1><a href="https://github.com/repoe-fork/repoe-fork">RePoE</a>|' {} \;
+          mv data/index.html data/poe1.html
+          npx -y markdown-to-html-cli --output data/index.html
+          cp *.txt data
+        working-directory: poe1
       - uses: actions/upload-pages-artifact@v3.0.1
         with:
           path: poe1/data
