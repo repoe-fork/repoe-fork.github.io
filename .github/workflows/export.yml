@@ -70,6 +70,7 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5.2.0
         with:
           repository: poe1
+          skip_fetch: true
           push_options: '--force-with-lease'
           commit_message: "[skip ci] Export ${{ needs.version.outputs.version }}"
       - name: generate index.html
