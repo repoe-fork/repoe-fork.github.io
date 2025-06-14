@@ -528,7 +528,7 @@
         "index_handlers": [
           []
         ],
-        "string": "คุณไม่สามารถใช้สกิลนี้ได้ รูปปั้นจะใช้สกิลนี้แทนคุณ",
+        "string": "คุณไม่สามารถใช้สกิลนี้ได้ รูปปั้นของคุณจะใช้สกิลนี้แทนคุณ",
         "reminder_text": null,
         "is_markup": null
       },
@@ -546,7 +546,25 @@
         "index_handlers": [
           []
         ],
-        "string": "คุณไม่สามารถใช้สกิลนี้ได้ โทเทมจะใช้สกิลนี้แทนคุณ",
+        "string": "คุณไม่สามารถใช้สกิลนี้ได้ โทเทมของคุณจะใช้สกิลนี้แทนคุณ",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 3,
+            "max": 3,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "คุณไม่สามารถใช้สกิลนี้ได้ ความทรงจำเชปเปอร์จะใช้สกิลนี้แทนคุณ",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2397,8 +2415,9 @@
     "English": null,
     "ids": [
       "is_totem",
-      "number_of_totems_to_summon",
-      "is_ranged_attack_totem"
+      "is_ranged_attack_totem",
+      "active_skill_summon_X_totems_in_ring_override",
+      "number_of_totems_to_summon"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -2419,7 +2438,12 @@
           },
           {
             "min": 0,
-            "max": 1,
+            "max": 0,
+            "negated": null
+          },
+          {
+            "min": 2,
+            "max": null,
             "negated": null
           },
           {
@@ -2431,9 +2455,89 @@
         "format": [
           "ignore",
           "ignore",
+          "#",
           "ignore"
         ],
         "index_handlers": [
+          [],
+          [],
+          [],
+          []
+        ],
+        "string": "อัญเชิญ โทเทม {2} เสา ที่ใช้ สกิลนี้ ออกมาเป็นวง",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "ignore",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          [],
+          []
+        ],
+        "string": "อัญเชิญ โทเทมเครื่องยิง {2} เสา ที่ใช้ สกิลนี้ ออกมาเป็นวง",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "ignore",
+          "ignore",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
           [],
           [],
           []
@@ -2451,16 +2555,22 @@
           },
           {
             "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
             "max": 1,
             "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
           }
         ],
         "format": [
+          "ignore",
           "ignore",
           "ignore",
           "ignore"
@@ -2468,9 +2578,10 @@
         "index_handlers": [
           [],
           [],
+          [],
           []
         ],
-        "string": "อัญเชิญ โทเทมหน้าไม้ 1 เสา ที่ใช้ สกิลนี้",
+        "string": "อัญเชิญ โทเทมเครื่องยิง 1 เสา ที่ใช้ สกิลนี้",
         "reminder_text": null,
         "is_markup": null
       },
@@ -2482,27 +2593,34 @@
             "negated": true
           },
           {
-            "min": 2,
-            "max": null,
+            "min": 0,
+            "max": 0,
             "negated": null
           },
           {
             "min": 0,
             "max": 0,
             "negated": null
+          },
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
           }
         ],
         "format": [
-          "#",
           "ignore",
-          "ignore"
+          "ignore",
+          "ignore",
+          "#"
         ],
         "index_handlers": [
           [],
           [],
+          [],
           []
         ],
-        "string": "อัญเชิญ โทเทม {0} เสา ที่ใช้ สกิลนี้",
+        "string": "อัญเชิญ โทเทม {3} เสา ที่ใช้ สกิลนี้",
         "reminder_text": null,
         "is_markup": null
       },
@@ -2514,27 +2632,112 @@
             "negated": true
           },
           {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          },
+          {
             "min": 2,
             "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "ignore",
+          "ignore",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          [],
+          []
+        ],
+        "string": "อัญเชิญ โทเทมเครื่องยิง {3} เสา ที่ใช้ สกิลนี้",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 0,
+            "max": 0,
             "negated": null
           },
           {
             "min": 0,
             "max": 0,
             "negated": true
+          },
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
           }
         ],
         "format": [
-          "#",
           "ignore",
-          "ignore"
+          "ignore",
+          "ignore",
+          "#"
         ],
         "index_handlers": [
           [],
           [],
+          [],
           []
         ],
-        "string": "อัญเชิญ โทเทมหน้าไม้ {0} เสา ที่ใช้ สกิลนี้",
+        "string": "อัญเชิญ โทเทม {3} เสา ที่ใช้ สกิลนี้ ออกมาเป็นวง",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "ignore",
+          "ignore",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          [],
+          []
+        ],
+        "string": "อัญเชิญ โทเทมเครื่องยิง {3} เสา ที่ใช้ สกิลนี้ ออกมาเป็นวง",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2997,6 +3200,60 @@
           []
         ],
         "string": "ส่งความเสียหาย {0}% ที่ศัตรูที่อยู่ใกล้แต่ละตัวได้รับ ไปยังเป้าหมาย",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "display_fires_x_times"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ยิง {0} ครั้ง",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ยิง {0} ครั้ง",
         "reminder_text": null,
         "is_markup": null
       }
@@ -11490,158 +11747,6 @@
   {
     "English": null,
     "ids": [
-      "intermediary_cold_area_damage_to_deal_per_minute"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "per_minute_to_per_second"
-          ]
-        ],
-        "string": "สร้างความเสียหาย น้ำแข็ง {0} ต่อวินาที",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "intermediary_cold_damage_to_deal_per_minute"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "per_minute_to_per_second"
-          ]
-        ],
-        "string": "สร้างความเสียหาย น้ำแข็ง {0} ต่อวินาที",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "intermediary_cold_skill_dot_area_damage_to_deal_per_minute"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "per_minute_to_per_second"
-          ]
-        ],
-        "string": "สร้างความเสียหาย น้ำแข็ง {0} ต่อวินาที",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "intermediary_cold_skill_dot_damage_to_deal_per_minute"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "per_minute_to_per_second"
-          ]
-        ],
-        "string": "สร้างความเสียหาย น้ำแข็ง {0} ต่อวินาที",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "intermediary_fire_area_damage_to_deal_per_minute"
     ],
     "trade_stats": null,
@@ -11823,6 +11928,196 @@
           ]
         ],
         "string": "ผลของดีบัฟรอง สร้างความเสียหาย ไฟ {0} ต่อวินาที",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "intermediary_cold_area_damage_to_deal_per_minute"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "per_minute_to_per_second"
+          ]
+        ],
+        "string": "สร้างความเสียหาย น้ำแข็ง {0} ต่อวินาที",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "intermediary_cold_damage_to_deal_per_minute"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "per_minute_to_per_second"
+          ]
+        ],
+        "string": "สร้างความเสียหาย น้ำแข็ง {0} ต่อวินาที",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "intermediary_cold_skill_dot_area_damage_to_deal_per_minute"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "per_minute_to_per_second"
+          ]
+        ],
+        "string": "สร้างความเสียหาย น้ำแข็ง {0} ต่อวินาที",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "intermediary_cold_skill_dot_damage_to_deal_per_minute"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "per_minute_to_per_second"
+          ]
+        ],
+        "string": "สร้างความเสียหาย น้ำแข็ง {0} ต่อวินาที",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "intermediary_lightning_skill_dot_damage_to_deal_per_minute"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "per_minute_to_per_second"
+          ]
+        ],
+        "string": "สร้างความเสียหาย สายฟ้า {0} ต่อวินาที",
         "reminder_text": null,
         "is_markup": null
       }
@@ -13268,6 +13563,62 @@
   {
     "English": null,
     "ids": [
+      "righteous_fire_cast_speed_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "มอบม็อด: เพิ่มความเร็วในการร่าย อีก {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "มอบม็อด: ลดความเร็วในการร่าย อีก {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "righteous_fire_spell_damage_+%_final"
     ],
     "trade_stats": null,
@@ -14203,7 +14554,8 @@
   {
     "English": null,
     "ids": [
-      "totem_duration"
+      "totem_duration",
+      "totem_fire_in_formation"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -14218,20 +14570,79 @@
       {
         "condition": [
           {
-            "min": null,
+            "min": 0,
+            "max": 0,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          }
+        ],
+        "format": [
+          "ignore",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "โทเทม สลายตัวหลังจากที่โจมตีครั้งเดียว",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
             "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
             "negated": null
           }
         ],
         "format": [
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
           [
             "milliseconds_to_seconds"
-          ]
+          ],
+          []
         ],
-        "string": "โทเทม คงอยู่ {0} วินาที",
+        "string": "โทเทม มีระยะเวลา {0} วินาที",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          }
+        ],
+        "format": [
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds"
+          ],
+          []
+        ],
+        "string": "โทเทม มีระยะเวลา {0} วินาทีหรือโจมตีได้ครั้งเดียว",
         "reminder_text": null,
         "is_markup": null
       }
@@ -15953,7 +16364,8 @@
   {
     "English": null,
     "ids": [
-      "blade_vortex_damage_+%_per_blade_final"
+      "blade_vortex_damage_+%_per_blade_final",
+      "damage_per_blade_vortex_blade_description_mode"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -15971,12 +16383,19 @@
             "min": 1,
             "max": null,
             "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
           }
         ],
         "format": [
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
+          [],
           []
         ],
         "string": "เพิ่มความเสียหาย อีก {0}% ต่อจำนวนใบมีด",
@@ -15989,17 +16408,76 @@
             "min": null,
             "max": -1,
             "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
           }
         ],
         "format": [
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
           [
             "negate"
-          ]
+          ],
+          []
         ],
         "string": "ลดความเสียหาย อีก {0}% ต่อจำนวนใบมีด",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "เพิ่มความเสียหาย อีก {0}% ต่อจำนวนใบมีดของ กระแสมีดวน (Blade Vortex)",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ],
+          []
+        ],
+        "string": "ลดความเสียหาย อีก {0}% ต่อจำนวนใบมีดของ กระแสมีดวน (Blade Vortex)",
         "reminder_text": null,
         "is_markup": null
       }
@@ -18164,6 +18642,60 @@
   {
     "English": null,
     "ids": [
+      "attack_trigger_on_melee_critical_hit_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "มีโอกาสทริกเกอร์ สกิลนี้ {0}% เมื่อคริติคอล ประชิด",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ทริกเกอร์ สกิลนี้ เมื่อคริติคอล ประชิด",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "attack_trigger_on_melee_hit_%"
     ],
     "trade_stats": null,
@@ -20204,7 +20736,7 @@
         "index_handlers": [
           []
         ],
-        "string": "วงแหวนสร้างความเสียหาย เพิ่มขึ้น อีก {0}%",
+        "string": "วงแหวน สร้างความเสียหาย เพิ่มขึ้น อีก {0}%",
         "reminder_text": null,
         "is_markup": null
       },
@@ -20224,7 +20756,7 @@
             "negate"
           ]
         ],
-        "string": "วงแหวนสร้างความเสียหาย ลดลง อีก {0}%",
+        "string": "วงแหวน สร้างความเสียหาย ลดลง อีก {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -20626,6 +21158,62 @@
   {
     "English": null,
     "ids": [
+      "fire_golem_grants_area_of_effect_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "โกเลมมอบม็อด: เพิ่มพื้นที่ส่งผล {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "โกเลมมอบม็อด: ลดพื้นที่ส่งผล {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "ice_golem_grants_critical_strike_chance_+%"
     ],
     "trade_stats": null,
@@ -20682,7 +21270,7 @@
   {
     "English": null,
     "ids": [
-      "ice_golem_grants_accuracy_+%"
+      "ice_golem_grants_accuracy_rating_+"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -20703,12 +21291,12 @@
           }
         ],
         "format": [
-          "#"
+          "+#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "โกเลมมอบม็อด: เพิ่มความแม่นยำ {0}%",
+        "string": "โกเลมมอบม็อด: อัตราความแม่นยำ {0}",
         "reminder_text": null,
         "is_markup": null
       },
@@ -20721,14 +21309,14 @@
           }
         ],
         "format": [
-          "#"
+          "+#"
         ],
         "index_handlers": [
           [
             "negate"
           ]
         ],
-        "string": "โกเลมมอบม็อด: ลดความแม่นยำ {0}%",
+        "string": "โกเลมมอบม็อด: อัตราความแม่นยำ {0}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -20765,6 +21353,42 @@
           []
         ],
         "string": "โกเลมมอบม็อด: เสริมค่าป้องกันกายภาพ {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "chaos_golem_grants_dot_multiplier_+"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "โกเลมมอบม็อด: ตัวคูณความเสียหายต่อเนื่อง +{0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -20848,6 +21472,62 @@
   {
     "English": null,
     "ids": [
+      "stone_golem_grants_defences_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "โกเลมมอบม็อด: เพิ่มค่าป้องกัน {0}%",
+        "reminder_text": "ค่าป้องกันมาตรฐาน คือ ค่าเกราะ, อัตราการหลบหลีก, โล่พลังงาน",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "โกเลมมอบม็อด: ลดค่าป้องกัน {0}%",
+        "reminder_text": "ค่าป้องกันมาตรฐาน คือ ค่าเกราะ, อัตราการหลบหลีก, โล่พลังงาน",
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "lightning_golem_grants_attack_and_cast_speed_+%"
     ],
     "trade_stats": null,
@@ -20895,6 +21575,44 @@
           ]
         ],
         "string": "โกเลมมอบม็อด: ลดความเร็วในการโจมตีและร่าย {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "lightning_golem_grants_base_mana_regeneration_rate_per_minute"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "per_minute_to_per_second"
+          ]
+        ],
+        "string": "โกเลมมอบม็อด: ฟื้นฟูมานา {0} ต่อวินาที",
         "reminder_text": null,
         "is_markup": null
       }
@@ -21065,6 +21783,42 @@
           ]
         ],
         "string": "ฟื้นฟูมานา {0} ต่อวินาที",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "chaos_golem_grants_chaos_resistance_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "โกเลมมอบม็อด: ค่าต้านทาน เคออส {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -26603,6 +27357,142 @@
         "string": "คลื่น มีความยาว {2} เมตร",
         "reminder_text": null,
         "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 6,
+            "max": 6,
+            "negated": null
+          },
+          {
+            "min": 10,
+            "max": 10,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [
+            "locations_to_metres"
+          ],
+          []
+        ],
+        "string": "ระลอก มีรัศมีพื้นฐาน {1} เมตร",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 6,
+            "max": 6,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [
+            "locations_to_metres"
+          ],
+          []
+        ],
+        "string": "ระลอก มีรัศมีพื้นฐาน {1} เมตร",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 6,
+            "max": 6,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 10,
+            "max": 10,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "ignore",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          [
+            "locations_to_metres"
+          ]
+        ],
+        "string": "ระลอก มีรัศมี {2} เมตร",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 6,
+            "max": 6,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "ignore",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          [
+            "locations_to_metres"
+          ]
+        ],
+        "string": "ระลอก มีรัศมี {2} เมตร",
+        "reminder_text": null,
+        "is_markup": null
       }
     ],
     "Traditional_Chinese": null
@@ -28319,6 +29209,142 @@
           ]
         ],
         "string": "คลื่น มีความกว้าง {2} เมตร",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 6,
+            "max": 6,
+            "negated": null
+          },
+          {
+            "min": 10,
+            "max": 10,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [
+            "locations_to_metres"
+          ],
+          []
+        ],
+        "string": "มีด มีรัศมีพื้นฐาน {1} เมตร",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 6,
+            "max": 6,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [
+            "locations_to_metres"
+          ],
+          []
+        ],
+        "string": "มีด มีรัศมีพื้นฐาน {1} เมตร",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 6,
+            "max": 6,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 10,
+            "max": 10,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "ignore",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          [
+            "locations_to_metres"
+          ]
+        ],
+        "string": "มีด มีรัศมี {2} เมตร",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 6,
+            "max": 6,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "ignore",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          [
+            "locations_to_metres"
+          ]
+        ],
+        "string": "มีด มีรัศมี {2} เมตร",
         "reminder_text": null,
         "is_markup": null
       }
@@ -33522,60 +34548,6 @@
   {
     "English": null,
     "ids": [
-      "base_total_number_of_sigils_allowed"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": 1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[DNT] Can Cast an additional Brand",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 2,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[DNT] Can Cast {0} additional Brands",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "bear_and_siphoning_trap_debuff_grants_-%_cooldown_speed"
     ],
     "trade_stats": null,
@@ -33912,6 +34884,98 @@
   {
     "English": null,
     "ids": [
+      "blade_flurry_critical_strike_multiplier_+_while_at_max_stages"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ตัวคูณคริติคอล {0}% ขณะที่สเตจเต็ม",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "blade_flurry_damage_+%_final_while_at_max_stages"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "เพิ่มความเสียหาย อีก {0}% ขณะที่สเตจเต็ม",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "ลดความเสียหาย อีก {0}% ขณะที่สเตจเต็ม",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "blade_flurry_elemental_damage_+%_while_channeling"
     ],
     "trade_stats": null,
@@ -34228,6 +35292,60 @@
   {
     "English": null,
     "ids": [
+      "bladefall_create_X_lingering_blades_per_volley"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ระลอกหนึ่งมีมีดร่วงลงมา {0} เล่ม ซึ่งจะค้างอยู่บนพื้น",
+        "reminder_text": "(มีดค้างพื้น จะยังคงอยู่บนพื้นในช่วงระยะเวลาหนึ่งซึ่งสามารถถูกใช้งานโดยสกิลอื่นได้ และหากมันถูกปลุกเสกขึ้นมามันจะถือว่าเป็นมีดชนิดหนึ่ง)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ระลอกหนึ่งมีมีดร่วงลงมา {0} เล่ม ซึ่งจะค้างอยู่บนพื้น",
+        "reminder_text": "(มีดค้างพื้น จะยังคงอยู่บนพื้นในช่วงระยะเวลาหนึ่งซึ่งสามารถถูกใช้งานโดยสกิลอื่นได้ และหากมันถูกปลุกเสกขึ้นมามันจะถือว่าเป็นมีดชนิดหนึ่ง)",
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "bladefall_critical_strike_chance_+%_per_stage"
     ],
     "trade_stats": null,
@@ -34275,6 +35393,64 @@
           ]
         ],
         "string": "ลดโอกาสคริติคอล {0}% ต่อจำนวนระลอก",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "bladefall_volley_frequency_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "ระลอกมีด ตกลงมาทุก {0} วินาที",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "ระลอกมีด ตกลงมาทุก {0} วินาที",
         "reminder_text": null,
         "is_markup": null
       }
@@ -34576,7 +35752,7 @@
           [],
           []
         ],
-        "string": "จำนวน พายุดาบ สูงสุด {0} ลูก",
+        "string": "จำนวน พายุดาบ พร้อมกันสูงสุด {0} ลูก",
         "reminder_text": null,
         "is_markup": null
       },
@@ -36556,6 +37732,208 @@
   {
     "English": null,
     "ids": [
+      "chain_hook_attaches_to_X_targets"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "โยนโซ่ไปยัง {0} เป้าหมายในระยะ",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "โยนโซ่ไปยัง {0} เป้าหมายในระยะ",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "chain_hook_attachment_rage_to_gain_per_hit"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "เป้าหมายที่ถูกล่ามโซ่ ให้สถานะ คลั่ง {0} ระดับเมื่อถูกปะทะ",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "chain_hook_attachment_range"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 10,
+            "max": 10,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "divide_by_ten_1dp_if_required"
+          ]
+        ],
+        "string": "โซ่ มีความยาวสูงสุด {0} เมตร",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "divide_by_ten_1dp_if_required"
+          ]
+        ],
+        "string": "โซ่ มีความยาวสูงสุด {0} เมตร",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "chain_hook_max_attached_targets"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ชิ่ง ได้สูงสุด {0} ครั้ง",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ชิ่ง ได้สูงสุด {0} ครั้ง",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "chain_hook_range_+%"
     ],
     "trade_stats": null,
@@ -37052,6 +38430,42 @@
           []
         ],
         "string": "มีโอกาสสร้างความเสียหายสองเท่า {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "chance_to_deal_double_damage_%_per_10_intelligence"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "มีโอกาสสร้างความเสียหายสองเท่า {0}% ต่อ Intelligence 10 หน่วย",
         "reminder_text": null,
         "is_markup": null
       }
@@ -41132,6 +42546,60 @@
   {
     "English": null,
     "ids": [
+      "damage_+%_final_vs_stunned_enemies"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "เพิ่มความเสียหาย อีก {0}% ต่อศัตรูที่ติดสถานะ สตัน",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ลดความเสียหาย อีก {0}% ต่อศัตรูที่ติดสถานะ สตัน",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "damage_+%_if_you_have_consumed_a_corpse_recently"
     ],
     "trade_stats": null,
@@ -41864,6 +43332,104 @@
         ],
         "string": "สถานะเจ็บป่วยมีความเสียหาย สร้างความเสียหาย เร็วขึ้น {0}%",
         "reminder_text": "(จะสร้างความเสียหายสุทธิเท่าเดิม ในระยะเวลาสั้นลง)",
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "dark_pact_chance_to_gain_an_additional_ruin_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "มีโอกาสติดสถานะ ย่อยยับ เพิ่มเติม 1 ระดับ {0}% เมื่อใช้งาน",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ติดสถานะ ย่อยยับ เพิ่มเติม 1 ระดับเมื่อใช้งาน",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "dark_pact_sacrifice_%_life_from_max_ruin",
+      "dark_pact_chaos_damage_added_from_sacrifice_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "ติดสถานะ ย่อยยับ 1 ระดับเมื่อใช้งาน\n การติดสถานะ ย่อยยับ 7 ระดับ จะ สังเวยพลังชีวิต {0}%\nเพื่อสร้างความเสียหาย เคออส เท่ากับ {1}% ของ พลังชีวิตที่สังเวย",
+        "reminder_text": "(สถานะ ย่อยยับ ที่เกิดขึ้นจากวิธีนี้จะซ้อนผลกับแหล่งอื่นๆ ที่ให้สถานะ ย่อยยับ)",
         "is_markup": null
       }
     ],
@@ -43872,6 +45438,60 @@
   {
     "English": null,
     "ids": [
+      "display_shaper_memory_uses_skill_once"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "กลืนกินดวงระลึก 10 ดวง\nความทรงจำเชปเปอร์ ใช้สกิลเชปเปอร์ของคุณ {0} ครั้ง",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "กลืนกินดวงระลึก 10 ดวง\nความทรงจำเชปเปอร์ ใช้สกิลเชปเปอร์ของคุณ {0} ครั้ง",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "display_sigil_of_power_stage_gain_delay"
     ],
     "trade_stats": null,
@@ -44601,7 +46221,7 @@
           []
         ],
         "string": "ได้รับสถานะ ผู้กลืนกินวิญญาณ 20 วินาที เมื่อลงมือสังหาร ศัตรูแรร์และยูนิค",
-        "reminder_text": "(ขณะที่คุณมีสถานะ ผู้กลืนกินวิญญาณ คุณจะกลืนกินวิญญาณของทุกสิ่งที่ถูกสังหารที่อยู่ใกล้ โดยวิญญาณแต่ละดวงจะเพิ่มความเร็วในการโจมตีและร่ายของคุณ 5% คุณจะสูญเสียวิญญาณ 1 ดวงทุก 0.5 วินาทีหากคุณไม่ได้รับวิญญาณมาเร็วๆ นี้ คุณสามารถกลืนกินวิญญาณได้สูงสุด 45 ดวง)",
+        "reminder_text": "(ขณะที่คุณมีสถานะ ผู้กลืนกินวิญญาณ คุณจะกลืนกินวิญญาณของทุกสิ่งที่ถูกสังหารที่อยู่ใกล้ โดยวิญญาณแต่ละดวงจะเพิ่มความเร็วในการโจมตีและร่ายของคุณ 5% คุณจะสูญเสียวิญญาณ 1 ดวงทุก 0.5 วินาทีหากคุณไม่ได้กลืนกินวิญญาณมาเร็วๆ นี้ คุณสามารถกลืนกินวิญญาณได้สูงสุด 45 ดวง)",
         "is_markup": null
       },
       {
@@ -44619,7 +46239,7 @@
           []
         ],
         "string": "มีโอกาสได้รับสถานะ ผู้กลืนกินวิญญาณ 20 วินาที {0}% เมื่อลงมือสังหาร ศัตรูแรร์และยูนิค",
-        "reminder_text": "(ขณะที่คุณมีสถานะ ผู้กลืนกินวิญญาณ คุณจะกลืนกินวิญญาณของทุกสิ่งที่ถูกสังหารที่อยู่ใกล้ โดยวิญญาณแต่ละดวงจะเพิ่มความเร็วในการโจมตีและร่ายของคุณ 5% คุณจะสูญเสียวิญญาณ 1 ดวงทุก 0.5 วินาทีหากคุณไม่ได้รับวิญญาณมาเร็วๆ นี้ คุณสามารถกลืนกินวิญญาณได้สูงสุด 45 ดวง)",
+        "reminder_text": "(ขณะที่คุณมีสถานะ ผู้กลืนกินวิญญาณ คุณจะกลืนกินวิญญาณของทุกสิ่งที่ถูกสังหารที่อยู่ใกล้ โดยวิญญาณแต่ละดวงจะเพิ่มความเร็วในการโจมตีและร่ายของคุณ 5% คุณจะสูญเสียวิญญาณ 1 ดวงทุก 0.5 วินาทีหากคุณไม่ได้กลืนกินวิญญาณมาเร็วๆ นี้ คุณสามารถกลืนกินวิญญาณได้สูงสุด 45 ดวง)",
         "is_markup": null
       }
     ],
@@ -47279,62 +48899,6 @@
           []
         ],
         "string": "ตัวคูณความเสียหาย ไฟ ต่อเนื่อง {0}%",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "fire_storm_fireball_delay_+%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "[DNT] {0}% reduced Firestorm impact rate",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[DNT] {0}% increased Firestorm impact rate",
         "reminder_text": null,
         "is_markup": null
       }
@@ -50728,7 +52292,7 @@
         "index_handlers": [
           []
         ],
-        "string": "เพิ่มความถี่ของโพรเจกไทล์{0}% ต่อจำนวนสเตจ",
+        "string": "เพิ่มความถี่ของโพรเจกไทล์ {0}% ต่อจำนวนสเตจ",
         "reminder_text": null,
         "is_markup": null
       }
@@ -52607,7 +54171,7 @@
           ],
           []
         ],
-        "string": "ความเสียหายพื้นฐานจากสถานะ ติดไฟ เท่ากับ ความเสียหายที่เกินพลังชีวิต เพิ่มเติม {0}%",
+        "string": "ความเสียหายพื้นฐานจากสถานะ ติดไฟ เท่ากับ ความเสียหายล้นเกิน เพิ่มเติม {0}%",
         "reminder_text": null,
         "is_markup": null
       },
@@ -52634,7 +54198,7 @@
           ],
           []
         ],
-        "string": "ความเสียหายพื้นฐานจากสถานะ ติดไฟ เท่ากับ ความเสียหายที่เกินพลังชีวิต {0}%",
+        "string": "ความเสียหายพื้นฐานจากสถานะ ติดไฟ เท่ากับ ความเสียหายล้นเกิน {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -53869,6 +55433,42 @@
           []
         ],
         "string": "ศัตรูที่ติดสถานะ ลุกไหม้ จาก สกิลนี้ มีค่าต้านทาน ไฟ {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "ignition_blast_%_max_life_as_fire_on_death"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ระเบิด สร้างความเสียหาย ไฟ พื้นฐานเท่ากับ {0}% ของ พลังชีวิตสูงสุดของศพ",
         "reminder_text": null,
         "is_markup": null
       }
@@ -58026,6 +59626,42 @@
   {
     "English": null,
     "ids": [
+      "minion_aggravate_bleeding_on_attack_hit_chance_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "มิเนียน มีโอกาสทำให้สถานะ เลือดไหล ของเป้าหมายที่พวกมันปะทะด้วยการโจมตี เลือดไหลรุนแรง {0}%",
+        "reminder_text": "(สถานะ เลือดไหล ที่เลือดไหลรุนแรง จะสร้างความเสียหายสูงขึ้นราวกับเป้าหมายเคลื่อนที่อยู่)",
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "minion_ailment_damage_+%"
     ],
     "trade_stats": null,
@@ -58974,6 +60610,62 @@
         ],
         "string": "มิเนียน มีความยากในการติดสถานะ สตัน ของศัตรู เพิ่มขึ้น {0}%",
         "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "minion_withered_effect_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "มิเนียน มีผลของสถานะ เหี่ยวเฉา เพิ่มขึ้น {0}%",
+        "reminder_text": "(สถานะ เหี่ยวเฉา เพิ่มความเสียหาย เคออส ที่ได้รับ 6% และสามารถซ้อนได้สูงสุด 15 ระดับ)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "มิเนียน มีผลของสถานะ เหี่ยวเฉา ลดลง {0}%",
+        "reminder_text": "(สถานะ เหี่ยวเฉา เพิ่มความเสียหาย เคออส ที่ได้รับ 6% และสามารถซ้อนได้สูงสุด 15 ระดับ)",
         "is_markup": null
       }
     ],
@@ -60735,6 +62427,60 @@
           []
         ],
         "string": "อัญเชิญ วัตถุศักดิ์สิทธิ์ ได้สูงสุด {0} ชิ้น",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "number_of_void_spawns_allowed"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "อัญเชิญ อสุรกายห้วงว่าง ได้สูงสุด {0} ตน",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "อัญเชิญ อสุรกายห้วงว่าง ได้สูงสุด {0} ตน",
         "reminder_text": null,
         "is_markup": null
       }
@@ -68403,7 +70149,7 @@
         "index_handlers": [
           []
         ],
-        "string": "รอยแยกสร้างความเสียหาย เพิ่มขึ้น อีก {0}%",
+        "string": "รอยแยก สร้างความเสียหาย เพิ่มขึ้น อีก {0}%",
         "reminder_text": null,
         "is_markup": null
       },
@@ -68423,7 +70169,7 @@
             "negate"
           ]
         ],
-        "string": "รอยแยกสร้างความเสียหาย ลดลง อีก {0}%",
+        "string": "รอยแยก สร้างความเสียหาย ลดลง อีก {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -69126,6 +70872,60 @@
           []
         ],
         "string": "ลำแสง มีเป้าหมายสูงสุด {0} เป้าหมาย",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "stationary_shield_throw_projectiles_per_interval"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ยิงสะเก็ดคราวละ {0} ลูก จนกว่าจะยิงออกมาหมด",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ยิงสะเก็ดคราวละ {0} ลูก จนกว่าจะยิงออกมาหมด",
         "reminder_text": null,
         "is_markup": null
       }
@@ -70520,7 +72320,8 @@
   {
     "English": null,
     "ids": [
-      "sunder_wave_radius_+_per_step"
+      "sunder_wave_radius_+_per_step",
+      "sunder_number_of_fake_chains"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -70538,17 +72339,24 @@
             "min": 10,
             "max": 10,
             "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
           }
         ],
         "format": [
-          "+#"
+          "+#",
+          "ignore"
         ],
         "index_handlers": [
           [
             "locations_to_metres"
-          ]
+          ],
+          []
         ],
-        "string": "คลื่นระเบิด มีรัศมี {0} เมตร ต่อจำนวนพื้นที่ตามลำดับ",
+        "string": "พื้นที่คลื่นระเบิด มีรัศมี {0} เมตร ต่อจำนวนพื้นที่ในคลื่นก่อนหน้านี้",
         "reminder_text": null,
         "is_markup": null
       },
@@ -70558,17 +72366,132 @@
             "min": null,
             "max": null,
             "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
           }
         ],
         "format": [
-          "+#"
+          "+#",
+          "ignore"
         ],
         "index_handlers": [
           [
             "locations_to_metres"
-          ]
+          ],
+          []
         ],
-        "string": "คลื่นระเบิด มีรัศมี {0} เมตร ต่อจำนวนพื้นที่ตามลำดับ",
+        "string": "พื้นที่คลื่นระเบิด มีรัศมี {0} เมตร ต่อจำนวนพื้นที่ในคลื่นก่อนหน้านี้",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 10,
+            "max": 10,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#",
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "locations_to_metres"
+          ],
+          []
+        ],
+        "string": "คลื่นระเบิด เริ่มใหม่ได้สูงสุด {1} ครั้ง\nพื้นที่คลื่นระเบิด มีรัศมี {0} เมตร ต่อจำนวนพื้นที่ในคลื่นก่อนหน้านี้",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#",
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "locations_to_metres"
+          ],
+          []
+        ],
+        "string": "คลื่นระเบิด เริ่มใหม่ได้สูงสุด {1} ครั้ง\nพื้นที่คลื่นระเบิด มีรัศมี {0} เมตร ต่อจำนวนพื้นที่ในคลื่นก่อนหน้านี้",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 10,
+            "max": 10,
+            "negated": null
+          },
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#",
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "locations_to_metres"
+          ],
+          []
+        ],
+        "string": "คลื่นระเบิด เริ่มใหม่ได้สูงสุด {1} ครั้ง\nพื้นที่คลื่นระเบิด มีรัศมี {0} เมตร ต่อจำนวนพื้นที่ในคลื่นก่อนหน้านี้",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#",
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "locations_to_metres"
+          ],
+          []
+        ],
+        "string": "คลื่นระเบิด เริ่มใหม่ได้สูงสุด {1} ครั้ง\nพื้นที่คลื่นระเบิด มีรัศมี {0} เมตร ต่อจำนวนพื้นที่ในคลื่นก่อนหน้านี้",
         "reminder_text": null,
         "is_markup": null
       }
@@ -71968,6 +73891,78 @@
           []
         ],
         "string": "โทเทม ทริกเกอร์ เพลิงล้างแค้น (Avenging Flame) เมื่อถูกปะทะจากศัตรู",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_focus_channel_damage_+%_final_per_second_channelling_up_to_60%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "เพิ่มความเสียหาย อีก {0}% ต่อจำนวนวินาทีที่แชนเนล สูงสุด 60%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_focus_channel_cost_+%_final_per_second_channelling_up_to_100%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "เพิ่มค่าใช้งาน อีก {0}% ต่อจำนวนวินาทีที่แชนเนล สูงสุด 100%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -76664,6 +78659,62 @@
   {
     "English": null,
     "ids": [
+      "trap_throwing_speed_+%_while_wielding_2hand"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "เพิ่มความเร็วในการโยนกับดัก {0}% ขณะถือ อาวุธสองมือ",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "ลดความเร็วในการโยนกับดัก {0}% ขณะถือ อาวุธสองมือ",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "trap_throwing_speed_+%_per_frenzy_charge"
     ],
     "trade_stats": null,
@@ -77942,6 +79993,42 @@
   {
     "English": null,
     "ids": [
+      "trigger_on_ignited_enemy_death"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "เวทนี้ ถูกทริกเกอร์เมื่อศัตรูที่ติดสถานะ ลุกไหม้ จากคุณตาย",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "trigger_on_reaching_low_life_in_presence_of_unique"
     ],
     "trade_stats": null,
@@ -78563,6 +80650,62 @@
           []
         ],
         "string": "ทริกเกอร์ สกิลนี้ เมื่อ สาปสะกด จากสกิลที่เสริม จบลง",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "unleash_power_movement_speed_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "เพิ่มความเร็วในการเคลื่อนที่ อีก {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "ลดความเร็วในการเคลื่อนที่ อีก {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -79577,7 +81720,7 @@
         "index_handlers": [
           []
         ],
-        "string": "ปะทุ เพิ่มเติม {0} ครั้ง",
+        "string": "รอยแยก ปะทุ เพิ่มเติม {0} ครั้ง",
         "reminder_text": null,
         "is_markup": null
       }

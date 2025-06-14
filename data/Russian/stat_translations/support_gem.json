@@ -3213,8 +3213,9 @@
     "English": null,
     "ids": [
       "is_totem",
-      "number_of_totems_to_summon",
-      "is_ranged_attack_totem"
+      "is_ranged_attack_totem",
+      "active_skill_summon_X_totems_in_ring_override",
+      "number_of_totems_to_summon"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -3233,90 +3234,33 @@
           },
           {
             "min": 0,
-            "max": 1,
-            "negated": null
-          },
-          {
-            "min": 0,
             "max": 0,
             "negated": null
-          }
-        ],
-        "format": [
-          "ignore",
-          "ignore",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          [],
-          []
-        ],
-        "string": "Усиленные умения устанавливают тотем, использующий эти умения",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
           },
           {
-            "min": 0,
-            "max": 1,
-            "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
-          }
-        ],
-        "format": [
-          "ignore",
-          "ignore",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          [],
-          []
-        ],
-        "string": "Усиленные умения устанавливают тотем-баллисту, использующий эти умения",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
-          },
-          {
-            "min": 2,
+            "min": null,
             "max": null,
             "negated": null
           },
           {
-            "min": 0,
-            "max": 0,
+            "min": null,
+            "max": null,
             "negated": null
           }
         ],
         "format": [
-          "#",
+          "ignore",
+          "ignore",
           "ignore",
           "ignore"
         ],
         "index_handlers": [
           [],
           [],
+          [],
           []
         ],
-        "string": "Усиленные умения устанавливают тотемов, использующих эти умения: {0}",
+        "string": "Усиленные умения призывают тотем, использующий это умение",
         "reminder_text": null,
         "is_markup": null
       },
@@ -3328,27 +3272,34 @@
             "negated": true
           },
           {
-            "min": 2,
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": null,
             "max": null,
             "negated": null
           },
           {
-            "min": 0,
-            "max": 0,
-            "negated": true
+            "min": null,
+            "max": null,
+            "negated": null
           }
         ],
         "format": [
-          "#",
+          "ignore",
+          "ignore",
           "ignore",
           "ignore"
         ],
         "index_handlers": [
           [],
           [],
+          [],
           []
         ],
-        "string": "Усиленные умения устанавливают тотемов-баллист, использующих эти умения: {0}",
+        "string": "Усиленные умения призывают тотем-баллисту, использующий это умение",
         "reminder_text": null,
         "is_markup": null
       }
@@ -18031,7 +17982,7 @@
             "milliseconds_to_seconds_2dp"
           ]
         ],
-        "string": "Усиленные умения теряют 1 заряд Интенсивности каждые 0.25 секунд(-ы) во время передвижения или немедленно, если вы телепортируетесь",
+        "string": "Усиленные умения теряют 1 заряд Интенсивности каждые 0.5 секунд(-ы) во время передвижения или немедленно, если вы телепортируетесь",
         "reminder_text": null,
         "is_markup": null
       }
@@ -28463,6 +28414,78 @@
           []
         ],
         "string": "Тотемы от усиленных умений получают умение Пламя отмщения\nи вызывают его срабатывание при получении удара от врага",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_focus_channel_damage_+%_final_per_second_channelling_up_to_60%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Усиленные умения наносят на {0}% больше урона в секунду при поддержании, вплоть до максимума в 60%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_focus_channel_cost_+%_final_per_second_channelling_up_to_100%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Усиленные умения расходуют на {0}% больше ресурсов за каждую секунду поддержания, вплоть до максимума в 100%",
         "reminder_text": null,
         "is_markup": null
       }

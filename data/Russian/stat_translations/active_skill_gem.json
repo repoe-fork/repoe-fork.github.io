@@ -1661,154 +1661,6 @@
   {
     "English": null,
     "ids": [
-      "is_totem",
-      "number_of_totems_to_summon",
-      "is_ranged_attack_totem"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": [
-      {
-        "condition": [
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
-          },
-          {
-            "min": 0,
-            "max": 1,
-            "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore",
-          "ignore",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          [],
-          []
-        ],
-        "string": "Устанавливает тотем, который использует это умение",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
-          },
-          {
-            "min": 0,
-            "max": 1,
-            "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
-          }
-        ],
-        "format": [
-          "ignore",
-          "ignore",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          [],
-          []
-        ],
-        "string": "Устанавливает тотем-баллисту, который использует это умение",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
-          },
-          {
-            "min": 2,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#",
-          "ignore",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          [],
-          []
-        ],
-        "string": "Устанавливает тотемов, которые используют это умение: {0}",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
-          },
-          {
-            "min": 2,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
-          }
-        ],
-        "format": [
-          "#",
-          "ignore",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          [],
-          []
-        ],
-        "string": "Устанавливает тотемов-баллист, которые используют это умение: {0}",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "active_skill_hit_damage_+%_final_per_100ms_duration"
     ],
     "trade_stats": null,
@@ -5568,6 +5420,42 @@
   {
     "English": null,
     "ids": [
+      "base_max_number_of_absolution_sentinels"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Максимум призванных стражей отпущения: {0}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "base_mine_detonation_time_ms"
     ],
     "trade_stats": null,
@@ -6844,6 +6732,64 @@
   {
     "English": null,
     "ids": [
+      "bladefall_base_volley_frequency_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "Залп клинков падает каждую секунду",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "Залп клинков падает каждые {0} секунд(-ы)",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "bladefall_blade_left_in_ground_for_every_X_volleys"
     ],
     "trade_stats": null,
@@ -6887,6 +6833,60 @@
           []
         ],
         "string": "Оставляет в земле остаточный клинок через каждых волн: {0}",
+        "reminder_text": "(Остаточные клинки остаются на земеле в течение некоторого времени и могут быть использованы умениями. При оживлении считаются кинжалами)",
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "bladefall_create_X_lingering_blades_per_volley"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Оставляет в земле остаточный клинок за каждый залп",
+        "reminder_text": "(Остаточные клинки остаются на земеле в течение некоторого времени и могут быть использованы умениями. При оживлении считаются кинжалами)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Оставляет в земле {0} остаточных клинка за каждый залп",
         "reminder_text": "(Остаточные клинки остаются на земеле в течение некоторого времени и могут быть использованы умениями. При оживлении считаются кинжалами)",
         "is_markup": null
       }
@@ -7006,6 +7006,42 @@
           []
         ],
         "string": "Волн: {0}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "bladefall_volley_frequency_+%_per_100_maximum_mana"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% повышение частоты залпов за каждые 100 максимума маны",
         "reminder_text": null,
         "is_markup": null
       }
@@ -9550,7 +9586,7 @@
             "milliseconds_to_seconds_2dp"
           ]
         ],
-        "string": "Эти чары теряют 1 заряд Интенсивности каждые 0.25 секунд(-ы) во время передвижения или немедленно, если вы телепортируетесь",
+        "string": "Эти чары теряют 1 заряд Интенсивности каждые 0.5 секунд(-ы) во время передвижения или немедленно, если вы телепортируетесь",
         "reminder_text": null,
         "is_markup": null
       }
@@ -10362,7 +10398,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Наносит дополнительный урон от чар, равный {0}% урона кинжала в руках\nC парными кинжалами в руках каждое оружие добавляет по 50% от данного показателя дополнительного урона",
+        "string": "Наносит дополнительный урон от чар в размере {0}% урона от кинжала в руках\nЕсли в руках два кинжала, каждое оружие добавляет по 60% от данного показателя дополнительного урона",
         "reminder_text": "(Рунические кинжалы считаются кинжалами)",
         "is_markup": null
       }
@@ -11708,6 +11744,168 @@
   {
     "English": null,
     "ids": [
+      "base_max_number_of_dominated_magic_monsters"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Максимум призванных волшебных стражей власти: {0}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Максимум призванных волшебных стражей власти: {0}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "base_max_number_of_dominated_normal_monsters"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Максимум призванных обычных стражей власти: {0}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Максимум призванных обычных стражей власти: {0}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "base_max_number_of_dominated_rare_monsters"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Максимум призванных редких стражей власти: {0}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Максимум призванных редких стражей власти: {0}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "maximum_energy_shield_leech_amount_per_leech_+%"
     ],
     "trade_stats": null,
@@ -11866,6 +12064,114 @@
         ],
         "string": "Созданные трупы имеют {0}% уменьшение максимума здоровья",
         "reminder_text": "(Убийство врага не создает трупа)",
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "base_number_of_blink_mirror_arrow_elemental_hit_clones"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Максимум клонов, выпускающих стихийные стрелы: {0}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Максимум клонов, выпускающих стихийные стрелы: {0}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "base_number_of_blink_mirror_arrow_rain_of_arrows_clones"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Максимум клонов, выпускающих стрелы вверх: {0}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Максимум клонов, выпускающих стрелы вверх: {0}",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -12936,7 +13242,7 @@
   {
     "English": null,
     "ids": [
-      "number_of_animated_weapons_allowed",
+      "base_number_of_animated_weapons_allowed",
       "quality_display_animate_weapon_is_gem"
     ],
     "trade_stats": null,
@@ -13129,6 +13435,60 @@
           []
         ],
         "string": "Максимум призванных Жнецов: {0}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "base_number_of_void_spawns_allowed"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Максимум призванных Порождений пустоты: {0}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Максимум призванных Порождений пустоты: {0}",
         "reminder_text": null,
         "is_markup": null
       }

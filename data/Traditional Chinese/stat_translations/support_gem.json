@@ -3213,8 +3213,9 @@
     "English": null,
     "ids": [
       "is_totem",
-      "number_of_totems_to_summon",
-      "is_ranged_attack_totem"
+      "is_ranged_attack_totem",
+      "active_skill_summon_X_totems_in_ring_override",
+      "number_of_totems_to_summon"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -3236,90 +3237,33 @@
           },
           {
             "min": 0,
-            "max": 1,
-            "negated": null
-          },
-          {
-            "min": 0,
             "max": 0,
             "negated": null
-          }
-        ],
-        "format": [
-          "ignore",
-          "ignore",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          [],
-          []
-        ],
-        "string": "被輔助的技能會召換 1 個使用該技能的圖騰",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
           },
           {
-            "min": 0,
-            "max": 1,
-            "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
-          }
-        ],
-        "format": [
-          "ignore",
-          "ignore",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          [],
-          []
-        ],
-        "string": "被輔助的技能會召換 1 個使用該技能的砲塔圖騰",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
-          },
-          {
-            "min": 2,
+            "min": null,
             "max": null,
             "negated": null
           },
           {
-            "min": 0,
-            "max": 0,
+            "min": null,
+            "max": null,
             "negated": null
           }
         ],
         "format": [
-          "#",
+          "ignore",
+          "ignore",
           "ignore",
           "ignore"
         ],
         "index_handlers": [
           [],
           [],
+          [],
           []
         ],
-        "string": "被輔助的技能會召換 {0} 個使用該技能的圖騰",
+        "string": "被輔助的技能會召喚一個使用該技能的圖騰",
         "reminder_text": null,
         "is_markup": null
       },
@@ -3331,27 +3275,34 @@
             "negated": true
           },
           {
-            "min": 2,
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": null,
             "max": null,
             "negated": null
           },
           {
-            "min": 0,
-            "max": 0,
-            "negated": true
+            "min": null,
+            "max": null,
+            "negated": null
           }
         ],
         "format": [
-          "#",
+          "ignore",
+          "ignore",
           "ignore",
           "ignore"
         ],
         "index_handlers": [
           [],
           [],
+          [],
           []
         ],
-        "string": "被輔助的技能會召換 {0} 個使用該技能的砲塔圖騰",
+        "string": "被輔助的技能會召喚一個使用該技能的砲塔圖騰",
         "reminder_text": null,
         "is_markup": null
       }
@@ -18034,7 +17985,7 @@
             "milliseconds_to_seconds_2dp"
           ]
         ],
-        "string": "移動或你立即傳送時，被輔助的法術每 0.25 秒失去 1 強化",
+        "string": "移動或你立即傳送時，被輔助的法術每 0.5 秒失去 1 強化",
         "reminder_text": null,
         "is_markup": null
       }
@@ -28466,6 +28417,78 @@
           []
         ],
         "string": "被輔助技能的圖騰獲得復仇烈焰\n被敵人擊中時觸發它",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_focus_channel_damage_+%_final_per_second_channelling_up_to_60%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "每引導一秒，被輔助技能造成 {0}% 更多傷害，最大 60%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_focus_channel_cost_+%_final_per_second_channelling_up_to_100%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "每引導一秒，被輔助技能具有 {0}% 更多消耗，最大 100%",
         "reminder_text": null,
         "is_markup": null
       }

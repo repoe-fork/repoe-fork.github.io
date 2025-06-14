@@ -2397,8 +2397,9 @@
     "English": null,
     "ids": [
       "is_totem",
-      "number_of_totems_to_summon",
-      "is_ranged_attack_totem"
+      "is_ranged_attack_totem",
+      "active_skill_summon_X_totems_in_ring_override",
+      "number_of_totems_to_summon"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -2416,7 +2417,12 @@
           },
           {
             "min": 0,
-            "max": 1,
+            "max": 0,
+            "negated": null
+          },
+          {
+            "min": 2,
+            "max": null,
             "negated": null
           },
           {
@@ -2428,14 +2434,16 @@
         "format": [
           "ignore",
           "ignore",
+          "#",
           "ignore"
         ],
         "index_handlers": [
           [],
           [],
+          [],
           []
         ],
-        "string": "Convoca um Totem que usa esta Habilidade",
+        "string": "Invoca {2} Totens em círculo que usam esta habilidade",
         "reminder_text": null,
         "is_markup": null
       },
@@ -2446,33 +2454,6 @@
             "max": 0,
             "negated": true
           },
-          {
-            "min": 0,
-            "max": 1,
-            "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
-          }
-        ],
-        "format": [
-          "ignore",
-          "ignore",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          [],
-          []
-        ],
-        "string": "Convoca um Totem Balista que usa esta Habilidade",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
           {
             "min": 0,
             "max": 0,
@@ -2490,16 +2471,18 @@
           }
         ],
         "format": [
-          "#",
           "ignore",
+          "ignore",
+          "#",
           "ignore"
         ],
         "index_handlers": [
           [],
           [],
+          [],
           []
         ],
-        "string": "Convoca {0} Totens que usam esta habilidade",
+        "string": "Invoca {2} Totens de Balista em círculo que usam esta habilidade",
         "reminder_text": null,
         "is_markup": null
       },
@@ -2511,27 +2494,229 @@
             "negated": true
           },
           {
-            "min": 2,
+            "min": 0,
+            "max": 0,
+            "negated": null
+          },
+          {
+            "min": null,
             "max": null,
             "negated": null
           },
           {
             "min": 0,
-            "max": 0,
-            "negated": true
+            "max": 1,
+            "negated": null
           }
         ],
         "format": [
-          "#",
+          "ignore",
+          "ignore",
           "ignore",
           "ignore"
         ],
         "index_handlers": [
           [],
           [],
+          [],
           []
         ],
-        "string": "Convoca {0} Totens Balista que usam esta habilidade",
+        "string": "Invoca um Totem que usa esta habilidade",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "ignore",
+          "ignore",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          [],
+          []
+        ],
+        "string": "Invoca um Totem de Balista que usa esta habilidade",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          },
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "ignore",
+          "ignore",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          [],
+          []
+        ],
+        "string": "Invoca {3} Totens que usam esta habilidade",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          },
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "ignore",
+          "ignore",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          [],
+          []
+        ],
+        "string": "Invoca {3} Totens de Balista que usam esta habilidade",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "ignore",
+          "ignore",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          [],
+          []
+        ],
+        "string": "Invoca {3} Totens em círculo que usam esta habilidade",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "ignore",
+          "ignore",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          [],
+          []
+        ],
+        "string": "Invoca {3} Totens de Balista em círculo que usam esta habilidade",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2994,6 +3179,60 @@
           []
         ],
         "string": "Transfere {0}% do Dano sofrido de cada inimigo próximo para o alvo",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "display_fires_x_times"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Dispara {0} vez",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Dispara {0} vezes",
         "reminder_text": null,
         "is_markup": null
       }
@@ -11477,158 +11716,6 @@
   {
     "English": null,
     "ids": [
-      "intermediary_cold_area_damage_to_deal_per_minute"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "per_minute_to_per_second"
-          ]
-        ],
-        "string": "Causa {0} de Dano de Gelo por segundo",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "intermediary_cold_damage_to_deal_per_minute"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "per_minute_to_per_second"
-          ]
-        ],
-        "string": "Causa {0} de Dano de Gelo por segundo",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "intermediary_cold_skill_dot_area_damage_to_deal_per_minute"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "per_minute_to_per_second"
-          ]
-        ],
-        "string": "Causa {0} de Dano de Gelo por segundo",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "intermediary_cold_skill_dot_damage_to_deal_per_minute"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "per_minute_to_per_second"
-          ]
-        ],
-        "string": "Causa {0} de Dano de Gelo por segundo",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "intermediary_fire_area_damage_to_deal_per_minute"
     ],
     "trade_stats": null,
@@ -11807,6 +11894,196 @@
           ]
         ],
         "string": "Debuff Secundário Causa {0} de Dano de Fogo por segundo",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "intermediary_cold_area_damage_to_deal_per_minute"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "per_minute_to_per_second"
+          ]
+        ],
+        "string": "Causa {0} de Dano de Gelo por segundo",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "intermediary_cold_damage_to_deal_per_minute"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "per_minute_to_per_second"
+          ]
+        ],
+        "string": "Causa {0} de Dano de Gelo por segundo",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "intermediary_cold_skill_dot_area_damage_to_deal_per_minute"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "per_minute_to_per_second"
+          ]
+        ],
+        "string": "Causa {0} de Dano de Gelo por segundo",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "intermediary_cold_skill_dot_damage_to_deal_per_minute"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "per_minute_to_per_second"
+          ]
+        ],
+        "string": "Causa {0} de Dano de Gelo por segundo",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "intermediary_lightning_skill_dot_damage_to_deal_per_minute"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "per_minute_to_per_second"
+          ]
+        ],
+        "string": "Causa {0} de dano de raio por segundo",
         "reminder_text": null,
         "is_markup": null
       }
@@ -13255,6 +13532,62 @@
   {
     "English": null,
     "ids": [
+      "righteous_fire_cast_speed_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Concede {0}% mais velocidade de conjuração",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Concede {0}% menos velocidade de conjuração",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "righteous_fire_spell_damage_+%_final"
     ],
     "trade_stats": null,
@@ -14159,7 +14492,8 @@
   {
     "English": null,
     "ids": [
-      "totem_duration"
+      "totem_duration",
+      "totem_fire_in_formation"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -14171,20 +14505,79 @@
       {
         "condition": [
           {
-            "min": null,
+            "min": 0,
+            "max": 0,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          }
+        ],
+        "format": [
+          "ignore",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "Após atacar, os totens desaparecem",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
             "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
             "negated": null
           }
         ],
         "format": [
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
           [
             "milliseconds_to_seconds"
-          ]
+          ],
+          []
         ],
         "string": "Totem dura {0} segundos",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          }
+        ],
+        "format": [
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds"
+          ],
+          []
+        ],
+        "string": "Totens duram {0} segundos",
         "reminder_text": null,
         "is_markup": null
       }
@@ -15909,7 +16302,8 @@
   {
     "English": null,
     "ids": [
-      "blade_vortex_damage_+%_per_blade_final"
+      "blade_vortex_damage_+%_per_blade_final",
+      "damage_per_blade_vortex_blade_description_mode"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -15924,15 +16318,22 @@
             "min": 1,
             "max": null,
             "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
           }
         ],
         "format": [
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
+          [],
           []
         ],
-        "string": "{0}% mais Dano por cada lâmina",
+        "string": "{0}% mais dano por lâmina",
         "reminder_text": null,
         "is_markup": null
       },
@@ -15942,17 +16343,76 @@
             "min": null,
             "max": -1,
             "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
           }
         ],
         "format": [
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
           [
             "negate"
-          ]
+          ],
+          []
         ],
-        "string": "{0}% menos Dano por cada lâmina",
+        "string": "{0}% menos dano por lâmina",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "{0}% mais dano por lâmina de Vórtice de Lâminas",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ],
+          []
+        ],
+        "string": "{0}% menos dano por lâmina de Vórtice de Lâminas",
         "reminder_text": null,
         "is_markup": null
       }
@@ -18108,6 +18568,60 @@
           []
         ],
         "string": "Ativa esta Habilidade quando você Acertar",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "attack_trigger_on_melee_critical_hit_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Chance de {0}% de ativar esta habilidade em golpe crítico corpo a corpo",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Ativa esta habilidade em golpe crítico corpo a corpo",
         "reminder_text": null,
         "is_markup": null
       }
@@ -20582,6 +21096,62 @@
   {
     "English": null,
     "ids": [
+      "fire_golem_grants_area_of_effect_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Golens concedem {0}% mais área de efeito",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Golens concedem {0}% menos área de efeito",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "ice_golem_grants_critical_strike_chance_+%"
     ],
     "trade_stats": null,
@@ -20638,7 +21208,7 @@
   {
     "English": null,
     "ids": [
-      "ice_golem_grants_accuracy_+%"
+      "ice_golem_grants_accuracy_rating_+"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -20656,12 +21226,12 @@
           }
         ],
         "format": [
-          "#"
+          "+#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "Golens aumentam {0}% de Precisão",
+        "string": "Golens concedem {0} de precisão",
         "reminder_text": null,
         "is_markup": null
       },
@@ -20674,14 +21244,14 @@
           }
         ],
         "format": [
-          "#"
+          "+#"
         ],
         "index_handlers": [
           [
             "negate"
           ]
         ],
-        "string": "Golens reduzem {0}% de Precisão",
+        "string": "Golens concedem {0} de precisão",
         "reminder_text": null,
         "is_markup": null
       }
@@ -20718,6 +21288,42 @@
           []
         ],
         "string": "Golens concedem {0}% adicionais de Redução de Dano Físico",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "chaos_golem_grants_dot_multiplier_+"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Golens concedem +{0}% de multiplicador de dano degenerativo",
         "reminder_text": null,
         "is_markup": null
       }
@@ -20804,6 +21410,62 @@
   {
     "English": null,
     "ids": [
+      "stone_golem_grants_defences_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Golens concedem {0}% mais defesas",
+        "reminder_text": "(Defesas são Armadura, Evasão e Escudo de Energia)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Golens concedem {0}% menos defesas",
+        "reminder_text": "(Defesas são Armadura, Evasão e Escudo de Energia)",
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "lightning_golem_grants_attack_and_cast_speed_+%"
     ],
     "trade_stats": null,
@@ -20848,6 +21510,44 @@
           ]
         ],
         "string": "Golens reduzem {0}% de Velocidade de Ataque e Conjuração",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "lightning_golem_grants_base_mana_regeneration_rate_per_minute"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "per_minute_to_per_second"
+          ]
+        ],
+        "string": "Golens concedem {0} de regeneração de mana por segundo",
         "reminder_text": null,
         "is_markup": null
       }
@@ -21018,6 +21718,42 @@
           ]
         ],
         "string": "{0} de Mana Regenerados por segundo",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "chaos_golem_grants_chaos_resistance_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Golens concedem {0}% de resistência a dano de caos",
         "reminder_text": null,
         "is_markup": null
       }
@@ -33478,60 +34214,6 @@
   {
     "English": null,
     "ids": [
-      "base_total_number_of_sigils_allowed"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": 1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[DNT] Can Cast an additional Brand",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 2,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[DNT] Can Cast {0} additional Brands",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "bear_and_siphoning_trap_debuff_grants_-%_cooldown_speed"
     ],
     "trade_stats": null,
@@ -33868,6 +34550,98 @@
   {
     "English": null,
     "ids": [
+      "blade_flurry_critical_strike_multiplier_+_while_at_max_stages"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% ao multiplicador de golpe crítico quando em estágios máximos",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "blade_flurry_damage_+%_final_while_at_max_stages"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Mais {0}% de dano quando em estágios máximos",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Menos {0}% de dano quando em estágios máximos",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "blade_flurry_elemental_damage_+%_while_channeling"
     ],
     "trade_stats": null,
@@ -34184,6 +34958,60 @@
   {
     "English": null,
     "ids": [
+      "bladefall_create_X_lingering_blades_per_volley"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Cada rajada dispara {0} lâmina, que permanece no chão",
+        "reminder_text": "(Lâminas Persistentes continuam no chão por uma duração e podem ser usadas por habilidades específicas. Se Animadas, elas contam como Adagas)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Cada rajada dispara {0} lâminas, que permanecem no chão",
+        "reminder_text": "(Lâminas Persistentes continuam no chão por uma duração e podem ser usadas por habilidades específicas. Se Animadas, elas contam como Adagas)",
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "bladefall_critical_strike_chance_+%_per_stage"
     ],
     "trade_stats": null,
@@ -34228,6 +35056,64 @@
           ]
         ],
         "string": "{0}% de redução da Chance de Acerto Crítico por Rajada",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "bladefall_volley_frequency_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "Uma rajada de lâminas cai a cada {0} segundo",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "Uma rajada de lâminas cai a cada {0} segundos",
         "reminder_text": null,
         "is_markup": null
       }
@@ -36512,6 +37398,208 @@
   {
     "English": null,
     "ids": [
+      "chain_hook_attaches_to_X_targets"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Lança correntes em até {0} alvo ao alcance",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Lança correntes em até {0} alvos ao alcance",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "chain_hook_attachment_rage_to_gain_per_hit"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Alvos acorrentados concedem {0} Fúria quando atingidos",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "chain_hook_attachment_range"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 10,
+            "max": 10,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "divide_by_ten_1dp_if_required"
+          ]
+        ],
+        "string": "Comprimento máximo da corrente: {0} metro",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "divide_by_ten_1dp_if_required"
+          ]
+        ],
+        "string": "Comprimento máximo da corrente: {0} metros",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "chain_hook_max_attached_targets"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Máximo de {0} acorrentamento",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Máximo de {0} acorrentamentos",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "chain_hook_range_+%"
     ],
     "trade_stats": null,
@@ -37005,6 +38093,42 @@
           []
         ],
         "string": "{0}% de chance de causar Dano Dobrado",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "chance_to_deal_double_damage_%_per_10_intelligence"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% de chance de causar dano dobrado para cada 10 de inteligência",
         "reminder_text": null,
         "is_markup": null
       }
@@ -41088,6 +42212,60 @@
   {
     "English": null,
     "ids": [
+      "damage_+%_final_vs_stunned_enemies"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Mais {0}% de dano contra inimigos atordoados",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Menos {0}% de dano contra inimigos atordoados",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "damage_+%_if_you_have_consumed_a_corpse_recently"
     ],
     "trade_stats": null,
@@ -41817,6 +42995,104 @@
         ],
         "string": "Afecções Danificadoras causam dano {0}% mais rápido",
         "reminder_text": "(Eles causarão o mesmo dano total por uma curta duração)",
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "dark_pact_chance_to_gain_an_additional_ruin_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% de chance de ganhar uma Ruína adicional ao usar",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Ganha uma Ruína adicional ao usar",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "dark_pact_sacrifice_%_life_from_max_ruin",
+      "dark_pact_chaos_damage_added_from_sacrifice_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "Ganha uma Ruína por uso\nAo chegar a sete, sacrifica {0}% da sua vida\ne causa {1}% da vida sacrificada como dano de caos",
+        "reminder_text": "(A Ruína aplicada por este método é somada a outras fontes de Ruína)",
         "is_markup": null
       }
     ],
@@ -43817,6 +45093,60 @@
         ],
         "string": "Não pode ser Conjurado ou Ativado enquanto Elusivo\nConcede Elusivo",
         "reminder_text": "(Elusivo concede inicialmente 15% de chance de Esquivar de Acertos Mágicos ou de Ataques, e Velocidade de Movimento aumentada em 30%. O buff reduz seu tempo de efeito, sendo removido ao chegar em 0% de efeito. Se você já tiver o buff Elusivo, não poderá ganhar Elusivo)",
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "display_shaper_memory_uses_skill_once"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Consome 10 Lembranças\nMemória do Criador utiliza sua habilidade do Criador {0} vez",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Consome 10 Lembranças\nMemória do Criador utiliza sua habilidade do Criador {0} vezes",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -47232,62 +48562,6 @@
           []
         ],
         "string": "{0}% de Multiplicador do Dano Degenerativo de Fogo",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "fire_storm_fireball_delay_+%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "[DNT] {0}% reduced Firestorm impact rate",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[DNT] {0}% increased Firestorm impact rate",
         "reminder_text": null,
         "is_markup": null
       }
@@ -53834,6 +55108,42 @@
   {
     "English": null,
     "ids": [
+      "ignition_blast_%_max_life_as_fire_on_death"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "A explosão causa dano de fogo base equivalente a {0}% da vida máxima do cadáver",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "ignore_self_damage_from_trauma_chance_%"
     ],
     "trade_stats": null,
@@ -57982,6 +59292,42 @@
   {
     "English": null,
     "ids": [
+      "minion_aggravate_bleeding_on_attack_hit_chance_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Lacaios têm {0}% de chance de agravar sangramento em alvos atingidos com ataques",
+        "reminder_text": "(Sangramento que foi Agravado sempre causa Dano maior como se o alvo estivesse se movendo)",
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "minion_ailment_damage_+%"
     ],
     "trade_stats": null,
@@ -58927,6 +60273,62 @@
         ],
         "string": "Lacaios têm Limite do Atordoamento Inimigo reduzido em {0}%",
         "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "minion_withered_effect_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Lacaios têm efeito de definhamento aumentado em {0}%",
+        "reminder_text": "(Definhar aplica 6% de aumento do Dano de Caos Recebido, e pode ser infligido até 15 vezes)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Lacaios têm efeito de definhamento reduzido em {0}%",
+        "reminder_text": "(Definhar aplica 6% de aumento do Dano de Caos Recebido, e pode ser infligido até 15 vezes)",
         "is_markup": null
       }
     ],
@@ -60688,6 +62090,60 @@
           []
         ],
         "string": "Máximo de {0} Relíquias Sagradas Convocadas",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "number_of_void_spawns_allowed"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Máximo de {0} Rebento da Escuridão invocado",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Máximo de {0} Rebentos da Escuridão invocados",
         "reminder_text": null,
         "is_markup": null
       }
@@ -69091,6 +70547,42 @@
   {
     "English": null,
     "ids": [
+      "stationary_shield_throw_projectiles_per_interval"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Dispara {0} fragmento por vez até terminar",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "stealth_+%"
     ],
     "trade_stats": null,
@@ -70476,7 +71968,8 @@
   {
     "English": null,
     "ids": [
-      "sunder_wave_radius_+_per_step"
+      "sunder_wave_radius_+_per_step",
+      "sunder_number_of_fake_chains"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -70491,17 +71984,24 @@
             "min": 10,
             "max": 10,
             "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
           }
         ],
         "format": [
-          "+#"
+          "+#",
+          "ignore"
         ],
         "index_handlers": [
           [
             "locations_to_metres"
-          ]
+          ],
+          []
         ],
-        "string": "Onda ganha {0} metro ao raio com cada Área na Sequência",
+        "string": "Áreas de onda ganham {0} metro de raio para cada área anterior da onda",
         "reminder_text": null,
         "is_markup": null
       },
@@ -70511,17 +72011,132 @@
             "min": null,
             "max": null,
             "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
           }
         ],
         "format": [
-          "+#"
+          "+#",
+          "ignore"
         ],
         "index_handlers": [
           [
             "locations_to_metres"
-          ]
+          ],
+          []
         ],
-        "string": "Onda ganha {0} metros ao raio com cada Área na Sequência",
+        "string": "Áreas de onda ganham {0} metros de raio para cada área anterior da onda",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 10,
+            "max": 10,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#",
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "locations_to_metres"
+          ],
+          []
+        ],
+        "string": "Onda pode recomeçar até {1} vez\nÁreas de onda ganham {0} metro de raio para cada área anterior",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#",
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "locations_to_metres"
+          ],
+          []
+        ],
+        "string": "Onda pode recomeçar até {1} vez\nÁreas de onda ganham {0} metros de raio para cada área anterior",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 10,
+            "max": 10,
+            "negated": null
+          },
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#",
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "locations_to_metres"
+          ],
+          []
+        ],
+        "string": "Onda pode recomeçar até {1} vezes\nÁreas de onda ganham {0} metro de raio para cada área anterior",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#",
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "locations_to_metres"
+          ],
+          []
+        ],
+        "string": "Onda pode recomeçar até {1} vezes\nÁreas de onda ganham {0} metros de raio para cada área anterior",
         "reminder_text": null,
         "is_markup": null
       }
@@ -71921,6 +73536,78 @@
           []
         ],
         "string": "Totem Ativa Vingança Flamejante quando Acertado por um Inimigo",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_focus_channel_damage_+%_final_per_second_channelling_up_to_60%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% mais dano por segundo canalizando, até 60%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_focus_channel_cost_+%_final_per_second_channelling_up_to_100%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% mais custo por segundo canalizando, até 100%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -76620,6 +78307,62 @@
   {
     "English": null,
     "ids": [
+      "trap_throwing_speed_+%_while_wielding_2hand"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% mais velocidade de lançar armadilhas com arma de duas mãos",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "{0}% menos velocidade de lançar armadilhas com arma de duas mãos",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "trap_throwing_speed_+%_per_frenzy_charge"
     ],
     "trade_stats": null,
@@ -77898,6 +79641,42 @@
   {
     "English": null,
     "ids": [
+      "trigger_on_ignited_enemy_death"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Esta magia é ativada quando um inimigo incendiado por você morre",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "trigger_on_reaching_low_life_in_presence_of_unique"
     ],
     "trade_stats": null,
@@ -78516,6 +80295,62 @@
           []
         ],
         "string": "Ativa Esta Habilidade quando um Feitiço de Habilidades Suportadas terminar",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "unleash_power_movement_speed_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% mais Velocidade de Movimento",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "{0}% menos Velocidade de Movimento",
         "reminder_text": null,
         "is_markup": null
       }

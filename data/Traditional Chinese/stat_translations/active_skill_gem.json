@@ -1661,154 +1661,6 @@
   {
     "English": null,
     "ids": [
-      "is_totem",
-      "number_of_totems_to_summon",
-      "is_ranged_attack_totem"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
-          },
-          {
-            "min": 0,
-            "max": 1,
-            "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore",
-          "ignore",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          [],
-          []
-        ],
-        "string": "召喚 1 個使用此技能的圖騰",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
-          },
-          {
-            "min": 0,
-            "max": 1,
-            "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
-          }
-        ],
-        "format": [
-          "ignore",
-          "ignore",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          [],
-          []
-        ],
-        "string": "召喚 1 個使用此技能的砲塔圖騰",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
-          },
-          {
-            "min": 2,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#",
-          "ignore",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          [],
-          []
-        ],
-        "string": "召喚 {0} 個使用此技能的圖騰",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
-          },
-          {
-            "min": 2,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
-          }
-        ],
-        "format": [
-          "#",
-          "ignore",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          [],
-          []
-        ],
-        "string": "召喚 {0} 個使用此技能的砲塔圖騰",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
       "active_skill_hit_damage_+%_final_per_100ms_duration"
     ],
     "trade_stats": null,
@@ -5568,6 +5420,42 @@
   {
     "English": null,
     "ids": [
+      "base_max_number_of_absolution_sentinels"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "最大 {0} 個召喚的赦免哨兵",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "base_mine_detonation_time_ms"
     ],
     "trade_stats": null,
@@ -6844,6 +6732,64 @@
   {
     "English": null,
     "ids": [
+      "bladefall_base_volley_frequency_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "A Volley of blades falls every {0} second",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "A Volley of blades falls every {0} seconds",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "bladefall_blade_left_in_ground_for_every_X_volleys"
     ],
     "trade_stats": null,
@@ -6890,6 +6836,60 @@
           []
         ],
         "string": "每 {0} 次齊射流下 1 剩餘劍刃於地面",
+        "reminder_text": "( 地面上剩餘的劍刃會殘存一段時間，並可被特定技能使用。若被幻化將視為匕首 )",
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "bladefall_create_X_lingering_blades_per_volley"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "每次齊射後，在地面上留下 1 把餘刃",
+        "reminder_text": "( 地面上剩餘的劍刃會殘存一段時間，並可被特定技能使用。若被幻化將視為匕首 )",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "每次齊射後，在地面上留下 {0} 把餘刃",
         "reminder_text": "( 地面上剩餘的劍刃會殘存一段時間，並可被特定技能使用。若被幻化將視為匕首 )",
         "is_markup": null
       }
@@ -7009,6 +7009,42 @@
           []
         ],
         "string": "{0} 次齊射",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "bladefall_volley_frequency_+%_per_100_maximum_mana"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% increased Volley frequency per 100 maximum Mana",
         "reminder_text": null,
         "is_markup": null
       }
@@ -9553,7 +9589,7 @@
             "milliseconds_to_seconds_2dp"
           ]
         ],
-        "string": "移動或你立即傳送時，此法術每 0.25 秒失去 1 強化",
+        "string": "移動或你立即傳送時，此法術每 0.5 秒失去 1 強化",
         "reminder_text": null,
         "is_markup": null
       }
@@ -10365,7 +10401,7 @@
         "index_handlers": [
           []
         ],
-        "string": "附加等同 {0}% 裝備中匕首的法術傷害\n若裝備 2 把匕首，每把貢獻相當於 50% 的附加傷害",
+        "string": "造成相當於裝備中匕首傷害 {0}% 的附加法術傷害\n裝備兩把匕首時，每一把貢獻 60% 的附加傷害",
         "reminder_text": "( 符紋匕首視為匕首 )",
         "is_markup": null
       }
@@ -11708,6 +11744,168 @@
   {
     "English": null,
     "ids": [
+      "base_max_number_of_dominated_magic_monsters"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "最大 {0} 個召喚的魔法統御護衛",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "最大 {0} 個召喚的魔法統御護衛",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "base_max_number_of_dominated_normal_monsters"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "最大 {0} 個召喚的普通統御護衛",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "最大 {0} 個召喚的普通統御護衛",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "base_max_number_of_dominated_rare_monsters"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "最大 {0} 個召喚的稀有統御護衛",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "最大 {0} 個召喚的稀有統御護衛",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "maximum_energy_shield_leech_amount_per_leech_+%"
     ],
     "trade_stats": null,
@@ -11869,6 +12067,114 @@
         ],
         "string": "產生的屍體減少 {0}% 最大生命",
         "reminder_text": "( 擊殺敵人不會產生屍體 )",
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "base_number_of_blink_mirror_arrow_elemental_hit_clones"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "最大 {0} 個發射元素箭矢的複製之體",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "最大 {0} 個發射元素箭矢的複製之體",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "base_number_of_blink_mirror_arrow_rain_of_arrows_clones"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "最大 {0} 個朝上方發射箭矢的複製之體",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "最大 {0} 個朝上方發射箭矢的複製之體",
+        "reminder_text": null,
         "is_markup": null
       }
     ]
@@ -12936,7 +13242,7 @@
   {
     "English": null,
     "ids": [
-      "number_of_animated_weapons_allowed",
+      "base_number_of_animated_weapons_allowed",
       "quality_display_animate_weapon_is_gem"
     ],
     "trade_stats": null,
@@ -13132,6 +13438,60 @@
           []
         ],
         "string": "最多召喚 {0} 個奪魂鐮",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "base_number_of_void_spawns_allowed"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "最大 {0} 個召喚虛空幼蟲",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "最大 {0} 個召喚虛空幼蟲",
         "reminder_text": null,
         "is_markup": null
       }

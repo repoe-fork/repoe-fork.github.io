@@ -3213,8 +3213,9 @@
     "English": null,
     "ids": [
       "is_totem",
-      "number_of_totems_to_summon",
-      "is_ranged_attack_totem"
+      "is_ranged_attack_totem",
+      "active_skill_summon_X_totems_in_ring_override",
+      "number_of_totems_to_summon"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -3230,21 +3231,28 @@
           },
           {
             "min": 0,
-            "max": 1,
+            "max": 0,
             "negated": null
           },
           {
-            "min": 0,
-            "max": 0,
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
             "negated": null
           }
         ],
         "format": [
           "ignore",
           "ignore",
+          "ignore",
           "ignore"
         ],
         "index_handlers": [
+          [],
           [],
           [],
           []
@@ -3262,90 +3270,33 @@
           },
           {
             "min": 0,
-            "max": 1,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": null,
+            "max": null,
             "negated": null
           },
           {
-            "min": 0,
-            "max": 0,
-            "negated": true
+            "min": null,
+            "max": null,
+            "negated": null
           }
         ],
         "format": [
           "ignore",
           "ignore",
+          "ignore",
           "ignore"
         ],
         "index_handlers": [
+          [],
           [],
           [],
           []
         ],
         "string": "サポートされたスキルはそのスキルを使用するバリスタトーテムを1体召喚する",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
-          },
-          {
-            "min": 2,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#",
-          "ignore",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          [],
-          []
-        ],
-        "string": "サポートされたスキルはそのスキルを使用するトーテムを{0}体召喚する",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
-          },
-          {
-            "min": 2,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
-          }
-        ],
-        "format": [
-          "#",
-          "ignore",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          [],
-          []
-        ],
-        "string": "サポートされたスキルはそのスキルを使用するバリスタトーテムを{0}体召喚する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -18028,7 +17979,7 @@
             "milliseconds_to_seconds_2dp"
           ]
         ],
-        "string": "サポートされたスキルは移動中に0.25秒ごとにインテンシティを1失い、テレポートすると全て失う",
+        "string": "サポートされたスキルは移動中に0.5秒ごとにインテンシティを1失い、テレポートすると全て失う",
         "reminder_text": null,
         "is_markup": null
       }
@@ -28460,6 +28411,78 @@
           []
         ],
         "string": "サポートされたスキルによるトーテムは復讐の炎スキルを獲得し\n敵からヒットを受けた時にそれをトリガーする",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_focus_channel_damage_+%_final_per_second_channelling_up_to_60%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルはチャネリングするごとに毎秒ダメージが上昇し、最大60%上昇する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_focus_channel_cost_+%_final_per_second_channelling_up_to_100%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルはチャネリングするごとに毎秒コストが上昇し、最大100%上昇する",
         "reminder_text": null,
         "is_markup": null
       }

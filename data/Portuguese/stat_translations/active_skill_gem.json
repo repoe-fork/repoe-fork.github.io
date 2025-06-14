@@ -1661,154 +1661,6 @@
   {
     "English": null,
     "ids": [
-      "is_totem",
-      "number_of_totems_to_summon",
-      "is_ranged_attack_totem"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": [
-      {
-        "condition": [
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
-          },
-          {
-            "min": 0,
-            "max": 1,
-            "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore",
-          "ignore",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          [],
-          []
-        ],
-        "string": "Convoca um Totem que usa esta Habilidade",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
-          },
-          {
-            "min": 0,
-            "max": 1,
-            "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
-          }
-        ],
-        "format": [
-          "ignore",
-          "ignore",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          [],
-          []
-        ],
-        "string": "Convoca um Totem Balista que usa esta Habilidade",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
-          },
-          {
-            "min": 2,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#",
-          "ignore",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          [],
-          []
-        ],
-        "string": "Convoca {0} Totens que usam esta Habilidade",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
-          },
-          {
-            "min": 2,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
-          }
-        ],
-        "format": [
-          "#",
-          "ignore",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          [],
-          []
-        ],
-        "string": "Convoca {0} Totens Balista que usam esta Habilidade",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "active_skill_hit_damage_+%_final_per_100ms_duration"
     ],
     "trade_stats": null,
@@ -5568,6 +5420,42 @@
   {
     "English": null,
     "ids": [
+      "base_max_number_of_absolution_sentinels"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Máximo de {0} Sentinelas da Absolvição invocadas",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "base_mine_detonation_time_ms"
     ],
     "trade_stats": null,
@@ -6844,6 +6732,64 @@
   {
     "English": null,
     "ids": [
+      "bladefall_base_volley_frequency_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "Uma rajada de lâminas cai a cada {0} segundo",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "Uma rajada de lâminas cai a cada {0} segundos",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "bladefall_blade_left_in_ground_for_every_X_volleys"
     ],
     "trade_stats": null,
@@ -6886,6 +6832,60 @@
           []
         ],
         "string": "Deixa uma Lâmina Persistente no solo para cada {0} Saraivadas",
+        "reminder_text": "(Lâminas Persistentes continuam no chão por uma duração e podem ser usadas por habilidades específicas. Se Animadas, elas contam como Adagas)",
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "bladefall_create_X_lingering_blades_per_volley"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Deixa uma Lâmina Persistente no chão para cada rajada",
+        "reminder_text": "(Lâminas Persistentes continuam no chão por uma duração e podem ser usadas por habilidades específicas. Se Animadas, elas contam como Adagas)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Deixa {0} Lâminas Persistentes no chão para cada rajada",
         "reminder_text": "(Lâminas Persistentes continuam no chão por uma duração e podem ser usadas por habilidades específicas. Se Animadas, elas contam como Adagas)",
         "is_markup": null
       }
@@ -7005,6 +7005,42 @@
           []
         ],
         "string": "{0} Rajadas",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "bladefall_volley_frequency_+%_per_100_maximum_mana"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% maior frequência de rajadas por 100 de mana máximo",
         "reminder_text": null,
         "is_markup": null
       }
@@ -9549,7 +9585,7 @@
             "milliseconds_to_seconds_2dp"
           ]
         ],
-        "string": "Esta Magia perde 1 de Intensidade a cada 0.25 segundos enquanto se movendo, ou imediatamente ao teleportar",
+        "string": "Esta Magia perde 1 de Intensidade a cada 0.5 segundos enquanto se movendo, ou imediatamente ao teleportar",
         "reminder_text": null,
         "is_markup": null
       }
@@ -10361,7 +10397,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Causa Dano Mágico Adicional igual a {0}% do Dano da Adaga Equipada\nSe duas Adagas forem Equipadas, cada uma contribui com metade do Dano Adicional",
+        "string": "Causa dano de magia adicional igual a {0}% do dano da adaga equipada\nSe duas adagas estiverem equipadas, cada uma contribui com até 60% de dano adicional",
         "reminder_text": "(Adagar Rúnicas são consideradas Adagas)",
         "is_markup": null
       }
@@ -11708,6 +11744,168 @@
   {
     "English": null,
     "ids": [
+      "base_max_number_of_dominated_magic_monsters"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Máximo de {0} Sentinela do Domínio Mágica invocada",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Máximo de {0} Sentinelas do Domínio Mágicas invocadas",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "base_max_number_of_dominated_normal_monsters"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Máximo de {0} Sentinela do Domínio Normal invocada",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Máximo de {0} Sentinelas do Domínio Normais invocadas",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "base_max_number_of_dominated_rare_monsters"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Máximo de {0} Sentinela do Domínio Rara invocada",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Máximo de {0} Sentinelas do Domínio Raras invocadas",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "maximum_energy_shield_leech_amount_per_leech_+%"
     ],
     "trade_stats": null,
@@ -11865,6 +12063,114 @@
         ],
         "string": "Cadáveres Criados têm Vida Máxima reduzida em {0}%",
         "reminder_text": "(Matar um Inimigo não é Criar um cadáver)",
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "base_number_of_blink_mirror_arrow_elemental_hit_clones"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Máximo de {0} Clone que dispara Flechas Elementais",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Máximo de {0} Clones que disparam Flechas Elementais",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "base_number_of_blink_mirror_arrow_rain_of_arrows_clones"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Máximo de {0} Clone que dispara Flechas para Cima",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Máximo de {0} Clones que disparam Flechas para Cima",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -12936,7 +13242,7 @@
   {
     "English": null,
     "ids": [
-      "number_of_animated_weapons_allowed",
+      "base_number_of_animated_weapons_allowed",
       "quality_display_animate_weapon_is_gem"
     ],
     "trade_stats": null,
@@ -13128,6 +13434,60 @@
           []
         ],
         "string": "Máximo de {0} Ceifadores Convocados",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "base_number_of_void_spawns_allowed"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Máximo de {0} Rebento da Escuridão invocado",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Máximo de {0} Rebentos da Escuridão invocados",
         "reminder_text": null,
         "is_markup": null
       }

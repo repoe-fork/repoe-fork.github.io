@@ -526,7 +526,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Вы не можете использовать это умение самостоятельно, ваши статуи будут использовать это умение за вас",
+        "string": "Вы не можете самостоятельно использовать это умение, ваши статуи будут использовать это умение вместо вас",
         "reminder_text": null,
         "is_markup": null
       },
@@ -544,7 +544,25 @@
         "index_handlers": [
           []
         ],
-        "string": "Вы не можете использовать это умение самостоятельно, ваши тотемы будут использовать это умение за вас",
+        "string": "Вы не можете самостоятельно использовать это умение, ваши тотемы будут использовать это умение вместо вас",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 3,
+            "max": 3,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Вы не можете самостоятельно использовать это умение, Память Создателя будет использовать это умение вместо вас",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2397,8 +2415,9 @@
     "English": null,
     "ids": [
       "is_totem",
-      "number_of_totems_to_summon",
-      "is_ranged_attack_totem"
+      "is_ranged_attack_totem",
+      "active_skill_summon_X_totems_in_ring_override",
+      "number_of_totems_to_summon"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -2417,7 +2436,12 @@
           },
           {
             "min": 0,
-            "max": 1,
+            "max": 0,
+            "negated": null
+          },
+          {
+            "min": 2,
+            "max": null,
             "negated": null
           },
           {
@@ -2429,14 +2453,16 @@
         "format": [
           "ignore",
           "ignore",
+          "#",
           "ignore"
         ],
         "index_handlers": [
           [],
           [],
+          [],
           []
         ],
-        "string": "Устанавливает тотем, который использует это умение",
+        "string": "Призывает кольцом тотемов, использующих это умение: {2}",
         "reminder_text": null,
         "is_markup": null
       },
@@ -2447,33 +2473,6 @@
             "max": 0,
             "negated": true
           },
-          {
-            "min": 0,
-            "max": 1,
-            "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
-          }
-        ],
-        "format": [
-          "ignore",
-          "ignore",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          [],
-          []
-        ],
-        "string": "Устанавливает тотем-баллисту, который использует это умение",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
           {
             "min": 0,
             "max": 0,
@@ -2491,16 +2490,18 @@
           }
         ],
         "format": [
-          "#",
           "ignore",
+          "ignore",
+          "#",
           "ignore"
         ],
         "index_handlers": [
           [],
           [],
+          [],
           []
         ],
-        "string": "Устанавливает тотемов, которые используют это умение: {0}",
+        "string": "Призывает кольцом тотемов-баллист, использующих это умение: {2}",
         "reminder_text": null,
         "is_markup": null
       },
@@ -2512,27 +2513,229 @@
             "negated": true
           },
           {
-            "min": 2,
+            "min": 0,
+            "max": 0,
+            "negated": null
+          },
+          {
+            "min": null,
             "max": null,
             "negated": null
           },
           {
             "min": 0,
-            "max": 0,
-            "negated": true
+            "max": 1,
+            "negated": null
           }
         ],
         "format": [
-          "#",
+          "ignore",
+          "ignore",
           "ignore",
           "ignore"
         ],
         "index_handlers": [
           [],
           [],
+          [],
           []
         ],
-        "string": "Устанавливает тотемов-баллист, которые используют это умение: {0}",
+        "string": "Призывает тотем, использующий это умение",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "ignore",
+          "ignore",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          [],
+          []
+        ],
+        "string": "Призывает тотем-баооисту, использующий это умение",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          },
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "ignore",
+          "ignore",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          [],
+          []
+        ],
+        "string": "Призывает тотемов, использующих это умение: {3}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          },
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "ignore",
+          "ignore",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          [],
+          []
+        ],
+        "string": "Призывает тотемов-баллист, использующих это умение: {3}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "ignore",
+          "ignore",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          [],
+          []
+        ],
+        "string": "Призывает кольцом тотемов, использующих это умение: {3}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "ignore",
+          "ignore",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          [],
+          []
+        ],
+        "string": "Призывает кольцом тотемов-баллист, использующих это умение: {3}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2995,6 +3198,60 @@
           []
         ],
         "string": "Переносит {0}% урона, полученного окружающими врагами, на одну цель",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "display_fires_x_times"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Выпускает снаряды {0} раз",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Выпускает снаряды {0} раз(-а)",
         "reminder_text": null,
         "is_markup": null
       }
@@ -11477,158 +11734,6 @@
   {
     "English": null,
     "ids": [
-      "intermediary_cold_area_damage_to_deal_per_minute"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "per_minute_to_per_second"
-          ]
-        ],
-        "string": "Наносит {0} урона от холода в секунду",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "intermediary_cold_damage_to_deal_per_minute"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "per_minute_to_per_second"
-          ]
-        ],
-        "string": "Наносит {0} урона от холода в секунду",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "intermediary_cold_skill_dot_area_damage_to_deal_per_minute"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "per_minute_to_per_second"
-          ]
-        ],
-        "string": "Наносит {0} урона от холода в секунду",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "intermediary_cold_skill_dot_damage_to_deal_per_minute"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "per_minute_to_per_second"
-          ]
-        ],
-        "string": "Наносит {0} урона от холода в секунду",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "intermediary_fire_area_damage_to_deal_per_minute"
     ],
     "trade_stats": null,
@@ -11808,6 +11913,196 @@
           ]
         ],
         "string": "Второстепенный отрицательный эффект наносит {0} урона от огня в секунду",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "intermediary_cold_area_damage_to_deal_per_minute"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "per_minute_to_per_second"
+          ]
+        ],
+        "string": "Наносит {0} урона от холода в секунду",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "intermediary_cold_damage_to_deal_per_minute"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "per_minute_to_per_second"
+          ]
+        ],
+        "string": "Наносит {0} урона от холода в секунду",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "intermediary_cold_skill_dot_area_damage_to_deal_per_minute"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "per_minute_to_per_second"
+          ]
+        ],
+        "string": "Наносит {0} урона от холода в секунду",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "intermediary_cold_skill_dot_damage_to_deal_per_minute"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "per_minute_to_per_second"
+          ]
+        ],
+        "string": "Наносит {0} урона от холода в секунду",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "intermediary_lightning_skill_dot_damage_to_deal_per_minute"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "per_minute_to_per_second"
+          ]
+        ],
+        "string": "Наносит {0} урона от молнии в секунду",
         "reminder_text": null,
         "is_markup": null
       }
@@ -13255,6 +13550,62 @@
   {
     "English": null,
     "ids": [
+      "righteous_fire_cast_speed_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Дарует на {0}% больше скорости сотворения чар",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Дарует на {0}% меньше скорости сотворения чар",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "righteous_fire_spell_damage_+%_final"
     ],
     "trade_stats": null,
@@ -14159,7 +14510,8 @@
   {
     "English": null,
     "ids": [
-      "totem_duration"
+      "totem_duration",
+      "totem_fire_in_formation"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -14172,20 +14524,79 @@
       {
         "condition": [
           {
-            "min": null,
+            "min": 0,
+            "max": 0,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          }
+        ],
+        "format": [
+          "ignore",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "Тотемы исчезают после одной атаки",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
             "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
             "negated": null
           }
         ],
         "format": [
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
           [
             "milliseconds_to_seconds"
-          ]
+          ],
+          []
         ],
-        "string": "Время существования тотема: {0} секунд",
+        "string": "Длительность тотема - {0} секунд(-ы)",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          }
+        ],
+        "format": [
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds"
+          ],
+          []
+        ],
+        "string": "Длительность тотема - {0} секунд(-ы) или одна атака",
         "reminder_text": null,
         "is_markup": null
       }
@@ -15909,7 +16320,8 @@
   {
     "English": null,
     "ids": [
-      "blade_vortex_damage_+%_per_blade_final"
+      "blade_vortex_damage_+%_per_blade_final",
+      "damage_per_blade_vortex_blade_description_mode"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -15925,12 +16337,19 @@
             "min": 1,
             "max": null,
             "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
           }
         ],
         "format": [
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
+          [],
           []
         ],
         "string": "На {0}% больше урона за каждый клинок",
@@ -15943,17 +16362,76 @@
             "min": null,
             "max": -1,
             "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
           }
         ],
         "format": [
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
           [
             "negate"
-          ]
+          ],
+          []
         ],
         "string": "На {0}% меньше урона за каждый клинок",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "На {0}% больше урона за каждый клинок Вихря клинков",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ],
+          []
+        ],
+        "string": "На {0}% меньше урона за каждый клинок Вихря клинков",
         "reminder_text": null,
         "is_markup": null
       }
@@ -18109,6 +18587,60 @@
           []
         ],
         "string": "Вызывает срабатывание этого умения при нанесении удара",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "attack_trigger_on_melee_critical_hit_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% шанс вызвать срабатывание этого умения при нанесении критического удара в ближнем бою",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Вызывает срабатывание этого умения при нанесении критического удара в ближнем бою",
         "reminder_text": null,
         "is_markup": null
       }
@@ -20582,6 +21114,62 @@
   {
     "English": null,
     "ids": [
+      "fire_golem_grants_area_of_effect_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Големы даруют {0}% увеличение области действия",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Големы даруют {0}% уменьшение области действия",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "ice_golem_grants_critical_strike_chance_+%"
     ],
     "trade_stats": null,
@@ -20638,7 +21226,7 @@
   {
     "English": null,
     "ids": [
-      "ice_golem_grants_accuracy_+%"
+      "ice_golem_grants_accuracy_rating_+"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -20657,12 +21245,12 @@
           }
         ],
         "format": [
-          "#"
+          "+#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "Големы даруют {0}% повышение меткости",
+        "string": "Големы даруют {0} к меткости",
         "reminder_text": null,
         "is_markup": null
       },
@@ -20675,14 +21263,14 @@
           }
         ],
         "format": [
-          "#"
+          "+#"
         ],
         "index_handlers": [
           [
             "negate"
           ]
         ],
-        "string": "Големы даруют {0}% снижение меткости",
+        "string": "Големы даруют {0} к меткости",
         "reminder_text": null,
         "is_markup": null
       }
@@ -20719,6 +21307,42 @@
           []
         ],
         "string": "Големы даруют {0}% дополнительного уменьшения получаемого физического урона",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "chaos_golem_grants_dot_multiplier_+"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Големы даруют +{0}% к множителю постепенного урона",
         "reminder_text": null,
         "is_markup": null
       }
@@ -20804,6 +21428,62 @@
   {
     "English": null,
     "ids": [
+      "stone_golem_grants_defences_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Големы даруют {0}% увеличение защиты",
+        "reminder_text": "(Обычной защитой являются броня, уклонение и энергетический щит)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Големы даруют {0}% уменьшение защиты",
+        "reminder_text": "(Обычной защитой являются броня, уклонение и энергетический щит)",
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "lightning_golem_grants_attack_and_cast_speed_+%"
     ],
     "trade_stats": null,
@@ -20849,6 +21529,44 @@
           ]
         ],
         "string": "Големы даруют {0}% снижение скорости атаки и сотворения чар",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "lightning_golem_grants_base_mana_regeneration_rate_per_minute"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "per_minute_to_per_second"
+          ]
+        ],
+        "string": "Големы даруют регенерацию {0} маны в секунду",
         "reminder_text": null,
         "is_markup": null
       }
@@ -21019,6 +21737,42 @@
           ]
         ],
         "string": "Регенерация {0} маны в секунду",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "chaos_golem_grants_chaos_resistance_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Големы даруют {0}% к сопротивлению хаосу",
         "reminder_text": null,
         "is_markup": null
       }
@@ -23152,7 +23906,7 @@
           []
         ],
         "string": "Когда вы отравляете врага во время инкубирования, добавляет {0}% от ожидаемого\nурона ядом к значению чумы",
-        "reminder_text": "(Ожидаемый урон от яда - это его урон в секунду, умноженный на его длительность)",
+        "reminder_text": "(Ожидаемый урон от яда – это его урон в секунду, умноженный на длительность)",
         "is_markup": null
       }
     ],
@@ -25772,7 +26526,7 @@
           ],
           []
         ],
-        "string": "Базовый радиус равен {1} м",
+        "string": "Базовый радиус - {1} м",
         "reminder_text": null,
         "is_markup": null
       },
@@ -25806,7 +26560,7 @@
           ],
           []
         ],
-        "string": "Базовый радиус равен {1} м",
+        "string": "Базовый радиус - {1} м",
         "reminder_text": null,
         "is_markup": null
       },
@@ -25840,7 +26594,7 @@
             "locations_to_metres"
           ]
         ],
-        "string": "Радиус равен {2} м",
+        "string": "Базовый радиус - {2} м",
         "reminder_text": null,
         "is_markup": null
       },
@@ -25874,7 +26628,7 @@
             "locations_to_metres"
           ]
         ],
-        "string": "Радиус равен {2} м",
+        "string": "Базовый радиус - {2} м",
         "reminder_text": null,
         "is_markup": null
       },
@@ -25908,7 +26662,7 @@
           ],
           []
         ],
-        "string": "Базовый радиус взрыва равен {1} м",
+        "string": "Базовый радиус взрыва - {1} м",
         "reminder_text": null,
         "is_markup": null
       },
@@ -25942,7 +26696,7 @@
           ],
           []
         ],
-        "string": "Базовый радиус взрыва равен {1} м",
+        "string": "Базовый радиус взрыва - {1} м",
         "reminder_text": null,
         "is_markup": null
       },
@@ -25976,7 +26730,7 @@
             "locations_to_metres"
           ]
         ],
-        "string": "Радиус взрыва равен {2} м",
+        "string": "Базовый радиус взрыва - {2} м",
         "reminder_text": null,
         "is_markup": null
       },
@@ -26010,7 +26764,7 @@
             "locations_to_metres"
           ]
         ],
-        "string": "Радиус взрыва равен {2} м",
+        "string": "Базовый радиус взрыва - {2} м",
         "reminder_text": null,
         "is_markup": null
       },
@@ -26044,7 +26798,7 @@
           ],
           []
         ],
-        "string": "Базовый радиус взрыва равен {1} м",
+        "string": "Базовый радиус взрыва - {1} м",
         "reminder_text": null,
         "is_markup": null
       },
@@ -26078,7 +26832,7 @@
           ],
           []
         ],
-        "string": "Базовый радиус взрыва равен {1} м",
+        "string": "Базовый радиус взрыва - {1} м",
         "reminder_text": null,
         "is_markup": null
       },
@@ -26112,7 +26866,7 @@
             "locations_to_metres"
           ]
         ],
-        "string": "Радиус взрыва равен {2} м",
+        "string": "Радиус взрыва - {2} м",
         "reminder_text": null,
         "is_markup": null
       },
@@ -26146,7 +26900,7 @@
             "locations_to_metres"
           ]
         ],
-        "string": "Радиус взрыва равен {2} м",
+        "string": "Радиус взрыва - {2} м",
         "reminder_text": null,
         "is_markup": null
       },
@@ -26180,7 +26934,7 @@
           ],
           []
         ],
-        "string": "Базовый радиус оружия в правой руке равен {1} м",
+        "string": "Базовый радиус правой рукой - {1} м",
         "reminder_text": null,
         "is_markup": null
       },
@@ -26214,7 +26968,7 @@
           ],
           []
         ],
-        "string": "Базовый радиус оружия в правой руке равен {1} м",
+        "string": "Базовый радиус правой рукой - {1} м",
         "reminder_text": null,
         "is_markup": null
       },
@@ -26248,7 +27002,7 @@
             "locations_to_metres"
           ]
         ],
-        "string": "Радиус оружия в правой руке равен {2} м",
+        "string": "Базовый радиус правой рукой - {2} м",
         "reminder_text": null,
         "is_markup": null
       },
@@ -26282,7 +27036,7 @@
             "locations_to_metres"
           ]
         ],
-        "string": "Радиус оружия в правой руке равен {2} м",
+        "string": "Базовый радиус правой рукой - {2} м",
         "reminder_text": null,
         "is_markup": null
       },
@@ -26316,7 +27070,7 @@
           ],
           []
         ],
-        "string": "Базовый радиус ауры равен {1} м",
+        "string": "Базовый радиус ауры - {1} м",
         "reminder_text": null,
         "is_markup": null
       },
@@ -26350,7 +27104,7 @@
           ],
           []
         ],
-        "string": "Базовый радиус ауры равен {1} м",
+        "string": "Базовый радиус ауры - {1} м",
         "reminder_text": null,
         "is_markup": null
       },
@@ -26384,7 +27138,7 @@
             "locations_to_metres"
           ]
         ],
-        "string": "Радиус ауры равен {2} м",
+        "string": "Радиус ауры - {2} м",
         "reminder_text": null,
         "is_markup": null
       },
@@ -26418,7 +27172,7 @@
             "locations_to_metres"
           ]
         ],
-        "string": "Радиус ауры равен {2} м",
+        "string": "Радиус ауры - {2} м",
         "reminder_text": null,
         "is_markup": null
       },
@@ -26452,7 +27206,7 @@
           ],
           []
         ],
-        "string": "Базовая длина волны равна {1} м",
+        "string": "Базовая длина волны - {1} м",
         "reminder_text": null,
         "is_markup": null
       },
@@ -26486,7 +27240,7 @@
           ],
           []
         ],
-        "string": "Базовая длина волны равна {1} м",
+        "string": "Базовая длина волны - {1} м",
         "reminder_text": null,
         "is_markup": null
       },
@@ -26520,7 +27274,7 @@
             "locations_to_metres"
           ]
         ],
-        "string": "Длина волны равна {2} м",
+        "string": "Длина волны - {2} м",
         "reminder_text": null,
         "is_markup": null
       },
@@ -26554,7 +27308,143 @@
             "locations_to_metres"
           ]
         ],
-        "string": "Длина волны равна {2} м",
+        "string": "Длина волны - {2} м",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 6,
+            "max": 6,
+            "negated": null
+          },
+          {
+            "min": 10,
+            "max": 10,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [
+            "locations_to_metres"
+          ],
+          []
+        ],
+        "string": "Базовый радиус залпа - {1} м",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 6,
+            "max": 6,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [
+            "locations_to_metres"
+          ],
+          []
+        ],
+        "string": "Базовый радиус залпа - {1} м",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 6,
+            "max": 6,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 10,
+            "max": 10,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "ignore",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          [
+            "locations_to_metres"
+          ]
+        ],
+        "string": "Радиус залпа - {2} м",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 6,
+            "max": 6,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "ignore",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          [
+            "locations_to_metres"
+          ]
+        ],
+        "string": "Радиус залпа - {2} м",
         "reminder_text": null,
         "is_markup": null
       }
@@ -27490,7 +28380,7 @@
           ],
           []
         ],
-        "string": "Базовый вторичный радиус равен {1} м",
+        "string": "Базовый вторичный радиус - {1} м",
         "reminder_text": null,
         "is_markup": null
       },
@@ -27524,7 +28414,7 @@
           ],
           []
         ],
-        "string": "Базовый вторичный радиус равен {1} м",
+        "string": "Базовый вторичный радиус - {1} м",
         "reminder_text": null,
         "is_markup": null
       },
@@ -27558,7 +28448,7 @@
             "locations_to_metres"
           ]
         ],
-        "string": "Вторичный радиус равен {2} м",
+        "string": "Вторичный радиус - {2} м",
         "reminder_text": null,
         "is_markup": null
       },
@@ -27592,7 +28482,7 @@
             "locations_to_metres"
           ]
         ],
-        "string": "Вторичный радиус равен {2} м",
+        "string": "Вторичный радиус - {2} м",
         "reminder_text": null,
         "is_markup": null
       },
@@ -27626,7 +28516,7 @@
           ],
           []
         ],
-        "string": "Базовый радиус взрыва равен {1} м",
+        "string": "Базовый радиус взрыва - {1} м",
         "reminder_text": null,
         "is_markup": null
       },
@@ -27660,7 +28550,7 @@
           ],
           []
         ],
-        "string": "Базовый радиус взрыва равен {1} м",
+        "string": "Базовый радиус взрыва - {1} м",
         "reminder_text": null,
         "is_markup": null
       },
@@ -27694,7 +28584,7 @@
             "locations_to_metres"
           ]
         ],
-        "string": "Радиус взрыва равен {2} м",
+        "string": "Радиус взрыва - {2} м",
         "reminder_text": null,
         "is_markup": null
       },
@@ -27728,7 +28618,7 @@
             "locations_to_metres"
           ]
         ],
-        "string": "Радиус взрыва равен {2} м",
+        "string": "Радиус взрыва - {2} м",
         "reminder_text": null,
         "is_markup": null
       },
@@ -27762,7 +28652,7 @@
           ],
           []
         ],
-        "string": "Изначальный радиус охлажденной земли равен {1} м",
+        "string": "Базовый изначальный радиус замёрзшей земли - {1} м",
         "reminder_text": null,
         "is_markup": null
       },
@@ -27796,7 +28686,7 @@
           ],
           []
         ],
-        "string": "Изначальный радиус охлажденной земли равен {1} м",
+        "string": "Базовый изначальный радиус замёрзшей земли - {1} м",
         "reminder_text": null,
         "is_markup": null
       },
@@ -27830,7 +28720,7 @@
             "locations_to_metres"
           ]
         ],
-        "string": "Изначальный радиус охлажденной земли равен {2} м",
+        "string": "Изначальный радиус замёрзшей земли - {2} м",
         "reminder_text": null,
         "is_markup": null
       },
@@ -27864,7 +28754,7 @@
             "locations_to_metres"
           ]
         ],
-        "string": "Изначальный радиус охлажденной земли равен {2} м",
+        "string": "Изначальный радиус замёрзшей земли - {2} м",
         "reminder_text": null,
         "is_markup": null
       },
@@ -27898,7 +28788,7 @@
           ],
           []
         ],
-        "string": "Радиус оружия в левой руке равен {1} м",
+        "string": "Базовый радиус левой рукой - {1} м",
         "reminder_text": null,
         "is_markup": null
       },
@@ -27932,7 +28822,7 @@
           ],
           []
         ],
-        "string": "Радиус оружия в левой руке равен {1} м",
+        "string": "Базовый радиус левой рукой - {1} м",
         "reminder_text": null,
         "is_markup": null
       },
@@ -27966,7 +28856,7 @@
             "locations_to_metres"
           ]
         ],
-        "string": "Радиус оружия в левой руке равен {2} м",
+        "string": "Радиус левой рукой - {2} м",
         "reminder_text": null,
         "is_markup": null
       },
@@ -28000,7 +28890,7 @@
             "locations_to_metres"
           ]
         ],
-        "string": "Радиус оружия в левой руке равен {2} м",
+        "string": "Радиус левой рукой - {2} м",
         "reminder_text": null,
         "is_markup": null
       },
@@ -28034,7 +28924,7 @@
           ],
           []
         ],
-        "string": "Базовый радиус ауры равен {1} м",
+        "string": "Базовый радиус ауры - {1} м",
         "reminder_text": null,
         "is_markup": null
       },
@@ -28068,7 +28958,7 @@
           ],
           []
         ],
-        "string": "Базовый радиус ауры равен {1} м",
+        "string": "Базовый радиус ауры - {1} м",
         "reminder_text": null,
         "is_markup": null
       },
@@ -28102,7 +28992,7 @@
             "locations_to_metres"
           ]
         ],
-        "string": "Радиус ауры равен {2} м",
+        "string": "Радиус ауры - {2} м",
         "reminder_text": null,
         "is_markup": null
       },
@@ -28136,7 +29026,7 @@
             "locations_to_metres"
           ]
         ],
-        "string": "Радиус ауры равен {2} м",
+        "string": "Радиус ауры - {2} м",
         "reminder_text": null,
         "is_markup": null
       },
@@ -28170,7 +29060,7 @@
           ],
           []
         ],
-        "string": "Базовая длина волны равна {1} м",
+        "string": "Базовая ширина волны - {1} м",
         "reminder_text": null,
         "is_markup": null
       },
@@ -28204,7 +29094,7 @@
           ],
           []
         ],
-        "string": "Базовая длина волны равна {1} м",
+        "string": "Базовая ширина волны - {1} м",
         "reminder_text": null,
         "is_markup": null
       },
@@ -28238,7 +29128,7 @@
             "locations_to_metres"
           ]
         ],
-        "string": "Длина волны равна {2} м",
+        "string": "Ширина волны - {2} м",
         "reminder_text": null,
         "is_markup": null
       },
@@ -28272,7 +29162,143 @@
             "locations_to_metres"
           ]
         ],
-        "string": "Длина волны равна {2} м",
+        "string": "Ширина волны - {2} м",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 6,
+            "max": 6,
+            "negated": null
+          },
+          {
+            "min": 10,
+            "max": 10,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [
+            "locations_to_metres"
+          ],
+          []
+        ],
+        "string": "Базовый радиус клинка - {1} м",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 6,
+            "max": 6,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [
+            "locations_to_metres"
+          ],
+          []
+        ],
+        "string": "Базовый радиус клинка - {1} м",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 6,
+            "max": 6,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 10,
+            "max": 10,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "ignore",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          [
+            "locations_to_metres"
+          ]
+        ],
+        "string": "Радиус клинка - {2} м",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 6,
+            "max": 6,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "ignore",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          [
+            "locations_to_metres"
+          ]
+        ],
+        "string": "Радиус клинка - {2} м",
         "reminder_text": null,
         "is_markup": null
       }
@@ -33478,60 +34504,6 @@
   {
     "English": null,
     "ids": [
-      "base_total_number_of_sigils_allowed"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": 1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[DNT] Can Cast an additional Brand",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 2,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[DNT] Can Cast {0} additional Brands",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "bear_and_siphoning_trap_debuff_grants_-%_cooldown_speed"
     ],
     "trade_stats": null,
@@ -33868,6 +34840,98 @@
   {
     "English": null,
     "ids": [
+      "blade_flurry_critical_strike_multiplier_+_while_at_max_stages"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% к множителю критического удара при максимуме стадий",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "blade_flurry_damage_+%_final_while_at_max_stages"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "На {0}% больше урона при максимуме стадий",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "На {0}% меньше урона при максимуме стадий",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "blade_flurry_elemental_damage_+%_while_channeling"
     ],
     "trade_stats": null,
@@ -34184,6 +35248,60 @@
   {
     "English": null,
     "ids": [
+      "bladefall_create_X_lingering_blades_per_volley"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0} клинок падает за залп, каждый из которых затем останется в земле",
+        "reminder_text": "(Остаточные клинки остаются на земеле в течение некоторого времени и могут быть использованы умениями. При оживлении считаются кинжалами)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0} клинка падает за залп, каждый из которых затем останется в земле",
+        "reminder_text": "(Остаточные клинки остаются на земеле в течение некоторого времени и могут быть использованы умениями. При оживлении считаются кинжалами)",
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "bladefall_critical_strike_chance_+%_per_stage"
     ],
     "trade_stats": null,
@@ -34229,6 +35347,64 @@
           ]
         ],
         "string": "{0}% снижение шанса критического удара за каждую волну",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "bladefall_volley_frequency_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "Залп клинков падает каждую секунду",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "Залп клинков падает каждые {0} секунд(-ы)",
         "reminder_text": null,
         "is_markup": null
       }
@@ -36512,6 +37688,208 @@
   {
     "English": null,
     "ids": [
+      "chain_hook_attaches_to_X_targets"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Бросает цепи во вплоть до {0} цель в радиусе",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Бросает цепи во вплоть до {0} цели(-ей) в радиусе",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "chain_hook_attachment_rage_to_gain_per_hit"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Скованные цепью цели даруют {0} свирепости при получении ими удара",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "chain_hook_attachment_range"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 10,
+            "max": 10,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "divide_by_ten_1dp_if_required"
+          ]
+        ],
+        "string": "Максимальная длина цепи - {0} м",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "divide_by_ten_1dp_if_required"
+          ]
+        ],
+        "string": "Максимальная длина цепи - {0} м",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "chain_hook_max_attached_targets"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Максимум цепей: {0}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Максимум цепей: {0}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "chain_hook_range_+%"
     ],
     "trade_stats": null,
@@ -37006,6 +38384,42 @@
           []
         ],
         "string": "{0}% шанс нанести двойной урон",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "chance_to_deal_double_damage_%_per_10_intelligence"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% шанс нанести двойной урон за каждые 10 интеллекта",
         "reminder_text": null,
         "is_markup": null
       }
@@ -41088,6 +42502,60 @@
   {
     "English": null,
     "ids": [
+      "damage_+%_final_vs_stunned_enemies"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "На {0}% больше урона по оглушенным врагам",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "На {0}% меньше урона по оглушенным врагам",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "damage_+%_if_you_have_consumed_a_corpse_recently"
     ],
     "trade_stats": null,
@@ -41818,6 +43286,104 @@
         ],
         "string": "Наносящие урон состояния наносят урон на {0}% быстрее",
         "reminder_text": "(Наносится тот же урон за более короткое время)",
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "dark_pact_chance_to_gain_an_additional_ruin_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% шанс получить дополнительную Гибель при использовании",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Получает дополнительную Гибель при использовании",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "dark_pact_sacrifice_%_life_from_max_ruin",
+      "dark_pact_chaos_damage_added_from_sacrifice_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "Получает один заряд Гибели при использовании\nПри достижении семи зарядов Гибели приносит в жертву {0}% вашего здоровья и наносит\n{1}% принесенного в жертву здоровья в виде урона хаосом",
+        "reminder_text": "(Гибель, наложенная таким образом, складывается с другими источниками Гибели)",
         "is_markup": null
       }
     ],
@@ -43828,6 +45394,60 @@
   {
     "English": null,
     "ids": [
+      "display_shaper_memory_uses_skill_once"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Поглощает 10 Воспоминаний\nПамять Создателя использует ваше умение Создателя {0} раз",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Поглощает 10 Воспоминаний\nПамять Создателя использует ваше умение Создателя {0} раз(-а)",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "display_sigil_of_power_stage_gain_delay"
     ],
     "trade_stats": null,
@@ -44555,7 +46175,7 @@
           []
         ],
         "string": "Дарует эффект Пожирателя душ на 20 секунд после нанесения смертельного удара по редким или уникальным врагам",
-        "reminder_text": "(Пока на вас действует Пожиратель душ, вы поглощаете души всех убитых поблизости врагов, получая 5% повышение скорости атаки и сотворения чар за каждую душу. Вы теряете 1 душу каждые 0,5 секунды, если недавно вы не получали ни одной души. Максимум 45 поглощенных душ)",
+        "reminder_text": "(Пока на вас действует Пожиратель душ, вы поглощаете души всех убитых поблизости врагов, получая 5% повышение скорости атаки и сотворения чар за каждую душу. Вы теряете 1 душу каждые 0,5 секунды, если недавно вы не поглощали ни одной души. Максимум 45 поглощённых душ)",
         "is_markup": null
       },
       {
@@ -44573,7 +46193,7 @@
           []
         ],
         "string": "{0}% шанс получить эффект Пожирателя душ на 20 секунд после нанесения смертельного удара по редким или уникальным врагам",
-        "reminder_text": "(Пока на вас действует Пожиратель душ, вы поглощаете души всех убитых поблизости врагов, получая 5% повышение скорости атаки и сотворения чар за каждую душу. Вы теряете 1 душу каждые 0,5 секунды, если недавно вы не получали ни одной души. Максимум 45 поглощенных душ)",
+        "reminder_text": "(Пока на вас действует Пожиратель душ, вы поглощаете души всех убитых поблизости врагов, получая 5% повышение скорости атаки и сотворения чар за каждую душу. Вы теряете 1 душу каждые 0,5 секунды, если недавно вы не поглощали ни одной души. Максимум 45 поглощённых душ)",
         "is_markup": null
       }
     ],
@@ -47233,62 +48853,6 @@
           []
         ],
         "string": "{0}% к множителю постепенного урона от огня",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "fire_storm_fireball_delay_+%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "[DNT] {0}% reduced Firestorm impact rate",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "[DNT] {0}% increased Firestorm impact rate",
         "reminder_text": null,
         "is_markup": null
       }
@@ -53834,6 +55398,42 @@
   {
     "English": null,
     "ids": [
+      "ignition_blast_%_max_life_as_fire_on_death"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Взрыв наносит базовый урон от огня в размере {0}% от максимального здоровья трупа",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "ignore_self_damage_from_trauma_chance_%"
     ],
     "trade_stats": null,
@@ -53902,7 +55502,7 @@
           [],
           []
         ],
-        "string": "Отрицательный урон наносит на {0}% больше урона за стадию",
+        "string": "Отрицательный эффект наносит на {0}% больше урона за стадию",
         "reminder_text": null,
         "is_markup": null
       },
@@ -53920,14 +55520,14 @@
           }
         ],
         "format": [
-          "+#",
+          "#",
           "ignore"
         ],
         "index_handlers": [
           [],
           []
         ],
-        "string": "Отрицательный урон наносит на {0}% меньше урона за стадию",
+        "string": "Отрицательный эффект наносит на {0}% больше урона за стадию",
         "reminder_text": null,
         "is_markup": null
       }
@@ -56345,7 +57945,7 @@
           ]
         ],
         "string": "Вторичный отрицательный эффект наносит {0}% от общего оставшегося ожидаемого урона ядом всех зарядов яда на умирающем враге в виде урона хаосом в секунду",
-        "reminder_text": "(Ожидаемый урон от яда - это его урон в секунду, умноженный на его длительность)",
+        "reminder_text": "(Ожидаемый урон от яда – это его урон в секунду, умноженный на длительность)",
         "is_markup": null
       }
     ],
@@ -57982,6 +59582,42 @@
   {
     "English": null,
     "ids": [
+      "minion_aggravate_bleeding_on_attack_hit_chance_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Приспешники с {0}% шансом могут усугубить кровотечение на поражаемых ударами их атак целях",
+        "reminder_text": "(Усугублённое кровотечение всегда наносит повышенный урон как если бы цель двигалась)",
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "minion_ailment_damage_+%"
     ],
     "trade_stats": null,
@@ -58928,6 +60564,62 @@
         ],
         "string": "Приспешники имеют {0}% увеличение порога оглушения врага",
         "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "minion_withered_effect_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Приспешники имеют {0}% усиление эффекта Истощения",
+        "reminder_text": "(Истощение дает 6% увеличение получаемого урона от хаоса и может быть наложено до 15 раз)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Приспешники имеют {0}% ослабление эффекта Истощения",
+        "reminder_text": "(Истощение дает 6% увеличение получаемого урона от хаоса и может быть наложено до 15 раз)",
         "is_markup": null
       }
     ],
@@ -60689,6 +62381,60 @@
           []
         ],
         "string": "Максимум призванных Священных реликвий: {0}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "number_of_void_spawns_allowed"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Максимум призванных Порождений пустоты: {0}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Максимум призванных Порождений пустоты: {0}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -69091,6 +70837,60 @@
   {
     "English": null,
     "ids": [
+      "stationary_shield_throw_projectiles_per_interval"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Единовременно выпускает {0} осколок, пока не будут выпущены все осколки",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Единовременно выпускает {0} осколка(-ов), пока не будут выпущены все осколки",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "stealth_+%"
     ],
     "trade_stats": null,
@@ -70476,7 +72276,8 @@
   {
     "English": null,
     "ids": [
-      "sunder_wave_radius_+_per_step"
+      "sunder_wave_radius_+_per_step",
+      "sunder_number_of_fake_chains"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -70492,17 +72293,24 @@
             "min": 10,
             "max": 10,
             "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
           }
         ],
         "format": [
-          "+#"
+          "+#",
+          "ignore"
         ],
         "index_handlers": [
           [
             "locations_to_metres"
-          ]
+          ],
+          []
         ],
-        "string": "{0} м к радиусу волны в каждом следующем участке поражения",
+        "string": "Области волны получают {0} м к радиусу за каждую предыдущую область в волне",
         "reminder_text": null,
         "is_markup": null
       },
@@ -70512,17 +72320,132 @@
             "min": null,
             "max": null,
             "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
           }
         ],
         "format": [
-          "+#"
+          "+#",
+          "ignore"
         ],
         "index_handlers": [
           [
             "locations_to_metres"
-          ]
+          ],
+          []
         ],
-        "string": "{0} м к радиусу волны в каждом следующем участке поражения",
+        "string": "Области волны получают {0} м к радиусу за каждую предыдущую область в волне",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 10,
+            "max": 10,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#",
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "locations_to_metres"
+          ],
+          []
+        ],
+        "string": "Волна может может начаться заново максимум {1} раз\nОбласти волны получают {0} м к радиусу за каждую предыдущую область",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#",
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "locations_to_metres"
+          ],
+          []
+        ],
+        "string": "Волна может может начаться заново максимум {1} раз\nОбласти волны получают {0} м к радиусу за каждую предыдущую область",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 10,
+            "max": 10,
+            "negated": null
+          },
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#",
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "locations_to_metres"
+          ],
+          []
+        ],
+        "string": "Волна может может начаться заново максимум {1} раза\nОбласти волны получают {0} м к радиусу за каждую предыдущую область",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#",
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "locations_to_metres"
+          ],
+          []
+        ],
+        "string": "Волна может может начаться заново максимум {1} раза\nОбласти волны получают {0} м к радиусу за каждую предыдущую область",
         "reminder_text": null,
         "is_markup": null
       }
@@ -71922,6 +73845,78 @@
           []
         ],
         "string": "Тотем вызывает срабатывание Пламени отмщения при получении удара от врага",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_focus_channel_damage_+%_final_per_second_channelling_up_to_60%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "На {0}% больше урона за каждую секунду поддержания, вплоть до максимума в 60%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_focus_channel_cost_+%_final_per_second_channelling_up_to_100%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "На {0}% больше расхода ресурсов са заждую секунду поддержания, вплоть до максимума в 100%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -76620,6 +78615,62 @@
   {
     "English": null,
     "ids": [
+      "trap_throwing_speed_+%_while_wielding_2hand"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% повышение скорости броска ловушки с двуручным оружием в руках",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "{0}% снижение скорости броска ловушки с двуручным оружием в руках",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "trap_throwing_speed_+%_per_frenzy_charge"
     ],
     "trade_stats": null,
@@ -77898,6 +79949,42 @@
   {
     "English": null,
     "ids": [
+      "trigger_on_ignited_enemy_death"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Эти чары срабатывают при смерти подожженного вами врага",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "trigger_on_reaching_low_life_in_presence_of_unique"
     ],
     "trade_stats": null,
@@ -78517,6 +80604,62 @@
           []
         ],
         "string": "Вызывает срабатывание этого умения, когда порча от усиленных умений прекращает действие",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "unleash_power_movement_speed_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Скорость передвижения на {0}% больше",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Скорость передвижения на {0}% меньше",
         "reminder_text": null,
         "is_markup": null
       }

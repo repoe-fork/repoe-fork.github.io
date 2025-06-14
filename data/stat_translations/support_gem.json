@@ -3220,21 +3220,28 @@
           },
           {
             "min": 0,
-            "max": 1,
+            "max": 0,
             "negated": null
           },
           {
-            "min": 0,
-            "max": 0,
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
             "negated": null
           }
         ],
         "format": [
           "ignore",
           "ignore",
+          "ignore",
           "ignore"
         ],
         "index_handlers": [
+          [],
           [],
           [],
           []
@@ -3252,21 +3259,28 @@
           },
           {
             "min": 0,
-            "max": 1,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": null,
+            "max": null,
             "negated": null
           },
           {
-            "min": 0,
-            "max": 0,
-            "negated": true
+            "min": null,
+            "max": null,
+            "negated": null
           }
         ],
         "format": [
           "ignore",
           "ignore",
+          "ignore",
           "ignore"
         ],
         "index_handlers": [
+          [],
           [],
           [],
           []
@@ -3274,76 +3288,13 @@
         "string": "Supported Skills will summon a Ballista Totem which uses that Skill",
         "reminder_text": null,
         "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
-          },
-          {
-            "min": 2,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#",
-          "ignore",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          [],
-          []
-        ],
-        "string": "Supported Skills will summon {0} Totems which use that Skill",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
-          },
-          {
-            "min": 2,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
-          }
-        ],
-        "format": [
-          "#",
-          "ignore",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          [],
-          []
-        ],
-        "string": "Supported Skills will summon {0} Ballista Totems which use that Skill",
-        "reminder_text": null,
-        "is_markup": null
       }
     ],
     "ids": [
       "is_totem",
-      "number_of_totems_to_summon",
-      "is_ranged_attack_totem"
+      "is_ranged_attack_totem",
+      "active_skill_summon_X_totems_in_ring_override",
+      "number_of_totems_to_summon"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -18020,7 +17971,7 @@
             "milliseconds_to_seconds_2dp"
           ]
         ],
-        "string": "Supported Spells lose 1 Intensity every 0.25 seconds while moving, or immediately if you teleport",
+        "string": "Supported Spells lose 1 Intensity every 0.5 seconds while moving, or immediately if you teleport",
         "reminder_text": null,
         "is_markup": null
       }
@@ -28472,6 +28423,78 @@
     ],
     "ids": [
       "support_flamewood_totems_trigger_infernal_bolt_when_hit"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Supported Skills deal {0}% more Damage per second Channelled, up to a maximum of 60%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "support_focus_channel_damage_+%_final_per_second_channelling_up_to_60%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Supported Skills have {0}% more Cost per second Channelled, up to a maximum of 100%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "support_focus_channel_cost_+%_final_per_second_channelling_up_to_100%"
     ],
     "trade_stats": null,
     "hidden": null,

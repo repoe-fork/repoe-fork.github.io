@@ -1661,154 +1661,6 @@
   {
     "English": null,
     "ids": [
-      "is_totem",
-      "number_of_totems_to_summon",
-      "is_ranged_attack_totem"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": [
-      {
-        "condition": [
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
-          },
-          {
-            "min": 0,
-            "max": 1,
-            "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore",
-          "ignore",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          [],
-          []
-        ],
-        "string": "Beschwört ein Totem, das diese Fertigkeit nutzt",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
-          },
-          {
-            "min": 0,
-            "max": 1,
-            "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
-          }
-        ],
-        "format": [
-          "ignore",
-          "ignore",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          [],
-          []
-        ],
-        "string": "Beschwört eine Balliste, die diese Fertigkeit nutzt",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
-          },
-          {
-            "min": 2,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#",
-          "ignore",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          [],
-          []
-        ],
-        "string": "Beschwört {0} Totems, die diese Fertigkeit nutzen",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
-          },
-          {
-            "min": 2,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
-          }
-        ],
-        "format": [
-          "#",
-          "ignore",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          [],
-          []
-        ],
-        "string": "Beschwört {0} Ballisten, die diese Fertigkeit nutzen",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "active_skill_hit_damage_+%_final_per_100ms_duration"
     ],
     "trade_stats": null,
@@ -5568,6 +5420,42 @@
   {
     "English": null,
     "ids": [
+      "base_max_number_of_absolution_sentinels"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Maximal {0} beschworene Wächter der Absolution",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "base_mine_detonation_time_ms"
     ],
     "trade_stats": null,
@@ -6844,6 +6732,64 @@
   {
     "English": null,
     "ids": [
+      "bladefall_base_volley_frequency_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "Eine Salve aus Klingen fällt jede {0} Sekunde",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "Eine Salve aus Klingen fällt alle {0} Sekunden",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "bladefall_blade_left_in_ground_for_every_X_volleys"
     ],
     "trade_stats": null,
@@ -6883,6 +6829,60 @@
           []
         ],
         "string": "Hinterlässt für jede {0} Salven eine verbleibende Klinge im Boden",
+        "reminder_text": "(Verbleibende Klingen bleiben für eine Dauer auf dem Boden zurück und können von bestimmten Fertigkeiten benutzt werden. Wenn sie beseelt werden, zählen sie als Dolche)",
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "bladefall_create_X_lingering_blades_per_volley"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Hinterlässt für jede Salve eine verbleibende Klinge im Boden",
+        "reminder_text": "(Verbleibende Klingen bleiben für eine Dauer auf dem Boden zurück und können von bestimmten Fertigkeiten benutzt werden. Wenn sie beseelt werden, zählen sie als Dolche)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Hinterlässt für jede Salve {0} verbleibende Klingen im Boden",
         "reminder_text": "(Verbleibende Klingen bleiben für eine Dauer auf dem Boden zurück und können von bestimmten Fertigkeiten benutzt werden. Wenn sie beseelt werden, zählen sie als Dolche)",
         "is_markup": null
       }
@@ -7002,6 +7002,42 @@
           []
         ],
         "string": "{0} Salven",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "bladefall_volley_frequency_+%_per_100_maximum_mana"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% erhöhte Salven-Frequenz pro 100 maximalem Mana",
         "reminder_text": null,
         "is_markup": null
       }
@@ -9546,7 +9582,7 @@
             "milliseconds_to_seconds_2dp"
           ]
         ],
-        "string": "Dieser Zauber verliert 1 Intensität alle 0.25 Sekunden, während Ihr Euch bewegt, oder sofort, wenn Ihr Euch teleportiert",
+        "string": "Dieser Zauber verliert 1 Intensität alle 0.5 Sekunden, während Ihr Euch bewegt, oder sofort, wenn Ihr Euch teleportiert",
         "reminder_text": null,
         "is_markup": null
       }
@@ -10358,7 +10394,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Verursacht zusätzlichen Zauberschaden in Höhe von {0}% des Schadens des ausgerüsteten Dolchs\nBei zwei ausgerüsteten Dolchen wird jeweils die Hälfte an zusätzlichem Schaden angerechnet",
+        "string": "Verursacht zusätzlichen Zauberschaden in Höhe von {0}% des Schadens des ausgerüsteten Dolchs\nBei zwei ausgerüsteten Dolchen wird jede Waffe zu 60% auf den zusätzlichen Schaden angerechnet",
         "reminder_text": "(Runendolche werden als Dolche klassifiziert)",
         "is_markup": null
       }
@@ -11708,6 +11744,168 @@
   {
     "English": null,
     "ids": [
+      "base_max_number_of_dominated_magic_monsters"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Maximal {0} beschworener magischer Wächter der Beherrschung",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Maximal {0} beschworene magische Wächter der Beherrschung",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "base_max_number_of_dominated_normal_monsters"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Maximal {0} beschworener normaler Wächter der Beherrschung",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Maximal {0} beschworene normale Wächter der Beherrschung",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "base_max_number_of_dominated_rare_monsters"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Maximal {0} beschworener seltener Wächter der Beherrschung",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Maximal {0} beschworene seltene Wächter der Beherrschung",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "maximum_energy_shield_leech_amount_per_leech_+%"
     ],
     "trade_stats": null,
@@ -11862,6 +12060,114 @@
         ],
         "string": "Beschworene Leichen haben {0}% verringertes maximales Leben",
         "reminder_text": "(Das Töten eines Gegners ist nicht mit dem Erzeugen einer Leiche gleichzusetzen)",
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "base_number_of_blink_mirror_arrow_elemental_hit_clones"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Maximal {0} Klon, der Elementarpfeile feuert",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Maximal {0} Klone, die Elementarpfeile feuern",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "base_number_of_blink_mirror_arrow_rain_of_arrows_clones"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Maximal {0} Klon, der Pfeile in die Luft feuert",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Maximal {0} Klone, die Pfeile in die Luft feuern",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -12936,7 +13242,7 @@
   {
     "English": null,
     "ids": [
-      "number_of_animated_weapons_allowed",
+      "base_number_of_animated_weapons_allowed",
       "quality_display_animate_weapon_is_gem"
     ],
     "trade_stats": null,
@@ -13125,6 +13431,60 @@
           []
         ],
         "string": "Maximal {0} beschworene Schnitter",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "base_number_of_void_spawns_allowed"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Maximal {0} beschworene Ausgeburt der Leere",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Maximal {0} beschworene Ausgeburten der Leere",
         "reminder_text": null,
         "is_markup": null
       }

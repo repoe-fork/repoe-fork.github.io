@@ -544,6 +544,24 @@
         "string": "このスキルを自分で使用することはできず、トーテムがプレイヤーの代わりにこのスキルを使用する",
         "reminder_text": null,
         "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 3,
+            "max": 3,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "このスキルを自分で使用することはできず、シェイパーの記憶がプレイヤーの代わりにこのスキルを使用する",
+        "reminder_text": null,
+        "is_markup": null
       }
     ],
     "Korean": null,
@@ -2397,8 +2415,9 @@
     "English": null,
     "ids": [
       "is_totem",
-      "number_of_totems_to_summon",
-      "is_ranged_attack_totem"
+      "is_ranged_attack_totem",
+      "active_skill_summon_X_totems_in_ring_override",
+      "number_of_totems_to_summon"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -2414,7 +2433,12 @@
           },
           {
             "min": 0,
-            "max": 1,
+            "max": 0,
+            "negated": null
+          },
+          {
+            "min": 2,
+            "max": null,
             "negated": null
           },
           {
@@ -2426,14 +2450,16 @@
         "format": [
           "ignore",
           "ignore",
+          "#",
           "ignore"
         ],
         "index_handlers": [
           [],
           [],
+          [],
           []
         ],
-        "string": "このスキルを使用するトーテムを1体召喚する",
+        "string": "このスキルを使用するトーテム{2}体をリング状に召喚する",
         "reminder_text": null,
         "is_markup": null
       },
@@ -2444,33 +2470,6 @@
             "max": 0,
             "negated": true
           },
-          {
-            "min": 0,
-            "max": 1,
-            "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
-          }
-        ],
-        "format": [
-          "ignore",
-          "ignore",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          [],
-          []
-        ],
-        "string": "このスキルを使用するバリスタトーテムを1体召喚する",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
           {
             "min": 0,
             "max": 0,
@@ -2488,16 +2487,18 @@
           }
         ],
         "format": [
-          "#",
           "ignore",
+          "ignore",
+          "#",
           "ignore"
         ],
         "index_handlers": [
           [],
           [],
+          [],
           []
         ],
-        "string": "このスキルを使用するトーテムを{0}体召喚する",
+        "string": "このスキルを使用するバリスタトーテム{2}体をリング状に召喚する",
         "reminder_text": null,
         "is_markup": null
       },
@@ -2509,27 +2510,229 @@
             "negated": true
           },
           {
-            "min": 2,
+            "min": 0,
+            "max": 0,
+            "negated": null
+          },
+          {
+            "min": null,
             "max": null,
             "negated": null
           },
           {
             "min": 0,
-            "max": 0,
-            "negated": true
+            "max": 1,
+            "negated": null
           }
         ],
         "format": [
-          "#",
+          "ignore",
+          "ignore",
           "ignore",
           "ignore"
         ],
         "index_handlers": [
           [],
           [],
+          [],
           []
         ],
-        "string": "このスキルを使用するバリスタトーテムを{0}体召喚する",
+        "string": "このスキルを使用するトーテム1体を召喚する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "ignore",
+          "ignore",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          [],
+          []
+        ],
+        "string": "このスキルを使用するバリスタトーテム1体を召喚する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          },
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "ignore",
+          "ignore",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          [],
+          []
+        ],
+        "string": "このスキルを使用するトーテム{3}体を召喚する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          },
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "ignore",
+          "ignore",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          [],
+          []
+        ],
+        "string": "このスキルを使用するバリスタトーテム{3}体を召喚する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "ignore",
+          "ignore",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          [],
+          []
+        ],
+        "string": "このスキルを使用するトーテム{3}体をリング状に召喚する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "ignore",
+          "ignore",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          [],
+          []
+        ],
+        "string": "このスキルを使用するバリスタトーテム{3}体をリング状に召喚する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2992,6 +3195,60 @@
           []
         ],
         "string": "近くの敵から受けたダメージの{0}%を対象に移す",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "display_fires_x_times"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}回放つ",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}回放つ",
         "reminder_text": null,
         "is_markup": null
       }
@@ -9421,7 +9678,7 @@
         "index_handlers": [
           []
         ],
-        "string": "撃破時にフレンジーチャージを1個獲得する",
+        "string": "キル時にフレンジーチャージを1個獲得する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -9457,7 +9714,7 @@
         "index_handlers": [
           []
         ],
-        "string": "撃破時に{0}%の確率でフレンジーチャージを1個獲得する",
+        "string": "キル時に{0}%の確率でフレンジーチャージを1個獲得する",
         "reminder_text": null,
         "is_markup": null
       },
@@ -9475,7 +9732,7 @@
         "index_handlers": [
           []
         ],
-        "string": "撃破時にフレンジーチャージを1個獲得する",
+        "string": "キル時にフレンジーチャージを1個獲得する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -11477,158 +11734,6 @@
   {
     "English": null,
     "ids": [
-      "intermediary_cold_area_damage_to_deal_per_minute"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "per_minute_to_per_second"
-          ]
-        ],
-        "string": "{0}の冷気継続ダメージ",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "intermediary_cold_damage_to_deal_per_minute"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "per_minute_to_per_second"
-          ]
-        ],
-        "string": "{0}の冷気継続ダメージ",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "intermediary_cold_skill_dot_area_damage_to_deal_per_minute"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "per_minute_to_per_second"
-          ]
-        ],
-        "string": "{0}の冷気継続ダメージ",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "intermediary_cold_skill_dot_damage_to_deal_per_minute"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "per_minute_to_per_second"
-          ]
-        ],
-        "string": "{0}の冷気継続ダメージ",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "intermediary_fire_area_damage_to_deal_per_minute"
     ],
     "trade_stats": null,
@@ -11805,6 +11910,196 @@
           ]
         ],
         "string": "二次的デバフは{0}の火継続ダメージを与える",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "intermediary_cold_area_damage_to_deal_per_minute"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "per_minute_to_per_second"
+          ]
+        ],
+        "string": "{0}の冷気継続ダメージ",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "intermediary_cold_damage_to_deal_per_minute"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "per_minute_to_per_second"
+          ]
+        ],
+        "string": "{0}の冷気継続ダメージ",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "intermediary_cold_skill_dot_area_damage_to_deal_per_minute"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "per_minute_to_per_second"
+          ]
+        ],
+        "string": "{0}の冷気継続ダメージ",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "intermediary_cold_skill_dot_damage_to_deal_per_minute"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "per_minute_to_per_second"
+          ]
+        ],
+        "string": "{0}の冷気継続ダメージ",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "intermediary_lightning_skill_dot_damage_to_deal_per_minute"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "per_minute_to_per_second"
+          ]
+        ],
+        "string": "毎秒{0}の雷継続ダメージ",
         "reminder_text": null,
         "is_markup": null
       }
@@ -13255,6 +13550,62 @@
   {
     "English": null,
     "ids": [
+      "righteous_fire_cast_speed_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "キャストスピード{0}%上昇を付与する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "キャストスピード{0}%低下を付与する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "righteous_fire_spell_damage_+%_final"
     ],
     "trade_stats": null,
@@ -14159,7 +14510,8 @@
   {
     "English": null,
     "ids": [
-      "totem_duration"
+      "totem_duration",
+      "totem_fire_in_formation"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -14169,18 +14521,77 @@
       {
         "condition": [
           {
-            "min": null,
+            "min": 0,
+            "max": 0,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          }
+        ],
+        "format": [
+          "ignore",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "トーテムは一度アタックした後に効果が切れる",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
             "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
             "negated": null
           }
         ],
         "format": [
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
           [
             "milliseconds_to_seconds"
-          ]
+          ],
+          []
+        ],
+        "string": "トーテムは{0}秒持続する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          }
+        ],
+        "format": [
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds"
+          ],
+          []
         ],
         "string": "トーテムは{0}秒持続する",
         "reminder_text": null,
@@ -15909,7 +16320,8 @@
   {
     "English": null,
     "ids": [
-      "blade_vortex_damage_+%_per_blade_final"
+      "blade_vortex_damage_+%_per_blade_final",
+      "damage_per_blade_vortex_blade_description_mode"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -15922,15 +16334,22 @@
             "min": 1,
             "max": null,
             "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
           }
         ],
         "format": [
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
+          [],
           []
         ],
-        "string": "ブレードが1個増えるごとにダメージが{0}%上昇する",
+        "string": "ブレード1個ごとにダメージが{0}%上昇する",
         "reminder_text": null,
         "is_markup": null
       },
@@ -15940,17 +16359,76 @@
             "min": null,
             "max": -1,
             "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
           }
         ],
         "format": [
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
           [
             "negate"
-          ]
+          ],
+          []
         ],
-        "string": "ブレードが1個増えるごとにダメージが{0}%低下する",
+        "string": "ブレード1個ごとにダメージが{0}%低下する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "ブレードヴォーテックスのブレード1個ごとにダメージが{0}%上昇する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ],
+          []
+        ],
+        "string": "ブレードヴォーテックスのブレード1個ごとにダメージが{0}%低下する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -16848,7 +17326,7 @@
         "index_handlers": [
           []
         ],
-        "string": "近接スキルで敵を撃破時に{0}%の確率でリンクされたスペルをキャストする",
+        "string": "近接スキルで敵をキル時に{0}%の確率でリンクされたスペルをキャストする",
         "reminder_text": null,
         "is_markup": null
       },
@@ -16866,7 +17344,7 @@
         "index_handlers": [
           []
         ],
-        "string": "近接スキルで敵を撃破時にリンクされたスペルをキャストする",
+        "string": "近接スキルで敵をキル時にリンクされたスペルをキャストする",
         "reminder_text": null,
         "is_markup": null
       }
@@ -17133,7 +17611,7 @@
         "index_handlers": [
           []
         ],
-        "string": "撃破時に{0}%の確率でこのアタックスキルをトリガーする",
+        "string": "キル時に{0}%の確率でこのアタックスキルをトリガーする",
         "reminder_text": null,
         "is_markup": null
       },
@@ -17151,7 +17629,7 @@
         "index_handlers": [
           []
         ],
-        "string": "撃破時にこのアタックスキルをトリガーする",
+        "string": "キル時にこのアタックスキルをトリガーする",
         "reminder_text": null,
         "is_markup": null
       }
@@ -17295,7 +17773,7 @@
         "index_handlers": [
           []
         ],
-        "string": "敵撃破時に{0}%の確率でこのスペルをトリガーする",
+        "string": "敵キル時に{0}%の確率でこのスペルをトリガーする",
         "reminder_text": null,
         "is_markup": null
       },
@@ -17313,7 +17791,7 @@
         "index_handlers": [
           []
         ],
-        "string": "敵撃破時にこのスペルをトリガーする",
+        "string": "敵キル時にこのスペルをトリガーする",
         "reminder_text": null,
         "is_markup": null
       }
@@ -17349,7 +17827,7 @@
         "index_handlers": [
           []
         ],
-        "string": "敵撃破時に{0}%の確率でこのスペルをトリガーする",
+        "string": "敵キル時に{0}%の確率でこのスペルをトリガーする",
         "reminder_text": null,
         "is_markup": null
       },
@@ -17367,7 +17845,7 @@
         "index_handlers": [
           []
         ],
-        "string": "敵撃破時にこのスペルをトリガーする",
+        "string": "敵キル時にこのスペルをトリガーする",
         "reminder_text": null,
         "is_markup": null
       }
@@ -17403,7 +17881,7 @@
         "index_handlers": [
           []
         ],
-        "string": "撃破時に{0}%の確率でこのアタックスキルをトリガーする",
+        "string": "キル時に{0}%の確率でこのアタックスキルをトリガーする",
         "reminder_text": null,
         "is_markup": null
       },
@@ -17421,7 +17899,7 @@
         "index_handlers": [
           []
         ],
-        "string": "撃破時にこのアタックスキルをトリガーする",
+        "string": "キル時にこのアタックスキルをトリガーする",
         "reminder_text": null,
         "is_markup": null
       }
@@ -18106,6 +18584,60 @@
           []
         ],
         "string": "プレイヤーがヒットを与えるとこのスキルをトリガーする",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "attack_trigger_on_melee_critical_hit_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "近接クリティカルストライク時に{0}%の確率でこのスキルをトリーがする",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "近接クリティカルストライク時にこのスキルをトリーがする",
         "reminder_text": null,
         "is_markup": null
       }
@@ -20582,6 +21114,62 @@
   {
     "English": null,
     "ids": [
+      "fire_golem_grants_area_of_effect_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ゴーレムは効果範囲{0}%増加を付与する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "ゴーレムは効果範囲{0}%減少を付与する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "ice_golem_grants_critical_strike_chance_+%"
     ],
     "trade_stats": null,
@@ -20638,7 +21226,7 @@
   {
     "English": null,
     "ids": [
-      "ice_golem_grants_accuracy_+%"
+      "ice_golem_grants_accuracy_rating_+"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -20654,12 +21242,12 @@
           }
         ],
         "format": [
-          "#"
+          "+#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "ゴーレムは命中力{0}%増加を付与する",
+        "string": "ゴーレムは命中力 {0}を付与する",
         "reminder_text": null,
         "is_markup": null
       },
@@ -20672,14 +21260,14 @@
           }
         ],
         "format": [
-          "#"
+          "+#"
         ],
         "index_handlers": [
           [
             "negate"
           ]
         ],
-        "string": "ゴーレムは命中力{0}%減少を付与する",
+        "string": "ゴーレムは命中力 {0}を付与する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -20716,6 +21304,42 @@
           []
         ],
         "string": "ゴーレムは物理ダメージ軽減率{0}%追加を付与する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "chaos_golem_grants_dot_multiplier_+"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ゴーレムは継続ダメージ倍率 +{0}%を付与する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -20804,6 +21428,62 @@
   {
     "English": null,
     "ids": [
+      "stone_golem_grants_defences_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ゴーレムは防御力{0}%増加を付与する",
+        "reminder_text": "(アーマー、回避力、エナジーシールドは標準的な防御力である)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "ゴーレムは防御力{0}%減少を付与する",
+        "reminder_text": "(アーマー、回避力、エナジーシールドは標準的な防御力である)",
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "lightning_golem_grants_attack_and_cast_speed_+%"
     ],
     "trade_stats": null,
@@ -20846,6 +21526,44 @@
           ]
         ],
         "string": "ゴーレムはアタックスピードおよびキャストスピード{0}%減少を付与する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "lightning_golem_grants_base_mana_regeneration_rate_per_minute"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "per_minute_to_per_second"
+          ]
+        ],
+        "string": "ゴーレムは毎秒{0}のマナ自動回復を付与する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -21016,6 +21734,42 @@
           ]
         ],
         "string": "毎秒{0}のマナを自動回復する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "chaos_golem_grants_chaos_resistance_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ゴーレムは混沌耐性 {0}%を付与する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -23919,7 +24673,7 @@
         "index_handlers": [
           []
         ],
-        "string": "感電状態の敵の撃破時に電気刺激を獲得する",
+        "string": "感電状態の敵のキル時に電気刺激を獲得する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -25235,7 +25989,7 @@
         "index_handlers": [
           []
         ],
-        "string": "レアまたはユニークの敵をヒット時に{0}%の確率で赦免のセンチネルを召喚する",
+        "string": "レアまたはユニークの敵をヒット時に{0}%の確率でアブソリューションのセンチネルを召喚する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -26552,6 +27306,142 @@
           ]
         ],
         "string": "ウェーブの長さは{2}m",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 6,
+            "max": 6,
+            "negated": null
+          },
+          {
+            "min": 10,
+            "max": 10,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [
+            "locations_to_metres"
+          ],
+          []
+        ],
+        "string": "ボレーの基礎半径は{1}m",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 6,
+            "max": 6,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [
+            "locations_to_metres"
+          ],
+          []
+        ],
+        "string": "ボレーの基礎半径は{1}m",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 6,
+            "max": 6,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 10,
+            "max": 10,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "ignore",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          [
+            "locations_to_metres"
+          ]
+        ],
+        "string": "ボレーの半径は{2}m",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 6,
+            "max": 6,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "ignore",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          [
+            "locations_to_metres"
+          ]
+        ],
+        "string": "ボレーの半径は{2}m",
         "reminder_text": null,
         "is_markup": null
       }
@@ -28270,6 +29160,142 @@
           ]
         ],
         "string": "ウェーブの幅は{2}m",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 6,
+            "max": 6,
+            "negated": null
+          },
+          {
+            "min": 10,
+            "max": 10,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [
+            "locations_to_metres"
+          ],
+          []
+        ],
+        "string": "ブレードの基礎半径は{1}m",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 6,
+            "max": 6,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [
+            "locations_to_metres"
+          ],
+          []
+        ],
+        "string": "ブレードの基礎半径は{1}m",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 6,
+            "max": 6,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 10,
+            "max": 10,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "ignore",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          [
+            "locations_to_metres"
+          ]
+        ],
+        "string": "ブレードの半径は{2}m",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 6,
+            "max": 6,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "ignore",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          [
+            "locations_to_metres"
+          ]
+        ],
+        "string": "ブレードの半径は{2}m",
         "reminder_text": null,
         "is_markup": null
       }
@@ -33478,60 +34504,6 @@
   {
     "English": null,
     "ids": [
-      "base_total_number_of_sigils_allowed"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": 1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "ブランドを追加で1個キャストできる",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 2,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "ブランドを追加で{0}個キャストできる",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "bear_and_siphoning_trap_debuff_grants_-%_cooldown_speed"
     ],
     "trade_stats": null,
@@ -33868,6 +34840,98 @@
   {
     "English": null,
     "ids": [
+      "blade_flurry_critical_strike_multiplier_+_while_at_max_stages"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ステージが最大値の時にクリティカルダメージ倍率 {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "blade_flurry_damage_+%_final_while_at_max_stages"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ステージが最大値の時にダメージが{0}%上昇する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "ステージが最大値の時にダメージが{0}%低下する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "blade_flurry_elemental_damage_+%_while_channeling"
     ],
     "trade_stats": null,
@@ -34184,6 +35248,60 @@
   {
     "English": null,
     "ids": [
+      "bladefall_create_X_lingering_blades_per_volley"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ボレーごとに{0}本のブレードが落下し、地面に残存する",
+        "reminder_text": "(Lingering Blades: 消えない刃は地面上に一定時間残り、特定のスキルにより使用される。アニメイトされた場合、短剣として扱われる。）",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ボレーごとに{0}本のブレードが落下し、地面に残存する",
+        "reminder_text": "(Lingering Blades: 消えない刃は地面上に一定時間残り、特定のスキルにより使用される。アニメイトされた場合、短剣として扱われる。）",
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "bladefall_critical_strike_chance_+%_per_stage"
     ],
     "trade_stats": null,
@@ -34226,6 +35344,64 @@
           ]
         ],
         "string": "刃の列1個ごとにクリティカル率が{0}%減少する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "bladefall_volley_frequency_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "ブレードのボレーは{0}秒ごとに落下する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "ブレードのボレーは{0}秒ごとに落下する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -36512,6 +37688,208 @@
   {
     "English": null,
     "ids": [
+      "chain_hook_attaches_to_X_targets"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "範囲内の最大{0}体の対象に向かってチェーンを投げる",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "範囲内の最大{0}体の対象に向かってチェーンを投げる",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "chain_hook_attachment_rage_to_gain_per_hit"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "チェーンに繋がれた対象はヒットを受けた時に憤怒を{0}付与する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "chain_hook_attachment_range"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 10,
+            "max": 10,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "divide_by_ten_1dp_if_required"
+          ]
+        ],
+        "string": "チェーンの長さの最大値 {0}m",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "divide_by_ten_1dp_if_required"
+          ]
+        ],
+        "string": "チェーンの長さの最大値 {0}m",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "chain_hook_max_attached_targets"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "チェーンの最大本数 {0}本",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "チェーンの最大本数 {0}本",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "chain_hook_range_+%"
     ],
     "trade_stats": null,
@@ -37003,6 +38381,42 @@
           []
         ],
         "string": "{0}%の確率でダブルダメージを与える",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "chance_to_deal_double_damage_%_per_10_intelligence"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "知性10ごとに{0}%の確率でダブルダメージを与える",
         "reminder_text": null,
         "is_markup": null
       }
@@ -41088,6 +42502,60 @@
   {
     "English": null,
     "ids": [
+      "damage_+%_final_vs_stunned_enemies"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "スタン状態の敵に対するダメージが{0}%上昇する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "スタン状態の敵に対するダメージが{0}%低下する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "damage_+%_if_you_have_consumed_a_corpse_recently"
     ],
     "trade_stats": null,
@@ -41828,6 +43296,104 @@
   {
     "English": null,
     "ids": [
+      "dark_pact_chance_to_gain_an_additional_ruin_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "使用時に{0}%の確率で破滅を追加で1スタック獲得する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "使用時に破滅を追加で1スタック獲得する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "dark_pact_sacrifice_%_life_from_max_ruin",
+      "dark_pact_chaos_damage_added_from_sacrifice_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "使用時に破滅を1額得する\n破滅が7に達したらプレイヤーのライフの{0}%を生贄に捧げ\n捧げたライフの{1}%を混沌ダメージとして与える",
+        "reminder_text": "(この方法で適用された破滅は、他の破滅のソースと加算的にスタックされます)",
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "dark_ritual_damage_+%_final_per_curse_applied"
     ],
     "trade_stats": null,
@@ -42509,7 +44075,7 @@
         "index_handlers": [
           []
         ],
-        "string": "撃破時に{0}%の確率で死体を破壊する",
+        "string": "キル時に{0}%の確率で死体を破壊する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -43487,7 +45053,7 @@
         "index_handlers": [
           []
         ],
-        "string": "昇華した赦免のセンチネルの最大数 {0}体\n昇華したセンチネルの数は通常の制限数に含まれない",
+        "string": "昇華したアブソリューションのセンチネルの最大数 {0}体\nアセンションしたセンチネルの数は通常の制限数に含まれない",
         "reminder_text": null,
         "is_markup": null
       },
@@ -43505,7 +45071,7 @@
         "index_handlers": [
           []
         ],
-        "string": "昇華した赦免のセンチネルの最大数 {0}体\n昇華したセンチネルの数は通常の制限数に含まれない",
+        "string": "昇華したアブソリューションのセンチネルの最大数 {0}体\nアセンションしたセンチネルの数は通常の制限数に含まれない",
         "reminder_text": null,
         "is_markup": null
       }
@@ -43541,7 +45107,7 @@
         "index_handlers": [
           []
         ],
-        "string": "昇華した支配のセンチネルの最大数 {0}体\n昇華したセンチネルの数は通常の制限数に含まれない",
+        "string": "昇華した支配のセンチネルの最大数 {0}体\nアセンションしたセンチネルの数は通常の制限数に含まれない",
         "reminder_text": null,
         "is_markup": null
       },
@@ -43559,7 +45125,7 @@
         "index_handlers": [
           []
         ],
-        "string": "昇華した支配のセンチネルの最大数 {0}体\n昇華したセンチネルの数は通常の制限数に含まれない",
+        "string": "昇華した支配のセンチネルの最大数 {0}体\nアセンションしたセンチネルの数は通常の制限数に含まれない",
         "reminder_text": null,
         "is_markup": null
       }
@@ -43815,6 +45381,60 @@
         ],
         "string": "身躱し中はキャストまたはトリガーできない\n身躱しを付与する",
         "reminder_text": "(Elusive: 身躱しは効果の初めに呪文や攻撃によるヒットをかわす確率を15%と、移動スピード30%増加を付与する。効果は時間と共に減少し、0%となった時点で終了する。既に身躱しを得ている場合、新たに身躱しを獲得することはできない)",
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "display_shaper_memory_uses_skill_once"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "追憶を{0}消費する\nシェイパーの記憶はシェイパースキルを{0}回使用する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "追憶を{0}消費する\nシェイパーの記憶はシェイパースキルを{0}回使用する",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -44552,7 +46172,7 @@
           []
         ],
         "string": "レアまたはユニークの敵に対するキリングブロー時に20秒間ソウルイーターを獲得する",
-        "reminder_text": "(Soul Eater: ソウルイーター中は、近くで倒された敵の魂を消化し、魂1個ごとにアタックスピードおよびキャストスピードが5%増加する。直近魂を獲得していなければ、0.5秒ごとに1個の魂を失う。消化できる魂の最大値は45。)",
+        "reminder_text": "(Soul Eater: ソウルイーター中は、近くで倒された敵の魂を消化し、魂1個ごとにアタックスピードおよびキャストスピードが5%増加する。直近魂を消化していなければ、0.5秒ごとに1個の魂を失う。消化できる魂の最大値は45。)",
         "is_markup": null
       },
       {
@@ -44570,7 +46190,7 @@
           []
         ],
         "string": "レアまたはユニークの敵に対するキリングブロー時に{0}%の確率で20秒間ソウルイーターを獲得する",
-        "reminder_text": "(Soul Eater: ソウルイーター中は、近くで倒された敵の魂を消化し、魂1個ごとにアタックスピードおよびキャストスピードが5%増加する。直近魂を獲得していなければ、0.5秒ごとに1個の魂を失う。消化できる魂の最大値は45。)",
+        "reminder_text": "(Soul Eater: ソウルイーター中は、近くで倒された敵の魂を消化し、魂1個ごとにアタックスピードおよびキャストスピードが5%増加する。直近魂を消化していなければ、0.5秒ごとに1個の魂を失う。消化できる魂の最大値は45。)",
         "is_markup": null
       }
     ],
@@ -47230,62 +48850,6 @@
           []
         ],
         "string": "火継続ダメージ倍率が{0}%される",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "fire_storm_fireball_delay_+%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "ファイヤーストームの衝突レートが{0}%減少する",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "ファイヤーストームの衝突レートが{0}%増加する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -52621,7 +54185,7 @@
         "index_handlers": [
           []
         ],
-        "string": "プレイヤーが敵を撃破すると浄化のセンチネルを召喚する",
+        "string": "プレイヤーが敵を撃破するとピュリティのセンチネルを召喚する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -52657,7 +54221,7 @@
         "index_handlers": [
           []
         ],
-        "string": "プレイヤーがレアまたはユニークの敵をヒットした時に{0}%の確率で浄化のセンチネルを召喚する",
+        "string": "プレイヤーがレアまたはユニークの敵をヒットした時に{0}%の確率でピュリティのセンチネルを召喚する",
         "reminder_text": null,
         "is_markup": null
       },
@@ -52675,7 +54239,7 @@
         "index_handlers": [
           []
         ],
-        "string": "プレイヤーがレアまたはユニークの敵をヒットした時に浄化のセンチネルを召喚する",
+        "string": "プレイヤーがレアまたはユニークの敵をヒットした時にピュリティのセンチネルを召喚する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -53820,6 +55384,42 @@
           []
         ],
         "string": "このスキルにより発火した敵の火耐性が{0}%される",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "ignition_blast_%_max_life_as_fire_on_death"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "爆発は死体の最大ライフの{0}%と同量の基礎火ダメージを与える",
         "reminder_text": null,
         "is_markup": null
       }
@@ -56610,7 +58210,7 @@
         "index_handlers": [
           []
         ],
-        "string": "赦免のセンチネル最大召喚数 {0}",
+        "string": "アブソリューションのセンチネル最大召喚数 {0}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -57982,6 +59582,42 @@
   {
     "English": null,
     "ids": [
+      "minion_aggravate_bleeding_on_attack_hit_chance_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ミニオンはアタックによるヒットを与えた敵に付与していた出血を{0}%の確率で悪化させる",
+        "reminder_text": "(Aggravated Bleed: 悪化した出血は、対象が動いているとみなして常に高いダメージを与える)",
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "minion_ailment_damage_+%"
     ],
     "trade_stats": null,
@@ -58925,6 +60561,62 @@
         ],
         "string": "ミニオンの敵スタン閾値が{0}%増加する",
         "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "minion_withered_effect_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ミニオンは衰弱の効果が{0}%増加する",
+        "reminder_text": "(Withered: 衰弱は、受ける混沌ダメージ6%増加させる。最大15スタックまで与えられる)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "ミニオンは衰弱の効果が{0}%減少する",
+        "reminder_text": "(Withered: 衰弱は、受ける混沌ダメージ6%増加させる。最大15スタックまで与えられる)",
         "is_markup": null
       }
     ],
@@ -60343,7 +62035,7 @@
         "index_handlers": [
           []
         ],
-        "string": "浄化のセンチネルの最大召喚数 {0}",
+        "string": "ピュリティのセンチネルの最大召喚数 {0}",
         "reminder_text": null,
         "is_markup": null
       },
@@ -60361,7 +62053,7 @@
         "index_handlers": [
           []
         ],
-        "string": "浄化のセンチネルの最大召喚数 {0}",
+        "string": "ピュリティのセンチネルの最大召喚数 {0}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -60686,6 +62378,60 @@
           []
         ],
         "string": "ホーリーレリック最大召喚数 {0}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "number_of_void_spawns_allowed"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ヴォイドスポーンの最大召喚数 {0}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ヴォイドスポーンの最大召喚数 {0}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -69091,6 +70837,60 @@
   {
     "English": null,
     "ids": [
+      "stationary_shield_throw_projectiles_per_interval"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "全てを放つまでに{0}個のシャードを放つ",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "全てを放つまでに{0}個のシャードを放つ",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "stealth_+%"
     ],
     "trade_stats": null,
@@ -70476,7 +72276,8 @@
   {
     "English": null,
     "ids": [
-      "sunder_wave_radius_+_per_step"
+      "sunder_wave_radius_+_per_step",
+      "sunder_number_of_fake_chains"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -70489,17 +72290,24 @@
             "min": 10,
             "max": 10,
             "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
           }
         ],
         "format": [
-          "+#"
+          "+#",
+          "ignore"
         ],
         "index_handlers": [
           [
             "locations_to_metres"
-          ]
+          ],
+          []
         ],
-        "string": "波動が順番に広がる範囲ごとに効果半径が{0}mされる",
+        "string": "波動の範囲は前回の波動の範囲ごとに半径{0}mを獲得する",
         "reminder_text": null,
         "is_markup": null
       },
@@ -70509,17 +72317,132 @@
             "min": null,
             "max": null,
             "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
           }
         ],
         "format": [
-          "+#"
+          "+#",
+          "ignore"
         ],
         "index_handlers": [
           [
             "locations_to_metres"
-          ]
+          ],
+          []
         ],
-        "string": "波動が順番に広がる範囲ごとに効果半径が{0}mされる",
+        "string": "波動の範囲は前回の波動の範囲ごとに半径{0}mを獲得する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 10,
+            "max": 10,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#",
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "locations_to_metres"
+          ],
+          []
+        ],
+        "string": "波動は最大{1}回リスタートできる\n波動の範囲は前回の波動の範囲ごとに半径{0}mを獲得する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#",
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "locations_to_metres"
+          ],
+          []
+        ],
+        "string": "波動は最大{1}回リスタートできる\n波動の範囲は前回の波動の範囲ごとに半径{0}mを獲得する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 10,
+            "max": 10,
+            "negated": null
+          },
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#",
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "locations_to_metres"
+          ],
+          []
+        ],
+        "string": "波動は最大{1}回リスタートできる\n波動の範囲は前回の波動の範囲ごとに半径{0}mを獲得する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#",
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "locations_to_metres"
+          ],
+          []
+        ],
+        "string": "波動は最大{1}回リスタートできる\n波動の範囲は前回の波動の範囲ごとに半径{0}mを獲得する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -71919,6 +73842,78 @@
           []
         ],
         "string": "トーテムは敵によるヒットを受けた時に復讐の炎をトリガーする",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_focus_channel_damage_+%_final_per_second_channelling_up_to_60%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "チャネリングするごとに毎秒ダメージが上昇し、最大60%上昇する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_focus_channel_cost_+%_final_per_second_channelling_up_to_100%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "チャネリングするごとに毎秒コストが上昇し、最大100%上昇する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -76620,6 +78615,62 @@
   {
     "English": null,
     "ids": [
+      "trap_throwing_speed_+%_while_wielding_2hand"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "両手武器を装備中にトラップ投擲スピードが{0}%増加する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "両手武器を装備中にトラップ投擲スピードが{0}%減少する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "trap_throwing_speed_+%_per_frenzy_charge"
     ],
     "trade_stats": null,
@@ -77898,6 +79949,42 @@
   {
     "English": null,
     "ids": [
+      "trigger_on_ignited_enemy_death"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "このスペルはプレイヤーによって発火を付与された敵が死亡した時にトリガーされる",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "trigger_on_reaching_low_life_in_presence_of_unique"
     ],
     "trade_stats": null,
@@ -78514,6 +80601,62 @@
           []
         ],
         "string": "サポートされたスキルの呪術の効果時間が終わった時にこのスキルはトリガーされる",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "unleash_power_movement_speed_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "移動スピードが{0}%上昇する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "移動スピードが{0}%低下する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -79416,7 +81559,7 @@
         "index_handlers": [
           []
         ],
-        "string": "昇華したセンチネルのダメージが{0}%上昇する",
+        "string": "アセンションしたセンチネルのダメージが{0}%上昇する",
         "reminder_text": null,
         "is_markup": null
       },
@@ -79436,7 +81579,7 @@
             "negate"
           ]
         ],
-        "string": "昇華したセンチネルのダメージが{0}%低下する",
+        "string": "アセンションしたセンチネルのダメージが{0}%低下する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -79472,7 +81615,7 @@
         "index_handlers": [
           []
         ],
-        "string": "昇華したセンチネルが受けるダメージが{0}%上昇する",
+        "string": "アセンションしたセンチネルが受けるダメージが{0}%上昇する",
         "reminder_text": null,
         "is_markup": null
       },
@@ -79492,7 +81635,7 @@
             "negate"
           ]
         ],
-        "string": "昇華したセンチネルが受けるダメージが{0}%低下する",
+        "string": "アセンションしたセンチネルが受けるダメージが{0}%低下する",
         "reminder_text": null,
         "is_markup": null
       }

@@ -3213,8 +3213,9 @@
     "English": null,
     "ids": [
       "is_totem",
-      "number_of_totems_to_summon",
-      "is_ranged_attack_totem"
+      "is_ranged_attack_totem",
+      "active_skill_summon_X_totems_in_ring_override",
+      "number_of_totems_to_summon"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -3228,90 +3229,33 @@
           },
           {
             "min": 0,
-            "max": 1,
-            "negated": null
-          },
-          {
-            "min": 0,
             "max": 0,
             "negated": null
-          }
-        ],
-        "format": [
-          "ignore",
-          "ignore",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          [],
-          []
-        ],
-        "string": "Utiliser une Aptitude modifiée invoque un Totem qui utilise cette Aptitude",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
           },
           {
-            "min": 0,
-            "max": 1,
-            "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
-          }
-        ],
-        "format": [
-          "ignore",
-          "ignore",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          [],
-          []
-        ],
-        "string": "Utiliser une Aptitude modifiée invoque un Totem Baliste qui utilise cette Aptitude",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
-          },
-          {
-            "min": 2,
+            "min": null,
             "max": null,
             "negated": null
           },
           {
-            "min": 0,
-            "max": 0,
+            "min": null,
+            "max": null,
             "negated": null
           }
         ],
         "format": [
-          "#",
+          "ignore",
+          "ignore",
           "ignore",
           "ignore"
         ],
         "index_handlers": [
           [],
           [],
+          [],
           []
         ],
-        "string": "Utiliser une Aptitude modifiée invoque {0} Totems qui utilisent cette Aptitude",
+        "string": "Les Aptitudes modifiées Invoquent un Totem qui utilise cette Aptitude",
         "reminder_text": null,
         "is_markup": null
       },
@@ -3323,27 +3267,34 @@
             "negated": true
           },
           {
-            "min": 2,
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": null,
             "max": null,
             "negated": null
           },
           {
-            "min": 0,
-            "max": 0,
-            "negated": true
+            "min": null,
+            "max": null,
+            "negated": null
           }
         ],
         "format": [
-          "#",
+          "ignore",
+          "ignore",
           "ignore",
           "ignore"
         ],
         "index_handlers": [
           [],
           [],
+          [],
           []
         ],
-        "string": "Utiliser une Aptitude modifiée invoque {0} Totems Baliste qui utilisent cette Aptitude",
+        "string": "Les Aptitudes modifiées Invoquent un Totem baliste qui utilise cette Aptitude",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3573,7 +3524,7 @@
             "milliseconds_to_seconds"
           ]
         ],
-        "string": "Les Mines durent {0} secondes",
+        "string": "La Mine dure {0} secondes",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3611,7 +3562,7 @@
             "milliseconds_to_seconds"
           ]
         ],
-        "string": "Les Mines durent {0} secondes",
+        "string": "La Mine dure {0} secondes",
         "reminder_text": null,
         "is_markup": null
       }
@@ -9014,7 +8965,7 @@
             "milliseconds_to_seconds"
           ]
         ],
-        "string": "Éruption arcanique Dure {0} seconde",
+        "string": "Éruption arcanique dure {0} seconde",
         "reminder_text": null,
         "is_markup": null
       },
@@ -9034,7 +8985,7 @@
             "milliseconds_to_seconds"
           ]
         ],
-        "string": "Éruption arcanique Dure {0} secondes",
+        "string": "Éruption arcanique dure {0} secondes",
         "reminder_text": null,
         "is_markup": null
       }
@@ -12802,7 +12753,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Les Projectiles tirés par les Aptitudes modifiées ont {0}% d'Augmentation de la propagation des Projectiles",
+        "string": "Les Projectiles tirés par les Aptitudes modifiées ont {0}% d'Augmentation de propagation des Projectiles",
         "reminder_text": null,
         "is_markup": null
       },
@@ -12822,7 +12773,7 @@
             "negate"
           ]
         ],
-        "string": "Les Projectiles tirés par les Aptitudes modifiées ont {0}% de Réduction de la propagation des Projectiles",
+        "string": "Les Projectiles tirés par les Aptitudes modifiées ont {0}% de Réduction de propagation des Projectiles",
         "reminder_text": null,
         "is_markup": null
       }
@@ -14266,7 +14217,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Les Aptitudes modifiées ont {0}% de Conversion des Dégâts physiques en Dégâts de foudre",
+        "string": "Les Aptitudes modifiées ont {0}% de leurs Dégâts physiques qui sont Convertis en Dégâts de foudre",
         "reminder_text": null,
         "is_markup": null
       }
@@ -18026,7 +17977,7 @@
             "milliseconds_to_seconds_2dp"
           ]
         ],
-        "string": "Les Sorts modifiés perdent 1 d'Intensité toutes les 0.25 secondes pendant le déplacement, ou immédiatement si vous vous téléportez",
+        "string": "Les Sorts modifiés perdent 1 d'Intensité toutes les 0.5 secondes pendant le déplacement, ou immédiatement si vous vous téléportez",
         "reminder_text": null,
         "is_markup": null
       }
@@ -28474,6 +28425,78 @@
   {
     "English": null,
     "ids": [
+      "support_focus_channel_damage_+%_final_per_second_channelling_up_to_60%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Les Aptitudes modifiées ont {0}% Davantage de Dégâts par seconde de Canalisation, jusqu'à un maximum de 60%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_focus_channel_cost_+%_final_per_second_channelling_up_to_100%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Les Aptitudes modifiées ont {0}% Davantage de Dégâts par seconde de Canalisation, jusqu'à un maximum de 100%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "support_focused_ballista_totem_attack_speed_+%_final"
     ],
     "trade_stats": null,
@@ -29671,7 +29694,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Supported Skills deal {0}% more Damage",
+        "string": "Les Aptitudes modifiées ont {0}% Davantage de Dégâts",
         "reminder_text": null,
         "is_markup": null
       },
@@ -29691,7 +29714,7 @@
             "negate"
           ]
         ],
-        "string": "Supported Skills deal {0}% less Damage",
+        "string": "Les Aptitudes modifiées ont {0}% de Perte de Dégâts",
         "reminder_text": null,
         "is_markup": null
       }

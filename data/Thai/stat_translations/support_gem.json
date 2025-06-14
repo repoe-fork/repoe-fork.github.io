@@ -3213,8 +3213,9 @@
     "English": null,
     "ids": [
       "is_totem",
-      "number_of_totems_to_summon",
-      "is_ranged_attack_totem"
+      "is_ranged_attack_totem",
+      "active_skill_summon_X_totems_in_ring_override",
+      "number_of_totems_to_summon"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -3235,21 +3236,28 @@
           },
           {
             "min": 0,
-            "max": 1,
+            "max": 0,
             "negated": null
           },
           {
-            "min": 0,
-            "max": 0,
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
             "negated": null
           }
         ],
         "format": [
           "ignore",
           "ignore",
+          "ignore",
           "ignore"
         ],
         "index_handlers": [
+          [],
           [],
           [],
           []
@@ -3267,90 +3275,33 @@
           },
           {
             "min": 0,
-            "max": 1,
-            "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
-          }
-        ],
-        "format": [
-          "ignore",
-          "ignore",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          [],
-          []
-        ],
-        "string": "สกิลที่เสริม จะอัญเชิญ โทเทมหน้าไม้ 1 เสา ที่ใช้ สกิลนั้น",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 0,
             "max": 0,
             "negated": true
           },
           {
-            "min": 2,
+            "min": null,
             "max": null,
             "negated": null
           },
           {
-            "min": 0,
-            "max": 0,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#",
-          "ignore",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          [],
-          []
-        ],
-        "string": "สกิลที่เสริม จะอัญเชิญ โทเทม {0} เสา ที่ใช้ สกิลนั้น",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
-          },
-          {
-            "min": 2,
+            "min": null,
             "max": null,
             "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
           }
         ],
         "format": [
-          "#",
+          "ignore",
+          "ignore",
           "ignore",
           "ignore"
         ],
         "index_handlers": [
           [],
           [],
+          [],
           []
         ],
-        "string": "สกิลที่เสริม จะอัญเชิญ โทเทมหน้าไม้ {0} เสา ที่ใช้ สกิลนั้น",
+        "string": "สกิลที่เสริม จะอัญเชิญ โทเทมเครื่องยิง 1 เสา ที่ใช้ สกิลนั้น",
         "reminder_text": null,
         "is_markup": null
       }
@@ -18033,7 +17984,7 @@
             "milliseconds_to_seconds_2dp"
           ]
         ],
-        "string": "เวทที่เสริม สูญเสียสถานะ ความแรงกล้า 1 ระดับ ทุก 0.25 วินาที ขณะเคลื่อนที่ หรือสูญเสียทันทีหากคุณ เทเลพอร์ต",
+        "string": "เวทที่เสริม สูญเสียสถานะ ความแรงกล้า 1 ระดับ ทุก 0.5 วินาที ขณะเคลื่อนที่ หรือสูญเสียทันทีหากคุณ เทเลพอร์ต",
         "reminder_text": null,
         "is_markup": null
       }
@@ -28465,6 +28416,78 @@
           []
         ],
         "string": "โทเทมจากสกิลที่เสริม ได้รับสกิล เพลิงล้างแค้น (Avenging Flame)\nและทริกเกอร์ สกิลนั้น เมื่อถูกปะทะจากศัตรู",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_focus_channel_damage_+%_final_per_second_channelling_up_to_60%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "สกิลที่เสริม สร้างความเสียหาย เพิ่มขึ้น อีก {0}% ต่อจำนวนวินาทีที่แชนเนล สูงสุด 60%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_focus_channel_cost_+%_final_per_second_channelling_up_to_100%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "สกิลที่เสริม มีค่าใช้งาน เพิ่มขึ้น อีก {0}% ต่อจำนวนวินาทีที่แชนเนล สูงสุด 100%",
         "reminder_text": null,
         "is_markup": null
       }

@@ -3213,8 +3213,9 @@
     "English": null,
     "ids": [
       "is_totem",
-      "number_of_totems_to_summon",
-      "is_ranged_attack_totem"
+      "is_ranged_attack_totem",
+      "active_skill_summon_X_totems_in_ring_override",
+      "number_of_totems_to_summon"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -3234,21 +3235,28 @@
           },
           {
             "min": 0,
-            "max": 1,
+            "max": 0,
             "negated": null
           },
           {
-            "min": 0,
-            "max": 0,
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
             "negated": null
           }
         ],
         "format": [
           "ignore",
           "ignore",
+          "ignore",
           "ignore"
         ],
         "index_handlers": [
+          [],
           [],
           [],
           []
@@ -3266,90 +3274,33 @@
           },
           {
             "min": 0,
-            "max": 1,
-            "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
-          }
-        ],
-        "format": [
-          "ignore",
-          "ignore",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          [],
-          []
-        ],
-        "string": "Las habilidades asistidas invocarán un Tótem balista que usa esa habilidad",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 0,
             "max": 0,
             "negated": true
           },
           {
-            "min": 2,
+            "min": null,
             "max": null,
             "negated": null
           },
           {
-            "min": 0,
-            "max": 0,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#",
-          "ignore",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          [],
-          []
-        ],
-        "string": "Las habilidades asistidas invocarán {0} tótems que usan esa habilidad",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
-          },
-          {
-            "min": 2,
+            "min": null,
             "max": null,
             "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
           }
         ],
         "format": [
-          "#",
+          "ignore",
+          "ignore",
           "ignore",
           "ignore"
         ],
         "index_handlers": [
           [],
           [],
+          [],
           []
         ],
-        "string": "Las habilidades asistidas invocarán {0} Tótems balista que usan esa habilidad",
+        "string": "Las habilidades asistidas invocarán un tótem balista que usa esa habilidad",
         "reminder_text": null,
         "is_markup": null
       }
@@ -18032,7 +17983,7 @@
             "milliseconds_to_seconds_2dp"
           ]
         ],
-        "string": "Los hechizos asistidos pierden 1 de Intensidad cada 0.25 segundos cuando estás en movimiento, o inmediatamente si te teletransportas",
+        "string": "Los hechizos asistidos pierden 1 de Intensidad cada 0.5 segundos cuando estás en movimiento, o inmediatamente si te teletransportas",
         "reminder_text": null,
         "is_markup": null
       }
@@ -28464,6 +28415,78 @@
           []
         ],
         "string": "Los tótems de las habilidades asistidas ganan la habilidad\nLlama justiciera y la activan cuando son golpeados por un enemigo",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_focus_channel_damage_+%_final_per_second_channelling_up_to_60%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Las habilidades asistidas infligen un {0}% más de daño por segundo canalizado, hasta un máximo de 60%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_focus_channel_cost_+%_final_per_second_channelling_up_to_100%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Las habilidades asistidas tienen un {0}% más de costo por segundo canalizado, hasta un máximo de 100%",
         "reminder_text": null,
         "is_markup": null
       }

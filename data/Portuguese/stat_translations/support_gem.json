@@ -3213,8 +3213,9 @@
     "English": null,
     "ids": [
       "is_totem",
-      "number_of_totems_to_summon",
-      "is_ranged_attack_totem"
+      "is_ranged_attack_totem",
+      "active_skill_summon_X_totems_in_ring_override",
+      "number_of_totems_to_summon"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -3232,90 +3233,33 @@
           },
           {
             "min": 0,
-            "max": 1,
-            "negated": null
-          },
-          {
-            "min": 0,
             "max": 0,
             "negated": null
-          }
-        ],
-        "format": [
-          "ignore",
-          "ignore",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          [],
-          []
-        ],
-        "string": "Habilidades Suportadas Convocarão um Totem que usa esta Habilidade",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
           },
           {
-            "min": 0,
-            "max": 1,
-            "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
-          }
-        ],
-        "format": [
-          "ignore",
-          "ignore",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          [],
-          []
-        ],
-        "string": "Habilidades Suportadas Convocarão um Totem Balista que usa esta Habilidade",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
-          },
-          {
-            "min": 2,
+            "min": null,
             "max": null,
             "negated": null
           },
           {
-            "min": 0,
-            "max": 0,
+            "min": null,
+            "max": null,
             "negated": null
           }
         ],
         "format": [
-          "#",
+          "ignore",
+          "ignore",
           "ignore",
           "ignore"
         ],
         "index_handlers": [
           [],
           [],
+          [],
           []
         ],
-        "string": "Habilidades Suportadas Convocarão {0} Totens que usam esta Habilidade",
+        "string": "Habilidades suportadas invocam um Totem que usa tal habilidade",
         "reminder_text": null,
         "is_markup": null
       },
@@ -3327,27 +3271,34 @@
             "negated": true
           },
           {
-            "min": 2,
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": null,
             "max": null,
             "negated": null
           },
           {
-            "min": 0,
-            "max": 0,
-            "negated": true
+            "min": null,
+            "max": null,
+            "negated": null
           }
         ],
         "format": [
-          "#",
+          "ignore",
+          "ignore",
           "ignore",
           "ignore"
         ],
         "index_handlers": [
           [],
           [],
+          [],
           []
         ],
-        "string": "Habilidades Suportadas Convocarão {0} Totens Balista que usam esta Habilidade",
+        "string": "Habilidades suportadas invocam um Totem de Balista que usa tal habilidade",
         "reminder_text": null,
         "is_markup": null
       }
@@ -18030,7 +17981,7 @@
             "milliseconds_to_seconds_2dp"
           ]
         ],
-        "string": "Magias Suportadas perdem 1 de Intensidade a cada 0.25 segundos enquanto se movendo, ou imediatamente ao teleportar",
+        "string": "Magias Suportadas perdem 1 de Intensidade a cada 0.5 segundos enquanto se movendo, ou imediatamente ao teleportar",
         "reminder_text": null,
         "is_markup": null
       }
@@ -28462,6 +28413,78 @@
           []
         ],
         "string": "Totens das Habilidades Suportadas ganham a Habilidade\nVingança Flamejante e a Ativa quando Acertado por um Inimigo",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_focus_channel_damage_+%_final_per_second_channelling_up_to_60%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Habilidades suportadas causam {0}% mais dano por segundo canalizando, até 60%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_focus_channel_cost_+%_final_per_second_channelling_up_to_100%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Habilidades suportadas têm {0}% mais custo por segundo canalizando, até 100%",
         "reminder_text": null,
         "is_markup": null
       }
