@@ -24,6 +24,7 @@ jobs:
           commit_message: "[skip ci] Version ${{ steps.version.outputs.version }}"
     outputs:
       changes_detected: ${{ steps.autocommit.outputs.changes_detected }}
+      commit_hash: ${{ steps.autocommit.outputs.commit_hash }}
       version: ${{ steps.version.outputs.version }}
 
   build:
@@ -35,6 +36,9 @@ jobs:
         uses: actions/checkout@v4.2.2
         with:
           path: poe1
+          ref: ${{ github.ref }}
+      - if: ${{ needs.version.outputs.changes_detected == 'true' }}
+        run: '[ $(git rev-parse ${{ needs.version.outputs.commit_hash }} ) = "$(git rev-parse HEAD)" ] || exit 1'
       - name: checkout repoe
         uses: actions/checkout@v4.2.2
         with:
@@ -52,9 +56,6 @@ jobs:
         with:
           python-version: "3.13"
           cache: poetry
-      - run: echo "${{ needs.version.outputs.version }}" > poe1/version.txt
-      - run: echo "${{ needs.version.outputs.version }}" > poe1/RePoE/data/version.txt
-      - run: git ls-remote https://github.com/poe-tool-dev/dat-schema.git refs/heads/main > poe1/schema.txt
       - name: clean data dir
         run: find poe1/data '(' -name '*.json' -not -path '*/pob/*' -o -name '*.html' -o -name '*.txt' ')' -delete -print | wc -l
       - run: poetry install
@@ -73,6 +74,8 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5.2.0
         with:
           repository: poe1
+          skip_fetch: true
+          push_options: '--force-with-lease'
           commit_message: "[skip ci] Export ${{ needs.version.outputs.version }}"
       - name: generate index.html
         run: |
