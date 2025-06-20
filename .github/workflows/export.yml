@@ -43,6 +43,7 @@ jobs:
           ref: ${{ github.ref }}
       - if: ${{ needs.version.outputs.changes_detected == 'true' }}
         run: '[ $(git rev-parse ${{ needs.version.outputs.commit_hash }} ) = "$(git rev-parse HEAD)" ] || exit 1'
+        working-directory: poe1
       - name: checkout repoe
         uses: actions/checkout@v4.2.2
         with:
