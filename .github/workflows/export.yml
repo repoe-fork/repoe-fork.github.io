@@ -15,7 +15,7 @@ jobs:
   version:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4.2.2
+      - uses: actions/checkout@v5.0.0
       - run: curl --fail 'https://ggpk.exposed/version?poe=1' | sed -r 's|.*/([0-9](\.[0-9]+)+)/$|\1|' > version.txt
       - run: git ls-remote https://github.com/poe-tool-dev/dat-schema.git refs/heads/main > schema.txt
       - name: copy version.txt to old location
@@ -37,7 +37,7 @@ jobs:
     if: github.event_name != 'schedule' || needs.version.outputs.changes_detected == 'true'
     steps:
       - name: checkout
-        uses: actions/checkout@v4.2.2
+        uses: actions/checkout@v5.0.0
         with:
           path: poe1
           ref: ${{ github.ref }}
@@ -45,12 +45,12 @@ jobs:
         run: '[ $(git rev-parse ${{ needs.version.outputs.commit_hash }} ) = "$(git rev-parse HEAD)" ] || exit 1'
         working-directory: poe1
       - name: checkout repoe
-        uses: actions/checkout@v4.2.2
+        uses: actions/checkout@v5.0.0
         with:
           repository: repoe-fork/repoe-fork
           path: RePoE
       - name: checkout pypoe
-        uses: actions/checkout@v4.2.2
+        uses: actions/checkout@v5.0.0
         with:
           repository: repoe-fork/pypoe
           path: PyPoE
