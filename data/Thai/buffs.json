@@ -934,7 +934,9 @@
     "invisible": true,
     "name": "Spectral",
     "removable": false,
-    "stats": [],
+    "stats": [
+      "is_raised_spectre"
+    ],
     "visuals": "spectre_buff",
     "category": null,
     "sources": null,
@@ -2998,7 +3000,8 @@
     "removable": true,
     "stats": [
       "base_physical_damage_reduction_rating",
-      "vaal_molten_shall_armour_+%_final"
+      "vaal_molten_shall_armour_+%_final",
+      "physical_damage_reduction_rating_+%"
     ],
     "visuals": "fire_shield",
     "category": "Buff",
@@ -3036,7 +3039,8 @@
     "removable": true,
     "stats": [
       "base_physical_damage_reduction_rating",
-      "vaal_molten_shall_armour_+%_final"
+      "vaal_molten_shall_armour_+%_final",
+      "physical_damage_reduction_rating_+%"
     ],
     "visuals": "invisible",
     "category": null,
@@ -4288,7 +4292,7 @@
     "stack_limit": null
   },
   "player_aura_energy_shield": {
-    "description": "ได้รับ: มี โล่พลังงาน เพิ่มเติม และเพิ่มอัตราการ รีชาร์จโล่พลังงาน",
+    "description": "ได้รับ: มี โล่พลังงาน เพิ่มเติม และเพิ่มความเร็วในการ รีชาร์จโล่พลังงาน",
     "invisible": false,
     "name": "ออร่าวินัย",
     "removable": true,
@@ -4343,7 +4347,7 @@
         },
         "stat_text": [
           "โล่พลังงานสูงสุด +217",
-          "เพิ่มอัตราการ รีชาร์จโล่พลังงาน 30%"
+          "เพิ่มความเร็วในการ รีชาร์จโล่พลังงาน 30%"
         ],
         "visuals": null
       }
@@ -4794,7 +4798,7 @@
           "template": null,
           "stat_text": [
             "โล่พลังงานสูงสุด +1000",
-            "การรีชาร์จโล่พลังงาน จะไม่ถูกระงับจากการได้รับความเสียหาย"
+            "การรีชาร์จโล่พลังงาน จะไม่ล่าช้าเมื่อได้รับความเสียหาย"
           ],
           "stats": {
             "affected_by_discipline": 0,
@@ -4991,7 +4995,7 @@
     "stack_limit": null
   },
   "ground_fire_phys_life_recovery": {
-    "description": "คุณได้รับความเสียหาย กายภาพและไฟ ต่อเนื่อง และมีอัตราการ เติมพลังชีวิต ลดลง",
+    "description": "คุณได้รับความเสียหาย กายภาพและไฟ ต่อเนื่อง และมีความเร็วในการ เติมพลังชีวิต ลดลง",
     "invisible": false,
     "name": "พื้นผ่าแยก",
     "removable": false,
@@ -9061,6 +9065,36 @@
     "templates": null,
     "stack_limit": null
   },
+  "herald_of_the_breach": {
+    "description": "คุณได้รับสถานะ แรงกดดันนอกโลก เมื่อสร้าง สถานะเจ็บป่วย และสร้างความเสียหาย เพิ่มขึ้น อีก ตามจำนวนของสกิลสาสน์ที่ส่งผลต่อคุณ (รวมถึงสกิลนี้ด้วย)",
+    "invisible": false,
+    "name": "สาสน์รวงรัง",
+    "removable": true,
+    "stats": [
+      "damage_+%_final_per_herald_skill_affecting_you",
+      "affected_by_herald_of_the_breach",
+      "herald_of_the_breach_add_stack_on_inflicting_ailment"
+    ],
+    "visuals": "herald_of_the_breach",
+    "category": "Herald",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "herald_of_the_breach_stack": {
+    "description": "สาสน์รวงรัง (Herald of the Hive) ส่งคลื่นพลังถี่ขึ้นตามจำนวนของสถานะ แรงกดดันนอกโลก คุณจะสูญเสียสถานะนี้อย่างต่อเนื่องและจะสูญเสียเร็วขึ้นตามจำนวนของสถานะนี้",
+    "invisible": false,
+    "name": "แรงกดดันนอกโลก",
+    "removable": false,
+    "stats": [
+      "herald_of_the_breach_pulse_frequency_+%"
+    ],
+    "visuals": "herald_of_the_breach",
+    "category": "Active skill",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "cannot_be_damaged": {
     "description": "ไม่ได้รับความเสียหาย",
     "invisible": true,
@@ -12407,7 +12441,8 @@
           "name": null,
           "template": null,
           "stat_text": [
-            "ทะลุมิติ"
+            "ทะลุมิติ",
+            "มีโอกาสหลีกเลี่ยงความเสียหาย ปะทะ ทุกชนิด 25%"
           ],
           "stats": {
             "phase_through_objects": 1,
@@ -12575,7 +12610,7 @@
     "stack_limit": null
   },
   "arcane_storm": {
-    "description": "คุณสร้างความเสียหาย ธาตุ และมีความเร็วในการร่าย เพิ่มขึ้น และคุณ ได้รับพลังชีวิต 10 หน่วยในเวลา 1 วินาทีเมื่อคุณร่ายเวท",
+    "description": "คุณสร้างความเสียหาย ธาตุ และมีความเร็วในการร่าย เพิ่มขึ้น และคุณ ได้รับพลังชีวิต 10 หน่วยในเวลา 1 วินาที เมื่อคุณร่ายเวท",
     "invisible": false,
     "name": "วายุเวทมนตร์",
     "removable": false,
@@ -12842,7 +12877,7 @@
     "stack_limit": null
   },
   "frost_bomb": {
-    "description": "คุณมีอัตราการ ฟื้นฟูพลังชีวิต ลดลง",
+    "description": "คุณมีความเร็วในการ ฟื้นฟูพลังชีวิต ลดลง",
     "invisible": false,
     "name": "ระเบิดน้ำแข็ง",
     "removable": false,
@@ -13393,7 +13428,19 @@
     "visuals": "wither_resistance",
     "category": "Debuff",
     "sources": null,
-    "templates": null,
+    "templates": {
+      "BreachWithered": {
+        "aura_radius_metres": 2.5,
+        "stats": {
+          "chaos_damage_taken_+%": 5,
+          "is_withered": 1
+        },
+        "stat_text": [
+          "เพิ่มความเสียหาย เคออส ที่ได้รับ 5%"
+        ],
+        "visuals": null
+      }
+    },
     "stack_limit": 15
   },
   "siphon_leech": {
@@ -16077,7 +16124,7 @@
         },
         "stat_text": [
           "ศัตรูที่อยู่ใกล้ มีค่าต้านทาน เคออส -20%",
-          "ศัตรูที่อยู่ใกล้ มีอัตราการ ฟื้นฟูพลังชีวิต ลดลง 100%",
+          "ศัตรูที่อยู่ใกล้ มีความเร็วในการ ฟื้นฟูพลังชีวิต ลดลง 100%",
           "ศัตรูที่อยู่ใกล้ มีค่าต้านทาน น้ำแข็ง -20%"
         ],
         "visuals": null
@@ -16091,7 +16138,7 @@
         },
         "stat_text": [
           "ค่าต้านทาน เคออส -8%",
-          "ลดอัตราการ ฟื้นฟูพลังชีวิต 100%",
+          "ลดความเร็วในการ ฟื้นฟูพลังชีวิต 100%",
           "ค่าต้านทาน น้ำแข็ง -8%"
         ],
         "visuals": null
@@ -17995,6 +18042,18 @@
     "stack_limit": null
   },
   "number_of_times_have_been_hit_recently": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "number_of_times_have_been_hit_by_enemy_recently": {
     "description": "",
     "invisible": true,
     "name": "",
@@ -21670,7 +21729,7 @@
     "stack_limit": null
   },
   "arcane_surge": {
-    "description": "คุณมีความเร็วในการร่าย เพิ่มขึ้น และมีอัตราการ ฟื้นฟูมานา เพิ่มขึ้น",
+    "description": "คุณมีความเร็วในการร่ายและความเร็วในการ ฟื้นฟูมานา เพิ่มขึ้น",
     "invisible": false,
     "name": "กระแสอาคม",
     "removable": true,
@@ -22399,6 +22458,14 @@
           "template": "PowerChargeOnManaSpentUber1",
           "stat_text": null,
           "stats": null
+        },
+        {
+          "id": "MutatedUniqueWand15PowerChargeOnManaSpent",
+          "item": null,
+          "name": null,
+          "template": "PowerChargeOnManaSpentUber1",
+          "stat_text": null,
+          "stats": null
         }
       ]
     },
@@ -23039,6 +23106,39 @@
     "removable": false,
     "stats": [
       "additional_base_critical_strike_chance"
+    ],
+    "visuals": "critical_strike_chance_unique",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "reduced_mana_cost_on_mana_spent": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": {
+      "GainReducedManaCostOnManaSpentUnique__1": {
+        "aura_radius_metres": null,
+        "stats": null,
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "reduced_mana_cost_unique": {
+    "description": "คุณมีค่าใช้งานมานา ลดลง",
+    "invisible": false,
+    "name": "Kalisa's Joy",
+    "removable": false,
+    "stats": [
+      "base_mana_cost_-%"
     ],
     "visuals": "critical_strike_chance_unique",
     "category": "Buff",
@@ -24982,7 +25082,7 @@
   "malediction": {
     "description": "คุณสร้างความเสียหาย ลดลง และได้รับความเสียหาย เพิ่มขึ้น",
     "invisible": false,
-    "name": "Malediction",
+    "name": "แช่งชักหักกระดูก",
     "removable": false,
     "stats": [
       "damage_+%",
@@ -27981,7 +28081,7 @@
     "stack_limit": null
   },
   "flask_bonus_mana_cost": {
-    "description": "คุณมี ค่าใช้งานมานา ในการใช้สกิล ลดลง ขณะที่มีผลจากขวดยานี้",
+    "description": "คุณมีค่าใช้งานมานาของ สกิล ลดลง ขณะที่มีผลจากขวดยานี้",
     "invisible": true,
     "name": "ค่าใช้งานมานา",
     "removable": false,
@@ -31047,10 +31147,7 @@
     "invisible": false,
     "name": "ทุ่นระเบิดสะเก็ดไฟ",
     "removable": false,
-    "stats": [
-      "mortar_barrage_mine_minimum_added_fire_damage_taken",
-      "mortar_barrage_mine_maximum_added_fire_damage_taken"
-    ],
+    "stats": [],
     "visuals": "mortar_barrage_mine",
     "category": "Debuff",
     "sources": null,
@@ -32541,7 +32638,7 @@
     "stack_limit": null
   },
   "affliction_debuff_life_and_es_recovery_rate": {
-    "description": "คุณมีอัตราการ เติม พลังชีวิตและโล่พลังงาน ลดลง ดีบัฟนี้จะถูกกำจัดเมื่อคุณหมดสถานะ คลุ้มคลั่ง",
+    "description": "คุณมีความเร็วในการ เติมพลังชีวิตและโล่พลังงาน ลดลง ดีบัฟนี้จะถูกกำจัดเมื่อคุณหมดสถานะ คลุ้มคลั่ง",
     "invisible": false,
     "name": "สัมผัสสูญเสีย",
     "removable": false,
@@ -32560,8 +32657,8 @@
           "energy_shield_recovery_rate_+%": -9
         },
         "stat_text": [
-          "ลดอัตราการ เติมพลังชีวิต 9%",
-          "ลดอัตราการ เติมโล่พลังงาน 9%"
+          "ลดความเร็วในการ เติมพลังชีวิต 9%",
+          "ลดความเร็วในการ เติมโล่พลังงาน 9%"
         ],
         "visuals": null
       }
@@ -32645,6 +32742,23 @@
       }
     },
     "stack_limit": 10
+  },
+  "maina": {
+    "description": "คุณได้รับความเสียหาย เพิ่มขึ้น, เชื่องช้า และมีความเร็วในการ เติมพลังชีวิตและมานา ลดลง",
+    "invisible": false,
+    "name": "คลุ้มคลั่ง",
+    "removable": false,
+    "stats": [
+      "base_damage_taken_+%",
+      "action_speed_-%",
+      "life_recovery_rate_+%",
+      "energy_shield_recovery_rate_+%"
+    ],
+    "visuals": "affliction_debuff",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": 15
   },
   "recent_minion_buffs": {
     "description": "",
@@ -33048,6 +33162,14 @@
           "template": "CoverInAshNearbyEnemies",
           "stat_text": null,
           "stats": null
+        },
+        {
+          "id": "MutatedUniqueAmulet37NearbyEnemiesDebilitated",
+          "item": null,
+          "name": null,
+          "template": "DebilitateNearbyEnemies",
+          "stat_text": null,
+          "stats": null
         }
       ]
     },
@@ -33191,6 +33313,12 @@
         "visuals": null
       },
       "CoverInAshNearbyEnemies": {
+        "aura_radius_metres": 3.0,
+        "stats": null,
+        "stat_text": null,
+        "visuals": null
+      },
+      "DebilitateNearbyEnemies": {
         "aura_radius_metres": 3.0,
         "stats": null,
         "stat_text": null,
@@ -33522,20 +33650,6 @@
     "templates": null,
     "stack_limit": null
   },
-  "herald_of_agony_max_virulence_hidden": {
-    "description": "",
-    "invisible": true,
-    "name": "",
-    "removable": false,
-    "stats": [
-      "maximum_virulence_stacks"
-    ],
-    "visuals": "invisible",
-    "category": null,
-    "sources": null,
-    "templates": null,
-    "stack_limit": null
-  },
   "elemental_warding_buff_fated": {
     "description": "คุณไม่ได้รับผลจาก คำสาป",
     "invisible": false,
@@ -33784,9 +33898,9 @@
     "stack_limit": null
   },
   "fragile_regrowth": {
-    "description": "คุณ ฟื้นฟูพลังชีวิต ต่อจำนวนสถานะ งอกใหม่อันบอบบาง ที่คุณมี",
+    "description": "คุณ ฟื้นฟูพลังชีวิต ต่อจำนวนสถานะ ต้นอ่อนฟื้นคืน ที่คุณมี",
     "invisible": false,
-    "name": "งอกใหม่อันบอบบาง",
+    "name": "ต้นอ่อนฟื้นคืน",
     "removable": false,
     "stats": [],
     "visuals": "fragile_regrowth",
@@ -33888,6 +34002,22 @@
       "attack_maximum_added_physical_damage"
     ],
     "visuals": "spectral_wolf_pack",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "spectral_tiger_buff": {
+    "description": "เสือวิญญาณของคุณ ทำให้คุณได้รับ: เพิ่มโอกาสคริติคอล และเพิ่มความเร็วในการโจมตีและร่าย",
+    "invisible": false,
+    "name": "ฝูงเสือวิญญาณ",
+    "removable": false,
+    "stats": [
+      "critical_strike_chance_+%",
+      "attack_speed_+%",
+      "base_cast_speed_+%"
+    ],
+    "visuals": "spectral_tiger_pack",
     "category": "Buff",
     "sources": null,
     "templates": null,
@@ -34042,6 +34172,20 @@
     ],
     "visuals": "ground_profane",
     "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "ground_profane_chaotic_might_ally": {
+    "description": "",
+    "invisible": false,
+    "name": "พื้นนอกรีต",
+    "removable": false,
+    "stats": [
+      "on_profane_ground"
+    ],
+    "visuals": "ground_profane",
+    "category": "Buff",
     "sources": null,
     "templates": null,
     "stack_limit": null
@@ -34719,7 +34863,7 @@
     "stack_limit": null
   },
   "firewall_debuff": {
-    "description": "คุณจะได้รับความเสียหาย ไฟ หากคุณยืนอยู่ในกำแพงไฟ",
+    "description": "คุณได้รับความเสียหาย ไฟ ขณะที่ยืนอยู่ในกำแพงไฟ",
     "invisible": false,
     "name": "กำแพงไฟ",
     "removable": false,
@@ -36205,6 +36349,18 @@
     "templates": null,
     "stack_limit": null
   },
+  "maximum_rage_fire_exposure_aura": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "herald_of_ash_fire_exposure_aura": {
     "description": "",
     "invisible": true,
@@ -36412,7 +36568,7 @@
     "category": "Debuff",
     "sources": null,
     "templates": null,
-    "stack_limit": 3
+    "stack_limit": 4
   },
   "unhinged": {
     "description": "คุณไม่มีสติอีกต่อไป",
@@ -38695,9 +38851,9 @@
           "energy_shield_recovery_rate_+%": -60
         },
         "stat_text": [
-          "ลดอัตราการ เติมพลังชีวิต 60%",
-          "ลดอัตราการ เติมมานา 60%",
-          "ลดอัตราการ เติมโล่พลังงาน 60%"
+          "ลดความเร็วในการ เติมพลังชีวิต 60%",
+          "ลดความเร็วในการ เติมมานา 60%",
+          "ลดความเร็วในการ เติมโล่พลังงาน 60%"
         ],
         "visuals": null
       },
@@ -38709,9 +38865,9 @@
           "energy_shield_recovery_rate_+%": -90
         },
         "stat_text": [
-          "ลดอัตราการ เติมพลังชีวิต 90%",
-          "ลดอัตราการ เติมมานา 90%",
-          "ลดอัตราการ เติมโล่พลังงาน 90%"
+          "ลดความเร็วในการ เติมพลังชีวิต 90%",
+          "ลดความเร็วในการ เติมมานา 90%",
+          "ลดความเร็วในการ เติมโล่พลังงาน 90%"
         ],
         "visuals": null
       }
@@ -39789,7 +39945,7 @@
   "defiance": {
     "description": "คุณต่อต้านความเจ็บปวด จนถึงจุดหนึ่ง",
     "invisible": false,
-    "name": "Defiance",
+    "name": "แข็งขืน",
     "removable": false,
     "stats": [],
     "visuals": "defiance",
@@ -41154,6 +41310,14 @@
         },
         "stat_text": null,
         "visuals": null
+      },
+      "GraftTornadoMovement": {
+        "aura_radius_metres": null,
+        "stats": {
+          "accelerate_while_moving_movement_speed_+%_final": 120
+        },
+        "stat_text": null,
+        "visuals": null
       }
     },
     "stack_limit": null
@@ -41215,7 +41379,7 @@
     "stack_limit": null
   },
   "remora_link_source": {
-    "description": "อัตราการเติมสุทธิสูงสุดจากการ ดูดพลังชีวิต ของคุณสูงขึ้น และถูกมอบให้กับเป้าหมาย เป้าหมายจะได้รับการ เติม จากการ ดูดพลังชีวิตของคุณ แทนคุณ",
+    "description": "ปริมาณการ เติมพลังชีวิต สูงสุดต่อวินาทีของการดูด ของคุณ สูงขึ้น และถูกมอบให้กับเป้าหมาย เป้าหมายจะได้รับการ เติม จากการ ดูดพลังชีวิตของคุณ แทนคุณ",
     "invisible": false,
     "name": "ประสานดูดกลืน",
     "removable": false,
@@ -41231,7 +41395,7 @@
     "stack_limit": null
   },
   "remora_link_target": {
-    "description": "คุณจะได้รับการ เติม เมื่อ ผู้ให้การประสาน ดูดพลังชีวิต คุณจะใช้ อัตราการเติมสุทธิสูงสุดจากการ ดูดพลังชีวิต ของเขา",
+    "description": "คุณจะได้รับการ เติม เมื่อ ผู้ให้การประสาน ดูดพลังชีวิต คุณจะใช้ปริมาณการ เติมพลังชีวิต สูงสุดต่อวินาทีของการดูด ของเขา",
     "invisible": false,
     "name": "ประสานดูดกลืน",
     "removable": true,
@@ -41687,7 +41851,7 @@
     "stack_limit": null
   },
   "hellscape_pale_boss_recovery_debuff": {
-    "description": "คุณมีอัตราการ เติม พลังชีวิต, โล่พลังงาน, มานา ลดลง",
+    "description": "คุณมีความเร็วในการ เติมพลังชีวิต, โล่พลังงาน, มานา ลดลง",
     "invisible": false,
     "name": "มิติอสูรนิรันดร์",
     "removable": false,
@@ -42529,7 +42693,7 @@
     "stack_limit": null
   },
   "archnemesis_rejuvenation_debuff": {
-    "description": "คุณมีอัตราการ เติมพลังชีวิตและโล่พลังงาน ลดลง 60%",
+    "description": "คุณมีความเร็วในการ เติมพลังชีวิตและโล่พลังงาน ลดลง 60%",
     "invisible": false,
     "name": "สปอร์เขียวชอุ่ม",
     "removable": false,
@@ -64978,7 +65142,7 @@
           "life_mana_es_recovery_rate_+%_per_endurance_charge": -4
         },
         "stat_text": [
-          "ลดอัตราการ เติม พลังชีวิต, มานา, โล่พลังงาน 4% ต่อจำนวน Endurance Charge"
+          "ลดความเร็วในการ เติม พลังชีวิต, มานา, โล่พลังงาน 4% ต่อจำนวน Endurance Charge"
         ],
         "visuals": null
       }
@@ -65720,8 +65884,8 @@
       "TricksterAlternatingLessDamageTaken": {
         "aura_radius_metres": null,
         "stats": {
-          "trickster_damage_over_time_taken_+%_final": -40,
-          "trickster_hit_damage_taken_+%_final": -40
+          "trickster_damage_over_time_taken_+%_final": -50,
+          "trickster_hit_damage_taken_+%_final": -50
         },
         "stat_text": null,
         "visuals": null
@@ -65730,7 +65894,7 @@
     "stack_limit": null
   },
   "trickster_alternating_less_hit_damage": {
-    "description": "คุณได้รับความเสียหาย ปะทะ ลดลง อีก 40%",
+    "description": "คุณได้รับความเสียหาย ปะทะ ลดลง อีก 50%",
     "invisible": false,
     "name": "Heartstopper",
     "removable": false,
@@ -65744,7 +65908,7 @@
     "stack_limit": null
   },
   "trickster_alternating_less_dot_damage": {
-    "description": "คุณได้รับความเสียหายต่อเนื่อง ลดลง อีก 40%",
+    "description": "คุณได้รับความเสียหายต่อเนื่อง ลดลง อีก 50%",
     "invisible": false,
     "name": "Heartstopper",
     "removable": false,
@@ -65763,7 +65927,7 @@
     "name": "One Step Ahead",
     "removable": false,
     "stats": [
-      "action_speed_is_at_most_92%"
+      "action_speed_is_at_most_90%"
     ],
     "visuals": "trickser_one_step_ahead_action_speed_maximum",
     "category": "Debuff",
@@ -65791,10 +65955,10 @@
       "TricksterNearbyEnemyActionSpeedCap": {
         "aura_radius_metres": 6.0,
         "stats": {
-          "action_speed_is_at_most_92%": 1
+          "action_speed_is_at_most_90%": 1
         },
         "stat_text": [
-          "ความเร็วในการกระทำของมอนสเตอร์ศัตรูที่อยู่ใกล้ มีอย่างมาก 92% ของค่าพื้นฐาน"
+          "ความเร็วในการกระทำของมอนสเตอร์ศัตรูที่อยู่ใกล้ มีอย่างมาก 90% ของค่าพื้นฐาน"
         ],
         "visuals": null
       }
@@ -66012,7 +66176,7 @@
           "เพิ่มความเสียหาย เคออส 50%",
           "นำความเสียหาย กายภาพ 15% ไปเสริมเป็น เคออส",
           "นำความเสียหาย ธาตุ 15% ไปเสริมเป็น เคออส",
-          "ลดความเสียหายที่ได้รับ 100% จากความเสียหายต่อเนื่อง"
+          "ลดความเสียหายที่ได้รับ จากความเสียหายต่อเนื่อง 100%"
         ],
         "visuals": null
       },
@@ -66029,7 +66193,7 @@
         "stat_text": [
           "เพิ่มความเสียหาย เคออส 50%",
           "นำความเสียหาย กายภาพ 10% ไปเสริมเป็น เคออส",
-          "ลดความเสียหายที่ได้รับ 50% จากความเสียหายต่อเนื่อง"
+          "ลดความเสียหายที่ได้รับ จากความเสียหายต่อเนื่อง 50%"
         ],
         "visuals": "shrine_monster_affected"
       }
@@ -67426,7 +67590,7 @@
           "base_cooldown_speed_+%": -10
         },
         "stat_text": [
-          "ศัตรูที่อยู่ใกล้ มีอัตราการฟื้นฟูคูลดาวน์ ลดลง 10%"
+          "ศัตรูที่อยู่ใกล้ มีความเร็วในการฟื้นฟูคูลดาวน์ ลดลง 10%"
         ],
         "visuals": null
       }
@@ -67931,6 +68095,20 @@
     "removable": false,
     "stats": [
       "energy_shield_has_started_recharging_in_past_2_seconds"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "ward_broken_in_the_past_2_seconds": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "ward_broken_in_the_past_2_seconds"
     ],
     "visuals": "invisible",
     "category": null,
@@ -68931,7 +69109,7 @@
   "ancestral_minus_maximum_fire_resistance_aura": {
     "description": "คุณมีค่าต้านทาน ไฟ สูงสุด -10%",
     "invisible": false,
-    "name": "มี้ดนักพ่นไฟ",
+    "name": "หมีดนักพ่นไฟ",
     "removable": false,
     "stats": [
       "base_maximum_fire_damage_resistance_%"
@@ -68970,7 +69148,9 @@
         "stats": {
           "avoid_damage_%": 75
         },
-        "stat_text": null,
+        "stat_text": [
+          "มีโอกาสหลีกเลี่ยงความเสียหาย ปะทะ ทุกชนิด 75%"
+        ],
         "visuals": null
       }
     },
@@ -70868,7 +71048,7 @@
     "stack_limit": null
   },
   "azmeri_altar_buff_cat": {
-    "description": "คุณคริติคอลเสมอ มิเนียนของคุณคริติคอลเสมอ แต่คุณมีอัตราการ เติม พลังชีวิต, มานา, โล่พลังงาน ลดลง 50%",
+    "description": "คุณคริติคอลเสมอ มิเนียนของคุณคริติคอลเสมอ แต่คุณมีความเร็วในการเติม พลังชีวิต, มานา, โล่พลังงาน ลดลง 50%",
     "invisible": false,
     "name": "ขบวนแมว",
     "removable": false,
@@ -70894,9 +71074,9 @@
         },
         "stat_text": [
           "การปะทะ ทุกชนิด คริติคอล",
-          "ลดอัตราการ เติมพลังชีวิต 50%",
-          "ลดอัตราการ เติมมานา 50%",
-          "ลดอัตราการ เติมโล่พลังงาน 50%"
+          "ลดความเร็วในการ เติมพลังชีวิต 50%",
+          "ลดความเร็วในการ เติมมานา 50%",
+          "ลดความเร็วในการ เติมโล่พลังงาน 50%"
         ],
         "visuals": null
       }
@@ -71000,7 +71180,7 @@
         },
         "stat_text": [
           "แผนที่ ที่ดรอปจากศัตรูที่ถูกสังหาร มีโอกาสถูกสร้างซ้ำ 25%",
-          "เพิ่มความเสียหายที่ได้รับ 100% จากความเสียหายต่อเนื่อง"
+          "เพิ่มความเสียหายที่ได้รับ จากความเสียหายต่อเนื่อง 100%"
         ],
         "visuals": null
       },
@@ -71012,7 +71192,7 @@
           "base_item_found_quantity_+%": 20
         },
         "stat_text": [
-          "เพิ่มความเสียหายที่ได้รับ 100% จากความเสียหายต่อเนื่อง",
+          "เพิ่มความเสียหายที่ได้รับ จากความเสียหายต่อเนื่อง 100%",
           "เพิ่มจำนวนของ ไอเทม ที่พบ 20%"
         ],
         "visuals": null
@@ -72628,7 +72808,7 @@
       "found_items_warlord_influence_chance_%"
     ],
     "visuals": "shrine_warlord",
-    "category": "Buff",
+    "category": "Buff shrine",
     "sources": null,
     "templates": {
       "SentinelWarlord": {
@@ -72666,7 +72846,7 @@
       "found_items_crusader_influence_chance_%"
     ],
     "visuals": "shrine_crusader",
-    "category": "Buff",
+    "category": "Buff shrine",
     "sources": null,
     "templates": {
       "SentinelCrusader": {
@@ -72704,7 +72884,7 @@
       "found_items_redeemer_influence_chance_%"
     ],
     "visuals": "shrine_redeemer",
-    "category": "Buff",
+    "category": "Buff shrine",
     "sources": null,
     "templates": {
       "SentinelRedeemer": {
@@ -72742,7 +72922,7 @@
       "found_items_hunter_influence_chance_%"
     ],
     "visuals": "shrine_hunter",
-    "category": "Buff",
+    "category": "Buff shrine",
     "sources": null,
     "templates": {
       "SentinelHunter": {
@@ -72779,7 +72959,7 @@
       "player_found_items_are_corrupted_chance_%"
     ],
     "visuals": "shrine_vaal",
-    "category": "Buff",
+    "category": "Buff shrine",
     "sources": null,
     "templates": {
       "SentinelVaal": {
@@ -72807,7 +72987,7 @@
     "name": "แท่นบูชาวิวัฒนาการ",
     "removable": false,
     "stats": [
-      "chance_to_upgrade_monsters_on_kill_%"
+      "chance_to_upgrade_monsters_on_kill_permyriad"
     ],
     "visuals": "shrine_evolution",
     "category": "Buff",
@@ -72816,7 +72996,7 @@
       "SentinelEvolution": {
         "aura_radius_metres": null,
         "stats": {
-          "chance_to_upgrade_monsters_on_kill_%": 10
+          "chance_to_upgrade_monsters_on_kill_permyriad": 2500
         },
         "stat_text": null,
         "visuals": null
@@ -72824,7 +73004,7 @@
       "UpgradeShrineBuff": {
         "aura_radius_metres": null,
         "stats": {
-          "chance_to_upgrade_monsters_on_kill_%": 10
+          "chance_to_upgrade_monsters_on_kill_permyriad": 2500
         },
         "stat_text": null,
         "visuals": null
@@ -73823,6 +74003,21 @@
     "templates": null,
     "stack_limit": null
   },
+  "zangerboss_orb_beam": {
+    "description": "คุณไม่สามารถเติม พลังชีวิตหรือโล่พลังงาน ได้",
+    "invisible": false,
+    "name": "เพลิงชำระล้าง",
+    "removable": false,
+    "stats": [
+      "cannot_recover_life",
+      "no_energy_shield_recovery"
+    ],
+    "visuals": "zangerboss_orb_beam",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "divination_buff_arrogance_of_the_vaal": {
     "description": "ค่าต้านทาน เคออส 75%\r\nเปลี่ยนความเสียหาย ปะทะ กายภาพ 20% ที่ได้รับ เป็น เคออส",
     "invisible": false,
@@ -74094,6 +74289,7 @@
           "base_extra_damage_rolls": 1
         },
         "stat_text": [
+          "ศัตรู โชคร้าย ในการคำนวณความเสียหาย ปะทะ ต่อคุณ",
           "คุณ โชคดี ในการคำนวณ ความเสียหาย ปะทะ"
         ],
         "visuals": null
@@ -74127,6 +74323,7 @@
         "stat_text": [
           "เพิ่มความเร็วในการโจมตีและร่าย 20%",
           "เพิ่มโอกาสคริติคอล ของตัวละคร 100%",
+          "มีโอกาสหลีกเลี่ยงความเสียหาย ปะทะ ทุกชนิด 15%",
           "เพิ่มการพรางตัว 100%"
         ],
         "visuals": null
@@ -74468,7 +74665,7 @@
     "stack_limit": null
   },
   "divination_buff_the_beast": {
-    "description": "เพิ่มอัตราการ เติมพลังชีวิต ของขวดยา 200%",
+    "description": "เพิ่มความเร็วในการ เติมพลังชีวิต ของขวดยา 200%",
     "invisible": false,
     "name": "The Beast",
     "removable": false,
@@ -74485,7 +74682,7 @@
           "flask_life_to_recover_+%": 200
         },
         "stat_text": [
-          "เพิ่มอัตราการ เติมพลังชีวิต จากขวดยา 200%"
+          "เพิ่มความเร็วในการ เติมพลังชีวิต จากขวดยา 200%"
         ],
         "visuals": null
       }
@@ -74576,7 +74773,7 @@
     "stack_limit": null
   },
   "divination_buff_the_darkest_dream": {
-    "description": "สร้างสถานะ เหี่ยวเฉา 2 วินาทีเมื่อปะทะ\r\nศัตรูได้รับความเสียหาย ธาตุ จากการปะทะของคุณ เพิ่มขึ้น 4% ต่อจำนวนสถานะ เหี่ยวเฉา ที่คุณสร้างต่อมัน",
+    "description": "สร้างสถานะ เหี่ยวเฉา 2 วินาที เมื่อปะทะ\r\nศัตรูได้รับความเสียหาย ธาตุ จากการปะทะของคุณ เพิ่มขึ้น 4% ต่อจำนวนสถานะ เหี่ยวเฉา ที่คุณสร้างต่อมัน",
     "invisible": false,
     "name": "The Darkest Dream",
     "removable": false,
@@ -74604,7 +74801,7 @@
     "stack_limit": null
   },
   "divination_buff_the_demoness": {
-    "description": "ได้รับ Power Charge 1 ลูกเมื่อคุณสร้างสถานะ สตัน\r\nได้รับสถานะ อำนาจอธรรม 4 วินาทีเมื่อปะทะคริติคอล",
+    "description": "ได้รับ Power Charge 1 ลูก เมื่อคุณสร้างสถานะ สตัน\r\nได้รับสถานะ อำนาจอธรรม 4 วินาที เมื่อปะทะคริติคอล",
     "invisible": false,
     "name": "The Demoness",
     "removable": false,
@@ -74632,7 +74829,7 @@
     "stack_limit": null
   },
   "divination_buff_the_doctor": {
-    "description": "เมื่อคุณสังหารมอนสเตอร์แรร์ คุณจะได้รับม็อดของมัน 20 วินาที",
+    "description": "เมื่อคุณสังหารมอนสเตอร์แรร์ คุณจะได้รับม็อดของมัน 60 วินาที",
     "invisible": false,
     "name": "The Doctor",
     "removable": false,
@@ -74817,7 +75014,7 @@
     "stack_limit": null
   },
   "divination_buff_the_life_thief": {
-    "description": "ได้รับสถานะ ผู้กลืนกินวิญญาณ 20 วินาทีเมื่อสังหาร",
+    "description": "ได้รับสถานะ ผู้กลืนกินวิญญาณ 20 วินาที เมื่อสังหาร",
     "invisible": false,
     "name": "The Life Thief",
     "removable": false,
@@ -75104,6 +75301,20 @@
     "templates": null,
     "stack_limit": null
   },
+  "napalm_arrows_degen": {
+    "description": "คุณได้รับความเสียหาย ไฟ ต่อเนื่อง",
+    "invisible": false,
+    "name": "ดีบัฟศรนำอัคคี",
+    "removable": false,
+    "stats": [
+      "base_fire_damage_taken_per_minute"
+    ],
+    "visuals": "ground_fire_burn",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "blast_rain_fire_wave": {
     "description": "",
     "invisible": false,
@@ -75169,6 +75380,14 @@
       "Mods": [
         {
           "id": "SummonWrithingWormEveryXMsUnique__1",
+          "item": null,
+          "name": null,
+          "template": "SummonWrithingWormEveryXMsBuffUnique__1",
+          "stat_text": null,
+          "stats": null
+        },
+        {
+          "id": "MutatedUniqueBow12SummonWrithingWormEveryXMs",
           "item": null,
           "name": null,
           "template": "SummonWrithingWormEveryXMsBuffUnique__1",
@@ -75484,6 +75703,598 @@
     ],
     "visuals": "invisible",
     "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "retaliation_skills_become_useable_every_x_ms": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "graft_skill_esh_lightning_ring_ally_buff": {
+    "description": "คุณ โชคดี ในการคำนวณความเสียหาย ปะทะ และคุณสร้างความเสียหาย สายฟ้า เพิ่มเติม",
+    "invisible": false,
+    "name": "พื้นสว่างไสว",
+    "removable": false,
+    "stats": [
+      "base_extra_damage_rolls",
+      "global_minimum_added_lightning_damage",
+      "global_maximum_added_lightning_damage"
+    ],
+    "visuals": "graft_skill_esh_lightning_ring_ally_buff_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "graft_skill_uul_netol_life_recovery": {
+    "description": "ความเร็วในการ ฟื้นฟูพลังชีวิต ของคุณ สูงขึ้นเป็นอย่างยิ่ง",
+    "invisible": false,
+    "name": "อ้อมอกอ่อนโยน",
+    "removable": false,
+    "stats": [
+      "graft_uulnetol_life_recovery_rate_+%_final",
+      "additional_block_%",
+      "life_leech_from_any_damage_permyriad"
+    ],
+    "visuals": "graft_skill_uul_netol_life_recovery_visual",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "graft_skill_esh_jolt": {
+    "description": "คุณมีความเสียหาย โจมตีสูงสุด สูงขึ้น แต่ได้รับความเสียหาย เพิ่มขึ้น",
+    "invisible": false,
+    "name": "ประจุเข้าแทรก",
+    "removable": false,
+    "stats": [
+      "base_damage_taken_+%",
+      "maximum_attack_damage_+%_final_from_graft_skill",
+      "graft_skill_jolt_buff_critical_strike_multiplier_+",
+      "critical_strike_chance_+%",
+      "base_movement_velocity_+%"
+    ],
+    "visuals": "graft_skill_jolt_buff_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "generic_monster_flame_wall_dot": {
+    "description": "คุณได้รับความเสียหาย ไฟ ขณะที่ยืนอยู่ในกำแพงไฟ",
+    "invisible": false,
+    "name": "กำแพงไฟ",
+    "removable": false,
+    "stats": [
+      "base_fire_damage_taken_per_minute"
+    ],
+    "visuals": "ground_fire_burn",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "graft_skill_uul_netol_bone_fragments": {
+    "description": "คุณมีโอกาสสร้างสถานะ ทิ่มแทง เพิ่มเติม 1 ระดับ และมีผลของสถานะ ทิ่มแทง เพิ่มขึ้น",
+    "invisible": false,
+    "name": "ราคะรุนแรง",
+    "removable": false,
+    "stats": [
+      "attacks_impale_on_hit_%_chance",
+      "graft_skill_uul_netol_impale_buff_additional_impales",
+      "attack_speed_+%",
+      "attack_area_of_effect_+%",
+      "hits_ignore_enemy_monster_physical_damage_reduction_%_chance",
+      "chance_to_inflict_additional_impale_%"
+    ],
+    "visuals": "graft_skill_uul_netol_bone_sword",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "graft_skill_tul_aegis_fire": {
+    "description": "",
+    "invisible": false,
+    "name": "[DNT] UNUSED",
+    "removable": false,
+    "stats": [
+      "graft_skill_tul_aegis_fire_absorbed_%"
+    ],
+    "visuals": "graft_skill_tul_fire_aegis",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "graft_skill_tul_aegis_cold": {
+    "description": "",
+    "invisible": false,
+    "name": "[DNT] UNUSED",
+    "removable": false,
+    "stats": [
+      "graft_skill_tul_aegis_cold_absorbed_%"
+    ],
+    "visuals": "graft_skill_tul_cold_aegis",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "graft_skill_tul_aegis_lightning": {
+    "description": "",
+    "invisible": false,
+    "name": "[DNT] UNUSED",
+    "removable": false,
+    "stats": [
+      "graft_skill_tul_aegis_lightning_absorbed_%"
+    ],
+    "visuals": "graft_skill_tul_lightning_aegis",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "graft_skill_tul_aegis_elemental": {
+    "description": "บัฟนี้จะรับความเสียหาย ปะทะ ธาตุ ก่อน พลังชีวิตหรือโล่พลังงาน ของคุณ",
+    "invisible": false,
+    "name": "สงวนความแน่นิ่ง",
+    "removable": false,
+    "stats": [
+      "graft_skill_tul_aegis_elemental_absorbed_%",
+      "additional_maximum_all_elemental_resistances_%",
+      "base_resist_all_elements_%"
+    ],
+    "visuals": "graft_skill_tul_elemental_aegis",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "flask_energy_shield_recharge_not_delayed_by_damage": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "energy_shield_recharge_not_delayed_by_damage"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "blood_barrier": {
+    "description": "บาเรียเลือดนี้จะรับความเสียหาย ปะทะ ก่อน พลังชีวิตหรือโล่พลังงาน ของคุณ",
+    "invisible": false,
+    "name": "บาเรียเลือด",
+    "removable": true,
+    "stats": [],
+    "visuals": "blood_barrier",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "last_gasp": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "have_used_a_specific_retaliation_skill_in_past_10_seconds": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "num_unique_retaliation_skills_used_in_past_10_seconds"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "brequel_unstuck_monster_temporary_phasing": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "phase_through_objects"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "graft_skill_xoph_elemental_damage_boost": {
+    "description": "",
+    "invisible": false,
+    "name": "พรจากสายลมสีเทา",
+    "removable": false,
+    "stats": [
+      "physical_damage_%_to_add_as_fire",
+      "physical_damage_%_to_add_as_cold",
+      "physical_damage_%_to_add_as_lightning",
+      "elemental_damage_%_to_add_as_chaos",
+      "base_resist_all_elements_%",
+      "avoid_all_elemental_status_%"
+    ],
+    "visuals": "graft_skill_xoph_ailment_buff",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "breach_wild_boss_explode_on_death": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "breach_wild_boss_explode_on_death",
+    "category": null,
+    "sources": null,
+    "templates": {
+      "BreachWildBossWarcryExplodeBuff": {
+        "aura_radius_metres": null,
+        "stats": null,
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "windstorm_debuff": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "arrow_swarm_reservation": {
+    "description": "",
+    "invisible": false,
+    "name": "[DNT] UNUSED",
+    "removable": false,
+    "stats": [],
+    "visuals": "graft_skill_xoph_ailment_buff",
+    "category": null,
+    "sources": null,
+    "templates": {
+      "ArrowSwarmReservation": {
+        "aura_radius_metres": null,
+        "stats": null,
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "tornado_generation_buff": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "farruls_farric_presence": {
+    "description": "คุณมีความแม่นยำและโอกาสคริติคอล เพิ่มขึ้น และไม่ได้รับความเสียหายเพิ่มเติมจากคริติคอล",
+    "invisible": false,
+    "name": "ปรากฏกายฟาร์รุลแห่งวงศ์ฟาร์รุล",
+    "removable": false,
+    "stats": [
+      "accuracy_rating_+%",
+      "critical_strike_chance_+%",
+      "self_take_no_extra_damage_from_critical_strikes"
+    ],
+    "visuals": "farruls_farric_presence",
+    "category": null,
+    "sources": {
+      "Mods": [
+        {
+          "id": "FarrulsFarricPresence",
+          "item": null,
+          "name": null,
+          "template": "farrulsfarricpresence",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
+    "templates": {
+      "farrulsfarricpresence": {
+        "aura_radius_metres": 5.0,
+        "stats": {
+          "accuracy_rating_+%": 0,
+          "critical_strike_chance_+%": 0,
+          "self_take_no_extra_damage_from_critical_strikes": 0
+        },
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "farruls_fertile_presence": {
+    "description": "คุณมีความเสียหายและการฟื้นฟูพลังชีวิต เพิ่มขึ้น และไม่ติดสถานะ สตัน",
+    "invisible": false,
+    "name": "ปรากฏกายฟาร์รุลเจริญพันธุ์",
+    "removable": false,
+    "stats": [
+      "damage_+%",
+      "life_regeneration_rate_per_minute_%",
+      "base_cannot_be_stunned"
+    ],
+    "visuals": "farruls_fertile_presence",
+    "category": null,
+    "sources": {
+      "Mods": [
+        {
+          "id": "FarrulsFertilePresence",
+          "item": null,
+          "name": null,
+          "template": "farrulsfertilepresence",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
+    "templates": {
+      "farrulsfertilepresence": {
+        "aura_radius_metres": 5.0,
+        "stats": {
+          "damage_+%": 0,
+          "life_regeneration_rate_per_minute_%": 0,
+          "base_cannot_be_stunned": 0
+        },
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "farruls_wild_presence": {
+    "description": "คุณมีความเร็วในการโจมตี, ร่าย, เคลื่อนที่ เพิ่มขึ้น และความเร็วในการกระทำของคุณ ไม่สามารถเปลี่ยนแปลงให้ต่ำกว่าค่าพื้นฐานได้",
+    "invisible": false,
+    "name": "ปรากฏกายฟาร์รุลเกรี้ยวกราด",
+    "removable": false,
+    "stats": [
+      "attack_speed_+%",
+      "base_cast_speed_+%",
+      "base_movement_velocity_+%",
+      "action_speed_cannot_be_reduced_below_base"
+    ],
+    "visuals": "farruls_wild_presence",
+    "category": null,
+    "sources": {
+      "Mods": [
+        {
+          "id": "FarrulsWildPresence",
+          "item": null,
+          "name": null,
+          "template": "farrulswildpresence",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
+    "templates": {
+      "farrulswildpresence": {
+        "aura_radius_metres": 5.0,
+        "stats": {
+          "attack_speed_+%": 0,
+          "base_cast_speed_+%": 0,
+          "base_movement_velocity_+%": 0,
+          "action_speed_cannot_be_reduced_below_base": 0
+        },
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "kinetic_shell": {
+    "description": "กระดองพลังนี้จะรับความเสียหาย ปะทะ ธาตุ ก่อน พลังชีวิตหรือโล่พลังงาน ของคุณ",
+    "invisible": false,
+    "name": "กระดองกักพลัง",
+    "removable": false,
+    "stats": [
+      "kinetic_shell_absorb_%"
+    ],
+    "visuals": "kinetic_shell",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "four_seconds_after_being_hit_lose_life_equal_to_x_percent_of_hit": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "alternate_ascendency_graft_skill_damage_taken": {
+    "description": "คุณได้รับความเสียหายจากสกิลหัตถ์ เพิ่มขึ้น",
+    "invisible": false,
+    "name": "หัตถ์แสนสยอง",
+    "removable": false,
+    "stats": [
+      "damage_taken_+%_from_graft_skills"
+    ],
+    "visuals": "alternate_ascendancy_graft_aura",
+    "category": "Debuff",
+    "sources": {
+      "PassiveSkills": [
+        {
+          "id": "AlternateAscendancyBreachlord3",
+          "item": null,
+          "name": null,
+          "template": "alternate_ascendency_graft_skill_damage_taken",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
+    "templates": {
+      "alternate_ascendency_graft_skill_damage_taken": {
+        "aura_radius_metres": 6.0,
+        "stats": {
+          "damage_taken_+%_from_graft_skills": 100
+        },
+        "stat_text": [
+          "ศัตรูที่อยู่ใกล้ ได้รับความเสียหายจาก สกิลหัตถ์ เพิ่มขึ้น 100%"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "shared_life": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "misty_reflection_debuff": {
+    "description": "คุณสร้างความเสียหาย ลดลง อีก และได้รับความเสียหาย เพิ่มขึ้น",
+    "invisible": false,
+    "name": "แกหลงกลแล้วเจ้าโง่",
+    "removable": false,
+    "stats": [
+      "damage_+%_final_from_misty_reflection_debuff",
+      "base_damage_taken_+%"
+    ],
+    "visuals": "misty_reflection",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "marked_enemy_cannot_evade": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "base_cannot_evade"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "breach_hand_mage_storm_lightning_aura": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "base_lightning_damage_taken_per_minute"
+    ],
+    "visuals": "invisible",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "generic_monster_chaos_flame_wall_dot": {
+    "description": "คุณได้รับความเสียหาย เคออส ขณะที่ยืนอยู่ในกำแพงเพลิงดำ",
+    "invisible": false,
+    "name": "กำแพงเพลิงดำ",
+    "removable": false,
+    "stats": [
+      "base_chaos_damage_taken_per_minute"
+    ],
+    "visuals": "ground_fire_burn",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "kinetic_shell_immunity": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "base_cannot_be_kinetic_shelled"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "wild_savavagery": {
+    "description": "คุณมีความเสียหาย กายภาพ และความเร็วในการกระทำ เพิ่มขึ้น, การปะทะของคุณ มองข้าม ค่าป้องกันกายภาพ ของศัตรู และคุณไม่ติดสถานะ สตัน",
+    "invisible": false,
+    "name": "ป่าเถื่อน",
+    "removable": false,
+    "stats": [
+      "physical_damage_+%",
+      "action_speed_-%",
+      "base_cannot_be_stunned",
+      "hits_ignore_enemy_monster_physical_damage_reduction"
+    ],
+    "visuals": "wild_savagery",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "generic_monster_chaos_flame_aura_dot": {
+    "description": "คุณได้รับความเสียหาย เคออส ขณะที่ยืนอยู่ในออร่าเพลิงดำ",
+    "invisible": false,
+    "name": "ออร่าเพลิงดำ",
+    "removable": false,
+    "stats": [
+      "base_chaos_damage_taken_per_minute"
+    ],
+    "visuals": "voodoo_king_death_aura_effigy",
+    "category": "Debuff",
     "sources": null,
     "templates": null,
     "stack_limit": null

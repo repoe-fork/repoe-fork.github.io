@@ -934,7 +934,9 @@
     "invisible": true,
     "name": "幽体",
     "removable": false,
-    "stats": [],
+    "stats": [
+      "is_raised_spectre"
+    ],
     "visuals": "spectre_buff",
     "category": null,
     "sources": null,
@@ -2998,7 +3000,8 @@
     "removable": true,
     "stats": [
       "base_physical_damage_reduction_rating",
-      "vaal_molten_shall_armour_+%_final"
+      "vaal_molten_shall_armour_+%_final",
+      "physical_damage_reduction_rating_+%"
     ],
     "visuals": "fire_shield",
     "category": "Buff",
@@ -3036,7 +3039,8 @@
     "removable": true,
     "stats": [
       "base_physical_damage_reduction_rating",
-      "vaal_molten_shall_armour_+%_final"
+      "vaal_molten_shall_armour_+%_final",
+      "physical_damage_reduction_rating_+%"
     ],
     "visuals": "invisible",
     "category": null,
@@ -6771,7 +6775,7 @@
   "shrine_critical": {
     "description": "常にクリティカルストライクを与える",
     "invisible": false,
-    "name": "金剛石のシュライン",
+    "name": "ダイアモンドシュライン",
     "removable": true,
     "stats": [
       "always_crit",
@@ -7119,7 +7123,7 @@
   "shrine_massive": {
     "description": "ライフ、効果範囲およびサイズが増加",
     "invisible": false,
-    "name": "壮大なシュライン",
+    "name": "巨大化のシュライン",
     "removable": true,
     "stats": [
       "base_actor_scale_+%",
@@ -7212,7 +7216,7 @@
   "shrine_defence": {
     "description": "アーマー、回避力およびエナジーシールドが増加",
     "invisible": false,
-    "name": "強固なシュライン",
+    "name": "鉄壁のシュライン",
     "removable": true,
     "stats": [
       "physical_damage_reduction_rating_+%",
@@ -8515,7 +8519,7 @@
   "unique_flask_atziris_promise": {
     "description": "混沌ダメージでリーチを行い、追加の混沌ダメージを与える。",
     "invisible": false,
-    "name": "アトジリの約束",
+    "name": "アッツィリの約束",
     "removable": false,
     "stats": [
       "base_life_leech_from_chaos_damage_permyriad",
@@ -9057,6 +9061,36 @@
     "stats": [],
     "visuals": "herald_of_thunder_active",
     "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "herald_of_the_breach": {
+    "description": "状態異常を付与した時に異世界の圧を獲得し、プレイヤーに影響しているヘラルドごとにダメージが上昇する (このヘラルドも含む)",
+    "invisible": false,
+    "name": "ヘラルドオブザハイヴ",
+    "removable": true,
+    "stats": [
+      "damage_+%_final_per_herald_skill_affecting_you",
+      "affected_by_herald_of_the_breach",
+      "herald_of_the_breach_add_stack_on_inflicting_ailment"
+    ],
+    "visuals": "herald_of_the_breach",
+    "category": "Herald",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "herald_of_the_breach_stack": {
+    "description": "異世界の圧のスタック数に応じてヘラルドオブハイヴのパルスの頻度が上がる。異世界の圧は時間経過で失われ、スタック数が多いほど失われる速度が速くなる",
+    "invisible": false,
+    "name": "異世界の圧",
+    "removable": false,
+    "stats": [
+      "herald_of_the_breach_pulse_frequency_+%"
+    ],
+    "visuals": "herald_of_the_breach",
+    "category": "Active skill",
     "sources": null,
     "templates": null,
     "stack_limit": null
@@ -12407,7 +12441,8 @@
           "name": null,
           "template": null,
           "stat_text": [
-            "透明化"
+            "透明化",
+            "ヒットによる全てのダメージを25%の確率で無効化する"
           ],
           "stats": {
             "phase_through_objects": 1,
@@ -13393,7 +13428,19 @@
     "visuals": "wither_resistance",
     "category": "Debuff",
     "sources": null,
-    "templates": null,
+    "templates": {
+      "BreachWithered": {
+        "aura_radius_metres": 2.5,
+        "stats": {
+          "chaos_damage_taken_+%": 5,
+          "is_withered": 1
+        },
+        "stat_text": [
+          "受ける混沌ダメージが5%増加する"
+        ],
+        "visuals": null
+      }
+    },
     "stack_limit": 15
   },
   "siphon_leech": {
@@ -13584,7 +13631,7 @@
     "stack_limit": null
   },
   "lightning_flask_lightning_penetration": {
-    "description": "与えるダメージは雷耐性を突破する。",
+    "description": "与えるダメージは雷耐性を貫通する。",
     "invisible": false,
     "name": "ヴィンクターの器",
     "removable": false,
@@ -18006,6 +18053,18 @@
     "templates": null,
     "stack_limit": null
   },
+  "number_of_times_have_been_hit_by_enemy_recently": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "have_been_crit_recently": {
     "description": "",
     "invisible": true,
@@ -18970,7 +19029,7 @@
     "stack_limit": null
   },
   "flask_elemental_penetration": {
-    "description": "与えるダメージは敵の元素耐性を突破する。",
+    "description": "与えるダメージは敵の元素耐性を貫通する。",
     "invisible": true,
     "name": "",
     "removable": false,
@@ -21851,9 +21910,9 @@
     "stack_limit": null
   },
   "doedre_pillar_red_aura": {
-    "description": "ドードゥリの苦痛がスタックするたび、受けるダメージが6%増加。",
+    "description": "ドードリの苦痛がスタックするたび、受けるダメージが6%増加。",
     "invisible": false,
-    "name": "ドードゥリの苦痛",
+    "name": "ドードリの苦痛",
     "removable": false,
     "stats": [
       "base_damage_taken_+%"
@@ -21880,9 +21939,9 @@
     "stack_limit": null
   },
   "doedre_pillar_green_aura": {
-    "description": "ドードゥリの衰弱がスタックするたび、自身とミニオンの与えるダメージが5%低下。",
+    "description": "ドードリの衰弱がスタックするたび、自身とミニオンの与えるダメージが5%低下。",
     "invisible": false,
-    "name": "ドードゥリの衰弱",
+    "name": "ドードリの衰弱",
     "removable": false,
     "stats": [
       "doedre_aura_damage_+%_final"
@@ -21909,9 +21968,9 @@
     "stack_limit": null
   },
   "doedre_pillar_purple_aura": {
-    "description": "ドードゥリの苦難がスタックするたび、アクションスピードが5%遅くなる。",
+    "description": "ドードリの苦難がスタックするたび、アクションスピードが5%遅くなる。",
     "invisible": false,
-    "name": "ドードゥリの苦難",
+    "name": "ドードリの苦難",
     "removable": false,
     "stats": [
       "action_speed_-%"
@@ -22286,7 +22345,7 @@
     "stack_limit": null
   },
   "harbinger_lightning_buff_uber": {
-    "description": "追加の感電確率および雷耐性突破を獲得。",
+    "description": "追加の感電確率および雷耐性貫通を獲得。",
     "invisible": false,
     "name": "湧き上がる思考",
     "removable": false,
@@ -22394,6 +22453,14 @@
         },
         {
           "id": "PowerChargeOnManaSpentUber1",
+          "item": null,
+          "name": null,
+          "template": "PowerChargeOnManaSpentUber1",
+          "stat_text": null,
+          "stats": null
+        },
+        {
+          "id": "MutatedUniqueWand15PowerChargeOnManaSpent",
           "item": null,
           "name": null,
           "template": "PowerChargeOnManaSpentUber1",
@@ -23039,6 +23106,39 @@
     "removable": false,
     "stats": [
       "additional_base_critical_strike_chance"
+    ],
+    "visuals": "critical_strike_chance_unique",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "reduced_mana_cost_on_mana_spent": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": {
+      "GainReducedManaCostOnManaSpentUnique__1": {
+        "aura_radius_metres": null,
+        "stats": null,
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "reduced_mana_cost_unique": {
+    "description": "マナコストが減少している",
+    "invisible": false,
+    "name": "カリサの楽しみ",
+    "removable": false,
+    "stats": [
+      "base_mana_cost_-%"
     ],
     "visuals": "critical_strike_chance_unique",
     "category": "Buff",
@@ -29296,7 +29396,7 @@
   "shrine_resonating": {
     "description": "ヒット時および敵を倒した際に、パワーチャージ、フレンジーチャージおよびエンデュランスチャージを獲得する確率およびチャージから追加のボーナスを獲得。",
     "invisible": false,
-    "name": "充填のシュライン",
+    "name": "チャージのシュライン",
     "removable": true,
     "stats": [
       "chance_to_gain_random_standard_charge_on_hit_%",
@@ -29497,7 +29597,7 @@
           "base_inflict_fire_exposure_on_hit_%_chance": 15
         },
         "stat_text": [
-          "ヒット時に15%の確率で曝露(火)を付与する"
+          "ヒット時に15%の確率で火の曝露を付与する"
         ],
         "visuals": null
       }
@@ -29507,7 +29607,7 @@
   "shrine_redeemer_monster": {
     "description": "",
     "invisible": true,
-    "name": "リディーマーのシュライン - モンスター",
+    "name": "レディーマーのシュライン - モンスター",
     "removable": true,
     "stats": [
       "base_inflict_cold_exposure_on_hit_%_chance"
@@ -29522,7 +29622,7 @@
           "base_inflict_cold_exposure_on_hit_%_chance": 15
         },
         "stat_text": [
-          "ヒット時に15%の確率で曝露(冷気)を付与する"
+          "ヒット時に15%の確率で冷気の曝露を付与する"
         ],
         "visuals": null
       }
@@ -29547,7 +29647,7 @@
           "base_inflict_lightning_exposure_on_hit_%_chance": 15
         },
         "stat_text": [
-          "ヒット時に15%の確率で曝露(雷)を付与する"
+          "ヒット時に15%の確率で雷の曝露を付与する"
         ],
         "visuals": null
       }
@@ -30423,7 +30523,7 @@
   "puppet_master": {
     "description": "ミニオンは与えるダメージが上昇、アタックスピード、キャストスピードおよび移動スピードが増加。",
     "invisible": false,
-    "name": "暴食",
+    "name": "狂乱の餌付け",
     "removable": false,
     "stats": [
       "puppet_master_minion_damage_+%_final",
@@ -31047,10 +31147,7 @@
     "invisible": false,
     "name": "パイロクラストマイン",
     "removable": false,
-    "stats": [
-      "mortar_barrage_mine_minimum_added_fire_damage_taken",
-      "mortar_barrage_mine_maximum_added_fire_damage_taken"
-    ],
+    "stats": [],
     "visuals": "mortar_barrage_mine",
     "category": "Debuff",
     "sources": null,
@@ -32646,6 +32743,23 @@
     },
     "stack_limit": 10
   },
+  "maina": {
+    "description": "受けるダメージが増加し、減速状態になり、ライフおよびエナジーシールド回復レートが減少している。",
+    "invisible": false,
+    "name": "躁病",
+    "removable": false,
+    "stats": [
+      "base_damage_taken_+%",
+      "action_speed_-%",
+      "life_recovery_rate_+%",
+      "energy_shield_recovery_rate_+%"
+    ],
+    "visuals": "affliction_debuff",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": 15
+  },
   "recent_minion_buffs": {
     "description": "",
     "invisible": true,
@@ -33048,6 +33162,14 @@
           "template": "CoverInAshNearbyEnemies",
           "stat_text": null,
           "stats": null
+        },
+        {
+          "id": "MutatedUniqueAmulet37NearbyEnemiesDebilitated",
+          "item": null,
+          "name": null,
+          "template": "DebilitateNearbyEnemies",
+          "stat_text": null,
+          "stats": null
         }
       ]
     },
@@ -33191,6 +33313,12 @@
         "visuals": null
       },
       "CoverInAshNearbyEnemies": {
+        "aura_radius_metres": 3.0,
+        "stats": null,
+        "stat_text": null,
+        "visuals": null
+      },
+      "DebilitateNearbyEnemies": {
         "aura_radius_metres": 3.0,
         "stats": null,
         "stat_text": null,
@@ -33496,7 +33624,7 @@
   "glorious_madness": {
     "description": "輝かしい狂気に侵されている。ランダムなデバフを何度も受ける。",
     "invisible": false,
-    "name": "燦然たる狂気",
+    "name": "栄光なる狂気",
     "removable": false,
     "stats": [
       "affected_by_glorious_madness",
@@ -33518,20 +33646,6 @@
     ],
     "visuals": "affliction_boss_deathzone_inner_degen",
     "category": "Debuff",
-    "sources": null,
-    "templates": null,
-    "stack_limit": null
-  },
-  "herald_of_agony_max_virulence_hidden": {
-    "description": "",
-    "invisible": true,
-    "name": "",
-    "removable": false,
-    "stats": [
-      "maximum_virulence_stacks"
-    ],
-    "visuals": "invisible",
-    "category": null,
     "sources": null,
     "templates": null,
     "stack_limit": null
@@ -33881,13 +33995,29 @@
   "spectral_wolf_buff": {
     "description": "スペクトラルウルフから追加の物理アタックダメージを獲得。",
     "invisible": false,
-    "name": "幽体の群れ",
+    "name": "スペクトラルパック",
     "removable": false,
     "stats": [
       "attack_minimum_added_physical_damage",
       "attack_maximum_added_physical_damage"
     ],
     "visuals": "spectral_wolf_pack",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "spectral_tiger_buff": {
+    "description": "スペクラルタイガーがクリティカル率の増加とアタックおよびキャストスピードの増加を付与している。",
+    "invisible": false,
+    "name": "スペクトラルパック",
+    "removable": false,
+    "stats": [
+      "critical_strike_chance_+%",
+      "attack_speed_+%",
+      "base_cast_speed_+%"
+    ],
+    "visuals": "spectral_tiger_pack",
     "category": "Buff",
     "sources": null,
     "templates": null,
@@ -34042,6 +34172,20 @@
     ],
     "visuals": "ground_profane",
     "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "ground_profane_chaotic_might_ally": {
+    "description": "",
+    "invisible": false,
+    "name": "不浄領域",
+    "removable": false,
+    "stats": [
+      "on_profane_ground"
+    ],
+    "visuals": "ground_profane",
+    "category": "Buff",
     "sources": null,
     "templates": null,
     "stack_limit": null
@@ -36205,6 +36349,18 @@
     "templates": null,
     "stack_limit": null
   },
+  "maximum_rage_fire_exposure_aura": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "herald_of_ash_fire_exposure_aura": {
     "description": "",
     "invisible": true,
@@ -36412,7 +36568,7 @@
     "category": "Debuff",
     "sources": null,
     "templates": null,
-    "stack_limit": 3
+    "stack_limit": 4
   },
   "unhinged": {
     "description": "もはや正気ではない。",
@@ -39858,7 +40014,7 @@
     "stack_limit": null
   },
   "armour_evasion_banner_buff_aura": {
-    "description": "移動スピードが増加。スペルダメージを抑制する確率が高くなり、スペルダメージを抑制した場合に追加の割合でダメージを抑制する。",
+    "description": "移動スピードが増加。スペルダメージを抑制する確率が高くなり、抑制したスペルヒットから受けるダメージが減少する",
     "invisible": false,
     "name": "ディファイアンスバナー",
     "removable": false,
@@ -39968,7 +40124,7 @@
   "executioner_stolen_mod_buff": {
     "description": "倒したレアモンスターからモッドを1つ奪っている。",
     "invisible": false,
-    "name": "斬首",
+    "name": "首狩り",
     "removable": false,
     "stats": [],
     "visuals": "executioner_stolen_mod",
@@ -39993,9 +40149,9 @@
     "stack_limit": null
   },
   "trauma": {
-    "description": "持っている外傷スタックごとにストライクスキルがボーナスを獲得。",
+    "description": "持っているトラウマスタックごとにストライクスキルがボーナスを獲得。",
     "invisible": false,
-    "name": "外傷",
+    "name": "トラウマ",
     "removable": false,
     "stats": [],
     "visuals": "trauma",
@@ -41154,6 +41310,14 @@
         },
         "stat_text": null,
         "visuals": null
+      },
+      "GraftTornadoMovement": {
+        "aura_radius_metres": null,
+        "stats": {
+          "accelerate_while_moving_movement_speed_+%_final": 120
+        },
+        "stat_text": null,
+        "visuals": null
       }
     },
     "stack_limit": null
@@ -42119,7 +42283,7 @@
   "shrine_critical_royale": {
     "description": "常にクリティカルストライクを与える",
     "invisible": false,
-    "name": "金剛石のシュライン",
+    "name": "ダイアモンドシュライン",
     "removable": true,
     "stats": [
       "critical_strike_chance_+%",
@@ -65720,8 +65884,8 @@
       "TricksterAlternatingLessDamageTaken": {
         "aura_radius_metres": null,
         "stats": {
-          "trickster_damage_over_time_taken_+%_final": -40,
-          "trickster_hit_damage_taken_+%_final": -40
+          "trickster_damage_over_time_taken_+%_final": -50,
+          "trickster_hit_damage_taken_+%_final": -50
         },
         "stat_text": null,
         "visuals": null
@@ -65730,7 +65894,7 @@
     "stack_limit": null
   },
   "trickster_alternating_less_hit_damage": {
-    "description": "ヒットから受けるダメージが40%低下",
+    "description": "ヒットから受けるダメージが50%低下",
     "invisible": false,
     "name": "ハートストッパー",
     "removable": false,
@@ -65744,7 +65908,7 @@
     "stack_limit": null
   },
   "trickster_alternating_less_dot_damage": {
-    "description": "受ける継続ダメージが40%低下",
+    "description": "受ける継続ダメージが50%低下",
     "invisible": false,
     "name": "ハートストッパー",
     "removable": false,
@@ -65763,7 +65927,7 @@
     "name": "一歩先へ",
     "removable": false,
     "stats": [
-      "action_speed_is_at_most_92%"
+      "action_speed_is_at_most_90%"
     ],
     "visuals": "trickser_one_step_ahead_action_speed_maximum",
     "category": "Debuff",
@@ -65791,10 +65955,10 @@
       "TricksterNearbyEnemyActionSpeedCap": {
         "aura_radius_metres": 6.0,
         "stats": {
-          "action_speed_is_at_most_92%": 1
+          "action_speed_is_at_most_90%": 1
         },
         "stat_text": [
-          "近くの敵モンスターのアクションスピードは最大で基礎値の92%となる"
+          "近くの敵モンスターのアクションスピードは最大で基礎値の90%となる"
         ],
         "visuals": null
       }
@@ -65861,7 +66025,7 @@
           "100%の確率で凍結を無効化する",
           "冷気耐性の最大値 +10%",
           "冷気耐性 +50%",
-          "ダメージは10%の冷気耐性を突破する"
+          "ダメージは10%の冷気耐性を貫通する"
         ],
         "visuals": "shrine_monster_affected"
       }
@@ -65974,7 +66138,7 @@
           "全てのヒットはクリティカルストライクとなる",
           "クリティカルストライクから追加ダメージを受けない",
           "50%の確率で元素系状態異常を無効化する",
-          "ダメージは10%の火耐性を突破する"
+          "ダメージは10%の火耐性を貫通する"
         ],
         "visuals": "shrine_monster_affected"
       }
@@ -67938,6 +68102,20 @@
     "templates": null,
     "stack_limit": null
   },
+  "ward_broken_in_the_past_2_seconds": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "ward_broken_in_the_past_2_seconds"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "killed_a_metamorph_in_the_last_10_seconds": {
     "description": "",
     "invisible": true,
@@ -68580,7 +68758,7 @@
   "support_controlled_blaze_visual_display_buff": {
     "description": "直近{skill_name}で発火を付与した回数",
     "invisible": false,
-    "name": "制御火炎サポート",
+    "name": "発火制御サポート",
     "removable": false,
     "stats": [],
     "visuals": "support_controlled_blaze",
@@ -68970,7 +69148,9 @@
         "stats": {
           "avoid_damage_%": 75
         },
-        "stat_text": null,
+        "stat_text": [
+          "ヒットによる全てのダメージを75%の確率で無効化する"
+        ],
         "visuals": null
       }
     },
@@ -72013,7 +72193,7 @@
   "decay_quant_rarity": {
     "description": "アイテムレアリティは時間と共に減衰し、敵を倒すことで増加する",
     "invisible": false,
-    "name": "煌煌の有角のスカラベ",
+    "name": "輝ける富の角スカラベ",
     "removable": false,
     "stats": [
       "base_item_found_quantity_+%",
@@ -72628,7 +72808,7 @@
       "found_items_warlord_influence_chance_%"
     ],
     "visuals": "shrine_warlord",
-    "category": "Buff",
+    "category": "Buff shrine",
     "sources": null,
     "templates": {
       "SentinelWarlord": {
@@ -72666,7 +72846,7 @@
       "found_items_crusader_influence_chance_%"
     ],
     "visuals": "shrine_crusader",
-    "category": "Buff",
+    "category": "Buff shrine",
     "sources": null,
     "templates": {
       "SentinelCrusader": {
@@ -72695,16 +72875,16 @@
     "stack_limit": null
   },
   "redeemer_shrine_buff": {
-    "description": "物理ダメージの一部を追加の冷気ダメージとして獲得\n見つかるレアアイテムはリディーマーインフルエンスを持つ可能性がある",
+    "description": "物理ダメージの一部を追加の冷気ダメージとして獲得\n見つかるレアアイテムはレディーマーインフルエンスを持つ可能性がある",
     "invisible": false,
-    "name": "リディーマーのシュライン",
+    "name": "レディーマーのシュライン",
     "removable": false,
     "stats": [
       "physical_damage_%_to_add_as_cold",
       "found_items_redeemer_influence_chance_%"
     ],
     "visuals": "shrine_redeemer",
-    "category": "Buff",
+    "category": "Buff shrine",
     "sources": null,
     "templates": {
       "SentinelRedeemer": {
@@ -72742,7 +72922,7 @@
       "found_items_hunter_influence_chance_%"
     ],
     "visuals": "shrine_hunter",
-    "category": "Buff",
+    "category": "Buff shrine",
     "sources": null,
     "templates": {
       "SentinelHunter": {
@@ -72779,7 +72959,7 @@
       "player_found_items_are_corrupted_chance_%"
     ],
     "visuals": "shrine_vaal",
-    "category": "Buff",
+    "category": "Buff shrine",
     "sources": null,
     "templates": {
       "SentinelVaal": {
@@ -72807,7 +72987,7 @@
     "name": "進化のシュライン",
     "removable": false,
     "stats": [
-      "chance_to_upgrade_monsters_on_kill_%"
+      "chance_to_upgrade_monsters_on_kill_permyriad"
     ],
     "visuals": "shrine_evolution",
     "category": "Buff",
@@ -72816,7 +72996,7 @@
       "SentinelEvolution": {
         "aura_radius_metres": null,
         "stats": {
-          "chance_to_upgrade_monsters_on_kill_%": 10
+          "chance_to_upgrade_monsters_on_kill_permyriad": 2500
         },
         "stat_text": null,
         "visuals": null
@@ -72824,7 +73004,7 @@
       "UpgradeShrineBuff": {
         "aura_radius_metres": null,
         "stats": {
-          "chance_to_upgrade_monsters_on_kill_%": 10
+          "chance_to_upgrade_monsters_on_kill_permyriad": 2500
         },
         "stat_text": null,
         "visuals": null
@@ -73097,7 +73277,7 @@
     "stack_limit": null
   },
   "tincture_penetrate_elemental_resistances": {
-    "description": "近接武器は元素耐性を突破する",
+    "description": "近接武器は元素耐性を貫通する",
     "invisible": false,
     "name": "チンキ - 元素の懲罰",
     "removable": false,
@@ -73274,7 +73454,7 @@
   "tincture_prismatic": {
     "description": "近接武器は追加の元素ダメージを与える",
     "invisible": false,
-    "name": "多彩なチンキ",
+    "name": "プリズマチックチンキ",
     "removable": false,
     "stats": [
       "elemental_damage_+%_with_tinctured_weapons"
@@ -73419,7 +73599,7 @@
     "stack_limit": null
   },
   "tincture_unique1": {
-    "description": "近接武器はマナ燃焼のスタックごとに敵の元素耐性を突破する",
+    "description": "近接武器はマナ燃焼のスタックごとに敵の元素耐性を貫通する",
     "invisible": false,
     "name": "四季の樹液",
     "removable": false,
@@ -73823,6 +74003,21 @@
     "templates": null,
     "stack_limit": null
   },
+  "zangerboss_orb_beam": {
+    "description": "ライフおよびエナジーシールドを回復できない",
+    "invisible": false,
+    "name": "浄化の炎",
+    "removable": false,
+    "stats": [
+      "cannot_recover_life",
+      "no_energy_shield_recovery"
+    ],
+    "visuals": "zangerboss_orb_beam",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "divination_buff_arrogance_of_the_vaal": {
     "description": "混沌耐性 +75%\r\nヒットによる物理ダメージの20%を混沌ダメージとして受ける",
     "invisible": false,
@@ -74041,7 +74236,7 @@
     "stack_limit": null
   },
   "divination_buff_burning_blood": {
-    "description": "物理ダメージの50%を追加火ダメージとして獲得する\r\n冷気ダメージの50%を追加火ダメージとして獲得する\r\n雷ダメージの50%を追加雷ダメージとして獲得する\r\nダメージが25%の火耐性を突破する",
+    "description": "物理ダメージの50%を追加火ダメージとして獲得する\r\n冷気ダメージの50%を追加火ダメージとして獲得する\r\n雷ダメージの50%を追加雷ダメージとして獲得する\r\nダメージが25%の火耐性を貫通する",
     "invisible": false,
     "name": "燃え盛る血",
     "removable": false,
@@ -74067,7 +74262,7 @@
           "物理ダメージの50%を追加火ダメージとして獲得する",
           "冷気ダメージの50%を追加火ダメージとして獲得する",
           "雷ダメージの50%を追加火ダメージとして獲得する",
-          "ダメージは25%の火耐性を突破する"
+          "ダメージは25%の火耐性を貫通する"
         ],
         "visuals": null
       }
@@ -74094,6 +74289,7 @@
           "base_extra_damage_rolls": 1
         },
         "stat_text": [
+          "プレイヤーに対する敵のヒットダメージが不運になる",
           "ヒットによるダメージが幸運になる"
         ],
         "visuals": null
@@ -74127,6 +74323,7 @@
         "stat_text": [
           "アタックスピードおよびキャストスピードが20%増加する",
           "グローバルクリティカル率が100%増加する",
+          "ヒットによる全てのダメージを15%の確率で無効化する",
           "ステルスが100%増加する"
         ],
         "visuals": null
@@ -74162,7 +74359,7 @@
   "divination_buff_doedres_madness": {
     "description": "ヒット時に敵をエンフィーブルで呪う\r\n呪いを追加で1個付与できる",
     "invisible": false,
-    "name": "ドードゥリの狂気",
+    "name": "ドードリの狂気",
     "removable": false,
     "stats": [
       "curse_on_hit_%_enfeeble",
@@ -74632,7 +74829,7 @@
     "stack_limit": null
   },
   "divination_buff_the_doctor": {
-    "description": "レアモンスターを倒すとそのモッドを20秒間獲得する",
+    "description": "レアモンスターを倒すとそのモッドを60秒間獲得する",
     "invisible": false,
     "name": "医者",
     "removable": false,
@@ -75104,6 +75301,20 @@
     "templates": null,
     "stack_limit": null
   },
+  "napalm_arrows_degen": {
+    "description": "火継続ダメージを受けている。",
+    "invisible": false,
+    "name": "コンフラグレーションデバフ",
+    "removable": false,
+    "stats": [
+      "base_fire_damage_taken_per_minute"
+    ],
+    "visuals": "ground_fire_burn",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "blast_rain_fire_wave": {
     "description": "",
     "invisible": false,
@@ -75169,6 +75380,14 @@
       "Mods": [
         {
           "id": "SummonWrithingWormEveryXMsUnique__1",
+          "item": null,
+          "name": null,
+          "template": "SummonWrithingWormEveryXMsBuffUnique__1",
+          "stat_text": null,
+          "stats": null
+        },
+        {
+          "id": "MutatedUniqueBow12SummonWrithingWormEveryXMs",
           "item": null,
           "name": null,
           "template": "SummonWrithingWormEveryXMsBuffUnique__1",
@@ -75484,6 +75703,598 @@
     ],
     "visuals": "invisible",
     "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "retaliation_skills_become_useable_every_x_ms": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "graft_skill_esh_lightning_ring_ally_buff": {
+    "description": "ヒットにより与えるダメージが幸運になり、追加の雷ダメージを与えている",
+    "invisible": false,
+    "name": "雷光領域",
+    "removable": false,
+    "stats": [
+      "base_extra_damage_rolls",
+      "global_minimum_added_lightning_damage",
+      "global_maximum_added_lightning_damage"
+    ],
+    "visuals": "graft_skill_esh_lightning_ring_ally_buff_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "graft_skill_uul_netol_life_recovery": {
+    "description": "ライフ回復レートが大幅に高くなっている",
+    "invisible": false,
+    "name": "テンダーエンブレイス",
+    "removable": false,
+    "stats": [
+      "graft_uulnetol_life_recovery_rate_+%_final",
+      "additional_block_%",
+      "life_leech_from_any_damage_permyriad"
+    ],
+    "visuals": "graft_skill_uul_netol_life_recovery_visual",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "graft_skill_esh_jolt": {
+    "description": "アタックダメージの最大値が高くなっているが、受けるダメージが増加している。",
+    "invisible": false,
+    "name": "ジャルト",
+    "removable": false,
+    "stats": [
+      "base_damage_taken_+%",
+      "maximum_attack_damage_+%_final_from_graft_skill",
+      "graft_skill_jolt_buff_critical_strike_multiplier_+",
+      "critical_strike_chance_+%",
+      "base_movement_velocity_+%"
+    ],
+    "visuals": "graft_skill_jolt_buff_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "generic_monster_flame_wall_dot": {
+    "description": "フレームウォールの中にいる間火ダメージを受けている",
+    "invisible": false,
+    "name": "フレームウォール",
+    "removable": false,
+    "stats": [
+      "base_fire_damage_taken_per_minute"
+    ],
+    "visuals": "ground_fire_burn",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "graft_skill_uul_netol_bone_fragments": {
+    "description": "一定確率で串刺しを追加で1回付与できるようになり、串刺しの効果が増加する。",
+    "invisible": false,
+    "name": "バイオレントデザイア",
+    "removable": false,
+    "stats": [
+      "attacks_impale_on_hit_%_chance",
+      "graft_skill_uul_netol_impale_buff_additional_impales",
+      "attack_speed_+%",
+      "attack_area_of_effect_+%",
+      "hits_ignore_enemy_monster_physical_damage_reduction_%_chance",
+      "chance_to_inflict_additional_impale_%"
+    ],
+    "visuals": "graft_skill_uul_netol_bone_sword",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "graft_skill_tul_aegis_fire": {
+    "description": "",
+    "invisible": false,
+    "name": "[DNT] UNUSED",
+    "removable": false,
+    "stats": [
+      "graft_skill_tul_aegis_fire_absorbed_%"
+    ],
+    "visuals": "graft_skill_tul_fire_aegis",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "graft_skill_tul_aegis_cold": {
+    "description": "",
+    "invisible": false,
+    "name": "[DNT] UNUSED",
+    "removable": false,
+    "stats": [
+      "graft_skill_tul_aegis_cold_absorbed_%"
+    ],
+    "visuals": "graft_skill_tul_cold_aegis",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "graft_skill_tul_aegis_lightning": {
+    "description": "",
+    "invisible": false,
+    "name": "[DNT] UNUSED",
+    "removable": false,
+    "stats": [
+      "graft_skill_tul_aegis_lightning_absorbed_%"
+    ],
+    "visuals": "graft_skill_tul_lightning_aegis",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "graft_skill_tul_aegis_elemental": {
+    "description": "ヒットによる元素ダメージをプレイヤーのライフまたはエナジーシールドの前にこのバフで受ける",
+    "invisible": false,
+    "name": "プリザービングスティルネス",
+    "removable": false,
+    "stats": [
+      "graft_skill_tul_aegis_elemental_absorbed_%",
+      "additional_maximum_all_elemental_resistances_%",
+      "base_resist_all_elements_%"
+    ],
+    "visuals": "graft_skill_tul_elemental_aegis",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "flask_energy_shield_recharge_not_delayed_by_damage": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "energy_shield_recharge_not_delayed_by_damage"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "blood_barrier": {
+    "description": "ヒットにより受けるダメージをライフまたはエナジーシールドの前にこのバリアで受ける。",
+    "invisible": false,
+    "name": "ブラッドバリア",
+    "removable": true,
+    "stats": [],
+    "visuals": "blood_barrier",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "last_gasp": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "have_used_a_specific_retaliation_skill_in_past_10_seconds": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "num_unique_retaliation_skills_used_in_past_10_seconds"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "brequel_unstuck_monster_temporary_phasing": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "phase_through_objects"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "graft_skill_xoph_elemental_damage_boost": {
+    "description": "",
+    "invisible": false,
+    "name": "グレイウィンドの祝福",
+    "removable": false,
+    "stats": [
+      "physical_damage_%_to_add_as_fire",
+      "physical_damage_%_to_add_as_cold",
+      "physical_damage_%_to_add_as_lightning",
+      "elemental_damage_%_to_add_as_chaos",
+      "base_resist_all_elements_%",
+      "avoid_all_elemental_status_%"
+    ],
+    "visuals": "graft_skill_xoph_ailment_buff",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "breach_wild_boss_explode_on_death": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "breach_wild_boss_explode_on_death",
+    "category": null,
+    "sources": null,
+    "templates": {
+      "BreachWildBossWarcryExplodeBuff": {
+        "aura_radius_metres": null,
+        "stats": null,
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "windstorm_debuff": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "arrow_swarm_reservation": {
+    "description": "",
+    "invisible": false,
+    "name": "[DNT] UNUSED",
+    "removable": false,
+    "stats": [],
+    "visuals": "graft_skill_xoph_ailment_buff",
+    "category": null,
+    "sources": null,
+    "templates": {
+      "ArrowSwarmReservation": {
+        "aura_radius_metres": null,
+        "stats": null,
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "tornado_generation_buff": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "farruls_farric_presence": {
+    "description": "命中力、クリティカル率が増加し、クリティカルストライクから追加ダメージを受けない。",
+    "invisible": false,
+    "name": "ファルウルの眷属の存在感",
+    "removable": false,
+    "stats": [
+      "accuracy_rating_+%",
+      "critical_strike_chance_+%",
+      "self_take_no_extra_damage_from_critical_strikes"
+    ],
+    "visuals": "farruls_farric_presence",
+    "category": null,
+    "sources": {
+      "Mods": [
+        {
+          "id": "FarrulsFarricPresence",
+          "item": null,
+          "name": null,
+          "template": "farrulsfarricpresence",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
+    "templates": {
+      "farrulsfarricpresence": {
+        "aura_radius_metres": 5.0,
+        "stats": {
+          "accuracy_rating_+%": 0,
+          "critical_strike_chance_+%": 0,
+          "self_take_no_extra_damage_from_critical_strikes": 0
+        },
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "farruls_fertile_presence": {
+    "description": "ダメ―ジおよびライフ自動回復が増加し、スタンを受けることがなくなる。",
+    "invisible": false,
+    "name": "ファルウルの生命力の存在感",
+    "removable": false,
+    "stats": [
+      "damage_+%",
+      "life_regeneration_rate_per_minute_%",
+      "base_cannot_be_stunned"
+    ],
+    "visuals": "farruls_fertile_presence",
+    "category": null,
+    "sources": {
+      "Mods": [
+        {
+          "id": "FarrulsFertilePresence",
+          "item": null,
+          "name": null,
+          "template": "farrulsfertilepresence",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
+    "templates": {
+      "farrulsfertilepresence": {
+        "aura_radius_metres": 5.0,
+        "stats": {
+          "damage_+%": 0,
+          "life_regeneration_rate_per_minute_%": 0,
+          "base_cannot_be_stunned": 0
+        },
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "farruls_wild_presence": {
+    "description": "アタックスピード、キャストスピードおよび移動スピードが増加し、アクションスピードが基礎値より低くならない。",
+    "invisible": false,
+    "name": "ファルウルの野生の存在感",
+    "removable": false,
+    "stats": [
+      "attack_speed_+%",
+      "base_cast_speed_+%",
+      "base_movement_velocity_+%",
+      "action_speed_cannot_be_reduced_below_base"
+    ],
+    "visuals": "farruls_wild_presence",
+    "category": null,
+    "sources": {
+      "Mods": [
+        {
+          "id": "FarrulsWildPresence",
+          "item": null,
+          "name": null,
+          "template": "farrulswildpresence",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
+    "templates": {
+      "farrulswildpresence": {
+        "aura_radius_metres": 5.0,
+        "stats": {
+          "attack_speed_+%": 0,
+          "base_cast_speed_+%": 0,
+          "base_movement_velocity_+%": 0,
+          "action_speed_cannot_be_reduced_below_base": 0
+        },
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "kinetic_shell": {
+    "description": "ヒットによるダメージをライフまたはエナジーシールドの前にこのシェルで受ける",
+    "invisible": false,
+    "name": "ソマティックシェル",
+    "removable": false,
+    "stats": [
+      "kinetic_shell_absorb_%"
+    ],
+    "visuals": "kinetic_shell",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "four_seconds_after_being_hit_lose_life_equal_to_x_percent_of_hit": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "alternate_ascendency_graft_skill_damage_taken": {
+    "description": "グラフトスキルから受けるダメージが増加している。",
+    "invisible": false,
+    "name": "不気味なグラフト",
+    "removable": false,
+    "stats": [
+      "damage_taken_+%_from_graft_skills"
+    ],
+    "visuals": "alternate_ascendancy_graft_aura",
+    "category": "Debuff",
+    "sources": {
+      "PassiveSkills": [
+        {
+          "id": "AlternateAscendancyBreachlord3",
+          "item": null,
+          "name": null,
+          "template": "alternate_ascendency_graft_skill_damage_taken",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
+    "templates": {
+      "alternate_ascendency_graft_skill_damage_taken": {
+        "aura_radius_metres": 6.0,
+        "stats": {
+          "damage_taken_+%_from_graft_skills": 100
+        },
+        "stat_text": [
+          "近くの敵はグラフトスキルから受けるダメージが100%増加する"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "shared_life": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "misty_reflection_debuff": {
+    "description": "与えるダメージが低下し、受けるダメージが増加している。",
+    "invisible": false,
+    "name": "引っかかったな、バカめ！",
+    "removable": false,
+    "stats": [
+      "damage_+%_final_from_misty_reflection_debuff",
+      "base_damage_taken_+%"
+    ],
+    "visuals": "misty_reflection",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "marked_enemy_cannot_evade": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "base_cannot_evade"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "breach_hand_mage_storm_lightning_aura": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "base_lightning_damage_taken_per_minute"
+    ],
+    "visuals": "invisible",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "generic_monster_chaos_flame_wall_dot": {
+    "description": "ブラックフレイムウォールの中にいる間混沌ダメージを受ける。",
+    "invisible": false,
+    "name": "ブラックフレイムウォール",
+    "removable": false,
+    "stats": [
+      "base_chaos_damage_taken_per_minute"
+    ],
+    "visuals": "ground_fire_burn",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "kinetic_shell_immunity": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "base_cannot_be_kinetic_shelled"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "wild_savavagery": {
+    "description": "物理ダメージ、アクションスピードが増加し、敵の物理ダメージ軽減率を無視する。スタンを受けることがなくなる",
+    "invisible": false,
+    "name": "野生の獰猛さ",
+    "removable": false,
+    "stats": [
+      "physical_damage_+%",
+      "action_speed_-%",
+      "base_cannot_be_stunned",
+      "hits_ignore_enemy_monster_physical_damage_reduction"
+    ],
+    "visuals": "wild_savagery",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "generic_monster_chaos_flame_aura_dot": {
+    "description": "ブラックフレイムオーラの中にいる間混沌ダメージを受けている",
+    "invisible": false,
+    "name": "ブラックフレイムオーラ",
+    "removable": false,
+    "stats": [
+      "base_chaos_damage_taken_per_minute"
+    ],
+    "visuals": "voodoo_king_death_aura_effigy",
+    "category": "Debuff",
     "sources": null,
     "templates": null,
     "stack_limit": null

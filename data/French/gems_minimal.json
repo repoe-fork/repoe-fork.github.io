@@ -4076,7 +4076,7 @@
       },
       "stat_text": {
         "elemental_hit_damage_+%_final_per_enemy_elemental_ailment\nquality_display_elemental_hit_is_gem": "10% Davantage de Dégâts pour chaque type d'Altération élémentaire affectant l'Ennemi",
-        "active_skill_base_area_of_effect_radius": "Le Rayon de base est de 1 mètre",
+        "active_skill_base_area_of_effect_radius": "Le Rayon de base est de 1.4 mètres",
         "elemental_hit_area_of_effect_+100%_final_vs_enemy_with_associated_ailment": "80% Davantage de Rayon de Zone d'effet contre les Ennemis affectés par une Altération de l'élément choisi",
         "elemental_hit_no_damage_of_unchosen_elemental_type": "Inflige uniquement des Dégâts de l'élément choisi\nN'inflige pas de Dégâts des autres types de Dégâts"
       },
@@ -4119,7 +4119,7 @@
         {
           "id": "active_skill_base_area_of_effect_radius",
           "type": "constant",
-          "value": 10
+          "value": 14
         },
         {
           "id": "chance_to_freeze_shock_ignite_%",
@@ -4149,7 +4149,7 @@
       ],
       "vaal": null,
       "costs": null,
-      "attack_speed_multiplier": null,
+      "attack_speed_multiplier": 20,
       "cooldown": null,
       "stored_uses": null,
       "cost_multiplier": null,
@@ -4218,7 +4218,8 @@
         "RangedAttack",
         "MirageArcherCanUse",
         "Area",
-        "Triggerable"
+        "Triggerable",
+        "WandAttack"
       ],
       "weapon_restrictions": [
         "Bow",
@@ -4385,7 +4386,8 @@
       "stat_conversions": {
         "immortal_call_duration_+%": "skill_effect_duration_+%",
         "mortal_call_cooldown_does_not_tick": "skill_cooldown_does_not_tick",
-        "immortal_call_buff_effect_duration_+%_per_removable_endurance_charge": "buff_effect_duration_+%_per_removable_endurance_charge_limited_to_5"
+        "immortal_call_buff_effect_duration_+%_per_removable_endurance_charge": "buff_effect_duration_+%_per_removable_endurance_charge_limited_to_5",
+        "guard_skill_cooldown_does_not_tick": "skill_cooldown_does_not_tick"
       },
       "types": [
         "Spell",
@@ -5029,7 +5031,8 @@
         "Totemable",
         "Trappable",
         "Mineable",
-        "Triggerable"
+        "Triggerable",
+        "WandAttack"
       ],
       "weapon_restrictions": [
         "Bow",
@@ -5823,7 +5826,7 @@
     "stat_translation_file": "stat_translations/skill",
     "static": {
       "crit_chance": 500,
-      "damage_effectiveness": 70,
+      "damage_effectiveness": 110,
       "quality_stats": [
         {
           "stat": "{volatile_dead_core_movement_speed_+%}% d'Augmentation de la Vitesse de déplacement de l'orbe",
@@ -5998,7 +6001,7 @@
         "volatile_dead_base_number_of_corpses_to_consume": "Consomme jusqu'à 3 Cadavres",
         "volatile_dead_max_cores_allowed": "60 Orbes au maximum à la fois",
         "active_skill_base_area_of_effect_radius": "Le Rayon de base est de 2.8 mètres",
-        "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius": "Le Rayon de base de l'Explosion est de 1.5 mètres",
+        "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius": "Le Rayon de base de l'Explosion est de 2 mètres",
         "base_skill_effect_duration": "La Durée de base est de 1.50 secondes"
       },
       "stats": [
@@ -6030,7 +6033,7 @@
         {
           "id": "active_skill_base_secondary_area_of_effect_radius",
           "type": "constant",
-          "value": 15
+          "value": 20
         },
         {
           "id": "active_skill_secondary_area_of_effect_description_mode",
@@ -6144,7 +6147,7 @@
     "stat_translation_file": "stat_translations/skill",
     "static": {
       "crit_chance": 500,
-      "damage_effectiveness": 70,
+      "damage_effectiveness": 110,
       "quality_stats": [
         {
           "stat": "{volatile_dead_core_movement_speed_+%}% d'Augmentation de la Vitesse de déplacement de l'orbe",
@@ -7525,7 +7528,7 @@
         "dex": null
       },
       "stat_text": {
-        "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius": "Le Rayon de base de l'éruption est de 1.5 mètres",
+        "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius": "Le Rayon de base de la Déflagration est de 1.5 mètres",
         "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius": "Le Rayon initial de base du Sol frigorifiant est de 1.5 mètres",
         "active_skill_tertiary_area_of_effect_description_mode\nactive_skill_base_tertiary_area_of_effect_radius": "Le Rayon final de base du Sol frigorifiant est de 3 mètres",
         "base_skill_effect_duration": "La Durée de base est de 5.00 secondes",
@@ -7709,7 +7712,7 @@
         "dex": null
       },
       "stat_text": {
-        "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius": "Le Rayon de base de l'éruption est de 2.5 mètres",
+        "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius": "Le Rayon de base de la Déflagration est de 2.5 mètres",
         "active_skill_secondary_area_of_effect_description_mode": "",
         "active_skill_tertiary_area_of_effect_description_mode": "",
         "add_power_charge_on_critical_strike_%": "30% de chances de gagner une Charge de pouvoir sur un Coup critique"
@@ -8118,7 +8121,7 @@
   },
   {
     "active_skill": {
-      "description": "Réanime un cadavre sous forme de zombie, qui vous suivra et attaquera les ennemis avec une attaque de mêlée et une percussion de zone que les ennemis ne peuvent pas éviter.",
+      "description": "Réanime un cadavre sous forme de zombie, qui vous suivra et attaquera les ennemis avec une attaque de mêlée et un fracas de zone.",
       "display_name": "Réanimation en Zombie du Fracas",
       "id": "raise_zombie_alt_x",
       "is_manually_casted": true,
@@ -8305,8 +8308,7 @@
       },
       "stat_text": {
         "base_number_of_zombies_allowed\nquality_display_raise_zombie_is_gem": "",
-        "raise_zombie_does_not_use_corpses": "Ne requiert pas de Cadavres",
-        "minion_global_always_hit": "Les Créatures ignorent l'Évasion"
+        "raise_zombie_does_not_use_corpses": "Ne requiert pas de Cadavres"
       },
       "stats": [
         {
@@ -8343,11 +8345,6 @@
           "id": "raise_zombie_does_not_use_corpses",
           "type": "implicit",
           "value": 1
-        },
-        {
-          "id": "minion_global_always_hit",
-          "type": "implicit",
-          "value": 1
         }
       ],
       "vaal": null,
@@ -8363,7 +8360,6 @@
       "damage_multiplier": null
     },
     "tooltip_order": [
-      "minion_global_always_hit",
       "base_number_of_zombies_allowed\nquality_display_raise_zombie_is_gem",
       "raise_zombie_does_not_use_corpses",
       "minion_chance_to_deal_double_damage_%"
@@ -12373,11 +12369,6 @@
           "value": null
         },
         {
-          "id": "accuracy_rating",
-          "type": "additional",
-          "value": null
-        },
-        {
           "id": "infinite_minion_duration",
           "type": "implicit",
           "value": 1
@@ -12400,7 +12391,6 @@
       "minion_elemental_resistance_%",
       "active_skill_minion_movement_velocity_+%_final",
       "movement_velocity_cap",
-      "accuracy_rating",
       "raised_spectre_level"
     ],
     "tags": [
@@ -12527,11 +12517,6 @@
           "value": null
         },
         {
-          "id": "accuracy_rating",
-          "type": "additional",
-          "value": null
-        },
-        {
           "id": "base_number_of_spectres_allowed",
           "type": "additional",
           "value": null
@@ -12562,7 +12547,6 @@
     "tooltip_order": [
       "spectres_have_base_duration_ms",
       "base_number_of_spectres_allowed",
-      "accuracy_rating",
       "minion_elemental_resistance_%",
       "active_skill_minion_movement_velocity_+%_final",
       "movement_velocity_cap",
@@ -13437,6 +13421,132 @@
     ],
     "secondary_granted_effect": null,
     "quest_reward": null,
+    "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "Crée un mur de force que les alliés et ennemis peuvent traverser. Les projectiles alliés pouvant entrer en collision avec les ennemis entrent également en collision avec ce mur, et peuvent ricocher depuis ce mur vers d'autres cibles. Les projectiles ne peuvent entrer en collision qu'avec un seul Mur de force, et pas plus d'une fois.",
+      "display_name": "Mur de force",
+      "id": "wall_of_force",
+      "is_manually_casted": true,
+      "is_skill_totem": false,
+      "stat_conversions": {},
+      "types": [
+        "Spell",
+        "Duration",
+        "Trappable",
+        "Totemable",
+        "Mineable",
+        "Triggerable",
+        "Cooldown"
+      ],
+      "weapon_restrictions": [],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "Mur de force",
+      "experience_type": "GemProgression16",
+      "id": "Metadata/Items/Gems/SkillGemWallOfForce",
+      "max_level": 20,
+      "release_state": "released"
+    },
+    "cast_time": 500,
+    "color": "b",
+    "display_name": "Mur de force",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [
+        {
+          "stat": "{base_cooldown_speed_+%}% d'Augmentation de la Vitesse de recharge",
+          "stats": {
+            "base_cooldown_speed_+%": 1000
+          }
+        }
+      ],
+      "stat_requirements": {
+        "int": null,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "display_wall_of_force_restrictions": "Les Projectiles ne peuvent pas se Diviser, Transpercer ou se Scinder en entrant en collision avec le Mur\nLes Projectiles peuvent Ricocher une fois supplémentaire en entrant en collision avec le Murl\nLes Projectiles peuvent uniquement Ricocher sur les cibles situées du même côté du Mur"
+      },
+      "stats": [
+        {
+          "id": "base_skill_effect_duration",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "wall_maximum_length",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "kinetic_wall_damage_+%_final_for_projectiles_chaining_off_wall",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "kinetic_wall_maximum_number_of_hits",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "base_deal_no_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "quality_display_wall_length_is_gem",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "display_wall_of_force_restrictions",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": 9000,
+      "stored_uses": 1,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "base_skill_effect_duration",
+      "wall_maximum_length\nquality_display_wall_length_is_gem",
+      "base_cooldown_speed_+%",
+      "display_wall_of_force_restrictions",
+      "kinetic_wall_damage_+%_final_for_projectiles_chaining_off_wall",
+      "kinetic_wall_maximum_number_of_hits"
+    ],
+    "tags": [
+      "intelligence",
+      "grants_active_skill",
+      "spell",
+      "duration"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": {
+      "act": 2,
+      "classes": [
+        "Sorcière"
+      ],
+      "quest": "Des Intrus en noir"
+    },
     "discriminator": null,
     "support_gem": null
   },
@@ -20137,7 +20247,8 @@
       "stat_conversions": {
         "molten_shell_duration_+%": "skill_effect_duration_+%",
         "molten_shell_buff_effect_+%": "skill_buff_effect_+%",
-        "molten_shell_cooldown_does_not_tick": "skill_cooldown_does_not_tick"
+        "molten_shell_cooldown_does_not_tick": "skill_cooldown_does_not_tick",
+        "guard_skill_cooldown_does_not_tick": "skill_cooldown_does_not_tick"
       },
       "types": [
         "Spell",
@@ -20186,7 +20297,7 @@
         "dex": 0
       },
       "stat_text": {
-        "molten_shell_damage_absorbed_%\nmolten_shell_damage_absorb_limit_%_of_armour\nmolten_shell_max_damage_absorbed": "75% des Dégâts au Toucher sont absorbés par l'Effet bénéfique avant de retirer votre Vie ou Bouclier d'énergie\nL'Effet bénéfique peut absorber un montant de Dégâts équivalent à 10% de votre Armure, jusqu'à un maximum de 5000",
+        "molten_shell_damage_absorbed_%\nmolten_shell_damage_absorb_limit_%_of_armour\nmolten_shell_max_damage_absorbed": "75% des Dégâts au Toucher sont absorbés par l'Effet bénéfique avant d'affecter votre Vie ou Bouclier d'énergie\nL'Effet bénéfique peut absorber des Dégâts équivalents à 10% de votre Armure, jusqu'à un maximum de 5000",
         "base_skill_effect_duration": "La Durée de base est de 3.00 secondes",
         "display_this_skill_cooldown_does_not_recover_during_buff": "Le temps de recharge de cette Aptitude ne démarre pas tant qu'elle fait effet"
       },
@@ -20297,7 +20408,8 @@
       "is_skill_totem": false,
       "stat_conversions": {
         "molten_shell_duration_+%": "skill_effect_duration_+%",
-        "molten_shell_buff_effect_+%": "skill_buff_effect_+%"
+        "molten_shell_buff_effect_+%": "skill_buff_effect_+%",
+        "guard_skill_cooldown_does_not_tick": "skill_cooldown_does_not_tick"
       },
       "types": [
         "Spell",
@@ -20474,7 +20586,8 @@
         "ProjectilesFromUser",
         "Totemable",
         "Trappable",
-        "Mineable"
+        "Mineable",
+        "WandAttack"
       ],
       "weapon_restrictions": [
         "Wand"
@@ -20776,7 +20889,8 @@
         "Trappable",
         "Mineable",
         "Vaal",
-        "ProjectilesNotFromUser"
+        "ProjectilesNotFromUser",
+        "WandAttack"
       ],
       "weapon_restrictions": [
         "Wand"
@@ -21951,6 +22065,7 @@
       "stat_conversions": {
         "discipline_mana_reservation_+%": "base_reservation_+%",
         "discipline_aura_effect_+%": "aura_effect_+%",
+        "discipline_aura_effect_+%_while_no_power_charges": "aura_effect_+%_while_no_power_charges",
         "discipline_reserves_no_mana": "base_skill_no_reservation",
         "discipline_mana_reservation_efficiency_+%": "base_mana_reservation_efficiency_+%",
         "discipline_mana_reservation_efficiency_-2%_per_1": "mana_reservation_efficiency_-2%_per_1"
@@ -22075,6 +22190,7 @@
       "stat_conversions": {
         "discipline_mana_reservation_+%": "base_reservation_+%",
         "discipline_aura_effect_+%": "aura_effect_+%",
+        "discipline_aura_effect_+%_while_no_power_charges": "aura_effect_+%_while_no_power_charges",
         "discipline_mana_reservation_efficiency_+%": "base_mana_reservation_efficiency_+%",
         "discipline_mana_reservation_efficiency_-2%_per_1": "mana_reservation_efficiency_-2%_per_1"
       },
@@ -22202,6 +22318,7 @@
       "stat_conversions": {
         "grace_mana_reservation_+%": "base_reservation_+%",
         "grace_aura_effect_+%": "aura_effect_+%",
+        "grace_aura_effect_+%_while_no_frenzy_charges": "aura_effect_+%_while_no_frenzy_charges",
         "grace_reserves_no_mana": "base_skill_no_reservation",
         "grace_mana_reservation_efficiency_+%": "base_mana_reservation_efficiency_+%",
         "grace_mana_reservation_efficiency_-2%_per_1": "mana_reservation_efficiency_-2%_per_1"
@@ -22325,6 +22442,7 @@
       "stat_conversions": {
         "grace_mana_reservation_+%": "base_reservation_+%",
         "grace_aura_effect_+%": "aura_effect_+%",
+        "grace_aura_effect_+%_while_no_frenzy_charges": "aura_effect_+%_while_no_frenzy_charges",
         "grace_mana_reservation_efficiency_+%": "base_mana_reservation_efficiency_+%",
         "grace_mana_reservation_efficiency_-2%_per_1": "mana_reservation_efficiency_-2%_per_1"
       },
@@ -22459,6 +22577,7 @@
       "stat_conversions": {
         "determination_mana_reservation_+%": "base_reservation_+%",
         "determination_aura_effect_+%": "aura_effect_+%",
+        "determination_aura_effect_+%_while_no_endurance_charges": "aura_effect_+%_while_no_endurance_charges",
         "determination_reserves_no_mana": "base_skill_no_reservation",
         "determination_mana_reservation_efficiency_+%": "base_mana_reservation_efficiency_+%",
         "determination_mana_reservation_efficiency_-2%_per_1": "mana_reservation_efficiency_-2%_per_1"
@@ -22582,6 +22701,7 @@
       "is_skill_totem": false,
       "stat_conversions": {
         "anger_aura_effect_+%": "aura_effect_+%",
+        "anger_aura_effect_+%_while_at_maximum_endurance_charges": "aura_effect_+%_while_at_maximum_endurance_charges",
         "anger_mana_reservation_+%": "base_reservation_+%",
         "anger_reserves_no_mana": "base_skill_no_reservation",
         "anger_mana_reservation_efficiency_+%": "base_mana_reservation_efficiency_+%",
@@ -22718,6 +22838,7 @@
       "stat_conversions": {
         "hatred_mana_reservation_+%": "base_reservation_+%",
         "hatred_aura_effect_+%": "aura_effect_+%",
+        "hatred_aura_effect_+%_while_at_maximum_frenzy_charges": "aura_effect_+%_while_at_maximum_frenzy_charges",
         "hatred_reserves_no_mana": "base_skill_no_reservation",
         "replica_unique_hyrris_truth_hatred_mana_reservation_+%_final": "reservation_+%_final_from_skill_specific_stat",
         "hatred_mana_reservation_efficiency_+%": "base_mana_reservation_efficiency_+%",
@@ -22840,6 +22961,7 @@
       "stat_conversions": {
         "wrath_mana_reservation_+%": "base_reservation_+%",
         "wrath_aura_effect_+%": "aura_effect_+%",
+        "wrath_aura_effect_+%_while_at_maximum_power_charges": "aura_effect_+%_while_at_maximum_power_charges",
         "wrath_reserves_no_mana": "base_skill_no_reservation",
         "wrath_mana_reservation_efficiency_+%": "base_mana_reservation_efficiency_+%",
         "wrath_mana_reservation_efficiency_-2%_per_1": "mana_reservation_efficiency_-2%_per_1"
@@ -28889,9 +29011,9 @@
       "damage_effectiveness": -65,
       "quality_stats": [
         {
-          "stat": "{consecrated_ground_area_+%}% d'Augmentation de l'étendue du Sol consacré",
+          "stat": "{holy_flame_totem_consecrated_ground_area_+%}% d'Augmentation de l'étendue du Sol consacré",
           "stats": {
-            "consecrated_ground_area_+%": 2000
+            "holy_flame_totem_consecrated_ground_area_+%": 2000
           }
         }
       ],
@@ -29004,11 +29126,11 @@
       "base_totem_duration",
       "quality_display_base_number_of_projectiles_is_gem",
       "is_totem",
+      "holy_flame_totem_consecrated_ground_area_+%",
       "modifiers_to_projectile_count_do_not_apply",
       "skill_physical_damage_%_to_convert_to_fire",
       "active_skill_projectile_speed_+%_final",
-      "consecrated_ground_immune_to_curses",
-      "consecrated_ground_area_+%"
+      "consecrated_ground_immune_to_curses"
     ],
     "tags": [
       "totem",
@@ -34597,7 +34719,7 @@
         {
           "stat": "Les Projectiles qui ont Transpercé ont {projectile_damage_+%_final_if_pierced_enemy}% Davantage de Dégâts",
           "stats": {
-            "projectile_damage_+%_final_if_pierced_enemy": 500
+            "projectile_damage_+%_final_if_pierced_enemy": 1000
           }
         }
       ],
@@ -34621,7 +34743,7 @@
       ],
       "vaal": null,
       "costs": null,
-      "attack_speed_multiplier": 10,
+      "attack_speed_multiplier": 20,
       "cooldown": null,
       "stored_uses": null,
       "cost_multiplier": null,
@@ -34701,7 +34823,7 @@
         {
           "stat": "Les Projectiles qui ont Transpercé ont {projectile_damage_+%_final_if_pierced_enemy}% Davantage de Dégâts",
           "stats": {
-            "projectile_damage_+%_final_if_pierced_enemy": 500
+            "projectile_damage_+%_final_if_pierced_enemy": 1000
           }
         }
       ],
@@ -34732,7 +34854,7 @@
       ],
       "vaal": null,
       "costs": null,
-      "attack_speed_multiplier": 10,
+      "attack_speed_multiplier": 20,
       "cooldown": null,
       "stored_uses": null,
       "cost_multiplier": null,
@@ -34814,7 +34936,7 @@
         {
           "stat": "Les Projectiles qui ont Transpercé ont {projectile_damage_+%_final_if_pierced_enemy}% Davantage de Dégâts",
           "stats": {
-            "projectile_damage_+%_final_if_pierced_enemy": 500
+            "projectile_damage_+%_final_if_pierced_enemy": 1000
           }
         }
       ],
@@ -34882,7 +35004,7 @@
       ],
       "vaal": null,
       "costs": null,
-      "attack_speed_multiplier": null,
+      "attack_speed_multiplier": 20,
       "cooldown": null,
       "stored_uses": null,
       "cost_multiplier": null,
@@ -34968,7 +35090,7 @@
         {
           "stat": "Les Projectiles qui ont Transpercé ont {projectile_damage_+%_final_if_pierced_enemy}% Davantage de Dégâts",
           "stats": {
-            "projectile_damage_+%_final_if_pierced_enemy": 500
+            "projectile_damage_+%_final_if_pierced_enemy": 1000
           }
         }
       ],
@@ -35043,7 +35165,7 @@
         "stored_uses": 1
       },
       "costs": null,
-      "attack_speed_multiplier": 10,
+      "attack_speed_multiplier": 20,
       "cooldown": null,
       "stored_uses": null,
       "cost_multiplier": null,
@@ -37997,7 +38119,8 @@
         "ProjectilesFromUser",
         "Totemable",
         "Trappable",
-        "Mineable"
+        "Mineable",
+        "WandAttack"
       ],
       "weapon_restrictions": [
         "Bow",
@@ -38067,7 +38190,7 @@
       ],
       "vaal": null,
       "costs": null,
-      "attack_speed_multiplier": null,
+      "attack_speed_multiplier": 15,
       "cooldown": null,
       "stored_uses": null,
       "cost_multiplier": null,
@@ -38114,7 +38237,8 @@
         "ProjectilesFromUser",
         "Totemable",
         "Trappable",
-        "Mineable"
+        "Mineable",
+        "WandAttack"
       ],
       "weapon_restrictions": [
         "Bow",
@@ -38190,7 +38314,7 @@
       ],
       "vaal": null,
       "costs": null,
-      "attack_speed_multiplier": null,
+      "attack_speed_multiplier": 15,
       "cooldown": null,
       "stored_uses": null,
       "cost_multiplier": null,
@@ -40149,7 +40273,7 @@
       "damage_effectiveness": -35,
       "quality_stats": [
         {
-          "stat": "",
+          "stat": "La Déflagrationfinale a +{glacial_cascade_final_spike_damage_+%_final}% Davantage de Dégâts",
           "stats": {
             "glacial_cascade_final_spike_damage_+%_final": 2500
           }
@@ -40163,7 +40287,7 @@
       "stat_text": {
         "upheaval_number_of_spikes\nquality_display_glacial_cascade_num_spikes_is_gem": "Génère 4 Éruptions",
         "skill_physical_damage_%_to_convert_to_cold": "100% des Dégâts physiques sont Convertis en Dégâts de froid",
-        "glacial_cascade_final_spike_damage_+%_final\nquality_display_glacial_cascade_is_gem": "L'Éruption finale a +200% Davantage de Dégâts",
+        "glacial_cascade_final_spike_damage_+%_final\nquality_display_glacial_cascade_is_gem": "Ne peut pas Repousser les Ennemis Uniques plus d'une fois par seconde\nLa Déflagration finale a 200% Davantage de Dégâts\nLa Déflagration finale a 100% Davantage de Rayon\nLa Déflagration finale ne peut pas Repousser",
         "global_knockback": "Repousse les Ennemis au Toucher"
       },
       "stats": [
@@ -40804,7 +40928,7 @@
       "release_state": "released"
     },
     "cast_time": 0,
-    "color": "b",
+    "color": "w",
     "display_name": "Convocation",
     "is_support": false,
     "stat_translation_file": "stat_translations/buff_skill",
@@ -40821,7 +40945,7 @@
         }
       ],
       "stat_requirements": {
-        "int": null,
+        "int": 0,
         "str": 0,
         "dex": 0
       },
@@ -40865,7 +40989,6 @@
     ],
     "tags": [
       "minion",
-      "intelligence",
       "grants_active_skill",
       "spell",
       "duration"
@@ -40907,7 +41030,7 @@
       "release_state": "released"
     },
     "cast_time": 0,
-    "color": "b",
+    "color": "w",
     "display_name": "Convocation",
     "is_support": false,
     "stat_translation_file": "stat_translations/buff_skill",
@@ -40924,7 +41047,7 @@
         }
       ],
       "stat_requirements": {
-        "int": 73,
+        "int": 0,
         "str": 0,
         "dex": 0
       },
@@ -40972,7 +41095,6 @@
       "base_cooldown_speed_+%"
     ],
     "tags": [
-      "intelligence",
       "grants_active_skill",
       "spell",
       "duration",
@@ -41065,7 +41187,7 @@
   },
   {
     "active_skill": {
-      "description": "Une mine qui inflige des dégâts de zone lorsqu'elle est activée, puis projette une pluie de projectiles incandescents autour d'elle. Chacun de ces projectiles inflige des dégâts dans une zone d'effet plus petite que la zone d'effet initiale.",
+      "description": "Une mine qui inflige des dégâts de zone lorsqu'elle est activée, puis projette une pluie de projectiles incandescents autour d'elle. Chacun de ces projectiles inflige des dégâts dans une zone d'effet plus petite que la zone d'effet initiale. Les mines placées applique une aura d'exposition au feu aux ennemis proches.",
       "display_name": "Mine de pyroclastes",
       "id": "pyroclast_mine",
       "is_manually_casted": true,
@@ -41110,7 +41232,7 @@
     "stat_translation_file": "stat_translations/skill",
     "static": {
       "crit_chance": 550,
-      "damage_effectiveness": -20,
+      "damage_effectiveness": 10,
       "quality_stats": [
         {
           "stat": "Tire {base_number_of_projectiles} Projectiles",
@@ -41128,8 +41250,9 @@
         "base_mine_duration": "La Mine dure 5 secondes",
         "base_mine_detonation_time_ms": "Le Délai d'activation de base est de 0.35 secondes",
         "base_number_of_projectiles\nquality_display_base_number_of_projectiles_is_gem": "Tire 3 Projectiles",
+        "pyroclast_mine_aura_fire_exposure_%_to_apply": "L'Aura d'Exposition au feu inflige -15% à la Résistance au feu",
         "is_remote_mine": "",
-        "display_additional_projectile_per_4_mines_in_detonation_sequence": "Tire un Projectile supplémentaire toutes les 4 Mines précédentes dans la Chaîne d'explosions"
+        "display_additional_projectile_per_3_mines_in_detonation_sequence": "Tire un Projectile supplémentaire toutes les 3 Mines précédentes dans la Chaîne d'explosions"
       },
       "stats": [
         {
@@ -41139,26 +41262,6 @@
         },
         {
           "id": "spell_maximum_base_fire_damage",
-          "type": "float",
-          "value": null
-        },
-        {
-          "id": "mortar_barrage_mine_minimum_added_fire_damage_taken",
-          "type": "float",
-          "value": null
-        },
-        {
-          "id": "mortar_barrage_mine_maximum_added_fire_damage_taken",
-          "type": "float",
-          "value": null
-        },
-        {
-          "id": "mortar_barrage_mine_minimum_added_fire_damage_taken_limit",
-          "type": "float",
-          "value": null
-        },
-        {
-          "id": "mortar_barrage_mine_maximum_added_fire_damage_taken_limit",
           "type": "float",
           "value": null
         },
@@ -41176,6 +41279,11 @@
           "id": "base_number_of_projectiles",
           "type": "constant",
           "value": 3
+        },
+        {
+          "id": "pyroclast_mine_aura_fire_exposure_%_to_apply",
+          "type": "constant",
+          "value": -15
         },
         {
           "id": "base_skill_is_mined",
@@ -41203,7 +41311,7 @@
           "value": 1
         },
         {
-          "id": "display_additional_projectile_per_4_mines_in_detonation_sequence",
+          "id": "display_additional_projectile_per_3_mines_in_detonation_sequence",
           "type": "implicit",
           "value": 1
         },
@@ -41214,6 +41322,11 @@
         },
         {
           "id": "quality_display_base_number_of_projectiles_is_gem",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "exposure_uses_aura_effect_+%_instead_of_effect_+%",
           "type": "implicit",
           "value": 1
         }
@@ -41236,8 +41349,8 @@
       "base_mine_detonation_time_ms",
       "base_number_of_projectiles\nquality_display_base_number_of_projectiles_is_gem",
       "is_remote_mine",
-      "display_additional_projectile_per_4_mines_in_detonation_sequence",
-      "mortar_barrage_mine_minimum_added_fire_damage_taken\nmortar_barrage_mine_maximum_added_fire_damage_taken\nmortar_barrage_mine_minimum_added_fire_damage_taken_limit\nmortar_barrage_mine_maximum_added_fire_damage_taken_limit"
+      "display_additional_projectile_per_3_mines_in_detonation_sequence",
+      "pyroclast_mine_aura_fire_exposure_%_to_apply"
     ],
     "tags": [
       "mine",
@@ -41263,7 +41376,7 @@
   },
   {
     "active_skill": {
-      "description": "Une mine qui inflige des dégâts de zone lorsqu'elle est activée, puis projette une pluie de projectiles incandescents autour d'elle. Chacun de ces projectiles inflige des dégâts dans une zone d'effet plus petite que la zone d'effet initiale.",
+      "description": "Une mine qui inflige des dégâts de zone lorsqu'elle est activée, puis projette une pluie de projectiles incandescents autour d'elle. Chacun de ces projectiles inflige des dégâts dans une zone d'effet plus petite que la zone d'effet initiale. Les mines placées applique une aura d'exposition au feu aux ennemis proches.",
       "display_name": "Mine de pyroclastes du Sabotage",
       "id": "pyroclast_mine_alt_x",
       "is_manually_casted": true,
@@ -41326,8 +41439,9 @@
         "base_mine_duration": "La Mine dure 5 secondes",
         "base_mine_detonation_time_ms": "Le Délai d'activation de base est de 0.35 secondes",
         "base_number_of_projectiles\nquality_display_base_number_of_projectiles_is_gem": "Tire 3 Projectiles",
+        "pyroclast_mine_aura_fire_exposure_%_to_apply": "L'Aura d'Exposition au feu inflige -25% à la Résistance au feu",
         "is_remote_mine": "",
-        "display_additional_projectile_per_4_mines_in_detonation_sequence": "Tire un Projectile supplémentaire toutes les 4 Mines précédentes dans la Chaîne d'explosions"
+        "display_additional_projectile_per_3_mines_in_detonation_sequence": "Tire un Projectile supplémentaire toutes les 3 Mines précédentes dans la Chaîne d'explosions"
       },
       "stats": [
         {
@@ -41341,22 +41455,12 @@
           "value": null
         },
         {
-          "id": "mortar_barrage_mine_minimum_added_fire_damage_taken",
+          "id": "spell_minimum_base_fire_damage",
           "type": "float",
           "value": null
         },
         {
-          "id": "mortar_barrage_mine_maximum_added_fire_damage_taken",
-          "type": "float",
-          "value": null
-        },
-        {
-          "id": "mortar_barrage_mine_minimum_added_fire_damage_taken_limit",
-          "type": "float",
-          "value": null
-        },
-        {
-          "id": "mortar_barrage_mine_maximum_added_fire_damage_taken_limit",
+          "id": "spell_maximum_base_fire_damage",
           "type": "float",
           "value": null
         },
@@ -41374,6 +41478,11 @@
           "id": "base_number_of_projectiles",
           "type": "constant",
           "value": 3
+        },
+        {
+          "id": "pyroclast_mine_aura_fire_exposure_%_to_apply",
+          "type": "constant",
+          "value": -25
         },
         {
           "id": "base_skill_is_mined",
@@ -41401,7 +41510,7 @@
           "value": 1
         },
         {
-          "id": "display_additional_projectile_per_4_mines_in_detonation_sequence",
+          "id": "display_additional_projectile_per_3_mines_in_detonation_sequence",
           "type": "implicit",
           "value": 1
         },
@@ -41412,6 +41521,11 @@
         },
         {
           "id": "quality_display_base_number_of_projectiles_is_gem",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "exposure_uses_aura_effect_+%_instead_of_effect_+%",
           "type": "implicit",
           "value": 1
         }
@@ -41434,8 +41548,8 @@
       "base_mine_detonation_time_ms",
       "base_number_of_projectiles\nquality_display_base_number_of_projectiles_is_gem",
       "is_remote_mine",
-      "display_additional_projectile_per_4_mines_in_detonation_sequence",
-      "mortar_barrage_mine_minimum_added_fire_damage_taken\nmortar_barrage_mine_maximum_added_fire_damage_taken\nmortar_barrage_mine_minimum_added_fire_damage_taken_limit\nmortar_barrage_mine_maximum_added_fire_damage_taken_limit"
+      "display_additional_projectile_per_3_mines_in_detonation_sequence",
+      "pyroclast_mine_aura_fire_exposure_%_to_apply"
     ],
     "tags": [
       "mine",
@@ -41917,8 +42031,8 @@
     },
     "tooltip_order": [
       "base_skill_effect_duration",
-      "physical_damage_%_to_add_as_fire",
-      "herald_of_ash_burning_%_overkill_damage_per_minute\nquality_display_herald_of_ash_is_gem"
+      "herald_of_ash_burning_%_overkill_damage_per_minute\nquality_display_herald_of_ash_is_gem",
+      "physical_damage_%_to_add_as_fire"
     ],
     "tags": [
       "strength",
@@ -43548,7 +43662,8 @@
         "Area",
         "Trappable",
         "Mineable",
-        "Totemable"
+        "Totemable",
+        "WandAttack"
       ],
       "weapon_restrictions": [
         "Wand"
@@ -44178,14 +44293,14 @@
         "dex": null
       },
       "stat_text": {
-        "base_skill_effect_duration": "La Durée de base est de 20.00 secondes",
+        "base_skill_effect_duration": "La Durée de base est de 5.00 secondes",
         "base_number_of_blink_mirror_arrow_rain_of_arrows_clones": "Vous pouvez avoir 3 Clones au maximum qui tirent des Flèches en l'air"
       },
       "stats": [
         {
           "id": "base_skill_effect_duration",
           "type": "constant",
-          "value": 20000
+          "value": 5000
         },
         {
           "id": "number_of_monsters_to_summon",
@@ -44339,14 +44454,14 @@
         "dex": null
       },
       "stat_text": {
-        "base_skill_effect_duration": "La Durée de base est de 20.00 secondes",
+        "base_skill_effect_duration": "La Durée de base est de 5.00 secondes",
         "base_number_of_blink_mirror_arrow_elemental_hit_clones": "Vous pouvez avoir 3 Clones au maximum qui tirent des Flèches élémentaires"
       },
       "stats": [
         {
           "id": "base_skill_effect_duration",
           "type": "constant",
-          "value": 20000
+          "value": 5000
         },
         {
           "id": "number_of_monsters_to_summon",
@@ -44649,14 +44764,14 @@
         "dex": null
       },
       "stat_text": {
-        "base_skill_effect_duration": "La Durée de base est de 20.00 secondes",
+        "base_skill_effect_duration": "La Durée de base est de 5.00 secondes",
         "base_number_of_blink_mirror_arrow_rain_of_arrows_clones": "Vous pouvez avoir 3 Clones au maximum qui tirent des Flèches en l'air"
       },
       "stats": [
         {
           "id": "base_skill_effect_duration",
           "type": "constant",
-          "value": 20000
+          "value": 5000
         },
         {
           "id": "number_of_monsters_to_summon",
@@ -44808,14 +44923,14 @@
         "dex": null
       },
       "stat_text": {
-        "base_skill_effect_duration": "La Durée de base est de 20.00 secondes",
+        "base_skill_effect_duration": "La Durée de base est de 5.00 secondes",
         "base_number_of_blink_mirror_arrow_elemental_hit_clones": "Vous pouvez avoir 3 Clones au maximum qui tirent des Flèches élémentaires"
       },
       "stats": [
         {
           "id": "base_skill_effect_duration",
           "type": "constant",
-          "value": 20000
+          "value": 5000
         },
         {
           "id": "number_of_monsters_to_summon",
@@ -45278,7 +45393,7 @@
       },
       "stat_text": {
         "retaliation_base_use_window_duration_ms": "Ne peut être utilisé par défaut\nDevient Utilisable une fois pendant 2 secondes lorsque vous Bloquez",
-        "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius": "La longueur de base de la vague est de 10 mètres",
+        "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius": "La longueur de base de la Vague est de 10 mètres",
         "global_always_hit": "Ignore l'Évasion de la cible",
         "global_bleed_on_hit": "Inflige le Saignement"
       },
@@ -48075,8 +48190,8 @@
       "stat_text": {
         "skill_physical_damage_%_to_convert_to_cold": "100% des Dégâts physiques sont Convertis en Dégâts de froid",
         "active_skill_main_hand_weapon_damage_+%_final": "80% Davantage de Dégâts avec l'arme principale",
-        "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius": "Le Rayon de base de l'arme principale est de 1.1 mètres",
-        "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius": "Le Rayon de base de l'arme secondaire est de 3.1 mètres",
+        "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius": "Le Rayon de base de la Main principale est de 1.1 mètres",
+        "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius": "Le Rayon de base de la main secondaire est de 3.1 mètres",
         "quality_display_ice_crash_is_gem": ""
       },
       "stats": [
@@ -48480,9 +48595,9 @@
     },
     "tooltip_order": [
       "base_skill_effect_duration",
-      "base_secondary_skill_effect_duration",
       "damage_cannot_be_reflected",
       "base_cooldown_speed_+%",
+      "base_secondary_skill_effect_duration",
       "warcry_count_power_from_enemies",
       "infernal_cry_%_max_life_as_fire_on_death",
       "infernal_cry_physical_damage_%_to_add_as_fire_per_5_power_up_to_cap",
@@ -50816,7 +50931,7 @@
         "base_number_of_arrows\nquality_display_base_additional_arrows_is_gem": "Tire 1 Flèche",
         "active_skill_base_area_of_effect_radius": "Le Rayon de base est de 1 mètre",
         "base_skill_effect_duration": "La Durée de base est de 4.00 secondes",
-        "active_skill_base_secondary_area_of_effect_radius": "Le Rayon secondaire de base est de 3.5 mètres",
+        "active_skill_base_secondary_area_of_effect_radius": "Le Rayon secondaire de base est de 4 mètres",
         "projectile_damage_modifiers_apply_to_skill_dot": "Les Modificateurs aux Dégâts des Projectiles s'appliquent aux Dégâts sur la durée de cette Aptitude",
         "modifiers_to_projectile_count_do_not_apply": "Les Modificateurs affectant le nombre de Projectiles ne s'appliquent pas à cette Aptitude"
       },
@@ -50854,7 +50969,7 @@
         {
           "id": "active_skill_base_secondary_area_of_effect_radius",
           "type": "constant",
-          "value": 35
+          "value": 40
         },
         {
           "id": "base_is_projectile",
@@ -51469,7 +51584,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 600,
+      "crit_chance": 1000,
       "damage_effectiveness": 40,
       "quality_stats": [
         {
@@ -51614,7 +51729,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 600,
+      "crit_chance": 1000,
       "damage_effectiveness": null,
       "quality_stats": [
         {
@@ -51752,7 +51867,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 1000,
+      "crit_chance": 1500,
       "damage_effectiveness": 40,
       "quality_stats": [
         {
@@ -51894,7 +52009,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 600,
+      "crit_chance": 1000,
       "damage_effectiveness": 20,
       "quality_stats": [
         {
@@ -51914,8 +52029,8 @@
         "base_skill_effect_duration": "La Durée de base est de 6.00 secondes",
         "bladefall_base_volley_frequency_ms": "Une Salve de lames s'abat toutes les 0.7 secondes",
         "bladefall_volley_frequency_+%_per_100_maximum_mana": "Les Salves ont 2% d'Augmentation de fréquence tous les 100 de Mana maximal",
-        "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius": "",
-        "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius": "",
+        "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius": "Le Rayon de base de la Volée est de 2.5 mètres",
+        "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius": "Le Rayon de base de la Lame est de 1 mètre",
         "bladefall_create_X_lingering_blades_per_volley": "Chaque Salve fait s'abattre 5 Lames rémanentes",
         "quality_display_bladefall_is_gem": ""
       },
@@ -57421,7 +57536,7 @@
       },
       "stat_text": {
         "shockwave_slam_explosion_damage_+%_final": "Les ondes de choc ont 40% de Perte de Dégâts",
-        "sunder_wave_radius_+_per_step\nsunder_number_of_fake_chains": "La vague peut redémarrer jusqu'à 2 fois\nLes Zones d'effet de la vague gagnent +0.1 mètres de Rayon pour chaque Zone d'effet précédente de la vague",
+        "sunder_wave_radius_+_per_step\nsunder_number_of_fake_chains": "La vague peut redémarrer jusqu'à 3 fois\nLes Zones d'effet de la vague gagnent +0.1 mètres de Rayon pour chaque Zone d'effet précédente de la vague",
         "sunder_wave_max_steps": "La vague inflige ses Dégâts dans 4 Zones",
         "sunder_wave_min_steps": "La vague inflige toujours ses Dégâts dans au moins 2 Zones",
         "sunder_shockwave_limit_per_cascade": "La vague génère des ondes de choc à partir de 5 Ennemis au maximum dans chacune des Zones parcourues"
@@ -57460,7 +57575,7 @@
         {
           "id": "sunder_number_of_fake_chains",
           "type": "constant",
-          "value": 2
+          "value": 3
         },
         {
           "id": "active_skill_area_of_effect_+%_final",
@@ -58390,7 +58505,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 500,
+      "crit_chance": 700,
       "damage_effectiveness": null,
       "quality_stats": [
         {
@@ -58406,7 +58521,7 @@
         "dex": 0
       },
       "stat_text": {
-        "skeletal_chains_aoe_%_health_dealt_as_chaos_damage\nquality_display_dark_pact_is_gem": "Sacrifie8% de la Vie du Squelette afin d'infliger l'équivalent en Dégâts de chaos",
+        "skeletal_chains_aoe_%_health_dealt_as_chaos_damage\nquality_display_dark_pact_is_gem": "Sacrifie12% de la Vie du Squelette afin d'infliger l'équivalent en Dégâts de chaos",
         "number_of_chains": "Ricoche +2 fois",
         "skeletal_chains_no_minions_targets_self": "Vous utilisez votre Vie si aucune Squelette n'est à portée"
       },
@@ -58424,7 +58539,7 @@
         {
           "id": "skeletal_chains_aoe_%_health_dealt_as_chaos_damage",
           "type": "constant",
-          "value": 8
+          "value": 12
         },
         {
           "id": "number_of_chains",
@@ -58530,7 +58645,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 500,
+      "crit_chance": 700,
       "damage_effectiveness": null,
       "quality_stats": [
         {
@@ -58546,7 +58661,7 @@
         "dex": 0
       },
       "stat_text": {
-        "dark_pact_sacrifice_%_life_from_max_ruin\ndark_pact_chaos_damage_added_from_sacrifice_+%": "Vous gagnez un cumul de Ruine à l'utilisation\nAtteindre 7 de cumul de Ruine vous fait Sacrifier 50% de votre Vie afin d'infliger 400% de la Vie Sacrifiée sous forme de Dégâts de chaos",
+        "dark_pact_sacrifice_%_life_from_max_ruin\ndark_pact_chaos_damage_added_from_sacrifice_+%": "Vous gagnez un cumul de Ruine à l'utilisation\nAtteindre 7 de cumul de Ruine vous fait Sacrifier 50% de votre Vie afin d'infliger 500% de la Vie Sacrifiée sous forme de Dégâts de chaos",
         "active_skill_ailment_damage_+%_final": "50% de Perte de Dégâts avec les Altérations"
       },
       "stats": [
@@ -58568,7 +58683,7 @@
         {
           "id": "dark_pact_chaos_damage_added_from_sacrifice_+%",
           "type": "constant",
-          "value": 400
+          "value": 500
         },
         {
           "id": "active_skill_ailment_damage_+%_final",
@@ -60839,9 +60954,9 @@
       "base_skill_effect_duration",
       "spell_minimum_base_fire_damage\nspell_maximum_base_fire_damage",
       "base_number_of_projectiles\nquality_display_base_number_of_projectiles_is_gem",
-      "corpse_explosion_monster_life_permillage_fire",
       "corpse_erruption_base_maximum_number_of_geyers",
-      "cremation_fires_projectiles_faster_+%_final"
+      "cremation_fires_projectiles_faster_+%_final",
+      "corpse_explosion_monster_life_permillage_fire"
     ],
     "tags": [
       "dexterity",
@@ -61028,9 +61143,9 @@
       "base_skill_effect_duration",
       "spell_minimum_base_fire_damage\nspell_maximum_base_fire_damage",
       "base_number_of_projectiles\nquality_display_base_number_of_projectiles_is_gem",
-      "corpse_explosion_monster_life_permillage_fire",
       "corpse_erruption_base_maximum_number_of_geyers",
       "cremation_fires_projectiles_faster_+%_final",
+      "corpse_explosion_monster_life_permillage_fire",
       "cremation_chance_to_explode_nearby_corpse_when_firing_projectiles"
     ],
     "tags": [
@@ -67395,10 +67510,10 @@
       },
       "stat_text": {
         "frost_fury_max_number_of_stages\nquality_display_winter_orb_is_gem": "8 Paliers au maximum",
-        "frost_fury_base_fire_interval_ms": "Tire des projectiles toutes les 1.6 secondes",
+        "frost_fury_base_fire_interval_ms": "Tire des projectiles toutes les 1.2 secondes",
         "frost_fury_duration_+%_per_stage": "30% d'Augmentation de Durée par palier",
         "frost_fury_fire_speed_+%_per_stage": "20% d'Augmentation de la Fréquence des Projectiles par Palier",
-        "frost_fury_fire_speed_+%_final_while_channelling": "125% Davantage de Fréquence des Projectiles pendant la Canalisation",
+        "frost_fury_fire_speed_+%_final_while_channelling": "80% Davantage de Fréquence des Projectiles pendant la Canalisation",
         "base_skill_effect_duration": "La Durée de base est de 1.60 secondes",
         "display_frost_fury_additive_cast_speed_modifiers_apply_to_fire_speed": "Les Augmentations et Réductions de Vitesse d'incantation s'appliquent également à la Fréquence des Projectiles"
       },
@@ -67421,7 +67536,7 @@
         {
           "id": "frost_fury_base_fire_interval_ms",
           "type": "constant",
-          "value": 1600
+          "value": 1200
         },
         {
           "id": "frost_fury_duration_+%_per_stage",
@@ -67446,7 +67561,7 @@
         {
           "id": "frost_fury_fire_speed_+%_final_while_channelling",
           "type": "constant",
-          "value": 125
+          "value": 80
         },
         {
           "id": "base_skill_effect_duration",
@@ -70690,7 +70805,7 @@
         {
           "stat": "Les Aptitudes modifiées ont {damage_+%_while_es_leeching}% d'Augmentation de Dégâts tant que vous Drainez du Bouclier d'énergie",
           "stats": {
-            "damage_+%_while_es_leeching": 500
+            "damage_+%_while_es_leeching": 1000
           }
         }
       ],
@@ -70710,11 +70825,6 @@
           "id": "support_energy_shield_leech_damage_+%_on_full_energy_shield_final",
           "type": "additional",
           "value": null
-        },
-        {
-          "id": "support_energy_shield_leech_damage_+%_while_leeching_energy_shield_final",
-          "type": "additional",
-          "value": null
         }
       ],
       "vaal": null,
@@ -70732,8 +70842,7 @@
     "tooltip_order": [
       "damage_+%_while_es_leeching",
       "energy_shield_leech_from_any_damage_permyriad",
-      "support_energy_shield_leech_damage_+%_on_full_energy_shield_final",
-      "support_energy_shield_leech_damage_+%_while_leeching_energy_shield_final"
+      "support_energy_shield_leech_damage_+%_on_full_energy_shield_final"
     ],
     "tags": [
       "intelligence",
@@ -72087,8 +72196,9 @@
       "is_manually_casted": true,
       "is_skill_totem": false,
       "stat_conversions": {
-        "quick_guard_cooldown_does_not_tick": "skill_cooldown_does_not_tick",
-        "quick_guard_additional_physical_damage_reduction_%": "base_additional_physical_damage_reduction_%"
+        "quick_guard_additional_physical_damage_reduction_%": "base_additional_physical_damage_reduction_%",
+        "guard_skill_cooldown_does_not_tick": "skill_cooldown_does_not_tick",
+        "quick_guard_cooldown_does_not_tick": "skill_cooldown_does_not_tick"
       },
       "types": [
         "Spell",
@@ -72213,7 +72323,8 @@
       "is_manually_casted": true,
       "is_skill_totem": false,
       "stat_conversions": {
-        "bone_armour_cooldown_does_not_tick": "skill_cooldown_does_not_tick"
+        "bone_armour_cooldown_does_not_tick": "skill_cooldown_does_not_tick",
+        "guard_skill_cooldown_does_not_tick": "skill_cooldown_does_not_tick"
       },
       "types": [
         "Spell",
@@ -73959,10 +74070,10 @@
       },
       "stat_text": {
         "chain_strike_cone_radius_+_per_x_rage": "+0.1 mètre de Rayon tous les 5 de Rage",
-        "chain_hook_attaches_to_X_targets": "Envoie des Grappins jusqu'à 6 cibles à portée",
+        "chain_hook_attaches_to_X_targets": "Envoie des Grappins jusqu'à 8 cibles à portée",
         "chain_hook_attachment_range": "Le Grappin a une longueur maximale de 6 mètres",
         "chain_hook_attachment_rage_to_gain_per_hit": "Les cibles affectées par des Grappins octroient 1 de Rage lorsqu'elles sont Touchées",
-        "chain_hook_max_attached_targets": "12 Grappins au maximum"
+        "chain_hook_max_attached_targets": "16 Grappins au maximum"
       },
       "stats": [
         {
@@ -73973,7 +74084,7 @@
         {
           "id": "chain_hook_attaches_to_X_targets",
           "type": "constant",
-          "value": 6
+          "value": 8
         },
         {
           "id": "chain_hook_attachment_range",
@@ -73988,7 +74099,7 @@
         {
           "id": "chain_hook_max_attached_targets",
           "type": "constant",
-          "value": 12
+          "value": 16
         },
         {
           "id": "is_area_damage",
@@ -82820,7 +82931,8 @@
       "is_manually_casted": true,
       "is_skill_totem": false,
       "stat_conversions": {
-        "arcane_cloak_cooldown_does_not_tick": "skill_cooldown_does_not_tick"
+        "arcane_cloak_cooldown_does_not_tick": "skill_cooldown_does_not_tick",
+        "guard_skill_cooldown_does_not_tick": "skill_cooldown_does_not_tick"
       },
       "types": [
         "Spell",
@@ -83408,7 +83520,8 @@
         "Mineable",
         "Totemable",
         "RangedAttack",
-        "Triggerable"
+        "Triggerable",
+        "WandAttack"
       ],
       "weapon_restrictions": [
         "Wand"
@@ -83535,7 +83648,8 @@
         "Mineable",
         "Totemable",
         "RangedAttack",
-        "Triggerable"
+        "Triggerable",
+        "WandAttack"
       ],
       "weapon_restrictions": [
         "Wand"
@@ -83572,7 +83686,7 @@
         "dex": 0
       },
       "stat_text": {
-        "kinetic_wand_base_number_of_zig_zags": "Le Projectile change de direction 2 fois",
+        "kinetic_wand_base_number_of_zig_zags": "Le Projectile change de direction 3 fois",
         "number_of_additional_projectiles": "Tire 2 Projectiles supplémentaires",
         "kinetic_bolt_forks_apply_to_zig_zags": "Les Modificateurs permettant aux Projectiles de se Scinder les font à la place changer de direction un certain nombre de fois supplémentaires"
       },
@@ -83580,7 +83694,7 @@
         {
           "id": "kinetic_wand_base_number_of_zig_zags",
           "type": "constant",
-          "value": 2
+          "value": 3
         },
         {
           "id": "number_of_additional_projectiles",
@@ -84271,7 +84385,7 @@
         "dex": 0
       },
       "stat_text": {
-        "manaweave_cost_equals_%_unreserved_mana": "Les Aptitudes modifiées ont un Coût en Mana supplémentaire équivalent à 5% du Mana maximal non Réservé"
+        "manaweave_cost_equals_%_unreserved_mana": "Les Aptitudes modifiées gagnent un Coût en Mana de base équivalent à 5% Mana maximal non Réservé"
       },
       "stats": [
         {
@@ -88810,8 +88924,8 @@
         "dex": 0
       },
       "stat_text": {
-        "hexblast_hit_damage_+%_final_if_hexed": "150% Davantage de Dégâts au Toucher si l'Ennemi est affecté par une Calamité",
-        "hexblast_ailment_damage_+%_final_if_hexed": "60% Davantage de Dégâts avec les Altérations si l'Ennemi est affecté par une Calamité",
+        "hexblast_hit_damage_+%_final_if_hexed": "200% Davantage de Dégâts au Toucher si l'Ennemi est affecté par une Calamité",
+        "hexblast_ailment_damage_+%_final_if_hexed": "90% Davantage de Dégâts avec les Altérations si l'Ennemi est affecté par une Calamité",
         "active_skill_base_area_of_effect_radius": "Le Rayon de base est de 3.2 mètres",
         "all_damage_can_ignite_freeze_shock": "Tous les Dégâts peuvent Embraser, Geler et Électrocuter",
         "chaos_damage_resisted_by_lowest_resistance": "Les Dégâts de chaos au Toucher sont réduits par la Résistance la plus basse",
@@ -88831,12 +88945,12 @@
         {
           "id": "hexblast_hit_damage_+%_final_if_hexed",
           "type": "constant",
-          "value": 150
+          "value": 200
         },
         {
           "id": "hexblast_ailment_damage_+%_final_if_hexed",
           "type": "constant",
-          "value": 60
+          "value": 90
         },
         {
           "id": "active_skill_base_area_of_effect_radius",
@@ -88962,8 +89076,8 @@
         "dex": 0
       },
       "stat_text": {
-        "hexblast_hit_damage_+%_final_if_hexed": "240% Davantage de Dégâts au Toucher si l'Ennemi est affecté par une Calamité",
-        "hexblast_ailment_damage_+%_final_if_hexed": "90% Davantage de Dégâts avec les Altérations si l'Ennemi est affecté par une Calamité",
+        "hexblast_hit_damage_+%_final_if_hexed": "300% Davantage de Dégâts au Toucher si l'Ennemi est affecté par une Calamité",
+        "hexblast_ailment_damage_+%_final_if_hexed": "120% Davantage de Dégâts avec les Altérations si l'Ennemi est affecté par une Calamité",
         "active_skill_base_area_of_effect_radius": "Le Rayon de base est de 3.2 mètres",
         "all_damage_can_ignite_freeze_shock": "Tous les Dégâts peuvent Embraser, Geler et Électrocuter",
         "hexblast_display_innate_remove_hex_100%_chance": "100% de chances de retirer une Calamité en infligeant des Dégâts",
@@ -88983,12 +89097,12 @@
         {
           "id": "hexblast_hit_damage_+%_final_if_hexed",
           "type": "constant",
-          "value": 240
+          "value": 300
         },
         {
           "id": "hexblast_ailment_damage_+%_final_if_hexed",
           "type": "constant",
-          "value": 90
+          "value": 120
         },
         {
           "id": "active_skill_base_area_of_effect_radius",
@@ -90552,7 +90666,7 @@
         "dex": 0
       },
       "stat_text": {
-        "base_secondary_skill_effect_duration": "La Durée secondaire de base est de 1.00 secondes",
+        "base_secondary_skill_effect_duration": "La Durée de Base de l'Effet néfaste est de 1.00 secondes",
         "base_skill_effect_duration": "La Durée de base est de 6.00 secondes"
       },
       "stats": [
@@ -90592,9 +90706,9 @@
     "tooltip_order": [
       "base_physical_damage_to_deal_per_minute",
       "base_skill_effect_duration",
-      "base_secondary_skill_effect_duration",
       "skill_effect_duration_+%",
-      "blood_surge_refresh_on_total_life_spent"
+      "blood_surge_refresh_on_total_life_spent",
+      "base_secondary_skill_effect_duration"
     ],
     "tags": [
       "strength",
@@ -93813,7 +93927,7 @@
       ],
       "vaal": null,
       "costs": null,
-      "attack_speed_multiplier": 10,
+      "attack_speed_multiplier": 20,
       "cooldown": null,
       "stored_uses": null,
       "cost_multiplier": null,
@@ -95592,7 +95706,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 600,
+      "crit_chance": 1000,
       "damage_effectiveness": -10,
       "quality_stats": [],
       "stat_requirements": {
@@ -97225,8 +97339,8 @@
       "cremation_base_fires_projectile_every_x_ms",
       "base_skill_effect_duration",
       "spell_minimum_base_fire_damage\nspell_maximum_base_fire_damage",
-      "corpse_explosion_monster_life_%",
       "corpse_erruption_base_maximum_number_of_geyers",
+      "corpse_explosion_monster_life_%",
       "number_of_additional_projectiles"
     ],
     "tags": [
@@ -104142,7 +104256,7 @@
       "max_level": 20,
       "release_state": "released"
     },
-    "cast_time": 500,
+    "cast_time": 400,
     "color": "b",
     "display_name": "Explosion voltaxique",
     "is_support": false,
@@ -104631,7 +104745,7 @@
         {
           "stat": "Les Projectiles qui ont Transpercé ont {projectile_damage_+%_final_if_pierced_enemy}% Davantage de Dégâts",
           "stats": {
-            "projectile_damage_+%_final_if_pierced_enemy": 500
+            "projectile_damage_+%_final_if_pierced_enemy": 1000
           }
         }
       ],
@@ -104670,11 +104784,16 @@
           "id": "skill_display_single_base_projectile",
           "type": "implicit",
           "value": 1
+        },
+        {
+          "id": "projectiles_ignore_wall_of_force",
+          "type": "implicit",
+          "value": 1
         }
       ],
       "vaal": null,
       "costs": null,
-      "attack_speed_multiplier": 10,
+      "attack_speed_multiplier": 20,
       "cooldown": null,
       "stored_uses": null,
       "cost_multiplier": null,
@@ -104764,7 +104883,7 @@
         {
           "stat": "Les Projectiles qui ont Transpercé ont {projectile_damage_+%_final_if_pierced_enemy}% Davantage de Dégâts",
           "stats": {
-            "projectile_damage_+%_final_if_pierced_enemy": 500
+            "projectile_damage_+%_final_if_pierced_enemy": 1000
           }
         }
       ],
@@ -104820,6 +104939,11 @@
         },
         {
           "id": "skill_display_single_base_projectile",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "projectiles_ignore_wall_of_force",
           "type": "implicit",
           "value": 1
         },
@@ -107879,7 +108003,7 @@
         "dex": null
       },
       "stat_text": {
-        "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius": "Le Rayon de base de l'éruption est de 1.5 mètres",
+        "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius": "Le Rayon de base de la Déflagration est de 1.5 mètres",
         "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius": "Le Rayon initial de base du Sol frigorifiant est de 1.5 mètres",
         "active_skill_tertiary_area_of_effect_description_mode\nactive_skill_base_tertiary_area_of_effect_radius": "Le Rayon final de base du Sol frigorifiant est de 3 mètres",
         "base_skill_effect_duration": "La Durée de base est de 5.00 secondes",
@@ -108049,7 +108173,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 500,
+      "crit_chance": 700,
       "damage_effectiveness": null,
       "quality_stats": [],
       "stat_requirements": {
@@ -108323,7 +108447,7 @@
       "stat_text": {
         "upheaval_number_of_spikes": "Génère +4 Éruptions",
         "skill_physical_damage_%_to_convert_to_cold": "100% des Dégâts physiques sont Convertis en Dégâts de froid",
-        "glacial_cascade_final_spike_damage_+%_final\nquality_display_glacial_cascade_is_gem": "L'Éruption finale a +200% Davantage de Dégâts",
+        "glacial_cascade_final_spike_damage_+%_final\nquality_display_glacial_cascade_is_gem": "Ne peut pas Repousser les Ennemis Uniques plus d'une fois par seconde\nLa Déflagration finale a 200% Davantage de Dégâts\nLa Déflagration finale a 100% Davantage de Rayon\nLa Déflagration finale ne peut pas Repousser",
         "global_knockback": "Repousse les Ennemis au Toucher"
       },
       "stats": [
@@ -112283,7 +112407,7 @@
       "stat_text": {
         "skill_empowers_next_x_melee_attacks\nskill_empower_limitation_specifier_for_stat_description": "L'Effet bénéfique est consommé pour Stimuler votre prochaine Attaque de mêlée\nLes Attaques Stimulées par cette Aptitude ne peuvent être Stimulées par d'autres Aptitudes",
         "ambush_additional_critical_strike_chance_permyriad": "Les Attaques Stimulées ont +25% aux chances de Coup critique",
-        "base_secondary_skill_effect_duration": "La Durée secondaire de base est de 3.00 secondes",
+        "base_secondary_skill_effect_duration": "La Durée de Base de l'Effet néfaste est de 3.00 secondes",
         "base_skill_effect_duration": "La Durée de base est de 1.50 secondes"
       },
       "stats": [
@@ -113226,7 +113350,7 @@
         {
           "stat": "Chaque flèche peut tirer {storm_rain_pulse_count} Rayons",
           "stats": {
-            "storm_rain_pulse_count": 50
+            "storm_rain_pulse_count": 100
           }
         }
       ],
@@ -113237,66 +113361,10 @@
       },
       "stat_text": {
         "skill_physical_damage_%_to_convert_to_lightning": "50% des Dégâts physiques sont Convertis en Dégâts de foudre",
-        "storm_rain_pulse_count\nquality_display_storm_rain_is_gem": "Chaque flèche peut tirer 4 Rayons",
+        "storm_rain_pulse_count\nquality_display_storm_rain_is_gem": "Chaque flèche peut tirer 6 Rayons",
         "number_of_allowed_storm_arrows": "Jusqu'à 10 Flèches peuvent être plantées dans le sol"
       },
-      "stats": [
-        {
-          "id": "skill_physical_damage_%_to_convert_to_lightning",
-          "type": "constant",
-          "value": 50
-        },
-        {
-          "id": "storm_rain_pulse_count",
-          "type": "constant",
-          "value": 4
-        },
-        {
-          "id": "number_of_allowed_storm_arrows",
-          "type": "constant",
-          "value": 10
-        },
-        {
-          "id": "prismatic_rain_beam_base_frequency_ms",
-          "type": "additional",
-          "value": null
-        },
-        {
-          "id": "base_is_projectile",
-          "type": "implicit",
-          "value": 1
-        },
-        {
-          "id": "is_area_damage",
-          "type": "implicit",
-          "value": 1
-        },
-        {
-          "id": "skill_can_fire_arrows",
-          "type": "implicit",
-          "value": 1
-        },
-        {
-          "id": "cannot_pierce",
-          "type": "implicit",
-          "value": 1
-        },
-        {
-          "id": "console_skill_dont_chase",
-          "type": "implicit",
-          "value": 1
-        },
-        {
-          "id": "skill_can_add_multiple_charges_per_action",
-          "type": "implicit",
-          "value": 1
-        },
-        {
-          "id": "quality_display_storm_rain_is_gem",
-          "type": "implicit",
-          "value": 1
-        }
-      ],
+      "stats": null,
       "vaal": null,
       "costs": null,
       "attack_speed_multiplier": null,
@@ -113388,7 +113456,7 @@
         {
           "stat": "Chaque flèche peut tirer {storm_rain_pulse_count} Rayons",
           "stats": {
-            "storm_rain_pulse_count": 100
+            "storm_rain_pulse_count": 200
           }
         }
       ],
@@ -113399,10 +113467,10 @@
       },
       "stat_text": {
         "skill_physical_damage_%_to_convert_to_lightning": "50% des Dégâts physiques sont Convertis en Dégâts de foudre",
-        "storm_rain_pulse_count\nquality_display_storm_rain_is_gem": "Chaque flèche peut tirer 14 Rayons",
+        "storm_rain_pulse_count\nquality_display_storm_rain_is_gem": "Chaque flèche peut tirer 20 Rayons",
         "number_of_allowed_storm_arrows": "Jusqu'à 2 Flèches peuvent être plantées dans le sol",
         "base_stun_threshold_reduction_+%": "50% de Réduction du Seuil d'Étourdissement de l'Ennemi",
-        "prismatic_rain_beam_base_frequency_ms": "Les Flèches génèrent des décharges électriques toutes les 0.20 secondes",
+        "prismatic_rain_beam_base_frequency_ms": "Les Flèches génèrent des décharges électriques toutes les 0.15 secondes",
         "modifiers_to_projectile_count_do_not_apply": "Les Modificateurs affectant le nombre de Projectiles ne s'appliquent pas à cette Aptitude"
       },
       "stats": [
@@ -113414,7 +113482,7 @@
         {
           "id": "storm_rain_pulse_count",
           "type": "constant",
-          "value": 14
+          "value": 20
         },
         {
           "id": "number_of_allowed_storm_arrows",
@@ -113429,7 +113497,7 @@
         {
           "id": "prismatic_rain_beam_base_frequency_ms",
           "type": "additional",
-          "value": 200
+          "value": 150
         },
         {
           "id": "base_is_projectile",
@@ -114279,8 +114347,8 @@
       "damage_multiplier": null
     },
     "tooltip_order": [
-      "minion_movement_speed_+%",
       "base_number_of_reapers_allowed",
+      "minion_movement_speed_+%",
       "active_skill_minion_damage_+%_final",
       "active_skill_non_reaper_minion_damage_+%_final",
       "active_skill_non_reaper_minion_maximum_life_+%_final"
@@ -114877,9 +114945,9 @@
       "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "{damage_+%_final_vs_stunned_enemies}% Davantage de Dégâts contre les Ennemis Étourdis",
+          "stat": "{active_skill_damage_+%_final_vs_stunned_enemies}% Davantage de Dégâts contre les Ennemis Étourdis",
           "stats": {
-            "damage_+%_final_vs_stunned_enemies": 1000
+            "active_skill_damage_+%_final_vs_stunned_enemies": 1000
           }
         }
       ],
@@ -114923,8 +114991,8 @@
     },
     "tooltip_order": [
       "base_stun_threshold_reduction_+%",
+      "active_skill_damage_+%_final_vs_stunned_enemies",
       "chance_to_double_stun_duration_%",
-      "damage_+%_final_vs_stunned_enemies",
       "trauma_strike_shockwave_area_of_effect_+%_per_100ms_stun_duration_up_to_400%"
     ],
     "tags": [
@@ -115445,9 +115513,9 @@
     },
     "tooltip_order": [
       "spell_minimum_base_cold_damage\nspell_maximum_base_cold_damage",
+      "display_eye_of_winter_projectile_modifier",
       "eye_of_winter_base_explosion_shards\nquality_display_eye_of_winter_is_gem",
       "eye_of_winter_base_explosion_shards\neye_of_winter_display_number_of_explosion_shards\neye_of_winter_count_shards_while_flying_instead\nquality_display_eye_of_winter_is_gem",
-      "display_eye_of_winter_projectile_modifier",
       "freezing_pulse_damage_+%_final_at_long_range\nquality_display_freezing_pulse_damage_at_long_range_is_gem"
     ],
     "tags": [
@@ -115604,8 +115672,8 @@
     },
     "tooltip_order": [
       "spell_minimum_base_cold_damage\nspell_maximum_base_cold_damage",
-      "eye_of_winter_base_explosion_shards\nquality_display_eye_of_winter_is_gem",
       "display_eye_of_winter_projectile_modifier",
+      "eye_of_winter_base_explosion_shards\nquality_display_eye_of_winter_is_gem",
       "freezing_pulse_damage_+%_final_at_long_range\nquality_display_freezing_pulse_damage_at_long_range_is_gem"
     ],
     "tags": [
@@ -115770,8 +115838,8 @@
     "tooltip_order": [
       "spell_minimum_base_cold_damage\nspell_maximum_base_cold_damage",
       "quality_display_base_number_of_projectiles_is_gem",
-      "eye_of_winter_base_explosion_shards\neye_of_winter_count_shards_while_flying_instead",
       "display_eye_of_winter_projectile_modifier",
+      "eye_of_winter_base_explosion_shards\neye_of_winter_count_shards_while_flying_instead",
       "active_skill_projectile_speed_+%_final",
       "quality_display_freezing_pulse_damage_at_long_range_is_gem",
       "freezing_pulse_damage_+%_final_at_long_range\nquality_display_freezing_pulse_damage_at_long_range_is_gem"
@@ -116525,8 +116593,8 @@
       "spell_minimum_base_physical_damage\nspell_maximum_base_physical_damage",
       "base_skill_effect_duration",
       "base_secondary_skill_effect_duration",
-      "tornado_maximum_number_of_hits",
       "tornado_base_damage_interval_ms",
+      "tornado_maximum_number_of_hits",
       "tornado_damage_absorbed_%",
       "tornado_hinder",
       "tornado_movement_speed_+%",
@@ -118904,8 +118972,7 @@
       },
       "stat_text": {
         "skill_physical_damage_%_to_convert_to_fire": "60% des Dégâts physiques sont Convertis en Dégâts de feu",
-        "vaal_volcanic_fissure_crack_repeat_count": "La Fissure entre en éruption 2 fois de plus",
-        "active_skill_area_of_effect_+%_final": "50% Davantage de Zone d'effet"
+        "vaal_volcanic_fissure_crack_repeat_count": "La Fissure entre en éruption 2 fois de plus"
       },
       "stats": [
         {
@@ -118917,11 +118984,6 @@
           "id": "vaal_volcanic_fissure_crack_repeat_count",
           "type": "constant",
           "value": 2
-        },
-        {
-          "id": "active_skill_area_of_effect_+%_final",
-          "type": "constant",
-          "value": 50
         },
         {
           "id": "is_area_damage",
@@ -118942,7 +119004,6 @@
       "damage_multiplier": null
     },
     "tooltip_order": [
-      "active_skill_area_of_effect_+%_final",
       "skill_physical_damage_%_to_convert_to_fire",
       "vaal_volcanic_fissure_crack_repeat_count"
     ],
@@ -122176,7 +122237,8 @@
         "RemoteMined",
         "SummonsTotem",
         "HasReservation",
-        "DisallowTriggerSupports"
+        "DisallowTriggerSupports",
+        "InbuiltTrigger"
       ],
       "added_types": [
         "Triggered",
@@ -122406,6 +122468,1097 @@
       ],
       "quest": "La Destruction du sceau"
     },
+    "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "Tire des flèches en l'air qui s'abattent autour de la zone ciblée, infligeant des dégâts de zone à l'impact, et restent plantées dans le sol pendant une certaine durée. Si vous vous rapprochez d'une flèche plantée, elle explose, infligeant des dégâts de zone autour d'elle ainsi qu'un effet néfaste de dégâts de feu sur la durée, tout en faisant exploser les autres flèches plantées situées à portée. ",
+      "display_name": "Déluge incendiaire",
+      "id": "napalm_arrows",
+      "is_manually_casted": true,
+      "is_skill_totem": false,
+      "stat_conversions": {},
+      "types": [
+        "Attack",
+        "RangedAttack",
+        "Fire",
+        "MirageArcherCanUse",
+        "Area",
+        "ProjectileSpeed",
+        "ProjectileNumber",
+        "Totemable",
+        "Trappable",
+        "Mineable",
+        "Triggerable",
+        "Rain",
+        "Duration"
+      ],
+      "weapon_restrictions": [
+        "Bow"
+      ],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "Déluge incendiaire",
+      "experience_type": "GemProgression28",
+      "id": "Metadata/Items/Gems/SkillGemConflagration",
+      "max_level": 20,
+      "release_state": "released"
+    },
+    "cast_time": 1000,
+    "color": "g",
+    "display_name": "Déluge incendiaire",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/secondary_debuff_skill",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [
+        {
+          "stat": "L'Explosion inflige {napalm_arrow_detonation_hit_damage_+%_final}% Davantage de Dégâts au Toucher et avec les Altérations",
+          "stats": {
+            "napalm_arrow_detonation_hit_damage_+%_final": 1500
+          }
+        }
+      ],
+      "stat_requirements": {
+        "int": 0,
+        "str": 0,
+        "dex": null
+      },
+      "stat_text": {
+        "base_skill_effect_duration": "La Durée de base est de 6.00 secondes",
+        "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius": "Les Flèches après la première s'abattent au sein d'un Rayon de base de 3 mètres",
+        "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius": "Le Rayon de base de l'Impact est de 1 mètre",
+        "napalm_arrow_detonation_hit_damage_+%_final": "L'Explosion inflige 50% Davantage de Dégâts au Toucher et avec les Altérations",
+        "napalm_arrow_maximum_number_of_unprimed_arrows_allowed": "20 Flèches plantées au maximum",
+        "skill_physical_damage_%_to_convert_to_fire": "100% des Dégâts physiques sont Convertis en Dégâts de feu",
+        "base_secondary_skill_effect_duration": "La Durée de Base de l'Effet néfaste est de 4.00 secondes",
+        "base_number_of_projectiles\nquality_display_base_number_of_projectiles_is_gem": "Tire 3 Projectiles",
+        "projectile_damage_modifiers_apply_to_skill_dot": "Les Modificateurs aux Dégâts des Projectiles s'appliquent aux Dégâts sur la durée de cette Aptitude"
+      },
+      "stats": [
+        {
+          "id": "base_fire_damage_to_deal_per_minute",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "base_skill_effect_duration",
+          "type": "constant",
+          "value": 6000
+        },
+        {
+          "id": "active_skill_area_of_effect_description_mode",
+          "type": "constant",
+          "value": 7
+        },
+        {
+          "id": "active_skill_base_area_of_effect_radius",
+          "type": "constant",
+          "value": 30
+        },
+        {
+          "id": "active_skill_secondary_area_of_effect_description_mode",
+          "type": "constant",
+          "value": 7
+        },
+        {
+          "id": "active_skill_base_secondary_area_of_effect_radius",
+          "type": "constant",
+          "value": 10
+        },
+        {
+          "id": "active_skill_tertiary_area_of_effect_description_mode",
+          "type": "constant",
+          "value": 1
+        },
+        {
+          "id": "napalm_arrow_detonation_hit_damage_+%_final",
+          "type": "constant",
+          "value": 50
+        },
+        {
+          "id": "napalm_arrow_maximum_number_of_unprimed_arrows_allowed",
+          "type": "constant",
+          "value": 20
+        },
+        {
+          "id": "skill_physical_damage_%_to_convert_to_fire",
+          "type": "constant",
+          "value": 100
+        },
+        {
+          "id": "base_secondary_skill_effect_duration",
+          "type": "constant",
+          "value": 4000
+        },
+        {
+          "id": "blast_rain_arrow_delay_ms",
+          "type": "constant",
+          "value": 90
+        },
+        {
+          "id": "base_number_of_projectiles",
+          "type": "constant",
+          "value": 3
+        },
+        {
+          "id": "active_skill_base_tertiary_area_of_effect_radius",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "base_is_projectile",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "is_area_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "skill_can_fire_arrows",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "base_skill_show_average_damage_instead_of_dps",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "quality_display_base_number_of_projectiles_is_gem",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "projectile_damage_modifiers_apply_to_skill_dot",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "base_fire_damage_to_deal_per_minute",
+      "base_skill_effect_duration",
+      "base_number_of_projectiles\nquality_display_base_number_of_projectiles_is_gem",
+      "projectile_damage_modifiers_apply_to_skill_dot",
+      "skill_physical_damage_%_to_convert_to_fire",
+      "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius",
+      "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius",
+      "active_skill_tertiary_area_of_effect_description_mode\nactive_skill_base_tertiary_area_of_effect_radius",
+      "base_secondary_skill_effect_duration",
+      "napalm_arrow_detonation_hit_damage_+%_final",
+      "napalm_arrow_maximum_number_of_unprimed_arrows_allowed"
+    ],
+    "tags": [
+      "dexterity",
+      "grants_active_skill",
+      "attack",
+      "fire",
+      "area",
+      "projectile",
+      "duration",
+      "bow"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": {
+      "act": 3,
+      "classes": [
+        "Rôdeuse"
+      ],
+      "quest": "Fauchez le Bras droit"
+    },
+    "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "Fait tournoyer votre baguette pour faire pleuvoir un certain nombre de projectiles dans une grande zone devant vous, ciblant directement l'emplacement des ennemis dans la zone. Des marqueurs indiquent l'emplacement d'atterrissage de chaque projectile avant sa chute. Chaque projectile explose en touchant le sol, infligeant des dégâts de zone et déclenchant Anomalie cinétique. Ne peut pas être utilisée par les Totems, Pièges ou Mines.",
+      "display_name": "Pluie cinétique",
+      "id": "kinetic_rain",
+      "is_manually_casted": true,
+      "is_skill_totem": false,
+      "stat_conversions": {},
+      "types": [
+        "Attack",
+        "Area",
+        "Projectile",
+        "WandAttack",
+        "RangedAttack",
+        "Rain"
+      ],
+      "weapon_restrictions": [
+        "Wand"
+      ],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "Pluie cinétique",
+      "experience_type": "GemProgression12",
+      "id": "Metadata/Items/Gems/SkillGemKineticRain",
+      "max_level": 20,
+      "release_state": "released"
+    },
+    "cast_time": 1000,
+    "color": "b",
+    "display_name": "Pluie cinétique",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [
+        {
+          "stat": "Tire {base_number_of_projectiles} Projectiles",
+          "stats": {
+            "base_number_of_projectiles": 100
+          }
+        }
+      ],
+      "stat_requirements": {
+        "int": null,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius": "La longueur de base de la zone de ciblage est de 9 mètres",
+        "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius": "La largeur de base de la zone de ciblage est de 4.5 mètres",
+        "active_skill_tertiary_area_of_effect_description_mode\nactive_skill_base_tertiary_area_of_effect_radius": "Le Rayon de base de l'Explosion est de 1.2 mètres",
+        "active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value\nquality_display_spell_damage_to_attack_damage_is_gem": "Les Augmentations et Réductions affectant les Dégâts des Sorts s'appliquent également aux Dégâts d'Attaque de cette Aptitude, à 150% de leur valeur",
+        "base_number_of_projectiles\nquality_display_base_number_of_projectiles_is_gem": "Tire 8 Projectiles"
+      },
+      "stats": [
+        {
+          "id": "active_skill_base_area_of_effect_radius",
+          "type": "constant",
+          "value": 90
+        },
+        {
+          "id": "active_skill_area_of_effect_description_mode",
+          "type": "constant",
+          "value": 8
+        },
+        {
+          "id": "active_skill_base_secondary_area_of_effect_radius",
+          "type": "constant",
+          "value": 45
+        },
+        {
+          "id": "active_skill_secondary_area_of_effect_description_mode",
+          "type": "constant",
+          "value": 8
+        },
+        {
+          "id": "active_skill_base_tertiary_area_of_effect_radius",
+          "type": "constant",
+          "value": 12
+        },
+        {
+          "id": "active_skill_tertiary_area_of_effect_description_mode",
+          "type": "constant",
+          "value": 1
+        },
+        {
+          "id": "active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value",
+          "type": "constant",
+          "value": 150
+        },
+        {
+          "id": "base_number_of_projectiles",
+          "type": "additional",
+          "value": 8
+        },
+        {
+          "id": "is_area_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "base_is_projectile",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "quality_display_base_number_of_projectiles_is_gem",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "base_is_projectile",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "skill_can_fire_wand_projectiles",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "quality_display_spell_damage_to_attack_damage_is_gem",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value\nquality_display_spell_damage_to_attack_damage_is_gem",
+      "base_number_of_projectiles\nquality_display_base_number_of_projectiles_is_gem",
+      "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius",
+      "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius",
+      "active_skill_tertiary_area_of_effect_description_mode\nactive_skill_base_tertiary_area_of_effect_radius"
+    ],
+    "tags": [
+      "intelligence",
+      "grants_active_skill",
+      "attack",
+      "area",
+      "projectile",
+      "duration",
+      "trigger"
+    ],
+    "secondary_granted_effect": "KineticRainKineticInstability",
+    "quest_reward": {
+      "act": 3,
+      "classes": [
+        "Sorcière"
+      ],
+      "quest": "Fauchez le Bras droit"
+    },
+    "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "Fait tournoyer votre baguette pour faire pleuvoir un certain nombre de projectiles dans une grande zone devant vous, ciblant directement l'emplacement des ennemis dans la zone. Des marqueurs indiquent l'emplacement d'atterrissage de chaque projectile avant sa chute. Chaque projectile explose en touchant le sol, infligeant des dégâts de zone.",
+      "display_name": "Pluie cinétique de l'Impact",
+      "id": "kinetic_rain_alt_x",
+      "is_manually_casted": true,
+      "is_skill_totem": true,
+      "stat_conversions": {},
+      "types": [
+        "Attack",
+        "Area",
+        "Projectile",
+        "Trappable",
+        "Mineable",
+        "Triggerable",
+        "Totemable",
+        "WandAttack",
+        "RangedAttack",
+        "Rain"
+      ],
+      "weapon_restrictions": [
+        "Wand"
+      ],
+      "minion_types": null,
+      "skill_totem_life_multiplier": 1.0
+    },
+    "base_item": {
+      "display_name": "Pluie cinétique",
+      "experience_type": "GemProgression12",
+      "id": "Metadata/Items/Gems/SkillGemKineticRain",
+      "max_level": 20,
+      "release_state": "released"
+    },
+    "cast_time": 1000,
+    "color": "b",
+    "display_name": "Pluie cinétique de l'Impact",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [
+        {
+          "stat": "Tire {base_number_of_projectiles} Projectiles",
+          "stats": {
+            "base_number_of_projectiles": 100
+          }
+        }
+      ],
+      "stat_requirements": {
+        "int": null,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius": "La longueur de base de la zone de ciblage est de 9 mètres",
+        "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius": "La largeur de base de la zone de ciblage est de 4.5 mètres",
+        "active_skill_tertiary_area_of_effect_description_mode\nactive_skill_base_tertiary_area_of_effect_radius": "Le Rayon de base de l'Explosion est de 1.2 mètres",
+        "active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value\nquality_display_spell_damage_to_attack_damage_is_gem": "Les Augmentations et Réductions affectant les Dégâts des Sorts s'appliquent également aux Dégâts d'Attaque de cette Aptitude, à 150% de leur valeur",
+        "base_number_of_projectiles\nquality_display_base_number_of_projectiles_is_gem": "Tire 10 Projectiles"
+      },
+      "stats": [
+        {
+          "id": "active_skill_base_area_of_effect_radius",
+          "type": "constant",
+          "value": 90
+        },
+        {
+          "id": "active_skill_area_of_effect_description_mode",
+          "type": "constant",
+          "value": 8
+        },
+        {
+          "id": "active_skill_base_secondary_area_of_effect_radius",
+          "type": "constant",
+          "value": 45
+        },
+        {
+          "id": "active_skill_secondary_area_of_effect_description_mode",
+          "type": "constant",
+          "value": 8
+        },
+        {
+          "id": "active_skill_base_tertiary_area_of_effect_radius",
+          "type": "constant",
+          "value": 12
+        },
+        {
+          "id": "active_skill_tertiary_area_of_effect_description_mode",
+          "type": "constant",
+          "value": 1
+        },
+        {
+          "id": "active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value",
+          "type": "constant",
+          "value": 150
+        },
+        {
+          "id": "base_number_of_projectiles",
+          "type": "additional",
+          "value": 10
+        },
+        {
+          "id": "is_area_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "base_is_projectile",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "quality_display_base_number_of_projectiles_is_gem",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "base_is_projectile",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "skill_can_fire_wand_projectiles",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "quality_display_spell_damage_to_attack_damage_is_gem",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": 20,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value\nquality_display_spell_damage_to_attack_damage_is_gem",
+      "base_number_of_projectiles\nquality_display_base_number_of_projectiles_is_gem",
+      "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius",
+      "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius",
+      "active_skill_tertiary_area_of_effect_description_mode\nactive_skill_base_tertiary_area_of_effect_radius"
+    ],
+    "tags": [
+      "intelligence",
+      "grants_active_skill",
+      "attack",
+      "area",
+      "projectile"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": {
+      "act": 3,
+      "classes": [
+        "Sorcière"
+      ],
+      "quest": "Fauchez le Bras droit"
+    },
+    "discriminator": "alt_x",
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "Tire un projectile endommageant avec votre baguette, qui se dirige automatiquement vers un ennemi et applique une carapace au premier ennemi touché. Les dégâts au toucher contre cette cible sont d’abord absorbés par la carapace. Si la carapace est entièrement épuisée, elle explose, infligeant des dégâts de zone et tirant un nouveau projectile vers une autre cible afin de lui appliquer une nouvelle carapace. Si plusieurs projectiles sont tirés lors de l’explosion d’une carapace, seul le premier à toucher une cible peut appliquer une carapace.",
+      "display_name": "Carapace somatique",
+      "id": "kinetic_shell",
+      "is_manually_casted": true,
+      "is_skill_totem": false,
+      "stat_conversions": {},
+      "types": [
+        "Duration",
+        "Physical",
+        "Trappable",
+        "Mineable",
+        "Totemable",
+        "ProjectilesFromUser",
+        "Attack",
+        "WandAttack",
+        "Area",
+        "Projectile",
+        "RangedAttack"
+      ],
+      "weapon_restrictions": [
+        "Wand"
+      ],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "Carapace somatique",
+      "experience_type": "GemProgression28",
+      "id": "Metadata/Items/Gems/SkillGemSomaticShell",
+      "max_level": 20,
+      "release_state": "released"
+    },
+    "cast_time": 600,
+    "color": "b",
+    "display_name": "Carapace somatique",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [
+        {
+          "stat": "Le Rayon de base est de {active_skill_base_area_of_effect_radius/locations_to_metres} mètres",
+          "stats": {
+            "active_skill_base_area_of_effect_radius": 150
+          }
+        }
+      ],
+      "stat_requirements": {
+        "int": null,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "base_skill_effect_duration": "La Durée de base est de 5.00 secondes",
+        "active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value\nquality_display_spell_damage_to_attack_damage_is_gem": "Les Augmentations et Réductions affectant les Dégâts des Sorts s'appliquent également aux Dégâts d'Attaque de cette Aptitude, à 150% de leur valeur",
+        "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius": "Le Rayon de base de l'Explosion est de 1.5 mètres",
+        "kinetic_shell_immunity_after_explosion_ms": "Après leur explosion, les Carapaces ne peuvent pas être réappliquées à la même cible pendant 0.2 secondes",
+        "kinetic_shell_transfer_to_X_targets_on_projectile_hit": "Les Projectiles tirés par les explosions ne peuvent pas octroyer plus de 1 nouvelle Carapace",
+        "active_skill_area_damage_+%_final\nquality_display_active_skill_area_damage_is_gem": "750% Davantage de Dégâts de zone",
+        "damage_cannot_break_kinetic_shells": "Les Dégâts de cette Aptitude ne peuvent pas être absorbés par les Carapaces",
+        "quality_display_base_number_of_projectiles_is_gem": ""
+      },
+      "stats": [
+        {
+          "id": "kinetic_shell_hit_damage_absorbed_%",
+          "type": "constant",
+          "value": 100
+        },
+        {
+          "id": "base_skill_effect_duration",
+          "type": "constant",
+          "value": 5000
+        },
+        {
+          "id": "active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value",
+          "type": "constant",
+          "value": 150
+        },
+        {
+          "id": "active_skill_base_area_of_effect_radius",
+          "type": "constant",
+          "value": 15
+        },
+        {
+          "id": "active_skill_area_of_effect_description_mode",
+          "type": "constant",
+          "value": 1
+        },
+        {
+          "id": "kinetic_shell_immunity_after_explosion_ms",
+          "type": "constant",
+          "value": 200
+        },
+        {
+          "id": "kinetic_shell_transfer_to_X_targets_on_projectile_hit",
+          "type": "constant",
+          "value": 1
+        },
+        {
+          "id": "active_skill_area_damage_+%_final",
+          "type": "constant",
+          "value": 750
+        },
+        {
+          "id": "kinetic_shell_maximum_damage_absorbed_from_hits",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "kinetic_shell_number_of_active_buffs_allowed",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "skill_can_fire_wand_projectiles",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "damage_cannot_break_kinetic_shells",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "base_skill_show_average_damage_instead_of_dps",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "quality_display_active_skill_area_damage_is_gem",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "quality_display_base_number_of_projectiles_is_gem",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "quality_display_spell_damage_to_attack_damage_is_gem",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value\nquality_display_spell_damage_to_attack_damage_is_gem",
+      "base_skill_effect_duration",
+      "quality_display_base_number_of_projectiles_is_gem",
+      "damage_cannot_break_kinetic_shells",
+      "active_skill_area_damage_+%_final\nquality_display_active_skill_area_damage_is_gem",
+      "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius",
+      "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius\nactive_skill_area_of_effect_radius",
+      "kinetic_shell_hit_damage_absorbed_%\nkinetic_shell_maximum_damage_absorbed_from_hits",
+      "kinetic_shell_immunity_after_explosion_ms",
+      "kinetic_shell_number_of_active_buffs_allowed",
+      "kinetic_shell_transfer_to_X_targets_on_projectile_hit"
+    ],
+    "tags": [
+      "intelligence",
+      "grants_active_skill",
+      "duration",
+      "physical",
+      "attack",
+      "area",
+      "projectile"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": {
+      "act": 3,
+      "classes": [
+        "Sorcière"
+      ],
+      "quest": "Fauchez le Bras droit"
+    },
+    "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "Tire une flèche dans les airs qui retombe à l'emplacement ciblé. À l'impact, elle inflige des dégâts de zone et provoque un orage qui aveugle les ennemis se trouvant dans sa zone d'effet. Entrer dans l'orage lui fait gagner des paliers, tandis que le quitter provoque sa dissipation. Si vous quittez l'orage alors qu'il dispose de son nombre maximal de paliers, il explose, infligeant des dégâts et déclenchant Rafale tonitruante. Vous devez utiliser cette aptitude vous-même. Elle ne peut pas être utilisée par les Totems, Pièges, Mines ou tout autre objet utilisant des aptitudes à votre place. ",
+      "display_name": "Orage",
+      "id": "thunderstorm",
+      "is_manually_casted": true,
+      "is_skill_totem": false,
+      "stat_conversions": {},
+      "types": [
+        "Attack",
+        "Area",
+        "RangedAttack",
+        "Duration",
+        "Lightning",
+        "Rain",
+        "ProjectileSpeed",
+        "ProjectilesNumberModifiersNotApplied"
+      ],
+      "weapon_restrictions": [
+        "Bow"
+      ],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "Orage",
+      "experience_type": "GemProgression28",
+      "id": "Metadata/Items/Gems/SkillGemThunderstorm",
+      "max_level": 20,
+      "release_state": "released"
+    },
+    "cast_time": 1000,
+    "color": "g",
+    "display_name": "Orage",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": 0,
+        "str": 0,
+        "dex": null
+      },
+      "stat_text": {
+        "base_number_of_arrows\nquality_display_base_additional_arrows_is_gem": "Tire 1 Flèche",
+        "base_windstorm_storm_stage_gained_per_X_ms\nwindstorm_storm_maximum_stages": "Orage gagne un Palier toutes les 0.25 secondes que vous passez à l'intérieur, jusqu'à un maximum de 4",
+        "windstorm_storm_perfect_timing_window_escape_time_ms": "Orage se dissipe si vous le quittez avant qu'il atteigne son Palier maximal, ou bien 1.5 secondes après avoir atteint son Palier maximal",
+        "base_skill_effect_duration": "La Durée de base est de 10.00 secondes",
+        "skill_physical_damage_%_to_convert_to_lightning": "60% des Dégâts physiques sont Convertis en Dégâts de foudre",
+        "windstorm_storm_limit": "3 Orages au maximum",
+        "windstorm_storm_hit_damage_+%_final_on_detonation": "L'Explosion a 300% Davantage de Dégâts",
+        "windstorm_storm_area_of_effect_+%_final_per_stage": "Orage a 30% Davantage de Zone d'effet par Palier",
+        "modifiers_to_projectile_count_do_not_apply": "Les Modificateurs affectant le nombre de Projectiles ne s'appliquent pas à cette Aptitude"
+      },
+      "stats": [
+        {
+          "id": "base_number_of_arrows",
+          "type": "constant",
+          "value": 1
+        },
+        {
+          "id": "windstorm_storm_maximum_stages",
+          "type": "constant",
+          "value": 4
+        },
+        {
+          "id": "windstorm_storm_perfect_timing_window_escape_time_ms",
+          "type": "constant",
+          "value": 1500
+        },
+        {
+          "id": "base_skill_effect_duration",
+          "type": "constant",
+          "value": 10000
+        },
+        {
+          "id": "skill_physical_damage_%_to_convert_to_lightning",
+          "type": "constant",
+          "value": 60
+        },
+        {
+          "id": "windstorm_storm_limit",
+          "type": "constant",
+          "value": 3
+        },
+        {
+          "id": "windstorm_storm_hit_damage_+%_final_on_detonation",
+          "type": "constant",
+          "value": 300
+        },
+        {
+          "id": "base_windstorm_storm_stage_gained_per_X_ms",
+          "type": "constant",
+          "value": 250
+        },
+        {
+          "id": "windstorm_storm_area_of_effect_+%_final_per_stage",
+          "type": "constant",
+          "value": 30
+        },
+        {
+          "id": "active_skill_base_area_of_effect_radius",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "base_is_projectile",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "is_area_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "quality_display_base_additional_arrows_is_gem",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "modifiers_to_projectile_count_do_not_apply",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "base_skill_show_average_damage_instead_of_dps",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "skill_can_fire_arrows",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "skill_physical_damage_%_to_convert_to_lightning",
+      "base_skill_effect_duration",
+      "base_number_of_arrows\nquality_display_base_additional_arrows_is_gem",
+      "modifiers_to_projectile_count_do_not_apply",
+      "active_skill_base_area_of_effect_radius",
+      "windstorm_storm_limit",
+      "base_windstorm_storm_stage_gained_per_X_ms\nwindstorm_storm_maximum_stages",
+      "windstorm_storm_area_of_effect_+%_final_per_stage",
+      "windstorm_storm_perfect_timing_window_escape_time_ms",
+      "windstorm_storm_hit_damage_+%_final_on_detonation"
+    ],
+    "tags": [
+      "dexterity",
+      "grants_active_skill",
+      "attack",
+      "area",
+      "duration",
+      "lightning",
+      "bow",
+      "projectile",
+      "trigger"
+    ],
+    "secondary_granted_effect": "ThunderstormMiniTornados",
+    "quest_reward": {
+      "act": 3,
+      "classes": [
+        "Duelliste",
+        "Rôdeuse"
+      ],
+      "quest": "Fauchez le Bras droit"
+    },
+    "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "Agite votre baguette pour créer un projectile cinétique planant. Après une courte durée, le projectile est projeté sur un ennemi, infligeant des dégâts de zone à l'impact et ricochant sur d'autres cibles. Réutiliser cette attaque réinitialise la durée de tous les projectiles planants. Les projectiles tirés successivement tenteront de cibler des ennemis différents. Ne peut pas être utilisée directement par des pièges ou mines.",
+      "display_name": "Fusillade cinétique",
+      "id": "kinetic_fusillade",
+      "is_manually_casted": true,
+      "is_skill_totem": false,
+      "stat_conversions": {},
+      "types": [
+        "Attack",
+        "Triggerable",
+        "Projectile",
+        "RangedAttack",
+        "WandAttack",
+        "Duration",
+        "Totemable",
+        "ProjectilesFromUser",
+        "Area"
+      ],
+      "weapon_restrictions": [
+        "Wand"
+      ],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "Fusillade cinétique",
+      "experience_type": "GemProgression10",
+      "id": "Metadata/Items/Gems/SkillGemKineticFusillade",
+      "max_level": 20,
+      "release_state": "released"
+    },
+    "cast_time": 1000,
+    "color": "b",
+    "display_name": "Fusillade cinétique",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [
+        {
+          "stat": "Chaque Projectiles a {kinetic_fusillade_damage_+%_final_per_projectile_fired}% Davantage de Dégâts pour chaque Projectile déjà tiré au cours de la séquence",
+          "stats": {
+            "kinetic_fusillade_damage_+%_final_per_projectile_fired": 200
+          }
+        }
+      ],
+      "stat_requirements": {
+        "int": null,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "base_skill_effect_duration": "La Durée de base est de 0.70 secondes",
+        "number_of_chains": "Ricoche +3 fois",
+        "kinetic_fusillade_maximum_floating_projectiles": "12 Projectiles flottants au maximum",
+        "active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value\nquality_display_spell_damage_to_attack_damage_is_gem": "Les Augmentations et Réductions affectant les Dégâts des Sorts s'appliquent également aux Dégâts d'Attaque de cette Aptitude, à 150% de leur valeur",
+        "active_skill_base_area_of_effect_radius": "Le Rayon de base est de 1.2 mètres"
+      },
+      "stats": [
+        {
+          "id": "base_skill_effect_duration",
+          "type": "constant",
+          "value": 700
+        },
+        {
+          "id": "number_of_chains",
+          "type": "constant",
+          "value": 3
+        },
+        {
+          "id": "kinetic_fusillade_base_delay_between_projectiles_ms",
+          "type": "constant",
+          "value": 50
+        },
+        {
+          "id": "kinetic_fusillade_subsequent_targeting_radius",
+          "type": "constant",
+          "value": 30
+        },
+        {
+          "id": "kinetic_fusillade_maximum_floating_projectiles",
+          "type": "constant",
+          "value": 12
+        },
+        {
+          "id": "active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value",
+          "type": "constant",
+          "value": 150
+        },
+        {
+          "id": "active_skill_base_area_of_effect_radius",
+          "type": "constant",
+          "value": 12
+        },
+        {
+          "id": "kinetic_fusillade_damage_+%_final_per_projectile_fired",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "skill_can_fire_wand_projectiles",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "is_area_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "projectile_uses_contact_position",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "quality_display_spell_damage_to_attack_damage_is_gem",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "quality_display_kinetic_fusillade_is_gem",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": 100,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value\nquality_display_spell_damage_to_attack_damage_is_gem",
+      "base_skill_effect_duration",
+      "number_of_chains",
+      "active_skill_base_area_of_effect_radius",
+      "kinetic_fusillade_damage_+%_final_per_projectile_fired\nquality_display_kinetic_fusillade_is_gem",
+      "kinetic_fusillade_maximum_floating_projectiles"
+    ],
+    "tags": [
+      "intelligence",
+      "grants_active_skill",
+      "attack",
+      "projectile",
+      "duration",
+      "area"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
     "discriminator": null,
     "support_gem": null
   },
@@ -123782,7 +124935,7 @@
         "dex": null
       },
       "stat_text": {
-        "support_faster_ailments_ailment_duration_+%_final": "80% de Perte de Durée des Altérations infligées par les Aptitudes modifiées"
+        "support_faster_ailments_ailment_duration_+%_final": "70% de Perte de Durée des Altérations infligées par les Aptitudes modifiées"
       },
       "stats": [
         {
@@ -123793,7 +124946,7 @@
         {
           "id": "support_faster_ailments_ailment_duration_+%_final",
           "type": "additional",
-          "value": -80
+          "value": -70
         }
       ],
       "vaal": null,
@@ -124571,6 +125724,2016 @@
   },
   {
     "active_skill": {
+      "description": "Lorsqu'il vous manque de la Vie, ce Greffon applique un Effet bénéfique qui absorbe une partie des Dégâts au Toucher pour vous, jusqu'à ce qu'il soit épuisé. Lorsque vous êtes frappé alors que cet Effet bénéfique est actif, cette aptitude projette une nova de projectiles enflammés qui explosent à l'impact.",
+      "display_name": "Cœur de flamme",
+      "id": "graft_skill_xoph_molten_shell",
+      "is_manually_casted": false,
+      "is_skill_totem": false,
+      "stat_conversions": {},
+      "types": [
+        "Cooldown",
+        "Spell",
+        "Area",
+        "Projectile",
+        "Fire",
+        "Buff",
+        "Duration",
+        "Guard"
+      ],
+      "weapon_restrictions": [],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "Cœur de flamme",
+      "experience_type": "GemProgressionGraftSkill",
+      "id": "Metadata/Items/Chayula/XophGraftGem1",
+      "max_level": 40,
+      "release_state": "released"
+    },
+    "cast_time": 1000,
+    "color": "r",
+    "display_name": "Cœur de flamme",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": 800,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": 0,
+        "str": null,
+        "dex": 0
+      },
+      "stat_text": {
+        "base_number_of_projectiles\nquality_display_base_number_of_projectiles_is_gem": "Tire 5 Projectiles",
+        "projectiles_nova": "Tire des Projectiles en cercle"
+      },
+      "stats": [
+        {
+          "id": "spell_minimum_base_fire_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "spell_maximum_base_fire_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "base_number_of_projectiles",
+          "type": "constant",
+          "value": 5
+        },
+        {
+          "id": "graft_skill_xoph_molten_shell_nova_projectile_cooldown_ms",
+          "type": "constant",
+          "value": 200
+        },
+        {
+          "id": "molten_shell_damage_absorbed_%",
+          "type": "constant",
+          "value": 80
+        },
+        {
+          "id": "molten_shell_max_damage_absorbed",
+          "type": "constant",
+          "value": 10000
+        },
+        {
+          "id": "base_skill_effect_duration",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "active_skill_base_area_of_effect_radius",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "graft_skill_xoph_molten_shell_absorb_limit",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "base_is_projectile",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "is_area_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "projectiles_nova",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "molten_shell_explode_each_hit",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "quality_display_base_number_of_projectiles_is_gem",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "is_graft_skill",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": 20000,
+      "stored_uses": 1,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "base_skill_effect_duration",
+      "spell_minimum_base_fire_damage\nspell_maximum_base_fire_damage",
+      "base_number_of_projectiles\nquality_display_base_number_of_projectiles_is_gem",
+      "projectiles_nova",
+      "active_skill_base_area_of_effect_radius",
+      "molten_shell_damage_absorbed_%\nmolten_shell_max_damage_absorbed\ngraft_skill_xoph_molten_shell_absorb_limit"
+    ],
+    "tags": [
+      "strength",
+      "grants_active_skill",
+      "spell",
+      "area",
+      "projectile",
+      "fire",
+      "duration",
+      "guard"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "Lorsqu'il en reçoit l'ordre, ce Greffon provoque une éruption cataclysmique qui laisse plusieurs geysers de flamme dans son sillage. Ces geysers tirent régulièrement des mortiers enflammés, et en font jaillir davantage à chaque fois que vous utilisez un cri de guerre. Les cris de guerre déclenchés ne peuvent pas provoquer ces jaillissements de mortiers.",
+      "display_name": "Son Message ardent",
+      "id": "graft_skill_xoph_geyser_explosion",
+      "is_manually_casted": false,
+      "is_skill_totem": false,
+      "stat_conversions": {},
+      "types": [
+        "Cooldown",
+        "Duration",
+        "Area",
+        "Projectile",
+        "Attack",
+        "Fire"
+      ],
+      "weapon_restrictions": [],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "Son Message ardent",
+      "experience_type": "GemProgressionGraftSkill",
+      "id": "Metadata/Items/Chayula/XophGraftGem2",
+      "max_level": 40,
+      "release_state": "released"
+    },
+    "cast_time": 1000,
+    "color": "r",
+    "display_name": "Son Message ardent",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": 0,
+        "str": null,
+        "dex": 0
+      },
+      "stat_text": {
+        "graft_skill_xoph_geyser_explosion_maximum_geysers": "9 Geysers au maximum",
+        "graft_skill_xoph_geyser_explosion_number_of_projectiles_to_erupt": "Les Geysers tirent 2 Projectile supplémentaire lorsque vous Poussez un Cri de guerre",
+        "base_number_of_projectiles\nquality_display_base_number_of_projectiles_is_gem": "Tire 1 Projectile",
+        "active_skill_base_secondary_area_of_effect_radius": "Le Rayon secondaire de base est de 4.5 mètres",
+        "additional_base_critical_strike_chance": "+8% aux Chances de coup critique",
+        "active_skill_projectile_damage_+%_final": "50% de Perte de Dégâts des Projectiles",
+        "active_skill_base_area_of_effect_radius": "Le Rayon de base est de 3 mètres"
+      },
+      "stats": [
+        {
+          "id": "attack_minimum_added_fire_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "attack_maximum_added_fire_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "graft_skill_xoph_geyser_explosion_maximum_geysers",
+          "type": "constant",
+          "value": 9
+        },
+        {
+          "id": "graft_skill_xoph_geyser_explosion_number_of_projectiles_to_erupt",
+          "type": "constant",
+          "value": 2
+        },
+        {
+          "id": "base_number_of_projectiles",
+          "type": "constant",
+          "value": 1
+        },
+        {
+          "id": "graft_skill_xoph_geyser_fires_projectile_every_x_ms",
+          "type": "constant",
+          "value": 700
+        },
+        {
+          "id": "active_skill_base_secondary_area_of_effect_radius",
+          "type": "constant",
+          "value": 15
+        },
+        {
+          "id": "active_skill_base_secondary_area_of_effect_radius",
+          "type": "constant",
+          "value": 30
+        },
+        {
+          "id": "graft_skill_xoph_geyser_base_projectiles_per_explosion",
+          "type": "constant",
+          "value": 3
+        },
+        {
+          "id": "additional_base_critical_strike_chance",
+          "type": "constant",
+          "value": 800
+        },
+        {
+          "id": "active_skill_projectile_damage_+%_final",
+          "type": "constant",
+          "value": -50
+        },
+        {
+          "id": "active_skill_base_area_of_effect_radius",
+          "type": "constant",
+          "value": 30
+        },
+        {
+          "id": "graft_skill_xoph_geyser_explosion_number_of_geysers_to_spawn",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "base_skill_effect_duration",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "is_area_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "base_is_projectile",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "quality_display_base_number_of_projectiles_is_gem",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "is_graft_skill",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": 35000,
+      "stored_uses": 1,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "base_skill_effect_duration",
+      "attack_minimum_added_fire_damage\nattack_maximum_added_fire_damage",
+      "base_number_of_projectiles\nquality_display_base_number_of_projectiles_is_gem",
+      "graft_skill_xoph_geyser_explosion_maximum_geysers",
+      "graft_skill_xoph_geyser_explosion_number_of_geysers_to_spawn",
+      "graft_skill_xoph_geyser_explosion_number_of_projectiles_to_erupt",
+      "additional_base_critical_strike_chance",
+      "active_skill_projectile_damage_+%_final",
+      "active_skill_base_area_of_effect_radius",
+      "active_skill_base_secondary_area_of_effect_radius"
+    ],
+    "tags": [
+      "strength",
+      "grants_active_skill",
+      "duration",
+      "area",
+      "projectile",
+      "attack",
+      "fire",
+      "bow"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "Lorsque vous Attaquez avec ce Greffon équipé, celui-ci invoque des piliers de flamme cendreuse. Ces piliers infligent des Dégâts de feu dans une zone et recouvrent de Cendres les Ennemis qu'ils touchent.",
+      "display_name": "Appel du bûcher",
+      "id": "graft_skill_xoph_flame_pillars",
+      "is_manually_casted": false,
+      "is_skill_totem": false,
+      "stat_conversions": {},
+      "types": [
+        "Fire",
+        "Area",
+        "Attack",
+        "Cooldown"
+      ],
+      "weapon_restrictions": [],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "Appel du bûcher",
+      "experience_type": "GemProgressionGraftSkill",
+      "id": "Metadata/Items/Chayula/XophGraftGem3",
+      "max_level": 40,
+      "release_state": "released"
+    },
+    "cast_time": 500,
+    "color": "r",
+    "display_name": "Appel du bûcher",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": 0,
+        "str": null,
+        "dex": 0
+      },
+      "stat_text": {
+        "cover_in_ash_on_hit_%": "Vous Recouvrez les Ennemis de cendres au Toucher",
+        "additional_base_critical_strike_chance": "+8% aux Chances de coup critique"
+      },
+      "stats": [
+        {
+          "id": "attack_minimum_added_fire_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "attack_maximum_added_fire_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "cover_in_ash_on_hit_%",
+          "type": "constant",
+          "value": 100
+        },
+        {
+          "id": "additional_base_critical_strike_chance",
+          "type": "constant",
+          "value": 800
+        },
+        {
+          "id": "active_skill_base_area_of_effect_radius",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "graft_skill_xoph_flame_pillars_number_of_pillars",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "is_area_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "cast_time_overrides_attack_duration",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "is_graft_skill",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": 1000,
+      "stored_uses": 1,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "attack_minimum_added_fire_damage\nattack_maximum_added_fire_damage",
+      "graft_skill_xoph_flame_pillars_number_of_pillars",
+      "additional_base_critical_strike_chance",
+      "active_skill_base_area_of_effect_radius",
+      "cover_in_ash_on_hit_%"
+    ],
+    "tags": [
+      "strength",
+      "grants_active_skill",
+      "fire",
+      "area",
+      "attack",
+      "melee",
+      "bow"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "Lorsque vous subissez une Altération élémentaire avec ce Greffon équipé, il vous purge de toutes les Altérations élémentaires vous affectant, vous octroyant des Dégâts physiques Rajoutés sous forme de Dégâts élémentaires des type correspondants aux Altérations retirées.",
+      "display_name": "Le Vent gris hurle",
+      "id": "graft_skill_xoph_ailment_buff",
+      "is_manually_casted": false,
+      "is_skill_totem": false,
+      "stat_conversions": {},
+      "types": [
+        "Cooldown",
+        "Spell",
+        "Buff"
+      ],
+      "weapon_restrictions": [],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "Le Vent gris hurle",
+      "experience_type": "GemProgressionGraftSkill",
+      "id": "Metadata/Items/Chayula/XophGraftGem4",
+      "max_level": 40,
+      "release_state": "released"
+    },
+    "cast_time": 1000,
+    "color": "r",
+    "display_name": "Le Vent gris hurle",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": 0,
+        "str": null,
+        "dex": 0
+      },
+      "stat_text": null,
+      "stats": [
+        {
+          "id": "base_skill_effect_duration",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "graft_skill_xoph_ailment_buff_%_of_physical_damage_gained_as_element_to_grant",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "base_deal_no_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "is_graft_skill",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": 8000,
+      "stored_uses": 1,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "base_skill_effect_duration",
+      "graft_skill_xoph_ailment_buff_%_of_physical_damage_gained_as_element_to_grant"
+    ],
+    "tags": [
+      "strength",
+      "grants_active_skill",
+      "spell"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "Ce Greffon cible périodiquement les Ennemis Rares ou Uniques à portée en faisant apparaître d'énormes mains qui s'abattent sur eux, infligeant d'importants dégâts et provoquant l'étourdissement.",
+      "display_name": "Retour à la poussière",
+      "id": "graft_skill_uulnetol_hand_slam",
+      "is_manually_casted": false,
+      "is_skill_totem": false,
+      "stat_conversions": {},
+      "types": [
+        "Cooldown",
+        "Melee",
+        "Area",
+        "Physical",
+        "Attack"
+      ],
+      "weapon_restrictions": [],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "Retour à la poussière",
+      "experience_type": "GemProgressionGraftSkill",
+      "id": "Metadata/Items/Chayula/UulNetolGraftGem1",
+      "max_level": 40,
+      "release_state": "released"
+    },
+    "cast_time": 800,
+    "color": "r",
+    "display_name": "Retour à la poussière",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": 0,
+        "str": null,
+        "dex": 0
+      },
+      "stat_text": {
+        "active_skill_base_area_of_effect_radius": "Le Rayon de base est de 2 mètres",
+        "graft_skill_uulnetol_hand_slam_number_of_hands_to_create": "Génère 4 Mains",
+        "additional_base_critical_strike_chance": "+8% aux Chances de coup critique",
+        "always_stun": "Étourdit les Ennemis"
+      },
+      "stats": [
+        {
+          "id": "attack_minimum_added_physical_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "attack_maximum_added_physical_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "active_skill_base_area_of_effect_radius",
+          "type": "constant",
+          "value": 20
+        },
+        {
+          "id": "graft_skill_uulnetol_hand_slam_number_of_hands_to_create",
+          "type": "constant",
+          "value": 4
+        },
+        {
+          "id": "additional_base_critical_strike_chance",
+          "type": "constant",
+          "value": 800
+        },
+        {
+          "id": "base_stun_duration_+%",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "is_area_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "always_stun",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "cast_time_overrides_attack_duration",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "is_graft_skill",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": 10000,
+      "stored_uses": 1,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "attack_minimum_added_physical_damage\nattack_maximum_added_physical_damage",
+      "graft_skill_uulnetol_hand_slam_number_of_hands_to_create",
+      "base_stun_duration_+%",
+      "always_stun",
+      "additional_base_critical_strike_chance",
+      "active_skill_base_area_of_effect_radius"
+    ],
+    "tags": [
+      "strength",
+      "grants_active_skill",
+      "area",
+      "physical",
+      "attack",
+      "melee",
+      "bow"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "Lorsque vous utilisez un Cri de guerre, ce Greffon fait jaillir des pointes d'os de la terre autour de vous. Lorsque vous utilisez une Attaque Stimulée, ces pointes explosent, infligeant des dégâts dans une zone autour d'elles, provoquant le Saignement et Empalant les Ennemis.",
+      "display_name": "Jaillissement de chair",
+      "id": "graft_skill_uulnetol_bone_spires",
+      "is_manually_casted": false,
+      "is_skill_totem": false,
+      "stat_conversions": {},
+      "types": [
+        "Cooldown",
+        "Attack",
+        "Area",
+        "Physical"
+      ],
+      "weapon_restrictions": [],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "Jaillissement de chair",
+      "experience_type": "GemProgressionGraftSkill",
+      "id": "Metadata/Items/Chayula/UulNetolGraftGem2",
+      "max_level": 40,
+      "release_state": "released"
+    },
+    "cast_time": 1000,
+    "color": "r",
+    "display_name": "Jaillissement de chair",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": 0,
+        "str": null,
+        "dex": 0
+      },
+      "stat_text": {
+        "graft_skill_uulnet_bone_spires_max_spires_allowed": "20 Aiguilles d'os au maximum",
+        "base_skill_effect_duration": "La Durée de base est de 8.00 secondes",
+        "active_skill_base_area_of_effect_radius": "Le Rayon de base est de 4.5 mètres",
+        "impale_on_hit_%_chance": "Empale les Ennemis au Toucher",
+        "active_skill_base_secondary_area_of_effect_radius": "Le Rayon secondaire de base est de 1.7 mètres",
+        "additional_base_critical_strike_chance": "+8% aux Chances de coup critique",
+        "global_bleed_on_hit": "Inflige le Saignement"
+      },
+      "stats": [
+        {
+          "id": "attack_minimum_added_physical_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "attack_maximum_added_physical_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "graft_skill_uulnet_bone_spires_max_spires_allowed",
+          "type": "constant",
+          "value": 20
+        },
+        {
+          "id": "base_skill_effect_duration",
+          "type": "constant",
+          "value": 8000
+        },
+        {
+          "id": "active_skill_base_area_of_effect_radius",
+          "type": "constant",
+          "value": 45
+        },
+        {
+          "id": "impale_on_hit_%_chance",
+          "type": "constant",
+          "value": 100
+        },
+        {
+          "id": "active_skill_base_secondary_area_of_effect_radius",
+          "type": "constant",
+          "value": 17
+        },
+        {
+          "id": "additional_base_critical_strike_chance",
+          "type": "constant",
+          "value": 800
+        },
+        {
+          "id": "graft_skill_uulnetol_bone_spires_num_of_spires_to_create",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "impale_debuff_effect_+%",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "is_area_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "global_bleed_on_hit",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "is_graft_skill",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": 8000,
+      "stored_uses": 1,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "base_skill_effect_duration",
+      "attack_minimum_added_physical_damage\nattack_maximum_added_physical_damage",
+      "graft_skill_uulnet_bone_spires_max_spires_allowed",
+      "graft_skill_uulnetol_bone_spires_num_of_spires_to_create",
+      "additional_base_critical_strike_chance",
+      "active_skill_base_area_of_effect_radius",
+      "active_skill_base_secondary_area_of_effect_radius",
+      "global_bleed_on_hit",
+      "impale_debuff_effect_+%",
+      "impale_on_hit_%_chance"
+    ],
+    "tags": [
+      "strength",
+      "grants_active_skill",
+      "attack",
+      "area",
+      "physical",
+      "melee",
+      "bow"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "Tant que vous avez de la Rage, ce Greffon vous applique périodiquement un effet bénéfique qui vous octroie une chance d'infliger un Empalement supplémentaire et une augmentation de l'effet des Empalements que vous infligez.",
+      "display_name": "Désir violent",
+      "id": "graft_skill_uulnetol_impale_buff",
+      "is_manually_casted": false,
+      "is_skill_totem": false,
+      "stat_conversions": {},
+      "types": [
+        "Cooldown",
+        "Duration",
+        "Buff",
+        "Physical",
+        "Spell"
+      ],
+      "weapon_restrictions": [],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "Désir violent",
+      "experience_type": "GemProgressionGraftSkill",
+      "id": "Metadata/Items/Chayula/UulNetolGraftGem3",
+      "max_level": 40,
+      "release_state": "released"
+    },
+    "cast_time": 1000,
+    "color": "r",
+    "display_name": "Désir violent",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": 0,
+        "str": null,
+        "dex": null
+      },
+      "stat_text": {
+        "graft_skill_uulnetol_impale_buff_%_chance_for_additional_impale_to_grant": "L'Effet bénéfique octroie 30% de chances d'infliger un Empalement supplémentaire aux Ennemis que vous Empalez"
+      },
+      "stats": [
+        {
+          "id": "graft_skill_uulnetol_impale_buff_%_chance_for_additional_impale_to_grant",
+          "type": "constant",
+          "value": 30
+        },
+        {
+          "id": "base_skill_effect_duration",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "graft_skill_uulnetol_impale_buff_impale_effect_%_to_grant",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "base_deal_no_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "is_graft_skill",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": 16000,
+      "stored_uses": 1,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "base_skill_effect_duration",
+      "graft_skill_uulnetol_impale_buff_%_chance_for_additional_impale_to_grant",
+      "graft_skill_uulnetol_impale_buff_impale_effect_%_to_grant"
+    ],
+    "tags": [
+      "strength",
+      "grants_active_skill",
+      "duration",
+      "physical",
+      "spell"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "Tant que votre Vie est Basse, ce Greffon vous confère périodiquement un effet bénéfique qui boost votre taux de récupération de vie et vous octroie une Charge d'endurance.",
+      "display_name": "Tendre étreinte",
+      "id": "graft_skill_uulnetol_lowlife_buff",
+      "is_manually_casted": false,
+      "is_skill_totem": false,
+      "stat_conversions": {},
+      "types": [
+        "Cooldown",
+        "Duration",
+        "Buff",
+        "Spell"
+      ],
+      "weapon_restrictions": [],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "Tendre étreinte",
+      "experience_type": "GemProgressionGraftSkill",
+      "id": "Metadata/Items/Chayula/UulNetolGraftGem4",
+      "max_level": 40,
+      "release_state": "released"
+    },
+    "cast_time": 900,
+    "color": "r",
+    "display_name": "Tendre étreinte",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": 0,
+        "str": null,
+        "dex": null
+      },
+      "stat_text": {
+        "graft_uulnetol_number_of_endurance_charges_to_grant_on_reaching_low_life": "L'Effet bénéfique octroie +1 Charge d'endurance lorsqu'il est acquis",
+        "base_skill_effect_duration": "La Durée de base est de 1.00 secondes"
+      },
+      "stats": [
+        {
+          "id": "graft_uulnetol_number_of_endurance_charges_to_grant_on_reaching_low_life",
+          "type": "constant",
+          "value": 1
+        },
+        {
+          "id": "base_skill_effect_duration",
+          "type": "constant",
+          "value": 1000
+        },
+        {
+          "id": "graft_uulnetol_life_recovery_rate_+%_final_to_grant_on_reaching_low_life",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "base_deal_no_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "is_graft_skill",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": 4000,
+      "stored_uses": 1,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "base_skill_effect_duration",
+      "graft_uulnetol_life_recovery_rate_+%_final_to_grant_on_reaching_low_life",
+      "graft_uulnetol_number_of_endurance_charges_to_grant_on_reaching_low_life"
+    ],
+    "tags": [
+      "strength",
+      "grants_active_skill",
+      "duration",
+      "spell"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "Lorsqu'il en reçoit l'ordre, ce Greffon invoque un anneau d'éclairs qui inflige des dégâts de foudre et laisse derrière lui une zone de Sol radieux.",
+      "display_name": "Anneau de lumière",
+      "id": "graft_skill_esh_lightning_ring",
+      "is_manually_casted": false,
+      "is_skill_totem": false,
+      "stat_conversions": {},
+      "types": [
+        "Cooldown",
+        "Spell",
+        "Area",
+        "Damage",
+        "Lightning",
+        "Duration",
+        "Buff",
+        "AreaSpell"
+      ],
+      "weapon_restrictions": [],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "Anneau de lumière",
+      "experience_type": "GemProgressionGraftSkill",
+      "id": "Metadata/Items/Chayula/EshGraftGem1",
+      "max_level": 40,
+      "release_state": "released"
+    },
+    "cast_time": 1000,
+    "color": "b",
+    "display_name": "Anneau de lumière",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": 1200,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": null,
+        "str": 0,
+        "dex": null
+      },
+      "stat_text": {
+        "active_skill_base_area_of_effect_radius": "Le Rayon de base est de 3 mètres",
+        "active_skill_base_secondary_area_of_effect_radius": "Le Rayon secondaire de base est de 2.2 mètres"
+      },
+      "stats": [
+        {
+          "id": "spell_minimum_base_lightning_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "spell_maximum_base_lightning_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "active_skill_base_area_of_effect_radius",
+          "type": "constant",
+          "value": 30
+        },
+        {
+          "id": "active_skill_base_secondary_area_of_effect_radius",
+          "type": "constant",
+          "value": 22
+        },
+        {
+          "id": "graft_skill_esh_lightning_bolts_delay_between_bolts_ms",
+          "type": "constant",
+          "value": 125
+        },
+        {
+          "id": "base_skill_effect_duration",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "graft_granted_minimum_base_lightning_damage",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "graft_granted_maximum_base_lightning_damage",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "graft_skill_esh_lightning_bolts_number_of_bolts",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "is_area_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "is_graft_skill",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": 15000,
+      "stored_uses": 1,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "spell_minimum_base_lightning_damage\nspell_maximum_base_lightning_damage",
+      "base_skill_effect_duration",
+      "graft_granted_minimum_base_lightning_damage\ngraft_granted_maximum_base_lightning_damage",
+      "graft_skill_esh_lightning_bolts_number_of_bolts",
+      "active_skill_base_area_of_effect_radius",
+      "active_skill_base_secondary_area_of_effect_radius"
+    ],
+    "tags": [
+      "intelligence",
+      "grants_active_skill",
+      "spell",
+      "area",
+      "lightning",
+      "duration"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "Tant que des Ennemis sont proches, ce Greffon fera périodiquement apparaître des Clones de vous imprégnés de foudre. Ces Clones se dirigeront vers l'Ennemi le plus proche, exploseront et laisseront derrière eux une zone de Sol électrocutant.",
+      "display_name": "Silhouette scintillante",
+      "id": "graft_skill_esh_lightning_clones",
+      "is_manually_casted": false,
+      "is_skill_totem": false,
+      "stat_conversions": {},
+      "types": [
+        "Spell",
+        "Lightning",
+        "Duration",
+        "Area",
+        "Damage",
+        "AreaSpell",
+        "Cooldown"
+      ],
+      "weapon_restrictions": [],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "Silhouette scintillante",
+      "experience_type": "GemProgressionGraftSkill",
+      "id": "Metadata/Items/Chayula/EshGraftGem2",
+      "max_level": 40,
+      "release_state": "released"
+    },
+    "cast_time": 1000,
+    "color": "b",
+    "display_name": "Silhouette scintillante",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": 1200,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": null,
+        "str": 0,
+        "dex": null
+      },
+      "stat_text": {
+        "base_skill_effect_duration": "La Durée de base est de 8.00 secondes",
+        "active_skill_base_area_of_effect_radius": "Le Rayon de base est de 2 mètres",
+        "base_secondary_skill_effect_duration": "La Durée secondaire de base est de 8.00 secondes",
+        "graft_skill_esh_lightning_clones_number_of_clones_to_create": "Génère 1 Clone imprégné de foudre"
+      },
+      "stats": [
+        {
+          "id": "spell_minimum_base_lightning_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "spell_maximum_base_lightning_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "base_skill_effect_duration",
+          "type": "constant",
+          "value": 8000
+        },
+        {
+          "id": "active_skill_base_area_of_effect_radius",
+          "type": "constant",
+          "value": 20
+        },
+        {
+          "id": "base_secondary_skill_effect_duration",
+          "type": "constant",
+          "value": 8000
+        },
+        {
+          "id": "graft_skill_esh_lightning_clones_number_of_clones_to_create",
+          "type": "constant",
+          "value": 1
+        },
+        {
+          "id": "is_area_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "is_graft_skill",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": 5000,
+      "stored_uses": 1,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "spell_minimum_base_lightning_damage\nspell_maximum_base_lightning_damage",
+      "base_skill_effect_duration",
+      "base_secondary_skill_effect_duration",
+      "graft_skill_esh_lightning_clones_number_of_clones_to_create",
+      "active_skill_base_area_of_effect_radius"
+    ],
+    "tags": [
+      "intelligence",
+      "grants_active_skill",
+      "spell",
+      "lightning",
+      "duration",
+      "area"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "Lorsqu'il en reçoit l'ordre, ce Greffon fait apparaître un champ de mains agrippantes, chacune tenant un orbe de Foudre débilitant. Lorsqu'un Ennemi est proche d'une main, l'orbe qu'elle tient explose, infligeant des Dégâts de foudre et appliquant Amoindrissement au Toucher.",
+      "display_name": "Empoignement débilitant",
+      "id": "graft_skill_esh_lightning_hands",
+      "is_manually_casted": false,
+      "is_skill_totem": false,
+      "stat_conversions": {},
+      "types": [
+        "Cooldown",
+        "Area",
+        "Spell",
+        "AreaSpell",
+        "Damage",
+        "Lightning"
+      ],
+      "weapon_restrictions": [],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "Empoignement débilitant",
+      "experience_type": "GemProgressionGraftSkill",
+      "id": "Metadata/Items/Chayula/EshGraftGem3",
+      "max_level": 40,
+      "release_state": "released"
+    },
+    "cast_time": 900,
+    "color": "b",
+    "display_name": "Empoignement débilitant",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": 1200,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": null,
+        "str": 0,
+        "dex": null
+      },
+      "stat_text": {
+        "base_skill_effect_duration": "La Durée de base est de 10.00 secondes",
+        "active_skill_base_area_of_effect_radius": "Le Rayon de base est de 4.5 mètres",
+        "graft_skill_esh_lightning_hands_maximum_hands": "40 Mains au maximum",
+        "chance_to_inflict_sapped_%": "Vous Amoindrissez toujours les Ennemis au Toucher",
+        "active_skill_base_secondary_area_of_effect_radius": "Le Rayon secondaire de base est de 1.5 mètres"
+      },
+      "stats": [
+        {
+          "id": "spell_minimum_base_lightning_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "spell_maximum_base_lightning_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "base_skill_effect_duration",
+          "type": "constant",
+          "value": 10000
+        },
+        {
+          "id": "active_skill_base_area_of_effect_radius",
+          "type": "constant",
+          "value": 45
+        },
+        {
+          "id": "graft_skill_esh_lightning_hands_maximum_hands",
+          "type": "constant",
+          "value": 40
+        },
+        {
+          "id": "chance_to_inflict_sapped_%",
+          "type": "constant",
+          "value": 100
+        },
+        {
+          "id": "active_skill_base_secondary_area_of_effect_radius",
+          "type": "constant",
+          "value": 15
+        },
+        {
+          "id": "graft_skill_esh_lightning_hands_number_of_hands_spawned",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "is_area_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "is_graft_skill",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": 12000,
+      "stored_uses": 1,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "spell_minimum_base_lightning_damage\nspell_maximum_base_lightning_damage",
+      "chance_to_inflict_sapped_%",
+      "base_skill_effect_duration",
+      "graft_skill_esh_lightning_hands_maximum_hands",
+      "graft_skill_esh_lightning_hands_number_of_hands_spawned",
+      "active_skill_base_area_of_effect_radius",
+      "active_skill_base_secondary_area_of_effect_radius"
+    ],
+    "tags": [
+      "intelligence",
+      "grants_active_skill",
+      "area",
+      "spell",
+      "lightning"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "Lorsque vous infligez un Coup critique à un Ennemi, ce Greffon vous applique un cumul de Secousse. Secousse est un effet cumulable jusqu'à 10 fois, qui vous octroie Davantage de Dégâts d'attaque maximaux, mais Augmente les Dégâts que vous subissez. ",
+      "display_name": "Tendons surchargés",
+      "id": "graft_skill_esh_jolt_buff",
+      "is_manually_casted": false,
+      "is_skill_totem": false,
+      "stat_conversions": {},
+      "types": [
+        "Cooldown",
+        "Spell",
+        "Lightning",
+        "Buff"
+      ],
+      "weapon_restrictions": [],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "Tendons surchargés",
+      "experience_type": "GemProgressionGraftSkill",
+      "id": "Metadata/Items/Chayula/EshGraftGem4",
+      "max_level": 40,
+      "release_state": "released"
+    },
+    "cast_time": 200,
+    "color": "b",
+    "display_name": "Tendons surchargés",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": null,
+        "str": 0,
+        "dex": null
+      },
+      "stat_text": {
+        "graft_skill_esh_jolt_damage_taken_+%_to_grant": "Chaque Secousse octroie 1% d'Augmentation des Dégâts subis"
+      },
+      "stats": [
+        {
+          "id": "graft_skill_jolt_buff_maximum_buff_count",
+          "type": "constant",
+          "value": 10
+        },
+        {
+          "id": "graft_skill_esh_jolt_damage_taken_+%_to_grant",
+          "type": "constant",
+          "value": 1
+        },
+        {
+          "id": "graft_skill_esh_jolt_maximum_attack_damage_+%_final_to_grant",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "base_skill_effect_duration",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "base_deal_no_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "is_graft_skill",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": 300,
+      "stored_uses": 1,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "base_skill_effect_duration",
+      "graft_skill_esh_jolt_damage_taken_+%_to_grant",
+      "graft_skill_esh_jolt_maximum_attack_damage_+%_final_to_grant"
+    ],
+    "tags": [
+      "intelligence",
+      "grants_active_skill",
+      "spell",
+      "lightning"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "Lorsqu'il en reçoit l'ordre, ce Greffon fait apparaître une tornade dévastatrice qui inflige rapidement des dégâts de froid aux Ennemis qui se trouvent dedans. Lorsque vous infligez un Coup critique avec une Attaque pendant qu'une Tornade est active, cette dernière projette une nova de projectiles de glace.",
+      "display_name": "Danse dans le Blanc",
+      "id": "graft_skill_tul_tornado",
+      "is_manually_casted": true,
+      "is_skill_totem": false,
+      "stat_conversions": {},
+      "types": [
+        "Cooldown",
+        "Spell",
+        "Damage",
+        "Projectile",
+        "Duration",
+        "Area",
+        "ChillingArea",
+        "DamageOverTime",
+        "Cold",
+        "AreaSpell"
+      ],
+      "weapon_restrictions": [],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "Danse dans le Blanc",
+      "experience_type": "GemProgressionGraftSkill",
+      "id": "Metadata/Items/Chayula/TulGraftGem1",
+      "max_level": 40,
+      "release_state": "released"
+    },
+    "cast_time": 500,
+    "color": "g",
+    "display_name": "Danse dans le Blanc",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": 1800,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": null,
+        "str": 0,
+        "dex": null
+      },
+      "stat_text": {
+        "tornado_base_damage_interval_ms": "Inflige des Dégâts toutes les 0.25 secondes",
+        "number_of_tornados_allowed": "1 Tornade au maximum",
+        "active_skill_base_area_of_effect_radius": "Le Rayon de base est de 2 mètres",
+        "base_skill_effect_duration": "La Durée de base est de 12.00 secondes",
+        "base_secondary_skill_effect_duration": "La Durée secondaire de base est de 3.00 secondes",
+        "active_skill_base_secondary_area_of_effect_radius": "Le Rayon secondaire de base est de 1.5 mètres"
+      },
+      "stats": [
+        {
+          "id": "spell_minimum_base_cold_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "spell_maximum_base_cold_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "tornado_base_damage_interval_ms",
+          "type": "constant",
+          "value": 250
+        },
+        {
+          "id": "number_of_tornados_allowed",
+          "type": "constant",
+          "value": 1
+        },
+        {
+          "id": "active_skill_base_area_of_effect_radius",
+          "type": "constant",
+          "value": 20
+        },
+        {
+          "id": "base_skill_effect_duration",
+          "type": "constant",
+          "value": 12000
+        },
+        {
+          "id": "base_secondary_skill_effect_duration",
+          "type": "constant",
+          "value": 3000
+        },
+        {
+          "id": "active_skill_base_secondary_area_of_effect_radius",
+          "type": "constant",
+          "value": 15
+        },
+        {
+          "id": "is_area_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "is_graft_skill",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": 24000,
+      "stored_uses": 1,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "spell_minimum_base_cold_damage\nspell_maximum_base_cold_damage",
+      "base_skill_effect_duration",
+      "base_secondary_skill_effect_duration",
+      "tornado_base_damage_interval_ms",
+      "active_skill_base_area_of_effect_radius",
+      "active_skill_base_secondary_area_of_effect_radius",
+      "number_of_tornados_allowed"
+    ],
+    "tags": [
+      "dexterity",
+      "grants_active_skill",
+      "spell",
+      "projectile",
+      "duration",
+      "area",
+      "cold"
+    ],
+    "secondary_granted_effect": "GraftSkillTulTornadoProjectile",
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "Tant qu'il est équipé, ce Greffon lance périodiquement des mortiers glaciaux sur les Ennemis Frigorifiés ou Gelés à portée.",
+      "display_name": "Chute de cristaux",
+      "id": "graft_skill_tul_mortars",
+      "is_manually_casted": false,
+      "is_skill_totem": false,
+      "stat_conversions": {},
+      "types": [
+        "Area",
+        "Projectile",
+        "Cooldown",
+        "Cold",
+        "Damage",
+        "Spell",
+        "AreaSpell"
+      ],
+      "weapon_restrictions": [],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "Chute de cristaux",
+      "experience_type": "GemProgressionGraftSkill",
+      "id": "Metadata/Items/Chayula/TulGraftGem2",
+      "max_level": 40,
+      "release_state": "released"
+    },
+    "cast_time": 300,
+    "color": "g",
+    "display_name": "Chute de cristaux",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": 1800,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": null,
+        "str": 0,
+        "dex": null
+      },
+      "stat_text": {
+        "graft_skill_tul_mortars_maximum_mortars_fired_per_volley": "Tire des Projectiles de mortier sur un maximum de 4 cibles Frigorifiées ou Gelées situées à portée",
+        "active_skill_base_area_of_effect_radius": "Le Rayon de base est de 4.5 mètres",
+        "active_skill_base_secondary_area_of_effect_radius": "Le Rayon secondaire de base est de 1 mètre",
+        "always_pierce": "Les Projectiles Transpercent toutes les cibles",
+        "never_freeze": "Ne peut pas Geler",
+        "never_chill": "Ne peut pas Frigorifier"
+      },
+      "stats": [
+        {
+          "id": "spell_minimum_base_cold_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "spell_maximum_base_cold_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "graft_skill_tul_mortars_maximum_mortars_fired_per_volley",
+          "type": "constant",
+          "value": 4
+        },
+        {
+          "id": "active_skill_base_area_of_effect_radius",
+          "type": "constant",
+          "value": 45
+        },
+        {
+          "id": "active_skill_base_secondary_area_of_effect_radius",
+          "type": "constant",
+          "value": 10
+        },
+        {
+          "id": "base_is_projectile",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "is_area_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "always_pierce",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "never_freeze",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "never_chill",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "is_graft_skill",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": 1,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "spell_minimum_base_cold_damage\nspell_maximum_base_cold_damage",
+      "always_pierce",
+      "graft_skill_tul_mortars_maximum_mortars_fired_per_volley",
+      "never_freeze",
+      "never_chill",
+      "active_skill_base_area_of_effect_radius",
+      "active_skill_base_secondary_area_of_effect_radius"
+    ],
+    "tags": [
+      "dexterity",
+      "grants_active_skill",
+      "area",
+      "projectile",
+      "cold",
+      "spell"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "Lorsque vous utilisez une aptitude d'Offrande, ce Greffon invoque une armée de Monstres de Brèche Ruchenés pour exécuter vos ordres. Les Dégâts physiques de ces monstres invoqués sont Convertis en Dégâts de froid et ont une chance d'infliger Fragilisation au toucher.",
+      "display_name": "La Grande avalanche",
+      "id": "graft_skill_tul_summon",
+      "is_manually_casted": false,
+      "is_skill_totem": false,
+      "stat_conversions": {},
+      "types": [
+        "Cooldown",
+        "Minion",
+        "Spell"
+      ],
+      "weapon_restrictions": [],
+      "minion_types": [
+        "Attack",
+        "Cold",
+        "Melee"
+      ],
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "La Grande avalanche",
+      "experience_type": "GemProgressionGraftSkill",
+      "id": "Metadata/Items/Chayula/TulGraftGem3",
+      "max_level": 40,
+      "release_state": "released"
+    },
+    "cast_time": 1000,
+    "color": "b",
+    "display_name": "La Grande avalanche",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": null,
+        "str": 0,
+        "dex": null
+      },
+      "stat_text": {
+        "base_skill_effect_duration": "La Durée de base est de 10.00 secondes",
+        "active_skill_base_area_of_effect_radius": "Le Rayon de base est de 4.5 mètres",
+        "graft_skill_tul_summon_maximum_allowed_demons": "30 Ruchenés au maximum"
+      },
+      "stats": [
+        {
+          "id": "base_skill_effect_duration",
+          "type": "constant",
+          "value": 10000
+        },
+        {
+          "id": "active_skill_base_area_of_effect_radius",
+          "type": "constant",
+          "value": 45
+        },
+        {
+          "id": "graft_skill_tul_summon_maximum_allowed_demons",
+          "type": "constant",
+          "value": 30
+        },
+        {
+          "id": "graft_skill_tul_summon_number_of_demons_to_summon",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "minion_targeting_use_parent_location",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "is_graft_skill",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": 18000,
+      "stored_uses": 1,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "base_skill_effect_duration",
+      "graft_skill_tul_summon_maximum_allowed_demons",
+      "graft_skill_tul_summon_number_of_demons_to_summon",
+      "active_skill_base_area_of_effect_radius"
+    ],
+    "tags": [
+      "intelligence",
+      "grants_active_skill",
+      "minion",
+      "spell"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "Lorsque vous appliquez une exposition à un ennemi, ce Greffon vous confère un effet bénéfique qui subit les dégâts élémentaires au toucher à votre place tant qu'il est actif.",
+      "display_name": "Calme conservateur",
+      "id": "graft_skill_tul_aegis",
+      "is_manually_casted": false,
+      "is_skill_totem": false,
+      "stat_conversions": {},
+      "types": [
+        "Cooldown",
+        "Duration",
+        "Buff",
+        "Fire",
+        "Cold",
+        "Lightning"
+      ],
+      "weapon_restrictions": [],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "Calme conservateur",
+      "experience_type": "GemProgressionGraftSkill",
+      "id": "Metadata/Items/Chayula/TulGraftGem4",
+      "max_level": 40,
+      "release_state": "released"
+    },
+    "cast_time": 100,
+    "color": "g",
+    "display_name": "Calme conservateur",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": null,
+        "str": 0,
+        "dex": null
+      },
+      "stat_text": {
+        "base_skill_effect_duration": "La Durée de base est de 4.00 secondes"
+      },
+      "stats": [
+        {
+          "id": "base_skill_effect_duration",
+          "type": "additional",
+          "value": 4000
+        },
+        {
+          "id": "graft_skill_tul_aegis_aegis_shield_amount_granted_on_applying_exposure",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "base_deal_no_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "is_graft_skill",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": 6000,
+      "stored_uses": 1,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "base_skill_effect_duration",
+      "graft_skill_tul_aegis_aegis_shield_amount_granted_on_applying_exposure"
+    ],
+    "tags": [
+      "dexterity",
+      "grants_active_skill",
+      "duration",
+      "fire",
+      "cold",
+      "lightning"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
       "description": "Frappez vos ennemis d'un coup puissant.",
       "display_name": "Attaque de test",
       "id": "playtest_attack",
@@ -124923,6 +128086,293 @@
       ],
       "added_types": null,
       "added_minion_types": null
+    }
+  },
+  {
+    "active_skill": null,
+    "base_item": {
+      "display_name": "Soutien : Rafale de vent",
+      "experience_type": "GemProgression31",
+      "id": "Metadata/Items/Gems/SupportGemWindburst",
+      "max_level": 20,
+      "release_state": "released"
+    },
+    "cast_time": null,
+    "color": "g",
+    "display_name": "Soutien : Rafale de vent",
+    "is_support": true,
+    "stat_translation_file": "stat_translations/support_gem",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [
+        {
+          "stat": "Les Aptitudes modifiées ont {projectile_damage_+%}% d'Augmentation des Dégâts des Projectiles",
+          "stats": {
+            "projectile_damage_+%": 500
+          }
+        }
+      ],
+      "stat_requirements": {
+        "int": 0,
+        "str": 0,
+        "dex": null
+      },
+      "stat_text": {
+        "support_trigger_tornados_on_attack_hit_after_moving_X_metres": "Les Attaques modifiées Déclenchent Rafale de vent au Toucher, pas plus d'une fois tous les 10 mètres parcourus"
+      },
+      "stats": [
+        {
+          "id": "support_trigger_tornados_on_attack_hit_after_moving_X_metres",
+          "type": "constant",
+          "value": 10
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": 120,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "projectile_damage_+%",
+      "support_trigger_tornados_on_attack_hit_after_moving_X_metres"
+    ],
+    "tags": [
+      "dexterity",
+      "support",
+      "grants_active_skill",
+      "attack",
+      "projectile",
+      "trigger",
+      "area",
+      "duration",
+      "bow"
+    ],
+    "secondary_granted_effect": "TriggeredSupportWindburst",
+    "quest_reward": {
+      "act": 3,
+      "classes": [
+        "Duelliste",
+        "Rôdeuse"
+      ],
+      "quest": "Une Rencontre fortuite"
+    },
+    "discriminator": null,
+    "support_gem": {
+      "allowed_types": [
+        "Attack"
+      ],
+      "letter": ")",
+      "supports_gems_only": false,
+      "support_name": "",
+      "support_text": "Modifie les aptitudes d'attaque, leur permettant de déclencher Rafale de vent au toucher après que vous avez parcouru une certaine distance. Ne peut pas modifier les aptitudes déclenchées ni les aptitudes utilisées par toute autre entité que vous. Ne peut pas modifier les aptitudes des Créatures.",
+      "excluded_types": [
+        "SummonsTotem",
+        "Trapped",
+        "RemoteMined",
+        "DisallowTriggerSupports",
+        "Triggered",
+        "OtherThingUsesSkill"
+      ],
+      "added_types": null,
+      "added_minion_types": null
+    }
+  },
+  {
+    "active_skill": null,
+    "base_item": {
+      "display_name": "Soutien : Instabilité cinétique",
+      "experience_type": "GemProgression18",
+      "id": "Metadata/Items/Gems/SupportGemKineticInstability",
+      "max_level": 20,
+      "release_state": "released"
+    },
+    "cast_time": null,
+    "color": "b",
+    "display_name": "Soutien : Instabilité cinétique",
+    "is_support": true,
+    "stat_translation_file": "stat_translations/support_gem",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [
+        {
+          "stat": "Les Aptitudes modifiées ont {attack_damage_+%}% d'Augmentation des Dégâts d'Attaque",
+          "stats": {
+            "attack_damage_+%": 500
+          }
+        }
+      ],
+      "stat_requirements": {
+        "int": null,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "support_kinetic_instability_chance_to_create_instability_on_kill_%": "Les Aptitudes modifiées déclenchent Flux cinétique en Tuant"
+      },
+      "stats": [
+        {
+          "id": "support_kinetic_instability_chance_to_create_instability_on_kill_%",
+          "type": "constant",
+          "value": 100
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": 120,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "attack_damage_+%",
+      "support_kinetic_instability_chance_to_create_instability_on_kill_%"
+    ],
+    "tags": [
+      "intelligence",
+      "support",
+      "grants_active_skill",
+      "area",
+      "trigger",
+      "attack",
+      "duration"
+    ],
+    "secondary_granted_effect": "TriggeredSupportKineticInstability",
+    "quest_reward": {
+      "act": 2,
+      "classes": [
+        "Sorcière"
+      ],
+      "quest": "Pic de cruauté"
+    },
+    "discriminator": null,
+    "support_gem": {
+      "allowed_types": [
+        "RangedAttack"
+      ],
+      "letter": "`",
+      "supports_gems_only": false,
+      "support_name": "",
+      "support_text": "Modifie les attaques à la baguette, leur octroyant une chance de déclencher Flux cinétique en tuant. Ne peut pas modifier les aptitudes déclenchées ni les aptitudes utilisées par toute autre entité que vous. Ne peut pas modifier les aptitudes des créatures.",
+      "excluded_types": [
+        "Trapped",
+        "RemoteMined",
+        "SummonsTotem",
+        "DisallowTriggerSupports",
+        "Minion"
+      ],
+      "added_types": null,
+      "added_minion_types": null
+    }
+  },
+  {
+    "active_skill": null,
+    "base_item": {
+      "display_name": "Soutien : Foudre vivante",
+      "experience_type": "GemProgression18",
+      "id": "Metadata/Items/Gems/SupportGemLivingLightning",
+      "max_level": 20,
+      "release_state": "released"
+    },
+    "cast_time": null,
+    "color": "b",
+    "display_name": "Soutien : Foudre vivante",
+    "is_support": true,
+    "stat_translation_file": "stat_translations/support_gem",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": null,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "summon_living_lightning_on_lightning_hit": "Déclenche Invocation de Foudre vivante au Toucher lorsqu'une Aptitude modifiée inflige des Dégâts de foudre au Toucher"
+      },
+      "stats": [
+        {
+          "id": "summon_living_lightning_on_lightning_hit",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": 120,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "summon_living_lightning_on_lightning_hit"
+    ],
+    "tags": [
+      "lightning",
+      "intelligence",
+      "support",
+      "grants_active_skill",
+      "spell",
+      "minion",
+      "duration",
+      "trigger"
+    ],
+    "secondary_granted_effect": "TriggeredSupportLivingLightning",
+    "quest_reward": {
+      "act": 2,
+      "classes": [
+        "Sorcière"
+      ],
+      "quest": "Pic de cruauté"
+    },
+    "discriminator": null,
+    "support_gem": {
+      "allowed_types": [
+        "Attack",
+        "Damage"
+      ],
+      "letter": "?",
+      "supports_gems_only": false,
+      "support_name": "",
+      "support_text": "Modifie les aptitudes qui infligent des dégâts au Toucher, leur permettant de déclencher Invocation de Foudre vivante lorsqu'elles infligent des dégâts de foudre. Ne peut pas modifier les aptitudes utilisées par les totems, pièges ou mines. Ne peut pas modifier les aptitudes des Créatures.",
+      "excluded_types": [
+        "Trapped",
+        "RemoteMined",
+        "SummonsTotem",
+        "DisallowTriggerSupports"
+      ],
+      "added_types": [
+        "CreatesMinion",
+        "MinionsCanExplode"
+      ],
+      "added_minion_types": [
+        "Duration",
+        "Chains",
+        "Lightning",
+        "Attack",
+        "Melee",
+        "MeleeSingleTarget",
+        "Multistrikeable"
+      ]
     }
   },
   {

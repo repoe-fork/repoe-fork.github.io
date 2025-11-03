@@ -2619,7 +2619,7 @@
         "dex": null
       },
       "stat_text": {
-        "active_skill_merged_damage_+%_final_while_dual_wielding": "雙持武器時，每把武器造成 60% 傷害"
+        "active_skill_merged_damage_+%_final_while_dual_wielding": "雙持時，造成兩把武器總和的60%傷害"
       },
       "stats": [
         {
@@ -2745,7 +2745,7 @@
         "dex": null
       },
       "stat_text": {
-        "active_skill_merged_damage_+%_final_while_dual_wielding": "雙持武器時，每把武器造成 60% 傷害",
+        "active_skill_merged_damage_+%_final_while_dual_wielding": "雙持時，造成兩把武器總和的60%傷害",
         "chain_strike_cone_radius_+_per_x_rage": "每 5 層盛怒 +0.1 米範圍",
         "gain_x_rage_on_attack_hit": "攻擊擊中時獲得 2 層盛怒"
       },
@@ -4076,7 +4076,7 @@
       },
       "stat_text": {
         "elemental_hit_damage_+%_final_per_enemy_elemental_ailment\nquality_display_elemental_hit_is_gem": "敵人身上每種類型的元素異常狀態有 10% 更多傷害",
-        "active_skill_base_area_of_effect_radius": "基礎範圍為 1 米",
+        "active_skill_base_area_of_effect_radius": "基礎範圍為 1.4 米",
         "elemental_hit_area_of_effect_+100%_final_vs_enemy_with_associated_ailment": "對被選擇的元素異常狀態影響的敵人，有 80% 更多範圍半徑",
         "elemental_hit_no_damage_of_unchosen_elemental_type": "只會造成被選擇的元素傷害\n其他傷害類型不會造成傷害"
       },
@@ -4119,7 +4119,7 @@
         {
           "id": "active_skill_base_area_of_effect_radius",
           "type": "constant",
-          "value": 10
+          "value": 14
         },
         {
           "id": "chance_to_freeze_shock_ignite_%",
@@ -4149,7 +4149,7 @@
       ],
       "vaal": null,
       "costs": null,
-      "attack_speed_multiplier": null,
+      "attack_speed_multiplier": 20,
       "cooldown": null,
       "stored_uses": null,
       "cost_multiplier": null,
@@ -4218,7 +4218,8 @@
         "RangedAttack",
         "MirageArcherCanUse",
         "Area",
-        "Triggerable"
+        "Triggerable",
+        "WandAttack"
       ],
       "weapon_restrictions": [
         "Bow",
@@ -4385,7 +4386,8 @@
       "stat_conversions": {
         "immortal_call_duration_+%": "skill_effect_duration_+%",
         "mortal_call_cooldown_does_not_tick": "skill_cooldown_does_not_tick",
-        "immortal_call_buff_effect_duration_+%_per_removable_endurance_charge": "buff_effect_duration_+%_per_removable_endurance_charge_limited_to_5"
+        "immortal_call_buff_effect_duration_+%_per_removable_endurance_charge": "buff_effect_duration_+%_per_removable_endurance_charge_limited_to_5",
+        "guard_skill_cooldown_does_not_tick": "skill_cooldown_does_not_tick"
       },
       "types": [
         "Spell",
@@ -4936,7 +4938,7 @@
       },
       "stat_text": {
         "additional_weapon_base_attack_time_ms": "+0.6 秒攻擊時間",
-        "active_skill_merged_damage_+%_final_while_dual_wielding": "雙持武器時，每把武器造成 75% 傷害"
+        "active_skill_merged_damage_+%_final_while_dual_wielding": "雙持時，造成兩把武器總和的75%傷害"
       },
       "stats": [
         {
@@ -5029,7 +5031,8 @@
         "Totemable",
         "Trappable",
         "Mineable",
-        "Triggerable"
+        "Triggerable",
+        "WandAttack"
       ],
       "weapon_restrictions": [
         "Bow",
@@ -5823,7 +5826,7 @@
     "stat_translation_file": "stat_translations/skill",
     "static": {
       "crit_chance": 500,
-      "damage_effectiveness": 70,
+      "damage_effectiveness": 110,
       "quality_stats": [
         {
           "stat": "增加球 {volatile_dead_core_movement_speed_+%}% 移動速度",
@@ -5998,7 +6001,7 @@
         "volatile_dead_base_number_of_corpses_to_consume": "消耗最多 3 個屍體",
         "volatile_dead_max_cores_allowed": "同時最多 60 顆球",
         "active_skill_base_area_of_effect_radius": "基礎範圍為 2.8 米",
-        "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius": "基礎爆炸範圍為 1.5 米",
+        "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius": "基礎爆炸範圍為 2 米",
         "base_skill_effect_duration": "+1.50 秒基礎持續時間"
       },
       "stats": [
@@ -6030,7 +6033,7 @@
         {
           "id": "active_skill_base_secondary_area_of_effect_radius",
           "type": "constant",
-          "value": 15
+          "value": 20
         },
         {
           "id": "active_skill_secondary_area_of_effect_description_mode",
@@ -6144,7 +6147,7 @@
     "stat_translation_file": "stat_translations/skill",
     "static": {
       "crit_chance": 500,
-      "damage_effectiveness": 70,
+      "damage_effectiveness": 110,
       "quality_stats": [
         {
           "stat": "增加球 {volatile_dead_core_movement_speed_+%}% 移動速度",
@@ -8040,7 +8043,7 @@
       "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "殭屍復甦上限 {base_number_of_zombies_allowed}",
+          "stat": "殭屍復甦上限 +{base_number_of_zombies_allowed}",
           "stats": {
             "base_number_of_zombies_allowed": 50
           }
@@ -8118,7 +8121,7 @@
   },
   {
     "active_skill": {
-      "description": "從一個屍體中復甦一隻殭屍，它會跟隨你並使用近戰打擊和範圍重擊攻擊敵人，且不能被閃避。",
+      "description": "從一個屍體中復甦一隻殭屍，它會跟隨你並使用近戰打擊和範圍重擊攻擊敵人。",
       "display_name": "殭屍復甦．重擊",
       "id": "raise_zombie_alt_x",
       "is_manually_casted": true,
@@ -8162,7 +8165,7 @@
       "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "殭屍復甦上限 {base_number_of_zombies_allowed}",
+          "stat": "殭屍復甦上限 +{base_number_of_zombies_allowed}",
           "stats": {
             "base_number_of_zombies_allowed": 50
           }
@@ -8250,7 +8253,7 @@
   },
   {
     "active_skill": {
-      "description": "將死靈能量召喚至目標上空，之後轉化為殭屍。殭屍會砸落地面，以衝擊波造成範圍傷害，隨後殭屍就會死亡。",
+      "description": "將死靈能量召喚至目標上空，之後轉化為殭屍。殭屍會砸落地面，以衝擊波造成範圍傷害。殭屍無法在衝擊中倖存。",
       "display_name": "殭屍復甦．殞落",
       "id": "raise_zombie_alt_y",
       "is_manually_casted": true,
@@ -8305,8 +8308,7 @@
       },
       "stat_text": {
         "base_number_of_zombies_allowed\nquality_display_raise_zombie_is_gem": "",
-        "raise_zombie_does_not_use_corpses": "不需要屍體",
-        "minion_global_always_hit": "召喚物的擊中不能被閃避"
+        "raise_zombie_does_not_use_corpses": "不需要屍體"
       },
       "stats": [
         {
@@ -8343,11 +8345,6 @@
           "id": "raise_zombie_does_not_use_corpses",
           "type": "implicit",
           "value": 1
-        },
-        {
-          "id": "minion_global_always_hit",
-          "type": "implicit",
-          "value": 1
         }
       ],
       "vaal": null,
@@ -8363,7 +8360,6 @@
       "damage_multiplier": null
     },
     "tooltip_order": [
-      "minion_global_always_hit",
       "base_number_of_zombies_allowed\nquality_display_raise_zombie_is_gem",
       "raise_zombie_does_not_use_corpses",
       "minion_chance_to_deal_double_damage_%"
@@ -12373,11 +12369,6 @@
           "value": null
         },
         {
-          "id": "accuracy_rating",
-          "type": "additional",
-          "value": null
-        },
-        {
           "id": "infinite_minion_duration",
           "type": "implicit",
           "value": 1
@@ -12400,7 +12391,6 @@
       "minion_elemental_resistance_%",
       "active_skill_minion_movement_velocity_+%_final",
       "movement_velocity_cap",
-      "accuracy_rating",
       "raised_spectre_level"
     ],
     "tags": [
@@ -12483,7 +12473,7 @@
       "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "喚醒幽魂上限 {base_number_of_spectres_allowed}",
+          "stat": "喚醒幽魂上限為 {base_number_of_spectres_allowed}",
           "stats": {
             "base_number_of_spectres_allowed": 50
           }
@@ -12527,11 +12517,6 @@
           "value": null
         },
         {
-          "id": "accuracy_rating",
-          "type": "additional",
-          "value": null
-        },
-        {
           "id": "base_number_of_spectres_allowed",
           "type": "additional",
           "value": null
@@ -12562,7 +12547,6 @@
     "tooltip_order": [
       "spectres_have_base_duration_ms",
       "base_number_of_spectres_allowed",
-      "accuracy_rating",
       "minion_elemental_resistance_%",
       "active_skill_minion_movement_velocity_+%_final",
       "movement_velocity_cap",
@@ -13437,6 +13421,132 @@
     ],
     "secondary_granted_effect": null,
     "quest_reward": null,
+    "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "創造一道友軍和敵人皆可穿越的力量之牆。能夠與敵方碰撞的友方投射物將會與此牆發生碰撞，並從牆上連鎖至附近目標。每一投射物只能與力量之牆碰撞一次。",
+      "display_name": "力量之壁",
+      "id": "wall_of_force",
+      "is_manually_casted": true,
+      "is_skill_totem": false,
+      "stat_conversions": {},
+      "types": [
+        "Spell",
+        "Duration",
+        "Trappable",
+        "Totemable",
+        "Mineable",
+        "Triggerable",
+        "Cooldown"
+      ],
+      "weapon_restrictions": [],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "力量之壁",
+      "experience_type": "GemProgression16",
+      "id": "Metadata/Items/Gems/SkillGemWallOfForce",
+      "max_level": 20,
+      "release_state": "released"
+    },
+    "cast_time": 500,
+    "color": "b",
+    "display_name": "力量之壁",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [
+        {
+          "stat": "增加 {base_cooldown_speed_+%}% 冷卻恢復速度",
+          "stats": {
+            "base_cooldown_speed_+%": 1000
+          }
+        }
+      ],
+      "stat_requirements": {
+        "int": null,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "display_wall_of_force_restrictions": "與牆體碰撞的投射物無法裂化、穿透、或分裂\n與牆體碰撞的投射物可以額外連鎖一次\n投射物僅能連鎖至牆體同一側的目標"
+      },
+      "stats": [
+        {
+          "id": "base_skill_effect_duration",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "wall_maximum_length",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "kinetic_wall_damage_+%_final_for_projectiles_chaining_off_wall",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "kinetic_wall_maximum_number_of_hits",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "base_deal_no_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "quality_display_wall_length_is_gem",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "display_wall_of_force_restrictions",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": 9000,
+      "stored_uses": 1,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "base_skill_effect_duration",
+      "wall_maximum_length\nquality_display_wall_length_is_gem",
+      "base_cooldown_speed_+%",
+      "display_wall_of_force_restrictions",
+      "kinetic_wall_damage_+%_final_for_projectiles_chaining_off_wall",
+      "kinetic_wall_maximum_number_of_hits"
+    ],
+    "tags": [
+      "intelligence",
+      "grants_active_skill",
+      "spell",
+      "duration"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": {
+      "act": 2,
+      "classes": [
+        "女巫"
+      ],
+      "quest": "黑色入侵者"
+    },
     "discriminator": null,
     "support_gem": null
   },
@@ -17247,7 +17357,7 @@
         "dex": 0
       },
       "stat_text": {
-        "active_skill_damage_+%_final": "造成 75% 更多傷害",
+        "active_skill_damage_+%_final": "造成75%更多傷害",
         "global_always_hit": "不能閃避"
       },
       "stats": [
@@ -20137,7 +20247,8 @@
       "stat_conversions": {
         "molten_shell_duration_+%": "skill_effect_duration_+%",
         "molten_shell_buff_effect_+%": "skill_buff_effect_+%",
-        "molten_shell_cooldown_does_not_tick": "skill_cooldown_does_not_tick"
+        "molten_shell_cooldown_does_not_tick": "skill_cooldown_does_not_tick",
+        "guard_skill_cooldown_does_not_tick": "skill_cooldown_does_not_tick"
       },
       "types": [
         "Spell",
@@ -20186,7 +20297,7 @@
         "dex": 0
       },
       "stat_text": {
-        "molten_shell_damage_absorbed_%\nmolten_shell_damage_absorb_limit_%_of_armour\nmolten_shell_max_damage_absorbed": "你的生命或能量護盾承受的 75% 傷害先由增益效果扣除\n增益效果額外承受等同你護甲 10% 的傷害，最多 5000",
+        "molten_shell_damage_absorbed_%\nmolten_shell_damage_absorb_limit_%_of_armour\nmolten_shell_max_damage_absorbed": "受到的擊中傷害有 75% 會先由該增益效果承受，再由你的生命或能量護盾承受\n該增益效果可承受相當於你護甲值 10% 的傷害，最多為 5000",
         "base_skill_effect_duration": "+3.00 秒基礎持續時間",
         "display_this_skill_cooldown_does_not_recover_during_buff": "此技能的冷卻時間在它的效果持續時間內不會恢復"
       },
@@ -20297,7 +20408,8 @@
       "is_skill_totem": false,
       "stat_conversions": {
         "molten_shell_duration_+%": "skill_effect_duration_+%",
-        "molten_shell_buff_effect_+%": "skill_buff_effect_+%"
+        "molten_shell_buff_effect_+%": "skill_buff_effect_+%",
+        "guard_skill_cooldown_does_not_tick": "skill_cooldown_does_not_tick"
       },
       "types": [
         "Spell",
@@ -20474,7 +20586,8 @@
         "ProjectilesFromUser",
         "Totemable",
         "Trappable",
-        "Mineable"
+        "Mineable",
+        "WandAttack"
       ],
       "weapon_restrictions": [
         "Wand"
@@ -20776,7 +20889,8 @@
         "Trappable",
         "Mineable",
         "Vaal",
-        "ProjectilesNotFromUser"
+        "ProjectilesNotFromUser",
+        "WandAttack"
       ],
       "weapon_restrictions": [
         "Wand"
@@ -21951,6 +22065,7 @@
       "stat_conversions": {
         "discipline_mana_reservation_+%": "base_reservation_+%",
         "discipline_aura_effect_+%": "aura_effect_+%",
+        "discipline_aura_effect_+%_while_no_power_charges": "aura_effect_+%_while_no_power_charges",
         "discipline_reserves_no_mana": "base_skill_no_reservation",
         "discipline_mana_reservation_efficiency_+%": "base_mana_reservation_efficiency_+%",
         "discipline_mana_reservation_efficiency_-2%_per_1": "mana_reservation_efficiency_-2%_per_1"
@@ -22075,6 +22190,7 @@
       "stat_conversions": {
         "discipline_mana_reservation_+%": "base_reservation_+%",
         "discipline_aura_effect_+%": "aura_effect_+%",
+        "discipline_aura_effect_+%_while_no_power_charges": "aura_effect_+%_while_no_power_charges",
         "discipline_mana_reservation_efficiency_+%": "base_mana_reservation_efficiency_+%",
         "discipline_mana_reservation_efficiency_-2%_per_1": "mana_reservation_efficiency_-2%_per_1"
       },
@@ -22202,6 +22318,7 @@
       "stat_conversions": {
         "grace_mana_reservation_+%": "base_reservation_+%",
         "grace_aura_effect_+%": "aura_effect_+%",
+        "grace_aura_effect_+%_while_no_frenzy_charges": "aura_effect_+%_while_no_frenzy_charges",
         "grace_reserves_no_mana": "base_skill_no_reservation",
         "grace_mana_reservation_efficiency_+%": "base_mana_reservation_efficiency_+%",
         "grace_mana_reservation_efficiency_-2%_per_1": "mana_reservation_efficiency_-2%_per_1"
@@ -22325,6 +22442,7 @@
       "stat_conversions": {
         "grace_mana_reservation_+%": "base_reservation_+%",
         "grace_aura_effect_+%": "aura_effect_+%",
+        "grace_aura_effect_+%_while_no_frenzy_charges": "aura_effect_+%_while_no_frenzy_charges",
         "grace_mana_reservation_efficiency_+%": "base_mana_reservation_efficiency_+%",
         "grace_mana_reservation_efficiency_-2%_per_1": "mana_reservation_efficiency_-2%_per_1"
       },
@@ -22459,6 +22577,7 @@
       "stat_conversions": {
         "determination_mana_reservation_+%": "base_reservation_+%",
         "determination_aura_effect_+%": "aura_effect_+%",
+        "determination_aura_effect_+%_while_no_endurance_charges": "aura_effect_+%_while_no_endurance_charges",
         "determination_reserves_no_mana": "base_skill_no_reservation",
         "determination_mana_reservation_efficiency_+%": "base_mana_reservation_efficiency_+%",
         "determination_mana_reservation_efficiency_-2%_per_1": "mana_reservation_efficiency_-2%_per_1"
@@ -22582,6 +22701,7 @@
       "is_skill_totem": false,
       "stat_conversions": {
         "anger_aura_effect_+%": "aura_effect_+%",
+        "anger_aura_effect_+%_while_at_maximum_endurance_charges": "aura_effect_+%_while_at_maximum_endurance_charges",
         "anger_mana_reservation_+%": "base_reservation_+%",
         "anger_reserves_no_mana": "base_skill_no_reservation",
         "anger_mana_reservation_efficiency_+%": "base_mana_reservation_efficiency_+%",
@@ -22718,6 +22838,7 @@
       "stat_conversions": {
         "hatred_mana_reservation_+%": "base_reservation_+%",
         "hatred_aura_effect_+%": "aura_effect_+%",
+        "hatred_aura_effect_+%_while_at_maximum_frenzy_charges": "aura_effect_+%_while_at_maximum_frenzy_charges",
         "hatred_reserves_no_mana": "base_skill_no_reservation",
         "replica_unique_hyrris_truth_hatred_mana_reservation_+%_final": "reservation_+%_final_from_skill_specific_stat",
         "hatred_mana_reservation_efficiency_+%": "base_mana_reservation_efficiency_+%",
@@ -22840,6 +22961,7 @@
       "stat_conversions": {
         "wrath_mana_reservation_+%": "base_reservation_+%",
         "wrath_aura_effect_+%": "aura_effect_+%",
+        "wrath_aura_effect_+%_while_at_maximum_power_charges": "aura_effect_+%_while_at_maximum_power_charges",
         "wrath_reserves_no_mana": "base_skill_no_reservation",
         "wrath_mana_reservation_efficiency_+%": "base_mana_reservation_efficiency_+%",
         "wrath_mana_reservation_efficiency_-2%_per_1": "mana_reservation_efficiency_-2%_per_1"
@@ -28889,9 +29011,9 @@
       "damage_effectiveness": -65,
       "quality_stats": [
         {
-          "stat": "增加 {consecrated_ground_area_+%}% 奉獻地面範圍",
+          "stat": "增加 {holy_flame_totem_consecrated_ground_area_+%}% 奉獻地面範圍",
           "stats": {
-            "consecrated_ground_area_+%": 2000
+            "holy_flame_totem_consecrated_ground_area_+%": 2000
           }
         }
       ],
@@ -29004,11 +29126,11 @@
       "base_totem_duration",
       "quality_display_base_number_of_projectiles_is_gem",
       "is_totem",
+      "holy_flame_totem_consecrated_ground_area_+%",
       "modifiers_to_projectile_count_do_not_apply",
       "skill_physical_damage_%_to_convert_to_fire",
       "active_skill_projectile_speed_+%_final",
-      "consecrated_ground_immune_to_curses",
-      "consecrated_ground_area_+%"
+      "consecrated_ground_immune_to_curses"
     ],
     "tags": [
       "totem",
@@ -34597,7 +34719,7 @@
         {
           "stat": "穿透的投射物造成 {projectile_damage_+%_final_if_pierced_enemy}% 更多傷害",
           "stats": {
-            "projectile_damage_+%_final_if_pierced_enemy": 500
+            "projectile_damage_+%_final_if_pierced_enemy": 1000
           }
         }
       ],
@@ -34621,7 +34743,7 @@
       ],
       "vaal": null,
       "costs": null,
-      "attack_speed_multiplier": 10,
+      "attack_speed_multiplier": 20,
       "cooldown": null,
       "stored_uses": null,
       "cost_multiplier": null,
@@ -34701,7 +34823,7 @@
         {
           "stat": "穿透的投射物造成 {projectile_damage_+%_final_if_pierced_enemy}% 更多傷害",
           "stats": {
-            "projectile_damage_+%_final_if_pierced_enemy": 500
+            "projectile_damage_+%_final_if_pierced_enemy": 1000
           }
         }
       ],
@@ -34732,7 +34854,7 @@
       ],
       "vaal": null,
       "costs": null,
-      "attack_speed_multiplier": 10,
+      "attack_speed_multiplier": 20,
       "cooldown": null,
       "stored_uses": null,
       "cost_multiplier": null,
@@ -34814,7 +34936,7 @@
         {
           "stat": "穿透的投射物造成 {projectile_damage_+%_final_if_pierced_enemy}% 更多傷害",
           "stats": {
-            "projectile_damage_+%_final_if_pierced_enemy": 500
+            "projectile_damage_+%_final_if_pierced_enemy": 1000
           }
         }
       ],
@@ -34882,7 +35004,7 @@
       ],
       "vaal": null,
       "costs": null,
-      "attack_speed_multiplier": null,
+      "attack_speed_multiplier": 20,
       "cooldown": null,
       "stored_uses": null,
       "cost_multiplier": null,
@@ -34968,7 +35090,7 @@
         {
           "stat": "穿透的投射物造成 {projectile_damage_+%_final_if_pierced_enemy}% 更多傷害",
           "stats": {
-            "projectile_damage_+%_final_if_pierced_enemy": 500
+            "projectile_damage_+%_final_if_pierced_enemy": 1000
           }
         }
       ],
@@ -35043,7 +35165,7 @@
         "stored_uses": 1
       },
       "costs": null,
-      "attack_speed_multiplier": 10,
+      "attack_speed_multiplier": 20,
       "cooldown": null,
       "stored_uses": null,
       "cost_multiplier": null,
@@ -37997,7 +38119,8 @@
         "ProjectilesFromUser",
         "Totemable",
         "Trappable",
-        "Mineable"
+        "Mineable",
+        "WandAttack"
       ],
       "weapon_restrictions": [
         "Bow",
@@ -38067,7 +38190,7 @@
       ],
       "vaal": null,
       "costs": null,
-      "attack_speed_multiplier": null,
+      "attack_speed_multiplier": 15,
       "cooldown": null,
       "stored_uses": null,
       "cost_multiplier": null,
@@ -38114,7 +38237,8 @@
         "ProjectilesFromUser",
         "Totemable",
         "Trappable",
-        "Mineable"
+        "Mineable",
+        "WandAttack"
       ],
       "weapon_restrictions": [
         "Bow",
@@ -38190,7 +38314,7 @@
       ],
       "vaal": null,
       "costs": null,
-      "attack_speed_multiplier": null,
+      "attack_speed_multiplier": 15,
       "cooldown": null,
       "stored_uses": null,
       "cost_multiplier": null,
@@ -40804,7 +40928,7 @@
       "release_state": "released"
     },
     "cast_time": 0,
-    "color": "b",
+    "color": "w",
     "display_name": "號召",
     "is_support": false,
     "stat_translation_file": "stat_translations/buff_skill",
@@ -40821,7 +40945,7 @@
         }
       ],
       "stat_requirements": {
-        "int": null,
+        "int": 0,
         "str": 0,
         "dex": 0
       },
@@ -40865,7 +40989,6 @@
     ],
     "tags": [
       "minion",
-      "intelligence",
       "grants_active_skill",
       "spell",
       "duration"
@@ -40907,7 +41030,7 @@
       "release_state": "released"
     },
     "cast_time": 0,
-    "color": "b",
+    "color": "w",
     "display_name": "號召",
     "is_support": false,
     "stat_translation_file": "stat_translations/buff_skill",
@@ -40924,7 +41047,7 @@
         }
       ],
       "stat_requirements": {
-        "int": 73,
+        "int": 0,
         "str": 0,
         "dex": 0
       },
@@ -40972,7 +41095,6 @@
       "base_cooldown_speed_+%"
     ],
     "tags": [
-      "intelligence",
       "grants_active_skill",
       "spell",
       "duration",
@@ -41065,7 +41187,7 @@
   },
   {
     "active_skill": {
-      "description": "投擲一顆地雷，當它被引爆時會造成範圍傷害，然後發射火熱的彈射物，落在附近區域，每個投射物會爆炸並造成更小範圍的傷害。",
+      "description": "投擲一顆地雷，當它被引爆時會造成範圍傷害，然後發射火熱的彈射物，落在附近區域，每個投射物會爆炸並造成更小範圍的傷害。已放置的地雷會向周遭敵人施加火焰曝曬。",
       "display_name": "炎爆新星地雷",
       "id": "pyroclast_mine",
       "is_manually_casted": true,
@@ -41110,7 +41232,7 @@
     "stat_translation_file": "stat_translations/skill",
     "static": {
       "crit_chance": 550,
-      "damage_effectiveness": -20,
+      "damage_effectiveness": 10,
       "quality_stats": [
         {
           "stat": "發射 {base_number_of_projectiles} 個投射物",
@@ -41128,8 +41250,9 @@
         "base_mine_duration": "地雷持續 5 秒",
         "base_mine_detonation_time_ms": "基礎地雷引爆時間為 0.35 秒",
         "base_number_of_projectiles\nquality_display_base_number_of_projectiles_is_gem": "發射 3 個投射物",
+        "pyroclast_mine_aura_fire_exposure_%_to_apply": "火焰曝曬光環施加 -15% 火焰抗性",
         "is_remote_mine": "",
-        "display_additional_projectile_per_4_mines_in_detonation_sequence": "爆炸序列中每 4 個先前地雷發射 1 個額外投射物"
+        "display_additional_projectile_per_3_mines_in_detonation_sequence": "爆炸序列中每 3 個先前地雷發射 1 個額外投射物"
       },
       "stats": [
         {
@@ -41139,26 +41262,6 @@
         },
         {
           "id": "spell_maximum_base_fire_damage",
-          "type": "float",
-          "value": null
-        },
-        {
-          "id": "mortar_barrage_mine_minimum_added_fire_damage_taken",
-          "type": "float",
-          "value": null
-        },
-        {
-          "id": "mortar_barrage_mine_maximum_added_fire_damage_taken",
-          "type": "float",
-          "value": null
-        },
-        {
-          "id": "mortar_barrage_mine_minimum_added_fire_damage_taken_limit",
-          "type": "float",
-          "value": null
-        },
-        {
-          "id": "mortar_barrage_mine_maximum_added_fire_damage_taken_limit",
           "type": "float",
           "value": null
         },
@@ -41176,6 +41279,11 @@
           "id": "base_number_of_projectiles",
           "type": "constant",
           "value": 3
+        },
+        {
+          "id": "pyroclast_mine_aura_fire_exposure_%_to_apply",
+          "type": "constant",
+          "value": -15
         },
         {
           "id": "base_skill_is_mined",
@@ -41203,7 +41311,7 @@
           "value": 1
         },
         {
-          "id": "display_additional_projectile_per_4_mines_in_detonation_sequence",
+          "id": "display_additional_projectile_per_3_mines_in_detonation_sequence",
           "type": "implicit",
           "value": 1
         },
@@ -41214,6 +41322,11 @@
         },
         {
           "id": "quality_display_base_number_of_projectiles_is_gem",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "exposure_uses_aura_effect_+%_instead_of_effect_+%",
           "type": "implicit",
           "value": 1
         }
@@ -41236,8 +41349,8 @@
       "base_mine_detonation_time_ms",
       "base_number_of_projectiles\nquality_display_base_number_of_projectiles_is_gem",
       "is_remote_mine",
-      "display_additional_projectile_per_4_mines_in_detonation_sequence",
-      "mortar_barrage_mine_minimum_added_fire_damage_taken\nmortar_barrage_mine_maximum_added_fire_damage_taken\nmortar_barrage_mine_minimum_added_fire_damage_taken_limit\nmortar_barrage_mine_maximum_added_fire_damage_taken_limit"
+      "display_additional_projectile_per_3_mines_in_detonation_sequence",
+      "pyroclast_mine_aura_fire_exposure_%_to_apply"
     ],
     "tags": [
       "mine",
@@ -41263,7 +41376,7 @@
   },
   {
     "active_skill": {
-      "description": "投擲一顆地雷，當它被引爆時會造成範圍傷害，然後發射火熱的彈射物，落在附近區域，每個投射物會爆炸並造成更小範圍的傷害。",
+      "description": "投擲一顆地雷，當它被引爆時會造成範圍傷害，然後發射火熱的彈射物，落在附近區域，每個投射物會爆炸並造成更小範圍的傷害。已放置的地雷會向周遭敵人施加火焰曝曬。",
       "display_name": "炎爆新星地雷．破壞",
       "id": "pyroclast_mine_alt_x",
       "is_manually_casted": true,
@@ -41326,8 +41439,9 @@
         "base_mine_duration": "地雷持續 5 秒",
         "base_mine_detonation_time_ms": "基礎地雷引爆時間為 0.35 秒",
         "base_number_of_projectiles\nquality_display_base_number_of_projectiles_is_gem": "發射 3 個投射物",
+        "pyroclast_mine_aura_fire_exposure_%_to_apply": "火焰曝曬光環施加 -25% 火焰抗性",
         "is_remote_mine": "",
-        "display_additional_projectile_per_4_mines_in_detonation_sequence": "爆炸序列中每 4 個先前地雷發射 1 個額外投射物"
+        "display_additional_projectile_per_3_mines_in_detonation_sequence": "爆炸序列中每 3 個先前地雷發射 1 個額外投射物"
       },
       "stats": [
         {
@@ -41341,22 +41455,12 @@
           "value": null
         },
         {
-          "id": "mortar_barrage_mine_minimum_added_fire_damage_taken",
+          "id": "spell_minimum_base_fire_damage",
           "type": "float",
           "value": null
         },
         {
-          "id": "mortar_barrage_mine_maximum_added_fire_damage_taken",
-          "type": "float",
-          "value": null
-        },
-        {
-          "id": "mortar_barrage_mine_minimum_added_fire_damage_taken_limit",
-          "type": "float",
-          "value": null
-        },
-        {
-          "id": "mortar_barrage_mine_maximum_added_fire_damage_taken_limit",
+          "id": "spell_maximum_base_fire_damage",
           "type": "float",
           "value": null
         },
@@ -41374,6 +41478,11 @@
           "id": "base_number_of_projectiles",
           "type": "constant",
           "value": 3
+        },
+        {
+          "id": "pyroclast_mine_aura_fire_exposure_%_to_apply",
+          "type": "constant",
+          "value": -25
         },
         {
           "id": "base_skill_is_mined",
@@ -41401,7 +41510,7 @@
           "value": 1
         },
         {
-          "id": "display_additional_projectile_per_4_mines_in_detonation_sequence",
+          "id": "display_additional_projectile_per_3_mines_in_detonation_sequence",
           "type": "implicit",
           "value": 1
         },
@@ -41412,6 +41521,11 @@
         },
         {
           "id": "quality_display_base_number_of_projectiles_is_gem",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "exposure_uses_aura_effect_+%_instead_of_effect_+%",
           "type": "implicit",
           "value": 1
         }
@@ -41434,8 +41548,8 @@
       "base_mine_detonation_time_ms",
       "base_number_of_projectiles\nquality_display_base_number_of_projectiles_is_gem",
       "is_remote_mine",
-      "display_additional_projectile_per_4_mines_in_detonation_sequence",
-      "mortar_barrage_mine_minimum_added_fire_damage_taken\nmortar_barrage_mine_maximum_added_fire_damage_taken\nmortar_barrage_mine_minimum_added_fire_damage_taken_limit\nmortar_barrage_mine_maximum_added_fire_damage_taken_limit"
+      "display_additional_projectile_per_3_mines_in_detonation_sequence",
+      "pyroclast_mine_aura_fire_exposure_%_to_apply"
     ],
     "tags": [
       "mine",
@@ -41917,8 +42031,8 @@
     },
     "tooltip_order": [
       "base_skill_effect_duration",
-      "physical_damage_%_to_add_as_fire",
-      "herald_of_ash_burning_%_overkill_damage_per_minute\nquality_display_herald_of_ash_is_gem"
+      "herald_of_ash_burning_%_overkill_damage_per_minute\nquality_display_herald_of_ash_is_gem",
+      "physical_damage_%_to_add_as_fire"
     ],
     "tags": [
       "strength",
@@ -43548,7 +43662,8 @@
         "Area",
         "Trappable",
         "Mineable",
-        "Totemable"
+        "Totemable",
+        "WandAttack"
       ],
       "weapon_restrictions": [
         "Wand"
@@ -44178,14 +44293,14 @@
         "dex": null
       },
       "stat_text": {
-        "base_skill_effect_duration": "+20.00 秒基礎持續時間",
+        "base_skill_effect_duration": "+5.00 秒基礎持續時間",
         "base_number_of_blink_mirror_arrow_rain_of_arrows_clones": "最大 3 個朝上方發射箭矢的複製之體"
       },
       "stats": [
         {
           "id": "base_skill_effect_duration",
           "type": "constant",
-          "value": 20000
+          "value": 5000
         },
         {
           "id": "number_of_monsters_to_summon",
@@ -44339,14 +44454,14 @@
         "dex": null
       },
       "stat_text": {
-        "base_skill_effect_duration": "+20.00 秒基礎持續時間",
+        "base_skill_effect_duration": "+5.00 秒基礎持續時間",
         "base_number_of_blink_mirror_arrow_elemental_hit_clones": "最大 3 個發射元素箭矢的複製之體"
       },
       "stats": [
         {
           "id": "base_skill_effect_duration",
           "type": "constant",
-          "value": 20000
+          "value": 5000
         },
         {
           "id": "number_of_monsters_to_summon",
@@ -44649,14 +44764,14 @@
         "dex": null
       },
       "stat_text": {
-        "base_skill_effect_duration": "+20.00 秒基礎持續時間",
+        "base_skill_effect_duration": "+5.00 秒基礎持續時間",
         "base_number_of_blink_mirror_arrow_rain_of_arrows_clones": "最大 3 個朝上方發射箭矢的複製之體"
       },
       "stats": [
         {
           "id": "base_skill_effect_duration",
           "type": "constant",
-          "value": 20000
+          "value": 5000
         },
         {
           "id": "number_of_monsters_to_summon",
@@ -44808,14 +44923,14 @@
         "dex": null
       },
       "stat_text": {
-        "base_skill_effect_duration": "+20.00 秒基礎持續時間",
+        "base_skill_effect_duration": "+5.00 秒基礎持續時間",
         "base_number_of_blink_mirror_arrow_elemental_hit_clones": "最大 3 個發射元素箭矢的複製之體"
       },
       "stats": [
         {
           "id": "base_skill_effect_duration",
           "type": "constant",
-          "value": 20000
+          "value": 5000
         },
         {
           "id": "number_of_monsters_to_summon",
@@ -48480,9 +48595,9 @@
     },
     "tooltip_order": [
       "base_skill_effect_duration",
-      "base_secondary_skill_effect_duration",
       "damage_cannot_be_reflected",
       "base_cooldown_speed_+%",
+      "base_secondary_skill_effect_duration",
       "warcry_count_power_from_enemies",
       "infernal_cry_%_max_life_as_fire_on_death",
       "infernal_cry_physical_damage_%_to_add_as_fire_per_5_power_up_to_cap",
@@ -50816,7 +50931,7 @@
         "base_number_of_arrows\nquality_display_base_additional_arrows_is_gem": "發射 1 支箭矢",
         "active_skill_base_area_of_effect_radius": "基礎範圍為 1 米",
         "base_skill_effect_duration": "+4.00 秒基礎持續時間",
-        "active_skill_base_secondary_area_of_effect_radius": "基礎二段範圍為 3.5 米",
+        "active_skill_base_secondary_area_of_effect_radius": "基礎二段範圍為 4 米",
         "projectile_damage_modifiers_apply_to_skill_dot": "投射物傷害同時影響此技能的持續傷害效果",
         "modifiers_to_projectile_count_do_not_apply": "投射物數量詞綴不套用至此技能"
       },
@@ -50854,7 +50969,7 @@
         {
           "id": "active_skill_base_secondary_area_of_effect_radius",
           "type": "constant",
-          "value": 35
+          "value": 40
         },
         {
           "id": "base_is_projectile",
@@ -51469,7 +51584,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 600,
+      "crit_chance": 1000,
       "damage_effectiveness": 40,
       "quality_stats": [
         {
@@ -51614,7 +51729,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 600,
+      "crit_chance": 1000,
       "damage_effectiveness": null,
       "quality_stats": [
         {
@@ -51752,7 +51867,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 1000,
+      "crit_chance": 1500,
       "damage_effectiveness": 40,
       "quality_stats": [
         {
@@ -51894,7 +52009,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 600,
+      "crit_chance": 1000,
       "damage_effectiveness": 20,
       "quality_stats": [
         {
@@ -52266,7 +52381,7 @@
       "damage_effectiveness": 200,
       "quality_stats": [
         {
-          "stat": "造成 {active_skill_physical_damage_+%_final}% 更多物理傷害",
+          "stat": "造成{active_skill_physical_damage_+%_final}%更多物理傷害",
           "stats": {
             "active_skill_physical_damage_+%_final": 1000
           }
@@ -57421,7 +57536,7 @@
       },
       "stat_text": {
         "shockwave_slam_explosion_damage_+%_final": "衝擊波造成 40% 更少傷害",
-        "sunder_wave_radius_+_per_step\nsunder_number_of_fake_chains": "波動最多可以重新啟動 2 次\n之前每有一個區域，波動區域獲得 +0.1 公尺的範圍",
+        "sunder_wave_radius_+_per_step\nsunder_number_of_fake_chains": "波動最多可以重新啟動 3 次\n之前每有一個區域，波動區域獲得 +0.1 公尺的範圍",
         "sunder_wave_max_steps": "震波傷害 4 個地區",
         "sunder_wave_min_steps": "震波在傷害 2 個區域前不會停止",
         "sunder_shockwave_limit_per_cascade": "每個地區的震波最多從 5 個敵人造成衝擊波"
@@ -57460,7 +57575,7 @@
         {
           "id": "sunder_number_of_fake_chains",
           "type": "constant",
-          "value": 2
+          "value": 3
         },
         {
           "id": "active_skill_area_of_effect_+%_final",
@@ -58390,7 +58505,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 500,
+      "crit_chance": 700,
       "damage_effectiveness": null,
       "quality_stats": [
         {
@@ -58406,7 +58521,7 @@
         "dex": 0
       },
       "stat_text": {
-        "skeletal_chains_aoe_%_health_dealt_as_chaos_damage\nquality_display_dark_pact_is_gem": "獻祭 8% 骷髏的生命來造成等量的混沌傷害",
+        "skeletal_chains_aoe_%_health_dealt_as_chaos_damage\nquality_display_dark_pact_is_gem": "獻祭 12% 骷髏的生命來造成等量的混沌傷害",
         "number_of_chains": "連鎖 +2 次",
         "skeletal_chains_no_minions_targets_self": "若附近沒有骷髏則消耗你的生命"
       },
@@ -58424,7 +58539,7 @@
         {
           "id": "skeletal_chains_aoe_%_health_dealt_as_chaos_damage",
           "type": "constant",
-          "value": 8
+          "value": 12
         },
         {
           "id": "number_of_chains",
@@ -58530,7 +58645,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 500,
+      "crit_chance": 700,
       "damage_effectiveness": null,
       "quality_stats": [
         {
@@ -58546,7 +58661,7 @@
         "dex": 0
       },
       "stat_text": {
-        "dark_pact_sacrifice_%_life_from_max_ruin\ndark_pact_chaos_damage_added_from_sacrifice_+%": "使用時會獲得 1 層毀滅\n達到 7 層毀滅時會獻祭你 50% 的生命，\n造成相當於獻祭生命 400% 的混沌傷害",
+        "dark_pact_sacrifice_%_life_from_max_ruin\ndark_pact_chaos_damage_added_from_sacrifice_+%": "使用時會獲得 1 層毀滅\n達到 7 層毀滅時會獻祭你 50% 的生命，\n造成相當於獻祭生命 500% 的混沌傷害",
         "active_skill_ailment_damage_+%_final": "50% 更少異常狀態傷害"
       },
       "stats": [
@@ -58568,7 +58683,7 @@
         {
           "id": "dark_pact_chaos_damage_added_from_sacrifice_+%",
           "type": "constant",
-          "value": 400
+          "value": 500
         },
         {
           "id": "active_skill_ailment_damage_+%_final",
@@ -60839,9 +60954,9 @@
       "base_skill_effect_duration",
       "spell_minimum_base_fire_damage\nspell_maximum_base_fire_damage",
       "base_number_of_projectiles\nquality_display_base_number_of_projectiles_is_gem",
-      "corpse_explosion_monster_life_permillage_fire",
       "corpse_erruption_base_maximum_number_of_geyers",
-      "cremation_fires_projectiles_faster_+%_final"
+      "cremation_fires_projectiles_faster_+%_final",
+      "corpse_explosion_monster_life_permillage_fire"
     ],
     "tags": [
       "dexterity",
@@ -61028,9 +61143,9 @@
       "base_skill_effect_duration",
       "spell_minimum_base_fire_damage\nspell_maximum_base_fire_damage",
       "base_number_of_projectiles\nquality_display_base_number_of_projectiles_is_gem",
-      "corpse_explosion_monster_life_permillage_fire",
       "corpse_erruption_base_maximum_number_of_geyers",
       "cremation_fires_projectiles_faster_+%_final",
+      "corpse_explosion_monster_life_permillage_fire",
       "cremation_chance_to_explode_nearby_corpse_when_firing_projectiles"
     ],
     "tags": [
@@ -67395,10 +67510,10 @@
       },
       "stat_text": {
         "frost_fury_max_number_of_stages\nquality_display_winter_orb_is_gem": "疊層上限 8",
-        "frost_fury_base_fire_interval_ms": "每 1.6 秒發射一波投射物",
+        "frost_fury_base_fire_interval_ms": "每 1.2 秒發射一波投射物",
         "frost_fury_duration_+%_per_stage": "每層增加 30% 持續時間",
         "frost_fury_fire_speed_+%_per_stage": "每層增加 20% 投射物發射頻率",
-        "frost_fury_fire_speed_+%_final_while_channelling": "引導施放時 125% 更多投射物頻率",
+        "frost_fury_fire_speed_+%_final_while_channelling": "引導施放時 80% 更多投射物頻率",
         "base_skill_effect_duration": "+1.60 秒基礎持續時間",
         "display_frost_fury_additive_cast_speed_modifiers_apply_to_fire_speed": "增加和減少施放速度同時套用於投射物頻率"
       },
@@ -67421,7 +67536,7 @@
         {
           "id": "frost_fury_base_fire_interval_ms",
           "type": "constant",
-          "value": 1600
+          "value": 1200
         },
         {
           "id": "frost_fury_duration_+%_per_stage",
@@ -67446,7 +67561,7 @@
         {
           "id": "frost_fury_fire_speed_+%_final_while_channelling",
           "type": "constant",
-          "value": 125
+          "value": 80
         },
         {
           "id": "base_skill_effect_duration",
@@ -67579,7 +67694,7 @@
         "dex": null
       },
       "stat_text": {
-        "active_skill_merged_damage_+%_final_while_dual_wielding": "雙持武器時，每把武器造成 60% 傷害"
+        "active_skill_merged_damage_+%_final_while_dual_wielding": "雙持時，造成兩把武器總和的60%傷害"
       },
       "stats": [
         {
@@ -70690,7 +70805,7 @@
         {
           "stat": "被輔助的技能在偷取能量護盾時增加 {damage_+%_while_es_leeching}% 傷害",
           "stats": {
-            "damage_+%_while_es_leeching": 500
+            "damage_+%_while_es_leeching": 1000
           }
         }
       ],
@@ -70710,11 +70825,6 @@
           "id": "support_energy_shield_leech_damage_+%_on_full_energy_shield_final",
           "type": "additional",
           "value": null
-        },
-        {
-          "id": "support_energy_shield_leech_damage_+%_while_leeching_energy_shield_final",
-          "type": "additional",
-          "value": null
         }
       ],
       "vaal": null,
@@ -70732,8 +70842,7 @@
     "tooltip_order": [
       "damage_+%_while_es_leeching",
       "energy_shield_leech_from_any_damage_permyriad",
-      "support_energy_shield_leech_damage_+%_on_full_energy_shield_final",
-      "support_energy_shield_leech_damage_+%_while_leeching_energy_shield_final"
+      "support_energy_shield_leech_damage_+%_on_full_energy_shield_final"
     ],
     "tags": [
       "intelligence",
@@ -72087,8 +72196,9 @@
       "is_manually_casted": true,
       "is_skill_totem": false,
       "stat_conversions": {
-        "quick_guard_cooldown_does_not_tick": "skill_cooldown_does_not_tick",
-        "quick_guard_additional_physical_damage_reduction_%": "base_additional_physical_damage_reduction_%"
+        "quick_guard_additional_physical_damage_reduction_%": "base_additional_physical_damage_reduction_%",
+        "guard_skill_cooldown_does_not_tick": "skill_cooldown_does_not_tick",
+        "quick_guard_cooldown_does_not_tick": "skill_cooldown_does_not_tick"
       },
       "types": [
         "Spell",
@@ -72213,7 +72323,8 @@
       "is_manually_casted": true,
       "is_skill_totem": false,
       "stat_conversions": {
-        "bone_armour_cooldown_does_not_tick": "skill_cooldown_does_not_tick"
+        "bone_armour_cooldown_does_not_tick": "skill_cooldown_does_not_tick",
+        "guard_skill_cooldown_does_not_tick": "skill_cooldown_does_not_tick"
       },
       "types": [
         "Spell",
@@ -73959,10 +74070,10 @@
       },
       "stat_text": {
         "chain_strike_cone_radius_+_per_x_rage": "每 5 層盛怒 +0.1 米範圍",
-        "chain_hook_attaches_to_X_targets": "對範圍內最多 6 個目標投擲鎖鏈",
+        "chain_hook_attaches_to_X_targets": "對範圍內最多 8 個目標投擲鎖鏈",
         "chain_hook_attachment_range": "最大鎖鏈長度為 6 公尺",
         "chain_hook_attachment_rage_to_gain_per_hit": "被鍊住的目標被擊中時賦予 1 層盛怒",
-        "chain_hook_max_attached_targets": "鎖鏈上限 12"
+        "chain_hook_max_attached_targets": "鎖鏈上限 16"
       },
       "stats": [
         {
@@ -73973,7 +74084,7 @@
         {
           "id": "chain_hook_attaches_to_X_targets",
           "type": "constant",
-          "value": 6
+          "value": 8
         },
         {
           "id": "chain_hook_attachment_range",
@@ -73988,7 +74099,7 @@
         {
           "id": "chain_hook_max_attached_targets",
           "type": "constant",
-          "value": 12
+          "value": 16
         },
         {
           "id": "is_area_damage",
@@ -82820,7 +82931,8 @@
       "is_manually_casted": true,
       "is_skill_totem": false,
       "stat_conversions": {
-        "arcane_cloak_cooldown_does_not_tick": "skill_cooldown_does_not_tick"
+        "arcane_cloak_cooldown_does_not_tick": "skill_cooldown_does_not_tick",
+        "guard_skill_cooldown_does_not_tick": "skill_cooldown_does_not_tick"
       },
       "types": [
         "Spell",
@@ -83408,7 +83520,8 @@
         "Mineable",
         "Totemable",
         "RangedAttack",
-        "Triggerable"
+        "Triggerable",
+        "WandAttack"
       ],
       "weapon_restrictions": [
         "Wand"
@@ -83535,7 +83648,8 @@
         "Mineable",
         "Totemable",
         "RangedAttack",
-        "Triggerable"
+        "Triggerable",
+        "WandAttack"
       ],
       "weapon_restrictions": [
         "Wand"
@@ -83572,7 +83686,7 @@
         "dex": 0
       },
       "stat_text": {
-        "kinetic_wand_base_number_of_zig_zags": "投射物改變 2 次方向",
+        "kinetic_wand_base_number_of_zig_zags": "投射物改變 3 次方向",
         "number_of_additional_projectiles": "發射 2 個額外投射物",
         "kinetic_bolt_forks_apply_to_zig_zags": "使投射物分裂的詞綴，改為額外改變方向次數"
       },
@@ -83580,7 +83694,7 @@
         {
           "id": "kinetic_wand_base_number_of_zig_zags",
           "type": "constant",
-          "value": 2
+          "value": 3
         },
         {
           "id": "number_of_additional_projectiles",
@@ -84271,7 +84385,7 @@
         "dex": 0
       },
       "stat_text": {
-        "manaweave_cost_equals_%_unreserved_mana": "被輔助的技能獲得等同未保留的最大魔力 5% 的附加魔力消耗"
+        "manaweave_cost_equals_%_unreserved_mana": "被輔助的技能獲得等同於未保留最大魔力 5% 的基礎魔力消耗"
       },
       "stats": [
         {
@@ -88994,8 +89108,8 @@
         "dex": 0
       },
       "stat_text": {
-        "hexblast_hit_damage_+%_final_if_hexed": "若敵人被咒術，有 150% 更多擊中傷害",
-        "hexblast_ailment_damage_+%_final_if_hexed": "若敵人被咒術，有 60% 更多異常狀態傷害",
+        "hexblast_hit_damage_+%_final_if_hexed": "若敵人被咒術，有 200% 更多擊中傷害",
+        "hexblast_ailment_damage_+%_final_if_hexed": "若敵人被咒術，有 90% 更多異常狀態傷害",
         "active_skill_base_area_of_effect_radius": "基礎範圍為 3.2 米",
         "all_damage_can_ignite_freeze_shock": "全部傷害可以點燃、冰凍和感電",
         "chaos_damage_resisted_by_lowest_resistance": "擊中的混沌傷害改為被最低的抗性抵抗",
@@ -89015,12 +89129,12 @@
         {
           "id": "hexblast_hit_damage_+%_final_if_hexed",
           "type": "constant",
-          "value": 150
+          "value": 200
         },
         {
           "id": "hexblast_ailment_damage_+%_final_if_hexed",
           "type": "constant",
-          "value": 60
+          "value": 90
         },
         {
           "id": "active_skill_base_area_of_effect_radius",
@@ -89146,8 +89260,8 @@
         "dex": 0
       },
       "stat_text": {
-        "hexblast_hit_damage_+%_final_if_hexed": "若敵人被咒術，有 240% 更多擊中傷害",
-        "hexblast_ailment_damage_+%_final_if_hexed": "若敵人被咒術，有 90% 更多異常狀態傷害",
+        "hexblast_hit_damage_+%_final_if_hexed": "若敵人被咒術，有 300% 更多擊中傷害",
+        "hexblast_ailment_damage_+%_final_if_hexed": "若敵人被咒術，有 120% 更多異常狀態傷害",
         "active_skill_base_area_of_effect_radius": "基礎範圍為 3.2 米",
         "all_damage_can_ignite_freeze_shock": "全部傷害可以點燃、冰凍和感電",
         "hexblast_display_innate_remove_hex_100%_chance": "造成傷害後，100% 機率移除 1 個咒術",
@@ -89167,12 +89281,12 @@
         {
           "id": "hexblast_hit_damage_+%_final_if_hexed",
           "type": "constant",
-          "value": 240
+          "value": 300
         },
         {
           "id": "hexblast_ailment_damage_+%_final_if_hexed",
           "type": "constant",
-          "value": 90
+          "value": 120
         },
         {
           "id": "active_skill_base_area_of_effect_radius",
@@ -90736,7 +90850,7 @@
         "dex": 0
       },
       "stat_text": {
-        "base_secondary_skill_effect_duration": "基礎額外效果持續時間 1.00 秒",
+        "base_secondary_skill_effect_duration": "基礎減益效果持續時間為 1.00 秒",
         "base_skill_effect_duration": "+6.00 秒基礎持續時間"
       },
       "stats": [
@@ -90776,9 +90890,9 @@
     "tooltip_order": [
       "base_physical_damage_to_deal_per_minute",
       "base_skill_effect_duration",
-      "base_secondary_skill_effect_duration",
       "skill_effect_duration_+%",
-      "blood_surge_refresh_on_total_life_spent"
+      "blood_surge_refresh_on_total_life_spent",
+      "base_secondary_skill_effect_duration"
     ],
     "tags": [
       "strength",
@@ -92929,7 +93043,7 @@
       "stat_text": {
         "shield_charge_scaling_stun_threshold_reduction_+%_at_maximum_range": "到達最大衝鋒距離時，增加 75% 暈眩門檻降低",
         "shield_charge_damage_+%_maximum": "最大衝擊距離擊中時造成 100% 更多傷害",
-        "off_hand_minimum_added_physical_damage_per_15_shield_armour_and_evasion_rating\noff_hand_maximum_added_physical_damage_per_15_shield_armour_and_evasion_rating": "盾牌上每 15 點護甲或閃避值附加 5 至 7 物理傷害"
+        "off_hand_minimum_added_physical_damage_per_15_shield_armour_and_evasion_rating\noff_hand_maximum_added_physical_damage_per_15_shield_armour_and_evasion_rating": "盾牌上每15護甲或閃避值增加5至7物理傷害"
       },
       "stats": [
         {
@@ -93841,7 +93955,7 @@
         "dex": null
       },
       "stat_text": {
-        "off_hand_minimum_added_physical_damage_per_15_shield_armour_and_evasion_rating\noff_hand_maximum_added_physical_damage_per_15_shield_armour_and_evasion_rating": "盾牌上每 15 點護甲或閃避值附加 5 至 7 物理傷害",
+        "off_hand_minimum_added_physical_damage_per_15_shield_armour_and_evasion_rating\noff_hand_maximum_added_physical_damage_per_15_shield_armour_and_evasion_rating": "盾牌上每15護甲或閃避值增加5至7物理傷害",
         "number_of_additional_projectiles": "發射 3 個額外投射物",
         "thrown_shield_secondary_projectile_damage_+%_final": "碎片投射物造成 50% 更少傷害",
         "number_of_chains": "連鎖 +3 次"
@@ -93997,7 +94111,7 @@
       ],
       "vaal": null,
       "costs": null,
-      "attack_speed_multiplier": 10,
+      "attack_speed_multiplier": 20,
       "cooldown": null,
       "stored_uses": null,
       "cost_multiplier": null,
@@ -94224,7 +94338,7 @@
       },
       "stat_text": {
         "additional_weapon_base_attack_time_ms": "+1.5 秒攻擊時間",
-        "active_skill_merged_damage_+%_final_while_dual_wielding": "雙持武器時，每把武器造成 75% 傷害"
+        "active_skill_merged_damage_+%_final_while_dual_wielding": "雙持時，造成兩把武器總和的75%傷害"
       },
       "stats": [
         {
@@ -95776,7 +95890,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 600,
+      "crit_chance": 1000,
       "damage_effectiveness": -10,
       "quality_stats": [],
       "stat_requirements": {
@@ -97409,8 +97523,8 @@
       "cremation_base_fires_projectile_every_x_ms",
       "base_skill_effect_duration",
       "spell_minimum_base_fire_damage\nspell_maximum_base_fire_damage",
-      "corpse_explosion_monster_life_%",
       "corpse_erruption_base_maximum_number_of_geyers",
+      "corpse_explosion_monster_life_%",
       "number_of_additional_projectiles"
     ],
     "tags": [
@@ -104326,7 +104440,7 @@
       "max_level": 20,
       "release_state": "released"
     },
-    "cast_time": 500,
+    "cast_time": 400,
     "color": "b",
     "display_name": "魔痕爆發",
     "is_support": false,
@@ -104815,7 +104929,7 @@
         {
           "stat": "穿透的投射物造成 {projectile_damage_+%_final_if_pierced_enemy}% 更多傷害",
           "stats": {
-            "projectile_damage_+%_final_if_pierced_enemy": 500
+            "projectile_damage_+%_final_if_pierced_enemy": 1000
           }
         }
       ],
@@ -104854,11 +104968,16 @@
           "id": "skill_display_single_base_projectile",
           "type": "implicit",
           "value": 1
+        },
+        {
+          "id": "projectiles_ignore_wall_of_force",
+          "type": "implicit",
+          "value": 1
         }
       ],
       "vaal": null,
       "costs": null,
-      "attack_speed_multiplier": 10,
+      "attack_speed_multiplier": 20,
       "cooldown": null,
       "stored_uses": null,
       "cost_multiplier": null,
@@ -104948,7 +105067,7 @@
         {
           "stat": "穿透的投射物造成 {projectile_damage_+%_final_if_pierced_enemy}% 更多傷害",
           "stats": {
-            "projectile_damage_+%_final_if_pierced_enemy": 500
+            "projectile_damage_+%_final_if_pierced_enemy": 1000
           }
         }
       ],
@@ -105004,6 +105123,11 @@
         },
         {
           "id": "skill_display_single_base_projectile",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "projectiles_ignore_wall_of_force",
           "type": "implicit",
           "value": 1
         },
@@ -108233,7 +108357,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 500,
+      "crit_chance": 700,
       "damage_effectiveness": null,
       "quality_stats": [],
       "stat_requirements": {
@@ -109121,7 +109245,7 @@
         "dex": null
       },
       "stat_text": {
-        "active_skill_merged_damage_+%_final_while_dual_wielding": "雙持武器時，每把武器造成 80% 傷害"
+        "active_skill_merged_damage_+%_final_while_dual_wielding": "雙持時，造成兩把武器總和的80%傷害"
       },
       "stats": [
         {
@@ -112467,7 +112591,7 @@
       "stat_text": {
         "skill_empowers_next_x_melee_attacks\nskill_empower_limitation_specifier_for_stat_description": "移除增益效果來竭盡你下次施放的近戰攻擊\n被此技能竭盡的攻擊不能被其它技能竭盡",
         "ambush_additional_critical_strike_chance_permyriad": "竭盡攻擊 +25% 暴擊率",
-        "base_secondary_skill_effect_duration": "基礎額外效果持續時間 3.00 秒",
+        "base_secondary_skill_effect_duration": "基礎減益效果持續時間為 3.00 秒",
         "base_skill_effect_duration": "+1.50 秒基礎持續時間"
       },
       "stats": [
@@ -113410,7 +113534,7 @@
         {
           "stat": "每支箭矢可以發射 {storm_rain_pulse_count} 光束",
           "stats": {
-            "storm_rain_pulse_count": 50
+            "storm_rain_pulse_count": 100
           }
         }
       ],
@@ -113421,66 +113545,10 @@
       },
       "stat_text": {
         "skill_physical_damage_%_to_convert_to_lightning": "50% 物理傷害轉換為閃電傷害",
-        "storm_rain_pulse_count\nquality_display_storm_rain_is_gem": "每支箭矢可以發射 4 光束",
+        "storm_rain_pulse_count\nquality_display_storm_rain_is_gem": "每支箭矢可以發射 6 光束",
         "number_of_allowed_storm_arrows": "地面上最多 10 支箭矢"
       },
-      "stats": [
-        {
-          "id": "skill_physical_damage_%_to_convert_to_lightning",
-          "type": "constant",
-          "value": 50
-        },
-        {
-          "id": "storm_rain_pulse_count",
-          "type": "constant",
-          "value": 4
-        },
-        {
-          "id": "number_of_allowed_storm_arrows",
-          "type": "constant",
-          "value": 10
-        },
-        {
-          "id": "prismatic_rain_beam_base_frequency_ms",
-          "type": "additional",
-          "value": null
-        },
-        {
-          "id": "base_is_projectile",
-          "type": "implicit",
-          "value": 1
-        },
-        {
-          "id": "is_area_damage",
-          "type": "implicit",
-          "value": 1
-        },
-        {
-          "id": "skill_can_fire_arrows",
-          "type": "implicit",
-          "value": 1
-        },
-        {
-          "id": "cannot_pierce",
-          "type": "implicit",
-          "value": 1
-        },
-        {
-          "id": "console_skill_dont_chase",
-          "type": "implicit",
-          "value": 1
-        },
-        {
-          "id": "skill_can_add_multiple_charges_per_action",
-          "type": "implicit",
-          "value": 1
-        },
-        {
-          "id": "quality_display_storm_rain_is_gem",
-          "type": "implicit",
-          "value": 1
-        }
-      ],
+      "stats": null,
       "vaal": null,
       "costs": null,
       "attack_speed_multiplier": null,
@@ -113572,7 +113640,7 @@
         {
           "stat": "每支箭矢可以發射 {storm_rain_pulse_count} 光束",
           "stats": {
-            "storm_rain_pulse_count": 100
+            "storm_rain_pulse_count": 200
           }
         }
       ],
@@ -113583,10 +113651,10 @@
       },
       "stat_text": {
         "skill_physical_damage_%_to_convert_to_lightning": "50% 物理傷害轉換為閃電傷害",
-        "storm_rain_pulse_count\nquality_display_storm_rain_is_gem": "每支箭矢可以發射 14 光束",
+        "storm_rain_pulse_count\nquality_display_storm_rain_is_gem": "每支箭矢可以發射 20 光束",
         "number_of_allowed_storm_arrows": "地面上最多 2 支箭矢",
         "base_stun_threshold_reduction_+%": "減少 50% 敵人暈眩門檻",
-        "prismatic_rain_beam_base_frequency_ms": "每 0.20 秒箭矢發射光束",
+        "prismatic_rain_beam_base_frequency_ms": "每 0.15 秒箭矢發射光束",
         "modifiers_to_projectile_count_do_not_apply": "投射物數量詞綴不套用至此技能"
       },
       "stats": [
@@ -113598,7 +113666,7 @@
         {
           "id": "storm_rain_pulse_count",
           "type": "constant",
-          "value": 14
+          "value": 20
         },
         {
           "id": "number_of_allowed_storm_arrows",
@@ -113613,7 +113681,7 @@
         {
           "id": "prismatic_rain_beam_base_frequency_ms",
           "type": "additional",
-          "value": 200
+          "value": 150
         },
         {
           "id": "base_is_projectile",
@@ -114463,8 +114531,8 @@
       "damage_multiplier": null
     },
     "tooltip_order": [
-      "minion_movement_speed_+%",
       "base_number_of_reapers_allowed",
+      "minion_movement_speed_+%",
       "active_skill_minion_damage_+%_final",
       "active_skill_non_reaper_minion_damage_+%_final",
       "active_skill_non_reaper_minion_maximum_life_+%_final"
@@ -115061,9 +115129,9 @@
       "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "對被暈眩的敵人造成 {damage_+%_final_vs_stunned_enemies}% 更多傷害",
+          "stat": "對被暈眩的敵人造成 {active_skill_damage_+%_final_vs_stunned_enemies}% 更多傷害",
           "stats": {
-            "damage_+%_final_vs_stunned_enemies": 1000
+            "active_skill_damage_+%_final_vs_stunned_enemies": 1000
           }
         }
       ],
@@ -115107,8 +115175,8 @@
     },
     "tooltip_order": [
       "base_stun_threshold_reduction_+%",
+      "active_skill_damage_+%_final_vs_stunned_enemies",
       "chance_to_double_stun_duration_%",
-      "damage_+%_final_vs_stunned_enemies",
       "trauma_strike_shockwave_area_of_effect_+%_per_100ms_stun_duration_up_to_400%"
     ],
     "tags": [
@@ -115629,9 +115697,9 @@
     },
     "tooltip_order": [
       "spell_minimum_base_cold_damage\nspell_maximum_base_cold_damage",
+      "display_eye_of_winter_projectile_modifier",
       "eye_of_winter_base_explosion_shards\nquality_display_eye_of_winter_is_gem",
       "eye_of_winter_base_explosion_shards\neye_of_winter_display_number_of_explosion_shards\neye_of_winter_count_shards_while_flying_instead\nquality_display_eye_of_winter_is_gem",
-      "display_eye_of_winter_projectile_modifier",
       "freezing_pulse_damage_+%_final_at_long_range\nquality_display_freezing_pulse_damage_at_long_range_is_gem"
     ],
     "tags": [
@@ -115788,8 +115856,8 @@
     },
     "tooltip_order": [
       "spell_minimum_base_cold_damage\nspell_maximum_base_cold_damage",
-      "eye_of_winter_base_explosion_shards\nquality_display_eye_of_winter_is_gem",
       "display_eye_of_winter_projectile_modifier",
+      "eye_of_winter_base_explosion_shards\nquality_display_eye_of_winter_is_gem",
       "freezing_pulse_damage_+%_final_at_long_range\nquality_display_freezing_pulse_damage_at_long_range_is_gem"
     ],
     "tags": [
@@ -115954,8 +116022,8 @@
     "tooltip_order": [
       "spell_minimum_base_cold_damage\nspell_maximum_base_cold_damage",
       "quality_display_base_number_of_projectiles_is_gem",
-      "eye_of_winter_base_explosion_shards\neye_of_winter_count_shards_while_flying_instead",
       "display_eye_of_winter_projectile_modifier",
+      "eye_of_winter_base_explosion_shards\neye_of_winter_count_shards_while_flying_instead",
       "active_skill_projectile_speed_+%_final",
       "quality_display_freezing_pulse_damage_at_long_range_is_gem",
       "freezing_pulse_damage_+%_final_at_long_range\nquality_display_freezing_pulse_damage_at_long_range_is_gem"
@@ -116709,8 +116777,8 @@
       "spell_minimum_base_physical_damage\nspell_maximum_base_physical_damage",
       "base_skill_effect_duration",
       "base_secondary_skill_effect_duration",
-      "tornado_maximum_number_of_hits",
       "tornado_base_damage_interval_ms",
+      "tornado_maximum_number_of_hits",
       "tornado_damage_absorbed_%",
       "tornado_hinder",
       "tornado_movement_speed_+%",
@@ -119088,8 +119156,7 @@
       },
       "stat_text": {
         "skill_physical_damage_%_to_convert_to_fire": "60% 物理傷害轉化至火焰傷害",
-        "vaal_volcanic_fissure_crack_repeat_count": "裂縫爆發額外 2 次",
-        "active_skill_area_of_effect_+%_final": "50% 更多範圍效果"
+        "vaal_volcanic_fissure_crack_repeat_count": "裂縫爆發額外 2 次"
       },
       "stats": [
         {
@@ -119101,11 +119168,6 @@
           "id": "vaal_volcanic_fissure_crack_repeat_count",
           "type": "constant",
           "value": 2
-        },
-        {
-          "id": "active_skill_area_of_effect_+%_final",
-          "type": "constant",
-          "value": 50
         },
         {
           "id": "is_area_damage",
@@ -119126,7 +119188,6 @@
       "damage_multiplier": null
     },
     "tooltip_order": [
-      "active_skill_area_of_effect_+%_final",
       "skill_physical_damage_%_to_convert_to_fire",
       "vaal_volcanic_fissure_crack_repeat_count"
     ],
@@ -119597,7 +119658,7 @@
         "dex": null
       },
       "stat_text": {
-        "active_skill_merged_damage_+%_final_while_dual_wielding": "雙持武器時，每把武器造成 60% 傷害",
+        "active_skill_merged_damage_+%_final_while_dual_wielding": "雙持時，造成兩把武器總和的60%傷害",
         "base_skill_effect_duration": "+20.00 秒基礎持續時間",
         "base_secondary_skill_effect_duration": "基礎額外效果持續時間 20.00 秒",
         "vaal_cleave_executioner_area_of_effect_+%\nvaal_cleave_executioner_damage_against_enemies_on_low_life_+%": "增益使劈砍有撲殺\n增益使劈砍有 60% 更多範圍效果\n增益使劈砍對貧血敵人造成 60% 更多傷害",
@@ -122360,7 +122421,8 @@
         "RemoteMined",
         "SummonsTotem",
         "HasReservation",
-        "DisallowTriggerSupports"
+        "DisallowTriggerSupports",
+        "InbuiltTrigger"
       ],
       "added_types": [
         "Triggered",
@@ -122590,6 +122652,1097 @@
       ],
       "quest": "突破封印"
     },
+    "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "向空中射出箭矢，在目標區域周圍落下，命中時造成範圍傷害並使箭矢嵌在地面上一段時間。如果你接近嵌在地面上的箭矢，它將會爆炸，造成範圍傷害並施加一個造成火焰持續傷害的減益效果，同時引爆範圍內地面上的其他箭矢。",
+      "display_name": "燎原箭矢",
+      "id": "napalm_arrows",
+      "is_manually_casted": true,
+      "is_skill_totem": false,
+      "stat_conversions": {},
+      "types": [
+        "Attack",
+        "RangedAttack",
+        "Fire",
+        "MirageArcherCanUse",
+        "Area",
+        "ProjectileSpeed",
+        "ProjectileNumber",
+        "Totemable",
+        "Trappable",
+        "Mineable",
+        "Triggerable",
+        "Rain",
+        "Duration"
+      ],
+      "weapon_restrictions": [
+        "Bow"
+      ],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "燎原箭矢",
+      "experience_type": "GemProgression28",
+      "id": "Metadata/Items/Gems/SkillGemConflagration",
+      "max_level": 20,
+      "release_state": "released"
+    },
+    "cast_time": 1000,
+    "color": "g",
+    "display_name": "燎原箭矢",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/secondary_debuff_skill",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [
+        {
+          "stat": "爆炸造成{napalm_arrow_detonation_hit_damage_+%_final}%更多擊中傷害",
+          "stats": {
+            "napalm_arrow_detonation_hit_damage_+%_final": 1500
+          }
+        }
+      ],
+      "stat_requirements": {
+        "int": 0,
+        "str": 0,
+        "dex": null
+      },
+      "stat_text": {
+        "base_skill_effect_duration": "+6.00 秒基礎持續時間",
+        "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius": "首波箭矢後的箭矢落在基礎範圍 3 米內",
+        "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius": "基礎衝擊範圍為 1 米",
+        "napalm_arrow_detonation_hit_damage_+%_final": "爆炸造成50%更多擊中傷害",
+        "napalm_arrow_maximum_number_of_unprimed_arrows_allowed": "最大20汽油箭",
+        "skill_physical_damage_%_to_convert_to_fire": "100% 物理傷害轉化至火焰傷害",
+        "base_secondary_skill_effect_duration": "基礎減益效果持續時間為 4.00 秒",
+        "base_number_of_projectiles\nquality_display_base_number_of_projectiles_is_gem": "發射 3 個投射物",
+        "projectile_damage_modifiers_apply_to_skill_dot": "投射物傷害同時影響此技能的持續傷害效果"
+      },
+      "stats": [
+        {
+          "id": "base_fire_damage_to_deal_per_minute",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "base_skill_effect_duration",
+          "type": "constant",
+          "value": 6000
+        },
+        {
+          "id": "active_skill_area_of_effect_description_mode",
+          "type": "constant",
+          "value": 7
+        },
+        {
+          "id": "active_skill_base_area_of_effect_radius",
+          "type": "constant",
+          "value": 30
+        },
+        {
+          "id": "active_skill_secondary_area_of_effect_description_mode",
+          "type": "constant",
+          "value": 7
+        },
+        {
+          "id": "active_skill_base_secondary_area_of_effect_radius",
+          "type": "constant",
+          "value": 10
+        },
+        {
+          "id": "active_skill_tertiary_area_of_effect_description_mode",
+          "type": "constant",
+          "value": 1
+        },
+        {
+          "id": "napalm_arrow_detonation_hit_damage_+%_final",
+          "type": "constant",
+          "value": 50
+        },
+        {
+          "id": "napalm_arrow_maximum_number_of_unprimed_arrows_allowed",
+          "type": "constant",
+          "value": 20
+        },
+        {
+          "id": "skill_physical_damage_%_to_convert_to_fire",
+          "type": "constant",
+          "value": 100
+        },
+        {
+          "id": "base_secondary_skill_effect_duration",
+          "type": "constant",
+          "value": 4000
+        },
+        {
+          "id": "blast_rain_arrow_delay_ms",
+          "type": "constant",
+          "value": 90
+        },
+        {
+          "id": "base_number_of_projectiles",
+          "type": "constant",
+          "value": 3
+        },
+        {
+          "id": "active_skill_base_tertiary_area_of_effect_radius",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "base_is_projectile",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "is_area_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "skill_can_fire_arrows",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "base_skill_show_average_damage_instead_of_dps",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "quality_display_base_number_of_projectiles_is_gem",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "projectile_damage_modifiers_apply_to_skill_dot",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "base_fire_damage_to_deal_per_minute",
+      "base_skill_effect_duration",
+      "base_number_of_projectiles\nquality_display_base_number_of_projectiles_is_gem",
+      "projectile_damage_modifiers_apply_to_skill_dot",
+      "skill_physical_damage_%_to_convert_to_fire",
+      "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius",
+      "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius",
+      "active_skill_tertiary_area_of_effect_description_mode\nactive_skill_base_tertiary_area_of_effect_radius",
+      "base_secondary_skill_effect_duration",
+      "napalm_arrow_detonation_hit_damage_+%_final",
+      "napalm_arrow_maximum_number_of_unprimed_arrows_allowed"
+    ],
+    "tags": [
+      "dexterity",
+      "grants_active_skill",
+      "attack",
+      "fire",
+      "area",
+      "projectile",
+      "duration",
+      "bow"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": {
+      "act": 3,
+      "classes": [
+        "遊俠"
+      ],
+      "quest": "剷除左右手"
+    },
+    "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "揮舞你的法杖，使複數投射物在你前方的大片區域灑落， 並且鎖定區域中的敵人位置。 投射物掉落的位置會在落下前預先標記。 每一個掉落的投射物都會在落地時爆炸，造成範圍傷害並觸發力量反常。此技能無法被觸發，或被陷阱、地雷、或圖騰施放。",
+      "display_name": "力量驟雨",
+      "id": "kinetic_rain",
+      "is_manually_casted": true,
+      "is_skill_totem": false,
+      "stat_conversions": {},
+      "types": [
+        "Attack",
+        "Area",
+        "Projectile",
+        "WandAttack",
+        "RangedAttack",
+        "Rain"
+      ],
+      "weapon_restrictions": [
+        "Wand"
+      ],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "力量驟雨",
+      "experience_type": "GemProgression12",
+      "id": "Metadata/Items/Gems/SkillGemKineticRain",
+      "max_level": 20,
+      "release_state": "released"
+    },
+    "cast_time": 1000,
+    "color": "b",
+    "display_name": "力量驟雨",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [
+        {
+          "stat": "發射 {base_number_of_projectiles} 個投射物",
+          "stats": {
+            "base_number_of_projectiles": 100
+          }
+        }
+      ],
+      "stat_requirements": {
+        "int": null,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius": "基礎目標範圍長度為 9 米",
+        "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius": "基礎目標寬度為 4.5 米",
+        "active_skill_tertiary_area_of_effect_description_mode\nactive_skill_base_tertiary_area_of_effect_radius": "基礎爆炸範圍為 1.2 米",
+        "active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value\nquality_display_spell_damage_to_attack_damage_is_gem": "增加和減少法術傷害同時以 150% 它們的值，套用至來自此技能的攻擊傷害",
+        "base_number_of_projectiles\nquality_display_base_number_of_projectiles_is_gem": "發射 8 個投射物"
+      },
+      "stats": [
+        {
+          "id": "active_skill_base_area_of_effect_radius",
+          "type": "constant",
+          "value": 90
+        },
+        {
+          "id": "active_skill_area_of_effect_description_mode",
+          "type": "constant",
+          "value": 8
+        },
+        {
+          "id": "active_skill_base_secondary_area_of_effect_radius",
+          "type": "constant",
+          "value": 45
+        },
+        {
+          "id": "active_skill_secondary_area_of_effect_description_mode",
+          "type": "constant",
+          "value": 8
+        },
+        {
+          "id": "active_skill_base_tertiary_area_of_effect_radius",
+          "type": "constant",
+          "value": 12
+        },
+        {
+          "id": "active_skill_tertiary_area_of_effect_description_mode",
+          "type": "constant",
+          "value": 1
+        },
+        {
+          "id": "active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value",
+          "type": "constant",
+          "value": 150
+        },
+        {
+          "id": "base_number_of_projectiles",
+          "type": "additional",
+          "value": 8
+        },
+        {
+          "id": "is_area_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "base_is_projectile",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "quality_display_base_number_of_projectiles_is_gem",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "base_is_projectile",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "skill_can_fire_wand_projectiles",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "quality_display_spell_damage_to_attack_damage_is_gem",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value\nquality_display_spell_damage_to_attack_damage_is_gem",
+      "base_number_of_projectiles\nquality_display_base_number_of_projectiles_is_gem",
+      "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius",
+      "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius",
+      "active_skill_tertiary_area_of_effect_description_mode\nactive_skill_base_tertiary_area_of_effect_radius"
+    ],
+    "tags": [
+      "intelligence",
+      "grants_active_skill",
+      "attack",
+      "area",
+      "projectile",
+      "duration",
+      "trigger"
+    ],
+    "secondary_granted_effect": "KineticRainKineticInstability",
+    "quest_reward": {
+      "act": 3,
+      "classes": [
+        "女巫"
+      ],
+      "quest": "剷除左右手"
+    },
+    "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "揮舞你的法杖，使複數投射物在你前方的大片區域灑落， 並且鎖定區域中的敵人位置。 投射物掉落的位置會在落下前預先標記。 每一個掉落的投射物都會在落地時爆炸，造成範圍傷害。",
+      "display_name": "力量驟雨．衝擊",
+      "id": "kinetic_rain_alt_x",
+      "is_manually_casted": true,
+      "is_skill_totem": true,
+      "stat_conversions": {},
+      "types": [
+        "Attack",
+        "Area",
+        "Projectile",
+        "Trappable",
+        "Mineable",
+        "Triggerable",
+        "Totemable",
+        "WandAttack",
+        "RangedAttack",
+        "Rain"
+      ],
+      "weapon_restrictions": [
+        "Wand"
+      ],
+      "minion_types": null,
+      "skill_totem_life_multiplier": 1.0
+    },
+    "base_item": {
+      "display_name": "力量驟雨",
+      "experience_type": "GemProgression12",
+      "id": "Metadata/Items/Gems/SkillGemKineticRain",
+      "max_level": 20,
+      "release_state": "released"
+    },
+    "cast_time": 1000,
+    "color": "b",
+    "display_name": "力量驟雨．衝擊",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [
+        {
+          "stat": "發射 {base_number_of_projectiles} 個投射物",
+          "stats": {
+            "base_number_of_projectiles": 100
+          }
+        }
+      ],
+      "stat_requirements": {
+        "int": null,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius": "基礎目標範圍長度為 9 米",
+        "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius": "基礎目標寬度為 4.5 米",
+        "active_skill_tertiary_area_of_effect_description_mode\nactive_skill_base_tertiary_area_of_effect_radius": "基礎爆炸範圍為 1.2 米",
+        "active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value\nquality_display_spell_damage_to_attack_damage_is_gem": "增加和減少法術傷害同時以 150% 它們的值，套用至來自此技能的攻擊傷害",
+        "base_number_of_projectiles\nquality_display_base_number_of_projectiles_is_gem": "發射 10 個投射物"
+      },
+      "stats": [
+        {
+          "id": "active_skill_base_area_of_effect_radius",
+          "type": "constant",
+          "value": 90
+        },
+        {
+          "id": "active_skill_area_of_effect_description_mode",
+          "type": "constant",
+          "value": 8
+        },
+        {
+          "id": "active_skill_base_secondary_area_of_effect_radius",
+          "type": "constant",
+          "value": 45
+        },
+        {
+          "id": "active_skill_secondary_area_of_effect_description_mode",
+          "type": "constant",
+          "value": 8
+        },
+        {
+          "id": "active_skill_base_tertiary_area_of_effect_radius",
+          "type": "constant",
+          "value": 12
+        },
+        {
+          "id": "active_skill_tertiary_area_of_effect_description_mode",
+          "type": "constant",
+          "value": 1
+        },
+        {
+          "id": "active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value",
+          "type": "constant",
+          "value": 150
+        },
+        {
+          "id": "base_number_of_projectiles",
+          "type": "additional",
+          "value": 10
+        },
+        {
+          "id": "is_area_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "base_is_projectile",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "quality_display_base_number_of_projectiles_is_gem",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "base_is_projectile",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "skill_can_fire_wand_projectiles",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "quality_display_spell_damage_to_attack_damage_is_gem",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": 20,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value\nquality_display_spell_damage_to_attack_damage_is_gem",
+      "base_number_of_projectiles\nquality_display_base_number_of_projectiles_is_gem",
+      "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius",
+      "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius",
+      "active_skill_tertiary_area_of_effect_description_mode\nactive_skill_base_tertiary_area_of_effect_radius"
+    ],
+    "tags": [
+      "intelligence",
+      "grants_active_skill",
+      "attack",
+      "area",
+      "projectile"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": {
+      "act": 3,
+      "classes": [
+        "女巫"
+      ],
+      "quest": "剷除左右手"
+    },
+    "discriminator": "alt_x",
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "用你的法杖發射一個能造成傷害的投射物，它會自動瞄準敵人並對第一個擊中的敵人施加一個護盾。對該目標造成的擊中傷害會優先由這個護盾承受。當護盾耗盡，將會爆炸，造成範圍傷害並向另一個目標發射一個投射物，對其施加一個新的護盾。如果一個爆炸的護盾發射多個投射物，只有第一個擊中目標的投射物能施加護盾。",
+      "display_name": "心靈壁壘",
+      "id": "kinetic_shell",
+      "is_manually_casted": true,
+      "is_skill_totem": false,
+      "stat_conversions": {},
+      "types": [
+        "Duration",
+        "Physical",
+        "Trappable",
+        "Mineable",
+        "Totemable",
+        "ProjectilesFromUser",
+        "Attack",
+        "WandAttack",
+        "Area",
+        "Projectile",
+        "RangedAttack"
+      ],
+      "weapon_restrictions": [
+        "Wand"
+      ],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "心靈壁壘",
+      "experience_type": "GemProgression28",
+      "id": "Metadata/Items/Gems/SkillGemSomaticShell",
+      "max_level": 20,
+      "release_state": "released"
+    },
+    "cast_time": 600,
+    "color": "b",
+    "display_name": "心靈壁壘",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [
+        {
+          "stat": "基礎範圍為 {active_skill_base_area_of_effect_radius/locations_to_metres} 米",
+          "stats": {
+            "active_skill_base_area_of_effect_radius": 150
+          }
+        }
+      ],
+      "stat_requirements": {
+        "int": null,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "base_skill_effect_duration": "+5.00 秒基礎持續時間",
+        "active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value\nquality_display_spell_damage_to_attack_damage_is_gem": "增加和減少法術傷害同時以 150% 它們的值，套用至來自此技能的攻擊傷害",
+        "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius": "基礎爆炸範圍為 1.5 米",
+        "kinetic_shell_immunity_after_explosion_ms": "壁壘無法在爆炸後0.2秒內被施加在同一目標上",
+        "kinetic_shell_transfer_to_X_targets_on_projectile_hit": "爆炸造成的投射物無法施加超過1個新壁壘",
+        "active_skill_area_damage_+%_final\nquality_display_active_skill_area_damage_is_gem": "+750% 更多範圍傷害",
+        "damage_cannot_break_kinetic_shells": "來自此技能的傷害無法被壁壘承受",
+        "quality_display_base_number_of_projectiles_is_gem": ""
+      },
+      "stats": [
+        {
+          "id": "kinetic_shell_hit_damage_absorbed_%",
+          "type": "constant",
+          "value": 100
+        },
+        {
+          "id": "base_skill_effect_duration",
+          "type": "constant",
+          "value": 5000
+        },
+        {
+          "id": "active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value",
+          "type": "constant",
+          "value": 150
+        },
+        {
+          "id": "active_skill_base_area_of_effect_radius",
+          "type": "constant",
+          "value": 15
+        },
+        {
+          "id": "active_skill_area_of_effect_description_mode",
+          "type": "constant",
+          "value": 1
+        },
+        {
+          "id": "kinetic_shell_immunity_after_explosion_ms",
+          "type": "constant",
+          "value": 200
+        },
+        {
+          "id": "kinetic_shell_transfer_to_X_targets_on_projectile_hit",
+          "type": "constant",
+          "value": 1
+        },
+        {
+          "id": "active_skill_area_damage_+%_final",
+          "type": "constant",
+          "value": 750
+        },
+        {
+          "id": "kinetic_shell_maximum_damage_absorbed_from_hits",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "kinetic_shell_number_of_active_buffs_allowed",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "skill_can_fire_wand_projectiles",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "damage_cannot_break_kinetic_shells",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "base_skill_show_average_damage_instead_of_dps",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "quality_display_active_skill_area_damage_is_gem",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "quality_display_base_number_of_projectiles_is_gem",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "quality_display_spell_damage_to_attack_damage_is_gem",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value\nquality_display_spell_damage_to_attack_damage_is_gem",
+      "base_skill_effect_duration",
+      "quality_display_base_number_of_projectiles_is_gem",
+      "damage_cannot_break_kinetic_shells",
+      "active_skill_area_damage_+%_final\nquality_display_active_skill_area_damage_is_gem",
+      "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius",
+      "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius\nactive_skill_area_of_effect_radius",
+      "kinetic_shell_hit_damage_absorbed_%\nkinetic_shell_maximum_damage_absorbed_from_hits",
+      "kinetic_shell_immunity_after_explosion_ms",
+      "kinetic_shell_number_of_active_buffs_allowed",
+      "kinetic_shell_transfer_to_X_targets_on_projectile_hit"
+    ],
+    "tags": [
+      "intelligence",
+      "grants_active_skill",
+      "duration",
+      "physical",
+      "attack",
+      "area",
+      "projectile"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": {
+      "act": 3,
+      "classes": [
+        "女巫"
+      ],
+      "quest": "剷除左右手"
+    },
+    "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "向空中射出箭矢，在目標區域周圍落下，命中時造成範圍傷害，並在該區域生成雷暴，使其中的敵人致盲。進入雷暴會使其累積階段，再次離開則會使其逐漸消散。當你在雷暴達到最大階段時離開，它將會爆炸，造成傷害並觸發雷霆爆裂。此技能必須由你親自施放，無法由圖騰、陷阱、地雷或其他代替你施放技能的物體使用。",
+      "display_name": "天雷暴雨",
+      "id": "thunderstorm",
+      "is_manually_casted": true,
+      "is_skill_totem": false,
+      "stat_conversions": {},
+      "types": [
+        "Attack",
+        "Area",
+        "RangedAttack",
+        "Duration",
+        "Lightning",
+        "Rain",
+        "ProjectileSpeed",
+        "ProjectilesNumberModifiersNotApplied"
+      ],
+      "weapon_restrictions": [
+        "Bow"
+      ],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "天雷暴雨",
+      "experience_type": "GemProgression28",
+      "id": "Metadata/Items/Gems/SkillGemThunderstorm",
+      "max_level": 20,
+      "release_state": "released"
+    },
+    "cast_time": 1000,
+    "color": "g",
+    "display_name": "天雷暴雨",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": 0,
+        "str": 0,
+        "dex": null
+      },
+      "stat_text": {
+        "base_number_of_arrows\nquality_display_base_additional_arrows_is_gem": "發射 1 支箭矢",
+        "base_windstorm_storm_stage_gained_per_X_ms\nwindstorm_storm_maximum_stages": "你處於天雷暴雨內時，天雷暴雨每 0 秒會獲得一層階段，最多疊加到 4 層",
+        "windstorm_storm_perfect_timing_window_escape_time_ms": "若你在雷暴達到最大層數前、或是在達到最大層數的1.5秒後離開它，雷暴將會消散",
+        "base_skill_effect_duration": "+10.00 秒基礎持續時間",
+        "skill_physical_damage_%_to_convert_to_lightning": "60% 物理傷害轉換為閃電傷害",
+        "windstorm_storm_limit": "最多 3 場天雷暴雨",
+        "windstorm_storm_hit_damage_+%_final_on_detonation": "爆炸造成 300% 更多傷害",
+        "windstorm_storm_area_of_effect_+%_final_per_stage": "天雷暴雨每階段增加 30% 範圍效果",
+        "modifiers_to_projectile_count_do_not_apply": "投射物數量詞綴不套用至此技能"
+      },
+      "stats": [
+        {
+          "id": "base_number_of_arrows",
+          "type": "constant",
+          "value": 1
+        },
+        {
+          "id": "windstorm_storm_maximum_stages",
+          "type": "constant",
+          "value": 4
+        },
+        {
+          "id": "windstorm_storm_perfect_timing_window_escape_time_ms",
+          "type": "constant",
+          "value": 1500
+        },
+        {
+          "id": "base_skill_effect_duration",
+          "type": "constant",
+          "value": 10000
+        },
+        {
+          "id": "skill_physical_damage_%_to_convert_to_lightning",
+          "type": "constant",
+          "value": 60
+        },
+        {
+          "id": "windstorm_storm_limit",
+          "type": "constant",
+          "value": 3
+        },
+        {
+          "id": "windstorm_storm_hit_damage_+%_final_on_detonation",
+          "type": "constant",
+          "value": 300
+        },
+        {
+          "id": "base_windstorm_storm_stage_gained_per_X_ms",
+          "type": "constant",
+          "value": 250
+        },
+        {
+          "id": "windstorm_storm_area_of_effect_+%_final_per_stage",
+          "type": "constant",
+          "value": 30
+        },
+        {
+          "id": "active_skill_base_area_of_effect_radius",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "base_is_projectile",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "is_area_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "quality_display_base_additional_arrows_is_gem",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "modifiers_to_projectile_count_do_not_apply",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "base_skill_show_average_damage_instead_of_dps",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "skill_can_fire_arrows",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "skill_physical_damage_%_to_convert_to_lightning",
+      "base_skill_effect_duration",
+      "base_number_of_arrows\nquality_display_base_additional_arrows_is_gem",
+      "modifiers_to_projectile_count_do_not_apply",
+      "active_skill_base_area_of_effect_radius",
+      "windstorm_storm_limit",
+      "base_windstorm_storm_stage_gained_per_X_ms\nwindstorm_storm_maximum_stages",
+      "windstorm_storm_area_of_effect_+%_final_per_stage",
+      "windstorm_storm_perfect_timing_window_escape_time_ms",
+      "windstorm_storm_hit_damage_+%_final_on_detonation"
+    ],
+    "tags": [
+      "dexterity",
+      "grants_active_skill",
+      "attack",
+      "area",
+      "duration",
+      "lightning",
+      "bow",
+      "projectile",
+      "trigger"
+    ],
+    "secondary_granted_effect": "ThunderstormMiniTornados",
+    "quest_reward": {
+      "act": 3,
+      "classes": [
+        "決鬥者",
+        "遊俠"
+      ],
+      "quest": "剷除左右手"
+    },
+    "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "揮動你的法杖來創造一個懸浮投射物。經過短暫的持續時間後，該投射物會射向一個敵人，命中時造成範圍傷害並連鎖至更多目標。再次使用此攻擊將會重置所有懸浮投射物的持續時間。連續發射的多個投射物會將會瞄準不同的敵人。此技能不能直接被陷阱或地雷使用。",
+      "display_name": "力量齊射",
+      "id": "kinetic_fusillade",
+      "is_manually_casted": true,
+      "is_skill_totem": false,
+      "stat_conversions": {},
+      "types": [
+        "Attack",
+        "Triggerable",
+        "Projectile",
+        "RangedAttack",
+        "WandAttack",
+        "Duration",
+        "Totemable",
+        "ProjectilesFromUser",
+        "Area"
+      ],
+      "weapon_restrictions": [
+        "Wand"
+      ],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "力量猛射",
+      "experience_type": "GemProgression10",
+      "id": "Metadata/Items/Gems/SkillGemKineticFusillade",
+      "max_level": 20,
+      "release_state": "released"
+    },
+    "cast_time": 1000,
+    "color": "b",
+    "display_name": "力量猛射",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [
+        {
+          "stat": "佇列中每1先前的投射物，便使投射物造成{kinetic_fusillade_damage_+%_final_per_projectile_fired}%更多傷害",
+          "stats": {
+            "kinetic_fusillade_damage_+%_final_per_projectile_fired": 200
+          }
+        }
+      ],
+      "stat_requirements": {
+        "int": null,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "base_skill_effect_duration": "+0.70 秒基礎持續時間",
+        "number_of_chains": "連鎖 +3 次",
+        "kinetic_fusillade_maximum_floating_projectiles": "最大12個懸停的投射物",
+        "active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value\nquality_display_spell_damage_to_attack_damage_is_gem": "增加和減少法術傷害同時以 150% 它們的值，套用至來自此技能的攻擊傷害",
+        "active_skill_base_area_of_effect_radius": "基礎範圍為 1.2 米"
+      },
+      "stats": [
+        {
+          "id": "base_skill_effect_duration",
+          "type": "constant",
+          "value": 700
+        },
+        {
+          "id": "number_of_chains",
+          "type": "constant",
+          "value": 3
+        },
+        {
+          "id": "kinetic_fusillade_base_delay_between_projectiles_ms",
+          "type": "constant",
+          "value": 50
+        },
+        {
+          "id": "kinetic_fusillade_subsequent_targeting_radius",
+          "type": "constant",
+          "value": 30
+        },
+        {
+          "id": "kinetic_fusillade_maximum_floating_projectiles",
+          "type": "constant",
+          "value": 12
+        },
+        {
+          "id": "active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value",
+          "type": "constant",
+          "value": 150
+        },
+        {
+          "id": "active_skill_base_area_of_effect_radius",
+          "type": "constant",
+          "value": 12
+        },
+        {
+          "id": "kinetic_fusillade_damage_+%_final_per_projectile_fired",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "skill_can_fire_wand_projectiles",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "is_area_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "projectile_uses_contact_position",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "quality_display_spell_damage_to_attack_damage_is_gem",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "quality_display_kinetic_fusillade_is_gem",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": 100,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value\nquality_display_spell_damage_to_attack_damage_is_gem",
+      "base_skill_effect_duration",
+      "number_of_chains",
+      "active_skill_base_area_of_effect_radius",
+      "kinetic_fusillade_damage_+%_final_per_projectile_fired\nquality_display_kinetic_fusillade_is_gem",
+      "kinetic_fusillade_maximum_floating_projectiles"
+    ],
+    "tags": [
+      "intelligence",
+      "grants_active_skill",
+      "attack",
+      "projectile",
+      "duration",
+      "area"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
     "discriminator": null,
     "support_gem": null
   },
@@ -123966,7 +125119,7 @@
         "dex": null
       },
       "stat_text": {
-        "support_faster_ailments_ailment_duration_+%_final": "80% 更少被輔助技能造成異常狀態的持續時間"
+        "support_faster_ailments_ailment_duration_+%_final": "70% 更少被輔助技能造成異常狀態的持續時間"
       },
       "stats": [
         {
@@ -123977,7 +125130,7 @@
         {
           "id": "support_faster_ailments_ailment_duration_+%_final",
           "type": "additional",
-          "value": -80
+          "value": -70
         }
       ],
       "vaal": null,
@@ -124755,6 +125908,2016 @@
   },
   {
     "active_skill": {
+      "description": "當你失去生命時，這個接肢會施加一個增益效果，替你承受部分來自擊中的傷害，直到被消耗殆盡。當你在該增益效果存在時受到攻擊，這個技能會新星狀的釋放一圈在撞擊時會爆炸的火焰投射物。",
+      "display_name": "烈炎之心",
+      "id": "graft_skill_xoph_molten_shell",
+      "is_manually_casted": false,
+      "is_skill_totem": false,
+      "stat_conversions": {},
+      "types": [
+        "Cooldown",
+        "Spell",
+        "Area",
+        "Projectile",
+        "Fire",
+        "Buff",
+        "Duration",
+        "Guard"
+      ],
+      "weapon_restrictions": [],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "烈炎之心",
+      "experience_type": "GemProgressionGraftSkill",
+      "id": "Metadata/Items/Chayula/XophGraftGem1",
+      "max_level": 40,
+      "release_state": "released"
+    },
+    "cast_time": 1000,
+    "color": "r",
+    "display_name": "烈炎之心",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": 800,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": 0,
+        "str": null,
+        "dex": 0
+      },
+      "stat_text": {
+        "base_number_of_projectiles\nquality_display_base_number_of_projectiles_is_gem": "發射 5 個投射物",
+        "projectiles_nova": "以環狀型式發射投射物"
+      },
+      "stats": [
+        {
+          "id": "spell_minimum_base_fire_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "spell_maximum_base_fire_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "base_number_of_projectiles",
+          "type": "constant",
+          "value": 5
+        },
+        {
+          "id": "graft_skill_xoph_molten_shell_nova_projectile_cooldown_ms",
+          "type": "constant",
+          "value": 200
+        },
+        {
+          "id": "molten_shell_damage_absorbed_%",
+          "type": "constant",
+          "value": 80
+        },
+        {
+          "id": "molten_shell_max_damage_absorbed",
+          "type": "constant",
+          "value": 10000
+        },
+        {
+          "id": "base_skill_effect_duration",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "active_skill_base_area_of_effect_radius",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "graft_skill_xoph_molten_shell_absorb_limit",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "base_is_projectile",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "is_area_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "projectiles_nova",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "molten_shell_explode_each_hit",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "quality_display_base_number_of_projectiles_is_gem",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "is_graft_skill",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": 20000,
+      "stored_uses": 1,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "base_skill_effect_duration",
+      "spell_minimum_base_fire_damage\nspell_maximum_base_fire_damage",
+      "base_number_of_projectiles\nquality_display_base_number_of_projectiles_is_gem",
+      "projectiles_nova",
+      "active_skill_base_area_of_effect_radius",
+      "molten_shell_damage_absorbed_%\nmolten_shell_max_damage_absorbed\ngraft_skill_xoph_molten_shell_absorb_limit"
+    ],
+    "tags": [
+      "strength",
+      "grants_active_skill",
+      "spell",
+      "area",
+      "projectile",
+      "fire",
+      "duration",
+      "guard"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "當被號令時，此接肢會引發災變般的爆發，在其後方留下多個炎泉。炎泉會定期發射火焰迫擊砲，當你使用戰吼時會瞬間發射更多。被觸發的戰吼不會引發火焰迫擊砲。",
+      "display_name": "他的焚炎句語",
+      "id": "graft_skill_xoph_geyser_explosion",
+      "is_manually_casted": false,
+      "is_skill_totem": false,
+      "stat_conversions": {},
+      "types": [
+        "Cooldown",
+        "Duration",
+        "Area",
+        "Projectile",
+        "Attack",
+        "Fire"
+      ],
+      "weapon_restrictions": [],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "他的焚炎句語",
+      "experience_type": "GemProgressionGraftSkill",
+      "id": "Metadata/Items/Chayula/XophGraftGem2",
+      "max_level": 40,
+      "release_state": "released"
+    },
+    "cast_time": 1000,
+    "color": "r",
+    "display_name": "他的焚炎句語",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": 0,
+        "str": null,
+        "dex": 0
+      },
+      "stat_text": {
+        "graft_skill_xoph_geyser_explosion_maximum_geysers": "噴泉上限為9個",
+        "graft_skill_xoph_geyser_explosion_number_of_projectiles_to_erupt": "噴泉在你使用戰吼時會發射2個額外投射物",
+        "base_number_of_projectiles\nquality_display_base_number_of_projectiles_is_gem": "發射 1 個投射物",
+        "active_skill_base_secondary_area_of_effect_radius": "基礎二段範圍為 4.5 米",
+        "additional_base_critical_strike_chance": "+8% 暴擊率",
+        "active_skill_projectile_damage_+%_final": "50% 更少投射物傷害",
+        "active_skill_base_area_of_effect_radius": "基礎範圍為 3 米"
+      },
+      "stats": [
+        {
+          "id": "attack_minimum_added_fire_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "attack_maximum_added_fire_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "graft_skill_xoph_geyser_explosion_maximum_geysers",
+          "type": "constant",
+          "value": 9
+        },
+        {
+          "id": "graft_skill_xoph_geyser_explosion_number_of_projectiles_to_erupt",
+          "type": "constant",
+          "value": 2
+        },
+        {
+          "id": "base_number_of_projectiles",
+          "type": "constant",
+          "value": 1
+        },
+        {
+          "id": "graft_skill_xoph_geyser_fires_projectile_every_x_ms",
+          "type": "constant",
+          "value": 700
+        },
+        {
+          "id": "active_skill_base_secondary_area_of_effect_radius",
+          "type": "constant",
+          "value": 15
+        },
+        {
+          "id": "active_skill_base_secondary_area_of_effect_radius",
+          "type": "constant",
+          "value": 30
+        },
+        {
+          "id": "graft_skill_xoph_geyser_base_projectiles_per_explosion",
+          "type": "constant",
+          "value": 3
+        },
+        {
+          "id": "additional_base_critical_strike_chance",
+          "type": "constant",
+          "value": 800
+        },
+        {
+          "id": "active_skill_projectile_damage_+%_final",
+          "type": "constant",
+          "value": -50
+        },
+        {
+          "id": "active_skill_base_area_of_effect_radius",
+          "type": "constant",
+          "value": 30
+        },
+        {
+          "id": "graft_skill_xoph_geyser_explosion_number_of_geysers_to_spawn",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "base_skill_effect_duration",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "is_area_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "base_is_projectile",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "quality_display_base_number_of_projectiles_is_gem",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "is_graft_skill",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": 35000,
+      "stored_uses": 1,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "base_skill_effect_duration",
+      "attack_minimum_added_fire_damage\nattack_maximum_added_fire_damage",
+      "base_number_of_projectiles\nquality_display_base_number_of_projectiles_is_gem",
+      "graft_skill_xoph_geyser_explosion_maximum_geysers",
+      "graft_skill_xoph_geyser_explosion_number_of_geysers_to_spawn",
+      "graft_skill_xoph_geyser_explosion_number_of_projectiles_to_erupt",
+      "additional_base_critical_strike_chance",
+      "active_skill_projectile_damage_+%_final",
+      "active_skill_base_area_of_effect_radius",
+      "active_skill_base_secondary_area_of_effect_radius"
+    ],
+    "tags": [
+      "strength",
+      "grants_active_skill",
+      "duration",
+      "area",
+      "projectile",
+      "attack",
+      "fire",
+      "bow"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "當你在裝備此接肢時進行攻擊，它會召喚出灰燼之炎構成的火柱。這些火柱會在區域內造成火焰傷害，並使被擊中的敵人餘燼纏身。",
+      "display_name": "炎葬之喚",
+      "id": "graft_skill_xoph_flame_pillars",
+      "is_manually_casted": false,
+      "is_skill_totem": false,
+      "stat_conversions": {},
+      "types": [
+        "Fire",
+        "Area",
+        "Attack",
+        "Cooldown"
+      ],
+      "weapon_restrictions": [],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "炎葬之喚",
+      "experience_type": "GemProgressionGraftSkill",
+      "id": "Metadata/Items/Chayula/XophGraftGem3",
+      "max_level": 40,
+      "release_state": "released"
+    },
+    "cast_time": 500,
+    "color": "r",
+    "display_name": "炎葬之喚",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": 0,
+        "str": null,
+        "dex": 0
+      },
+      "stat_text": {
+        "cover_in_ash_on_hit_%": "擊中時使敵人餘燼纏身",
+        "additional_base_critical_strike_chance": "+8% 暴擊率"
+      },
+      "stats": [
+        {
+          "id": "attack_minimum_added_fire_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "attack_maximum_added_fire_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "cover_in_ash_on_hit_%",
+          "type": "constant",
+          "value": 100
+        },
+        {
+          "id": "additional_base_critical_strike_chance",
+          "type": "constant",
+          "value": 800
+        },
+        {
+          "id": "active_skill_base_area_of_effect_radius",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "graft_skill_xoph_flame_pillars_number_of_pillars",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "is_area_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "cast_time_overrides_attack_duration",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "is_graft_skill",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": 1000,
+      "stored_uses": 1,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "attack_minimum_added_fire_damage\nattack_maximum_added_fire_damage",
+      "graft_skill_xoph_flame_pillars_number_of_pillars",
+      "additional_base_critical_strike_chance",
+      "active_skill_base_area_of_effect_radius",
+      "cover_in_ash_on_hit_%"
+    ],
+    "tags": [
+      "strength",
+      "grants_active_skill",
+      "fire",
+      "area",
+      "attack",
+      "melee",
+      "bow"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "當你在裝備此接肢時受到元素異常狀態影響，將會移除你身上所有的異常狀態，並使你獲得等同於被移除異常所屬元素類型的額外物理傷害。",
+      "display_name": "灰風咆嘯",
+      "id": "graft_skill_xoph_ailment_buff",
+      "is_manually_casted": false,
+      "is_skill_totem": false,
+      "stat_conversions": {},
+      "types": [
+        "Cooldown",
+        "Spell",
+        "Buff"
+      ],
+      "weapon_restrictions": [],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "灰風咆嘯",
+      "experience_type": "GemProgressionGraftSkill",
+      "id": "Metadata/Items/Chayula/XophGraftGem4",
+      "max_level": 40,
+      "release_state": "released"
+    },
+    "cast_time": 1000,
+    "color": "r",
+    "display_name": "灰風咆嘯",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": 0,
+        "str": null,
+        "dex": 0
+      },
+      "stat_text": null,
+      "stats": [
+        {
+          "id": "base_skill_effect_duration",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "graft_skill_xoph_ailment_buff_%_of_physical_damage_gained_as_element_to_grant",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "base_deal_no_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "is_graft_skill",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": 8000,
+      "stored_uses": 1,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "base_skill_effect_duration",
+      "graft_skill_xoph_ailment_buff_%_of_physical_damage_gained_as_element_to_grant"
+    ],
+    "tags": [
+      "strength",
+      "grants_active_skill",
+      "spell"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "當你在裝備此接肢時，此接肢會定期鎖定範圍內的稀有或傳奇敵人，召喚巨手猛擊地面，造成高額傷害並使其暈眩。",
+      "display_name": "回歸塵土",
+      "id": "graft_skill_uulnetol_hand_slam",
+      "is_manually_casted": false,
+      "is_skill_totem": false,
+      "stat_conversions": {},
+      "types": [
+        "Cooldown",
+        "Melee",
+        "Area",
+        "Physical",
+        "Attack"
+      ],
+      "weapon_restrictions": [],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "回歸塵土",
+      "experience_type": "GemProgressionGraftSkill",
+      "id": "Metadata/Items/Chayula/UulNetolGraftGem1",
+      "max_level": 40,
+      "release_state": "released"
+    },
+    "cast_time": 800,
+    "color": "r",
+    "display_name": "回歸塵土",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": 0,
+        "str": null,
+        "dex": 0
+      },
+      "stat_text": {
+        "active_skill_base_area_of_effect_radius": "基礎範圍為 2 米",
+        "graft_skill_uulnetol_hand_slam_number_of_hands_to_create": "創造4隻手掌",
+        "additional_base_critical_strike_chance": "+8% 暴擊率",
+        "always_stun": "暈眩敵人"
+      },
+      "stats": [
+        {
+          "id": "attack_minimum_added_physical_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "attack_maximum_added_physical_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "active_skill_base_area_of_effect_radius",
+          "type": "constant",
+          "value": 20
+        },
+        {
+          "id": "graft_skill_uulnetol_hand_slam_number_of_hands_to_create",
+          "type": "constant",
+          "value": 4
+        },
+        {
+          "id": "additional_base_critical_strike_chance",
+          "type": "constant",
+          "value": 800
+        },
+        {
+          "id": "base_stun_duration_+%",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "is_area_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "always_stun",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "cast_time_overrides_attack_duration",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "is_graft_skill",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": 10000,
+      "stored_uses": 1,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "attack_minimum_added_physical_damage\nattack_maximum_added_physical_damage",
+      "graft_skill_uulnetol_hand_slam_number_of_hands_to_create",
+      "base_stun_duration_+%",
+      "always_stun",
+      "additional_base_critical_strike_chance",
+      "active_skill_base_area_of_effect_radius"
+    ],
+    "tags": [
+      "strength",
+      "grants_active_skill",
+      "area",
+      "physical",
+      "attack",
+      "melee",
+      "bow"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "當你使用戰吼時，此接肢會令你周圍的地面爆發出骨之尖刺。當你使用受戰吼強化的攻擊時，這些尖刺會爆炸，對其周圍區域造成傷害，並使敵人流血與穿刺。",
+      "display_name": "肉身奪取",
+      "id": "graft_skill_uulnetol_bone_spires",
+      "is_manually_casted": false,
+      "is_skill_totem": false,
+      "stat_conversions": {},
+      "types": [
+        "Cooldown",
+        "Attack",
+        "Area",
+        "Physical"
+      ],
+      "weapon_restrictions": [],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "肉身奪取",
+      "experience_type": "GemProgressionGraftSkill",
+      "id": "Metadata/Items/Chayula/UulNetolGraftGem2",
+      "max_level": 40,
+      "release_state": "released"
+    },
+    "cast_time": 1000,
+    "color": "r",
+    "display_name": "肉身奪取",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": 0,
+        "str": null,
+        "dex": 0
+      },
+      "stat_text": {
+        "graft_skill_uulnet_bone_spires_max_spires_allowed": "骸骨尖刺上限為20座",
+        "base_skill_effect_duration": "+8.00 秒基礎持續時間",
+        "active_skill_base_area_of_effect_radius": "基礎範圍為 4.5 米",
+        "impale_on_hit_%_chance": "擊中時穿刺敵人",
+        "active_skill_base_secondary_area_of_effect_radius": "基礎二段範圍為 1.7 米",
+        "additional_base_critical_strike_chance": "+8% 暴擊率",
+        "global_bleed_on_hit": "造成流血"
+      },
+      "stats": [
+        {
+          "id": "attack_minimum_added_physical_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "attack_maximum_added_physical_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "graft_skill_uulnet_bone_spires_max_spires_allowed",
+          "type": "constant",
+          "value": 20
+        },
+        {
+          "id": "base_skill_effect_duration",
+          "type": "constant",
+          "value": 8000
+        },
+        {
+          "id": "active_skill_base_area_of_effect_radius",
+          "type": "constant",
+          "value": 45
+        },
+        {
+          "id": "impale_on_hit_%_chance",
+          "type": "constant",
+          "value": 100
+        },
+        {
+          "id": "active_skill_base_secondary_area_of_effect_radius",
+          "type": "constant",
+          "value": 17
+        },
+        {
+          "id": "additional_base_critical_strike_chance",
+          "type": "constant",
+          "value": 800
+        },
+        {
+          "id": "graft_skill_uulnetol_bone_spires_num_of_spires_to_create",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "impale_debuff_effect_+%",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "is_area_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "global_bleed_on_hit",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "is_graft_skill",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": 8000,
+      "stored_uses": 1,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "base_skill_effect_duration",
+      "attack_minimum_added_physical_damage\nattack_maximum_added_physical_damage",
+      "graft_skill_uulnet_bone_spires_max_spires_allowed",
+      "graft_skill_uulnetol_bone_spires_num_of_spires_to_create",
+      "additional_base_critical_strike_chance",
+      "active_skill_base_area_of_effect_radius",
+      "active_skill_base_secondary_area_of_effect_radius",
+      "global_bleed_on_hit",
+      "impale_debuff_effect_+%",
+      "impale_on_hit_%_chance"
+    ],
+    "tags": [
+      "strength",
+      "grants_active_skill",
+      "attack",
+      "area",
+      "physical",
+      "melee",
+      "bow"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "當你有盛怒時，此接肢會週期性的對你施加增益效果，使你施加額外一層穿刺，並且增加你施加的穿刺範圍效果。",
+      "display_name": "暴力渴望",
+      "id": "graft_skill_uulnetol_impale_buff",
+      "is_manually_casted": false,
+      "is_skill_totem": false,
+      "stat_conversions": {},
+      "types": [
+        "Cooldown",
+        "Duration",
+        "Buff",
+        "Physical",
+        "Spell"
+      ],
+      "weapon_restrictions": [],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "暴力渴望",
+      "experience_type": "GemProgressionGraftSkill",
+      "id": "Metadata/Items/Chayula/UulNetolGraftGem3",
+      "max_level": 40,
+      "release_state": "released"
+    },
+    "cast_time": 1000,
+    "color": "r",
+    "display_name": "暴力渴望",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": 0,
+        "str": null,
+        "dex": null
+      },
+      "stat_text": {
+        "graft_skill_uulnetol_impale_buff_%_chance_for_additional_impale_to_grant": "增益會提供30%機率在穿刺敵人的時候額外穿刺一次"
+      },
+      "stats": [
+        {
+          "id": "graft_skill_uulnetol_impale_buff_%_chance_for_additional_impale_to_grant",
+          "type": "constant",
+          "value": 30
+        },
+        {
+          "id": "base_skill_effect_duration",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "graft_skill_uulnetol_impale_buff_impale_effect_%_to_grant",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "base_deal_no_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "is_graft_skill",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": 16000,
+      "stored_uses": 1,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "base_skill_effect_duration",
+      "graft_skill_uulnetol_impale_buff_%_chance_for_additional_impale_to_grant",
+      "graft_skill_uulnetol_impale_buff_impale_effect_%_to_grant"
+    ],
+    "tags": [
+      "strength",
+      "grants_active_skill",
+      "duration",
+      "physical",
+      "spell"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "當你貧血時，這個接肢會定期對你施加增益效果，提供生命回復速度，並賦予一個耐力球。",
+      "display_name": "慈愛之擁",
+      "id": "graft_skill_uulnetol_lowlife_buff",
+      "is_manually_casted": false,
+      "is_skill_totem": false,
+      "stat_conversions": {},
+      "types": [
+        "Cooldown",
+        "Duration",
+        "Buff",
+        "Spell"
+      ],
+      "weapon_restrictions": [],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "慈愛之擁",
+      "experience_type": "GemProgressionGraftSkill",
+      "id": "Metadata/Items/Chayula/UulNetolGraftGem4",
+      "max_level": 40,
+      "release_state": "released"
+    },
+    "cast_time": 900,
+    "color": "r",
+    "display_name": "慈愛之擁",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": 0,
+        "str": null,
+        "dex": null
+      },
+      "stat_text": {
+        "graft_uulnetol_number_of_endurance_charges_to_grant_on_reaching_low_life": "增益使你獲得耐力球時額外獲得1個",
+        "base_skill_effect_duration": "+1.00 秒基礎持續時間"
+      },
+      "stats": [
+        {
+          "id": "graft_uulnetol_number_of_endurance_charges_to_grant_on_reaching_low_life",
+          "type": "constant",
+          "value": 1
+        },
+        {
+          "id": "base_skill_effect_duration",
+          "type": "constant",
+          "value": 1000
+        },
+        {
+          "id": "graft_uulnetol_life_recovery_rate_+%_final_to_grant_on_reaching_low_life",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "base_deal_no_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "is_graft_skill",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": 4000,
+      "stored_uses": 1,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "base_skill_effect_duration",
+      "graft_uulnetol_life_recovery_rate_+%_final_to_grant_on_reaching_low_life",
+      "graft_uulnetol_number_of_endurance_charges_to_grant_on_reaching_low_life"
+    ],
+    "tags": [
+      "strength",
+      "grants_active_skill",
+      "duration",
+      "spell"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "當被號令時，這個接肢會召喚一圈閃電落下，造成閃電傷害並留下輝耀地面。",
+      "display_name": "光暈纏繞",
+      "id": "graft_skill_esh_lightning_ring",
+      "is_manually_casted": false,
+      "is_skill_totem": false,
+      "stat_conversions": {},
+      "types": [
+        "Cooldown",
+        "Spell",
+        "Area",
+        "Damage",
+        "Lightning",
+        "Duration",
+        "Buff",
+        "AreaSpell"
+      ],
+      "weapon_restrictions": [],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "光暈纏繞",
+      "experience_type": "GemProgressionGraftSkill",
+      "id": "Metadata/Items/Chayula/EshGraftGem1",
+      "max_level": 40,
+      "release_state": "released"
+    },
+    "cast_time": 1000,
+    "color": "b",
+    "display_name": "光暈纏繞",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": 1200,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": null,
+        "str": 0,
+        "dex": null
+      },
+      "stat_text": {
+        "active_skill_base_area_of_effect_radius": "基礎範圍為 3 米",
+        "active_skill_base_secondary_area_of_effect_radius": "基礎二段範圍為 2.2 米"
+      },
+      "stats": [
+        {
+          "id": "spell_minimum_base_lightning_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "spell_maximum_base_lightning_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "active_skill_base_area_of_effect_radius",
+          "type": "constant",
+          "value": 30
+        },
+        {
+          "id": "active_skill_base_secondary_area_of_effect_radius",
+          "type": "constant",
+          "value": 22
+        },
+        {
+          "id": "graft_skill_esh_lightning_bolts_delay_between_bolts_ms",
+          "type": "constant",
+          "value": 125
+        },
+        {
+          "id": "base_skill_effect_duration",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "graft_granted_minimum_base_lightning_damage",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "graft_granted_maximum_base_lightning_damage",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "graft_skill_esh_lightning_bolts_number_of_bolts",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "is_area_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "is_graft_skill",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": 15000,
+      "stored_uses": 1,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "spell_minimum_base_lightning_damage\nspell_maximum_base_lightning_damage",
+      "base_skill_effect_duration",
+      "graft_granted_minimum_base_lightning_damage\ngraft_granted_maximum_base_lightning_damage",
+      "graft_skill_esh_lightning_bolts_number_of_bolts",
+      "active_skill_base_area_of_effect_radius",
+      "active_skill_base_secondary_area_of_effect_radius"
+    ],
+    "tags": [
+      "intelligence",
+      "grants_active_skill",
+      "spell",
+      "area",
+      "lightning",
+      "duration"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "當附近有敵人時，此接肢會定期召喚帶有閃電能量的自身分身。這些分身會朝最近的敵人移動，爆炸並留下感電地面。",
+      "display_name": "閃爍剪影",
+      "id": "graft_skill_esh_lightning_clones",
+      "is_manually_casted": false,
+      "is_skill_totem": false,
+      "stat_conversions": {},
+      "types": [
+        "Spell",
+        "Lightning",
+        "Duration",
+        "Area",
+        "Damage",
+        "AreaSpell",
+        "Cooldown"
+      ],
+      "weapon_restrictions": [],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "閃爍剪影",
+      "experience_type": "GemProgressionGraftSkill",
+      "id": "Metadata/Items/Chayula/EshGraftGem2",
+      "max_level": 40,
+      "release_state": "released"
+    },
+    "cast_time": 1000,
+    "color": "b",
+    "display_name": "閃爍剪影",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": 1200,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": null,
+        "str": 0,
+        "dex": null
+      },
+      "stat_text": {
+        "base_skill_effect_duration": "+8.00 秒基礎持續時間",
+        "active_skill_base_area_of_effect_radius": "基礎範圍為 2 米",
+        "base_secondary_skill_effect_duration": "基礎額外效果持續時間 8.00 秒",
+        "graft_skill_esh_lightning_clones_number_of_clones_to_create": "創造 1 個閃電充能的複製體"
+      },
+      "stats": [
+        {
+          "id": "spell_minimum_base_lightning_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "spell_maximum_base_lightning_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "base_skill_effect_duration",
+          "type": "constant",
+          "value": 8000
+        },
+        {
+          "id": "active_skill_base_area_of_effect_radius",
+          "type": "constant",
+          "value": 20
+        },
+        {
+          "id": "base_secondary_skill_effect_duration",
+          "type": "constant",
+          "value": 8000
+        },
+        {
+          "id": "graft_skill_esh_lightning_clones_number_of_clones_to_create",
+          "type": "constant",
+          "value": 1
+        },
+        {
+          "id": "is_area_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "is_graft_skill",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": 5000,
+      "stored_uses": 1,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "spell_minimum_base_lightning_damage\nspell_maximum_base_lightning_damage",
+      "base_skill_effect_duration",
+      "base_secondary_skill_effect_duration",
+      "graft_skill_esh_lightning_clones_number_of_clones_to_create",
+      "active_skill_base_area_of_effect_radius"
+    ],
+    "tags": [
+      "intelligence",
+      "grants_active_skill",
+      "spell",
+      "lightning",
+      "duration",
+      "area"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "當被號令時，這個接肢會召喚出一片抓握之手，每隻手都緊握著一顆削弱性的雷光球。當敵人接近某隻手時，其所握持的雷光球將會引爆，造成閃電傷害並在命中時施加殘喘。",
+      "display_name": "虛弱之握",
+      "id": "graft_skill_esh_lightning_hands",
+      "is_manually_casted": false,
+      "is_skill_totem": false,
+      "stat_conversions": {},
+      "types": [
+        "Cooldown",
+        "Area",
+        "Spell",
+        "AreaSpell",
+        "Damage",
+        "Lightning"
+      ],
+      "weapon_restrictions": [],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "虛弱之握",
+      "experience_type": "GemProgressionGraftSkill",
+      "id": "Metadata/Items/Chayula/EshGraftGem3",
+      "max_level": 40,
+      "release_state": "released"
+    },
+    "cast_time": 900,
+    "color": "b",
+    "display_name": "虛弱之握",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": 1200,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": null,
+        "str": 0,
+        "dex": null
+      },
+      "stat_text": {
+        "base_skill_effect_duration": "+10.00 秒基礎持續時間",
+        "active_skill_base_area_of_effect_radius": "基礎範圍為 4.5 米",
+        "graft_skill_esh_lightning_hands_maximum_hands": "手掌上限為40",
+        "chance_to_inflict_sapped_%": "總是殘喘敵人",
+        "active_skill_base_secondary_area_of_effect_radius": "基礎二段範圍為 1.5 米"
+      },
+      "stats": [
+        {
+          "id": "spell_minimum_base_lightning_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "spell_maximum_base_lightning_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "base_skill_effect_duration",
+          "type": "constant",
+          "value": 10000
+        },
+        {
+          "id": "active_skill_base_area_of_effect_radius",
+          "type": "constant",
+          "value": 45
+        },
+        {
+          "id": "graft_skill_esh_lightning_hands_maximum_hands",
+          "type": "constant",
+          "value": 40
+        },
+        {
+          "id": "chance_to_inflict_sapped_%",
+          "type": "constant",
+          "value": 100
+        },
+        {
+          "id": "active_skill_base_secondary_area_of_effect_radius",
+          "type": "constant",
+          "value": 15
+        },
+        {
+          "id": "graft_skill_esh_lightning_hands_number_of_hands_spawned",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "is_area_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "is_graft_skill",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": 12000,
+      "stored_uses": 1,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "spell_minimum_base_lightning_damage\nspell_maximum_base_lightning_damage",
+      "chance_to_inflict_sapped_%",
+      "base_skill_effect_duration",
+      "graft_skill_esh_lightning_hands_maximum_hands",
+      "graft_skill_esh_lightning_hands_number_of_hands_spawned",
+      "active_skill_base_area_of_effect_radius",
+      "active_skill_base_secondary_area_of_effect_radius"
+    ],
+    "tags": [
+      "intelligence",
+      "grants_active_skill",
+      "area",
+      "spell",
+      "lightning"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "當你以閃電傷害對敵人造成暴擊時，這個接肢會為你施加一層「震顫」。震顫會提升最大攻擊傷害，但同時承受的傷害也會增加，且最多可堆疊 10 層。",
+      "display_name": "過載筋腱",
+      "id": "graft_skill_esh_jolt_buff",
+      "is_manually_casted": false,
+      "is_skill_totem": false,
+      "stat_conversions": {},
+      "types": [
+        "Cooldown",
+        "Spell",
+        "Lightning",
+        "Buff"
+      ],
+      "weapon_restrictions": [],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "過載筋腱",
+      "experience_type": "GemProgressionGraftSkill",
+      "id": "Metadata/Items/Chayula/EshGraftGem4",
+      "max_level": 40,
+      "release_state": "released"
+    },
+    "cast_time": 200,
+    "color": "b",
+    "display_name": "過載筋腱",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": null,
+        "str": 0,
+        "dex": null
+      },
+      "stat_text": {
+        "graft_skill_esh_jolt_damage_taken_+%_to_grant": "震顫會增加1%承受傷害"
+      },
+      "stats": [
+        {
+          "id": "graft_skill_jolt_buff_maximum_buff_count",
+          "type": "constant",
+          "value": 10
+        },
+        {
+          "id": "graft_skill_esh_jolt_damage_taken_+%_to_grant",
+          "type": "constant",
+          "value": 1
+        },
+        {
+          "id": "graft_skill_esh_jolt_maximum_attack_damage_+%_final_to_grant",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "base_skill_effect_duration",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "base_deal_no_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "is_graft_skill",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": 300,
+      "stored_uses": 1,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "base_skill_effect_duration",
+      "graft_skill_esh_jolt_damage_taken_+%_to_grant",
+      "graft_skill_esh_jolt_maximum_attack_damage_+%_final_to_grant"
+    ],
+    "tags": [
+      "intelligence",
+      "grants_active_skill",
+      "spell",
+      "lightning"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "當被號令時，這個接肢會召喚出一股毀滅性的龍捲風，對其中的敵人快速地造成冰霜傷害。當你在龍捲風存在時以攻擊，你以攻擊造成暴擊，它就會釋放一圈碎霜彈幕。",
+      "display_name": "白中之舞",
+      "id": "graft_skill_tul_tornado",
+      "is_manually_casted": true,
+      "is_skill_totem": false,
+      "stat_conversions": {},
+      "types": [
+        "Cooldown",
+        "Spell",
+        "Damage",
+        "Projectile",
+        "Duration",
+        "Area",
+        "ChillingArea",
+        "DamageOverTime",
+        "Cold",
+        "AreaSpell"
+      ],
+      "weapon_restrictions": [],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "白中之舞",
+      "experience_type": "GemProgressionGraftSkill",
+      "id": "Metadata/Items/Chayula/TulGraftGem1",
+      "max_level": 40,
+      "release_state": "released"
+    },
+    "cast_time": 500,
+    "color": "g",
+    "display_name": "白中之舞",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": 1800,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": null,
+        "str": 0,
+        "dex": null
+      },
+      "stat_text": {
+        "tornado_base_damage_interval_ms": "每 0.25 秒造成傷害",
+        "number_of_tornados_allowed": "最多 1 個龍捲風",
+        "active_skill_base_area_of_effect_radius": "基礎範圍為 2 米",
+        "base_skill_effect_duration": "+12.00 秒基礎持續時間",
+        "base_secondary_skill_effect_duration": "基礎額外效果持續時間 3.00 秒",
+        "active_skill_base_secondary_area_of_effect_radius": "基礎二段範圍為 1.5 米"
+      },
+      "stats": [
+        {
+          "id": "spell_minimum_base_cold_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "spell_maximum_base_cold_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "tornado_base_damage_interval_ms",
+          "type": "constant",
+          "value": 250
+        },
+        {
+          "id": "number_of_tornados_allowed",
+          "type": "constant",
+          "value": 1
+        },
+        {
+          "id": "active_skill_base_area_of_effect_radius",
+          "type": "constant",
+          "value": 20
+        },
+        {
+          "id": "base_skill_effect_duration",
+          "type": "constant",
+          "value": 12000
+        },
+        {
+          "id": "base_secondary_skill_effect_duration",
+          "type": "constant",
+          "value": 3000
+        },
+        {
+          "id": "active_skill_base_secondary_area_of_effect_radius",
+          "type": "constant",
+          "value": 15
+        },
+        {
+          "id": "is_area_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "is_graft_skill",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": 24000,
+      "stored_uses": 1,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "spell_minimum_base_cold_damage\nspell_maximum_base_cold_damage",
+      "base_skill_effect_duration",
+      "base_secondary_skill_effect_duration",
+      "tornado_base_damage_interval_ms",
+      "active_skill_base_area_of_effect_radius",
+      "active_skill_base_secondary_area_of_effect_radius",
+      "number_of_tornados_allowed"
+    ],
+    "tags": [
+      "dexterity",
+      "grants_active_skill",
+      "spell",
+      "projectile",
+      "duration",
+      "area",
+      "cold"
+    ],
+    "secondary_granted_effect": "GraftSkillTulTornadoProjectile",
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "裝備此接肢時，會定期向範圍內被冰緩或冰凍的敵人發射冰霜迫擊砲。",
+      "display_name": "碎晶墜落",
+      "id": "graft_skill_tul_mortars",
+      "is_manually_casted": false,
+      "is_skill_totem": false,
+      "stat_conversions": {},
+      "types": [
+        "Area",
+        "Projectile",
+        "Cooldown",
+        "Cold",
+        "Damage",
+        "Spell",
+        "AreaSpell"
+      ],
+      "weapon_restrictions": [],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "碎晶墜落",
+      "experience_type": "GemProgressionGraftSkill",
+      "id": "Metadata/Items/Chayula/TulGraftGem2",
+      "max_level": 40,
+      "release_state": "released"
+    },
+    "cast_time": 300,
+    "color": "g",
+    "display_name": "碎晶墜落",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": 1800,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": null,
+        "str": 0,
+        "dex": null
+      },
+      "stat_text": {
+        "graft_skill_tul_mortars_maximum_mortars_fired_per_volley": "向範圍內最多 4 個額外被冰緩或冰凍的目標發射迫擊砲",
+        "active_skill_base_area_of_effect_radius": "基礎範圍為 4.5 米",
+        "active_skill_base_secondary_area_of_effect_radius": "基礎二段範圍為 1 米",
+        "always_pierce": "投射物穿透全部目標",
+        "never_freeze": "不能冰凍",
+        "never_chill": "不能造成冰緩"
+      },
+      "stats": [
+        {
+          "id": "spell_minimum_base_cold_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "spell_maximum_base_cold_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "graft_skill_tul_mortars_maximum_mortars_fired_per_volley",
+          "type": "constant",
+          "value": 4
+        },
+        {
+          "id": "active_skill_base_area_of_effect_radius",
+          "type": "constant",
+          "value": 45
+        },
+        {
+          "id": "active_skill_base_secondary_area_of_effect_radius",
+          "type": "constant",
+          "value": 10
+        },
+        {
+          "id": "base_is_projectile",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "is_area_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "always_pierce",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "never_freeze",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "never_chill",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "is_graft_skill",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": 1,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "spell_minimum_base_cold_damage\nspell_maximum_base_cold_damage",
+      "always_pierce",
+      "graft_skill_tul_mortars_maximum_mortars_fired_per_volley",
+      "never_freeze",
+      "never_chill",
+      "active_skill_base_area_of_effect_radius",
+      "active_skill_base_secondary_area_of_effect_radius"
+    ],
+    "tags": [
+      "dexterity",
+      "grants_active_skill",
+      "area",
+      "projectile",
+      "cold",
+      "spell"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "當你使用奉獻技能時，此接肢會召喚一支聽從你的指揮的巢裔裂痕怪物軍隊。這些被召喚的怪物會將物理傷害轉換為冰冷傷害，並在擊中時有機率施加易碎。",
+      "display_name": "浩劫雪崩",
+      "id": "graft_skill_tul_summon",
+      "is_manually_casted": false,
+      "is_skill_totem": false,
+      "stat_conversions": {},
+      "types": [
+        "Cooldown",
+        "Minion",
+        "Spell"
+      ],
+      "weapon_restrictions": [],
+      "minion_types": [
+        "Attack",
+        "Cold",
+        "Melee"
+      ],
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "浩劫雪崩",
+      "experience_type": "GemProgressionGraftSkill",
+      "id": "Metadata/Items/Chayula/TulGraftGem3",
+      "max_level": 40,
+      "release_state": "released"
+    },
+    "cast_time": 1000,
+    "color": "b",
+    "display_name": "浩劫雪崩",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": null,
+        "str": 0,
+        "dex": null
+      },
+      "stat_text": {
+        "base_skill_effect_duration": "+10.00 秒基礎持續時間",
+        "active_skill_base_area_of_effect_radius": "基礎範圍為 4.5 米",
+        "graft_skill_tul_summon_maximum_allowed_demons": "最多 30 隻巢裔"
+      },
+      "stats": [
+        {
+          "id": "base_skill_effect_duration",
+          "type": "constant",
+          "value": 10000
+        },
+        {
+          "id": "active_skill_base_area_of_effect_radius",
+          "type": "constant",
+          "value": 45
+        },
+        {
+          "id": "graft_skill_tul_summon_maximum_allowed_demons",
+          "type": "constant",
+          "value": 30
+        },
+        {
+          "id": "graft_skill_tul_summon_number_of_demons_to_summon",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "minion_targeting_use_parent_location",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "is_graft_skill",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": 18000,
+      "stored_uses": 1,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "base_skill_effect_duration",
+      "graft_skill_tul_summon_maximum_allowed_demons",
+      "graft_skill_tul_summon_number_of_demons_to_summon",
+      "active_skill_base_area_of_effect_radius"
+    ],
+    "tags": [
+      "intelligence",
+      "grants_active_skill",
+      "minion",
+      "spell"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "當你對敵人施加曝曬時，此接肢將會在啟動時向你施加一個為你承受擊中元素傷害的增益。",
+      "display_name": "靜守不移",
+      "id": "graft_skill_tul_aegis",
+      "is_manually_casted": false,
+      "is_skill_totem": false,
+      "stat_conversions": {},
+      "types": [
+        "Cooldown",
+        "Duration",
+        "Buff",
+        "Fire",
+        "Cold",
+        "Lightning"
+      ],
+      "weapon_restrictions": [],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "靜守不移",
+      "experience_type": "GemProgressionGraftSkill",
+      "id": "Metadata/Items/Chayula/TulGraftGem4",
+      "max_level": 40,
+      "release_state": "released"
+    },
+    "cast_time": 100,
+    "color": "g",
+    "display_name": "靜守不移",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": null,
+        "str": 0,
+        "dex": null
+      },
+      "stat_text": {
+        "base_skill_effect_duration": "+4.00 秒基礎持續時間"
+      },
+      "stats": [
+        {
+          "id": "base_skill_effect_duration",
+          "type": "additional",
+          "value": 4000
+        },
+        {
+          "id": "graft_skill_tul_aegis_aegis_shield_amount_granted_on_applying_exposure",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "base_deal_no_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "is_graft_skill",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": 6000,
+      "stored_uses": 1,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "base_skill_effect_duration",
+      "graft_skill_tul_aegis_aegis_shield_amount_granted_on_applying_exposure"
+    ],
+    "tags": [
+      "dexterity",
+      "grants_active_skill",
+      "duration",
+      "fire",
+      "cold",
+      "lightning"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
       "description": "用強大的攻擊擊倒敵人。",
       "display_name": "測試攻擊",
       "id": "playtest_attack",
@@ -125107,6 +128270,293 @@
       ],
       "added_types": null,
       "added_minion_types": null
+    }
+  },
+  {
+    "active_skill": null,
+    "base_item": {
+      "display_name": "風破輔助",
+      "experience_type": "GemProgression31",
+      "id": "Metadata/Items/Gems/SupportGemWindburst",
+      "max_level": 20,
+      "release_state": "released"
+    },
+    "cast_time": null,
+    "color": "g",
+    "display_name": "風破輔助",
+    "is_support": true,
+    "stat_translation_file": "stat_translations/support_gem",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [
+        {
+          "stat": "被輔助的技能增加 {projectile_damage_+%}% 投射物傷害",
+          "stats": {
+            "projectile_damage_+%": 500
+          }
+        }
+      ],
+      "stat_requirements": {
+        "int": 0,
+        "str": 0,
+        "dex": null
+      },
+      "stat_text": {
+        "support_trigger_tornados_on_attack_hit_after_moving_X_metres": "被輔助的攻擊在擊中時觸發風破，每移動10 米僅能觸發一次"
+      },
+      "stats": [
+        {
+          "id": "support_trigger_tornados_on_attack_hit_after_moving_X_metres",
+          "type": "constant",
+          "value": 10
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": 120,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "projectile_damage_+%",
+      "support_trigger_tornados_on_attack_hit_after_moving_X_metres"
+    ],
+    "tags": [
+      "dexterity",
+      "support",
+      "grants_active_skill",
+      "attack",
+      "projectile",
+      "trigger",
+      "area",
+      "duration",
+      "bow"
+    ],
+    "secondary_granted_effect": "TriggeredSupportWindburst",
+    "quest_reward": {
+      "act": 3,
+      "classes": [
+        "決鬥者",
+        "遊俠"
+      ],
+      "quest": "命運之語"
+    },
+    "discriminator": null,
+    "support_gem": {
+      "allowed_types": [
+        "Attack"
+      ],
+      "letter": ")",
+      "supports_gems_only": false,
+      "support_name": "",
+      "support_text": "輔助攻擊技能，使被輔助的技能在你移動一段距離後，擊中時會觸發風破。不能輔助觸發技能或不是由你使用的技能。無法修改召喚物的技能。",
+      "excluded_types": [
+        "SummonsTotem",
+        "Trapped",
+        "RemoteMined",
+        "DisallowTriggerSupports",
+        "Triggered",
+        "OtherThingUsesSkill"
+      ],
+      "added_types": null,
+      "added_minion_types": null
+    }
+  },
+  {
+    "active_skill": null,
+    "base_item": {
+      "display_name": "力量紊亂輔助",
+      "experience_type": "GemProgression18",
+      "id": "Metadata/Items/Gems/SupportGemKineticInstability",
+      "max_level": 20,
+      "release_state": "released"
+    },
+    "cast_time": null,
+    "color": "b",
+    "display_name": "力量紊亂輔助",
+    "is_support": true,
+    "stat_translation_file": "stat_translations/support_gem",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [
+        {
+          "stat": "被輔助的技能增加 {attack_damage_+%}% 攻擊傷害",
+          "stats": {
+            "attack_damage_+%": 500
+          }
+        }
+      ],
+      "stat_requirements": {
+        "int": null,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "support_kinetic_instability_chance_to_create_instability_on_kill_%": "被輔助的技能在造成有擊殺時觸發力量流束"
+      },
+      "stats": [
+        {
+          "id": "support_kinetic_instability_chance_to_create_instability_on_kill_%",
+          "type": "constant",
+          "value": 100
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": 120,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "attack_damage_+%",
+      "support_kinetic_instability_chance_to_create_instability_on_kill_%"
+    ],
+    "tags": [
+      "intelligence",
+      "support",
+      "grants_active_skill",
+      "area",
+      "trigger",
+      "attack",
+      "duration"
+    ],
+    "secondary_granted_effect": "TriggeredSupportKineticInstability",
+    "quest_reward": {
+      "act": 2,
+      "classes": [
+        "女巫"
+      ],
+      "quest": "清理蜘蛛"
+    },
+    "discriminator": null,
+    "support_gem": {
+      "allowed_types": [
+        "RangedAttack"
+      ],
+      "letter": "`",
+      "supports_gems_only": false,
+      "support_name": "",
+      "support_text": "輔助法杖攻擊技能，擊殺時有機率觸發力量流束。無法輔助被觸發的技能或由其他物體施放的技能。無法改變召喚物的技能。",
+      "excluded_types": [
+        "Trapped",
+        "RemoteMined",
+        "SummonsTotem",
+        "DisallowTriggerSupports",
+        "Minion"
+      ],
+      "added_types": null,
+      "added_minion_types": null
+    }
+  },
+  {
+    "active_skill": null,
+    "base_item": {
+      "display_name": "活體閃電輔助",
+      "experience_type": "GemProgression18",
+      "id": "Metadata/Items/Gems/SupportGemLivingLightning",
+      "max_level": 20,
+      "release_state": "released"
+    },
+    "cast_time": null,
+    "color": "b",
+    "display_name": "活體閃電輔助",
+    "is_support": true,
+    "stat_translation_file": "stat_translations/support_gem",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": null,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "summon_living_lightning_on_lightning_hit": "被輔助的技能以擊中造成閃電傷害時\n觸發召喚活躍閃電"
+      },
+      "stats": [
+        {
+          "id": "summon_living_lightning_on_lightning_hit",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": 120,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "summon_living_lightning_on_lightning_hit"
+    ],
+    "tags": [
+      "lightning",
+      "intelligence",
+      "support",
+      "grants_active_skill",
+      "spell",
+      "minion",
+      "duration",
+      "trigger"
+    ],
+    "secondary_granted_effect": "TriggeredSupportLivingLightning",
+    "quest_reward": {
+      "act": 2,
+      "classes": [
+        "女巫"
+      ],
+      "quest": "清理蜘蛛"
+    },
+    "discriminator": null,
+    "support_gem": {
+      "allowed_types": [
+        "Attack",
+        "Damage"
+      ],
+      "letter": "?",
+      "supports_gems_only": false,
+      "support_name": "",
+      "support_text": "輔助造成傷害擊中的技能，當其造成閃電傷害時會觸發召喚活躍閃電。無法輔助由圖騰、陷阱或地雷施放的技能。無法修改召喚物使用的技能。",
+      "excluded_types": [
+        "Trapped",
+        "RemoteMined",
+        "SummonsTotem",
+        "DisallowTriggerSupports"
+      ],
+      "added_types": [
+        "CreatesMinion",
+        "MinionsCanExplode"
+      ],
+      "added_minion_types": [
+        "Duration",
+        "Chains",
+        "Lightning",
+        "Attack",
+        "Melee",
+        "MeleeSingleTarget",
+        "Multistrikeable"
+      ]
     }
   },
   {

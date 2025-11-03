@@ -934,7 +934,9 @@
     "invisible": true,
     "name": "Spectral",
     "removable": false,
-    "stats": [],
+    "stats": [
+      "is_raised_spectre"
+    ],
     "visuals": "spectre_buff",
     "category": null,
     "sources": null,
@@ -2998,7 +3000,8 @@
     "removable": true,
     "stats": [
       "base_physical_damage_reduction_rating",
-      "vaal_molten_shall_armour_+%_final"
+      "vaal_molten_shall_armour_+%_final",
+      "physical_damage_reduction_rating_+%"
     ],
     "visuals": "fire_shield",
     "category": "Buff",
@@ -3036,7 +3039,8 @@
     "removable": true,
     "stats": [
       "base_physical_damage_reduction_rating",
-      "vaal_molten_shall_armour_+%_final"
+      "vaal_molten_shall_armour_+%_final",
+      "physical_damage_reduction_rating_+%"
     ],
     "visuals": "invisible",
     "category": null,
@@ -9061,6 +9065,36 @@
     "templates": null,
     "stack_limit": null
   },
+  "herald_of_the_breach": {
+    "description": "You gain Otherworldly Pressure when inflicting ailments and deal more damage for each herald affecting you (including this one).",
+    "invisible": false,
+    "name": "Herald Of The Hive",
+    "removable": true,
+    "stats": [
+      "damage_+%_final_per_herald_skill_affecting_you",
+      "affected_by_herald_of_the_breach",
+      "herald_of_the_breach_add_stack_on_inflicting_ailment"
+    ],
+    "visuals": "herald_of_the_breach",
+    "category": "Herald",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "herald_of_the_breach_stack": {
+    "description": "Your Herald of the Hive pulses more frequently based on your Otherworldly Pressure. Otherworldly Pressure is lost over time, at a higher rate the more of it you have.",
+    "invisible": false,
+    "name": "Otherworldly Pressure",
+    "removable": false,
+    "stats": [
+      "herald_of_the_breach_pulse_frequency_+%"
+    ],
+    "visuals": "herald_of_the_breach",
+    "category": "Active skill",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "cannot_be_damaged": {
     "description": "Immune to Damage",
     "invisible": true,
@@ -12407,7 +12441,8 @@
           "name": null,
           "template": null,
           "stat_text": [
-            "Phasing"
+            "Phasing",
+            "25% chance to Avoid All Damage from Hits"
           ],
           "stats": {
             "phase_through_objects": 1,
@@ -13393,7 +13428,19 @@
     "visuals": "wither_resistance",
     "category": "Debuff",
     "sources": null,
-    "templates": null,
+    "templates": {
+      "BreachWithered": {
+        "aura_radius_metres": 2.5,
+        "stats": {
+          "chaos_damage_taken_+%": 5,
+          "is_withered": 1
+        },
+        "stat_text": [
+          "5% increased Chaos Damage taken"
+        ],
+        "visuals": null
+      }
+    },
     "stack_limit": 15
   },
   "siphon_leech": {
@@ -18006,6 +18053,18 @@
     "templates": null,
     "stack_limit": null
   },
+  "number_of_times_have_been_hit_by_enemy_recently": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "have_been_crit_recently": {
     "description": "",
     "invisible": true,
@@ -22399,6 +22458,14 @@
           "template": "PowerChargeOnManaSpentUber1",
           "stat_text": null,
           "stats": null
+        },
+        {
+          "id": "MutatedUniqueWand15PowerChargeOnManaSpent",
+          "item": null,
+          "name": null,
+          "template": "PowerChargeOnManaSpentUber1",
+          "stat_text": null,
+          "stats": null
         }
       ]
     },
@@ -23039,6 +23106,39 @@
     "removable": false,
     "stats": [
       "additional_base_critical_strike_chance"
+    ],
+    "visuals": "critical_strike_chance_unique",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "reduced_mana_cost_on_mana_spent": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": {
+      "GainReducedManaCostOnManaSpentUnique__1": {
+        "aura_radius_metres": null,
+        "stats": null,
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "reduced_mana_cost_unique": {
+    "description": "Your Mana Costs are reduced.",
+    "invisible": false,
+    "name": "Kalisa's Joy",
+    "removable": false,
+    "stats": [
+      "base_mana_cost_-%"
     ],
     "visuals": "critical_strike_chance_unique",
     "category": "Buff",
@@ -31047,10 +31147,7 @@
     "invisible": false,
     "name": "Pyroclast Mines",
     "removable": false,
-    "stats": [
-      "mortar_barrage_mine_minimum_added_fire_damage_taken",
-      "mortar_barrage_mine_maximum_added_fire_damage_taken"
-    ],
+    "stats": [],
     "visuals": "mortar_barrage_mine",
     "category": "Debuff",
     "sources": null,
@@ -32646,6 +32743,23 @@
     },
     "stack_limit": 10
   },
+  "maina": {
+    "description": "You are taking increased Damage, are Slowed and have reduced Life and Energy Shield Recovery Rate.",
+    "invisible": false,
+    "name": "Mania",
+    "removable": false,
+    "stats": [
+      "base_damage_taken_+%",
+      "action_speed_-%",
+      "life_recovery_rate_+%",
+      "energy_shield_recovery_rate_+%"
+    ],
+    "visuals": "affliction_debuff",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": 15
+  },
   "recent_minion_buffs": {
     "description": "",
     "invisible": true,
@@ -33048,6 +33162,14 @@
           "template": "CoverInAshNearbyEnemies",
           "stat_text": null,
           "stats": null
+        },
+        {
+          "id": "MutatedUniqueAmulet37NearbyEnemiesDebilitated",
+          "item": null,
+          "name": null,
+          "template": "DebilitateNearbyEnemies",
+          "stat_text": null,
+          "stats": null
         }
       ]
     },
@@ -33191,6 +33313,12 @@
         "visuals": null
       },
       "CoverInAshNearbyEnemies": {
+        "aura_radius_metres": 3.0,
+        "stats": null,
+        "stat_text": null,
+        "visuals": null
+      },
+      "DebilitateNearbyEnemies": {
         "aura_radius_metres": 3.0,
         "stats": null,
         "stat_text": null,
@@ -33518,20 +33646,6 @@
     ],
     "visuals": "affliction_boss_deathzone_inner_degen",
     "category": "Debuff",
-    "sources": null,
-    "templates": null,
-    "stack_limit": null
-  },
-  "herald_of_agony_max_virulence_hidden": {
-    "description": "",
-    "invisible": true,
-    "name": "",
-    "removable": false,
-    "stats": [
-      "maximum_virulence_stacks"
-    ],
-    "visuals": "invisible",
-    "category": null,
     "sources": null,
     "templates": null,
     "stack_limit": null
@@ -33893,6 +34007,22 @@
     "templates": null,
     "stack_limit": null
   },
+  "spectral_tiger_buff": {
+    "description": "Your Spectral Tigers are granting you Increased Critical Strike Chance and Increased Attack and Cast Speed",
+    "invisible": false,
+    "name": "Spectral Pack",
+    "removable": false,
+    "stats": [
+      "critical_strike_chance_+%",
+      "attack_speed_+%",
+      "base_cast_speed_+%"
+    ],
+    "visuals": "spectral_tiger_pack",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "chaos_resistance": {
     "description": "",
     "invisible": true,
@@ -34042,6 +34172,20 @@
     ],
     "visuals": "ground_profane",
     "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "ground_profane_chaotic_might_ally": {
+    "description": "",
+    "invisible": false,
+    "name": "Profane Ground",
+    "removable": false,
+    "stats": [
+      "on_profane_ground"
+    ],
+    "visuals": "ground_profane",
+    "category": "Buff",
     "sources": null,
     "templates": null,
     "stack_limit": null
@@ -36205,6 +36349,18 @@
     "templates": null,
     "stack_limit": null
   },
+  "maximum_rage_fire_exposure_aura": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "herald_of_ash_fire_exposure_aura": {
     "description": "",
     "invisible": true,
@@ -36412,7 +36568,7 @@
     "category": "Debuff",
     "sources": null,
     "templates": null,
-    "stack_limit": 3
+    "stack_limit": 4
   },
   "unhinged": {
     "description": "You are no longer Sane.",
@@ -41151,6 +41307,14 @@
         "aura_radius_metres": null,
         "stats": {
           "accelerate_while_moving_movement_speed_+%_final": 200
+        },
+        "stat_text": null,
+        "visuals": null
+      },
+      "GraftTornadoMovement": {
+        "aura_radius_metres": null,
+        "stats": {
+          "accelerate_while_moving_movement_speed_+%_final": 120
         },
         "stat_text": null,
         "visuals": null
@@ -65720,8 +65884,8 @@
       "TricksterAlternatingLessDamageTaken": {
         "aura_radius_metres": null,
         "stats": {
-          "trickster_damage_over_time_taken_+%_final": -40,
-          "trickster_hit_damage_taken_+%_final": -40
+          "trickster_damage_over_time_taken_+%_final": -50,
+          "trickster_hit_damage_taken_+%_final": -50
         },
         "stat_text": null,
         "visuals": null
@@ -65730,7 +65894,7 @@
     "stack_limit": null
   },
   "trickster_alternating_less_hit_damage": {
-    "description": "You are taking 40% less damage from hits.",
+    "description": "You are taking 50% less damage from hits.",
     "invisible": false,
     "name": "Heartstopper",
     "removable": false,
@@ -65744,7 +65908,7 @@
     "stack_limit": null
   },
   "trickster_alternating_less_dot_damage": {
-    "description": "You are taking 40% less damage over time.",
+    "description": "You are taking 50% less damage over time.",
     "invisible": false,
     "name": "Heartstopper",
     "removable": false,
@@ -65763,7 +65927,7 @@
     "name": "One Step Ahead",
     "removable": false,
     "stats": [
-      "action_speed_is_at_most_92%"
+      "action_speed_is_at_most_90%"
     ],
     "visuals": "trickser_one_step_ahead_action_speed_maximum",
     "category": "Debuff",
@@ -65791,10 +65955,10 @@
       "TricksterNearbyEnemyActionSpeedCap": {
         "aura_radius_metres": 6.0,
         "stats": {
-          "action_speed_is_at_most_92%": 1
+          "action_speed_is_at_most_90%": 1
         },
         "stat_text": [
-          "Nearby Enemy Monsters' Action Speed is at most 92% of base value"
+          "Nearby Enemy Monsters' Action Speed is at most 90% of base value"
         ],
         "visuals": null
       }
@@ -67938,6 +68102,20 @@
     "templates": null,
     "stack_limit": null
   },
+  "ward_broken_in_the_past_2_seconds": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "ward_broken_in_the_past_2_seconds"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "killed_a_metamorph_in_the_last_10_seconds": {
     "description": "",
     "invisible": true,
@@ -68970,7 +69148,9 @@
         "stats": {
           "avoid_damage_%": 75
         },
-        "stat_text": null,
+        "stat_text": [
+          "75% chance to Avoid All Damage from Hits"
+        ],
         "visuals": null
       }
     },
@@ -72628,7 +72808,7 @@
       "found_items_warlord_influence_chance_%"
     ],
     "visuals": "shrine_warlord",
-    "category": "Buff",
+    "category": "Buff shrine",
     "sources": null,
     "templates": {
       "SentinelWarlord": {
@@ -72666,7 +72846,7 @@
       "found_items_crusader_influence_chance_%"
     ],
     "visuals": "shrine_crusader",
-    "category": "Buff",
+    "category": "Buff shrine",
     "sources": null,
     "templates": {
       "SentinelCrusader": {
@@ -72704,7 +72884,7 @@
       "found_items_redeemer_influence_chance_%"
     ],
     "visuals": "shrine_redeemer",
-    "category": "Buff",
+    "category": "Buff shrine",
     "sources": null,
     "templates": {
       "SentinelRedeemer": {
@@ -72742,7 +72922,7 @@
       "found_items_hunter_influence_chance_%"
     ],
     "visuals": "shrine_hunter",
-    "category": "Buff",
+    "category": "Buff shrine",
     "sources": null,
     "templates": {
       "SentinelHunter": {
@@ -72779,7 +72959,7 @@
       "player_found_items_are_corrupted_chance_%"
     ],
     "visuals": "shrine_vaal",
-    "category": "Buff",
+    "category": "Buff shrine",
     "sources": null,
     "templates": {
       "SentinelVaal": {
@@ -72807,7 +72987,7 @@
     "name": "Evolving Shrine",
     "removable": false,
     "stats": [
-      "chance_to_upgrade_monsters_on_kill_%"
+      "chance_to_upgrade_monsters_on_kill_permyriad"
     ],
     "visuals": "shrine_evolution",
     "category": "Buff",
@@ -72816,7 +72996,7 @@
       "SentinelEvolution": {
         "aura_radius_metres": null,
         "stats": {
-          "chance_to_upgrade_monsters_on_kill_%": 10
+          "chance_to_upgrade_monsters_on_kill_permyriad": 2500
         },
         "stat_text": null,
         "visuals": null
@@ -72824,7 +73004,7 @@
       "UpgradeShrineBuff": {
         "aura_radius_metres": null,
         "stats": {
-          "chance_to_upgrade_monsters_on_kill_%": 10
+          "chance_to_upgrade_monsters_on_kill_permyriad": 2500
         },
         "stat_text": null,
         "visuals": null
@@ -73823,6 +74003,21 @@
     "templates": null,
     "stack_limit": null
   },
+  "zangerboss_orb_beam": {
+    "description": "You cannot recover Life or Energy Shield",
+    "invisible": false,
+    "name": "Purging Flame",
+    "removable": false,
+    "stats": [
+      "cannot_recover_life",
+      "no_energy_shield_recovery"
+    ],
+    "visuals": "zangerboss_orb_beam",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "divination_buff_arrogance_of_the_vaal": {
     "description": "75% to Chaos Resistance\r\n20% of Physical Damage from Hits taken as Chaos Damage",
     "invisible": false,
@@ -74094,6 +74289,7 @@
           "base_extra_damage_rolls": 1
         },
         "stat_text": [
+          "Damage of Enemies Hitting you is Unlucky",
           "Damage with Hits is Lucky"
         ],
         "visuals": null
@@ -74127,6 +74323,7 @@
         "stat_text": [
           "20% increased Attack and Cast Speed",
           "100% increased Global Critical Strike Chance",
+          "15% chance to Avoid All Damage from Hits",
           "100% increased Stealth"
         ],
         "visuals": null
@@ -74632,7 +74829,7 @@
     "stack_limit": null
   },
   "divination_buff_the_doctor": {
-    "description": "When you Kill a Rare monster, you gain its Modifiers for 20 seconds",
+    "description": "When you Kill a Rare monster, you gain its Modifiers for 60 seconds",
     "invisible": false,
     "name": "The Doctor",
     "removable": false,
@@ -75104,6 +75301,20 @@
     "templates": null,
     "stack_limit": null
   },
+  "napalm_arrows_degen": {
+    "description": "You are taking fire damage over time.",
+    "invisible": false,
+    "name": "Conflagration Debuff",
+    "removable": false,
+    "stats": [
+      "base_fire_damage_taken_per_minute"
+    ],
+    "visuals": "ground_fire_burn",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "blast_rain_fire_wave": {
     "description": "",
     "invisible": false,
@@ -75169,6 +75380,14 @@
       "Mods": [
         {
           "id": "SummonWrithingWormEveryXMsUnique__1",
+          "item": null,
+          "name": null,
+          "template": "SummonWrithingWormEveryXMsBuffUnique__1",
+          "stat_text": null,
+          "stats": null
+        },
+        {
+          "id": "MutatedUniqueBow12SummonWrithingWormEveryXMs",
           "item": null,
           "name": null,
           "template": "SummonWrithingWormEveryXMsBuffUnique__1",
@@ -75484,6 +75703,598 @@
     ],
     "visuals": "invisible",
     "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "retaliation_skills_become_useable_every_x_ms": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "graft_skill_esh_lightning_ring_ally_buff": {
+    "description": "Your Damage with hits is Lucky and you are dealing added Lightning Damage.",
+    "invisible": false,
+    "name": "Radiant Ground",
+    "removable": false,
+    "stats": [
+      "base_extra_damage_rolls",
+      "global_minimum_added_lightning_damage",
+      "global_maximum_added_lightning_damage"
+    ],
+    "visuals": "graft_skill_esh_lightning_ring_ally_buff_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "graft_skill_uul_netol_life_recovery": {
+    "description": "Your life recovery rate is significantly higher.",
+    "invisible": false,
+    "name": "Tender Embrace",
+    "removable": false,
+    "stats": [
+      "graft_uulnetol_life_recovery_rate_+%_final",
+      "additional_block_%",
+      "life_leech_from_any_damage_permyriad"
+    ],
+    "visuals": "graft_skill_uul_netol_life_recovery_visual",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "graft_skill_esh_jolt": {
+    "description": "You have higher Maximum Attack Damage, but are taking increased Damage.",
+    "invisible": false,
+    "name": "Jolt",
+    "removable": false,
+    "stats": [
+      "base_damage_taken_+%",
+      "maximum_attack_damage_+%_final_from_graft_skill",
+      "graft_skill_jolt_buff_critical_strike_multiplier_+",
+      "critical_strike_chance_+%",
+      "base_movement_velocity_+%"
+    ],
+    "visuals": "graft_skill_jolt_buff_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "generic_monster_flame_wall_dot": {
+    "description": "You are taking Fire Damage while inside a Flame Wall.",
+    "invisible": false,
+    "name": "Flame Wall",
+    "removable": false,
+    "stats": [
+      "base_fire_damage_taken_per_minute"
+    ],
+    "visuals": "ground_fire_burn",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "graft_skill_uul_netol_bone_fragments": {
+    "description": "You have a chance to inflict an additional Impale and have increased Impale effect.",
+    "invisible": false,
+    "name": "Violent Desire",
+    "removable": false,
+    "stats": [
+      "attacks_impale_on_hit_%_chance",
+      "graft_skill_uul_netol_impale_buff_additional_impales",
+      "attack_speed_+%",
+      "attack_area_of_effect_+%",
+      "hits_ignore_enemy_monster_physical_damage_reduction_%_chance",
+      "chance_to_inflict_additional_impale_%"
+    ],
+    "visuals": "graft_skill_uul_netol_bone_sword",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "graft_skill_tul_aegis_fire": {
+    "description": "",
+    "invisible": false,
+    "name": "[DNT] UNUSED",
+    "removable": false,
+    "stats": [
+      "graft_skill_tul_aegis_fire_absorbed_%"
+    ],
+    "visuals": "graft_skill_tul_fire_aegis",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "graft_skill_tul_aegis_cold": {
+    "description": "",
+    "invisible": false,
+    "name": "[DNT] UNUSED",
+    "removable": false,
+    "stats": [
+      "graft_skill_tul_aegis_cold_absorbed_%"
+    ],
+    "visuals": "graft_skill_tul_cold_aegis",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "graft_skill_tul_aegis_lightning": {
+    "description": "",
+    "invisible": false,
+    "name": "[DNT] UNUSED",
+    "removable": false,
+    "stats": [
+      "graft_skill_tul_aegis_lightning_absorbed_%"
+    ],
+    "visuals": "graft_skill_tul_lightning_aegis",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "graft_skill_tul_aegis_elemental": {
+    "description": "Elemental Damage from Hits is taken from this buff before your Life or Energy Shield.",
+    "invisible": false,
+    "name": "Preserving Stillness",
+    "removable": false,
+    "stats": [
+      "graft_skill_tul_aegis_elemental_absorbed_%",
+      "additional_maximum_all_elemental_resistances_%",
+      "base_resist_all_elements_%"
+    ],
+    "visuals": "graft_skill_tul_elemental_aegis",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "flask_energy_shield_recharge_not_delayed_by_damage": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "energy_shield_recharge_not_delayed_by_damage"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "blood_barrier": {
+    "description": "Damage from Hits is taken from this barrier before your Life or Energy Shield. ",
+    "invisible": false,
+    "name": "Blood Barrier",
+    "removable": true,
+    "stats": [],
+    "visuals": "blood_barrier",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "last_gasp": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "have_used_a_specific_retaliation_skill_in_past_10_seconds": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "num_unique_retaliation_skills_used_in_past_10_seconds"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "brequel_unstuck_monster_temporary_phasing": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "phase_through_objects"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "graft_skill_xoph_elemental_damage_boost": {
+    "description": "",
+    "invisible": false,
+    "name": "The Grey Winds Blessing",
+    "removable": false,
+    "stats": [
+      "physical_damage_%_to_add_as_fire",
+      "physical_damage_%_to_add_as_cold",
+      "physical_damage_%_to_add_as_lightning",
+      "elemental_damage_%_to_add_as_chaos",
+      "base_resist_all_elements_%",
+      "avoid_all_elemental_status_%"
+    ],
+    "visuals": "graft_skill_xoph_ailment_buff",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "breach_wild_boss_explode_on_death": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "breach_wild_boss_explode_on_death",
+    "category": null,
+    "sources": null,
+    "templates": {
+      "BreachWildBossWarcryExplodeBuff": {
+        "aura_radius_metres": null,
+        "stats": null,
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "windstorm_debuff": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "arrow_swarm_reservation": {
+    "description": "",
+    "invisible": false,
+    "name": "[DNT] UNUSED",
+    "removable": false,
+    "stats": [],
+    "visuals": "graft_skill_xoph_ailment_buff",
+    "category": null,
+    "sources": null,
+    "templates": {
+      "ArrowSwarmReservation": {
+        "aura_radius_metres": null,
+        "stats": null,
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "tornado_generation_buff": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "farruls_farric_presence": {
+    "description": "You have Increased Accuracy, Critical Strike Chance and take no Extra Damage from Critical Strikes.",
+    "invisible": false,
+    "name": "Farrul's Farric Presence",
+    "removable": false,
+    "stats": [
+      "accuracy_rating_+%",
+      "critical_strike_chance_+%",
+      "self_take_no_extra_damage_from_critical_strikes"
+    ],
+    "visuals": "farruls_farric_presence",
+    "category": null,
+    "sources": {
+      "Mods": [
+        {
+          "id": "FarrulsFarricPresence",
+          "item": null,
+          "name": null,
+          "template": "farrulsfarricpresence",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
+    "templates": {
+      "farrulsfarricpresence": {
+        "aura_radius_metres": 5.0,
+        "stats": {
+          "accuracy_rating_+%": 0,
+          "critical_strike_chance_+%": 0,
+          "self_take_no_extra_damage_from_critical_strikes": 0
+        },
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "farruls_fertile_presence": {
+    "description": "You have increased Damage, Life Regeneration and cannot be Stunned.",
+    "invisible": false,
+    "name": "Farrul's Fertile Presence",
+    "removable": false,
+    "stats": [
+      "damage_+%",
+      "life_regeneration_rate_per_minute_%",
+      "base_cannot_be_stunned"
+    ],
+    "visuals": "farruls_fertile_presence",
+    "category": null,
+    "sources": {
+      "Mods": [
+        {
+          "id": "FarrulsFertilePresence",
+          "item": null,
+          "name": null,
+          "template": "farrulsfertilepresence",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
+    "templates": {
+      "farrulsfertilepresence": {
+        "aura_radius_metres": 5.0,
+        "stats": {
+          "damage_+%": 0,
+          "life_regeneration_rate_per_minute_%": 0,
+          "base_cannot_be_stunned": 0
+        },
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "farruls_wild_presence": {
+    "description": "You have increased Attack, Cast and Movement Speed and your Action Speed cannot be modified to below Base Value.",
+    "invisible": false,
+    "name": "Farrul's Wild Presence",
+    "removable": false,
+    "stats": [
+      "attack_speed_+%",
+      "base_cast_speed_+%",
+      "base_movement_velocity_+%",
+      "action_speed_cannot_be_reduced_below_base"
+    ],
+    "visuals": "farruls_wild_presence",
+    "category": null,
+    "sources": {
+      "Mods": [
+        {
+          "id": "FarrulsWildPresence",
+          "item": null,
+          "name": null,
+          "template": "farrulswildpresence",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
+    "templates": {
+      "farrulswildpresence": {
+        "aura_radius_metres": 5.0,
+        "stats": {
+          "attack_speed_+%": 0,
+          "base_cast_speed_+%": 0,
+          "base_movement_velocity_+%": 0,
+          "action_speed_cannot_be_reduced_below_base": 0
+        },
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "kinetic_shell": {
+    "description": "Damage from hits is taken from this shell before your life or energy shield.",
+    "invisible": false,
+    "name": "Somatic Shell",
+    "removable": false,
+    "stats": [
+      "kinetic_shell_absorb_%"
+    ],
+    "visuals": "kinetic_shell",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "four_seconds_after_being_hit_lose_life_equal_to_x_percent_of_hit": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "alternate_ascendency_graft_skill_damage_taken": {
+    "description": "You take increased Damage from Graft Skills.",
+    "invisible": false,
+    "name": "Gruesome Grafts",
+    "removable": false,
+    "stats": [
+      "damage_taken_+%_from_graft_skills"
+    ],
+    "visuals": "alternate_ascendancy_graft_aura",
+    "category": "Debuff",
+    "sources": {
+      "PassiveSkills": [
+        {
+          "id": "AlternateAscendancyBreachlord3",
+          "item": null,
+          "name": null,
+          "template": "alternate_ascendency_graft_skill_damage_taken",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
+    "templates": {
+      "alternate_ascendency_graft_skill_damage_taken": {
+        "aura_radius_metres": 6.0,
+        "stats": {
+          "damage_taken_+%_from_graft_skills": 100
+        },
+        "stat_text": [
+          "Nearby Enemies take 100% increased Damage from Graft Skills"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "shared_life": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "misty_reflection_debuff": {
+    "description": "You deal less Damage and take increased Damage",
+    "invisible": false,
+    "name": "You Fell For It Fool",
+    "removable": false,
+    "stats": [
+      "damage_+%_final_from_misty_reflection_debuff",
+      "base_damage_taken_+%"
+    ],
+    "visuals": "misty_reflection",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "marked_enemy_cannot_evade": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "base_cannot_evade"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "breach_hand_mage_storm_lightning_aura": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "base_lightning_damage_taken_per_minute"
+    ],
+    "visuals": "invisible",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "generic_monster_chaos_flame_wall_dot": {
+    "description": "You are taking Chaos Damage while inside a Blackflame Wall.",
+    "invisible": false,
+    "name": "Blackflame Wall",
+    "removable": false,
+    "stats": [
+      "base_chaos_damage_taken_per_minute"
+    ],
+    "visuals": "ground_fire_burn",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "kinetic_shell_immunity": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "base_cannot_be_kinetic_shelled"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "wild_savavagery": {
+    "description": "You have increased Physical Damage and Action Speed, your Hits ignore Enemy Physical Damage Reduction and you cannot be Stunned.",
+    "invisible": false,
+    "name": "Wild Savagery",
+    "removable": false,
+    "stats": [
+      "physical_damage_+%",
+      "action_speed_-%",
+      "base_cannot_be_stunned",
+      "hits_ignore_enemy_monster_physical_damage_reduction"
+    ],
+    "visuals": "wild_savagery",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "generic_monster_chaos_flame_aura_dot": {
+    "description": "You are taking Chaos Damage while inside a Blackflame Aura.",
+    "invisible": false,
+    "name": "Blackflame Aura",
+    "removable": false,
+    "stats": [
+      "base_chaos_damage_taken_per_minute"
+    ],
+    "visuals": "voodoo_king_death_aura_effigy",
+    "category": "Debuff",
     "sources": null,
     "templates": null,
     "stack_limit": null

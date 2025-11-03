@@ -683,7 +683,7 @@
             "multiplicative_damage_modifier"
           ]
         ],
-        "string": "มิเนียน สร้างความเสียหาย {0}% ของความเสียหาย กายภาพ",
+        "string": "มิเนียน สร้างความเสียหาย เท่ากับ {0}% ของความเสียหาย กายภาพ",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3046,6 +3046,62 @@
   {
     "English": null,
     "ids": [
+      "active_skill_damage_+%_final_if_ward_has_not_broken_in_the_past_2_seconds"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "เพิ่มความเสียหาย อีก {0}% หากวอร์ดคุ้มภัยไม่ หมดพลัง ใน 2 วินาทีที่ผ่านมา",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "ลดความเสียหาย อีก {0}% หากวอร์ดคุ้มภัยไม่ หมดพลัง ใน 2 วินาทีที่ผ่านมา",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "active_skill_poison_duration_+%_final"
     ],
     "trade_stats": null,
@@ -3658,6 +3714,96 @@
   {
     "English": null,
     "ids": [
+      "arrowswarm_mana_spent_to_generate_arrow"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[DNT] Create a spectral arrow after spending {0} Mana on Bow Skills",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "arrowswarm_maximum_allowed_arrows"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[DNT] Maximum {0} spectral arrow",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[DNT] Maximum {0} spectral arrows",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "attack_and_cast_speed_+%"
     ],
     "trade_stats": null,
@@ -3980,7 +4126,7 @@
           [],
           []
         ],
-        "string": "เสริมความเสียหาย โจมตี กายภาพ {0} ถึง {1}",
+        "string": "ความเสียหาย กายภาพ {0} ถึง {1}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5242,7 +5388,7 @@
             "divide_by_one_hundred"
           ]
         ],
-        "string": "ดูดความเสียหาย โจมตี {0}% ไปเป็น พลังชีวิต",
+        "string": "ดูดพลังชีวิต {0}% จากความเสียหาย โจมตี",
         "reminder_text": "(พลังชีวิตที่ดูด จะถูก เติม อย่างต่อเนื่อง การดูดหลายครั้งสามารถเกิดขึ้นได้พร้อมกันจนกว่าจะถึงอัตราสูงสุด)",
         "is_markup": null
       }
@@ -5815,6 +5961,42 @@
           []
         ],
         "string": "อัญเชิญ ทหารยามพิสุทธิ์ ได้สูงสุด {0} คน",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "base_number_of_living_lightning_allowed"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "อัญเชิญ มิเนียนสายฟ้ามีชีวิต ได้สูงสุด {0} ตัว",
         "reminder_text": null,
         "is_markup": null
       }
@@ -10812,6 +10994,1172 @@
   {
     "English": null,
     "ids": [
+      "graft_granted_minimum_base_lightning_damage",
+      "graft_granted_maximum_base_lightning_damage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "พื้นสว่างไสว มอบม็อด: เสริมความเสียหาย สายฟ้า {0} ถึง {1} ให้กับคุณและเพื่อน และทำให้คุณและเพื่อน โชคดี ในการคำนวณความเสียหายปะทะ",
+        "reminder_text": "(โชคดี คือการสุ่มค่า 2 ครั้งแล้วใช้ค่าที่ดีที่สุด)",
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "graft_skill_esh_jolt_damage_taken_+%_to_grant"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "สถานะ ประจุเข้าแทรก มอบม็อด: เพิ่มความเสียหายที่ได้รับ {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "สถานะ ประจุเข้าแทรก มอบม็อด: ลดความเสียหายที่ได้รับ {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "graft_skill_esh_jolt_maximum_attack_damage_+%_final_to_grant"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "สถานะ ประจุเข้าแทรก มอบม็อด: เพิ่มความเสียหาย โจมตีสูงสุด อีก {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "สถานะ ประจุเข้าแทรก มอบม็อด: ลดความเสียหาย โจมตีสูงสุด อีก {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "graft_skill_esh_lightning_bolts_number_of_bolts"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ฟ้าผ่า {0} ลูก",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ฟ้าผ่า {0} ลูก",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "graft_skill_esh_lightning_clones_number_of_clones_to_create"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "สร้างร่างปลอมอาบสายฟ้า {0} ตัว",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "สร้างร่างปลอมอาบสายฟ้า {0} ตัว",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "graft_skill_esh_lightning_hands_maximum_hands"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "สร้าง มือ ได้สูงสุด {0} มือ",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "สร้าง มือ ได้สูงสุด {0} มือ",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "graft_skill_esh_lightning_hands_number_of_hands_spawned"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "สร้างมือ {0} มือ",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "สร้างมือ {0} มือ",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "graft_skill_tul_aegis_aegis_shield_amount_granted_on_applying_exposure"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "บัฟรับความเสียหายได้ {0}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "graft_skill_tul_mortars_maximum_mortars_fired_per_volley"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ยิงระเบิดปูพรม ไปยังเป้าหมายในระยะที่ติดสถานะ หนาวเย็นหรือแช่แข็ง สูงสุด {0} เป้าหมาย",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ยิงระเบิดปูพรม ไปยังเป้าหมายในระยะที่ติดสถานะ หนาวเย็นหรือแช่แข็ง สูงสุด {0} เป้าหมาย",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "graft_skill_tul_summon_maximum_allowed_demons"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "อัญเชิญ สมุนรวงรัง ได้สูงสุด {0} ตัว",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "graft_skill_tul_summon_number_of_demons_to_summon"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "อัญเชิญ สมุนรวงรัง {0} ตัว",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "graft_skill_uulnet_bone_spires_max_spires_allowed"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "เรียก ยอดกระดูก ได้สูงสุด {0} ชิ้น",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "เรียก ยอดกระดูก ได้สูงสุด {0} ชิ้น",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "graft_skill_uulnetol_bone_spires_num_of_spires_to_create"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "สร้างยอดกระดูก {0} ชิ้น",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "สร้างยอดกระดูก {0} ชิ้น",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "graft_skill_uulnetol_hand_slam_number_of_hands_to_create"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "สร้างมือ {0} มือ",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "สร้างมือ {0} มือ",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "graft_skill_uulnetol_impale_buff_%_chance_for_additional_impale_to_grant"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "บัฟมอบม็อด: มีโอกาสสร้างสถานะ ทิ่มแทง เพิ่มเติม 1 ระดับ {0}% ต่อศัตรูที่คุณสร้างสถานะ ทิ่มแทง",
+        "reminder_text": "(เมื่อศัตรูที่ติดสถานะ ทิ่มแทง ถูกปะทะอีกครั้ง มันจะได้รับความเสียหาย สะท้อน 10% ของความเสียหาย กายภาพ ที่สร้างสถานะนี้ สถานะนี้รับการปะทะได้ 5 ครั้งแต่คงอยู่ไม่เกิน 8 วินาที)",
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "graft_skill_uulnetol_impale_buff_additional_impales_to_grant"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "บัฟมอบม็อด: สร้างสถานะ ทิ่มแทง เพิ่มเติม {0} ระดับ",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "บัฟมอบม็อด: สร้างสถานะ ทิ่มแทง เพิ่มเติม {0} ระดับ",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "graft_skill_uulnetol_impale_buff_impale_effect_%_to_grant"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "บัฟมอบม็อด: เพิ่มผลของสถานะ ทิ่มแทง {0}%",
+        "reminder_text": "(เมื่อศัตรูที่ติดสถานะ ทิ่มแทง ถูกปะทะอีกครั้ง มันจะได้รับความเสียหาย สะท้อน 10% ของความเสียหาย กายภาพ ที่สร้างสถานะนี้ สถานะนี้รับการปะทะได้ 5 ครั้งแต่คงอยู่ไม่เกิน 8 วินาที)",
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "graft_skill_xoph_ailment_buff_%_of_physical_damage_gained_as_element_to_grant"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "บัฟมอบม็อด: นำความเสียหาย กายภาพ {0}% ไปเสริมเป็น ธาตุที่ตรงกับสถานะเจ็บป่วยธาตุที่ถูกกำจัด",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "graft_skill_xoph_flame_pillars_number_of_pillars"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "สร้างแท่นขี้เถ้า {0} แท่น",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "สร้างแท่นขี้เถ้า {0} แท่น",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "graft_skill_xoph_geyser_explosion_maximum_geysers"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "สร้าง เพลิงพวยพุ่ง ได้สูงสุด {0} ลูก",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "สร้าง เพลิงพวยพุ่ง ได้สูงสุด {0} ลูก",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "graft_skill_xoph_geyser_explosion_number_of_geysers_to_spawn"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "สร้างเพลิงพวยพุ่ง {0} ลูก",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "สร้างเพลิงพวยพุ่ง {0} ลูก",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "graft_skill_xoph_geyser_explosion_number_of_projectiles_to_erupt"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "เพลิงพวยพุ่ง ยิงโพรเจกไทล์ เพิ่มเติม {0} ลูกเมื่อคุณคำราม",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "graft_uulnetol_life_recovery_rate_+%_final_to_grant_on_reaching_low_life"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "บัฟมอบม็อด: เพิ่มความเร็วในการ เติมพลังชีวิต อีก {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "บัฟมอบม็อด: ลดความเร็วในการ เติมพลังชีวิต อีก {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "graft_uulnetol_number_of_endurance_charges_to_grant_on_reaching_low_life"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "บัฟให้ Endurance Charge {0} ลูก",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "บัฟให้ Endurance Charge {0} ลูก",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "herald_of_thunder_bolt_base_frequency"
     ],
     "trade_stats": null,
@@ -10951,6 +12299,62 @@
           ]
         ],
         "string": "ลดความเสียหาย ปะทะ {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "holy_flame_totem_consecrated_ground_area_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "เพิ่มพื้นที่ พื้นศักดิ์สิทธิ์ {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "ลดพื้นที่ พื้นศักดิ์สิทธิ์ {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -11362,7 +12766,7 @@
             "divide_by_one_hundred"
           ]
         ],
-        "string": "ดูดความเสียหาย {0}% ไปเป็น พลังชีวิต",
+        "string": "ดูดพลังชีวิต {0}% จากความเสียหาย",
         "reminder_text": "(พลังชีวิตที่ดูด จะถูก เติม อย่างต่อเนื่อง การดูดหลายครั้งสามารถเกิดขึ้นได้พร้อมกันจนกว่าจะถึงอัตราสูงสุด)",
         "is_markup": null
       }
@@ -11734,7 +13138,7 @@
             "divide_by_one_hundred"
           ]
         ],
-        "string": "ดูดความเสียหาย {0}% ไปเป็น มานา",
+        "string": "ดูดมานา {0}% จากความเสียหาย",
         "reminder_text": "(มานาที่ดูด จะถูก เติม อย่างต่อเนื่อง การดูดหลายครั้งสามารถเกิดขึ้นได้พร้อมกันจนกว่าจะถึงอัตราสูงสุด)",
         "is_markup": null
       }
@@ -11932,7 +13336,7 @@
         "index_handlers": [
           []
         ],
-        "string": "เพิ่มการเติมสูงสุด {0}% ต่อจำนวนครั้งของการ ดูดโล่พลังงาน",
+        "string": "เพิ่มปริมาณการเติมสูงสุด ต่อจำนวนครั้งของการ ดูดโล่พลังงาน {0}%",
         "reminder_text": null,
         "is_markup": null
       },
@@ -11952,7 +13356,7 @@
             "negate"
           ]
         ],
-        "string": "ลดการเติมสูงสุด {0}% ต่อจำนวนครั้งของการ ดูดโล่พลังงาน",
+        "string": "ลดปริมาณการเติมสูงสุด ต่อจำนวนครั้งของการ ดูดโล่พลังงาน {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -11988,7 +13392,7 @@
         "index_handlers": [
           []
         ],
-        "string": "เพิ่มการเติมสูงสุด {0}% ต่อจำนวนครั้งของการ ดูดพลังชีวิต",
+        "string": "เพิ่มปริมาณการเติมสูงสุด ต่อจำนวนครั้งของการ ดูดพลังชีวิต {0}%",
         "reminder_text": null,
         "is_markup": null
       },
@@ -12008,7 +13412,7 @@
             "negate"
           ]
         ],
-        "string": "ลดการเติมสูงสุด {0}% ต่อจำนวนครั้งของการ ดูดพลังชีวิต",
+        "string": "ลดปริมาณการเติมสูงสุด ต่อจำนวนครั้งของการ ดูดพลังชีวิต {0}%",
         "reminder_text": null,
         "is_markup": null
       }
