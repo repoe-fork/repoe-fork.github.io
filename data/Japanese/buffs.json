@@ -5950,7 +5950,7 @@
       "base_additional_physical_damage_reduction_%",
       "recover_es_as_well_as_life_from_life_regeneration",
       "curse_effect_on_self_+%",
-      "damaging_ailment_duration_+%",
+      "self_damaging_ailment_duration_+%",
       "base_maximum_chaos_damage_resistance_%"
     ],
     "visuals": "ground_consecration",
@@ -10972,7 +10972,8 @@
           "name": null,
           "template": null,
           "stat_text": [
-            "元素ダメージを受けると代わりに回復する"
+            "元素ダメージを受けると代わりに回復する",
+            "呪いに対する完全無効化を獲得する"
           ],
           "stats": {
             "base_elemental_damage_heals": 1,
@@ -28442,7 +28443,7 @@
       "base_additional_physical_damage_reduction_%",
       "recover_es_as_well_as_life_from_life_regeneration",
       "curse_effect_on_self_+%",
-      "damaging_ailment_duration_+%",
+      "self_damaging_ailment_duration_+%",
       "base_maximum_chaos_damage_resistance_%"
     ],
     "visuals": "ground_consecration_elreon",
@@ -35420,7 +35421,7 @@
     "name": "",
     "removable": false,
     "stats": [
-      "base_physical_damage_%_to_convert_to_lightning"
+      "base_from_enemy_physical_damage_%_to_convert_to_lightning"
     ],
     "visuals": "invisible",
     "category": null,
@@ -35434,7 +35435,7 @@
     "name": "",
     "removable": false,
     "stats": [
-      "base_physical_damage_%_to_convert_to_fire"
+      "base_from_enemy_physical_damage_%_to_convert_to_fire"
     ],
     "visuals": "invisible",
     "category": null,
@@ -40923,6 +40924,14 @@
       "Mods": [
         {
           "id": "MagicUtilityFlasksAlwaysApplyUnique__1",
+          "item": null,
+          "name": null,
+          "template": "InjectedLiquid",
+          "stat_text": null,
+          "stats": null
+        },
+        {
+          "id": "MutatedUniqueBelt43MagicUtilityFlasksAlwaysApplyRightmost",
           "item": null,
           "name": null,
           "template": "InjectedLiquid",
@@ -69309,7 +69318,7 @@
     "name": "",
     "removable": false,
     "stats": [
-      "base_physical_damage_%_to_convert_to_fire"
+      "base_from_enemy_physical_damage_%_to_convert_to_fire"
     ],
     "visuals": "invisible",
     "category": null,
@@ -69329,11 +69338,9 @@
       "UniqueEnemyPhysicalDamageConvertedToFire": {
         "aura_radius_metres": 6.0,
         "stats": {
-          "base_physical_damage_%_to_convert_to_fire": 25
+          "base_from_enemy_physical_damage_%_to_convert_to_fire": 25
         },
-        "stat_text": [
-          "物理ダメージの25%を火ダメージに変換する"
-        ],
+        "stat_text": null,
         "visuals": null
       }
     },
@@ -72351,8 +72358,8 @@
         "stats": {
           "monster_difficulty_tankiness_+%": 100,
           "damage_+%": 15,
-          "from_league_item_rarity_+%_permyriad": 1600,
-          "from_league_item_quantity_+%_permyriad": 800
+          "from_league_item_rarity_+%_permyriad": 2100,
+          "from_league_item_quantity_+%_permyriad": 1000
         },
         "stat_text": [
           "ダメージが15%増加する"
@@ -74547,7 +74554,7 @@
           "missing_unreserved_life_%_gained_as_life_before_hit": 50
         },
         "stat_text": [
-          "敵からのヒットを受ける前にリザーブされてないライフの喪失分の50%を獲得する"
+          "敵からのヒットを受ける前に未リザーブライフの喪失分の50%を獲得する"
         ],
         "visuals": null
       }

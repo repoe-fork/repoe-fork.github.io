@@ -1709,7 +1709,7 @@
   },
   {
     "active_skill": {
-      "description": "Un coup circulaire avec une arme à deux mains qui repousse les monstres se trouvant autour du personnage.",
+      "description": "Un coup circulaire avec une masse à deux mains ou un bâton, faisant s'abattre des éclairs sacrés sur un certain nombre d'ennemis touchés.",
       "display_name": "Balayage",
       "id": "sweep",
       "is_manually_casted": true,
@@ -31986,7 +31986,8 @@
       "stat_conversions": {
         "searing_bond_damage_+%": "damage_+%",
         "searing_bond_totem_placement_speed_+%": "summon_totem_cast_speed_+%",
-        "searing_totem_elemental_resistance_+%": "totem_elemental_resistance_%"
+        "searing_totem_elemental_resistance_+%": "totem_elemental_resistance_%",
+        "number_of_additional_searing_bond_totems_allowed": "number_of_additional_totems_allowed"
       },
       "types": [
         "Spell",
@@ -45141,6 +45142,11 @@
         },
         {
           "id": "base_skill_show_average_damage_instead_of_dps",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "attack_is_melee_override",
           "type": "implicit",
           "value": 1
         }
@@ -105772,7 +105778,7 @@
       "letter": "G",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "Modifie les Aptitudes d'Attaque à l'arc qui tirent des flèches face à vous, sous forme de Projectiles. Les Aptitudes modifiées tirent désormais une seule Flèche à déflagration dans les airs qui atterrit à l'emplacement ciblé. À l'impact, tire dans toutes les directions toutes les flèches censées être normalement tirées par l'Aptitude modifiée. Ne peut modifier les Aptitudes qui tirent des flèches dans les airs, les Aptitudes canalisées ou les Aptitudes de Créatures.",
+      "support_text": "Modifie les aptitudes d'attaque à l'arc qui tirent des flèches face à vous, sous forme de Projectiles. Les Aptitudes modifiées tirent désormais une seule Flèche à déflagration dans les airs qui atterrit à l'emplacement ciblé. À l'impact, tire dans toutes les directions toutes les flèches censées être normalement tirées par l'Aptitude modifiée. Ne peut modifier les Aptitudes qui tirent des flèches dans les airs, les Aptitudes canalisées ou les Aptitudes de Créatures.",
       "excluded_types": [
         "Channel",
         "CreatesMinion",
@@ -106464,7 +106470,8 @@
       "stat_conversions": {
         "searing_bond_damage_+%": "damage_+%",
         "searing_bond_totem_placement_speed_+%": "summon_totem_cast_speed_+%",
-        "searing_totem_elemental_resistance_+%": "totem_elemental_resistance_%"
+        "searing_totem_elemental_resistance_+%": "totem_elemental_resistance_%",
+        "number_of_additional_searing_bond_totems_allowed": "number_of_additional_totems_allowed"
       },
       "types": [
         "Spell",
@@ -110622,7 +110629,7 @@
   },
   {
     "active_skill": {
-      "description": "Un coup circulaire avec une arme à deux mains qui repousse les monstres se trouvant autour du personnage.",
+      "description": "Un coup circulaire avec une masse à deux mains ou un bâton, faisant s'abattre des éclairs sacrés sur un certain nombre d'ennemis touchés.",
       "display_name": "Balayage",
       "id": "sweep",
       "is_manually_casted": true,
@@ -122689,7 +122696,7 @@
   },
   {
     "active_skill": {
-      "description": "Fait tournoyer votre baguette pour faire pleuvoir un certain nombre de projectiles dans une grande zone devant vous, ciblant directement l'emplacement des ennemis dans la zone. Des marqueurs indiquent l'emplacement d'atterrissage de chaque projectile avant sa chute. Chaque projectile explose en touchant le sol, infligeant des dégâts de zone et déclenchant Anomalie cinétique. Ne peut pas être utilisée par les Totems, Pièges ou Mines.",
+      "description": "Fait tournoyer votre baguette pour faire pleuvoir un certain nombre de projectiles dans une grande zone devant vous, ciblant directement l'emplacement des ennemis dans la zone. Des marqueurs indiquent l'emplacement d'atterrissage de chaque projectile avant sa chute. Chaque projectile explose en touchant le sol, infligeant des dégâts de zone et déclenchant Anomalie cinétique. Ne peut pas être utilisée par les Totems, Pièges ou Mines. ",
       "display_name": "Pluie cinétique",
       "id": "kinetic_rain",
       "is_manually_casted": true,
@@ -122711,7 +122718,7 @@
     },
     "base_item": {
       "display_name": "Pluie cinétique",
-      "experience_type": "GemProgression12",
+      "experience_type": "GemProgression28",
       "id": "Metadata/Items/Gems/SkillGemKineticRain",
       "max_level": 20,
       "release_state": "released"
@@ -122883,7 +122890,7 @@
     },
     "base_item": {
       "display_name": "Pluie cinétique",
-      "experience_type": "GemProgression12",
+      "experience_type": "GemProgression28",
       "id": "Metadata/Items/Gems/SkillGemKineticRain",
       "max_level": 20,
       "release_state": "released"
@@ -123027,7 +123034,7 @@
   },
   {
     "active_skill": {
-      "description": "Tire un projectile endommageant avec votre baguette, qui se dirige automatiquement vers un ennemi et applique une carapace au premier ennemi touché. Les dégâts au toucher contre cette cible sont d’abord absorbés par la carapace. Si la carapace est entièrement épuisée, elle explose, infligeant des dégâts de zone et tirant un nouveau projectile vers une autre cible afin de lui appliquer une nouvelle carapace. Si plusieurs projectiles sont tirés lors de l’explosion d’une carapace, seul le premier à toucher une cible peut appliquer une carapace.",
+      "description": "Tire un projectile endommageant avec votre baguette, qui se dirige automatiquement vers un ennemi et applique une carapace au premier ennemi touché. Les dégâts au toucher contre cette cible sont d’abord absorbés par la carapace. Si la carapace est entièrement épuisée, elle explose, infligeant des dégâts de zone et tirant un nouveau projectile vers une autre cible afin de lui appliquer une nouvelle carapace. Si plusieurs projectiles sont tirés lors de l’explosion d’une carapace, seul le premier à toucher une cible peut appliquer une carapace. ",
       "display_name": "Carapace somatique",
       "id": "kinetic_shell",
       "is_manually_casted": true,
@@ -126102,7 +126109,7 @@
         "dex": 0
       },
       "stat_text": {
-        "cover_in_ash_on_hit_%": "Vous Recouvrez les Ennemis de cendres au Toucher",
+        "cover_in_ash_on_hit_%": "Recouvre les Ennemis de cendres au Toucher",
         "additional_base_critical_strike_chance": "+8% aux Chances de coup critique"
       },
       "stats": [
@@ -126187,7 +126194,7 @@
   },
   {
     "active_skill": {
-      "description": "Lorsque vous subissez une Altération élémentaire avec ce Greffon équipé, il vous purge de toutes les Altérations élémentaires vous affectant, vous octroyant des Dégâts physiques Rajoutés sous forme de Dégâts élémentaires des type correspondants aux Altérations retirées.",
+      "description": "Lorsque vous subissez une Altération élémentaire avec ce Greffon équipé, il vous purge de toutes les Altérations élémentaires vous affectant, vous octroyant des Dégâts physiques Rajoutés sous forme de Dégâts élémentaires des types correspondants aux Altérations retirées.",
       "display_name": "Le Vent gris hurle",
       "id": "graft_skill_xoph_ailment_buff",
       "is_manually_casted": false,
@@ -128022,7 +128029,7 @@
         "dex": null
       },
       "stat_text": {
-        "support_focus_channel_cost_+%_final_per_second_channelling_up_to_100%": "Les Aptitudes modifiées ont 20% Davantage de Dégâts par seconde de Canalisation, jusqu'à un maximum de 100%"
+        "support_focus_channel_cost_+%_final_per_second_channelling_up_to_100%": "Les Aptitudes modifiées ont 20% Davantage de Coût par seconde de Canalisation, jusqu'à un maximum de 100%"
       },
       "stats": [
         {
