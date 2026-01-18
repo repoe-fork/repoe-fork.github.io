@@ -4,23 +4,58 @@
   },
   "edge_count": 20,
   "edge_types": {
-    "CityGardenWalkway": "CityGardenWalkway #FF47982f\r\nMetadata/Terrain/RuinedCity/GardenThinWall/city_inside_garden_thickwall.gt\r\nwildcard\r\n0 3 1",
-    "CityLargeWall": "CityLargeWall #FF656b86\nMetadata/Terrain/black_inside_wall.gt\nwildcard\n0 3 1",
-    "CityLargeWallGarden": "CityLargeWallGarden #FF656b86\nMetadata/Terrain/black_inside_wall.gt\nMetadata/Terrain/RuinedCity/GardenThinWall/city_inside_garden_thickwall.gt\n0 3 1",
-    "CitySlumThinwall": "CitySlumThinwall #FFb15f48\nMetadata/Terrain/RuinedCity/SlumArch/city_slums.gt\nwildcard\n0 3 1\n",
-    "ForestCliffCityGardenWildGrowth": "ForestCliffCityGardenWildGrowth #FF655c58\r\nMetadata/Terrain/Forest/LargeCliffs/forest_inside_cliff.gt\r\nMetadata/Terrain/RuinedCity/GardenThinWall/city_inside_garden_thickwall.gt\r\n0 3 1",
-    "ForestLargeCliff": "ForestLargeCliff #FF655c58\nwildcard\nMetadata/Terrain/Forest/LargeCliffs/forest_inside_cliff.gt\n0 3 0\n",
-    "ForestLowRiverBank": "ForestLowRiverBank #FF1919FF\nwildcard\nMetadata/Terrain/Forest/LowRiver/low_river_water.gt\n0 3 1\n",
-    "ForestRoad": "ForestRoad\nwildcard\nwildcard\n0 1 0\nvirtual\nMetadata/Terrain/Forest/Road/forest_road_side.et 1\nMetadata/Terrain/Forest/Road/forest_road_side.et 0\n25 25\n",
-    "ForestSlumsCliff": "ForestSlumsCliff #FF655c58\nMetadata/Terrain/RuinedCity/SlumArch/city_slums.gt\nMetadata/Terrain/Forest/LargeCliffs/forest_inside_cliff.gt\n0 3 1\n",
-    "GrainGateArchRiverEdge": "GrainGateArchRiverEdge #FF1919FF\nwildcard\nMetadata/Terrain/Forest/LowRiver/low_river_water.gt\n0 3 1",
-    "GrainGateWallRiverEdge": "GrainGateWallRiverEdge #FF656b86\nMetadata/Terrain/black_inside_wall.gt\nMetadata/Terrain/Forest/LowRiver/low_river_water.gt\n0 3 1",
-    "SlumsCliffWater": "SlumsCliffWater #FFb15f48\nMetadata/Terrain/RuinedCity/SlumArch/city_slums.gt\nMetadata/Terrain/Forest/LowRiver/low_river_water.gt\n0 3 1\n"
+    "Metadata/Terrain/Forest/LargeCliffs/forest_large_cliff.et": {
+      "color": "#FF655c58",
+      "id": "ForestLargeCliff"
+    },
+    "Metadata/Terrain/Forest/LowRiver/forest_low_river_bank.et": {
+      "color": "#FF1919FF",
+      "id": "ForestLowRiverBank"
+    },
+    "Metadata/Terrain/Forest/Road/forest_road.et": {
+      "id": "ForestRoad"
+    },
+    "Metadata/Terrain/RuinedCity/GardenWalkway/city_garden_walkway.et": {
+      "color": "#FF47982f",
+      "id": "CityGardenWalkway"
+    },
+    "Metadata/Terrain/RuinedCity/GardenWildGrowth/forestcliff_city_garden_wildgrowth.et": {
+      "color": "#FF655c58",
+      "id": "ForestCliffCityGardenWildGrowth"
+    },
+    "Metadata/Terrain/RuinedCity/GrainGate/forest_slumscliff.et": {
+      "color": "#FF655c58",
+      "id": "ForestSlumsCliff"
+    },
+    "Metadata/Terrain/RuinedCity/GrainGate/forest_slumscliffwater.et": {
+      "color": "#FFb15f48",
+      "id": "SlumsCliffWater"
+    },
+    "Metadata/Terrain/RuinedCity/GrainGate/graingate_arch_riveredge.et": {
+      "color": "#FF1919FF",
+      "id": "GrainGateArchRiverEdge"
+    },
+    "Metadata/Terrain/RuinedCity/GrainGate/graingate_wall_riveredge.et": {
+      "color": "#FF656b86",
+      "id": "GrainGateWallRiverEdge"
+    },
+    "Metadata/Terrain/RuinedCity/LargeWall/city_large_wall.et": {
+      "color": "#FF656b86",
+      "id": "CityLargeWall"
+    },
+    "Metadata/Terrain/RuinedCity/LargeWallGardens/city_large_wall_garden.et": {
+      "color": "#FF656b86",
+      "id": "CityLargeWallGarden"
+    },
+    "Metadata/Terrain/RuinedCity/SlumThinwall/city_slum_thinwall.et": {
+      "color": "#FFb15f48",
+      "id": "CitySlumThinwall"
+    }
   },
   "edges": [
     {
       "color": "#FF1919FF",
-      "edge_type": "ForestLowRiverBank",
+      "edge_type": "Metadata/Terrain/Forest/LowRiver/forest_low_river_bank.et",
       "from": 0,
       "path": [],
       "to": 1,
@@ -34,7 +69,7 @@
     },
     {
       "color": "#FFb15f48",
-      "edge_type": "SlumsCliffWater",
+      "edge_type": "Metadata/Terrain/RuinedCity/GrainGate/forest_slumscliffwater.et",
       "from": 1,
       "path": [],
       "to": 2,
@@ -48,7 +83,7 @@
     },
     {
       "color": "#FFb15f48",
-      "edge_type": "CitySlumThinwall",
+      "edge_type": "Metadata/Terrain/RuinedCity/SlumThinwall/city_slum_thinwall.et",
       "from": 3,
       "path": [],
       "to": 1,
@@ -62,7 +97,7 @@
     },
     {
       "color": "#FFb15f48",
-      "edge_type": "CitySlumThinwall",
+      "edge_type": "Metadata/Terrain/RuinedCity/SlumThinwall/city_slum_thinwall.et",
       "from": 4,
       "path": [],
       "to": 3,
@@ -76,7 +111,7 @@
     },
     {
       "color": "#FF655c58",
-      "edge_type": "ForestSlumsCliff",
+      "edge_type": "Metadata/Terrain/RuinedCity/GrainGate/forest_slumscliff.et",
       "from": 5,
       "path": [],
       "to": 4,
@@ -90,7 +125,7 @@
     },
     {
       "color": "#FF1919FF",
-      "edge_type": "ForestLowRiverBank",
+      "edge_type": "Metadata/Terrain/Forest/LowRiver/forest_low_river_bank.et",
       "from": 0,
       "path": [],
       "to": 7,
@@ -104,7 +139,7 @@
     },
     {
       "color": "#FF1919FF",
-      "edge_type": "GrainGateArchRiverEdge",
+      "edge_type": "Metadata/Terrain/RuinedCity/GrainGate/graingate_arch_riveredge.et",
       "from": 23,
       "path": [],
       "to": 7,
@@ -117,7 +152,7 @@
       ]
     },
     {
-      "edge_type": "ForestRoad",
+      "edge_type": "Metadata/Terrain/Forest/Road/forest_road.et",
       "from": 22,
       "path": [],
       "to": 0,
@@ -131,7 +166,7 @@
     },
     {
       "color": "#FF656b86",
-      "edge_type": "GrainGateWallRiverEdge",
+      "edge_type": "Metadata/Terrain/RuinedCity/GrainGate/graingate_wall_riveredge.et",
       "from": 11,
       "path": [],
       "to": 8,
@@ -145,7 +180,7 @@
     },
     {
       "color": "#FF656b86",
-      "edge_type": "CityLargeWall",
+      "edge_type": "Metadata/Terrain/RuinedCity/LargeWall/city_large_wall.et",
       "from": 12,
       "path": [],
       "to": 8,
@@ -159,7 +194,7 @@
     },
     {
       "color": "#FF47982f",
-      "edge_type": "CityGardenWalkway",
+      "edge_type": "Metadata/Terrain/RuinedCity/GardenWalkway/city_garden_walkway.et",
       "from": 10,
       "path": [],
       "to": 12,
@@ -173,7 +208,7 @@
     },
     {
       "color": "#FF656b86",
-      "edge_type": "CityLargeWallGarden",
+      "edge_type": "Metadata/Terrain/RuinedCity/LargeWallGardens/city_large_wall_garden.et",
       "from": 13,
       "path": [],
       "to": 12,
@@ -187,7 +222,7 @@
     },
     {
       "color": "#FF655c58",
-      "edge_type": "ForestCliffCityGardenWildGrowth",
+      "edge_type": "Metadata/Terrain/RuinedCity/GardenWildGrowth/forestcliff_city_garden_wildgrowth.et",
       "from": 14,
       "path": [],
       "to": 10,
@@ -200,7 +235,7 @@
       ]
     },
     {
-      "edge_type": "ForestRoad",
+      "edge_type": "Metadata/Terrain/Forest/Road/forest_road.et",
       "from": 18,
       "path": [],
       "to": 15,
@@ -214,7 +249,7 @@
     },
     {
       "color": "#FF655c58",
-      "edge_type": "ForestLargeCliff",
+      "edge_type": "Metadata/Terrain/Forest/LargeCliffs/forest_large_cliff.et",
       "from": 4,
       "path": [],
       "to": 9,
@@ -228,7 +263,7 @@
     },
     {
       "color": "#FF655c58",
-      "edge_type": "ForestLargeCliff",
+      "edge_type": "Metadata/Terrain/Forest/LargeCliffs/forest_large_cliff.et",
       "from": 9,
       "path": [],
       "to": 6,
@@ -242,7 +277,7 @@
     },
     {
       "color": "#FF655c58",
-      "edge_type": "ForestLargeCliff",
+      "edge_type": "Metadata/Terrain/Forest/LargeCliffs/forest_large_cliff.et",
       "from": 6,
       "path": [],
       "to": 10,
@@ -255,7 +290,7 @@
       ]
     },
     {
-      "edge_type": "ForestRoad",
+      "edge_type": "Metadata/Terrain/Forest/Road/forest_road.et",
       "from": 18,
       "path": [],
       "to": 22,
@@ -268,7 +303,7 @@
       ]
     },
     {
-      "edge_type": "ForestRoad",
+      "edge_type": "Metadata/Terrain/Forest/Road/forest_road.et",
       "from": 9,
       "path": [],
       "to": 22,
@@ -282,7 +317,7 @@
     },
     {
       "color": "#FF1919FF",
-      "edge_type": "GrainGateArchRiverEdge",
+      "edge_type": "Metadata/Terrain/RuinedCity/GrainGate/graingate_arch_riveredge.et",
       "from": 8,
       "path": [],
       "to": 23,
@@ -293,6 +328,12 @@
         0,
         0
       ]
+    }
+  ],
+  "fill_tiles": [
+    {
+      "file": "ImpassableGround",
+      "suffix": []
     }
   ],
   "master": {

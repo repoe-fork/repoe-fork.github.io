@@ -4,14 +4,24 @@
   },
   "edge_count": 6,
   "edge_types": {
-    "AscentCliffRise": "AscentCliffRise #FF999eb8\nMetadata/Terrain/Act4/Area7/Cliff/ascent_cliff.gt\nMetadata/Terrain/Act4/Area7/Cliff/ascent_cliff.gt\n1 3 1\n",
-    "CliffSideLake": "CliffSideLake\nMetadata/Terrain/Mountain/BoilingLake/boiling_lake.gt\nMetadata/Terrain/Act4/Area7/Cliff/ascent_cliff.gt\n0 3 1\nvirtual\nMetadata/Terrain/Act4/Area7/Cliff/ascent_cliff.et 0\nMetadata/Terrain/Mountain/BoilingLake/lake_side.et 1\n70 90",
-    "CliffUpperSideLake": "CliffUpperSideLake\nMetadata/Terrain/Mountain/BoilingLake/boiling_lake.gt\r\nMetadata/Terrain/Act4/Area7/Cliff/ascent_cliff.gt\n1 3 1\r\nvirtual\r\nMetadata/Terrain/Act4/Area7/Cliff/ascent_cliff.et 0\r\nMetadata/Terrain/Mountain/BoilingLake/lake_side_upper.et 0\r\n70 90",
-    "LakeCliff": "LakeCliff #FFa2a7be\nMetadata/Terrain/Mountain/BoilingLake/boiling_lake.gt\nMetadata/Terrain/Act4/Area7/Cliff/ascent_cliff.gt\n1 3 1\n"
+    "Metadata/Terrain/Act4/Area7/Cliff/ascent_cliff_rise.et": {
+      "color": "#FF999eb8",
+      "id": "AscentCliffRise"
+    },
+    "Metadata/Terrain/Mountain/BoilingLake/cliff_side_lake.et": {
+      "id": "CliffSideLake"
+    },
+    "Metadata/Terrain/Mountain/BoilingLake/cliff_upperside_lake.et": {
+      "id": "CliffUpperSideLake"
+    },
+    "Metadata/Terrain/Mountain/BoilingLake/lake_cliff.et": {
+      "color": "#FFa2a7be",
+      "id": "LakeCliff"
+    }
   },
   "edges": [
     {
-      "edge_type": "CliffUpperSideLake",
+      "edge_type": "Metadata/Terrain/Mountain/BoilingLake/cliff_upperside_lake.et",
       "from": 0,
       "path": [],
       "to": 1,
@@ -24,7 +34,7 @@
       ]
     },
     {
-      "edge_type": "CliffSideLake",
+      "edge_type": "Metadata/Terrain/Mountain/BoilingLake/cliff_side_lake.et",
       "from": 12,
       "path": [],
       "to": 7,
@@ -38,7 +48,7 @@
     },
     {
       "color": "#FFa2a7be",
-      "edge_type": "LakeCliff",
+      "edge_type": "Metadata/Terrain/Mountain/BoilingLake/lake_cliff.et",
       "from": 7,
       "path": [],
       "to": 8,
@@ -51,7 +61,7 @@
       ]
     },
     {
-      "edge_type": "CliffUpperSideLake",
+      "edge_type": "Metadata/Terrain/Mountain/BoilingLake/cliff_upperside_lake.et",
       "from": 8,
       "path": [],
       "to": 0,
@@ -65,7 +75,7 @@
     },
     {
       "color": "#FF999eb8",
-      "edge_type": "AscentCliffRise",
+      "edge_type": "Metadata/Terrain/Act4/Area7/Cliff/ascent_cliff_rise.et",
       "from": 1,
       "path": [],
       "to": 7,
@@ -78,7 +88,7 @@
       ]
     },
     {
-      "edge_type": "CliffSideLake",
+      "edge_type": "Metadata/Terrain/Mountain/BoilingLake/cliff_side_lake.et",
       "from": 1,
       "path": [],
       "to": 12,
@@ -91,6 +101,7 @@
       ]
     }
   ],
+  "fill_tiles": [],
   "master": {
     "ChestData": "chests.cht",
     "Critters": "critters.clt",

@@ -4,17 +4,33 @@
   },
   "edge_count": 12,
   "edge_types": {
-    "ForestLargeCliff": "ForestLargeCliff #FF655c58\nwildcard\nMetadata/Terrain/Forest/LargeCliffs/forest_inside_cliff.gt\n0 3 0\n",
-    "ForestLargeCliffForest": "ForestLargeCliffForest #FF655c58\nMetadata/Terrain/Forest/ThickForest/inside_thick_forest.gt\nMetadata/Terrain/Forest/LargeCliffs/forest_inside_cliff.gt\n0 3 1\n",
-    "ForestRiver": "ForestRiver\nwildcard\nwildcard\n0 1 0\nvirtual\nMetadata/Terrain/Forest/River/forest_river_bank.et 1\nMetadata/Terrain/Forest/River/forest_river_bank.et 0\n23 50\n",
-    "ForestRiverThickForest": "ForestRiverThickForest\nwildcard\r\nMetadata/Terrain/Forest/ThickForest/inside_thick_forest.gt\n0 3 0\nvirtual\nMetadata/Terrain/Forest/ThickForestToRiver/forest_thickforest_river.et 1\nMetadata/Terrain/Forest/River/forest_river_bank.et 0\n23 50\n",
-    "ForestStream": "ForestStream #FF678ac5\r\nwildcard\r\nwildcard\r\n0 1 0\r\nMetadata/Terrain/Forest/Stream/inside_forest_stream.gt",
-    "ThickForest": "ThickForest #FF47982f\nwildcard\nMetadata/Terrain/Forest/ThickForest/inside_thick_forest.gt\n0 3 0\n"
+    "Metadata/Terrain/Forest/LargeCliffToForest/forest_large_cliff_forest.et": {
+      "color": "#FF655c58",
+      "id": "ForestLargeCliffForest"
+    },
+    "Metadata/Terrain/Forest/LargeCliffs/forest_large_cliff.et": {
+      "color": "#FF655c58",
+      "id": "ForestLargeCliff"
+    },
+    "Metadata/Terrain/Forest/River/forest_river.et": {
+      "id": "ForestRiver"
+    },
+    "Metadata/Terrain/Forest/River/forest_river_thickforest.et": {
+      "id": "ForestRiverThickForest"
+    },
+    "Metadata/Terrain/Forest/Stream/forest_stream.et": {
+      "color": "#FF678ac5",
+      "id": "ForestStream"
+    },
+    "Metadata/Terrain/Forest/ThickForest/thick_forest.et": {
+      "color": "#FF47982f",
+      "id": "ThickForest"
+    }
   },
   "edges": [
     {
       "color": "#FF655c58",
-      "edge_type": "ForestLargeCliff",
+      "edge_type": "Metadata/Terrain/Forest/LargeCliffs/forest_large_cliff.et",
       "from": 1,
       "path": [
         [
@@ -33,7 +49,7 @@
     },
     {
       "color": "#FF47982f",
-      "edge_type": "ThickForest",
+      "edge_type": "Metadata/Terrain/Forest/ThickForest/thick_forest.et",
       "from": 10,
       "path": [],
       "to": 2,
@@ -46,7 +62,7 @@
       ]
     },
     {
-      "edge_type": "ForestRiverThickForest",
+      "edge_type": "Metadata/Terrain/Forest/River/forest_river_thickforest.et",
       "from": 15,
       "path": [],
       "to": 2,
@@ -60,7 +76,7 @@
     },
     {
       "color": "#FF655c58",
-      "edge_type": "ForestLargeCliff",
+      "edge_type": "Metadata/Terrain/Forest/LargeCliffs/forest_large_cliff.et",
       "from": 3,
       "path": [],
       "to": 1,
@@ -74,7 +90,7 @@
     },
     {
       "color": "#FF655c58",
-      "edge_type": "ForestLargeCliff",
+      "edge_type": "Metadata/Terrain/Forest/LargeCliffs/forest_large_cliff.et",
       "from": 13,
       "path": [
         [
@@ -93,7 +109,7 @@
     },
     {
       "color": "#FF655c58",
-      "edge_type": "ForestLargeCliffForest",
+      "edge_type": "Metadata/Terrain/Forest/LargeCliffToForest/forest_large_cliff_forest.et",
       "from": 9,
       "path": [],
       "to": 10,
@@ -106,7 +122,7 @@
       ]
     },
     {
-      "edge_type": "ForestRiver",
+      "edge_type": "Metadata/Terrain/Forest/River/forest_river.et",
       "from": 14,
       "path": [],
       "to": 11,
@@ -120,7 +136,7 @@
     },
     {
       "color": "#FF47982f",
-      "edge_type": "ThickForest",
+      "edge_type": "Metadata/Terrain/Forest/ThickForest/thick_forest.et",
       "from": 12,
       "path": [],
       "to": 11,
@@ -134,7 +150,7 @@
     },
     {
       "color": "#FF655c58",
-      "edge_type": "ForestLargeCliff",
+      "edge_type": "Metadata/Terrain/Forest/LargeCliffs/forest_large_cliff.et",
       "from": 0,
       "path": [],
       "to": 13,
@@ -147,7 +163,7 @@
       ]
     },
     {
-      "edge_type": "ForestRiver",
+      "edge_type": "Metadata/Terrain/Forest/River/forest_river.et",
       "from": 1,
       "path": [],
       "to": 14,
@@ -161,7 +177,7 @@
     },
     {
       "color": "#FF678ac5",
-      "edge_type": "ForestStream",
+      "edge_type": "Metadata/Terrain/Forest/Stream/forest_stream.et",
       "from": 14,
       "path": [],
       "to": 13,
@@ -174,7 +190,7 @@
       ]
     },
     {
-      "edge_type": "ForestRiverThickForest",
+      "edge_type": "Metadata/Terrain/Forest/River/forest_river_thickforest.et",
       "from": 11,
       "path": [
         [
@@ -192,6 +208,7 @@
       ]
     }
   ],
+  "fill_tiles": [],
   "master": {
     "ChestData": "chests.cht",
     "Critters": "critters.clt",

@@ -4,16 +4,30 @@
   },
   "edge_count": 13,
   "edge_types": {
-    "BeachCliff": "BeachCliff #FF655c58\nwildcard\nMetadata/Terrain/Beach/LargeCliffs/beach_inside_cliff.gt\n0 3 0 0 0\n",
-    "BeachCliffOcean": "BeachCliffOcean #FF655c58\nMetadata/Terrain/Beach/Shoreline/beach_ocean_deep.gt\nMetadata/Terrain/Beach/LargeCliffs/beach_inside_cliff.gt\n0 3 1\n",
-    "BeachCliffRaised": "BeachCliffRaised #FF8d817c\nwildcard\nMetadata/Terrain/Beach/LargeCliffs/beach_inside_cliff.gt\n0 3 0 0 0\n",
-    "BeachLedge": "BeachLedge #FFa88961\nwildcard\nwildcard\n1 1 0\n",
-    "BeachShoreline": "BeachShoreline\nwildcard\nMetadata/Terrain/Beach/Shoreline/beach_ocean_deep.gt\n0 3 1\nvirtual\nMetadata/Terrain/Beach/Shoreline/beach_shoreline_deep.et 0\nMetadata/Terrain/Beach/Shoreline/beach_shoreline_shallow.et 0\n40 40\n"
+    "Metadata/Terrain/Beach/LargeCliffs/beach_large_cliff.et": {
+      "color": "#FF655c58",
+      "id": "BeachCliff"
+    },
+    "Metadata/Terrain/Beach/LargeCliffsRaised/beach_large_cliff_raised.et": {
+      "color": "#FF8d817c",
+      "id": "BeachCliffRaised"
+    },
+    "Metadata/Terrain/Beach/LargeCliffsToOcean/beach_large_cliff_ocean.et": {
+      "color": "#FF655c58",
+      "id": "BeachCliffOcean"
+    },
+    "Metadata/Terrain/Beach/Shoreline/beach_shoreline.et": {
+      "id": "BeachShoreline"
+    },
+    "Metadata/Terrain/Beach/SmallCliffs/beach_small_cliff.et": {
+      "color": "#FFa88961",
+      "id": "BeachLedge"
+    }
   },
   "edges": [
     {
       "color": "#FF8d817c",
-      "edge_type": "BeachCliffRaised",
+      "edge_type": "Metadata/Terrain/Beach/LargeCliffsRaised/beach_large_cliff_raised.et",
       "from": 13,
       "path": [],
       "to": 0,
@@ -27,7 +41,7 @@
     },
     {
       "color": "#FF8d817c",
-      "edge_type": "BeachCliffRaised",
+      "edge_type": "Metadata/Terrain/Beach/LargeCliffsRaised/beach_large_cliff_raised.et",
       "from": 1,
       "path": [],
       "to": 0,
@@ -41,7 +55,7 @@
     },
     {
       "color": "#FF655c58",
-      "edge_type": "BeachCliff",
+      "edge_type": "Metadata/Terrain/Beach/LargeCliffs/beach_large_cliff.et",
       "from": 12,
       "path": [],
       "to": 10,
@@ -54,7 +68,7 @@
       ]
     },
     {
-      "edge_type": "BeachShoreline",
+      "edge_type": "Metadata/Terrain/Beach/Shoreline/beach_shoreline.et",
       "from": 18,
       "path": [],
       "to": 11,
@@ -68,7 +82,7 @@
     },
     {
       "color": "#FF8d817c",
-      "edge_type": "BeachCliffRaised",
+      "edge_type": "Metadata/Terrain/Beach/LargeCliffsRaised/beach_large_cliff_raised.et",
       "from": 1,
       "path": [],
       "to": 12,
@@ -82,7 +96,7 @@
     },
     {
       "color": "#FF655c58",
-      "edge_type": "BeachCliff",
+      "edge_type": "Metadata/Terrain/Beach/LargeCliffs/beach_large_cliff.et",
       "from": 11,
       "path": [],
       "to": 13,
@@ -96,7 +110,7 @@
     },
     {
       "color": "#FF655c58",
-      "edge_type": "BeachCliffOcean",
+      "edge_type": "Metadata/Terrain/Beach/LargeCliffsToOcean/beach_large_cliff_ocean.et",
       "from": 14,
       "path": [],
       "to": 11,
@@ -110,7 +124,7 @@
     },
     {
       "color": "#FF655c58",
-      "edge_type": "BeachCliffOcean",
+      "edge_type": "Metadata/Terrain/Beach/LargeCliffsToOcean/beach_large_cliff_ocean.et",
       "from": 10,
       "path": [],
       "to": 15,
@@ -124,7 +138,7 @@
     },
     {
       "color": "#FFa88961",
-      "edge_type": "BeachLedge",
+      "edge_type": "Metadata/Terrain/Beach/SmallCliffs/beach_small_cliff.et",
       "from": 17,
       "path": [],
       "to": 13,
@@ -138,7 +152,7 @@
     },
     {
       "color": "#FFa88961",
-      "edge_type": "BeachLedge",
+      "edge_type": "Metadata/Terrain/Beach/SmallCliffs/beach_small_cliff.et",
       "from": 12,
       "path": [],
       "to": 16,
@@ -152,7 +166,7 @@
     },
     {
       "color": "#FFa88961",
-      "edge_type": "BeachLedge",
+      "edge_type": "Metadata/Terrain/Beach/SmallCliffs/beach_small_cliff.et",
       "from": 20,
       "path": [],
       "to": 17,
@@ -165,7 +179,7 @@
       ]
     },
     {
-      "edge_type": "BeachShoreline",
+      "edge_type": "Metadata/Terrain/Beach/Shoreline/beach_shoreline.et",
       "from": 10,
       "path": [],
       "to": 18,
@@ -179,7 +193,7 @@
     },
     {
       "color": "#FFa88961",
-      "edge_type": "BeachLedge",
+      "edge_type": "Metadata/Terrain/Beach/SmallCliffs/beach_small_cliff.et",
       "from": 16,
       "path": [],
       "to": 20,
@@ -189,6 +203,216 @@
         "Metadata/Terrain/Beach/SmallCliffs/beach_small_cliff.et",
         0,
         0
+      ]
+    }
+  ],
+  "fill_tiles": [
+    {
+      "file": "Metadata/Terrain/RuinedCity/Battlefield/Rooms/Fills/ballistaball_1.arm",
+      "prefix": [
+        "3"
+      ],
+      "room_tag": "",
+      "suffix": [
+        "R90"
+      ]
+    },
+    {
+      "file": "Metadata/Terrain/RuinedCity/Battlefield/Rooms/Fills/ballistaball_2.arm",
+      "prefix": [
+        "4"
+      ],
+      "room_tag": "",
+      "suffix": [
+        "R90"
+      ]
+    },
+    {
+      "file": "Metadata/Terrain/RuinedCity/Battlefield/Rooms/Fills/ballistaball_3.arm",
+      "prefix": [
+        "3"
+      ],
+      "room_tag": "",
+      "suffix": [
+        "R90"
+      ]
+    },
+    {
+      "file": "Metadata/Terrain/RuinedCity/Battlefield/Rooms/Fills/ballistaball_4.arm",
+      "prefix": [
+        "3"
+      ],
+      "room_tag": "",
+      "suffix": [
+        "R90"
+      ]
+    },
+    {
+      "file": "Metadata/Terrain/EndGame/MapBeachLanding/Rooms/Fills/Warrior_1.arm",
+      "prefix": [
+        "2"
+      ],
+      "room_tag": "",
+      "suffix": []
+    },
+    {
+      "file": "Metadata/Terrain/EndGame/MapBeachLanding/Rooms/Fills/Catapult_2.arm",
+      "prefix": [
+        "2"
+      ],
+      "room_tag": "",
+      "suffix": [
+        "R270"
+      ]
+    },
+    {
+      "file": "Metadata/Terrain/EndGame/MapBeachLanding/Rooms/Fills/Shield_guard_1.arm",
+      "prefix": [
+        "1"
+      ],
+      "room_tag": "",
+      "suffix": [
+        "R270"
+      ]
+    },
+    {
+      "file": "Metadata/Terrain/EndGame/MapBeachLanding/Rooms/Fills/Shield_guard_2.arm",
+      "prefix": [
+        "2"
+      ],
+      "room_tag": "",
+      "suffix": [
+        "R270"
+      ]
+    },
+    {
+      "file": "Metadata/Terrain/EndGame/MapBeachLanding/Rooms/Fills/Sanddune_flag_01.arm",
+      "prefix": [
+        "2"
+      ],
+      "room_tag": "",
+      "suffix": [
+        "I"
+      ]
+    },
+    {
+      "file": "Metadata/Terrain/EndGame/MapBeachLanding/Rooms/Fills/Sanddune_mount_01.arm",
+      "prefix": [
+        "3"
+      ],
+      "room_tag": "",
+      "suffix": [
+        "I"
+      ]
+    },
+    {
+      "file": "Metadata/Terrain/EndGame/MapBeachLanding/Rooms/Fills/Sanddune_mount_02.arm",
+      "prefix": [
+        "3"
+      ],
+      "room_tag": "",
+      "suffix": [
+        "I"
+      ]
+    },
+    {
+      "file": "Metadata/Terrain/EndGame/MapBeachLanding/Rooms/Fills/Barricade/barricade_1.arm",
+      "prefix": [
+        "3"
+      ],
+      "room_tag": "",
+      "suffix": [
+        "R180"
+      ]
+    },
+    {
+      "file": "Metadata/Terrain/EndGame/MapBeachLanding/Rooms/Fills/Barricade/barricade_3.arm",
+      "prefix": [
+        "3"
+      ],
+      "room_tag": "",
+      "suffix": [
+        "R180"
+      ]
+    },
+    {
+      "file": "Metadata/Terrain/EndGame/MapBeachLanding/Rooms/Fills/Barricade/barricade_4.arm",
+      "prefix": [
+        "3"
+      ],
+      "room_tag": "",
+      "suffix": [
+        "R180"
+      ]
+    },
+    {
+      "file": "Metadata/Terrain/EndGame/MapBeachLanding/Rooms/Fills/Barricade/barricade_5.arm",
+      "prefix": [
+        "3"
+      ],
+      "room_tag": "",
+      "suffix": [
+        "R180"
+      ]
+    },
+    {
+      "file": "Metadata/Terrain/EndGame/MapBeachLanding/Rooms/Fills/Barricade/barricade_6.arm",
+      "prefix": [
+        "3"
+      ],
+      "room_tag": "",
+      "suffix": [
+        "R180"
+      ]
+    },
+    {
+      "file": "Metadata/Terrain/EndGame/MapBeachLanding/Rooms/Fills/Barricade/barricade_7.arm",
+      "prefix": [
+        "3"
+      ],
+      "room_tag": "",
+      "suffix": [
+        "R180"
+      ]
+    },
+    {
+      "file": "Metadata/Terrain/EndGame/MapBeachLanding/Rooms/Fills/Barricade/barricade_8.arm",
+      "prefix": [
+        "3"
+      ],
+      "room_tag": "",
+      "suffix": [
+        "R180"
+      ]
+    },
+    {
+      "file": "Metadata/Terrain/EndGame/MapBeachLanding/Rooms/Fills/Catapult_1.arm",
+      "prefix": [
+        "2"
+      ],
+      "room_tag": "",
+      "suffix": [
+        "R270"
+      ]
+    },
+    {
+      "file": "Metadata/Terrain/EndGame/MapBeachLanding/Rooms/Fills/Catapult_3.arm",
+      "prefix": [
+        "2"
+      ],
+      "room_tag": "",
+      "suffix": [
+        "R270"
+      ]
+    },
+    {
+      "file": "Metadata/Terrain/EndGame/MapBeachLanding/Rooms/Fills/Catapult_3.arm",
+      "prefix": [
+        "2"
+      ],
+      "room_tag": "",
+      "suffix": [
+        "R270"
       ]
     }
   ],

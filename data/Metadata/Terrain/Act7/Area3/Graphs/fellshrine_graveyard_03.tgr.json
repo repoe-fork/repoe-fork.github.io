@@ -4,18 +4,35 @@
   },
   "edge_count": 26,
   "edge_types": {
-    "ForestChurchWall": "ForestChurchWall\nwildcard\nwildcard\n0 1 1\n",
-    "ForestLargeCliff": "ForestLargeCliff #FF655c58\nwildcard\nMetadata/Terrain/Forest/LargeCliffs/forest_inside_cliff.gt\n0 3 0\n",
-    "ForestLargeCliffRiver": "ForestLargeCliffRiver #FF655c58\nMetadata/Terrain/Forest/River/river_water.gt\nMetadata/Terrain/Forest/LargeCliffs/forest_inside_cliff.gt\n0 3 1\n",
-    "ForestRiver": "ForestRiver\nwildcard\nwildcard\n0 1 0\nvirtual\nMetadata/Terrain/Forest/River/forest_river_bank.et 1\nMetadata/Terrain/Forest/River/forest_river_bank.et 0\n23 50\n",
-    "ForestRiverBank": "ForestRiverBank #FF3737FF\nwildcard\nMetadata/Terrain/Forest/River/river_water.gt\n0 1 0 0 0 0",
-    "ForestRoad": "ForestRoad\nwildcard\nwildcard\n0 1 0\nvirtual\nMetadata/Terrain/Forest/Road/forest_road_side.et 1\nMetadata/Terrain/Forest/Road/forest_road_side.et 0\n25 25\n",
-    "ImpassableForestChurchWall": "ImpassableForestChurchWall\r\nwildcard\r\nMetadata/Terrain/impassable_ground.gt\r\n0 1 1\r\n"
+    "Metadata/Terrain/Forest/ChurchWall/OneSidedChurchWall/impassable_church_wall.et": {
+      "id": "ImpassableForestChurchWall"
+    },
+    "Metadata/Terrain/Forest/ChurchWall/forest_church_wall.et": {
+      "id": "ForestChurchWall"
+    },
+    "Metadata/Terrain/Forest/LargeCliffToRiver/forest_large_cliff_river.et": {
+      "color": "#FF655c58",
+      "id": "ForestLargeCliffRiver"
+    },
+    "Metadata/Terrain/Forest/LargeCliffs/forest_large_cliff.et": {
+      "color": "#FF655c58",
+      "id": "ForestLargeCliff"
+    },
+    "Metadata/Terrain/Forest/River/forest_river.et": {
+      "id": "ForestRiver"
+    },
+    "Metadata/Terrain/Forest/River/forest_river_bank.et": {
+      "color": "#FF3737FF",
+      "id": "ForestRiverBank"
+    },
+    "Metadata/Terrain/Forest/Road/forest_road.et": {
+      "id": "ForestRoad"
+    }
   },
   "edges": [
     {
       "color": "#FF655c58",
-      "edge_type": "ForestLargeCliffRiver",
+      "edge_type": "Metadata/Terrain/Forest/LargeCliffToRiver/forest_large_cliff_river.et",
       "from": 6,
       "path": [],
       "to": 2,
@@ -29,7 +46,7 @@
     },
     {
       "color": "#FF655c58",
-      "edge_type": "ForestLargeCliff",
+      "edge_type": "Metadata/Terrain/Forest/LargeCliffs/forest_large_cliff.et",
       "from": 7,
       "path": [],
       "to": 3,
@@ -42,7 +59,7 @@
       ]
     },
     {
-      "edge_type": "ForestRiver",
+      "edge_type": "Metadata/Terrain/Forest/River/forest_river.et",
       "from": 9,
       "path": [],
       "to": 0,
@@ -55,7 +72,7 @@
       ]
     },
     {
-      "edge_type": "ForestRoad",
+      "edge_type": "Metadata/Terrain/Forest/Road/forest_road.et",
       "from": 11,
       "path": [],
       "to": 2,
@@ -69,7 +86,7 @@
     },
     {
       "color": "#FF3737FF",
-      "edge_type": "ForestRiverBank",
+      "edge_type": "Metadata/Terrain/Forest/River/forest_river_bank.et",
       "from": 4,
       "path": [],
       "to": 5,
@@ -83,7 +100,7 @@
     },
     {
       "color": "#FF3737FF",
-      "edge_type": "ForestRiverBank",
+      "edge_type": "Metadata/Terrain/Forest/River/forest_river_bank.et",
       "from": 4,
       "path": [],
       "to": 2,
@@ -97,7 +114,7 @@
     },
     {
       "color": "#FF655c58",
-      "edge_type": "ForestLargeCliff",
+      "edge_type": "Metadata/Terrain/Forest/LargeCliffs/forest_large_cliff.et",
       "from": 13,
       "path": [],
       "to": 7,
@@ -110,7 +127,7 @@
       ]
     },
     {
-      "edge_type": "ForestRoad",
+      "edge_type": "Metadata/Terrain/Forest/Road/forest_road.et",
       "from": 1,
       "path": [],
       "to": 8,
@@ -123,7 +140,7 @@
       ]
     },
     {
-      "edge_type": "ForestRiver",
+      "edge_type": "Metadata/Terrain/Forest/River/forest_river.et",
       "from": 15,
       "path": [],
       "to": 9,
@@ -136,7 +153,7 @@
       ]
     },
     {
-      "edge_type": "ImpassableForestChurchWall",
+      "edge_type": "Metadata/Terrain/Forest/ChurchWall/OneSidedChurchWall/impassable_church_wall.et",
       "from": 9,
       "path": [],
       "to": 8,
@@ -149,7 +166,7 @@
       ]
     },
     {
-      "edge_type": "ImpassableForestChurchWall",
+      "edge_type": "Metadata/Terrain/Forest/ChurchWall/OneSidedChurchWall/impassable_church_wall.et",
       "from": 8,
       "path": [],
       "to": 7,
@@ -163,7 +180,7 @@
     },
     {
       "color": "#FF655c58",
-      "edge_type": "ForestLargeCliff",
+      "edge_type": "Metadata/Terrain/Forest/LargeCliffs/forest_large_cliff.et",
       "from": 2,
       "path": [
         [
@@ -189,7 +206,7 @@
       ]
     },
     {
-      "edge_type": "ForestRoad",
+      "edge_type": "Metadata/Terrain/Forest/Road/forest_road.et",
       "from": 17,
       "path": [],
       "to": 11,
@@ -202,7 +219,7 @@
       ]
     },
     {
-      "edge_type": "ForestRiver",
+      "edge_type": "Metadata/Terrain/Forest/River/forest_river.et",
       "from": 4,
       "path": [],
       "to": 12,
@@ -215,7 +232,7 @@
       ]
     },
     {
-      "edge_type": "ForestChurchWall",
+      "edge_type": "Metadata/Terrain/Forest/ChurchWall/forest_church_wall.et",
       "from": 12,
       "path": [],
       "to": 11,
@@ -228,7 +245,7 @@
       ]
     },
     {
-      "edge_type": "ForestChurchWall",
+      "edge_type": "Metadata/Terrain/Forest/ChurchWall/forest_church_wall.et",
       "from": 11,
       "path": [
         [
@@ -247,7 +264,7 @@
     },
     {
       "color": "#FF655c58",
-      "edge_type": "ForestLargeCliff",
+      "edge_type": "Metadata/Terrain/Forest/LargeCliffs/forest_large_cliff.et",
       "from": 10,
       "path": [
         [
@@ -265,7 +282,7 @@
       ]
     },
     {
-      "edge_type": "ForestRoad",
+      "edge_type": "Metadata/Terrain/Forest/Road/forest_road.et",
       "from": 16,
       "path": [],
       "to": 14,
@@ -278,7 +295,7 @@
       ]
     },
     {
-      "edge_type": "ForestRiver",
+      "edge_type": "Metadata/Terrain/Forest/River/forest_river.et",
       "from": 12,
       "path": [],
       "to": 15,
@@ -291,7 +308,7 @@
       ]
     },
     {
-      "edge_type": "ForestChurchWall",
+      "edge_type": "Metadata/Terrain/Forest/ChurchWall/forest_church_wall.et",
       "from": 18,
       "path": [],
       "to": 14,
@@ -304,7 +321,7 @@
       ]
     },
     {
-      "edge_type": "ForestChurchWall",
+      "edge_type": "Metadata/Terrain/Forest/ChurchWall/forest_church_wall.et",
       "from": 14,
       "path": [],
       "to": 13,
@@ -317,7 +334,7 @@
       ]
     },
     {
-      "edge_type": "ForestRoad",
+      "edge_type": "Metadata/Terrain/Forest/Road/forest_road.et",
       "from": 8,
       "path": [],
       "to": 16,
@@ -330,7 +347,7 @@
       ]
     },
     {
-      "edge_type": "ForestRoad",
+      "edge_type": "Metadata/Terrain/Forest/Road/forest_road.et",
       "from": 14,
       "path": [],
       "to": 17,
@@ -343,7 +360,7 @@
       ]
     },
     {
-      "edge_type": "ForestChurchWall",
+      "edge_type": "Metadata/Terrain/Forest/ChurchWall/forest_church_wall.et",
       "from": 15,
       "path": [],
       "to": 18,
@@ -356,7 +373,7 @@
       ]
     },
     {
-      "edge_type": "ForestRoad",
+      "edge_type": "Metadata/Terrain/Forest/Road/forest_road.et",
       "from": 18,
       "path": [],
       "to": 16,
@@ -369,7 +386,7 @@
       ]
     },
     {
-      "edge_type": "ForestRoad",
+      "edge_type": "Metadata/Terrain/Forest/Road/forest_road.et",
       "from": 17,
       "path": [],
       "to": 18,
@@ -382,6 +399,7 @@
       ]
     }
   ],
+  "fill_tiles": [],
   "master": {
     "ChestData": "chests.cht",
     "Critters": "critters.clt",

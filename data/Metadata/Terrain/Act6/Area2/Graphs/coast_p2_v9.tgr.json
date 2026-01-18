@@ -4,20 +4,45 @@
   },
   "edge_count": 24,
   "edge_types": {
-    "BeachCliff": "BeachCliff #FF655c58\nwildcard\nMetadata/Terrain/Beach/LargeCliffs/beach_inside_cliff.gt\n0 3 0 0 0\n",
-    "BeachCliffOcean": "BeachCliffOcean #FF655c58\nMetadata/Terrain/Beach/Shoreline/beach_ocean_deep.gt\nMetadata/Terrain/Beach/LargeCliffs/beach_inside_cliff.gt\n0 3 1\n",
-    "BeachCliffRaised": "BeachCliffRaised #FF8d817c\nwildcard\nMetadata/Terrain/Beach/LargeCliffs/beach_inside_cliff.gt\n0 3 0 0 0\n",
-    "BeachLedge": "BeachLedge #FFa88961\nwildcard\nwildcard\n1 1 0\n",
-    "BeachSandDune": "BeachSandDune #FFb6a27c\nwildcard\nwildcard\n1 3 1\n",
-    "BeachShoreline": "BeachShoreline\nwildcard\nMetadata/Terrain/Beach/Shoreline/beach_ocean_deep.gt\n0 3 1\nvirtual\nMetadata/Terrain/Beach/Shoreline/beach_shoreline_deep.et 0\nMetadata/Terrain/Beach/Shoreline/beach_shoreline_shallow.et 0\n40 40\n",
-    "BeachShorelineDeep": "BeachShorelineDeep #FF1919FF\nMetadata/Terrain/Beach/Shoreline/beach_ocean_shallow.gt\nMetadata/Terrain/Beach/Shoreline/beach_ocean_deep.gt\n0 3 1",
-    "BeachSmallCliffWater": "BeachSmallCliffWater #FF1919FF\nMetadata/Terrain/Beach/Shoreline/beach_ocean_deep.gt\nwildcard\n1 3 1",
-    "ShoreLargeCliffTerrace": "ShoreLargeCliffTerrace\nMetadata/Terrain/Beach/Shoreline/beach_ocean_shallow.gt\nMetadata/Terrain/Beach/LargeCliffs/beach_inside_cliff.gt\n0 3 1\nvirtual\nMetadata/Terrain/Beach/LargeCliffs/beach_large_cliff.et 0\nMetadata/Terrain/Beach/Shoreline/beach_shoreline_shallow.et 1\n70 90\n"
+    "Metadata/Terrain/Beach/LargeCliffs/beach_large_cliff.et": {
+      "color": "#FF655c58",
+      "id": "BeachCliff"
+    },
+    "Metadata/Terrain/Beach/LargeCliffsRaised/beach_large_cliff_raised.et": {
+      "color": "#FF8d817c",
+      "id": "BeachCliffRaised"
+    },
+    "Metadata/Terrain/Beach/LargeCliffsToOcean/beach_large_cliff_ocean.et": {
+      "color": "#FF655c58",
+      "id": "BeachCliffOcean"
+    },
+    "Metadata/Terrain/Beach/SandDunes/beach_sand_dune.et": {
+      "color": "#FFb6a27c",
+      "id": "BeachSandDune"
+    },
+    "Metadata/Terrain/Beach/Shoreline/beach_shoreline.et": {
+      "id": "BeachShoreline"
+    },
+    "Metadata/Terrain/Beach/Shoreline/beach_shoreline_deep.et": {
+      "color": "#FF1919FF",
+      "id": "BeachShorelineDeep"
+    },
+    "Metadata/Terrain/Beach/SmallCliffs/beach_small_cliff.et": {
+      "color": "#FFa88961",
+      "id": "BeachLedge"
+    },
+    "Metadata/Terrain/Beach/SmallCliffsToWater/beach_small_cliff_water.et": {
+      "color": "#FF1919FF",
+      "id": "BeachSmallCliffWater"
+    },
+    "Metadata/Terrain/Beach/TerraceBlocks/shore_lgcliff_terrace.et": {
+      "id": "ShoreLargeCliffTerrace"
+    }
   },
   "edges": [
     {
       "color": "#FF655c58",
-      "edge_type": "BeachCliffOcean",
+      "edge_type": "Metadata/Terrain/Beach/LargeCliffsToOcean/beach_large_cliff_ocean.et",
       "from": 1,
       "path": [],
       "to": 0,
@@ -31,7 +56,7 @@
     },
     {
       "color": "#FF1919FF",
-      "edge_type": "BeachSmallCliffWater",
+      "edge_type": "Metadata/Terrain/Beach/SmallCliffsToWater/beach_small_cliff_water.et",
       "from": 19,
       "path": [],
       "to": 4,
@@ -45,7 +70,7 @@
     },
     {
       "color": "#FF655c58",
-      "edge_type": "BeachCliff",
+      "edge_type": "Metadata/Terrain/Beach/LargeCliffs/beach_large_cliff.et",
       "from": 0,
       "path": [],
       "to": 6,
@@ -59,7 +84,7 @@
     },
     {
       "color": "#FFb6a27c",
-      "edge_type": "BeachSandDune",
+      "edge_type": "Metadata/Terrain/Beach/SandDunes/beach_sand_dune.et",
       "from": 6,
       "path": [],
       "to": 4,
@@ -72,7 +97,7 @@
       ]
     },
     {
-      "edge_type": "BeachShoreline",
+      "edge_type": "Metadata/Terrain/Beach/Shoreline/beach_shoreline.et",
       "from": 4,
       "path": [],
       "to": 0,
@@ -86,7 +111,7 @@
     },
     {
       "color": "#FF8d817c",
-      "edge_type": "BeachCliffRaised",
+      "edge_type": "Metadata/Terrain/Beach/LargeCliffsRaised/beach_large_cliff_raised.et",
       "from": 12,
       "path": [],
       "to": 6,
@@ -99,7 +124,7 @@
       ]
     },
     {
-      "edge_type": "BeachShoreline",
+      "edge_type": "Metadata/Terrain/Beach/Shoreline/beach_shoreline.et",
       "from": 5,
       "path": [],
       "to": 8,
@@ -113,7 +138,7 @@
     },
     {
       "color": "#FFa88961",
-      "edge_type": "BeachLedge",
+      "edge_type": "Metadata/Terrain/Beach/SmallCliffs/beach_small_cliff.et",
       "from": 25,
       "path": [],
       "to": 5,
@@ -127,7 +152,7 @@
     },
     {
       "color": "#FF8d817c",
-      "edge_type": "BeachCliffRaised",
+      "edge_type": "Metadata/Terrain/Beach/LargeCliffsRaised/beach_large_cliff_raised.et",
       "from": 13,
       "path": [],
       "to": 10,
@@ -141,7 +166,7 @@
     },
     {
       "color": "#FF8d817c",
-      "edge_type": "BeachCliffRaised",
+      "edge_type": "Metadata/Terrain/Beach/LargeCliffsRaised/beach_large_cliff_raised.et",
       "from": 7,
       "path": [],
       "to": 11,
@@ -155,7 +180,7 @@
     },
     {
       "color": "#FFa88961",
-      "edge_type": "BeachLedge",
+      "edge_type": "Metadata/Terrain/Beach/SmallCliffs/beach_small_cliff.et",
       "from": 11,
       "path": [],
       "to": 10,
@@ -169,7 +194,7 @@
     },
     {
       "color": "#FFa88961",
-      "edge_type": "BeachLedge",
+      "edge_type": "Metadata/Terrain/Beach/SmallCliffs/beach_small_cliff.et",
       "from": 13,
       "path": [],
       "to": 12,
@@ -183,7 +208,7 @@
     },
     {
       "color": "#FF655c58",
-      "edge_type": "BeachCliffOcean",
+      "edge_type": "Metadata/Terrain/Beach/LargeCliffsToOcean/beach_large_cliff_ocean.et",
       "from": 22,
       "path": [],
       "to": 19,
@@ -197,7 +222,7 @@
     },
     {
       "color": "#FF8d817c",
-      "edge_type": "BeachCliffRaised",
+      "edge_type": "Metadata/Terrain/Beach/LargeCliffsRaised/beach_large_cliff_raised.et",
       "from": 19,
       "path": [],
       "to": 13,
@@ -211,7 +236,7 @@
     },
     {
       "color": "#FF1919FF",
-      "edge_type": "BeachSmallCliffWater",
+      "edge_type": "Metadata/Terrain/Beach/SmallCliffsToWater/beach_small_cliff_water.et",
       "from": 5,
       "path": [],
       "to": 22,
@@ -225,7 +250,7 @@
     },
     {
       "color": "#FF8d817c",
-      "edge_type": "BeachCliffRaised",
+      "edge_type": "Metadata/Terrain/Beach/LargeCliffsRaised/beach_large_cliff_raised.et",
       "from": 22,
       "path": [],
       "to": 10,
@@ -239,7 +264,7 @@
     },
     {
       "color": "#FF8d817c",
-      "edge_type": "BeachCliffRaised",
+      "edge_type": "Metadata/Terrain/Beach/LargeCliffsRaised/beach_large_cliff_raised.et",
       "from": 26,
       "path": [],
       "to": 12,
@@ -253,7 +278,7 @@
     },
     {
       "color": "#FF8d817c",
-      "edge_type": "BeachCliffRaised",
+      "edge_type": "Metadata/Terrain/Beach/LargeCliffsRaised/beach_large_cliff_raised.et",
       "from": 27,
       "path": [],
       "to": 23,
@@ -267,7 +292,7 @@
     },
     {
       "color": "#FFa88961",
-      "edge_type": "BeachLedge",
+      "edge_type": "Metadata/Terrain/Beach/SmallCliffs/beach_small_cliff.et",
       "from": 7,
       "path": [],
       "to": 25,
@@ -281,7 +306,7 @@
     },
     {
       "color": "#FF8d817c",
-      "edge_type": "BeachCliffRaised",
+      "edge_type": "Metadata/Terrain/Beach/LargeCliffsRaised/beach_large_cliff_raised.et",
       "from": 23,
       "path": [],
       "to": 26,
@@ -295,7 +320,7 @@
     },
     {
       "color": "#FF8d817c",
-      "edge_type": "BeachCliffRaised",
+      "edge_type": "Metadata/Terrain/Beach/LargeCliffsRaised/beach_large_cliff_raised.et",
       "from": 11,
       "path": [],
       "to": 27,
@@ -309,7 +334,7 @@
     },
     {
       "color": "#FF655c58",
-      "edge_type": "BeachCliff",
+      "edge_type": "Metadata/Terrain/Beach/LargeCliffs/beach_large_cliff.et",
       "from": 8,
       "path": [],
       "to": 7,
@@ -322,7 +347,7 @@
       ]
     },
     {
-      "edge_type": "ShoreLargeCliffTerrace",
+      "edge_type": "Metadata/Terrain/Beach/TerraceBlocks/shore_lgcliff_terrace.et",
       "from": 2,
       "path": [],
       "to": 8,
@@ -336,7 +361,7 @@
     },
     {
       "color": "#FF1919FF",
-      "edge_type": "BeachShorelineDeep",
+      "edge_type": "Metadata/Terrain/Beach/Shoreline/beach_shoreline_deep.et",
       "from": 8,
       "path": [],
       "to": 3,
@@ -349,6 +374,7 @@
       ]
     }
   ],
+  "fill_tiles": [],
   "master": {
     "ChestData": "chests.cht",
     "Critters": "critters.clt",
@@ -840,6 +866,7 @@
   "room_set": [
     {
       "file": "Metadata/Shrines/beach_01.arm",
+      "room_tag": "shrine",
       "suffix": [
         "I"
       ]
