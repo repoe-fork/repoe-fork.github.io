@@ -1442,6 +1442,170 @@
   },
   {
     "active_skill": {
+      "description": "Une canalisation qui projette une illusion de vous que vous pouvez diriger. Vous gagnez des paliers pendant le déplacement de l'illusion, jusqu'à ce qu'elle atteigne la distance maximale possible. Des pulsations infligeant des dégâts de zone sont libérées le long du trajet, à une fréquence dépendant de votre vitesse d'attaque. Lorsque la canalisation prend fin, vous êtes téléporté jusqu'à l'illusion, infligeant une vague de dégâts finale. Nécessite une arme de mêlée.",
+      "display_name": "Charge fulgurante de la Projection",
+      "id": "charged_dash_alt_x",
+      "is_manually_casted": true,
+      "is_skill_totem": false,
+      "stat_conversions": {
+        "charged_dash_damage_+%": "damage_+%",
+        "charged_dash_movement_speed_+%_final": "skill_code_movement_speed_+%_final",
+        "cast_a_main_hand_socketed_spell_on_channel_with_blade_flurry_or_charged_dash": "trigger_a_main_hand_socketed_spell_on_channel_with_blade_flurry_or_charged_dash",
+        "cast_an_off_hand_socketed_spell_on_channel_with_blade_flurry_or_charged_dash": "trigger_an_off_hand_socketed_spell_on_channel_with_blade_flurry_or_charged_dash",
+        "cast_a_helmet_socketed_spell_on_channel_with_blade_flurry_or_charged_dash": "trigger_helmet_socketed_spell_on_channel_with_blade_flurry_or_charged_dash"
+      },
+      "types": [
+        "Movement",
+        "Area",
+        "Damage",
+        "Channel",
+        "Attack",
+        "Melee",
+        "Lightning"
+      ],
+      "weapon_restrictions": [
+        "Claw",
+        "Dagger",
+        "One Hand Sword",
+        "Thrusting One Hand Sword",
+        "One Hand Axe",
+        "One Hand Mace",
+        "Sceptre",
+        "Staff",
+        "Two Hand Sword",
+        "Two Hand Axe",
+        "Two Hand Mace",
+        "Warstaff",
+        "Rune Dagger"
+      ],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "Charge fulgurante",
+      "experience_type": "GemProgression28",
+      "id": "Metadata/Items/Gems/SkillGemChargedDash",
+      "max_level": 20,
+      "release_state": "released"
+    },
+    "cast_time": 1000,
+    "color": "g",
+    "display_name": "Charge fulgurante de la Projection",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [
+        {
+          "stat": "Les Illusions se déplacent avec un bonus équivalent à {charged_dash_skill_inherent_movement_speed_+%_final}% de votre Vitesse de déplacement",
+          "stats": {
+            "charged_dash_skill_inherent_movement_speed_+%_final": 1000
+          }
+        }
+      ],
+      "stat_requirements": {
+        "int": 0,
+        "str": 0,
+        "dex": null
+      },
+      "stat_text": {
+        "skill_physical_damage_%_to_convert_to_lightning": "50% des Dégâts physiques sont Convertis en Dégâts de foudre",
+        "charged_dash_damage_+%_final_per_stack": "La vague finale a 75% Davantage de Dégâts au Toucher par palier",
+        "charged_dash_channelling_damage_at_full_stacks_+%_final": "Inflige 150% Davantage de Dégâts pendant la Canalisation si l'illusion a fini son déplacement",
+        "charged_dash_skill_inherent_movement_speed_+%_final\nquality_display_chaged_dash_is_gem": "Les Illusions se déplacent à 130% de votre Vitesse de déplacement"
+      },
+      "stats": [
+        {
+          "id": "skill_physical_damage_%_to_convert_to_lightning",
+          "type": "constant",
+          "value": 50
+        },
+        {
+          "id": "charged_dash_damage_+%_final",
+          "type": "constant",
+          "value": -100
+        },
+        {
+          "id": "charged_dash_damage_+%_final_per_stack",
+          "type": "constant",
+          "value": 75
+        },
+        {
+          "id": "charged_dash_channelling_damage_at_full_stacks_+%_final",
+          "type": "constant",
+          "value": 150
+        },
+        {
+          "id": "charged_dash_skill_inherent_movement_speed_+%_final",
+          "type": "constant",
+          "value": 30
+        },
+        {
+          "id": "is_area_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "base_skill_show_average_damage_instead_of_dps",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "skill_can_add_multiple_charges_per_action",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "quality_display_chaged_dash_is_gem",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": 60,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "skill_physical_damage_%_to_convert_to_lightning",
+      "charged_dash_channelling_damage_at_full_stacks_+%_final",
+      "charged_dash_damage_+%_final_per_stack",
+      "charged_dash_skill_inherent_movement_speed_+%_final\nquality_display_chaged_dash_is_gem"
+    ],
+    "tags": [
+      "dexterity",
+      "grants_active_skill",
+      "movement",
+      "area",
+      "channelling",
+      "attack",
+      "lightning",
+      "melee"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": {
+      "act": 3,
+      "classes": [
+        "Duelliste",
+        "Rôdeuse",
+        "Ombre",
+        "Héritière"
+      ],
+      "quest": "Fauchez le Bras droit"
+    },
+    "discriminator": "alt_x",
+    "support_gem": null
+  },
+  {
+    "active_skill": {
       "description": "Une attaque canalisée qui permet de frapper continuellement les ennemis situés dans un cercle face à vous, infligeant des dégâts à l'ennemi ciblé ainsi qu'à ceux situés autour de lui. Tant que la canalisation est maintenue, les dégâts s'accroissent continuellement. Lorsque la canalisation prend fin, vous infligez un coup supplémentaire pour chaque palier qu'elle a atteint. Fonctionne uniquement avec les dagues, griffes ou épées à une main.",
       "display_name": "Déluge de lames",
       "id": "blade_flurry",
@@ -13298,7 +13462,7 @@
   },
   {
     "active_skill": {
-      "description": "Un sort qui crée un mur de glace qui retient les ennemis. Les cibles sous le mur lors de sa formation sont endommagées et projetées en arrière.",
+      "description": "Crée un mur de glace qui retient les ennemis. Les cibles prises sous le mur subissent des dégâts et sont projetées en arrière.",
       "display_name": "Mur de glace",
       "id": "frost_wall",
       "is_manually_casted": true,
@@ -13422,6 +13586,134 @@
     "secondary_granted_effect": null,
     "quest_reward": null,
     "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "Un sort qui crée un mur de glace qui retient les ennemis. Les cibles sous le mur lors de sa formation sont endommagées et projetées en arrière.",
+      "display_name": "Mur de glace de l'Envahissement",
+      "id": "frost_wall_alt_x",
+      "is_manually_casted": true,
+      "is_skill_totem": false,
+      "stat_conversions": {
+        "frost_wall_cooldown_speed_+%": "base_cooldown_speed_+%",
+        "frost_wall_damage_+%": "damage_+%",
+        "frost_wall_duration_+%": "skill_effect_duration_+%"
+      },
+      "types": [
+        "Spell",
+        "Damage",
+        "Duration",
+        "Trappable",
+        "Totemable",
+        "Mineable",
+        "Multicastable",
+        "Triggerable",
+        "Cold",
+        "Cascadable",
+        "Cooldown"
+      ],
+      "weapon_restrictions": [],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "Mur de glace",
+      "experience_type": "GemProgression4",
+      "id": "Metadata/Items/Gems/SkillGemFrostWall",
+      "max_level": 20,
+      "release_state": "released"
+    },
+    "cast_time": 500,
+    "color": "b",
+    "display_name": "Mur de glace de l'Envahissement",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [
+        {
+          "stat": "{base_cooldown_speed_+%}% d'Augmentation de la Vitesse de recharge",
+          "stats": {
+            "base_cooldown_speed_+%": 2000
+          }
+        }
+      ],
+      "stat_requirements": {
+        "int": null,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "wall_expand_delay_ms": "0.15 secondes entre l'apparition de chaque section du mur"
+      },
+      "stats": [
+        {
+          "id": "spell_minimum_base_cold_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "spell_maximum_base_cold_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "wall_expand_delay_ms",
+          "type": "constant",
+          "value": 150
+        },
+        {
+          "id": "base_skill_effect_duration",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "wall_maximum_length",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "base_skill_show_average_damage_instead_of_dps",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "quality_display_wall_length_is_gem",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": 3000,
+      "stored_uses": 3,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "spell_minimum_base_cold_damage\nspell_maximum_base_cold_damage",
+      "base_skill_effect_duration",
+      "wall_expand_delay_ms",
+      "wall_maximum_length\nquality_display_wall_length_is_gem",
+      "base_cooldown_speed_+%"
+    ],
+    "tags": [
+      "intelligence",
+      "grants_active_skill",
+      "spell",
+      "duration",
+      "cold"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": "alt_x",
     "support_gem": null
   },
   {
@@ -13681,7 +13973,7 @@
   },
   {
     "active_skill": {
-      "description": "Un sort qui lance un anneau de foudre autour de vous, suivi par une nova de foudre plus grande. Chaque effet touche les ennemis situés dans sa zone avec des dégâts de foudre.",
+      "description": "Un sort qui lance un anneau de foudre autour de vous, suivi d'une nova de foudre plus grande. Chaque effet touche les ennemis situés dans sa zone avec des dégâts de foudre.",
       "display_name": "Nova d'électricité",
       "id": "shock_nova",
       "is_manually_casted": true,
@@ -13808,6 +14100,132 @@
   {
     "active_skill": {
       "description": "Un sort qui lance un anneau de foudre autour de vous, suivi par une nova de foudre plus grande. Chaque effet touche les ennemis situés dans sa zone avec des dégâts de foudre.",
+      "display_name": "Nova d'électricité de la Procession",
+      "id": "shock_nova_alt_x",
+      "is_manually_casted": true,
+      "is_skill_totem": false,
+      "stat_conversions": {
+        "shock_nova_damage_+%": "damage_+%",
+        "shock_nova_radius_+%": "base_skill_area_of_effect_+%",
+        "shock_nova_and_storm_call_all_damage_can_ignite": "all_damage_can_ignite",
+        "shock_nova_and_storm_call_ignite_damage_+100%_final_chance": "ignite_damage_+100%_final_chance"
+      },
+      "types": [
+        "Spell",
+        "Damage",
+        "Area",
+        "Trappable",
+        "Totemable",
+        "Mineable",
+        "Multicastable",
+        "Triggerable",
+        "Lightning",
+        "CanRapidFire",
+        "AreaSpell",
+        "Nova"
+      ],
+      "weapon_restrictions": [],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "Nova d'électricité",
+      "experience_type": "GemProgression28",
+      "id": "Metadata/Items/Gems/SkillGemShockNova",
+      "max_level": 20,
+      "release_state": "released"
+    },
+    "cast_time": 700,
+    "color": "b",
+    "display_name": "Nova d'électricité de la Procession",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": 600,
+      "damage_effectiveness": 90,
+      "quality_stats": [
+        {
+          "stat": "L'Électrocution a {shock_maximum_magnitude_+}% au maximum de son Effet",
+          "stats": {
+            "shock_maximum_magnitude_+": 500
+          }
+        }
+      ],
+      "stat_requirements": {
+        "int": null,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "shock_nova_ring_chance_to_shock_+%": "L'anneau Électrocute systématiquement",
+        "shock_maximum_magnitude_+": "L'Électrocution a +10% au maximum de son Effet"
+      },
+      "stats": [
+        {
+          "id": "spell_minimum_base_lightning_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "spell_maximum_base_lightning_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "shock_nova_ring_chance_to_shock_+%",
+          "type": "constant",
+          "value": 100
+        },
+        {
+          "id": "shock_maximum_magnitude_+",
+          "type": "constant",
+          "value": 10
+        },
+        {
+          "id": "is_area_damage",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "spell_minimum_base_lightning_damage\nspell_maximum_base_lightning_damage",
+      "shock_maximum_magnitude_+",
+      "shock_nova_ring_chance_to_shock_+%"
+    ],
+    "tags": [
+      "intelligence",
+      "grants_active_skill",
+      "spell",
+      "area",
+      "lightning",
+      "nova"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": {
+      "act": 3,
+      "classes": [
+        "Templier"
+      ],
+      "quest": "Fauchez le Bras droit"
+    },
+    "discriminator": "alt_x",
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "Un sort qui lance un anneau de foudre autour de vous, suivi d'une nova de foudre plus grande. Chaque effet touche les ennemis situés dans sa zone avec des dégâts de foudre.",
       "display_name": "Nova d'électricité",
       "id": "shock_nova",
       "is_manually_casted": true,
@@ -24673,7 +25091,7 @@
   },
   {
     "active_skill": {
-      "description": "Un totem qui fait trembler la terre autour de lui, repoussant et endommageant les ennemis à proximité.",
+      "description": "Un totem qui fait trembler la terre autour de lui, repoussant et infligeant des dégâts aux ennemis à proximité.",
       "display_name": "Totem sismique",
       "id": "shockwave_totem",
       "is_manually_casted": true,
@@ -24818,6 +25236,155 @@
       "quest": "Fauchez le Bras droit"
     },
     "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "Un totem qui fait trembler la terre autour de lui, repoussant et endommageant les ennemis à proximité.",
+      "display_name": "Totem sismique de l'Autorité",
+      "id": "shockwave_totem_alt_x",
+      "is_manually_casted": true,
+      "is_skill_totem": true,
+      "stat_conversions": {
+        "shockwave_totem_cast_speed_+%": "base_cast_speed_+%",
+        "shockwave_totem_radius_+%": "base_skill_area_of_effect_+%",
+        "shockwave_totem_damage_+%": "damage_+%"
+      },
+      "types": [
+        "Spell",
+        "Damage",
+        "Area",
+        "Trappable",
+        "Mineable",
+        "SummonsTotem",
+        "Multicastable",
+        "AreaSpell",
+        "Physical",
+        "Nova"
+      ],
+      "weapon_restrictions": [],
+      "minion_types": null,
+      "skill_totem_life_multiplier": 1.0
+    },
+    "base_item": {
+      "display_name": "Totem sismique",
+      "experience_type": "GemProgression28",
+      "id": "Metadata/Items/Gems/SkillGemShockwaveTotem",
+      "max_level": 20,
+      "release_state": "released"
+    },
+    "cast_time": 600,
+    "color": "r",
+    "display_name": "Totem sismique de l'Autorité",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": 500,
+      "damage_effectiveness": 10,
+      "quality_stats": [
+        {
+          "stat": "{active_skill_base_radius_+/locations_to_metres} mètres de Rayon",
+          "stats": {
+            "active_skill_base_radius_+": 100
+          }
+        }
+      ],
+      "stat_requirements": {
+        "int": 0,
+        "str": null,
+        "dex": 0
+      },
+      "stat_text": {
+        "base_totem_duration": "Les Totems durent 8 secondes",
+        "base_global_chance_to_knockback_%": "25% de chances de Repousser les Ennemis au Toucher",
+        "active_skill_base_area_of_effect_radius": "Le Rayon de base est de 2.4 mètres",
+        "is_totem": "Invoque un Totem en cercle qui utilise cette Aptitude"
+      },
+      "stats": [
+        {
+          "id": "spell_minimum_base_physical_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "spell_maximum_base_physical_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "base_totem_duration",
+          "type": "constant",
+          "value": 8000
+        },
+        {
+          "id": "base_totem_range",
+          "type": "constant",
+          "value": 80
+        },
+        {
+          "id": "base_global_chance_to_knockback_%",
+          "type": "constant",
+          "value": 25
+        },
+        {
+          "id": "active_skill_base_area_of_effect_radius",
+          "type": "constant",
+          "value": 24
+        },
+        {
+          "id": "is_totem",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "is_area_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "base_skill_is_totemified",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "spell_minimum_base_physical_damage\nspell_maximum_base_physical_damage",
+      "base_totem_duration",
+      "base_global_chance_to_knockback_%",
+      "is_totem",
+      "active_skill_base_radius_+",
+      "active_skill_base_area_of_effect_radius"
+    ],
+    "tags": [
+      "totem",
+      "strength",
+      "grants_active_skill",
+      "spell",
+      "area",
+      "physical",
+      "nova"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": {
+      "act": 3,
+      "classes": [
+        "Templier"
+      ],
+      "quest": "Fauchez le Bras droit"
+    },
+    "discriminator": "alt_x",
     "support_gem": null
   },
   {
@@ -27807,6 +28374,176 @@
   },
   {
     "active_skill": {
+      "description": "Un projectile glacial qui explose à l'impact ou en atteignant l'emplacement ciblé, infligeant des dégâts de zone et créant une zone frigorifiante qui inflige des dégâts de froid sur la durée. Cette zone se déplace en direction des ennemis à proximité jusqu'à ce que sa durée expire.",
+      "display_name": "Givre dévorant des Banquises",
+      "id": "creeping_frost_alt_x",
+      "is_manually_casted": true,
+      "is_skill_totem": false,
+      "stat_conversions": {
+        "arctic_breath_damage_+%": "damage_+%",
+        "arctic_breath_duration_+%": "skill_effect_duration_+%",
+        "arctic_breath_radius_+%": "base_skill_area_of_effect_+%",
+        "arctic_breath_chilling_area_movement_velocity_+%": "chilling_area_movement_velocity_+%",
+        "creeping_frost_cold_snap_chance_to_sap_%_vs_enemies_in_chilling_areas": "chance_to_sap_%_vs_enemies_in_chilling_areas",
+        "creeping_frost_cold_snap_all_damage_can_sap": "all_damage_can_sap"
+      },
+      "types": [
+        "Spell",
+        "Projectile",
+        "ProjectilesFromUser",
+        "Damage",
+        "Trappable",
+        "Totemable",
+        "Mineable",
+        "Duration",
+        "Area",
+        "Multicastable",
+        "Triggerable",
+        "Cold",
+        "ChillingArea",
+        "CanRapidFire",
+        "AreaSpell"
+      ],
+      "weapon_restrictions": [],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "Givre dévorant",
+      "experience_type": "GemProgression12",
+      "id": "Metadata/Items/Gems/SkillGemArcticBreath",
+      "max_level": 20,
+      "release_state": "released"
+    },
+    "cast_time": 600,
+    "color": "b",
+    "display_name": "Givre dévorant des Banquises",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": 600,
+      "damage_effectiveness": 20,
+      "quality_stats": [
+        {
+          "stat": "{active_skill_base_radius_+/locations_to_metres} mètres de Rayon",
+          "stats": {
+            "active_skill_base_radius_+": 100
+          }
+        }
+      ],
+      "stat_requirements": {
+        "int": null,
+        "str": 0,
+        "dex": null
+      },
+      "stat_text": {
+        "arctic_breath_maximum_number_of_skulls_allowed": "Vous pouvez avoir jusqu'à 10 Zones frigorifiantes",
+        "base_skill_effect_duration": "La Durée de base est de 5.00 secondes",
+        "active_skill_base_area_of_effect_radius": "Le Rayon de base est de 1.5 mètres",
+        "active_skill_base_secondary_area_of_effect_radius": "Le Rayon secondaire de base est de 1.8 mètres",
+        "spell_damage_modifiers_apply_to_skill_dot": "Les Modificateurs aux Dégâts des Sorts s'appliquent aux Dégâts sur la durée de cette Aptitude"
+      },
+      "stats": [
+        {
+          "id": "spell_minimum_base_cold_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "spell_maximum_base_cold_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "base_cold_damage_to_deal_per_minute",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "arctic_breath_maximum_number_of_skulls_allowed",
+          "type": "constant",
+          "value": 10
+        },
+        {
+          "id": "total_projectile_spread_angle_override",
+          "type": "constant",
+          "value": 200
+        },
+        {
+          "id": "active_skill_projectile_speed_+%_variation_final",
+          "type": "constant",
+          "value": 60
+        },
+        {
+          "id": "base_skill_effect_duration",
+          "type": "constant",
+          "value": 5000
+        },
+        {
+          "id": "active_skill_base_area_of_effect_radius",
+          "type": "constant",
+          "value": 15
+        },
+        {
+          "id": "active_skill_base_secondary_area_of_effect_radius",
+          "type": "constant",
+          "value": 18
+        },
+        {
+          "id": "spell_damage_modifiers_apply_to_skill_dot",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "base_is_projectile",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "spell_minimum_base_cold_damage\nspell_maximum_base_cold_damage",
+      "base_skill_effect_duration",
+      "base_cold_damage_to_deal_per_minute",
+      "spell_damage_modifiers_apply_to_skill_dot",
+      "active_skill_base_radius_+",
+      "active_skill_base_area_of_effect_radius",
+      "active_skill_base_secondary_area_of_effect_radius",
+      "arctic_breath_maximum_number_of_skulls_allowed"
+    ],
+    "tags": [
+      "intelligence",
+      "grants_active_skill",
+      "spell",
+      "projectile",
+      "duration",
+      "area",
+      "cold"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": {
+      "act": 1,
+      "classes": [
+        "Sorcière"
+      ],
+      "quest": "La Cadence de la Sirène"
+    },
+    "discriminator": "alt_x",
+    "support_gem": null
+  },
+  {
+    "active_skill": {
       "description": "Un arc électrique qui s'étend du lanceur à l'ennemi ciblé puis ricoche vers d'autres ennemis. Ne peut ricocher immédiatement vers la dernière cible touchée. Chaque ricochet de l'arc électrique entraîne un arc électrique secondaire qui ricoche vers un autre ennemi que l'arc principal n'a pas déjà touché, cet arc secondaire ne peut ricocher davantage.",
       "display_name": "Arc électrique",
       "id": "arc",
@@ -30585,6 +31322,167 @@
   },
   {
     "active_skill": {
+      "description": "Une canalisation qui déchaîne des orbes d'énergie. Ces orbes se ruent à l'endroit ciblé et infligent des dégâts dans une petite zone autour d'eux à chaque déplacement, jusqu'à la fin de leur durée. Lorsque vous cessez de canaliser ce sort, tous les orbes restants explosent et infligent des dégâts plus importants dans une zone plus grande.",
+      "display_name": "Éclats de foudre de la Répulsion",
+      "id": "storm_burst_new_alt_x",
+      "is_manually_casted": true,
+      "is_skill_totem": false,
+      "stat_conversions": {
+        "storm_burst_avoid_interruption_while_casting_%": "avoid_interruption_while_casting_%",
+        "storm_burst_area_of_effect_+%": "base_skill_area_of_effect_+%",
+        "storm_burst_damage_+%": "damage_+%",
+        "cast_gravity_sphere_on_cast_from_storm_burst_or_divine_ire": "trigger_level_20_gravity_sphere_on_cast"
+      },
+      "types": [
+        "Spell",
+        "Damage",
+        "Totemable",
+        "Lightning",
+        "Channel",
+        "Area",
+        "Duration",
+        "AreaSpell",
+        "Physical"
+      ],
+      "weapon_restrictions": [],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "Éclats de foudre",
+      "experience_type": "GemProgression12",
+      "id": "Metadata/Items/Gems/SkillGemStormBurst",
+      "max_level": 20,
+      "release_state": "released"
+    },
+    "cast_time": 200,
+    "color": "b",
+    "display_name": "Éclats de foudre de la Répulsion",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": 600,
+      "damage_effectiveness": -65,
+      "quality_stats": [
+        {
+          "stat": "La Durée de base est de {base_skill_effect_duration/milliseconds_to_seconds_2dp} secondes",
+          "stats": {
+            "base_skill_effect_duration": 20000
+          }
+        }
+      ],
+      "stat_requirements": {
+        "int": null,
+        "str": null,
+        "dex": 0
+      },
+      "stat_text": {
+        "storm_burst_new_damage_+%_final_per_remaining_teleport_zap": "Les Orbes explosifs infligent 75% des Dégâts de l'Aptitude toutes les 0.4 secondes de Durée restante",
+        "skill_physical_damage_%_to_convert_to_lightning": "50% des Dégâts physiques sont Convertis en Dégâts de foudre",
+        "display_storm_burst_jump_time_ms": "Les Orbes rebondissent toutes les 0.4 secondes",
+        "base_skill_effect_duration": "La Durée de base est de 1.20 secondes"
+      },
+      "stats": [
+        {
+          "id": "spell_minimum_base_physical_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "spell_maximum_base_physical_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "storm_burst_new_damage_+%_final_per_remaining_teleport_zap",
+          "type": "constant",
+          "value": 75
+        },
+        {
+          "id": "skill_physical_damage_%_to_convert_to_lightning",
+          "type": "constant",
+          "value": 50
+        },
+        {
+          "id": "shock_art_variation",
+          "type": "constant",
+          "value": 2
+        },
+        {
+          "id": "display_storm_burst_jump_time_ms",
+          "type": "constant",
+          "value": 400
+        },
+        {
+          "id": "base_skill_effect_duration",
+          "type": "constant",
+          "value": 1200
+        },
+        {
+          "id": "active_skill_base_radius_+",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "visual_hit_effect_elemental_is_holy",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "is_area_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "skill_can_add_multiple_charges_per_action",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "spell_minimum_base_physical_damage\nspell_maximum_base_physical_damage",
+      "skill_physical_damage_%_to_convert_to_lightning",
+      "base_skill_effect_duration",
+      "base_skill_effect_duration\nquality_display_base_duration_is_quality",
+      "display_storm_burst_jump_time_ms",
+      "storm_burst_new_damage_+%_final_per_remaining_teleport_zap"
+    ],
+    "tags": [
+      "area",
+      "intelligence",
+      "grants_active_skill",
+      "spell",
+      "lightning",
+      "channelling",
+      "duration",
+      "physical"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": {
+      "act": 1,
+      "classes": [
+        "Templier",
+        "Héritière"
+      ],
+      "quest": "La Cadence de la Sirène"
+    },
+    "discriminator": "alt_x",
+    "support_gem": null
+  },
+  {
+    "active_skill": {
       "description": "Un torrent de feu qui déferle depuis votre main et inflige des dégâts de façon répétée. Plus vous maintenez le sort, plus les flammes s'étendront vers l'avant et sur les côtés. Lorsque vous cessez la canalisation, vous libérez une vague qui inflige des dégâts de feu sur une grande zone et applique un puissant Embrasement.",
       "display_name": "Incinération",
       "id": "incinerate",
@@ -31768,7 +32666,7 @@
       "letter": "k",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "Modifie les sorts et les répète lors de l'incantation. Ne fonctionne pas avec les aptitudes vaal, de totem, canalisées, déclenchées,instantanées, de riposte, de transfert et de réservation.",
+      "support_text": "Modifie les aptitudes de sort, les faisant se répéter lors de leur incantation. Ne peut pas modifier les aptitudes vaal, de totem, de canalisation, déclenchées, instantanées, de riposte, de transfert, ni les aptitudes ayant une réservation.",
       "excluded_types": [
         "SummonsTotem",
         "Trapped",
@@ -32111,6 +33009,143 @@
       "quest": "La Cadence de la Sirène"
     },
     "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "Un totem qui crée un lien de feu entre vous et tous les totems qui sont sous votre contrôle. Le lien inflige des dégâts de brûlure aux ennemis qui le touchent. Les ennemis situés à l'une ou l'autre des extrémités du lien subissent également des dégâts de brûlure.",
+      "display_name": "Lien ardent de la Détonation",
+      "id": "searing_bond_alt_x",
+      "is_manually_casted": true,
+      "is_skill_totem": true,
+      "stat_conversions": {
+        "searing_bond_damage_+%": "damage_+%",
+        "searing_bond_totem_placement_speed_+%": "summon_totem_cast_speed_+%",
+        "searing_totem_elemental_resistance_+%": "totem_elemental_resistance_%",
+        "number_of_additional_searing_bond_totems_allowed": "number_of_additional_totems_allowed"
+      },
+      "types": [
+        "Spell",
+        "DamageOverTime",
+        "Trappable",
+        "Mineable",
+        "TotemCastsAlone",
+        "CausesBurning",
+        "SummonsTotem",
+        "Triggerable",
+        "Fire",
+        "DegenOnlySpellDamage"
+      ],
+      "weapon_restrictions": [],
+      "minion_types": null,
+      "skill_totem_life_multiplier": 1.0
+    },
+    "base_item": {
+      "display_name": "Lien ardent",
+      "experience_type": "GemProgression12",
+      "id": "Metadata/Items/Gems/SkillGemSearingBond",
+      "max_level": 20,
+      "release_state": "released"
+    },
+    "cast_time": 1000,
+    "color": "r",
+    "display_name": "Lien ardent de la Détonation",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [
+        {
+          "stat": "{number_of_additional_totems_allowed} au nombre maximum de Totems Invoqués",
+          "stats": {
+            "number_of_additional_totems_allowed": 100
+          }
+        }
+      ],
+      "stat_requirements": {
+        "int": null,
+        "str": null,
+        "dex": 0
+      },
+      "stat_text": {
+        "base_totem_duration": "Les Totems durent 8 secondes",
+        "number_of_additional_totems_allowed": "+1 au nombre maximum de Totems Invoqués",
+        "is_totem": "Invoque un Totem en cercle qui utilise cette Aptitude",
+        "spell_damage_modifiers_apply_to_skill_dot": "Les Modificateurs aux Dégâts des Sorts s'appliquent aux Dégâts sur la durée de cette Aptitude"
+      },
+      "stats": [
+        {
+          "id": "base_fire_damage_to_deal_per_minute",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "base_totem_duration",
+          "type": "constant",
+          "value": 8000
+        },
+        {
+          "id": "base_totem_range",
+          "type": "constant",
+          "value": 100
+        },
+        {
+          "id": "number_of_additional_totems_allowed",
+          "type": "constant",
+          "value": 1
+        },
+        {
+          "id": "is_totem",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "base_skill_is_totemified",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "spell_damage_modifiers_apply_to_skill_dot",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "number_of_additional_totems_allowed",
+      "base_totem_duration",
+      "base_fire_damage_to_deal_per_minute",
+      "spell_damage_modifiers_apply_to_skill_dot",
+      "is_totem"
+    ],
+    "tags": [
+      "strength",
+      "grants_active_skill",
+      "spell",
+      "totem",
+      "fire"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": {
+      "act": 1,
+      "classes": [
+        "Templier"
+      ],
+      "quest": "La Cadence de la Sirène"
+    },
+    "discriminator": "alt_x",
     "support_gem": null
   },
   {
@@ -45513,7 +46548,7 @@
   },
   {
     "active_skill": {
-      "description": "Attaque avec une arme de mêlée et emmagasine de l'énergie statique si vous touchez un ennemi. Tant que vous avez de l'énergie statique, vous dégagez fréquemment des rayons électriques qui touchent un certain nombre d'ennemis à proximité, infligeant des dégâts d'attaque.",
+      "description": "Une attaque avec une arme de mêlée qui vous confère de l'énergie statique pendant une certaine durée si vous touchez un ennemi. Tant que vous avez de l'énergie statique, vous frappez fréquemment un certain nombre d'ennemis à proximité avec des rayons électriques, infligeant des dégâts d'attaque.",
       "display_name": "Frappe électrique",
       "id": "static_strike",
       "is_manually_casted": true,
@@ -45663,6 +46698,160 @@
       "quest": "La Cadence de la Sirène"
     },
     "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "Attaque avec une arme de mêlée et emmagasine de l'énergie statique si vous touchez un ennemi. Tant que vous avez de l'énergie statique, vous dégagez fréquemment des rayons électriques qui touchent un certain nombre d'ennemis à proximité, infligeant des dégâts d'attaque.",
+      "display_name": "Frappe électrique de l'Amoncellement de foudre",
+      "id": "static_strike_alt_x",
+      "is_manually_casted": true,
+      "is_skill_totem": false,
+      "stat_conversions": {
+        "static_strike_damage_+%": "damage_+%",
+        "static_strike_duration_+%": "skill_effect_duration_+%",
+        "static_strike_radius_+%": "base_skill_area_of_effect_+%",
+        "static_strike_additional_number_of_beam_targets": "static_strike_number_of_beam_targets",
+        "smite_static_strike_killing_blow_consumes_corpse_restore_%_life": "killing_blow_consumes_corpse_restore_%_life"
+      },
+      "types": [
+        "Attack",
+        "MeleeSingleTarget",
+        "Multistrikeable",
+        "Melee",
+        "Area",
+        "Duration",
+        "Lightning",
+        "Chains"
+      ],
+      "weapon_restrictions": [
+        "Claw",
+        "Dagger",
+        "One Hand Sword",
+        "Thrusting One Hand Sword",
+        "One Hand Axe",
+        "One Hand Mace",
+        "Sceptre",
+        "Staff",
+        "Two Hand Sword",
+        "Two Hand Axe",
+        "Two Hand Mace",
+        "Warstaff",
+        "Rune Dagger"
+      ],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "Frappe électrique",
+      "experience_type": "GemProgression12",
+      "id": "Metadata/Items/Gems/SkillGemStaticStrike",
+      "max_level": 20,
+      "release_state": "released"
+    },
+    "cast_time": 1000,
+    "color": "r",
+    "display_name": "Frappe électrique de l'Amoncellement de foudre",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [
+        {
+          "stat": "{static_strike_zap_speed_+%}% d'Augmentation de la fréquence du Rayon",
+          "stats": {
+            "static_strike_zap_speed_+%": 1000
+          }
+        }
+      ],
+      "stat_requirements": {
+        "int": null,
+        "str": null,
+        "dex": 0
+      },
+      "stat_text": {
+        "skill_physical_damage_%_to_convert_to_lightning": "50% des Dégâts physiques sont Convertis en Dégâts de foudre",
+        "number_of_chains": "Ricoche +1 fois",
+        "static_strike_beam_damage_+%_final": "Les Rayons électriques ont 40% de Perte de Dégâts",
+        "base_skill_effect_duration": "La Durée de base est de 3.00 secondes"
+      },
+      "stats": [
+        {
+          "id": "skill_physical_damage_%_to_convert_to_lightning",
+          "type": "constant",
+          "value": 50
+        },
+        {
+          "id": "number_of_chains",
+          "type": "constant",
+          "value": 1
+        },
+        {
+          "id": "static_strike_beam_damage_+%_final",
+          "type": "constant",
+          "value": -40
+        },
+        {
+          "id": "base_skill_effect_duration",
+          "type": "constant",
+          "value": 3000
+        },
+        {
+          "id": "static_strike_base_zap_frequency_ms",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "static_strike_number_of_beam_targets",
+          "type": "additional",
+          "value": null
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "skill_physical_damage_%_to_convert_to_lightning",
+      "base_skill_effect_duration",
+      "static_strike_base_zap_frequency_ms",
+      "static_strike_zap_speed_+%",
+      "number_of_chains",
+      "static_strike_beam_damage_+%_final",
+      "static_strike_number_of_beam_targets"
+    ],
+    "tags": [
+      "strength",
+      "grants_active_skill",
+      "attack",
+      "melee",
+      "strike",
+      "area",
+      "duration",
+      "lightning",
+      "chaining"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": {
+      "act": 1,
+      "classes": [
+        "Templier",
+        "Maraudeur",
+        "Héritière",
+        "Templier"
+      ],
+      "quest": "La Cadence de la Sirène"
+    },
+    "discriminator": "alt_x",
     "support_gem": null
   },
   {
@@ -53755,7 +54944,7 @@
   },
   {
     "active_skill": {
-      "description": "Crée une boule de foudre qui envoie des décharges électriques sur les ennemis dans sa zone d'effet. Ces décharges peuvent se scinder et également toucher d'autres ennemis. Les modificateurs à la vitesse d'incantation augmentent la fréquence des décharges électriques. L'Orbe des orages sera remplacé si vous en lancez un autre.",
+      "description": "Crée un orbe électrique stationnaire qui frappe les ennemis dans sa zone d'effet avec des rayons de foudre, lesquels peuvent ensuite se diviser pour toucher davantage d'ennemis. Les modificateurs affectant la vitesse d'incantation augmentent la fréquence des rayons de foudre. Relancer cette aptitude remplace l'orbe précédent.",
       "display_name": "Orbe des orages",
       "id": "orb_of_storms",
       "is_manually_casted": true,
@@ -53896,6 +55085,151 @@
       "quest": "Marcher sur des œufs"
     },
     "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "Crée une boule de foudre qui envoie des décharges électriques sur les ennemis dans sa zone d'effet. Ces décharges peuvent se scinder et également toucher d'autres ennemis. Les modificateurs à la vitesse d'incantation augmentent la fréquence des décharges électriques. L'Orbe des orages sera remplacé si vous en lancez un autre.",
+      "display_name": "Orbes des orages des Bourrasques",
+      "id": "orb_of_storms_alt_x",
+      "is_manually_casted": true,
+      "is_skill_totem": false,
+      "stat_conversions": {
+        "orb_of_storms_damage_+%": "damage_+%",
+        "storm_cloud_critical_strike_chance_+%": "critical_strike_chance_+%",
+        "storm_cloud_radius_+%": "base_skill_area_of_effect_+%",
+        "orb_of_storms_cast_speed_+%": "base_cast_speed_+%"
+      },
+      "types": [
+        "Spell",
+        "Damage",
+        "Lightning",
+        "Area",
+        "Chains",
+        "Triggerable",
+        "Trappable",
+        "Mineable",
+        "Totemable",
+        "AreaSpell",
+        "Cooldown",
+        "Orb"
+      ],
+      "weapon_restrictions": [],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "Orbe des orages",
+      "experience_type": "GemProgression4",
+      "id": "Metadata/Items/Gems/SkillGemOrbOfStorms",
+      "max_level": 20,
+      "release_state": "released"
+    },
+    "cast_time": 500,
+    "color": "b",
+    "display_name": "Orbes des orages des Bourrasques",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": 500,
+      "damage_effectiveness": 10,
+      "quality_stats": [
+        {
+          "stat": "Les Projectiles se Divisent en direction de {projectile_number_to_split} cibles",
+          "stats": {
+            "projectile_number_to_split": 100
+          }
+        }
+      ],
+      "stat_requirements": {
+        "int": null,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "projectile_number_to_split": "Les Projectiles se Divisent en direction de 3 cibles",
+        "orb_of_storms_base_channelling_bolt_frequency_ms": "Tire toutes les 0.50 secondes tant que vous Canalisez une Aptitude de foudre près de l'Orbe"
+      },
+      "stats": [
+        {
+          "id": "spell_minimum_base_lightning_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "spell_maximum_base_lightning_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "projectile_number_to_split",
+          "type": "constant",
+          "value": 3
+        },
+        {
+          "id": "orb_of_storms_base_channelling_bolt_frequency_ms",
+          "type": "constant",
+          "value": 500
+        },
+        {
+          "id": "orb_of_storms_maximum_number_of_hits",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "orb_of_storms_base_bolt_frequency_ms",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "skill_can_add_multiple_charges_per_action",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "damage_cannot_be_reflected_or_leech_if_used_by_other_object",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": 500,
+      "stored_uses": 1,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "spell_minimum_base_lightning_damage\nspell_maximum_base_lightning_damage",
+      "orb_of_storms_base_bolt_frequency_ms",
+      "orb_of_storms_base_channelling_bolt_frequency_ms",
+      "projectile_number_to_split",
+      "orb_of_storms_maximum_number_of_hits"
+    ],
+    "tags": [
+      "lightning",
+      "intelligence",
+      "grants_active_skill",
+      "spell",
+      "area",
+      "chaining",
+      "orb"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": {
+      "act": 1,
+      "classes": [
+        "Sorcière",
+        "Ombre"
+      ],
+      "quest": "Marcher sur des œufs"
+    },
+    "discriminator": "alt_x",
     "support_gem": null
   },
   {
@@ -62304,7 +63638,7 @@
       "letter": "p",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "Modifie les aptitudes qui sont des sorts et qui ont un effet s'appliquant dans une zone autour de l'emplacement ciblé. Ne peut modifier les aptitudes vaal, les aptitudes de Créatures ou les aptitudes utilisées par les totems, pièges et mines.",
+      "support_text": "Modifie les aptitudes de sort ayant un effet qui s'applique dans une zone autour de l'emplacement ciblé. Ne peut modifier les aptitudes vaal ni les aptitudes utilisées par les totems, pièges ou mines. Ne peut pas modifier les aptitudes des créatures.",
       "excluded_types": [
         "SummonsTotem",
         "Trapped",
@@ -62404,7 +63738,7 @@
       "letter": "A",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "Modifie les aptitudes de frappe de mêlée, leur permettant d'attaquer simultanément des cibles supplémentaires tant qu'elles ne sont pas trop éloignées de l'utilisateur. Les aptitudes d'attaque de créatures modifiées par cette gemme ne permettront pas aux créatures d'attaquer des cibles supplémentaires. Cette gemme ne peut pas modifier les aptitudes vaal ni celles à déclenchement.",
+      "support_text": "Modifie les aptitudes de frappe de mêlée, leur permettant de frapper simultanément des cibles supplémentaires. Les cibles supplémentaires doivent se trouver à une distance minimale de l'utilisateur. Si cette gemme modifie une aptitude d'attaque de créature, les aptitudes de la créature ne frapperont pas de cibles supplémentaires. Ne peut pas modifier les aptitudes vaal ni les aptitudes déclenchées.",
       "excluded_types": [
         "InbuiltTrigger",
         "Triggered",
@@ -63618,6 +64952,177 @@
   },
   {
     "active_skill": {
+      "description": "Jette un piège qui envoie un effet néfaste sous forme de rayons débilitants en direction d'un certain nombre d'ennemis à proximité, pendant une certaine durée. Ces rayons frigorifient les ennemis tout en leur infligeant des dégâts de froid sur la durée. Le piège envoie également un rayon dans votre direction qui vous octroie de la régénération de vie et de mana en fonction du nombre de rayons débilitants qui affectent les ennemis.",
+      "display_name": "Piège siphonnant de la Douleur",
+      "id": "siphoning_trap_alt_x",
+      "is_manually_casted": true,
+      "is_skill_totem": false,
+      "stat_conversions": {
+        "ice_siphon_trap_damage_+%": "damage_+%",
+        "ice_siphon_trap_duration_+%": "skill_effect_duration_+%",
+        "ice_siphon_trap_chill_effect_+%": "chill_effect_+%",
+        "ice_siphon_trap_damage_taken_+%_per_beam": "skill_damage_taken_+%_per_affected_enemy"
+      },
+      "types": [
+        "Spell",
+        "Duration",
+        "Mineable",
+        "Area",
+        "Trapped",
+        "Cold",
+        "DamageOverTime",
+        "DegenOnlySpellDamage",
+        "NonHitChill",
+        "ElementalStatus",
+        "AreaSpell",
+        "Cooldown"
+      ],
+      "weapon_restrictions": [],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "Piège siphonnant",
+      "experience_type": "GemProgression10",
+      "id": "Metadata/Items/Gems/SkillGemIceSiphonTrap",
+      "max_level": 20,
+      "release_state": "released"
+    },
+    "cast_time": 1000,
+    "color": "b",
+    "display_name": "Piège siphonnant de la Douleur",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [
+        {
+          "stat": "",
+          "stats": {
+            "ice_siphon_trap_max_beam_targets": 200
+          }
+        }
+      ],
+      "stat_requirements": {
+        "int": null,
+        "str": 0,
+        "dex": null
+      },
+      "stat_text": {
+        "base_trap_duration\nquality_display_trap_duration_is_gem": "Le Piège dure 4 secondes",
+        "base_skill_effect_duration": "La Durée de base est de 3.00 secondes",
+        "is_trap": "",
+        "spell_damage_modifiers_apply_to_skill_dot": "Les Modificateurs aux Dégâts des Sorts s'appliquent aux Dégâts sur la durée de cette Aptitude"
+      },
+      "stats": [
+        {
+          "id": "base_cold_damage_to_deal_per_minute",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "base_trap_duration",
+          "type": "constant",
+          "value": 4000
+        },
+        {
+          "id": "base_skill_effect_duration",
+          "type": "constant",
+          "value": 3000
+        },
+        {
+          "id": "ice_siphon_trap_max_beam_targets",
+          "type": "constant",
+          "value": 10
+        },
+        {
+          "id": "skill_life_regeneration_per_minute_per_affected_enemy",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "skill_mana_regeneration_per_minute_per_affected_enemy",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "skill_life_regeneration_per_minute_with_at_least_1_affected_enemy",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "skill_mana_regeneration_per_minute_with_at_least_1_affected_enemy",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "base_skill_is_trapped",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "is_trap",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "spell_damage_modifiers_apply_to_skill_dot",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "quality_display_ice_siphon_trap_is_gem",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "quality_display_trap_duration_is_gem",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": 4000,
+      "stored_uses": 1,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "base_trap_duration\nquality_display_trap_duration_is_gem",
+      "base_skill_effect_duration",
+      "base_cold_damage_to_deal_per_minute",
+      "spell_damage_modifiers_apply_to_skill_dot",
+      "is_trap"
+    ],
+    "tags": [
+      "trap",
+      "intelligence",
+      "grants_active_skill",
+      "spell",
+      "duration",
+      "area",
+      "cold"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": {
+      "act": 1,
+      "classes": [
+        "Ombre"
+      ],
+      "quest": "La Brute en cage"
+    },
+    "discriminator": "alt_x",
+    "support_gem": null
+  },
+  {
+    "active_skill": {
       "description": "Jette un piège qui crache des flammes autour de lui lorsqu'il est déclenché. Le piège tourne ensuite sur lui-même, déplaçant les flammes de manière circulaire en infligeant des dégâts de manière répétée. Les ennemis qui brûlent subissent davantage de dégâts.",
       "display_name": "Piège lance-flammes",
       "id": "flamethrower_trap",
@@ -63779,6 +65284,171 @@
       "quest": "Fauchez le Bras droit"
     },
     "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "Jette un piège qui crache des flammes autour de lui lorsqu'il est déclenché. Le piège tourne ensuite sur lui-même, déplaçant les flammes de manière circulaire en infligeant des dégâts de manière répétée. Les ennemis qui brûlent subissent davantage de dégâts.",
+      "display_name": "Piège lance-flammes de la Stabilité",
+      "id": "flamethrower_trap_alt_x",
+      "is_manually_casted": true,
+      "is_skill_totem": false,
+      "stat_conversions": {
+        "flamethrower_tower_trap_damage_+%": "damage_+%",
+        "flamethrower_tower_trap_cooldown_speed_+%": "base_cooldown_speed_+%",
+        "flamethrower_tower_trap_duration_+%": "skill_effect_duration_+%",
+        "flamethrower_tower_trap_cast_speed_+%": "base_cast_speed_+%",
+        "flamethrower_tower_trap_number_of_additional_flamethrowers": "flamethrower_tower_trap_number_of_flamethrowers",
+        "flamethrower_tower_trap_throwing_speed_+%": "trap_throwing_speed_+%",
+        "flamethrower_seismic_lightning_spire_trap_skill_added_cooldown_count": "trap_skill_added_cooldown_count",
+        "flamethrower_seismic_lightning_spire_trap_base_cooldown_speed_+%": "base_cooldown_speed_+%"
+      },
+      "types": [
+        "Spell",
+        "Duration",
+        "Damage",
+        "Mineable",
+        "Area",
+        "Trapped",
+        "Fire",
+        "AreaSpell",
+        "Cooldown"
+      ],
+      "weapon_restrictions": [],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "Piège lance-flammes",
+      "experience_type": "GemProgression28",
+      "id": "Metadata/Items/Gems/SkillGemFlamethrowerTrap",
+      "max_level": 20,
+      "release_state": "released"
+    },
+    "cast_time": 1000,
+    "color": "g",
+    "display_name": "Piège lance-flammes de la Stabilité",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": 500,
+      "damage_effectiveness": -70,
+      "quality_stats": [
+        {
+          "stat": "{base_cooldown_speed_+%}% d'Augmentation de la Vitesse de recharge",
+          "stats": {
+            "base_cooldown_speed_+%": 1000
+          }
+        }
+      ],
+      "stat_requirements": {
+        "int": null,
+        "str": 0,
+        "dex": null
+      },
+      "stat_text": {
+        "base_trap_duration\nquality_display_trap_duration_is_gem": "Le Piège dure 4 secondes",
+        "base_skill_effect_duration": "La Durée de base est de 3.50 secondes",
+        "flamethrower_trap_damage_+%_final_vs_burning_enemies": "25% Davantage de Dégâts au Toucher et avec les Altérations contre les Ennemis qui Brûlent",
+        "flamethrower_tower_trap_number_of_flamethrowers": "Génère 4 flammes",
+        "is_trap": ""
+      },
+      "stats": [
+        {
+          "id": "spell_minimum_base_fire_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "spell_maximum_base_fire_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "base_trap_duration",
+          "type": "constant",
+          "value": 4000
+        },
+        {
+          "id": "base_skill_effect_duration",
+          "type": "constant",
+          "value": 3500
+        },
+        {
+          "id": "flamethrower_trap_damage_+%_final_vs_burning_enemies",
+          "type": "constant",
+          "value": 25
+        },
+        {
+          "id": "flamethrower_tower_trap_number_of_flamethrowers",
+          "type": "constant",
+          "value": 4
+        },
+        {
+          "id": "is_area_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "base_skill_is_trapped",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "base_skill_show_average_damage_instead_of_dps",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "is_trap",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "quality_display_trap_duration_is_gem",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": 8000,
+      "stored_uses": 3,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "base_trap_duration\nquality_display_trap_duration_is_gem",
+      "base_skill_effect_duration",
+      "spell_minimum_base_fire_damage\nspell_maximum_base_fire_damage",
+      "is_trap",
+      "base_cooldown_speed_+%",
+      "flamethrower_tower_trap_number_of_flamethrowers",
+      "flamethrower_trap_damage_+%_final_vs_burning_enemies"
+    ],
+    "tags": [
+      "trap",
+      "dexterity",
+      "grants_active_skill",
+      "spell",
+      "duration",
+      "area",
+      "fire"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": {
+      "act": 3,
+      "classes": [
+        "Ombre"
+      ],
+      "quest": "Fauchez le Bras droit"
+    },
+    "discriminator": "alt_x",
     "support_gem": null
   },
   {
@@ -72178,7 +73848,7 @@
       "letter": "q",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "Modifie les aptitudes qui sont des sorts. Lorsque vous les lancez, cette gemme de soutien reproduit leurs effets. Ne fonctionne pas avec les aptitudes qui ont un temps de recharge, les aptitudes déclenchées, les aptitudes de Symbole, les aptitudes vaal, les aptitudes canalisées, les aptitudes à réservation, ni les aptitudes utilisées par les créatures, les totems, les pièges et les mines. Ne peut modifier les aptitudes utilisées par les Créatures.",
+      "support_text": "Modifie les aptitudes de sort, faisant se reproduire leurs effets lors de leur incantation. Ne peut pas modifier les aptitudes qui ont un temps de recharge, déclenchées, de symbole, vaal, de canalisation, ayant une réservation, ni les aptitudes utilisées par les totems, pièges ou mines. Ne peut modifier les aptitudes des créatures.",
       "excluded_types": [
         "SummonsTotem",
         "Trapped",
@@ -79612,7 +81282,7 @@
       "letter": "A",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "Modifie les aptitudes de frappe de mêlée, leur permettant d'attaquer simultanément des cibles supplémentaires tant qu'elles ne sont pas trop éloignées de l'utilisateur. Les aptitudes d'attaque de créatures modifiées par cette gemme ne permettront pas aux créatures d'attaquer des cibles supplémentaires. Cette gemme ne peut pas modifier les aptitudes vaal ni celles à déclenchement.",
+      "support_text": "Modifie les aptitudes de frappe de mêlée, leur permettant de frapper simultanément des cibles supplémentaires. Les cibles supplémentaires doivent se trouver à une distance minimale de l'utilisateur. Si cette gemme modifie une aptitude d'attaque de créature, les aptitudes de la créature ne frapperont pas de cibles supplémentaires. Ne peut pas modifier les aptitudes vaal ni les aptitudes déclenchées.",
       "excluded_types": [
         "InbuiltTrigger",
         "Triggered",
@@ -80374,7 +82044,7 @@
       "letter": "3",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "Modifie les aptitudes d'attaque de mêlée en leur permettant de se répéter trois fois lorsqu'elles sont utilisées, ciblant à chaque fois un ennemi au hasard. Ne peut modifier les aptitudes vaal, de canalisation, de trajet, de riposte ni les aptitudes déclenchées.",
+      "support_text": "Modifie les aptitudes d'attaque de mêlée, les faisant se répéter trois fois lorsqu'elles sont utilisées, ciblant à chaque fois un ennemi au hasard. Ne peut modifier les aptitudes vaal, de canalisation, de trajet, de riposte ni les aptitudes déclenchées.",
       "excluded_types": [
         "Vaal",
         "NonRepeatable",
@@ -81040,7 +82710,7 @@
       "letter": "Y",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "Modifie les aptitudes à projectiles, permettant aux projectiles de se scinder en deux autres projectiles les deux premières fois qu'ils touchent un ennemi sans le transpercer.",
+      "support_text": "Modifie les aptitudes à projectiles, permettant à leurs projectiles de se scinder en deux autres projectiles les deux premières fois qu'ils touchent un ennemi sans le transpercer.",
       "excluded_types": null,
       "added_types": null,
       "added_minion_types": null
@@ -82402,7 +84072,7 @@
       "letter": "p",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "Modifie les aptitudes qui sont des sorts et qui ont un effet s'appliquant dans une zone autour de l'emplacement ciblé. Ne peut modifier les aptitudes vaal, les aptitudes de Créatures ou les aptitudes utilisées par les totems, pièges et mines.",
+      "support_text": "Modifie les aptitudes de sort ayant un effet qui s'applique dans une zone autour de l'emplacement ciblé. Ne peut modifier les aptitudes vaal ni les aptitudes utilisées par les totems, pièges ou mines. Ne peut pas modifier les aptitudes des créatures.",
       "excluded_types": [
         "SummonsTotem",
         "Trapped",
@@ -82504,7 +84174,7 @@
       "letter": "k",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "Modifie les sorts et les répète lors de l'incantation. Ne peut modifier les aptitudes vaal, de totem, canalisées, déclenchées, instantanées, de riposte, de transfert ni les aptitudes qui réservent du mana.",
+      "support_text": "Modifie les aptitudes de sort, les faisant se répéter lors de leur incantation. Ne peut pas modifier les aptitudes vaal, de totem, de canalisation, déclenchées, instantanées, de riposte, de transfert, ni les aptitudes ayant une réservation.",
       "excluded_types": [
         "SummonsTotem",
         "Trapped",
@@ -82691,7 +84361,7 @@
       "letter": "q",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "Modifie les aptitudes qui sont des sorts. Lorsque vous les lancez, cette gemme de soutien reproduit leurs effets. Ne fonctionne pas avec les aptitudes qui ont un temps de recharge, les aptitudes déclenchées, les aptitudes de Symbole, les aptitudes vaal, les aptitudes canalisées, les aptitudes à réservation, ni les aptitudes utilisées par les créatures, les totems, les pièges et les mines. Ne peut pas modifier les aptitudes utilisées par les Créatures.",
+      "support_text": "Modifie les aptitudes de sort, faisant se reproduire leurs effets lors de leur incantation. Ne peut pas modifier les aptitudes qui ont un temps de recharge, déclenchées, de symbole, vaal, de canalisation, ayant une réservation, ni les aptitudes utilisées par les totems, pièges ou mines. Ne peut modifier les aptitudes des créatures.",
       "excluded_types": [
         "SummonsTotem",
         "Trapped",
@@ -84391,7 +86061,7 @@
         "dex": 0
       },
       "stat_text": {
-        "manaweave_cost_equals_%_unreserved_mana": "Les Aptitudes modifiées gagnent un Coût en Mana de base équivalent à 5% Mana maximal non Réservé"
+        "manaweave_cost_equals_%_unreserved_mana": "Les Aptitudes modifiées gagnent un Coût en Mana de base équivalent à 5% du Mana maximal non Réservé"
       },
       "stats": [
         {
@@ -102266,7 +103936,7 @@
       "letter": "p",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "Modifie les aptitudes qui sont des sorts et qui ont un effet s'appliquant dans une zone autour de l'emplacement ciblé. Ne peut modifier les aptitudes vaal, les aptitudes de Créatures ou les aptitudes utilisées par les totems, pièges et mines.",
+      "support_text": "Modifie les aptitudes de sort ayant un effet qui s'applique dans une zone autour de l'emplacement ciblé. Ne peut modifier les aptitudes vaal ni les aptitudes utilisées par les totems, pièges ou mines. Ne peut pas modifier les aptitudes des créatures.",
       "excluded_types": [
         "SummonsTotem",
         "Trapped",
@@ -102350,7 +104020,7 @@
       "letter": "q",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "Modifie les aptitudes qui sont des sorts. Lorsque vous les lancez, cette gemme de soutien reproduit leurs effets. Ne fonctionne pas avec les aptitudes qui ont un temps de recharge, les aptitudes déclenchées, les aptitudes de Symbole, les aptitudes vaal, les aptitudes canalisées, les aptitudes à réservation, ni les aptitudes utilisées par les créatures, les totems, les pièges et les mines. Ne peut modifier les aptitudes utilisées par les Créatures.",
+      "support_text": "Modifie les aptitudes de sort, faisant se reproduire leurs effets lors de leur incantation. Ne peut pas modifier les aptitudes qui ont un temps de recharge, déclenchées, de symbole, vaal, de canalisation, ayant une réservation, ni les aptitudes utilisées par les totems, pièges ou mines. Ne peut modifier les aptitudes des créatures.",
       "excluded_types": [
         "SummonsTotem",
         "Trapped",
@@ -104062,7 +105732,7 @@
       "letter": "A",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "Modifie les aptitudes de frappe de mêlée, leur permettant d'attaquer simultanément des cibles supplémentaires tant qu'elles ne sont pas trop éloignées de l'utilisateur. Les aptitudes d'attaque de créatures modifiées par cette gemme ne permettront pas aux créatures d'attaquer des cibles supplémentaires. Cette gemme ne peut pas modifier les aptitudes vaal ni celles à déclenchement.",
+      "support_text": "Modifie les aptitudes de frappe de mêlée, leur permettant de frapper simultanément des cibles supplémentaires. Les cibles supplémentaires doivent se trouver à une distance minimale de l'utilisateur. Si cette gemme modifie une aptitude d'attaque de créature, les aptitudes de la créature ne frapperont pas de cibles supplémentaires. Ne peut pas modifier les aptitudes vaal ni les aptitudes déclenchées.",
       "excluded_types": [
         "InbuiltTrigger",
         "Triggered",
@@ -106330,7 +108000,7 @@
       "letter": "k",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "Modifie les sorts et les répète lors de l'incantation. Ne fonctionne pas avec les aptitudes vaal, les aptitudes de totem, les aptitudes canalisées, les aptitudes à déclenchement, les aptitudes instantanées et les aptitudes à réservation.",
+      "support_text": "Modifie les aptitudes de sort, les faisant se répéter lors de leur incantation. Ne peut pas modifier les aptitudes vaal, de totem, de canalisation, déclenchées, instantanées, de transfert, ni les aptitudes ayant une réservation.",
       "excluded_types": [
         "SummonsTotem",
         "Trapped",
@@ -106586,7 +108256,7 @@
   },
   {
     "active_skill": {
-      "description": "Un totem qui fait trembler la terre autour de lui, repoussant et endommageant les ennemis à proximité.",
+      "description": "Un totem qui fait trembler la terre autour de lui, repoussant et infligeant des dégâts aux ennemis à proximité.",
       "display_name": "Totem sismique",
       "id": "shockwave_totem",
       "is_manually_casted": true,
@@ -110912,7 +112582,7 @@
   },
   {
     "active_skill": {
-      "description": "Un sort qui lance un anneau de foudre autour de vous, suivi par une nova de foudre plus grande. Chaque effet touche les ennemis situés dans sa zone avec des dégâts de foudre.",
+      "description": "Un sort qui lance un anneau de foudre autour de vous, suivi d'une nova de foudre plus grande. Chaque effet touche les ennemis situés dans sa zone avec des dégâts de foudre.",
       "display_name": "Nova d'électricité",
       "id": "shock_nova",
       "is_manually_casted": true,
@@ -111719,7 +113389,7 @@
         "skill_physical_damage_%_to_convert_to_chaos": "60% des Dégâts physiques sont Convertis en Dégâts de chaos",
         "critical_poison_dot_multiplier_+": "Les Empoisonnements infligés par vos Coups critiques ont +50% au Multiplicateur des dégâts sur la durée",
         "base_chance_to_poison_on_hit_%": "60% de chances d'Empoisonner au Toucher",
-        "active_skill_projectile_damage_+%_final_for_each_remaining_chain": "Pour chaque Ricochet restant, les Projectiles infligent 5% Davantage de Dégâts au Toucher"
+        "active_skill_projectile_damage_+%_final_for_each_remaining_chain": "Les Projectiles ont 5% Davantage de Dégâts au Toucher pour chaque Ricochet restant"
       },
       "stats": [
         {
@@ -122524,7 +124194,7 @@
       "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "L'Explosion inflige {napalm_arrow_detonation_hit_damage_+%_final}% Davantage de Dégâts au Toucher et avec les Altérations",
+          "stat": "L'Explosion a {napalm_arrow_detonation_hit_damage_+%_final}% Davantage de Dégâts au Toucher et avec les Altérations",
           "stats": {
             "napalm_arrow_detonation_hit_damage_+%_final": 1500
           }
@@ -122539,7 +124209,7 @@
         "base_skill_effect_duration": "La Durée de base est de 6.00 secondes",
         "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius": "Les Flèches après la première s'abattent au sein d'un Rayon de base de 3 mètres",
         "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius": "Le Rayon de base de l'Impact est de 1 mètre",
-        "napalm_arrow_detonation_hit_damage_+%_final": "L'Explosion inflige 50% Davantage de Dégâts au Toucher et avec les Altérations",
+        "napalm_arrow_detonation_hit_damage_+%_final": "L'Explosion a 50% Davantage de Dégâts au Toucher et avec les Altérations",
         "napalm_arrow_maximum_number_of_unprimed_arrows_allowed": "20 Flèches plantées au maximum",
         "skill_physical_damage_%_to_convert_to_fire": "100% des Dégâts physiques sont Convertis en Dégâts de feu",
         "base_secondary_skill_effect_duration": "La Durée de Base de l'Effet néfaste est de 4.00 secondes",
@@ -124004,7 +125674,7 @@
       "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "Les Créatures émanant des Aptitudes modifiées ont {minion_critical_strike_chance_+%}% d'Augmentation des chances de Coup critique",
+          "stat": "Les Créatures générées par les Aptitudes modifiées ont {minion_critical_strike_chance_+%}% d'Augmentation des Chances de coup critique",
           "stats": {
             "minion_critical_strike_chance_+%": 1000
           }
@@ -126321,7 +127991,7 @@
       },
       "stat_text": {
         "active_skill_base_area_of_effect_radius": "Le Rayon de base est de 2 mètres",
-        "graft_skill_uulnetol_hand_slam_number_of_hands_to_create": "Génère 4 Mains",
+        "graft_skill_uulnetol_hand_slam_number_of_hands_to_create": "Crée 4 Mains",
         "additional_base_critical_strike_chance": "+8% aux Chances de coup critique",
         "always_stun": "Étourdit les Ennemis"
       },
@@ -126451,7 +128121,7 @@
         "dex": 0
       },
       "stat_text": {
-        "graft_skill_uulnet_bone_spires_max_spires_allowed": "20 Aiguilles d'os au maximum",
+        "graft_skill_uulnet_bone_spires_max_spires_allowed": "Maximum 20 Pointes d'os",
         "base_skill_effect_duration": "La Durée de base est de 8.00 secondes",
         "active_skill_base_area_of_effect_radius": "Le Rayon de base est de 4.5 mètres",
         "impale_on_hit_%_chance": "Empale les Ennemis au Toucher",
