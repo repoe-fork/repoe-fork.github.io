@@ -27,7 +27,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Tus mapas blancos otorgan {0} de sulfito voltáxico adicional cuando los completas",
+        "string": "Tus mapas blancos te otorgan {0} de sulfito voltáxico adicional cuando los completas",
         "reminder_text": null,
         "is_markup": null
       }
@@ -63,7 +63,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Tus mapas amarillos otorgan {0} de sulfito voltáxico adicional cuando los completas",
+        "string": "Tus mapas amarillos te otorgan {0} de sulfito voltáxico adicional cuando los completas",
         "reminder_text": null,
         "is_markup": null
       }
@@ -99,7 +99,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Tus mapas rojos otorgan {0} de sulfito voltáxico adicional cuando los completas",
+        "string": "Tus mapas rojos te otorgan {0} de sulfito voltáxico adicional cuando los completas",
         "reminder_text": null,
         "is_markup": null
       }
@@ -160,7 +160,7 @@
       {
         "condition": [
           {
-            "min": null,
+            "min": 1,
             "max": null,
             "negated": null
           }
@@ -171,7 +171,27 @@
         "index_handlers": [
           []
         ],
-        "string": "Las fisuras de tus mapas tienen la densidad de monstruos aumentada un {0}%",
+        "string": "Los monstruos de fisura de tus mapas tienen el tamaño de sus grupos aumentado un {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Los monstruos de fisura de tus mapas tienen el tamaño de sus grupos reducido un {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -878,42 +898,6 @@
   {
     "English": null,
     "ids": [
-      "atlas_daily_kirac_missions_+"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Gana {0} misión adicional de Kirac cada día",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "atlas_daily_master_missions_+"
     ],
     "trade_stats": null,
@@ -1249,7 +1233,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Tus mapas raros corruptos y cualquier opción de fabricación de mapas\nque tengan aplicada se modificarán de modo impredecible al abrirse",
+        "string": "Tus mapas raros corruptos se modifican de forma impredecible cuando los abres",
         "reminder_text": null,
         "is_markup": null
       }
@@ -1628,7 +1612,7 @@
           []
         ],
         "string": "Tus mapas tienen el efecto de sus modificadores explícitos aumentado al azar entre un 0 y un 80%\nNo puede haber contenido adicional en tus mapas\nNo se puede aplicar influencia a tus mapas",
-        "reminder_text": "(Los abismos, los portales de demonios del Más allá, los encuentros de Blight, las fisuras, los encuentros de Expedition, los heraldos, los encuentros de Legion, los espejos de delirio y las capas de delirio, los monstruos aprisionados por esencias, los depósitos de mineral, los altares de Ritual, los exiliados renegados, el Huerto sagrado, los santuarios, los alijos del contrabandista, las cajas fuertes, las tempestades, los espíritus atormentados, los encuentros de Ultimatum y las misiones de Alva, Einhar, Jun y Niko son contenido adicional)",
+        "reminder_text": "(Los abismos, los portales de demonios del Más allá, los encuentros de Blight, las fisuras, los encuentros de Expedition, los encuentros de Legion, los espejos de delirio y las capas de delirio, los monstruos aprisionados por esencias, los depósitos de mineral, los altares de Ritual, los exiliados renegados, el Huerto sagrado, los santuarios, los alijos del contrabandista, las cajas fuertes, las tempestades, los espíritus atormentados, los encuentros de Ultimatum, los fuegos fatuos del bosque y las misiones de Alva, Einhar, Jun y Niko son contenido adicional)",
         "is_markup": null
       }
     ],
@@ -3234,98 +3218,6 @@
           []
         ],
         "string": "Los monstruos influenciados de tus mapas tienen un {0}% de probabilidad de arrojar un arma rara adicional",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "kirac_blight_craft_always_available"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "La opción de fabricación de mapas de Blight siempre está disponible",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "kirac_blight_craft_cost_+%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Costo de la opción de fabricación de mapas de Blight aumentado un {0}%",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "Costo de la opción de fabricación de mapas de Blight reducido un {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -7162,42 +7054,6 @@
   {
     "English": null,
     "ids": [
-      "map_atlas_scouting_report_drop_chance_+%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Cantidad de Informes de exploración del Atlas encontrados en tus mapas aumentada un {0}%",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "map_awakener_boss_awakened_support_drop_chance_+%"
     ],
     "trade_stats": null,
@@ -7325,7 +7181,7 @@
         "condition": [
           {
             "min": null,
-            "max": null,
+            "max": 99,
             "negated": null
           }
         ],
@@ -7335,7 +7191,25 @@
         "index_handlers": [
           []
         ],
-        "string": "Las bestias rojas capturadas en tus mapas tienen un {0}% de probabilidad de ganar un modificador que otorga una probabilidad de que no sea consumida cuando la sacrificas en el altar de sangre",
+        "string": "Las bestias rojas capturadas en tus mapas tienen un {0}% de probabilidad de ganar un modificador que les otorga una probabilidad de que no se consuman cuando se sacrifican en el altar de sangre",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": 100,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Las bestias rojas capturadas en tus mapas ganan un modificador que les otorga una probabilidad de que no se consuman cuando se sacrifican en el altar de sangre",
         "reminder_text": null,
         "is_markup": null
       }
@@ -7373,6 +7247,42 @@
         ],
         "string": "Las bestias de tus mapas tienen un {0}% de probabilidad de liberarse\nLas bestias que se liberan en tus mapas ganan Furia bestial\nDerrotar bestias otorga Astucia del cazador por cada punto de Furia bestial que tenga la bestia derrotada",
         "reminder_text": "(Astucia del cazador otorga menos daño recibido de las bestias, daño aumentado contra las bestias y cantidad y rareza de objetos aumentadas de las bestias derrotadas)",
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_bestiary_beast_has_x_bestial_rage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Las bestias capturables de tus mapas tienen furia bestial\nDerrotar bestias capturables te otorga un punto de Astucia del cazador",
+        "reminder_text": "(Furia bestial aumenta la velocidad de movimiento, velocidad de ataque y daño de la bestia afectada)",
         "is_markup": null
       }
     ],
@@ -7426,6 +7336,42 @@
           []
         ],
         "string": "Las bestias rojas de tus mapas tienen {0} modificadores de Bestiary adicionales",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_betrayal_%_chance_veiled_items_to_drop_with_fractured_veiled_mod"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Los objetos encriptados que arrojan los miembros del Sindicato derrotados en tus mapas tienen un {0}% de probabilidad de tener un modificador encriptado fracturado",
         "reminder_text": null,
         "is_markup": null
       }
@@ -9668,6 +9614,62 @@
   {
     "English": null,
     "ids": [
+      "map_blight_monster_item_quantity_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Cantidad de objetos arrojados por los monstruos de Blight de tus mapas aumentada un {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Cantidad de objetos arrojados por los monstruos de Blight de tus mapas reducida un {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "map_blight_monsters_damage_taken_from_player_sources_+%_final"
     ],
     "trade_stats": null,
@@ -10275,7 +10277,7 @@
             "divide_by_one_hundred"
           ]
         ],
-        "string": "El jefe de mapa final de cada mapa tiene un {0}% de probabilidad de arrojar un mapa conectado adicional",
+        "string": "El jefe final de cada mapa tiene un {0}% de probabilidad de arrojar un mapa adicional de un grado mayor",
         "reminder_text": null,
         "is_markup": null
       }
@@ -11693,7 +11695,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Tus mapas que contienen fisuras tienen un {0}% de probabilidad de contener una fisura adicional",
+        "string": "Tus mapas que contienen fisuras inestables tienen un {0}% de probabilidad de contener una fisura inestable adicional",
         "reminder_text": null,
         "is_markup": null
       },
@@ -11711,7 +11713,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Tus mapas que contienen fisuras contienen una fisura adicional",
+        "string": "Tus mapas que contienen fisuras inestables contienen una fisura inestable adicional",
         "reminder_text": null,
         "is_markup": null
       }
@@ -11747,7 +11749,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Tus mapas que contienen fisuras tienen un {0}% de probabilidad de contener dos fisuras adicionales",
+        "string": "Tus mapas que contienen fisuras inestables tienen un {0}% de probabilidad de contener dos fisuras inestables adicionales",
         "reminder_text": null,
         "is_markup": null
       },
@@ -11765,7 +11767,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Tus mapas que contienen fisuras contienen dos fisuras adicionales",
+        "string": "Tus mapas que contienen fisuras inestables contienen dos fisuras inestables adicionales",
         "reminder_text": null,
         "is_markup": null
       }
@@ -11801,7 +11803,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Tus mapas que contienen fisuras tienen un {0}% de probabilidad de contener tres fisuras adicionales",
+        "string": "Tus mapas que contienen fisuras inestables tienen un {0}% de probabilidad de contener tres fisuras inestables adicionales",
         "reminder_text": null,
         "is_markup": null
       },
@@ -11819,7 +11821,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Tus mapas que contienen fisuras contienen tres fisuras adicionales",
+        "string": "Tus mapas que contienen fisuras inestables contienen tres fisuras inestables adicionales",
         "reminder_text": null,
         "is_markup": null
       }
@@ -11855,7 +11857,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Tus mapas que contienen fisuras tienen un {0}% de probabilidad de contener diez fisuras adicionales",
+        "string": "Tus mapas que contienen fisuras inestables tienen un {0}% de probabilidad de contener diez fisuras inestables adicionales",
         "reminder_text": null,
         "is_markup": null
       },
@@ -11873,7 +11875,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Tus mapas que contienen fisuras contienen diez fisuras adicionales",
+        "string": "Tus mapas que contienen fisuras inestables contienen diez fisuras inestables adicionales",
         "reminder_text": null,
         "is_markup": null
       }
@@ -11982,6 +11984,152 @@
           []
         ],
         "string": "Las fisuras de tus mapas generan {0} monstruos raros adicionales",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_ancient_wombgift_chance_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Los regalos del vientre que caen en tus mapas tienen la probabilidad de ser antiguos aumentada un {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Los regalos del vientre que caen en tus mapas tienen la probabilidad de ser antiguos reducida un {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_boss_additional_wombgift_chance_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": 100,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Los jefes de fisura de tus mapas arrojan un regalo del vientre adicional",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Los jefes de fisura de tus mapas tienen un {0}% de probabilidad de arrojar un regalo del vientre adicional",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_boss_hiveblood_instead_of_gold"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Los jefes de fisura de tus mapas otorgan sangre de colmena en lugar de oro",
         "reminder_text": null,
         "is_markup": null
       }
@@ -12210,6 +12358,656 @@
   {
     "English": null,
     "ids": [
+      "map_breach_fortress_chest_wombgift_chance_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Las arcas atrapantes de tus mapas tienen la probabilidad de contener regalos del vientre aumentada un {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Las arcas atrapantes de tus mapas tienen la probabilidad de contener regalos del vientre reducida un {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_hive_breakable_spawners_area_of_effect_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Las madrigueras inflamables de tus mapas tienen el radio de explosión aumentado un {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Las madrigueras inflamables de tus mapas tienen el radio de explosión reducido un {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_hive_chests_grant_hiveblood_instead_of_gold"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Los cofres de las fortalezas de la colmena de tus mapas otorgan sangre de colmena en lugar de oro",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_hive_fortress_chance_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Las colmenas de fisura de tus mapas tienen la probabilidad de conducir a fortalezas aumentada un {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Las colmenas de fisura de tus mapas tienen la probabilidad de conducir a fortalezas reducida un {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_hive_monsters_toughness_per_broken_spawner_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Los monstruos de la colmena de tus mapas tienen la dureza aumentada un {0}% por cada madriguera inflamable destruida",
+        "reminder_text": "(Cuanta más dureza tenga un monstruo, menos daño recibirá. Un monstruo con dureza aumentada un 100% recibe un 50% menos de daño, un monstruo con dureza aumentada un 200% recibe un 67% menos de daño, y así sucesivamente. Si un monstruo tiene dureza reducida, recibirá más daño)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Los monstruos de la colmena de tus mapas tienen la dureza reducida un {0}% por cada madriguera inflamable destruida",
+        "reminder_text": "(Cuanta más dureza tenga un monstruo, menos daño recibirá. Un monstruo con dureza aumentada un 100% recibe un 50% menos de daño, un monstruo con dureza aumentada un 200% recibe un 67% menos de daño, y así sucesivamente. Si un monstruo tiene dureza reducida, recibirá más daño)",
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_hive_number_of_breakable_spawners_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Las colmenas de fisura de tus mapas tienen la cantidad de madrigueras inflamables aumentada un {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Las colmenas de fisura de tus mapas tienen la cantidad de madrigueras inflamables reducida un {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_hive_number_of_skills_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Cantidad de habilidades creadas por Ailith aumentada un {0}% en las colmenas de fisura\nde tus mapas que no llevan a fortalezas",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Cantidad de habilidades creadas por Ailith reducida un {0}% en las colmenas de fisura\nde tus mapas que no llevan a fortalezas",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_hive_skill_damage_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "El daño de las habilidades que crea Ailith dentro de las colmenas de fisura de tus mapas está aumentado un {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "El daño de las habilidades que crea Ailith dentro de las colmenas de fisura de tus mapas está reducido un {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_hiveblood_and_wombgift_quantity_per_broken_spawner_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Los encuentros de la colmena de tus mapas otorgan sangre de colmena y regalos del vientre\naumentados un {0}% por cada madriguera inflamable destruida",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Los encuentros de la colmena de tus mapas otorgan sangre de colmena y regalos del vientre\nreducidos un {0}% por cada madriguera inflamable destruida",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_hiveblood_quantity_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Cantidad de sangre de colmena que cae en tus mapas aumentada un {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Cantidad de sangre de colmena que cae en tus mapas reducida un {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_hives_additional_waves_+"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Las colmenas de fisura de tus mapas tienen una oleada adicional de monstruos nacidos de la colmena",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Las colmenas de fisura de tus mapas tienen {0} oleadas adicionales de monstruos nacidos de la colmena",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_lavish_wombgift_chance_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Los regalos del vientre que caen en tus mapas tienen la probabilidad de ser lujosos aumentada un {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Los regalos del vientre que caen en tus mapas tienen la probabilidad de ser lujosos reducida un {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "map_breach_monster_granted_experience_+%"
     ],
     "trade_stats": null,
@@ -12414,6 +13212,62 @@
   {
     "English": null,
     "ids": [
+      "map_breach_mysterious_wombgift_chance_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Los regalos del vientre que caen en tus mapas tienen la probabilidad de ser misteriosos aumentada un {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Los regalos del vientre que caen en tus mapas tienen la probabilidad de ser misteriosos reducida un {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "map_breach_number_of_magic_packs_+%"
     ],
     "trade_stats": null,
@@ -12460,6 +13314,118 @@
           ]
         ],
         "string": "Las fisuras de tus mapas generan una cantidad de monstruos mágicos reducida un {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_number_of_rare_packs_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Las fisuras de tus mapas generan la cantidad de monstruos raros aumentada un {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Las fisuras de tus mapas generan la cantidad de monstruos raros reducida un {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_provisioning_wombgift_chance_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Los regalos del vientre que caen en tus mapas tienen la probabilidad de ser aprovisionadores aumentada un {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Los regalos del vientre que caen en tus mapas tienen la probabilidad de ser aprovisionadores reducida un {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -12679,7 +13645,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Las fisuras de tus mapas se abren y se cierran un {0}% más rápido",
+        "string": "Los encuentros de fisura de tus mapas son un {0}% más rápidos",
         "reminder_text": null,
         "is_markup": null
       },
@@ -12699,7 +13665,7 @@
             "negate"
           ]
         ],
-        "string": "Las fisuras de tus mapas se abren y se cierran un {0}% más despacio",
+        "string": "Los encuentros de fisura de tus mapas son un {0}% más lentos",
         "reminder_text": null,
         "is_markup": null
       }
@@ -12844,6 +13810,62 @@
           []
         ],
         "string": "Los monstruos de fisura de tus mapas tienen la probabilidad de arrojar un objeto único de fisura aumentada un {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_wombgift_quantity_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Cantidad de regalos del vientre que caen en tus mapas aumentada un {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Cantidad de regalos del vientre que caen en tus mapas reducida un {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -13280,6 +14302,42 @@
           []
         ],
         "string": "Tus mapas contienen el Huerto sagrado",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_chance_for_area_%_to_duplicate_breach_boss"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Los jefes de fisura de tus mapas tienen un {0}% de probabilidad de estar duplicados",
         "reminder_text": null,
         "is_markup": null
       }
@@ -14066,7 +15124,7 @@
   {
     "English": null,
     "ids": [
-      "map_contains_additional_breaches"
+      "map_contains_X_additional_strongboxes_essences_shrines_or_rogue_exiles"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -14091,7 +15149,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Tus mapas contienen una fisura adicional",
+        "string": "Tus mapas contienen una caja fuerte, un monstruo aprisionado, un santuario o un exiliado renegado adicional",
         "reminder_text": null,
         "is_markup": null
       },
@@ -14109,7 +15167,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Tus mapas contienen {0} fisuras adicionales",
+        "string": "Tus mapas contienen {0} cajas fuertes, monstruos aprisionados, santuarios o exiliados renegados adicionales",
         "reminder_text": null,
         "is_markup": null
       }
@@ -14516,6 +15574,60 @@
   {
     "English": null,
     "ids": [
+      "map_contains_additional_unstable_breaches"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Tus mapas contienen una fisura inestable adicional",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Tus mapas contienen {0} fisuras inestables adicionales",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "map_contains_adjacent_map_item_chance_permyriad"
     ],
     "trade_stats": null,
@@ -14544,6 +15656,78 @@
           ]
         ],
         "string": "{0}% de probabilidad de que un monstruo en cada uno de tus mapas arroje un mapa conectado adicional",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_contains_an_unspecified_breach"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Tus mapas contienen una fisura",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_contains_breach_hive"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": 3,
+            "max": 3,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Tus mapas contienen una colmena de fisura",
         "reminder_text": null,
         "is_markup": null
       }
@@ -18319,6 +19503,42 @@
   {
     "English": null,
     "ids": [
+      "map_divination_cards_in_area_are_from_two_different_areas"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Las cartas de adivinación que caen en tus mapas son de otros dos mapas aleatorios\nen lugar de ser del mapa en el que estás",
+        "reminder_text": "(Si en un mapa pueden caer más cartas de adivinación, aumenta la probabilidad de que caigan cartas de adivinación)",
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "map_double_conqueror_progress_chance_%"
     ],
     "trade_stats": null,
@@ -20403,7 +21623,7 @@
           []
         ],
         "string": "El contenido adicional no tiene probabilidad base de aparecer en tus mapas",
-        "reminder_text": "(Los abismos, los portales de demonios del Más allá, los encuentros de Blight, las fisuras, los encuentros de Expedition, los heraldos, los encuentros de Legion, los espejos de delirio y las capas de delirio, los monstruos aprisionados por esencias, los depósitos de mineral, los altares de Ritual, los exiliados renegados, el Huerto sagrado, los santuarios, los alijos del contrabandista, las cajas fuertes, las tempestades, los espíritus atormentados, los encuentros de Ultimatum y las misiones de Alva, Einhar, Jun y Niko son contenido adicional)",
+        "reminder_text": "(Los abismos, los portales de demonios del Más allá, los encuentros de Blight, las fisuras, los encuentros de Expedition, los encuentros de Legion, los espejos de delirio y las capas de delirio, los monstruos aprisionados por esencias, los depósitos de mineral, los altares de Ritual, los exiliados renegados, el Huerto sagrado, los santuarios, los alijos del contrabandista, las cajas fuertes, las tempestades, los espíritus atormentados, los encuentros de Ultimatum, los fuegos fatuos del bosque y las misiones de Alva, Einhar, Jun y Niko son contenido adicional)",
         "is_markup": null
       }
     ],
@@ -20439,7 +21659,7 @@
           []
         ],
         "string": "Máximo de un tipo de contenido adicional en tus mapas",
-        "reminder_text": "(Los abismos, los portales de demonios del Más allá, los encuentros de Blight, las fisuras, los encuentros de Expedition, los heraldos, los encuentros de Legion, los espejos de delirio y las capas de delirio, los monstruos aprisionados por esencias, los depósitos de mineral, los altares de Ritual, los exiliados renegados, el Huerto sagrado, los santuarios, los alijos del contrabandista, las cajas fuertes, las tempestades, los espíritus atormentados, los encuentros de Ultimatum y las misiones de Alva, Einhar, Jun y Niko son contenido adicional)",
+        "reminder_text": "(Los abismos, los portales de demonios del Más allá, los encuentros de Blight, las fisuras, los encuentros de Expedition, los encuentros de Legion, los espejos de delirio y las capas de delirio, los monstruos aprisionados por esencias, los depósitos de mineral, los altares de Ritual, los exiliados renegados, el Huerto sagrado, los santuarios, los alijos del contrabandista, las cajas fuertes, las tempestades, los espíritus atormentados, los encuentros de Ultimatum, los fuegos fatuos del bosque y las misiones de Alva, Einhar, Jun y Niko son contenido adicional)",
         "is_markup": null
       }
     ],
@@ -21213,152 +22433,6 @@
   {
     "English": null,
     "ids": [
-      "map_gain_additional_zana_mission_%_chance_on_map_completion"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": 99,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Tus mapas tienen un {0}% de probabilidad de otorgar una misión adicional de Kirac cuando los completas",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 100,
-            "max": 100,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Tus mapas otorgan una misión adicional de Kirac cuando los completas",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "map_gain_additional_zana_mission_permyriad_chance_on_map_completion"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": 9999,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "divide_by_one_hundred"
-          ]
-        ],
-        "string": "Tus mapas tienen un {0}% de probabilidad de otorgar una misión adicional de Kirac cuando los completas",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 10000,
-            "max": 10000,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Tus mapas otorgan una misión adicional de Kirac cuando los completas",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "map_gain_blight_map_craft_on_completion_chance_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "{0}% de probabilidad de que ganes un uso gratis de la opción de fabricación de mapas de Blight al completar tus mapas",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "map_gain_master_missions_instead_of_master_naturally_spawning"
     ],
     "trade_stats": null,
@@ -21385,96 +22459,6 @@
           []
         ],
         "string": "Si tus mapas contienen un maestro aleatorio, en lugar de encontrarlo, recibirás la misión de ese maestro al completar el mapa",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "map_gain_random_map_craft_on_completion_chance_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": 99,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "{0}% de probabilidad de ganar un uso gratuito de una opción de fabricación de mapa aleatoria al completar tus mapas",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 100,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Ganas un uso gratuito de una opción de fabricación de mapa aleatoria al completar tus mapas",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "map_gain_special_map_craft_on_completion_chance_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "{0}% de probabilidad de ganar un uso gratis de una opción de fabricación de mapas al completar tus mapas",
         "reminder_text": null,
         "is_markup": null
       }
@@ -25311,62 +26295,6 @@
   {
     "English": null,
     "ids": [
-      "map_kirac_mission_pack_size_+%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Las áreas de las misiones de Kirac tienen el tamaño de los grupos de monstruos aumentado un {0}%",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "Las áreas de las misiones de Kirac tienen el tamaño de los grupos de monstruos reducido un {0}%",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "map_league_base_chance_+%_final"
     ],
     "trade_stats": null,
@@ -25393,7 +26321,7 @@
           []
         ],
         "string": "Tus mapas tienen un {0}% más de probabilidad base de tener contenido adicional",
-        "reminder_text": "(Los abismos, los portales de demonios del Más allá, los encuentros de Blight, las fisuras, los encuentros de Expedition, los heraldos, los encuentros de Legion, los espejos de delirio y las capas de delirio, los monstruos aprisionados por esencias, los depósitos de mineral, los altares de Ritual, los exiliados renegados, el Huerto sagrado, los santuarios, los alijos del contrabandista, las cajas fuertes, las tempestades, los espíritus atormentados, los encuentros de Ultimatum y las misiones de Alva, Einhar, Jun y Niko son contenido adicional)",
+        "reminder_text": "(Los abismos, los portales de demonios del Más allá, los encuentros de Blight, las fisuras, los encuentros de Expedition, los encuentros de Legion, los espejos de delirio y las capas de delirio, los monstruos aprisionados por esencias, los depósitos de mineral, los altares de Ritual, los exiliados renegados, el Huerto sagrado, los santuarios, los alijos del contrabandista, las cajas fuertes, las tempestades, los espíritus atormentados, los encuentros de Ultimatum, los fuegos fatuos del bosque y las misiones de Alva, Einhar, Jun y Niko son contenido adicional)",
         "is_markup": null
       }
     ],
@@ -25429,7 +26357,7 @@
           []
         ],
         "string": "Tus mapas tienen {0}% de probabilidad de tener otro contenido adicional",
-        "reminder_text": "(Los abismos, los portales de demonios del Más allá, los encuentros de Blight, las fisuras, los encuentros de Expedition, los heraldos, los encuentros de Legion, los espejos de delirio y las capas de delirio, los monstruos aprisionados por esencias, los depósitos de mineral, los altares de Ritual, los exiliados renegados, el Huerto sagrado, los santuarios, los alijos del contrabandista, las cajas fuertes, las tempestades, los espíritus atormentados, los encuentros de Ultimatum y las misiones de Alva, Einhar, Jun y Niko son contenido adicional)",
+        "reminder_text": "(Los abismos, los portales de demonios del Más allá, los encuentros de Blight, las fisuras, los encuentros de Expedition, los encuentros de Legion, los espejos de delirio y las capas de delirio, los monstruos aprisionados por esencias, los depósitos de mineral, los altares de Ritual, los exiliados renegados, el Huerto sagrado, los santuarios, los alijos del contrabandista, las cajas fuertes, las tempestades, los espíritus atormentados, los encuentros de Ultimatum, los fuegos fatuos del bosque y las misiones de Alva, Einhar, Jun y Niko son contenido adicional)",
         "is_markup": null
       }
     ],
@@ -26847,6 +27775,42 @@
           ]
         ],
         "string": "Los objetos mágicos que encuentras en tus mapas tienen un {0}% de probabilidad de estar identificados y de tener un modificador fracturado",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_map_item_drop_chance_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "La cantidad de mapas que encuentras en tus mapas está aumentada un {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -28907,6 +29871,62 @@
   {
     "English": null,
     "ids": [
+      "map_mod_effect_+%_per_fragment_used"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Efecto de los modificadores explícitos de tus mapas aumentado un {0}% por cada fragmento utilizado con el mapa",
+        "reminder_text": "(Los fragmentos son objetos que no son mapas pero que se pueden usar en un artefacto de mapas)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Efecto de los modificadores explícitos de tus mapas reducido un {0}% por cada fragmento utilizado con el mapa",
+        "reminder_text": "(Los fragmentos son objetos que no son mapas pero que se pueden usar en un artefacto de mapas)",
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "map_mod_effect_+%_per_mod"
     ],
     "trade_stats": null,
@@ -30299,6 +31319,78 @@
   {
     "English": null,
     "ids": [
+      "map_only_breach_hives"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Los encuentros de fisura de tus mapas siempre son colmenas",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_only_unstable_breaches"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Los encuentros de fisura de tus mapas siempre son fisuras inestables",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "map_orb_of_chance_to_unique_item_%"
     ],
     "trade_stats": null,
@@ -30970,7 +32062,7 @@
         "index_handlers": [
           []
         ],
-        "string": "En tus mapas, el efecto de las bonificaciones de los santuarios está aumentado un {0}% sobre los jugadores",
+        "string": "En tus mapas, el efecto beneficioso de los santuarios está aumentado un {0}% sobre los jugadores",
         "reminder_text": null,
         "is_markup": null
       },
@@ -30990,7 +32082,7 @@
             "negate"
           ]
         ],
-        "string": "En tus mapas, el efecto de las bonificaciones de los santuarios está reducido un {0}% sobre los jugadores",
+        "string": "En tus mapas, el efecto beneficioso de los santuarios está reducido un {0}% sobre los jugadores",
         "reminder_text": null,
         "is_markup": null
       }
@@ -31353,7 +32445,7 @@
           []
         ],
         "string": "Tus mapas tienen un {0}% de probabilidad de contener otro contenido adicional\nque se puede desactivar mediante las pasivas del Atlas",
-        "reminder_text": "(Los abismos, los encuentros de Blight, las fisuras (solo en las ligas estándar), los encuentros de Expedition, los encuentros de Legion, los espejos de delirio, los depósitos de mineral, los altares de Ritual, el Huerto sagrado, los alijos del contrabandista (solo en las ligas Keepers) y los encuentros de Ultimatum son contenido adicional que se puede desactivar a través de pasivas del Atlas)",
+        "reminder_text": "(Los abismos, los encuentros de Blight, las fisuras, los encuentros de Expedition, los encuentros de Legion, los espejos de delirio, los depósitos de mineral, los altares de Ritual, el Huerto sagrado, los alijos del contrabandista y los encuentros de Ultimatum son contenido adicional que se puede desactivar a través de pasivas del Atlas)",
         "is_markup": null
       }
     ],
@@ -33705,384 +34797,6 @@
   {
     "English": null,
     "ids": [
-      "scouting_report_drops_as_blighted_scouting_report_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "{0}% de probabilidad de que, en tus mapas, los informes de exploración caigan como informes de exploración infestados",
-        "reminder_text": "(Los informes de exploración infestados aleatorizan todas las misiones de Atlas de Kirac e incluyen al menos un mapa infestado ungido)",
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 100,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "En tus mapas, los informes de exploración caen como informes de exploración infestados",
-        "reminder_text": "(Los informes de exploración infestados aleatorizan todas las misiones de Atlas de Kirac e incluyen al menos un mapa infestado ungido)",
-        "is_markup": null
-      }
-    ],
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "scouting_report_drops_as_comprehensive_scouting_report_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "{0}% de probabilidad de que los informes de exploración caigan como informes de exploración exhaustivos en tus mapas",
-        "reminder_text": "(Los informes de exploración exhaustivos aleatorizan todas las misiones de Atlas de Kirac y agregan opciones de misión adicionales que pueden incluir nuevos resultados)",
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 100,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Los informes de exploración caen como informes de exploración exhaustivos en tus mapas",
-        "reminder_text": "(Los informes de exploración exhaustivos aleatorizan todas las misiones de Atlas de Kirac y agregan opciones de misión adicionales que pueden incluir nuevos resultados)",
-        "is_markup": null
-      }
-    ],
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "scouting_report_drops_as_delirious_scouting_report_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "{0}% de probabilidad de que los informes de exploración caigan como informes de exploración de delirio en tus mapas",
-        "reminder_text": "(Los informes de exploración de delirio aleatorizan todas las misiones de Atlas de Kirac y agregan capas de delirio a todos los mapas que no sean únicos)",
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 100,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Los informes de exploración caen como informes de exploración de delirio en tus mapas",
-        "reminder_text": "(Los informes de exploración de delirio aleatorizan todas las misiones de Atlas de Kirac y agregan capas de delirio a todos los mapas que no sean únicos)",
-        "is_markup": null
-      }
-    ],
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "scouting_report_drops_as_operatives_scouting_report_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "{0}% de probabilidad de que los informes de exploración caigan como informes de exploración del operario en tus mapas",
-        "reminder_text": "(Los informes de exploración del operario aleatorizan todas las misiones de Atlas de Kirac y agregan misiones con modificadores implícitos como recompensas)",
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 100,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Los informes de exploración caen como informes de exploración del operario en tus mapas",
-        "reminder_text": "(Los informes de exploración del operario aleatorizan todas las misiones de Atlas de Kirac y agregan misiones con modificadores implícitos como recompensas)",
-        "is_markup": null
-      }
-    ],
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "scouting_report_drops_as_otherworldly_scouting_report_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "{0}% de probabilidad de que los informes de exploración de las áreas caigan como informes de exploración de otro mundo",
-        "reminder_text": "(Los informes de exploración de otro mundo aleatorizan todas las misiones de Atlas de Kirac e incluyen al menos una piedra de fisura)",
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 100,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Los informes de exploración de las áreas caen como informes de exploración de otro mundo",
-        "reminder_text": "(Los informes de exploración de otro mundo aleatorizan todas las misiones de Atlas de Kirac e incluyen al menos una piedra de fisura)",
-        "is_markup": null
-      }
-    ],
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "scouting_report_drops_as_singular_scouting_report_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "{0}% de probabilidad de que los informes de exploración de tus mapas caigan como informes de exploración singular",
-        "reminder_text": "(Los informes de exploración singulares aleatorizan todas las misiones de Atlas de Kirac e incluyen al menos un mapa único)",
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 100,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Los informes de exploración de tus mapas caen como informes de exploración singular",
-        "reminder_text": "(Los informes de exploración singulares aleatorizan todas las misiones de Atlas de Kirac e incluyen al menos un mapa único)",
-        "is_markup": null
-      }
-    ],
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "scouting_report_drops_as_vaal_scouting_report_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "{0}% de probabilidad de que los informes de exploración de tus mapas caigan como informes de exploración vaal",
-        "reminder_text": "(Los informes de exploración vaal aleatorizan todas las misiones de Atlas de Kirac y corrompen todos los mapas que no sean únicos.)",
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 100,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Los informes de exploración de tus mapas caen como informes de exploración vaal",
-        "reminder_text": "(Los informes de exploración vaal aleatorizan todas las misiones de Atlas de Kirac y corrompen todos los mapas que no sean únicos.)",
-        "is_markup": null
-      }
-    ],
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "map_searing_exarch_altar_downside_effect_+%"
     ],
     "trade_stats": null,
@@ -34647,6 +35361,42 @@
   {
     "English": null,
     "ids": [
+      "map_shaped_region_collapses_from_different_map"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Al completar un objetivo de mapa en una región modificada, colapsa un mapa diferente dentro de la región modificada",
+        "reminder_text": "(Por defecto, cuando completas un objetivo en un mapa de una región modificada, este colapsa y se elimina de la región. Esto hace que todos los demás mapas de esa región obtengan modificadores adicionales. En los casos en los que la región modificada se parta en dos, solo quedará la región que tenga más mapas conectados)",
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "map_shaper_boss_drops_X_additional_shaper_items"
     ],
     "trade_stats": null,
@@ -34834,7 +35584,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Duración de las bonificaciones de los santuarios otorgadas por los santuarios de tus mapas aumentada un {0}% en los jugadores",
+        "string": "Duración de los efectos beneficiosos otorgados a los jugadores por los santuarios de tus mapas aumentada un {0}%",
         "reminder_text": null,
         "is_markup": null
       },
@@ -34854,7 +35604,7 @@
             "negate"
           ]
         ],
-        "string": "Duración de las bonificaciones de los santuarios otorgadas por los santuarios de tus mapas reducida un {0}% en los jugadores",
+        "string": "Duración de los efectos beneficiosos otorgados a los jugadores por los santuarios de tus mapas reducida un {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -34890,7 +35640,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Efecto de las bonificaciones de los santuarios otorgadas por los santuarios de tus mapas aumentado un {0}% en los jugadores",
+        "string": "Efecto de los efectos beneficiosos otorgados a los jugadores por los santuarios de tus mapas aumentado un {0}%",
         "reminder_text": null,
         "is_markup": null
       },
@@ -34910,7 +35660,7 @@
             "negate"
           ]
         ],
-        "string": "Efecto de las bonificaciones de los santuarios otorgadas por los santuarios de tus mapas reducido un {0}% en los jugadores",
+        "string": "Efecto de los efectos beneficiosos otorgados a los jugadores por los santuarios de tus mapas reducido un {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -34983,7 +35733,7 @@
           []
         ],
         "string": "Los santuarios de tus mapas tienen un {0}% de probabilidad de ser santuarios de codicia",
-        "reminder_text": "(En los monstruos, el aura del santuario de codicia aumenta la cantidad y la rareza de los objetos que arrojan y reduce el daño recibido. En los jugadores, la bonificación del santuario de codicia aumenta la cantidad y la rareza de los objetos que encuentran y aumenta el daño recibido)",
+        "reminder_text": "(En los monstruos, el aura del santuario de codicia aumenta la cantidad y la rareza de los objetos que arrojan y reduce el daño recibido. En los jugadores, el efecto beneficioso del santuario de codicia aumenta la cantidad y la rareza de los objetos que encuentran y aumenta el daño recibido)",
         "is_markup": null
       }
     ],
@@ -35126,7 +35876,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Tus mapas tienen un {0}% de probabilidad de contener un Alijo del contrabandista",
+        "string": "Tus mapas tienen {0}% de probabilidad de contener un alijo del contrabandista",
         "reminder_text": null,
         "is_markup": null
       }
@@ -35391,12 +36141,12 @@
           }
         ],
         "format": [
-          "#"
+          "ignore"
         ],
         "index_handlers": [
           []
         ],
-        "string": "Tus mapas están habitados por {0} exiliado renegado adicional",
+        "string": "Tus mapas están habitados por un exiliado renegado adicional",
         "reminder_text": null,
         "is_markup": null
       },
@@ -35695,6 +36445,62 @@
           ]
         ],
         "string": "La cantidad de objetos que contienen las cajas fuertes de tus mapas está reducida un {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_strongboxes_+%_chance_to_be_artisan"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Las cajas fuertes de tus mapas tienen la probabilidad de ser una caja fuerte del artesano aumentada un {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Las cajas fuertes de tus mapas tienen la probabilidad de ser una caja fuerte del artesano reducida un {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -36560,7 +37366,7 @@
           [],
           []
         ],
-        "string": "El sulfito que se encuentra en tus mapas se otorga como un mineral aleatorio en su lugar al {1}% del valor",
+        "string": "El sulfito que se encuentra en tus mapas se otorga como un mineral aleatorio en su lugar al {1}% de su valor",
         "reminder_text": null,
         "is_markup": null
       }
@@ -38285,6 +39091,114 @@
   {
     "English": null,
     "ids": [
+      "map_unstable_breach_additional_x_seconds_before_collapse"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Las fisuras inestables de tus mapas tardan un segundo adicional en colapsar una vez que se llena el contador",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Las fisuras inestables de tus mapas tardan {0} segundos adicionales en colapsar una vez que se llena el contador",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_unstable_breach_enrage_x_additional_rare_monsters"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Las fisuras inestables de tus mapas generan un monstruo raro adicional cuando se estabilizan",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Las fisuras inestables de tus mapas generan {0} monstruos raros adicionales cuando se estabilizan",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "map_upgrade_vaal_side_area_chance_%"
     ],
     "trade_stats": null,
@@ -39504,43 +40418,7 @@
           [],
           []
         ],
-        "string": "La fuerza vital que se encuentra en tus mapas se otorga como un cultivo aleatorio en su lugar al {1}% del valor",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "maven_invitation_awakened_gem_chance_+%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Probabilidad aumentada un {0}% de que caiga una gema de asistencia despertada al completar la Prueba de la Especialista o al derrotar a la Especialista",
+        "string": "La fuerza vital que se encuentra en tus mapas se otorga como un cultivo aleatorio en su lugar al {1}% de su valor",
         "reminder_text": null,
         "is_markup": null
       }
@@ -40157,42 +41035,6 @@
           []
         ],
         "string": "{0} usos restantes",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "sirus_additional_awakened_gem_drop_chance_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Sirus tiene un {0}% de probabilidad de arrojar una gema de asistencia despertada",
         "reminder_text": null,
         "is_markup": null
       }
@@ -40987,6 +41829,42 @@
           []
         ],
         "string": "Los escarabajos que caen en tus mapas tienen la probabilidad de ser escarabajos de incursión aumentada un {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_influence_scarab_more_likely_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Los escarabajos que caen en tus mapas tienen la probabilidad de ser escarabajos de influencia aumentada un {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -46508,32 +47386,7 @@
     "ids": [
       "map_hidden_spawn_extra_exiles"
     ],
-    "trade_stats": [
-      {
-        "id": "enchant.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "enchant",
-        "option": null
-      },
-      {
-        "id": "explicit.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "explicit",
-        "option": null
-      },
-      {
-        "id": "fractured.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "fractured",
-        "option": null
-      },
-      {
-        "id": "implicit.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "implicit",
-        "option": null
-      }
-    ],
+    "trade_stats": null,
     "hidden": true,
     "French": null,
     "German": null,

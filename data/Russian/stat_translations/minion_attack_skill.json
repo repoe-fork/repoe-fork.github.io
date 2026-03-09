@@ -955,7 +955,7 @@
           []
         ],
         "string": "Эта атака и приспешники имеют {0}% шанс испугать врагов при нанесении удара",
-        "reminder_text": null,
+        "reminder_text": "(Волшебные монстры с 50% шансом избегают бегства. Редкие и уникальные монстры не могут сбежать)",
         "is_markup": null
       }
     ],
@@ -2480,6 +2480,60 @@
   {
     "English": null,
     "ids": [
+      "additional_poisons_+_to_apply_vs_non_poisoned_enemies"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Эта атака и приспешники при отравлении неотравленных врагов накладывают дополнительный яд",
+        "reminder_text": "(Яд наносит постепенный урон хаосом, основанный на сумме базового физического урона и урона хаосом от удара. Урон от нескольких зарядов яда складывается)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Эта атака и приспешники при отравлении неотравленных врагов накладывают {0} дополнительных яда",
+        "reminder_text": "(Яд наносит постепенный урон хаосом, основанный на сумме базового физического урона и урона хаосом от удара. Урон от нескольких зарядов яда складывается)",
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "additional_chance_to_freeze_chilled_enemies_%"
     ],
     "trade_stats": null,
@@ -3443,6 +3497,62 @@
   {
     "English": null,
     "ids": [
+      "support_lethal_dose_poison_damage_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Эта атака и приспешники наносят на {0}% больше урона от яда",
+        "reminder_text": "(Яд наносит постепенный урон хаосом, основанный на сумме базового физического урона и урона хаосом от удара. Урон от нескольких зарядов яда складывается)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Эта атака и приспешники наносят на {0}% меньше урона от яда",
+        "reminder_text": "(Яд наносит постепенный урон хаосом, основанный на сумме базового физического урона и урона хаосом от удара. Урон от нескольких зарядов яда складывается)",
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "base_poison_duration_+%"
     ],
     "trade_stats": null,
@@ -3555,6 +3665,42 @@
   {
     "English": null,
     "ids": [
+      "skill_physical_damage_%_to_convert_to_lightning"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% физического урона этой атаки и приспешников становится уроном от молнии",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "chance_to_summon_support_ghost_on_killing_blow_%"
     ],
     "trade_stats": null,
@@ -3598,6 +3744,44 @@
           []
         ],
         "string": "Призывает фантома, когда это умение или приспешники не-фантомы наносят смертельный удар",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "additional_base_critical_strike_chance"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          [
+            "divide_by_one_hundred"
+          ]
+        ],
+        "string": "Эта атака и приспешники имеют {0}% к шансу критического удара",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5049,7 +5233,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% шанс призвать обычного Стража власти, когда вы наносите удар по уникальному монстру",
+        "string": "{0}% шанс призвать обычного Стража власти при нанесении\nудара по редкому или уникальному врагу",
         "reminder_text": null,
         "is_markup": null
       },
@@ -5067,7 +5251,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Призывает обычного Стража власти, когда вы наносите удар по уникальному монстру",
+        "string": "Призывает обычного Стража власти при нанесении\nудара по редкому или уникальному врагу",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5227,6 +5411,60 @@
   {
     "English": null,
     "ids": [
+      "explode_enemies_for_10%_life_as_random_element_on_killing_blow_chance_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Смертельные удары этой атакой и приспешников заставляют врагов взрываться с {0}% шансом, нанося десятую часть от их максимума здоровья в виде урона от случайной стихии",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Смертельные удары этой атакой и приспешников заставляют врагов взрываться, нанося десятую часть от их максимума здоровья в виде урона от случайной стихии",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "gain_frenzy_charge_on_killing_blow_vs_enemies_with_5+_poisons_%"
     ],
     "trade_stats": null,
@@ -5306,6 +5544,42 @@
           []
         ],
         "string": "Эта атака и приспешники имеют {0}% шанс получить заряд энергии при нанесении смертельного удара",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "hits_cannot_kill_enemies"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Эта атака и приспешники не могут убивать врагов",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5506,6 +5780,42 @@
           []
         ],
         "string": "Эта атака и приспешники наносят на {0}% больше физического урона",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "kill_normal_or_magic_enemy_on_hit_if_under_x%_life"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "При нанесении удара ваши атаки и приспешники убивают обычных и волшебных врагов с {0}% здоровья или ниже",
         "reminder_text": null,
         "is_markup": null
       }
@@ -6878,6 +7188,62 @@
   {
     "English": null,
     "ids": [
+      "support_overheat_ailment_damage_+%_final_per_3_fortification_consumed"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Эта атака и приспешники поглощают все Укрепление при атаке в ближнем бою, нанося на {0}% больше урона от состояний за каждые 3 поглощенных заряда Укрепления",
+        "reminder_text": "(Состояния, наносящие урон - кровотечение, поджог и яд)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Эта атака и приспешники поглощают все Укрепление при атаке в ближнем бою, нанося на {0}% меньше урона от состояний за каждые 3 поглощенных заряда Укрепления",
+        "reminder_text": "(Состояния, наносящие урон - кровотечение, поджог и яд)",
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "support_power_charge_on_crit_damage_+%_final_per_power_charge"
     ],
     "trade_stats": null,
@@ -7663,6 +8029,60 @@
           []
         ],
         "string": "Это умение и приспешники наносят больше урона по врагам в ближнем бою в зависимости от их близости, вплоть до {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "treat_enemy_resistances_as_negated_on_elemental_damage_hit_%_chance"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Удары приспешников и эта атака с {0}% шансом учитывают значение сопротивления стихиям врага как противоположное",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Удары приспешников и эта атака учитывают значение сопротивления стихиям врага как противоположное",
         "reminder_text": null,
         "is_markup": null
       }
@@ -12951,32 +13371,7 @@
     "ids": [
       "map_hidden_spawn_extra_exiles"
     ],
-    "trade_stats": [
-      {
-        "id": "enchant.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "enchant",
-        "option": null
-      },
-      {
-        "id": "explicit.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "explicit",
-        "option": null
-      },
-      {
-        "id": "fractured.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "fractured",
-        "option": null
-      },
-      {
-        "id": "implicit.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "implicit",
-        "option": null
-      }
-    ],
+    "trade_stats": null,
     "hidden": true,
     "French": null,
     "German": null,

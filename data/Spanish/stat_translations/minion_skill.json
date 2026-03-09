@@ -1284,7 +1284,7 @@
           []
         ],
         "string": "Los esbirros tienen un {0}% de probabilidad de hacer huir a los monstruos al ser golpeados",
-        "reminder_text": null,
+        "reminder_text": "(Los monstruos mágicos tienen un 50% de probabilidad de evitar huir. Los monstruos raros y únicos no pueden huir)",
         "is_markup": null
       }
     ],
@@ -2856,6 +2856,60 @@
   {
     "English": null,
     "ids": [
+      "additional_poisons_+_to_apply_vs_non_poisoned_enemies"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Los esbirros que envenenan a los enemigos que no están envenenados aplican un veneno adicional",
+        "reminder_text": "(El veneno inflige daño de caos degenerativo en función del daño físico y de caos base de la habilidad. El veneno es acumulativo)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Los esbirros que envenenan a los enemigos que no están envenenados aplican {0} venenos adicionales",
+        "reminder_text": "(El veneno inflige daño de caos degenerativo en función del daño físico y de caos base de la habilidad. El veneno es acumulativo)",
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "support_lesser_multiple_projectile_damage_+%_final"
     ],
     "trade_stats": null,
@@ -3307,6 +3361,62 @@
         ],
         "string": "El {0}% del daño de hielo de los esbirros se convierte en daño de fuego",
         "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_lethal_dose_poison_damage_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Los esbirros infligen un {0}% más de daño con veneno",
+        "reminder_text": "(El veneno inflige daño de caos degenerativo en función del daño físico y de caos base de la habilidad. El veneno es acumulativo)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Los esbirros infligen un {0}% menos de daño con veneno",
+        "reminder_text": "(El veneno inflige daño de caos degenerativo en función del daño físico y de caos base de la habilidad. El veneno es acumulativo)",
         "is_markup": null
       }
     ],
@@ -8921,6 +9031,44 @@
   {
     "English": null,
     "ids": [
+      "additional_base_critical_strike_chance"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          [
+            "divide_by_one_hundred"
+          ]
+        ],
+        "string": "Los esbirros tienen {0}% a la probabilidad de golpe crítico",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "maximum_attack_damage_+%_final_from_volatility_support"
     ],
     "trade_stats": null,
@@ -10189,6 +10337,60 @@
   {
     "English": null,
     "ids": [
+      "cover_in_frost_on_hit_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Los esbirros tienen un {0}% de probabilidad de cubrir a los enemigos con escarcha con cada golpe",
+        "reminder_text": "(Estar cubierto de escarcha otorga un 50% menos de probabilidad de golpe crítico y daño de hielo recibido aumentado un 20%, durante 4 segundos)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Los esbirros cubren a los enemigos con escarcha con cada golpe",
+        "reminder_text": "(Estar cubierto de escarcha otorga un 50% menos de probabilidad de golpe crítico y daño de hielo recibido aumentado un 20%, durante 4 segundos)",
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "critical_strike_chance_+%_per_righteous_charge"
     ],
     "trade_stats": null,
@@ -11295,6 +11497,60 @@
   {
     "English": null,
     "ids": [
+      "explode_enemies_for_10%_life_as_random_element_on_killing_blow_chance_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Los golpes mortales de los esbirros hacen que los enemigos tengan un {0}% de probabilidad de explotar para infligir una décima parte de su vida máxima como daño de un elemento aleatorio",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Los golpes mortales de los esbirros hacen que los enemigos exploten para infligir una décima parte de su vida máxima como daño de un elemento aleatorio",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "gain_frenzy_charge_on_killing_blow_vs_enemies_with_5+_poisons_%"
     ],
     "trade_stats": null,
@@ -11385,6 +11641,42 @@
   {
     "English": null,
     "ids": [
+      "graft_skill_tul_summon_maximum_allowed_demons"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Máximo de nacidos de la colmena: {0}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "guardian_relic_explode_on_death_for_%_life_as_element_damage"
     ],
     "trade_stats": null,
@@ -11411,6 +11703,42 @@
           []
         ],
         "string": "Los esbirros explotan al morir e infligen el {0}% de su vida máxima como daño del elemento elegido",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "hits_cannot_kill_enemies"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Los golpes de los esbirros no pueden matar a los enemigos",
         "reminder_text": null,
         "is_markup": null
       }
@@ -11762,6 +12090,42 @@
         ],
         "string": "Los esbirros aplican exposición al fuego, al hielo y al rayo con cada golpe",
         "reminder_text": "(Cada exposición aplica -10% a la resistencia correspondiente durante 4 segundos)",
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "kill_normal_or_magic_enemy_on_hit_if_under_x%_life"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Los esbirros matan a los enemigos de rareza normal y mágica que tenngan un {0}% de vid ao menos cuando los golpean",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -14256,7 +14620,7 @@
         "index_handlers": [
           []
         ],
-        "string": "La bonificación otorga velocidades de ataque y lanzamiento de hechizos aumentadas un {0}%",
+        "string": "El efecto beneficioso otorga velocidades de ataque y lanzamiento de hechizos aumentadas un {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -14292,7 +14656,7 @@
         "index_handlers": [
           []
         ],
-        "string": "La bonificación otorga probabilidad de golpe crítico aumentada un {0}%",
+        "string": "El efecto beneficioso otorga probabilidad de golpe crítico aumentada un {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -14336,7 +14700,7 @@
           [],
           []
         ],
-        "string": "La bonificación otorga de {0} a {1} de daño físico agregado a los ataques",
+        "string": "El efecto beneficioso otorga de {0} a {1} de daño físico agregado a los ataques",
         "reminder_text": null,
         "is_markup": null
       }
@@ -14428,7 +14792,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Los enemigos sobre las Áreas de Escarcha de las habilidades de los esbirros reciben Daño degenerativo de Hielo aumentado un {0}%",
+        "string": "Los enemigos que están sobre las áreas de escarcha de las habilidades de los esbirros reciben el daño degenerativo de hielo aumentado un {0}%",
         "reminder_text": "(El Suelo escarchado, la Escarcha acechante, el Escudo de escarcha y los vórtices son áreas escarchantes)",
         "is_markup": null
       },
@@ -14448,7 +14812,7 @@
             "negate"
           ]
         ],
-        "string": "Los enemigos sobre las Áreas de Escarcha de las habilidades de los esbirros reciben Daño degenerativo de Hielo reducido un {0}%",
+        "string": "Los enemigos que están sobre las áreas de escarcha de las habilidades de los esbirros reciben el daño degenerativo de hielo reducido un {0}%",
         "reminder_text": "(El Suelo escarchado, la Escarcha acechante, el Escudo de escarcha y los vórtices son áreas escarchantes)",
         "is_markup": null
       }
@@ -14484,7 +14848,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Los enemigos situados sobre las áreas de escarcha de las habilidades de los esbirros reciben daño de hielo aumentado en función del efecto del escarchamiento",
+        "string": "Los enemigos situados sobre las áreas de escarcha de las habilidades de los esbirros reciben el daño de hielo aumentado en función del efecto del escarchamiento",
         "reminder_text": "(El Suelo escarchado, la Escarcha acechante, el Escudo de escarcha y los vórtices son áreas escarchantes)",
         "is_markup": null
       }
@@ -14520,7 +14884,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Los enemigos Escarchados por los esbirros reciben Daño degenerativo de Hielo aumentado un {0}%",
+        "string": "Los enemigos escarchados por los esbirros reciben el daño degenerativo de hielo aumentado un {0}%",
         "reminder_text": null,
         "is_markup": null
       },
@@ -14540,7 +14904,7 @@
             "negate"
           ]
         ],
-        "string": "Los enemigos Escarchados por los esbirros reciben Daño degenerativo de Hielo reducido un {0}%",
+        "string": "Los enemigos escarchados por los esbirros reciben el daño degenerativo de hielo reducido un {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -14576,7 +14940,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Los enemigos Escarchados por los esbirros reciben Daño aumentado por el efecto de Escarchamiento",
+        "string": "Los enemigos escarchados por los esbirros reciben el daño aumentado por el efecto del escarchamiento",
         "reminder_text": null,
         "is_markup": null
       }
@@ -15246,7 +15610,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Los Enemigos Lisiados por Esbirros reciben Daño Físico aumentado un {0}%",
+        "string": "Los enemigos lisiados por los esbirros reciben el daño físico aumentado un {0}%",
         "reminder_text": null,
         "is_markup": null
       },
@@ -15266,7 +15630,7 @@
             "negate"
           ]
         ],
-        "string": "Los Enemigos Lisiados por Esbirros reciben Daño Físico reducido un {0}%",
+        "string": "Los enemigos lisiados por los esbirros reciben el daño físico reducido un {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -15310,7 +15674,7 @@
           [],
           []
         ],
-        "string": "Los Esbirros infligen {0} a {1} de Daño de Fuego añadido a Enemigos Incendiados",
+        "string": "Los esbirros infligen de {0} a {1} de daño de fuego agregado a los enemigos incendiados",
         "reminder_text": null,
         "is_markup": null
       }
@@ -15746,6 +16110,62 @@
         ],
         "string": "Los esbirros ganan 1 de Momentum cuando atacan\nLos esbirros ganan 1 de Momentum cada {0} segundos mientras canalizan un ataque\nLos esbirros pierden todo el Momentum si se mueven",
         "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_overheat_ailment_damage_+%_final_per_3_fortification_consumed"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Los esbirros consumen toda la fortificación al atacar cuerpo a cuerpo para infligir un {0}% más de daño con\nestados alterados por cada 3 de Fortificación consumida",
+        "reminder_text": "(Los estados alterados dañinos, o estados alterados que infligen daño, son sangrado, quemado y envenenado)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Los esbirros consumen toda la fortificación al atacar cuerpo a cuerpo para infligir un {0}% menos de daño con\nestados alterados por cada 3 de Fortificación consumida",
+        "reminder_text": "(Los estados alterados dañinos, o estados alterados que infligen daño, son sangrado, quemado y envenenado)",
         "is_markup": null
       }
     ],
@@ -16894,7 +17314,7 @@
             "milliseconds_to_seconds"
           ]
         ],
-        "string": "El Marchito infligido por los Esbirros tiene una duración base de {0} segundo",
+        "string": "El marchitamiento aplicado por los esbirros tiene una duración base de {0} segundo",
         "reminder_text": null,
         "is_markup": null
       },
@@ -16914,7 +17334,7 @@
             "milliseconds_to_seconds"
           ]
         ],
-        "string": "El Marchito infligido por los Esbirros tiene una duración base de {0} segundos",
+        "string": "El marchitamiento aplicado por los esbirros tiene una duración base de {0} segundos",
         "reminder_text": null,
         "is_markup": null
       }
@@ -17017,6 +17437,60 @@
   {
     "English": null,
     "ids": [
+      "treat_enemy_resistances_as_negated_on_elemental_damage_hit_%_chance"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Los golpes de los esbirros tienen un {0}% de probabilidad de tratar los valores de las resistencias elementales de los monstruos enemigos como si estuvieran invertidas",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Los golpes de los esbirros tratan los valores de las resistencias elementales de los monstruos enemigos como si estuvieran invertidas",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "void_spawn_withered_base_duration_ms"
     ],
     "trade_stats": null,
@@ -17044,7 +17518,7 @@
             "milliseconds_to_seconds"
           ]
         ],
-        "string": "El Marchito infligido por los Esbirros tiene una duración base de {0} segundo",
+        "string": "El marchitamiento aplicado por los esbirros tiene una duración base de {0} segundo",
         "reminder_text": null,
         "is_markup": null
       },
@@ -17064,7 +17538,7 @@
             "milliseconds_to_seconds"
           ]
         ],
-        "string": "El Marchito infligido por los Esbirros tiene una duración base de {0} segundos",
+        "string": "El marchitamiento aplicado por los esbirros tiene una duración base de {0} segundos",
         "reminder_text": null,
         "is_markup": null
       }
@@ -17100,7 +17574,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Los esbirros tienen un {0}% de probabilidad de aplicar Marchito al golpear",
+        "string": "Los esbirros tienen un {0}% de probabilidad de aplicar marchitamiento con cada golpe",
         "reminder_text": "(Marchito aplica \"Daño de caos recibido aumentado un 6%\", y puede aplicarse hasta 15 veces)",
         "is_markup": null
       },
@@ -17118,7 +17592,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Los esbirros aplican Marchito con cada golpe",
+        "string": "Los esbirros aplican marchitamiento con cada golpe",
         "reminder_text": "(Marchito aplica \"Daño de caos recibido aumentado un 6%\", y puede aplicarse hasta 15 veces)",
         "is_markup": null
       }
@@ -17154,7 +17628,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Los esbirros tienen un {0}% de probabilidad de aplicar Marchito al golpear",
+        "string": "Los esbirros tienen un {0}% de probabilidad de aplicar marchitamiento con cada golpe",
         "reminder_text": "(Marchito aplica \"Daño de caos recibido aumentado un 6%\", y puede aplicarse hasta 15 veces)",
         "is_markup": null
       },
@@ -17172,7 +17646,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Los esbirros aplican Marchito con cada golpe",
+        "string": "Los esbirros aplican marchitamiento con cada golpe",
         "reminder_text": "(Marchito aplica \"Daño de caos recibido aumentado un 6%\", y puede aplicarse hasta 15 veces)",
         "is_markup": null
       }
@@ -17208,7 +17682,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Arácnido de agonía tiene un {0}% de probabilidad de aplicar Marchito durante 2 segundos con cada golpe",
+        "string": "Arácnido de agonía tiene un {0}% de probabilidad de aplicar marchitamiento durante 2 segundos con cada golpe",
         "reminder_text": "(Marchito aplica \"Daño de caos recibido aumentado un 6%\", y puede aplicarse hasta 15 veces)",
         "is_markup": null
       },
@@ -17226,7 +17700,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Arácnido de agonía aplica Marchito durante 2 segundos con cada golpe",
+        "string": "Arácnido de agonía aplica marchitamiento durante 2 segundos con cada golpe",
         "reminder_text": "(Marchito aplica \"Daño de caos recibido aumentado un 6%\", y puede aplicarse hasta 15 veces)",
         "is_markup": null
       }
@@ -22460,32 +22934,7 @@
     "ids": [
       "map_hidden_spawn_extra_exiles"
     ],
-    "trade_stats": [
-      {
-        "id": "enchant.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "enchant",
-        "option": null
-      },
-      {
-        "id": "explicit.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "explicit",
-        "option": null
-      },
-      {
-        "id": "fractured.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "fractured",
-        "option": null
-      },
-      {
-        "id": "implicit.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "implicit",
-        "option": null
-      }
-    ],
+    "trade_stats": null,
     "hidden": true,
     "French": null,
     "German": null,

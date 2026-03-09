@@ -469,7 +469,7 @@
             "divide_by_one_hundred"
           ]
         ],
-        "string": "Cette Attaque et vos Créatures Drainent {0}% de leurs Dégâts sous forme de Bouclier d'énergie",
+        "string": "Cette Attaque et les Créatures Drainent {0}% de leurs Dégâts sous forme de Bouclier d'énergie",
         "reminder_text": "(Le Bouclier d'énergie drainé se récupère sur la durée. Plusieurs Drains peuvent avoir lieu simultanément, jusqu'à un certain taux maximal)",
         "is_markup": null
       }
@@ -950,7 +950,7 @@
           []
         ],
         "string": "Cette Attaque et les Créatures ont {0}% de faire fuir les Monstres au Toucher",
-        "reminder_text": null,
+        "reminder_text": "(Les monstres Magiques ont 50% de chances de ne pas fuir. Les monstres Rares et Uniques ne peuvent pas fuir)",
         "is_markup": null
       }
     ],
@@ -1097,7 +1097,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% d'Augmentation de l'Effet de la Frigorification infligée par cette Attaque ou vos Créatures",
+        "string": "{0}% d'Augmentation de l'Effet de la Frigorification infligée par cette Attaque ou les Créatures",
         "reminder_text": null,
         "is_markup": null
       },
@@ -1117,7 +1117,7 @@
             "negate"
           ]
         ],
-        "string": "{0}% de Réduction de l'Effet de la Frigorification infligée par cette Attaque ou vos Créatures",
+        "string": "{0}% de Réduction de l'Effet de la Frigorification infligée par cette Attaque ou les Créatures",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2480,6 +2480,60 @@
   {
     "English": null,
     "ids": [
+      "additional_poisons_+_to_apply_vs_non_poisoned_enemies"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Cette Attaque et les Créatures qui Empoisonnent des Ennemis non Empoisonnés infligent un Poison supplémentaire",
+        "reminder_text": "(Le Poison inflige des Dégâts de chaos sur la durée, en fonction des Dégâts physiques et des Dégâts de chaos de l'Aptitude. Le Poison est cumulable.)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Cette Attaque et les Créatures qui Empoisonnent des Ennemis non Empoisonnés infligent {0} Poisons supplémentaires",
+        "reminder_text": "(Le Poison inflige des Dégâts de chaos sur la durée, en fonction des Dégâts physiques et des Dégâts de chaos de l'Aptitude. Le Poison est cumulable.)",
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "additional_chance_to_freeze_chilled_enemies_%"
     ],
     "trade_stats": null,
@@ -3443,6 +3497,62 @@
   {
     "English": null,
     "ids": [
+      "support_lethal_dose_poison_damage_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Cette Attaque et les Créatures ont {0}% Davantage de Dégâts avec le Poison",
+        "reminder_text": "(Le Poison inflige des Dégâts de chaos sur la durée, en fonction des Dégâts physiques et des Dégâts de chaos de l'Aptitude. Le Poison est cumulable.)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Cette Attaque et les Créatures ont {0}% de Perte de Dégâts avec le Poison",
+        "reminder_text": "(Le Poison inflige des Dégâts de chaos sur la durée, en fonction des Dégâts physiques et des Dégâts de chaos de l'Aptitude. Le Poison est cumulable.)",
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "base_poison_duration_+%"
     ],
     "trade_stats": null,
@@ -3555,6 +3665,42 @@
   {
     "English": null,
     "ids": [
+      "skill_physical_damage_%_to_convert_to_lightning"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Cette Attaque et les Créatures Convertissent {0}% des Dégâts physiques en Dégâts de foudre",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "chance_to_summon_support_ghost_on_killing_blow_%"
     ],
     "trade_stats": null,
@@ -3574,7 +3720,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% de chances d'Invoquer une Apparition lorsque cette Aptitude\nou vos Créatures (autres que des Apparitions) infligent un Coup mortel",
+        "string": "{0}% de chances d'Invoquer une Apparition lorsque cette Aptitude\nou les Créatures (autres que des Apparitions) infligent un Coup mortel",
         "reminder_text": null,
         "is_markup": null
       },
@@ -3592,7 +3738,45 @@
         "index_handlers": [
           []
         ],
-        "string": "Invoque une Apparition lorsque cette Aptitude ou vos Créatures\n(autres que des Apparitions)infligent un Coup mortel",
+        "string": "Invoque une Apparition lorsque cette Aptitude ou les Créatures\n(autres que des Apparitions)infligent un Coup mortel",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "additional_base_critical_strike_chance"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          [
+            "divide_by_one_hundred"
+          ]
+        ],
+        "string": "Cette Attaque et les Créatures ont {0}% aux Chances de coup critique",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3862,7 +4046,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Les Coups impitoyables de cette Attaque ou de vos Créatures ont {0}% Davantage de Dégâts avec les Altérations infligées en Touchant en mêlée",
+        "string": "Les Coups impitoyables de cette Attaque ou de les Créatures ont {0}% Davantage de Dégâts avec les Altérations infligées en Touchant en mêlée",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4508,7 +4692,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% d'Augmentation de l'Effet de Cruauté octroyé par cette Attaque ou vos Créatures",
+        "string": "{0}% d'Augmentation de l'Effet de Cruauté octroyé par cette Attaque ou les Créatures",
         "reminder_text": null,
         "is_markup": null
       },
@@ -4528,7 +4712,7 @@
             "negate"
           ]
         ],
-        "string": "{0}% de Réduction l'Effet de Cruauté octroyé par cette Attaque ou vos Créatures",
+        "string": "{0}% de Réduction l'Effet de Cruauté octroyé par cette Attaque ou les Créatures",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4676,7 +4860,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Cette Attaque et vos Créatures ont {0}% d'Augmentation de Dégâts pendant le Drain de Bouclier d'énergie",
+        "string": "Cette Attaque et les Créatures ont {0}% d'Augmentation de Dégâts pendant le Drain de Bouclier d'énergie",
         "reminder_text": null,
         "is_markup": null
       },
@@ -4696,7 +4880,7 @@
             "negate"
           ]
         ],
-        "string": "Cette Attaque et vos Créatures ont {0}% de Réduction de Dégâts pendant le Drain de Bouclier d'énergie",
+        "string": "Cette Attaque et les Créatures ont {0}% de Réduction de Dégâts pendant le Drain de Bouclier d'énergie",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4732,7 +4916,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Cette Attaque et vos Créatures ont {0}% d'Augmentation de Dégâts pendant le Drain de Vie",
+        "string": "Cette Attaque et les Créatures ont {0}% d'Augmentation de Dégâts pendant le Drain de Vie",
         "reminder_text": null,
         "is_markup": null
       },
@@ -4752,7 +4936,7 @@
             "negate"
           ]
         ],
-        "string": "Cette Attaque et vos Créatures ont {0}% de Réduction de Dégâts pendant le Drain de Vie",
+        "string": "Cette Attaque et les Créatures ont {0}% de Réduction de Dégâts pendant le Drain de Vie",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4788,7 +4972,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Cette Attaque et vos Créatures ont {0}% d'Augmentation de Dégâts pendant le Drain de Mana",
+        "string": "Cette Attaque et les Créatures ont {0}% d'Augmentation de Dégâts pendant le Drain de Mana",
         "reminder_text": null,
         "is_markup": null
       },
@@ -4808,7 +4992,7 @@
             "negate"
           ]
         ],
-        "string": "Cette Attaque et vos Créatures ont {0}% de Réduction de Dégâts pendant le Drain de Mana",
+        "string": "Cette Attaque et les Créatures ont {0}% de Réduction de Dégâts pendant le Drain de Mana",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5044,7 +5228,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% Chances d'Invoquer une Sentinelle soumise Normale lorsque\nvous Touchez un Monstre Unique",
+        "string": "{0}% de chances d'Invoquer une Sentinelle soumise Normale en Touchant un Monstre Rare ou Unique",
         "reminder_text": null,
         "is_markup": null
       },
@@ -5062,7 +5246,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Vous Invoquez une Sentinelle soumise Normale lorsque\nvous Touchez un Monstre Unique",
+        "string": "Invoque une Sentinelle soumise Normale en Touchant un Monstre Rare ou Unique",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5098,7 +5282,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Les Ennemis Électrocutés par cette Attaque ou vos Créatures ont {0}% d'Augmentation de Vitesse de déplacement",
+        "string": "Les Ennemis Électrocutés par cette Attaque ou les Créatures ont {0}% d'Augmentation de Vitesse de déplacement",
         "reminder_text": null,
         "is_markup": null
       },
@@ -5118,7 +5302,7 @@
             "negate"
           ]
         ],
-        "string": "Les Ennemis Électrocutés par cette Attaque ou vos Créatures ont {0}% de Réduction de Vitesse de déplacement",
+        "string": "Les Ennemis Électrocutés par cette Attaque ou les Créatures ont {0}% de Réduction de Vitesse de déplacement",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5154,7 +5338,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Les Ennemis Électrocutés par cette Attaque ou vos Créatures ont {0}% d'Augmentation des Dégâts physiques subis",
+        "string": "Les Ennemis Électrocutés par cette Attaque ou les Créatures ont {0}% d'Augmentation des Dégâts physiques subis",
         "reminder_text": null,
         "is_markup": null
       },
@@ -5174,7 +5358,7 @@
             "negate"
           ]
         ],
-        "string": "Les Ennemis Électrocutés par cette Attaque ou vos Créatures ont {0}% de Réduction des Dégâts physiques subis",
+        "string": "Les Ennemis Électrocutés par cette Attaque ou les Créatures ont {0}% de Réduction des Dégâts physiques subis",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5227,6 +5411,60 @@
   {
     "English": null,
     "ids": [
+      "explode_enemies_for_10%_life_as_random_element_on_killing_blow_chance_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Les Coups fatals portés par cette Attaque et les Créatures ont {0}% de chances de faire Exploser les Ennemis, infligeant un dixième de leur Vie maximale sous forme de Dégâts d'un Élément aléatoire",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Les Coups fatals portés par cette Attaque et les Créatures font Exploser les Ennemis, infligeant un dixième de leur Vie maximale sous forme de Dégâts d'un Élément aléatoire",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "gain_frenzy_charge_on_killing_blow_vs_enemies_with_5+_poisons_%"
     ],
     "trade_stats": null,
@@ -5246,7 +5484,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Cette Attaque et vos Créatures ont {0}% de chances de générer une Charge de frénésie en Tuant un Ennemi affecté par au moins 5 Poisons",
+        "string": "Cette Attaque et les Créatures ont {0}% de chances de générer une Charge de frénésie en Tuant un Ennemi affecté par au moins 5 Poisons",
         "reminder_text": null,
         "is_markup": null
       },
@@ -5264,7 +5502,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Cette Attaque et vos Créatures génèrent une Charge de frénésie en Tuant un Ennemi affecté par au moins 5 Poisons",
+        "string": "Cette Attaque et les Créatures génèrent une Charge de frénésie en Tuant un Ennemi affecté par au moins 5 Poisons",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5317,6 +5555,42 @@
   {
     "English": null,
     "ids": [
+      "hits_cannot_kill_enemies"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Les Touches découlant de cette Attaque et des Créatures ne peuvent pas tuer les Ennemis",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "hits_grant_cruelty"
     ],
     "trade_stats": null,
@@ -5336,7 +5610,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Cette Attaque octroie Cruauté au Toucher\nVos Créatures gagnent Cruauté au Toucher",
+        "string": "Cette Attaque octroie Cruauté au Toucher\nLes Créatures gagnent Cruauté au Toucher",
         "reminder_text": "(Cruauté permet aux Aptitudes modifiées par Soutien : Cruauté d'avoir jusqu'à 40% Davantage de Dégâts sur la durée, en fonction des Dégâts au Toucher qui vous ont donné Cruauté)",
         "is_markup": null
       }
@@ -5464,7 +5738,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Les Dégâts d'Empalement infligés aux Ennemis Empalés par cette Aptitude ou par vos Créatures Submergent {0}% de la Réduction des Dégâts physiques",
+        "string": "Les Dégâts d'Empalement infligés aux Ennemis Empalés par cette Aptitude ou par les Créatures Submergent {0}% de la Réduction des Dégâts physiques",
         "reminder_text": "(Lorsqu'elle est Submergée, la Réduction des Dégâts physiques de la cible est réduite, mais elle ne peut jamais devenir négative)",
         "is_markup": null
       }
@@ -5501,6 +5775,42 @@
           []
         ],
         "string": "Cette Attaque et les Créatures ont {0}% Davantage de Dégâts physiques",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "kill_normal_or_magic_enemy_on_hit_if_under_x%_life"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Vos Attaques et Créatures tuent les Ennemis de Rareté Normale ou Magique ayant {0}% de Vie ou moins lorsqu'ils sont Touchés",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5630,7 +5940,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Cette Attaque et vos Créatures ont {0}% de chances de Repousser les Ennemis Touchés à Courte portée",
+        "string": "Cette Attaque et les Créatures ont {0}% de chances de Repousser les Ennemis Touchés à Courte portée",
         "reminder_text": "(Une Courte portée couvre un rayon allant jusqu'à 2 mètres)",
         "is_markup": null
       }
@@ -6054,7 +6364,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Les Projectiles de cette Attaque et de vos Créatures ont {0}% d'Augmentation de Dégâts après avoir Transpercé",
+        "string": "Les Projectiles de cette Attaque et des Créatures ont {0}% d'Augmentation de Dégâts après avoir Transpercé",
         "reminder_text": null,
         "is_markup": null
       },
@@ -6074,7 +6384,7 @@
             "negate"
           ]
         ],
-        "string": "Les Projectiles de cette Attaque et de vos Créatures ont {0}% de Réduction de Dégâts après avoir Transpercé",
+        "string": "Les Projectiles de cette Attaque et des Créatures ont {0}% de Réduction de Dégâts après avoir Transpercé",
         "reminder_text": null,
         "is_markup": null
       }
@@ -6146,7 +6456,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% d'Augmentation de l'Effet des Électrocutions infligées par les Coups critiques de cette Attaque ou de vos Créatures",
+        "string": "{0}% d'Augmentation de l'Effet des Électrocutions infligées par les Coups critiques de cette Attaque ou des Créatures",
         "reminder_text": null,
         "is_markup": null
       },
@@ -6166,7 +6476,7 @@
             "negate"
           ]
         ],
-        "string": "{0}% de Réduction de l'Effet des Électrocutions infligées par les Coups critiques de cette Attaque ou de vos Créatures",
+        "string": "{0}% de Réduction de l'Effet des Électrocutions infligées par les Coups critiques de cette Attaque ou des Créatures",
         "reminder_text": null,
         "is_markup": null
       }
@@ -6786,7 +7096,7 @@
           ],
           []
         ],
-        "string": "Lorsque vous atteignez {2} d'Accélération, vous perdez toute votre Accélération et gagnez Rapidité pendant {1} secondes\nLorsque vos Créatures atteignent {2} d'Accélération, elles perdent toute leur Accélération et gagnent Rapidité pendant une Durée de base de {0} secondes",
+        "string": "Lorsque vous atteignez {2} d'Accélération, vous perdez toute votre Accélération et gagnez Rapidité pendant {1} secondes\nLorsque les Créatures atteignent {2} d'Accélération, elles perdent toute leur Accélération et gagnent Rapidité pendant une Durée de base de {0} secondes",
         "reminder_text": null,
         "is_markup": null
       }
@@ -6832,7 +7142,7 @@
           ],
           []
         ],
-        "string": "Vous gagnez 1 d'Accélération lorsque vous utilisez cette Attaque\nVous perdez toute votre Accélération si vous vous déplacez\nVos Créatures gagnent 1 d'Accélération lorsqu'elles Attaquent\nVos Créatures gagnent 1 d'Accélération toutes les {0} secondes tant qu'elles Canalisent une Attaque\nVos Créatures perdent toute leur Accélération si elles se déplacent",
+        "string": "Vous gagnez 1 d'Accélération lorsque vous utilisez cette Attaque\nVous perdez toute votre Accélération si vous vous déplacez\nLes Créatures gagnent 1 d'Accélération lorsqu'elles Attaquent\nLes Créatures gagnent 1 d'Accélération toutes les {0} secondes tant qu'elles Canalisent une Attaque\nLes Créatures perdent toute leur Accélération si elles se déplacent",
         "reminder_text": null,
         "is_markup": null
       },
@@ -6861,8 +7171,64 @@
             "milliseconds_to_seconds_2dp"
           ]
         ],
-        "string": "Vous gagnez 1 d'Accélération lorsque vous utilisez cette Attaque\nVous gagnez 1 d'Accélération toutes les {1} secondes tant que vous Canalisez cette Attaque\nVous perdez toute votre Accélération si vous vous déplacez\nVos Créatures gagnent 1 d'Accélération lorsqu'elles Attaquent\nVos Créatures gagnent 1 d'Accélération toutes les {0} secondes tant qu'elles Canalisent une Attaque\nVos Créatures perdent toute leur Accélération si elles se déplacent",
+        "string": "Vous gagnez 1 d'Accélération lorsque vous utilisez cette Attaque\nVous gagnez 1 d'Accélération toutes les {1} secondes tant que vous Canalisez cette Attaque\nVous perdez toute votre Accélération si vous vous déplacez\nLes Créatures gagnent 1 d'Accélération lorsqu'elles Attaquent\nLes Créatures gagnent 1 d'Accélération toutes les {0} secondes tant qu'elles Canalisent une Attaque\nLes Créatures perdent toute leur Accélération si elles se déplacent",
         "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_overheat_ailment_damage_+%_final_per_3_fortification_consumed"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Cette Attaque et les Créatures consomment tous les cumuls de Renforcement en Attaquant en Mêlée, et ont {0}% Davantage de Dégâts avec les Altérations tous les 3 cumuls de Renforcement consommés",
+        "reminder_text": "(Les Altérations qui infligent des Dégâts sont : le Saignement, l'Embrasement et le Poison)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Cette Attaque et les Créatures consomment tous les cumuls de Renforcement en Attaquant en Mêlée, et ont {0}% de Perte de Dégâts avec les Altérations tous les 3 cumuls de Renforcement consommés",
+        "reminder_text": "(Les Altérations qui infligent des Dégâts sont : le Saignement, l'Embrasement et le Poison)",
         "is_markup": null
       }
     ],
@@ -7121,7 +7487,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Cette Attaque et vos Créatures ont {0}% Davantage de Dégâts",
+        "string": "Cette Attaque et les Créatures ont {0}% Davantage de Dégâts",
         "reminder_text": null,
         "is_markup": null
       },
@@ -7141,7 +7507,7 @@
             "negate"
           ]
         ],
-        "string": "Cette Attaque et vos Créatures ont {0}% de Perte de Dégâts",
+        "string": "Cette Attaque et les Créatures ont {0}% de Perte de Dégâts",
         "reminder_text": null,
         "is_markup": null
       }
@@ -7177,7 +7543,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Cette Attaque et vos Créatures Électrocutent les Ennemis comme si elles avaient {0}% Davantage de Dégâts",
+        "string": "Cette Attaque et les Créatures Électrocutent les Ennemis comme si elles avaient {0}% Davantage de Dégâts",
         "reminder_text": null,
         "is_markup": null
       },
@@ -7197,7 +7563,7 @@
             "negate"
           ]
         ],
-        "string": "Cette Attaque et vos Créatures Électrocutent les Ennemis comme si elles avaient {0}% de Perte de Dégâts",
+        "string": "Cette Attaque et les Créatures Électrocutent les Ennemis comme si elles avaient {0}% de Perte de Dégâts",
         "reminder_text": null,
         "is_markup": null
       }
@@ -7567,7 +7933,7 @@
             "milliseconds_to_seconds"
           ]
         ],
-        "string": "Cette Attaque et vos Créatures ont {0}% de chances de gagner Assaut pendant {1} secondes lorsque vous Touchez un Ennemi Unique",
+        "string": "Cette Attaque et les Créatures ont {0}% de chances de gagner Assaut pendant {1} secondes lorsque vous Touchez un Ennemi Unique",
         "reminder_text": "(Assaut octroie 20% d'Augmentation de Vitesse d'attaque, d'incantation et de déplacement)",
         "is_markup": null
       }
@@ -7658,6 +8024,60 @@
           []
         ],
         "string": "Cette Aptitude et les Créatures infligent jusqu'à {0}% Davantage de Dégâts de mêlée aux Ennemis en fonction de leur proximité",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "treat_enemy_resistances_as_negated_on_elemental_damage_hit_%_chance"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Les Touches découlant de cette Attaque et des Créatures ont {0}% de chances de traiter les valeurs des Résistances élémentaires des Monstres Ennemis comme si elles étaient inversées",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Les Touches découlant de cette Attaque et des Créatures traitent les valeurs des Résistances élémentaires des Monstres Ennemis comme si elles étaient inversées",
         "reminder_text": null,
         "is_markup": null
       }
@@ -12951,32 +13371,7 @@
     "ids": [
       "map_hidden_spawn_extra_exiles"
     ],
-    "trade_stats": [
-      {
-        "id": "enchant.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "enchant",
-        "option": null
-      },
-      {
-        "id": "explicit.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "explicit",
-        "option": null
-      },
-      {
-        "id": "fractured.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "fractured",
-        "option": null
-      },
-      {
-        "id": "implicit.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "implicit",
-        "option": null
-      }
-    ],
+    "trade_stats": null,
     "hidden": true,
     "French": [
       {

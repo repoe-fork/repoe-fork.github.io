@@ -1280,7 +1280,7 @@
           []
         ],
         "string": "ミニオンはヒット時に{0}%の確率でモンスターを逃走させる",
-        "reminder_text": null,
+        "reminder_text": "(マジックモンスターは50%の確率で逃走を無効化する。レアおよびユニークモンスターは逃走しない)",
         "is_markup": null
       }
     ],
@@ -2856,6 +2856,60 @@
   {
     "English": null,
     "ids": [
+      "additional_poisons_+_to_apply_vs_non_poisoned_enemies"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "毒状態でない敵に毒を付与したミニオンは毒を追加で1スタック付与する",
+        "reminder_text": "(Poison: 毒は、スキルの基礎物理ダメージと基礎混沌ダメージに基づいて混沌継続ダメージを与える。複数インスタンスの毒がスタックできる)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "毒状態でない敵に毒を付与したミニオンは毒を追加で{0}スタック付与する",
+        "reminder_text": "(Poison: 毒は、スキルの基礎物理ダメージと基礎混沌ダメージに基づいて混沌継続ダメージを与える。複数インスタンスの毒がスタックできる)",
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "support_lesser_multiple_projectile_damage_+%_final"
     ],
     "trade_stats": null,
@@ -3303,6 +3357,62 @@
         ],
         "string": "ミニオンによる冷気ダメージの{0}%を火ダメージに変換する",
         "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_lethal_dose_poison_damage_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ミニオンは毒ダメージが{0}%上昇する",
+        "reminder_text": "(Poison: 毒は、スキルの基礎物理ダメージと基礎混沌ダメージに基づいて混沌継続ダメージを与える。複数インスタンスの毒がスタックできる)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "ミニオンは毒ダメージが{0}%低下する",
+        "reminder_text": "(Poison: 毒は、スキルの基礎物理ダメージと基礎混沌ダメージに基づいて混沌継続ダメージを与える。複数インスタンスの毒がスタックできる)",
         "is_markup": null
       }
     ],
@@ -8921,6 +9031,44 @@
   {
     "English": null,
     "ids": [
+      "additional_base_critical_strike_chance"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          [
+            "divide_by_one_hundred"
+          ]
+        ],
+        "string": "ミニオンはクリティカル率が{0}%される",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "maximum_attack_damage_+%_final_from_volatility_support"
     ],
     "trade_stats": null,
@@ -10189,6 +10337,60 @@
   {
     "English": null,
     "ids": [
+      "cover_in_frost_on_hit_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ミニオンは{0}%の確率でヒット時に敵を霜まみれにする",
+        "reminder_text": "(Covered in Frost: 霜まみれは、クリティカル率を50%低下させ、受ける冷気ダメージを20%増加させる。持続時間は4秒)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ミニオンはヒット時に敵を霜まみれにする",
+        "reminder_text": "(Covered in Frost: 霜まみれは、クリティカル率を50%低下させ、受ける冷気ダメージを20%増加させる。持続時間は4秒)",
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "critical_strike_chance_+%_per_righteous_charge"
     ],
     "trade_stats": null,
@@ -11295,6 +11497,60 @@
   {
     "English": null,
     "ids": [
+      "explode_enemies_for_10%_life_as_random_element_on_killing_blow_chance_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ミニオンによるキリングブローは敵を{0}%の確率で爆発させ、その最大ライフの10分の1をランダムな属性の元素ダメージとして与える",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ミニオンによるキリングブローは敵を爆発させ、その最大ライフの10分の1をランダムな属性の元素ダメージとして与える",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "gain_frenzy_charge_on_killing_blow_vs_enemies_with_5+_poisons_%"
     ],
     "trade_stats": null,
@@ -11385,6 +11641,42 @@
   {
     "English": null,
     "ids": [
+      "graft_skill_tul_summon_maximum_allowed_demons"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ハイヴボーンの最大数 {0}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "guardian_relic_explode_on_death_for_%_life_as_element_damage"
     ],
     "trade_stats": null,
@@ -11407,6 +11699,42 @@
           []
         ],
         "string": "ミニオンは死亡時に爆発し、その最大ライフの{0}%を選んだ元素属性のダメージとして与える",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "hits_cannot_kill_enemies"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ミニオンによるヒットは敵をキルできない",
         "reminder_text": null,
         "is_markup": null
       }
@@ -11758,6 +12086,42 @@
         ],
         "string": "ミニオンはヒット時に曝露（火）、曝露（冷気）、曝露（雷）を付与する",
         "reminder_text": "(Exposure: 曝露は対応する元素耐性を-10%する。持続時間は4秒)",
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "kill_normal_or_magic_enemy_on_hit_if_under_x%_life"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ミニオンはノーマルおよびマジックレアリティの敵がヒットを受けた時にそのライフが最大ライフの{0}%より低ければキルする",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -15755,6 +16119,62 @@
   {
     "English": null,
     "ids": [
+      "support_overheat_ailment_damage_+%_final_per_3_fortification_consumed"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ミニオンは近接アタック時に堅牢化を全て消費し、\n消費した堅牢化3スタックごとに状態異常のダメージが{0}%上昇する",
+        "reminder_text": "(Damaging Ailments: ダメージを与える状態異常には、出血、発火、毒がある)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "ミニオンは近接アタック時に堅牢化を全て消費し、\n消費した堅牢化3スタックごとに状態異常のダメージが{0}%低下する",
+        "reminder_text": "(Damaging Ailments: ダメージを与える状態異常には、出血、発火、毒がある)",
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "support_overpowered_base_duration_ms"
     ],
     "trade_stats": null,
@@ -17003,6 +17423,60 @@
           ]
         ],
         "string": "このスキルおよびミニオンはフレンジーチャージ1個ごとにトラップ投擲スピードが{0}%減少する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "treat_enemy_resistances_as_negated_on_elemental_damage_hit_%_chance"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ミニオンによるヒットは{0}%の確率で敵モンスターの元素耐性を反転したものとして扱う",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ミニオンによるヒットは敵モンスターの元素耐性を反転したものとして扱う",
         "reminder_text": null,
         "is_markup": null
       }
@@ -22460,32 +22934,7 @@
     "ids": [
       "map_hidden_spawn_extra_exiles"
     ],
-    "trade_stats": [
-      {
-        "id": "enchant.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "enchant",
-        "option": null
-      },
-      {
-        "id": "explicit.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "explicit",
-        "option": null
-      },
-      {
-        "id": "fractured.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "fractured",
-        "option": null
-      },
-      {
-        "id": "implicit.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "implicit",
-        "option": null
-      }
-    ],
+    "trade_stats": null,
     "hidden": true,
     "French": null,
     "German": null,

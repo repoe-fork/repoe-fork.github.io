@@ -156,7 +156,7 @@
       {
         "condition": [
           {
-            "min": null,
+            "min": 1,
             "max": null,
             "negated": null
           }
@@ -167,7 +167,27 @@
         "index_handlers": [
           []
         ],
-        "string": "マップに出現するブリーチのモンスター密度が{0}%増加する",
+        "string": "マップに出現するブリーチモンスターのパックサイズが{0}%増加する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "マップに出現するブリーチモンスターのパックサイズが{0}%減少する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -878,42 +898,6 @@
   {
     "English": null,
     "ids": [
-      "atlas_daily_kirac_missions_+"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "毎日キラックミッションを追加で{0}獲得する",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "atlas_daily_master_missions_+"
     ],
     "trade_stats": null,
@@ -1245,7 +1229,7 @@
         "index_handlers": [
           []
         ],
-        "string": "コラプト状態のレアマップとそのマップに適用された全てのマップクラフトオプションは\nマップが開かれた時に予測不可能にに改変される",
+        "string": "コラプトレアマップは開いた時に予測不可能に変更される",
         "reminder_text": null,
         "is_markup": null
       }
@@ -1624,7 +1608,7 @@
           []
         ],
         "string": "マップは0%から80%のランダムな数値の分、モッド効果が上昇する\nマップに追加コンテンツが出現することがない\nマップにインフルエンスを適用することができない",
-        "reminder_text": "(アビス、ビヨンドデーモンポータル、ブライトエンカウンター、ブリーチ、エクスペディションエンカウンター、ハービンジャー、リージョンエンカウンター、デリリウムの鏡およびデリリウムの層、エッセンスに囚われたモンスター、リチュアルの祭壇、ローグエグザイル、聖なる木立、シュライン、密輸人の貯蔵箱、ストロングボックス、テンペスト、拷問された幽霊、アルティメイタムエンカウンター、原生林のウィスプ、およびアルヴァ、アイナー、ジュン、ニコのマスターミッションは追加コンテンツです。)",
+        "reminder_text": "(アビス、ビヨンドデーモンポータル、ブライトエンカウンター、ブリーチ、エクスペディションエンカウンター、リージョンエンカウンター、デリリウムの鏡およびデリリウムの層、エッセンスに囚われたモンスター、鉱石の鉱床、リチュアルの祭壇、ローグエグザイル、聖なる木立、シュライン、密輸人の貯蔵箱、ストロングボックス、テンペスト、拷問された幽霊、アルティメイタムエンカウンター、原生林のウィスプ、およびアルヴァ、アイナー、ジュン、ニコのマスターミッションは追加コンテンツです。)",
         "is_markup": null
       }
     ],
@@ -3230,98 +3214,6 @@
           []
         ],
         "string": "マップのインフルエンスモンスターは{0}%の確率でレアの武器を追加で1個ドロップする",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "kirac_blight_craft_always_available"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "ブライトマップのクラフトオプションが常に利用可能になる",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "kirac_blight_craft_cost_+%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "ブライトマップのクラフトオプションのコストが{0}％増加する",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "ブライトマップのクラフトオプションのコストが{0}％減少する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -7162,42 +7054,6 @@
   {
     "English": null,
     "ids": [
-      "map_atlas_scouting_report_drop_chance_+%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "マップで見つかる偵察報告書の数が{0}%増加する",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "map_awakener_boss_awakened_support_drop_chance_+%"
     ],
     "trade_stats": null,
@@ -7321,7 +7177,7 @@
         "condition": [
           {
             "min": null,
-            "max": null,
+            "max": 99,
             "negated": null
           }
         ],
@@ -7331,7 +7187,25 @@
         "index_handlers": [
           []
         ],
-        "string": "マップで捕獲されたレッドビーストは{0}%の確率で血の祭壇での生贄時に消費されない確率を付与するモッドを獲得する",
+        "string": "マップで捕獲した赤ビーストは{0}%の確率で血の祭壇で生贄にされた時に一定確率で消費されない確率を付与するモッドを持つ",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": 100,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "マップで捕獲した赤ビーストは血の祭壇で生贄にされた時に一定確率で消費されない確率を付与するモッドを持つ",
         "reminder_text": null,
         "is_markup": null
       }
@@ -7369,6 +7243,42 @@
         ],
         "string": "マップのビーストは{0}%の確率で逃げ出す\nマップで逃げ出したビーストは獣の憤怒を獲得する\n倒したビーストの持つ獣の憤怒ごとに倒した獣はハンターの狡猾さを付与する",
         "reminder_text": "(Hunters' Cunning: 狩人の狡猾さは、ビーストから受けるダメージを低下、ビーストに与えるダメージを増加させ、倒したビーストから得られるアイテムの数量とレアリティを増加させる)",
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_bestiary_beast_has_x_bestial_rage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "マップで捕獲可能なビーストは獣の憤怒を持つ\n捕獲可能なビーストを倒すとハンターの狡猾さを1スタック付与する",
+        "reminder_text": "(獣の怒りは影響の受けたビーストの移動スピード、アタックスピードおよびダメージを増加させる)",
         "is_markup": null
       }
     ],
@@ -7422,6 +7332,42 @@
           []
         ],
         "string": "マップのレッドビーストは追加で{0}個のベスティアリーモッドを持つ",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_betrayal_%_chance_veiled_items_to_drop_with_fractured_veiled_mod"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "マップで倒したシンジケートメンバーがドロップするヴェールアイテムは{0}%の確率でフラクチャーヴェールモッドとなる",
         "reminder_text": null,
         "is_markup": null
       }
@@ -9668,6 +9614,62 @@
   {
     "English": null,
     "ids": [
+      "map_blight_monster_item_quantity_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "マップのブライトモンスターがドロップするアイテムの数量が{0}%増加する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "マップのブライトモンスターがドロップするアイテムの数量が{0}%減少する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "map_blight_monsters_damage_taken_from_player_sources_+%_final"
     ],
     "trade_stats": null,
@@ -10271,7 +10273,7 @@
             "divide_by_one_hundred"
           ]
         ],
-        "string": "マップに出現する最終ボスは{0}%の確率で隣接したマップを追加で1個ドロップする",
+        "string": "それぞれのマップの最終ボスは{0}%の確率でティアが1高いマップを追加で1個ドロップする",
         "reminder_text": null,
         "is_markup": null
       }
@@ -11689,7 +11691,7 @@
         "index_handlers": [
           []
         ],
-        "string": "ブリーチの出現するマップには{0}%の確率でブリーチが追加で1個出現する",
+        "string": "不安定なブリーチが出現するマップは{0}%の確率で不安定なブリーチが追加で1個出現する",
         "reminder_text": null,
         "is_markup": null
       },
@@ -11707,7 +11709,7 @@
         "index_handlers": [
           []
         ],
-        "string": "ブリーチの出現するマップにはブリーチが追加で1個出現する",
+        "string": "不安定なブリーチが出現するマップは不安定なブリーチが追加で1個出現する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -11743,7 +11745,7 @@
         "index_handlers": [
           []
         ],
-        "string": "ブリーチの出現するマップには{0}%の確率でブリーチが追加で2個出現する",
+        "string": "不安定なブリーチが出現するマップは{0}%の確率で不安定なブリーチが追加で2個出現する",
         "reminder_text": null,
         "is_markup": null
       },
@@ -11761,7 +11763,7 @@
         "index_handlers": [
           []
         ],
-        "string": "ブリーチの出現するマップにはブリーチが追加で2個出現する",
+        "string": "不安定なブリーチが出現するマップは不安定なブリーチが追加で2個出現する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -11797,7 +11799,7 @@
         "index_handlers": [
           []
         ],
-        "string": "ブリーチの出現するマップには{0}%の確率でブリーチが追加で3個出現する",
+        "string": "不安定なブリーチが出現するマップは{0}%の確率で不安定なブリーチが追加で3個出現する",
         "reminder_text": null,
         "is_markup": null
       },
@@ -11815,7 +11817,7 @@
         "index_handlers": [
           []
         ],
-        "string": "ブリーチの出現するマップにはブリーチが追加で3個出現する",
+        "string": "不安定なブリーチが出現するマップは安定なブリーチが追加で3個出現する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -11851,7 +11853,7 @@
         "index_handlers": [
           []
         ],
-        "string": "ブリーチの出現するマップには{0}%の確率でブリーチが追加で10個出現する",
+        "string": "不安定なブリーチが出現するマップは{0}%の確率で不安定なブリーチが追加で10個出現する",
         "reminder_text": null,
         "is_markup": null
       },
@@ -11869,7 +11871,7 @@
         "index_handlers": [
           []
         ],
-        "string": "ブリーチの出現するマップにはブリーチが追加で10個出現する",
+        "string": "不安定なブリーチが出現するマップは不安定なブリーチが追加で10個出現する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -11978,6 +11980,152 @@
           []
         ],
         "string": "マップに出現するブリーチはレアモンスターを追加で{0}体スポーンさせる",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_ancient_wombgift_chance_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "マップで見つかる母胎ギフトが古代になる確率が{0}%増加する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "マップで見つかる母胎ギフトが古代になる確率が{0}%減少する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_boss_additional_wombgift_chance_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": 100,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "マップに出現するブリーチボスは母胎ギフトを追加で1個ドロップする",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "マップに出現するブリーチボスは{0}%の確率で母胎ギフトを追加で1個ドロップする",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_boss_hiveblood_instead_of_gold"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "マップのブリーチボスはゴールドの代わりにハイヴブラッドを付与する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -12210,6 +12358,656 @@
   {
     "English": null,
     "ids": [
+      "map_breach_fortress_chest_wombgift_chance_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "マップの掴む金庫に母胎ギフトが入っている確率が{0}%増加する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "マップの掴む金庫に母胎ギフトが入っている確率が{0}%減少する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_hive_breakable_spawners_area_of_effect_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "マップに出現する燃やせる巣穴の爆発半径が{0}%増加する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "マップに出現する燃やせる巣穴の爆発半径が{0}%減少する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_hive_chests_grant_hiveblood_instead_of_gold"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "マップのハイヴフォトレスチェストはゴールドの代わりにハイヴブラッドを付与する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_hive_fortress_chance_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "マップのブリーチハイヴがフォトレスに繋がる確率が{0}%増加する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "マップのブリーチハイヴがフォトレスに繋がる確率が{0}%減少する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_hive_monsters_toughness_per_broken_spawner_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "マップのハイヴモンスターは破壊した燃やせる巣穴ごとにタフネスが{0}%増加する",
+        "reminder_text": "(Toughness : モンスターのタフネスが高いほど、受けるダメージが低下します。タフネスが100%増加したモンスターは受けるダメージが50%低下、タフネスが200%増加したモンスターは受けるダメージが67%低下、などです。タフネスが減少すると、モンスターが受けるダメージは上昇します)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "マップのハイヴモンスターは破壊した燃やせる巣穴ごとにタフネスが{0}%減少する",
+        "reminder_text": "(Toughness : モンスターのタフネスが高いほど、受けるダメージが低下します。タフネスが100%増加したモンスターは受けるダメージが50%低下、タフネスが200%増加したモンスターは受けるダメージが67%低下、などです。タフネスが減少すると、モンスターが受けるダメージは上昇します)",
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_hive_number_of_breakable_spawners_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "マップのブリーチハイヴは燃やせる巣穴の数が{0}%増加する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "マップのブリーチハイヴは燃やせる巣穴の数が{0}%減少する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_hive_number_of_skills_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "マップのフォトレスに繋がらないブリーチハイヴ内で\nエイリスによって生成されるスキルの数が{0}%増加する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "マップのフォトレスに繋がらないブリーチハイヴ内で\nエイリスによって生成されるスキルの数が{0}%減少する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_hive_skill_damage_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "マップのブリーチハイヴでエイリスが生成するスキルのダメージが{0}%増加する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "マップのブリーチハイヴでエイリスが生成するスキルのダメージが{0}%減少する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_hiveblood_and_wombgift_quantity_per_broken_spawner_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "マップのハイヴエンカウンターは破壊された燃やせる巣穴ごとに\n付与するハイヴブラッドと母胎ギフトが{0}%増加する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "マップのハイヴエンカウンターは破壊された燃やせる巣穴ごとに\n付与するハイヴブラッドと母胎ギフトが{0}%減少する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_hiveblood_quantity_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "マップで見つかるハイヴブラッドの数量が{0}%増加する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "マップで見つかるハイヴブラッドの数量が{0}%減少する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_hives_additional_waves_+"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "マップのブリーチハイヴはハイヴモンスターのウェーブが追加で1回発生する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "マップのブリーチハイヴはハイヴモンスターのウェーブが追加で{0}回発生する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_lavish_wombgift_chance_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "マップで見つかる母胎ギフトが豪華になる確率が{0}%増加する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "マップで見つかる母胎ギフトが豪華になる確率が{0}%減少する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "map_breach_monster_granted_experience_+%"
     ],
     "trade_stats": null,
@@ -12414,6 +13212,62 @@
   {
     "English": null,
     "ids": [
+      "map_breach_mysterious_wombgift_chance_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "マップで見つかる母胎ギフトが謎になる確率が{0}%増加する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "マップで見つかる母胎ギフトが謎になる確率が{0}%減少する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "map_breach_number_of_magic_packs_+%"
     ],
     "trade_stats": null,
@@ -12456,6 +13310,118 @@
           ]
         ],
         "string": "マップに出現するブリーチがスポーンさせるマジックモンスターの数が{0}%減少する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_number_of_rare_packs_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "マップのブリーチがスポーンするレアモンスターが{0}%増加する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "マップのブリーチがスポーンするレアモンスターが{0}%減少する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_provisioning_wombgift_chance_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "マップで見つかる母胎ギフトが補給になる確率が{0}%増加する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "マップで見つかる母胎ギフトが補給になる確率が{0}%減少する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -12675,7 +13641,7 @@
         "index_handlers": [
           []
         ],
-        "string": "マップに出現するブリーチが開く速度および閉じる速度が{0}%速くなる",
+        "string": "マップのブリーチエンカウンターは{0}%速くなる",
         "reminder_text": null,
         "is_markup": null
       },
@@ -12695,7 +13661,7 @@
             "negate"
           ]
         ],
-        "string": "マップに出現するブリーチが開く速度および閉じる速度が{0}%遅くなる",
+        "string": "マップのブリーチエンカウンターは{0}%遅くなる",
         "reminder_text": null,
         "is_markup": null
       }
@@ -12840,6 +13806,62 @@
           []
         ],
         "string": "マップに出現するブリーチモンスターがブリーチユニークアイテムをドロップする確率が{0}%増加する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_wombgift_quantity_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "マップで見つかる母胎ギフトの数量が{0}%増加する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "マップで見つかる母胎ギフトの数量が{0}%減少する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -13276,6 +14298,42 @@
           []
         ],
         "string": "マップには聖なる木立が出現する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_chance_for_area_%_to_duplicate_breach_boss"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "マップのブリーチボスは{0}%の確率で複製される",
         "reminder_text": null,
         "is_markup": null
       }
@@ -14066,7 +15124,7 @@
   {
     "English": null,
     "ids": [
-      "map_contains_additional_breaches"
+      "map_contains_X_additional_strongboxes_essences_shrines_or_rogue_exiles"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -14087,7 +15145,7 @@
         "index_handlers": [
           []
         ],
-        "string": "マップには追加のブリーチが1個出現する",
+        "string": "マップにストロングボックス、エッセンスに囚われたモンスター、シュラインまたはローグエグザイルが追加で1体出現する",
         "reminder_text": null,
         "is_markup": null
       },
@@ -14105,7 +15163,7 @@
         "index_handlers": [
           []
         ],
-        "string": "マップには追加のブリーチが{0}個出現する",
+        "string": "マップにストロングボックス、エッセンスに囚われたモンスター、シュラインまたはローグエグザイルが追加で{0}体出現する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -14516,6 +15574,60 @@
   {
     "English": null,
     "ids": [
+      "map_contains_additional_unstable_breaches"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "マップに不安定なブリーチが追加で1個出現する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "マップに不安定なブリーチが追加で{0}個出現する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "map_contains_adjacent_map_item_chance_permyriad"
     ],
     "trade_stats": null,
@@ -14540,6 +15652,78 @@
           ]
         ],
         "string": "{0}%の確率で1マップごとに1体のモンスターが隣接したマップを追加で1個ドロップする",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_contains_an_unspecified_breach"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "マップにブリーチが1個出現する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_contains_breach_hive"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 3,
+            "max": 3,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "マップにブリーチハイヴが1個出現する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -18319,6 +19503,42 @@
   {
     "English": null,
     "ids": [
+      "map_divination_cards_in_area_are_from_two_different_areas"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "マップで見つかる占いカードはプレイヤーがいるマップのものになる代わりに\n他のランダムなマップ2個からのものになる",
+        "reminder_text": "(マップで見つかる占いカードを持っている枚数が多いほど占いカードが見つかる確率が増加する)",
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "map_double_conqueror_progress_chance_%"
     ],
     "trade_stats": null,
@@ -20399,7 +21619,7 @@
           []
         ],
         "string": "追加コンテンツはマップに出現する基礎確率を持たない",
-        "reminder_text": "(アビス、ビヨンドデーモンポータル、ブライトエンカウンター、ブリーチ、エクスペディションエンカウンター、ハービンジャー、リージョンエンカウンター、デリリウムの鏡およびデリリウムの層、エッセンスに囚われたモンスター、リチュアルの祭壇、ローグエグザイル、聖なる木立、シュライン、密輸人の貯蔵箱、ストロングボックス、テンペスト、拷問された幽霊、アルティメイタムエンカウンター、原生林のウィスプ、およびアルヴァ、アイナー、ジュン、ニコのマスターミッションは追加コンテンツです。)",
+        "reminder_text": "(アビス、ビヨンドデーモンポータル、ブライトエンカウンター、ブリーチ、エクスペディションエンカウンター、リージョンエンカウンター、デリリウムの鏡およびデリリウムの層、エッセンスに囚われたモンスター、鉱石の鉱床、リチュアルの祭壇、ローグエグザイル、聖なる木立、シュライン、密輸人の貯蔵箱、ストロングボックス、テンペスト、拷問された幽霊、アルティメイタムエンカウンター、原生林のウィスプ、およびアルヴァ、アイナー、ジュン、ニコのマスターミッションは追加コンテンツです。)",
         "is_markup": null
       }
     ],
@@ -20435,7 +21655,7 @@
           []
         ],
         "string": "マップに出現する追加コンテンツの最大数 1種類",
-        "reminder_text": "(アビス、ビヨンドデーモンポータル、ブライトエンカウンター、ブリーチ、エクスペディションエンカウンター、ハービンジャー、リージョンエンカウンター、デリリウムの鏡およびデリリウムの層、エッセンスに囚われたモンスター、リチュアルの祭壇、ローグエグザイル、聖なる木立、シュライン、密輸人の貯蔵箱、ストロングボックス、テンペスト、拷問された幽霊、アルティメイタムエンカウンター、原生林のウィスプ、およびアルヴァ、アイナー、ジュン、ニコのマスターミッションは追加コンテンツです。)",
+        "reminder_text": "(アビス、ビヨンドデーモンポータル、ブライトエンカウンター、ブリーチ、エクスペディションエンカウンター、リージョンエンカウンター、デリリウムの鏡およびデリリウムの層、エッセンスに囚われたモンスター、鉱石の鉱床、リチュアルの祭壇、ローグエグザイル、聖なる木立、シュライン、密輸人の貯蔵箱、ストロングボックス、テンペスト、拷問された幽霊、アルティメイタムエンカウンター、原生林のウィスプ、およびアルヴァ、アイナー、ジュン、ニコのマスターミッションは追加コンテンツです。)",
         "is_markup": null
       }
     ],
@@ -21213,152 +22433,6 @@
   {
     "English": null,
     "ids": [
-      "map_gain_additional_zana_mission_%_chance_on_map_completion"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": 99,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "マップを完了すると{0}%の確率でキラックミッションを追加で付与する",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 100,
-            "max": 100,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "マップを完了するとキラックミッションを追加で付与する",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "map_gain_additional_zana_mission_permyriad_chance_on_map_completion"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": 9999,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "divide_by_one_hundred"
-          ]
-        ],
-        "string": "マップを完了すると{0}%の確率でキラックミッションを追加で付与する",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 10000,
-            "max": 10000,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "マップを完了するとキラックミッションを追加で付与する",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "map_gain_blight_map_craft_on_completion_chance_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "マップを完了すると{0}％の確率でブライトマップクラフトオプションのコスト無しでの使用を1回分獲得する",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "map_gain_master_missions_instead_of_master_naturally_spawning"
     ],
     "trade_stats": null,
@@ -21381,96 +22455,6 @@
           []
         ],
         "string": "マップにランダムに出現したマスターがいる場合、マップ完了時の代わりににマスターミッションを付与する",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "map_gain_random_map_craft_on_completion_chance_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": 99,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "マップを完了すると{0}%の確率でランダムなマップクラフトオプションのコスト無しでの使用を1回分獲得する",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 100,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "マップを完了するとランダムなマップクラフトオプションのコスト無しでの使用を1回分獲得する",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "map_gain_special_map_craft_on_completion_chance_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "マップを完了すると{0}%の確率で特別なマップクラフトオプションのコストなしでの使用を1回分獲得する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -25311,62 +26295,6 @@
   {
     "English": null,
     "ids": [
-      "map_kirac_mission_pack_size_+%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "キラックミッションのエリアのパックサイズが{0}%増加する",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "キラックミッションのエリアのパックサイズが{0}%減少する",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "map_league_base_chance_+%_final"
     ],
     "trade_stats": null,
@@ -25389,7 +26317,7 @@
           []
         ],
         "string": "マップに追加コンテンツが出現する確率が{0}%上昇する",
-        "reminder_text": "(アビス、ビヨンドデーモンポータル、ブライトエンカウンター、ブリーチ、エクスペディションエンカウンター、ハービンジャー、リージョンエンカウンター、デリリウムの鏡およびデリリウムの層、エッセンスに囚われたモンスター、リチュアルの祭壇、ローグエグザイル、聖なる木立、シュライン、密輸人の貯蔵箱、ストロングボックス、テンペスト、拷問された幽霊、アルティメイタムエンカウンター、原生林のウィスプ、およびアルヴァ、アイナー、ジュン、ニコのマスターミッションは追加コンテンツです。)",
+        "reminder_text": "(アビス、ビヨンドデーモンポータル、ブライトエンカウンター、ブリーチ、エクスペディションエンカウンター、リージョンエンカウンター、デリリウムの鏡およびデリリウムの層、エッセンスに囚われたモンスター、鉱石の鉱床、リチュアルの祭壇、ローグエグザイル、聖なる木立、シュライン、密輸人の貯蔵箱、ストロングボックス、テンペスト、拷問された幽霊、アルティメイタムエンカウンター、原生林のウィスプ、およびアルヴァ、アイナー、ジュン、ニコのマスターミッションは追加コンテンツです。)",
         "is_markup": null
       }
     ],
@@ -25425,7 +26353,7 @@
           []
         ],
         "string": "マップに他の追加コンテンツが出現する確率が{0}%される",
-        "reminder_text": "(アビス、ビヨンドデーモンポータル、ブライトエンカウンター、ブリーチ、エクスペディションエンカウンター、ハービンジャー、リージョンエンカウンター、デリリウムの鏡およびデリリウムの層、エッセンスに囚われたモンスター、リチュアルの祭壇、ローグエグザイル、聖なる木立、シュライン、密輸人の貯蔵箱、ストロングボックス、テンペスト、拷問された幽霊、アルティメイタムエンカウンター、原生林のウィスプ、およびアルヴァ、アイナー、ジュン、ニコのマスターミッションは追加コンテンツです。)",
+        "reminder_text": "(アビス、ビヨンドデーモンポータル、ブライトエンカウンター、ブリーチ、エクスペディションエンカウンター、リージョンエンカウンター、デリリウムの鏡およびデリリウムの層、エッセンスに囚われたモンスター、鉱石の鉱床、リチュアルの祭壇、ローグエグザイル、聖なる木立、シュライン、密輸人の貯蔵箱、ストロングボックス、テンペスト、拷問された幽霊、アルティメイタムエンカウンター、原生林のウィスプ、およびアルヴァ、アイナー、ジュン、ニコのマスターミッションは追加コンテンツです。)",
         "is_markup": null
       }
     ],
@@ -26843,6 +27771,42 @@
           ]
         ],
         "string": "マップで見つかるマジックアイテムは{0}%の確率で鑑定済みでありフラクチャーモッドを持つ",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_map_item_drop_chance_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "マップで見つかるマップが{0}%増加する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -28907,6 +29871,62 @@
   {
     "English": null,
     "ids": [
+      "map_mod_effect_+%_per_fragment_used"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "マップと共に使用されたフラグメントの数ごとにマップの明示モッドの効果が{0}%増加する",
+        "reminder_text": "(フラグメントはマップデバイスで使用可能な非マップアイテム。)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "マップと共に使用されたフラグメントの数ごとにマップの明示モッドの効果が{0}%減少する",
+        "reminder_text": "(フラグメントはマップデバイスで使用可能な非マップアイテム。)",
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "map_mod_effect_+%_per_mod"
     ],
     "trade_stats": null,
@@ -30299,6 +31319,78 @@
   {
     "English": null,
     "ids": [
+      "map_only_breach_hives"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "マップのブリーチエンカウンターは常にハイヴになる",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_only_unstable_breaches"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "マップのブリーチエンカウンターは常に不安定なブリーチになる",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "map_orb_of_chance_to_unique_item_%"
     ],
     "trade_stats": null,
@@ -31349,7 +32441,7 @@
           []
         ],
         "string": "マップでアトラスパッシブを通じて出現をオフにできる追加コンテンツが出現する確率 {0}%",
-        "reminder_text": "(アビス、ブライトエンカウンター、ブリーチ (スタンダードリーグ限定)、エクスペディションエンカウンター、リージョンエンカウンター、デリリウムの鏡、鉱石の鉱床、リチュアルの祭壇、聖なる木立、密輸人の貯蔵箱(Keepersリーグ限定)、アルティメイタムエンカウンターはアトラスパッシブを通して停止できる追加コンテンツです)",
+        "reminder_text": "(アビス、ブライトエンカウンター、ブリーチ 、エクスペディションエンカウンター、リージョンエンカウンター、デリリウムの鏡、鉱石の鉱床、リチュアルの祭壇、聖なる木立、密輸人の貯蔵箱、アルティメイタムエンカウンターはアトラスパッシブを通して停止できる追加コンテンツです)",
         "is_markup": null
       }
     ],
@@ -33705,384 +34797,6 @@
   {
     "English": null,
     "ids": [
-      "scouting_report_drops_as_blighted_scouting_report_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "マップでは{0}%の確率で偵察報告書の代わりにブライト偵察報告書がドロップする",
-        "reminder_text": "(ブライト偵察報告書は、キラックのアトラスミッションをすべてリロールし、得られるミッションには少なくとも1個のアノイントされたブライトマップが含まれます。)",
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 100,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "マップでは偵察報告書の代わりにブライト偵察報告書がドロップする",
-        "reminder_text": "(ブライト偵察報告書は、キラックのアトラスミッションをすべてリロールし、得られるミッションには少なくとも1個のアノイントされたブライトマップが含まれます。)",
-        "is_markup": null
-      }
-    ],
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "scouting_report_drops_as_comprehensive_scouting_report_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "マップでは{0}%の確率で偵察報告書の代わりに広域偵察報告書がドロップする",
-        "reminder_text": "(広域偵察報告書は、キラックのアトラスミッションをすべてリロールし、新たな結果が含まれる可能性のある、ミッションオプションを追加します。)",
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 100,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "マップでは偵察報告書の代わりに広域偵察報告書がドロップする",
-        "reminder_text": "(広域偵察報告書は、キラックのアトラスミッションをすべてリロールし、新たな結果が含まれる可能性のある、ミッションオプションを追加します。)",
-        "is_markup": null
-      }
-    ],
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "scouting_report_drops_as_delirious_scouting_report_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "マップでは{0}%の確率で偵察報告書の代わりにデリリウム偵察報告書がドロップする",
-        "reminder_text": "(デリリウム偵察報告書は、キラックのアトラスミッションをすべてリロールし、すべての非ユニークマップにデリリウムの層を追加します。)",
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 100,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "マップでは偵察報告書の代わりにデリリウム偵察報告書がドロップする",
-        "reminder_text": "(デリリウム偵察報告書は、キラックのアトラスミッションをすべてリロールし、すべての非ユニークマップにデリリウムの層を追加します。)",
-        "is_markup": null
-      }
-    ],
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "scouting_report_drops_as_operatives_scouting_report_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "マップでは{0}%の確率で偵察報告書の代わりに諜報員の偵察報告書がドロップする",
-        "reminder_text": "(諜報員の偵察報告書は、キラックのアトラスミッションをすべてリロールし、得られるミッションに報酬に関する暗黙モッドを追加します。)",
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 100,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "マップでは偵察報告書の代わりに諜報員の偵察報告書がドロップする",
-        "reminder_text": "(諜報員の偵察報告書は、キラックのアトラスミッションをすべてリロールし、得られるミッションに報酬に関する暗黙モッドを追加します。)",
-        "is_markup": null
-      }
-    ],
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "scouting_report_drops_as_otherworldly_scouting_report_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "マップでは{0}%の確率で偵察報告書の代わりに異世界の偵察報告書がドロップする",
-        "reminder_text": "(異世界の偵察報告書は、キラックのアトラスミッションをすべてリロールし、得られるミッションには少なくとも1個のブリーチストーンが含まれます。)",
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 100,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "マップでは偵察報告書の代わりに異世界の偵察報告書がドロップする",
-        "reminder_text": "(異世界の偵察報告書は、キラックのアトラスミッションをすべてリロールし、得られるミッションには少なくとも1個のブリーチストーンが含まれます。)",
-        "is_markup": null
-      }
-    ],
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "scouting_report_drops_as_singular_scouting_report_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "マップでは{0}%の確率で偵察報告書の代わりに特異な偵察報告書がドロップする",
-        "reminder_text": "(特異な偵察報告書はキラックのアトラスミッションを全てリロールし、少なくとも1つユニークマップを含んだものに変える)",
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 100,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "マップでは偵察報告書の代わりに特異な偵察報告書がドロップする",
-        "reminder_text": "(特異な偵察報告書はキラックのアトラスミッションを全てリロールし、少なくとも1つユニークマップを含んだものに変える)",
-        "is_markup": null
-      }
-    ],
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "scouting_report_drops_as_vaal_scouting_report_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "マップでは{0}%の確率で偵察報告書の代わりにヴァール偵察報告書がドロップする",
-        "reminder_text": "(ヴァール偵察報告書キラックのアトラスミッションを全てリロールし、ユニーク以外のマップをコラプト状態に変える)",
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 100,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "マップでは偵察報告書の代わりにヴァール偵察報告書がドロップする",
-        "reminder_text": "(ヴァール偵察報告書キラックのアトラスミッションを全てリロールし、ユニーク以外のマップをコラプト状態に変える)",
-        "is_markup": null
-      }
-    ],
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "map_searing_exarch_altar_downside_effect_+%"
     ],
     "trade_stats": null,
@@ -34634,6 +35348,42 @@
         ],
         "string": "マップのヴェリジウムの鉱石の鉱床がチャネリングできる最大時間が{0}%長くなる",
         "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_shaped_region_collapses_from_different_map"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "シェイパー領域内でマップ目標を完了すると代わりにシェイパー領域内の他のマップを崩壊させる",
+        "reminder_text": "(デフォルトでは、形成領域内のマップで目標を達成すると、そのマップは崩壊し、その領域から消去される。これによりその領域の他のマップは追加のモッドを獲得する。形成領域が二分割される場合には、相互連結されているマップがより多いほうだけが維持される)",
         "is_markup": null
       }
     ],
@@ -35387,12 +36137,12 @@
           }
         ],
         "format": [
-          "#"
+          "ignore"
         ],
         "index_handlers": [
           []
         ],
-        "string": "マップにはローグエグザイルが追加で{0}体生息している",
+        "string": "マップにはローグエグザイルが追加で1体生息している",
         "reminder_text": null,
         "is_markup": null
       },
@@ -35691,6 +36441,62 @@
           ]
         ],
         "string": "マップに出現するストロングボックスに入っているアイテムの数量が{0}%減少する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_strongboxes_+%_chance_to_be_artisan"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "マップに出現するストロングボックスが職人のストロングボックスになる確率が{0}%増加する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "マップに出現するストロングボックスが職人のストロングボックスになる確率が{0}%減少する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -38285,6 +39091,114 @@
   {
     "English": null,
     "ids": [
+      "map_unstable_breach_additional_x_seconds_before_collapse"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "マップの不安定なブリーチはタイマーがフルになった後追加で1秒経ってから崩壊する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "マップの不安定なブリーチはタイマーがフルになった後追加で{0}秒経ってから崩壊する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_unstable_breach_enrage_x_additional_rare_monsters"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "マップの不安定なブリーチは安定化した時にレアモンスターを追加で1体スポーンさせる",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "マップの不安定なブリーチは安定化した時にレアモンスターを追加で{0}体スポーンさせる",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "map_upgrade_vaal_side_area_chance_%"
     ],
     "trade_stats": null,
@@ -39515,42 +40429,6 @@
   {
     "English": null,
     "ids": [
-      "maven_invitation_awakened_gem_chance_+%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "メイヴェンの試練を完了するかメイヴェンを倒すことで覚醒のサポートジェムがドロップする確率が{0}%増加する",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "maven_invitation_item_quantity_+%"
     ],
     "trade_stats": null,
@@ -40153,42 +41031,6 @@
           []
         ],
         "string": "残り使用回数 {0}回",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "sirus_additional_awakened_gem_drop_chance_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "シラスは{0}%の確率で覚醒のサポートジェムをドロップする",
         "reminder_text": null,
         "is_markup": null
       }
@@ -40983,6 +41825,42 @@
           []
         ],
         "string": "マップでドロップするスカラベがインカージョンスカラベになる確率が{0}%増加する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_influence_scarab_more_likely_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "マップでドロップするスカラベがインフルエンススカラベになる確率が{0}%増加する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -46508,32 +47386,7 @@
     "ids": [
       "map_hidden_spawn_extra_exiles"
     ],
-    "trade_stats": [
-      {
-        "id": "enchant.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "enchant",
-        "option": null
-      },
-      {
-        "id": "explicit.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "explicit",
-        "option": null
-      },
-      {
-        "id": "fractured.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "fractured",
-        "option": null
-      },
-      {
-        "id": "implicit.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "implicit",
-        "option": null
-      }
-    ],
+    "trade_stats": null,
     "hidden": true,
     "French": null,
     "German": null,

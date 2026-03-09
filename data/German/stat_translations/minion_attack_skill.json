@@ -951,7 +951,7 @@
           []
         ],
         "string": "Dieser Angriff und Kreaturen haben {0}% Chance, Monster bei Treffer in die Flucht zu schlagen",
-        "reminder_text": null,
+        "reminder_text": "(Magische Monster haben eine 50% Chance, fliehen zu vermeiden. Seltene und einzigartige Monster können nicht fliehen.)",
         "is_markup": null
       }
     ],
@@ -2480,6 +2480,60 @@
   {
     "English": null,
     "ids": [
+      "additional_poisons_+_to_apply_vs_non_poisoned_enemies"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Das Vergiften von nicht vergifteten Gegnern mit diesem Angriff und Kreaturen wendet ein zusätzliches Gift an",
+        "reminder_text": "(Gift verursacht Chaosschaden über Zeit, basierend auf dem gesamten physischen Schaden und Chaosschaden der Fertigkeit. Mehrere Instanzen von Gift werden gestapelt)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Das Vergiften von nicht vergifteten Gegnern mit diesem Angriff und Kreaturen wendet {0} zusätzliche Gifte an",
+        "reminder_text": "(Gift verursacht Chaosschaden über Zeit, basierend auf dem gesamten physischen Schaden und Chaosschaden der Fertigkeit. Mehrere Instanzen von Gift werden gestapelt)",
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "additional_chance_to_freeze_chilled_enemies_%"
     ],
     "trade_stats": null,
@@ -3443,6 +3497,62 @@
   {
     "English": null,
     "ids": [
+      "support_lethal_dose_poison_damage_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Dieser Angriff und Kreaturen verursachen {0}% mehr Schaden mit Gift",
+        "reminder_text": "(Gift verursacht Chaosschaden über Zeit, basierend auf dem gesamten physischen Schaden und Chaosschaden der Fertigkeit. Mehrere Instanzen von Gift werden gestapelt)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Dieser Angriff und Kreaturen verursachen {0}% weniger Schaden mit Gift",
+        "reminder_text": "(Gift verursacht Chaosschaden über Zeit, basierend auf dem gesamten physischen Schaden und Chaosschaden der Fertigkeit. Mehrere Instanzen von Gift werden gestapelt)",
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "base_poison_duration_+%"
     ],
     "trade_stats": null,
@@ -3555,6 +3665,42 @@
   {
     "English": null,
     "ids": [
+      "skill_physical_damage_%_to_convert_to_lightning"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Dieser Angriff und Kreaturen wandeln {0}% des physischen Schadens in Blitzschaden um",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "chance_to_summon_support_ghost_on_killing_blow_%"
     ],
     "trade_stats": null,
@@ -3594,6 +3740,44 @@
           []
         ],
         "string": "Beschwört ein Phantasma, wenn diese Fertigkeit oder Kreaturen (Phantasmen ausgenommen) einen tödlichen Schlag verursachen",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "additional_base_critical_strike_chance"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          [
+            "divide_by_one_hundred"
+          ]
+        ],
+        "string": "Dieser Angriff und Kreaturen haben {0}% zu kritischer Trefferchance",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5045,7 +5229,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% Chance, einen normalen Wächter der Beherrschung zu beschwören, wenn Ihr einen einzigartigen Gegner trefft",
+        "string": "{0}% Chance, einen normalen Wächter der Beherrschung zu beschwören, wenn Ihr\nein seltenes oder einzigartiges Monster trefft",
         "reminder_text": null,
         "is_markup": null
       },
@@ -5063,7 +5247,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Beschwört einen normalen Wächter der Beherrschung, wenn Ihr einen einzigartigen Gegner trefft",
+        "string": "Beschwört einen normalen Wächter der Beherrschung, wenn Ihr ein seltenes oder einzigartiges Monster trefft",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5227,6 +5411,60 @@
   {
     "English": null,
     "ids": [
+      "explode_enemies_for_10%_life_as_random_element_on_killing_blow_chance_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Tödliche Schläge mit diesem Angriff und von Kreaturen haben {0}% Chance, Gegner explodieren zu lassen und ein Zehntel ihres maximalen Lebens als Schaden eines zufälligen Elements zu verursachen",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Tödliche Schläge mit diesem Angriff und von Kreaturen lassen Gegner explodieren und verursachen ein Zehntel ihres maximalen Lebens als Schaden eines zufälligen Elements",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "gain_frenzy_charge_on_killing_blow_vs_enemies_with_5+_poisons_%"
     ],
     "trade_stats": null,
@@ -5302,6 +5540,42 @@
           []
         ],
         "string": "Dieser Angriff und Kreaturen haben {0}% Chance, bei tödlichem Schlag eine Energie-Ladung zu erhalten",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "hits_cannot_kill_enemies"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Treffer von diesem Angriff und Kreaturen können Gegner nicht töten",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5502,6 +5776,42 @@
           []
         ],
         "string": "Unterstützte Fertigkeiten verursachen {0}% mehr physischen Schaden",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "kill_normal_or_magic_enemy_on_hit_if_under_x%_life"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Eure Angriffe und Kreaturen töten normale und magische Gegner, die {0}% Leben oder weniger haben, wenn sie getroffen werden",
         "reminder_text": null,
         "is_markup": null
       }
@@ -6878,6 +7188,62 @@
   {
     "English": null,
     "ids": [
+      "support_overheat_ailment_damage_+%_final_per_3_fortification_consumed"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Dieser Angriff und Kreaturen verbrauchen bei Nahkampfangriff sämtliche Verstärkung, was {0}% mehr Schaden mit\nBeeinträchtigungen pro 3 verbrauchter Verstärkung verursacht",
+        "reminder_text": "(Beeinträchtigungen, die Schaden verursachen, sind: blutend, entzündet und vergiftet)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Dieser Angriff und Kreaturen verbrauchen bei Nahkampfangriff sämtliche Verstärkung, was {0}% weniger Schaden mit\nBeeinträchtigungen pro 3 verbrauchter Verstärkung verursacht",
+        "reminder_text": "(Beeinträchtigungen, die Schaden verursachen, sind: blutend, entzündet und vergiftet)",
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "support_power_charge_on_crit_damage_+%_final_per_power_charge"
     ],
     "trade_stats": null,
@@ -7659,6 +8025,60 @@
           []
         ],
         "string": "Diese Fertigkeit und Kreaturen verursachen bis zu {0}% mehr Nahkampfschaden an Gegnern, basierend auf ihrer Entfernung",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "treat_enemy_resistances_as_negated_on_elemental_damage_hit_%_chance"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Treffer von diesem Angriff und Kreaturen haben {0}% Chance, die Werte von gegnerischen Elementarwiderständen als invertiert zu behandeln",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Treffer von diesem Angriff und Kreaturen behandeln die Werte von gegnerischen Elementarwiderständen als invertiert",
         "reminder_text": null,
         "is_markup": null
       }
@@ -12951,32 +13371,7 @@
     "ids": [
       "map_hidden_spawn_extra_exiles"
     ],
-    "trade_stats": [
-      {
-        "id": "enchant.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "enchant",
-        "option": null
-      },
-      {
-        "id": "explicit.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "explicit",
-        "option": null
-      },
-      {
-        "id": "fractured.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "fractured",
-        "option": null
-      },
-      {
-        "id": "implicit.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "implicit",
-        "option": null
-      }
-    ],
+    "trade_stats": null,
     "hidden": true,
     "French": null,
     "German": [

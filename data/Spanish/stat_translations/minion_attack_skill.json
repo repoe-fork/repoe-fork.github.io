@@ -956,7 +956,7 @@
           []
         ],
         "string": "Este ataque y los esbirros tienen un {0}% de probabilidad de hacer huir a los monstruos al ser golpeados",
-        "reminder_text": null,
+        "reminder_text": "(Los monstruos mágicos tienen un 50% de probabilidad de evitar huir. Los monstruos raros y únicos no pueden huir)",
         "is_markup": null
       }
     ],
@@ -2480,6 +2480,60 @@
   {
     "English": null,
     "ids": [
+      "additional_poisons_+_to_apply_vs_non_poisoned_enemies"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Este ataque y los esbirros que envenenan a los enemigos que no están envenenados aplican un veneno adicional",
+        "reminder_text": "(El veneno inflige daño de caos degenerativo en función del daño físico y de caos base de la habilidad. El veneno es acumulativo)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Este ataque y los esbirros que envenenan a los enemigos que no están envenenados aplican {0} venenos adicionales",
+        "reminder_text": "(El veneno inflige daño de caos degenerativo en función del daño físico y de caos base de la habilidad. El veneno es acumulativo)",
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "additional_chance_to_freeze_chilled_enemies_%"
     ],
     "trade_stats": null,
@@ -3443,6 +3497,62 @@
   {
     "English": null,
     "ids": [
+      "support_lethal_dose_poison_damage_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Este ataque y los esbirros infligen un {0}% más de daño con veneno",
+        "reminder_text": "(El veneno inflige daño de caos degenerativo en función del daño físico y de caos base de la habilidad. El veneno es acumulativo)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Este ataque y los esbirros infligen un {0}% menos de daño con veneno",
+        "reminder_text": "(El veneno inflige daño de caos degenerativo en función del daño físico y de caos base de la habilidad. El veneno es acumulativo)",
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "base_poison_duration_+%"
     ],
     "trade_stats": null,
@@ -3555,6 +3665,42 @@
   {
     "English": null,
     "ids": [
+      "skill_physical_damage_%_to_convert_to_lightning"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Este ataque y los esbirros convierten el {0}% del daño físico en daño de rayo",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "chance_to_summon_support_ghost_on_killing_blow_%"
     ],
     "trade_stats": null,
@@ -3599,6 +3745,44 @@
           []
         ],
         "string": "Invoca un fantasma cuando esta habilidad o los esbirros que no sean fantasmas infligen un golpe mortal",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "additional_base_critical_strike_chance"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          [
+            "divide_by_one_hundred"
+          ]
+        ],
+        "string": "Este ataque y los esbirros tienen {0}% a la probabilidad de golpe crítico",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5050,7 +5234,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% de probabilidad de invocar un centinela de dominancia normal\ncuando golpeas a un monstruo único",
+        "string": "{0}% de probabilidad de invocar un centinela de dominancia normal al golpear\na un monstruo raro o único",
         "reminder_text": null,
         "is_markup": null
       },
@@ -5068,7 +5252,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Invoca un centinela de dominancia normal cuando golpeas a un monstruo único",
+        "string": "Invoca un centinela de dominancia normal al golpear a un monstruo raro o único",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5227,6 +5411,60 @@
   {
     "English": null,
     "ids": [
+      "explode_enemies_for_10%_life_as_random_element_on_killing_blow_chance_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Los golpes mortales de este ataque y de los esbirros hacen que los enemigos tengan un {0}% de probabilidad de explotar para infligir una décima parte de su vida máxima como daño de un elemento aleatorio",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Los golpes mortales de este ataque y de los esbirros hacen que los enemigos exploten para infligir una décima parte de su vida máxima como daño de un elemento aleatorio",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "gain_frenzy_charge_on_killing_blow_vs_enemies_with_5+_poisons_%"
     ],
     "trade_stats": null,
@@ -5307,6 +5545,42 @@
           []
         ],
         "string": "Este ataque y los esbirros tienen un {0}% de probabilidad de ganar una carga de poder con cada golpe mortal",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "hits_cannot_kill_enemies"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Los golpes de este ataque y de los esbirros no pueden matar a los enemigos",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5507,6 +5781,42 @@
           []
         ],
         "string": "Este ataque y los esbirros infligen un {0}% más de daño físico",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "kill_normal_or_magic_enemy_on_hit_if_under_x%_life"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Tus ataques y esbirros matan a los enemigos de rareza normal y mágica que tengan un {0}% de vida o menos cuando los golpeas",
         "reminder_text": null,
         "is_markup": null
       }
@@ -6878,6 +7188,62 @@
   {
     "English": null,
     "ids": [
+      "support_overheat_ailment_damage_+%_final_per_3_fortification_consumed"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Este ataque y los esbirros consumen toda la fortificación al atacar cuerpo a cuerpo para infligir un {0}% más de daño con\nestados alterados por cada 3 de Fortificación consumida",
+        "reminder_text": "(Los estados alterados dañinos, o estados alterados que infligen daño, son sangrado, quemado y envenenado)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Este ataque y los esbirros consumen toda la fortificación al atacar cuerpo a cuerpo para infligir un {0}% menos de daño con\nestados alterados por cada 3 de Fortificación consumida",
+        "reminder_text": "(Los estados alterados dañinos, o estados alterados que infligen daño, son sangrado, quemado y envenenado)",
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "support_power_charge_on_crit_damage_+%_final_per_power_charge"
     ],
     "trade_stats": null,
@@ -7664,6 +8030,60 @@
           []
         ],
         "string": "Esta habilidad y los esbirros infligen hasta un {0}% más de daño cuerpo a cuerpo a los enemigos en función de su proximidad",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "treat_enemy_resistances_as_negated_on_elemental_damage_hit_%_chance"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Los golpes de este ataque y los esbirros tienen un {0}% de probabilidad de tratar los valores de las resistencias elementales de los monstruos enemigos como si estuvieran invertidas",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Los golpes de este ataque y los esbirros tratan los valores de las resistencias elementales de los monstruos enemigos como si estuvieran invertidas",
         "reminder_text": null,
         "is_markup": null
       }
@@ -12951,32 +13371,7 @@
     "ids": [
       "map_hidden_spawn_extra_exiles"
     ],
-    "trade_stats": [
-      {
-        "id": "enchant.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "enchant",
-        "option": null
-      },
-      {
-        "id": "explicit.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "explicit",
-        "option": null
-      },
-      {
-        "id": "fractured.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "fractured",
-        "option": null
-      },
-      {
-        "id": "implicit.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "implicit",
-        "option": null
-      }
-    ],
+    "trade_stats": null,
     "hidden": true,
     "French": null,
     "German": null,

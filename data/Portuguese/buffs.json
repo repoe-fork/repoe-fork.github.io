@@ -943,6 +943,18 @@
     "templates": null,
     "stack_limit": null
   },
+  "number_of_orb_spectres": {
+    "description": "Espectros que morreram seguem você como lúmens\ne são revividos quando você muda de área.",
+    "invisible": false,
+    "name": "Espectro Morto",
+    "removable": false,
+    "stats": [],
+    "visuals": "dead_spectre_buff",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "infernal_blow_hit": {
     "description": "",
     "invisible": true,
@@ -3567,6 +3579,20 @@
     "templates": null,
     "stack_limit": null
   },
+  "flesh_shield": {
+    "description": "Você tem a proteção da carne de seus lacaios caídos.",
+    "invisible": false,
+    "name": "Paredão Podre",
+    "removable": false,
+    "stats": [
+      "flesh_shield_amount"
+    ],
+    "visuals": "flesh_shield_visual",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "monster_aura_cannot_die": {
     "description": "Outros Aliados Não Podem Morrer",
     "invisible": false,
@@ -5951,7 +5977,9 @@
       "recover_es_as_well_as_life_from_life_regeneration",
       "curse_effect_on_self_+%",
       "self_damaging_ailment_duration_+%",
-      "base_maximum_chaos_damage_resistance_%"
+      "base_maximum_chaos_damage_resistance_%",
+      "mana_regeneration_rate_+%",
+      "accuracy_rating_+%"
     ],
     "visuals": "ground_consecration",
     "category": "Buff",
@@ -6087,6 +6115,33 @@
           "Velocidade de Ataque aumentada em 20%",
           "Velocidade de Conjuração aumentada em 20%",
           "Velocidade de Movimento aumentada em 20%"
+        ],
+        "visuals": null
+      },
+      "MapModPlayerOnslaught": {
+        "aura_radius_metres": null,
+        "stats": {
+          "attack_speed_+%": 20,
+          "base_cast_speed_+%": 20,
+          "base_movement_velocity_+%": 20
+        },
+        "stat_text": [
+          "Velocidade de Ataque aumentada em 20%",
+          "Velocidade de Conjuração aumentada em 20%",
+          "Velocidade de Movimento aumentada em 20%"
+        ],
+        "visuals": null
+      },
+      "MapModPlayerOnslaughtHardMode": {
+        "aura_radius_metres": null,
+        "stats": {
+          "attack_speed_+%": 20,
+          "base_cast_speed_+%": 20,
+          "base_movement_velocity_+%": 0
+        },
+        "stat_text": [
+          "Velocidade de Ataque aumentada em 20%",
+          "Velocidade de Conjuração aumentada em 20%"
         ],
         "visuals": null
       }
@@ -6485,6 +6540,36 @@
     "templates": null,
     "stack_limit": 10
   },
+  "resentment_debuff": {
+    "description": "Você sofre dano de fogo degenerativo.",
+    "invisible": false,
+    "name": "Escória em Chamas",
+    "removable": false,
+    "stats": [
+      "base_fire_damage_taken_per_minute",
+      "current_resentment_debuff_stacks"
+    ],
+    "visuals": "resentment_debuff_visual",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": 10
+  },
+  "animosity_debuff": {
+    "description": "Você sofre dano físico degenerativo.",
+    "invisible": false,
+    "name": "Lágrimas Negras",
+    "removable": false,
+    "stats": [
+      "base_physical_damage_taken_per_minute_unaffected_by_level_scaling",
+      "current_animosity_debuff_stacks"
+    ],
+    "visuals": "animosity_debuff_visual",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": 5
+  },
   "shrine_acceleration": {
     "description": "Você tem suas Velocidades de Ação e Projétil aumentadas",
     "invisible": false,
@@ -6630,22 +6715,6 @@
         ],
         "visuals": "shrine_monster_affected"
       },
-      "brutal_lesser": {
-        "aura_radius_metres": null,
-        "stats": {
-          "damage_+%": 20,
-          "global_knockback": 1,
-          "base_stun_duration_+%": 20,
-          "extra_gore": 0,
-          "has_shrine_effect": 1
-        },
-        "stat_text": [
-          "Dano aumentado em 20%",
-          "Empurra Inimigos ao Acertar",
-          "Duração de Atordoamentos em Inimigos aumentada em 20%"
-        ],
-        "visuals": null
-      },
       "RoyaleShrineBrutal": {
         "aura_radius_metres": null,
         "stats": {
@@ -6660,6 +6729,41 @@
           "Empurra Inimigos ao Acertar",
           "Duração de Atordoamentos em Inimigos aumentada em 30%",
           "Sanguinolência Extra"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "shrine_lesser_brutal": {
+    "description": "Seus ataques empurram, causam dano aumentado e atordoam por mais tempo.",
+    "invisible": false,
+    "name": "Altar Brutal",
+    "removable": true,
+    "stats": [
+      "damage_+%",
+      "global_knockback",
+      "base_stun_duration_+%",
+      "extra_gore",
+      "has_shrine_effect"
+    ],
+    "visuals": "shrine_brutal",
+    "category": "Buff shrine",
+    "sources": null,
+    "templates": {
+      "brutal_lesser": {
+        "aura_radius_metres": null,
+        "stats": {
+          "damage_+%": 20,
+          "global_knockback": 1,
+          "base_stun_duration_+%": 20,
+          "extra_gore": 0,
+          "has_shrine_effect": 1
+        },
+        "stat_text": [
+          "Dano aumentado em 20%",
+          "Empurra Inimigos ao Acertar",
+          "Duração de Atordoamentos em Inimigos aumentada em 20%"
         ],
         "visuals": null
       }
@@ -6709,7 +6813,7 @@
     "name": "Altar de Reabastecimento",
     "removable": true,
     "stats": [
-      "mana_regeneration_rate_per_minute_%",
+      "mana_regeneration_rate_+%",
       "life_regeneration_rate_per_minute_%",
       "has_shrine_effect"
     ],
@@ -6720,12 +6824,12 @@
       "regen_player": {
         "aura_radius_metres": null,
         "stats": {
-          "mana_regeneration_rate_per_minute_%": 600,
+          "mana_regeneration_rate_+%": 200,
           "life_regeneration_rate_per_minute_%": 400,
           "has_shrine_effect": 1
         },
         "stat_text": [
-          "10% de Mana Regenerada por segundo",
+          "Regeneração de Mana aumentada em 200%",
           "6.67% de Vida Regenerada por segundo"
         ],
         "visuals": null
@@ -6733,12 +6837,12 @@
       "regen_monster": {
         "aura_radius_metres": null,
         "stats": {
-          "mana_regeneration_rate_per_minute_%": 400,
+          "mana_regeneration_rate_+%": 200,
           "life_regeneration_rate_per_minute_%": 400,
           "has_shrine_effect": 1
         },
         "stat_text": [
-          "6.7% de Mana Regenerada por segundo",
+          "Regeneração de Mana aumentada em 200%",
           "6.67% de Vida Regenerada por segundo"
         ],
         "visuals": "shrine_monster_affected"
@@ -6746,12 +6850,12 @@
       "regen_lesser": {
         "aura_radius_metres": null,
         "stats": {
-          "mana_regeneration_rate_per_minute_%": 200,
+          "mana_regeneration_rate_+%": 100,
           "life_regeneration_rate_per_minute_%": 200,
           "has_shrine_effect": 1
         },
         "stat_text": [
-          "3.3% de Mana Regenerada por segundo",
+          "Regeneração de Mana aumentada em 100%",
           "3.33% de Vida Regenerada por segundo"
         ],
         "visuals": null
@@ -6759,12 +6863,12 @@
       "RoyaleShrineReplenishing": {
         "aura_radius_metres": null,
         "stats": {
-          "mana_regeneration_rate_per_minute_%": 300,
+          "mana_regeneration_rate_+%": 150,
           "life_regeneration_rate_per_minute_%": 300,
           "has_shrine_effect": 1
         },
         "stat_text": [
-          "5% de Mana Regenerada por segundo",
+          "Regeneração de Mana aumentada em 150%",
           "5% de Vida Regenerada por segundo"
         ],
         "visuals": null
@@ -6883,6 +6987,33 @@
     },
     "stack_limit": null
   },
+  "shrine_greater_lightning": {
+    "description": "Novas elétricas surgem ao seu redor e você ganha uma porcentagem do dano físico como dano elétrico adicional.",
+    "invisible": false,
+    "name": "Altar Relampejante Maior",
+    "removable": true,
+    "stats": [
+      "has_shrine_effect",
+      "physical_damage_%_to_add_as_lightning"
+    ],
+    "visuals": "shrine_lightning",
+    "category": "Buff shrine",
+    "sources": null,
+    "templates": {
+      "lightning_greater_player": {
+        "aura_radius_metres": null,
+        "stats": {
+          "has_shrine_effect": 1,
+          "physical_damage_%_to_add_as_lightning": 30
+        },
+        "stat_text": [
+          "Receba 30% do Dano Físico como Dano de Raio Extra"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
   "shrine_cold": {
     "description": "Explosões Congelantes acontecem ao seu redor",
     "invisible": false,
@@ -6909,6 +7040,33 @@
           "has_shrine_effect": 1
         },
         "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "shrine_greater_cold": {
+    "description": "Novas glaciais surgem ao seu redor e você ganha uma porcentagem do dano físico como dano de frio adicional.",
+    "invisible": false,
+    "name": "Altar Congelante Maior",
+    "removable": true,
+    "stats": [
+      "has_shrine_effect",
+      "physical_damage_%_to_add_as_cold"
+    ],
+    "visuals": "shrine_cold",
+    "category": "Buff shrine",
+    "sources": null,
+    "templates": {
+      "cold_greater_player": {
+        "aura_radius_metres": null,
+        "stats": {
+          "has_shrine_effect": 1,
+          "physical_damage_%_to_add_as_cold": 30
+        },
+        "stat_text": [
+          "Receba 30% do Dano Físico como Dano de Gelo Extra"
+        ],
         "visuals": null
       }
     },
@@ -6994,6 +7152,33 @@
           "has_shrine_effect": 1
         },
         "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "shrine_greater_skeleton": {
+    "description": "Esqueletos são invocados ao seu redor e você ganha uma porcentagem do dano físico como dano de caos adicional.",
+    "invisible": false,
+    "name": "Altar Descarnado Maior",
+    "removable": true,
+    "stats": [
+      "has_shrine_effect",
+      "physical_damage_%_to_add_as_chaos"
+    ],
+    "visuals": "shrine_skeleton",
+    "category": "Buff shrine",
+    "sources": null,
+    "templates": {
+      "skeleton_greater_player": {
+        "aura_radius_metres": null,
+        "stats": {
+          "has_shrine_effect": 1,
+          "physical_damage_%_to_add_as_chaos": 30
+        },
+        "stat_text": [
+          "Receba 30% do Dano Físico como Dano de Caos Extra"
+        ],
         "visuals": null
       }
     },
@@ -7165,21 +7350,6 @@
         ],
         "visuals": "shrine_monster_affected"
       },
-      "massive_lesser": {
-        "aura_radius_metres": null,
-        "stats": {
-          "base_actor_scale_+%": 10,
-          "base_skill_area_of_effect_+%": 20,
-          "maximum_life_+%": 20,
-          "has_shrine_effect": 1
-        },
-        "stat_text": [
-          "Tamanho do Personagem aumentado em 10%",
-          "Área de Efeito aumentada em 20%",
-          "Vida máxima aumentada em 20%"
-        ],
-        "visuals": null
-      },
       "RoyaleShrineMassive": {
         "aura_radius_metres": null,
         "stats": {
@@ -7207,6 +7377,39 @@
           "Tamanho do Personagem aumentado em 30%",
           "Área de Efeito aumentada em 40%",
           "Vida máxima aumentada em 40%"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "shrine_lesser_massive": {
+    "description": "Você tem vida, área de efeito e tamanho aumentados.",
+    "invisible": false,
+    "name": "Altar Maciço",
+    "removable": true,
+    "stats": [
+      "base_actor_scale_+%",
+      "base_skill_area_of_effect_+%",
+      "maximum_life_+%",
+      "has_shrine_effect"
+    ],
+    "visuals": "shrine_massive",
+    "category": "Buff shrine",
+    "sources": null,
+    "templates": {
+      "massive_lesser": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_actor_scale_+%": 10,
+          "base_skill_area_of_effect_+%": 20,
+          "maximum_life_+%": 20,
+          "has_shrine_effect": 1
+        },
+        "stat_text": [
+          "Tamanho do Personagem aumentado em 10%",
+          "Área de Efeito aumentada em 20%",
+          "Vida máxima aumentada em 20%"
         ],
         "visuals": null
       }
@@ -7378,6 +7581,18 @@
           "Não sofre Dano"
         ],
         "visuals": "shrine_monster_affected"
+      },
+      "DivineShrineBuff": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_cannot_be_damaged": 1,
+          "has_shrine_effect": 1,
+          "cannot_die": 1
+        },
+        "stat_text": [
+          "Não sofre Dano"
+        ],
+        "visuals": null
       }
     },
     "stack_limit": null
@@ -7906,6 +8121,18 @@
           "grant_cast_speed_+%_to_aura_owner_on_death": 0,
           "grant_damage_reduction_%_to_aura_owner_on_death": 0,
           "soul_is_consumed_on_death": 0
+        },
+        "stat_text": null,
+        "visuals": null
+      },
+      "MapModPlayerSoulEater": {
+        "aura_radius_metres": 7.0,
+        "stats": {
+          "grant_actor_scale_+%_to_aura_owner_on_death": 2,
+          "grant_attack_speed_+%_to_aura_owner_on_death": 5,
+          "grant_cast_speed_+%_to_aura_owner_on_death": 5,
+          "grant_damage_reduction_%_to_aura_owner_on_death": 0,
+          "soul_is_consumed_on_death": 1
         },
         "stat_text": null,
         "visuals": null
@@ -15893,15 +16120,15 @@
     "stack_limit": null
   },
   "life_regen_from_spread_poison": {
-    "description": "",
+    "description": "Você está regenerando vida de um veneno disseminado.",
     "invisible": false,
-    "name": "Regeneração de Vida",
+    "name": "Regeneração de Vida de Bino",
     "removable": false,
     "stats": [
       "base_life_regeneration_rate_per_minute"
     ],
     "visuals": "life_regen",
-    "category": null,
+    "category": "Buff",
     "sources": null,
     "templates": null,
     "stack_limit": null
@@ -18677,6 +18904,20 @@
       "action_speed_-%"
     ],
     "visuals": "goddess_slow",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "time_mine_slow": {
+    "description": "[DNT] Stacking time slow",
+    "invisible": false,
+    "name": "[DNT] Timegrasp",
+    "removable": false,
+    "stats": [
+      "action_speed_-%"
+    ],
+    "visuals": "time_mine_slow_visual",
     "category": "Debuff",
     "sources": null,
     "templates": null,
@@ -21737,6 +21978,7 @@
     "stats": [
       "arcane_surge_cast_speed_+%",
       "mana_regeneration_rate_+%",
+      "life_regeneration_rate_+%",
       "spell_damage_+%_final_from_arcane_surge"
     ],
     "visuals": "arcane_surge",
@@ -23429,6 +23671,90 @@
     "templates": null,
     "stack_limit": null
   },
+  "ailments_types_grant_double_damage_against_self_child_buff_shock": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "enemy_chance_to_deal_double_damage_%_against_self"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "ailments_types_grant_double_damage_against_self_child_buff_freeze": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "enemy_chance_to_deal_double_damage_%_against_self"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "ailments_types_grant_double_damage_against_self_child_buff_chill": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "enemy_chance_to_deal_double_damage_%_against_self"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "ailments_types_grant_double_damage_against_self_child_buff_ignite": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "enemy_chance_to_deal_double_damage_%_against_self"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "ailments_types_grant_double_damage_against_self_child_buff_bleeding": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "enemy_chance_to_deal_double_damage_%_against_self"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "ailments_types_grant_double_damage_against_self_child_buff_poison": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "enemy_chance_to_deal_double_damage_%_against_self"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "stolen_mods_elder_stat": {
     "description": "Você tomou um dos mods de um Monstro Raro abatido para si",
     "invisible": false,
@@ -25069,6 +25395,25 @@
         ],
         "visuals": null
       },
+      "MapModPlayerAdrenaline": {
+        "aura_radius_metres": null,
+        "stats": {
+          "has_adrenaline": 1,
+          "damage_+%": 100,
+          "attack_speed_+%": 25,
+          "base_cast_speed_+%": 25,
+          "base_movement_velocity_+%": 25,
+          "base_additional_physical_damage_reduction_%": 10
+        },
+        "stat_text": [
+          "Dano aumentado em 100%",
+          "Velocidade de Ataque aumentada em 25%",
+          "Velocidade de Conjuração aumentada em 25%",
+          "Velocidade de Movimento aumentada em 25%",
+          "Redução de Dano Físico aumentada em 10%"
+        ],
+        "visuals": null
+      },
       "NecropolisAdrenaline": {
         "aura_radius_metres": null,
         "stats": {
@@ -25963,6 +26308,20 @@
     ],
     "visuals": "invisible",
     "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "vaal_temptation_instead_of_soul_gain_prevention": {
+    "description": "Você sofre dano físico degenerativo.",
+    "invisible": false,
+    "name": "Tentação Vaal",
+    "removable": false,
+    "stats": [
+      "base_physical_damage_taken_per_minute_unaffected_by_level_scaling"
+    ],
+    "visuals": "vaal_temptation",
+    "category": "Debuff",
     "sources": null,
     "templates": null,
     "stack_limit": null
@@ -27846,7 +28205,7 @@
       "buff_impl_stat"
     ],
     "visuals": "invisible",
-    "category": "Buff",
+    "category": null,
     "sources": {
       "Mods": [
         {
@@ -27864,6 +28223,14 @@
           "template": "TriggerRandomOfferingSkillUnique__1",
           "stat_text": null,
           "stats": null
+        },
+        {
+          "id": "CeaselessFleshGrantedSkillUnique__1",
+          "item": null,
+          "name": null,
+          "template": "TriggerRestlessDeadSkillUnique",
+          "stat_text": null,
+          "stats": null
         }
       ]
     },
@@ -27877,6 +28244,14 @@
         "visuals": null
       },
       "TriggerRandomOfferingSkillUnique__1": {
+        "aura_radius_metres": null,
+        "stats": {
+          "buff_impl_stat": 0
+        },
+        "stat_text": null,
+        "visuals": null
+      },
+      "TriggerRestlessDeadSkillUnique": {
         "aura_radius_metres": null,
         "stats": {
           "buff_impl_stat": 0
@@ -28444,7 +28819,9 @@
       "recover_es_as_well_as_life_from_life_regeneration",
       "curse_effect_on_self_+%",
       "self_damaging_ailment_duration_+%",
-      "base_maximum_chaos_damage_resistance_%"
+      "base_maximum_chaos_damage_resistance_%",
+      "mana_regeneration_rate_+%",
+      "accuracy_rating_+%"
     ],
     "visuals": "ground_consecration_elreon",
     "category": "Buff",
@@ -28922,6 +29299,18 @@
     "sources": null,
     "templates": null,
     "stack_limit": null
+  },
+  "overloaded_spell_boost_charge": {
+    "description": "Habilidades reforçadas por Intensidade Sobrecarregada ganham chance de causar golpe crítico e multiplicador de crítico adicionais.",
+    "invisible": false,
+    "name": "Intensidade Sobrecarregada",
+    "removable": false,
+    "stats": [],
+    "visuals": "overloaded_intensity",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": 3
   },
   "anticipation": {
     "description": "",
@@ -29406,21 +29795,17 @@
     "stack_limit": null
   },
   "shrine_resonating": {
-    "description": "Você tem uma chance de ganhar Cargas de Poder, Tolerância ou Frenezi ao golpear e matar, e ganha bônus extras de Cargas.",
+    "description": "Você pode ganhar cargas de frenesi, poder ou tolerância ao atingir e ao matar, e tem uma quantidade máxima maior dessas cargas.",
     "invisible": false,
-    "name": "Altar do Avanço",
+    "name": "Altar Ressonante",
     "removable": true,
     "stats": [
       "chance_to_gain_random_standard_charge_on_hit_%",
       "power_frenzy_or_endurance_charge_on_kill_%",
-      "critical_strike_chance_+%_per_power_charge",
-      "base_attack_speed_+%_per_frenzy_charge",
-      "base_cast_speed_+%_per_frenzy_charge",
-      "object_inherent_damage_+%_final_per_frenzy_charge",
-      "physical_damage_reduction_%_per_endurance_charge",
-      "resist_all_elements_%_per_endurance_charge",
-      "damage_+%_per_frenzy_power_or_endurance_charge",
-      "has_shrine_effect"
+      "has_shrine_effect",
+      "max_power_charges",
+      "max_endurance_charges",
+      "max_frenzy_charges"
     ],
     "visuals": "shrine_resonating",
     "category": "Buff shrine",
@@ -29431,23 +29816,17 @@
         "stats": {
           "chance_to_gain_random_standard_charge_on_hit_%": 20,
           "power_frenzy_or_endurance_charge_on_kill_%": 60,
-          "critical_strike_chance_+%_per_power_charge": 40,
-          "base_attack_speed_+%_per_frenzy_charge": 4,
-          "base_cast_speed_+%_per_frenzy_charge": 4,
-          "object_inherent_damage_+%_final_per_frenzy_charge": 4,
-          "physical_damage_reduction_%_per_endurance_charge": 4,
-          "resist_all_elements_%_per_endurance_charge": 4,
-          "damage_+%_per_frenzy_power_or_endurance_charge": 5,
-          "has_shrine_effect": 1
+          "has_shrine_effect": 1,
+          "max_power_charges": 1,
+          "max_endurance_charges": 1,
+          "max_frenzy_charges": 1
         },
         "stat_text": [
           "20% de chance de receber uma Carga de Poder, Frenesi ou Tolerância ao Acertar",
           "60% de chance de ganhar uma Carga de Poder, Frenesi ou Tolerância ao Matar",
-          "Chance de Crítico aumentada em 40% por Carga de Poder",
-          "Velocidade de Ataque aumentada em 4% por Carga de Frenesi",
-          "4% de Redução de Dano Físico adicional por Carga de Tolerância",
-          "+4% de todas Resistências Elementais por Carga de Tolerância",
-          "Dano aumentado em 5% por Carga de Frenesi, Poder ou Tolerância"
+          "+1 ao Máximo de Cargas de Poder",
+          "+1 ao Máximo de Cargas de Tolerância",
+          "+1 ao Máximo de Cargas de Frenesi"
         ],
         "visuals": null
       },
@@ -29456,14 +29835,10 @@
         "stats": {
           "chance_to_gain_random_standard_charge_on_hit_%": 100,
           "power_frenzy_or_endurance_charge_on_kill_%": 0,
-          "critical_strike_chance_+%_per_power_charge": 0,
-          "base_attack_speed_+%_per_frenzy_charge": 0,
-          "base_cast_speed_+%_per_frenzy_charge": 0,
-          "object_inherent_damage_+%_final_per_frenzy_charge": 0,
-          "physical_damage_reduction_%_per_endurance_charge": 0,
-          "resist_all_elements_%_per_endurance_charge": 0,
-          "damage_+%_per_frenzy_power_or_endurance_charge": 0,
-          "has_shrine_effect": 1
+          "has_shrine_effect": 1,
+          "max_power_charges": 0,
+          "max_endurance_charges": 0,
+          "max_frenzy_charges": 0
         },
         "stat_text": [
           "100% de chance de receber uma Carga de Poder, Frenesi ou Tolerância ao Acertar"
@@ -29475,23 +29850,17 @@
         "stats": {
           "chance_to_gain_random_standard_charge_on_hit_%": 20,
           "power_frenzy_or_endurance_charge_on_kill_%": 60,
-          "critical_strike_chance_+%_per_power_charge": 40,
-          "base_attack_speed_+%_per_frenzy_charge": 4,
-          "base_cast_speed_+%_per_frenzy_charge": 4,
-          "object_inherent_damage_+%_final_per_frenzy_charge": 4,
-          "physical_damage_reduction_%_per_endurance_charge": 4,
-          "resist_all_elements_%_per_endurance_charge": 4,
-          "damage_+%_per_frenzy_power_or_endurance_charge": 5,
-          "has_shrine_effect": 1
+          "has_shrine_effect": 1,
+          "max_power_charges": 1,
+          "max_endurance_charges": 1,
+          "max_frenzy_charges": 1
         },
         "stat_text": [
           "20% de chance de receber uma Carga de Poder, Frenesi ou Tolerância ao Acertar",
           "60% de chance de ganhar uma Carga de Poder, Frenesi ou Tolerância ao Matar",
-          "Chance de Crítico aumentada em 40% por Carga de Poder",
-          "Velocidade de Ataque aumentada em 4% por Carga de Frenesi",
-          "4% de Redução de Dano Físico adicional por Carga de Tolerância",
-          "+4% de todas Resistências Elementais por Carga de Tolerância",
-          "Dano aumentado em 5% por Carga de Frenesi, Poder ou Tolerância"
+          "+1 ao Máximo de Cargas de Poder",
+          "+1 ao Máximo de Cargas de Tolerância",
+          "+1 ao Máximo de Cargas de Frenesi"
         ],
         "visuals": null
       },
@@ -29500,23 +29869,17 @@
         "stats": {
           "chance_to_gain_random_standard_charge_on_hit_%": 20,
           "power_frenzy_or_endurance_charge_on_kill_%": 60,
-          "critical_strike_chance_+%_per_power_charge": 40,
-          "base_attack_speed_+%_per_frenzy_charge": 4,
-          "base_cast_speed_+%_per_frenzy_charge": 4,
-          "object_inherent_damage_+%_final_per_frenzy_charge": 4,
-          "physical_damage_reduction_%_per_endurance_charge": 4,
-          "resist_all_elements_%_per_endurance_charge": 4,
-          "damage_+%_per_frenzy_power_or_endurance_charge": 5,
-          "has_shrine_effect": 1
+          "has_shrine_effect": 1,
+          "max_power_charges": 1,
+          "max_endurance_charges": 1,
+          "max_frenzy_charges": 1
         },
         "stat_text": [
           "20% de chance de receber uma Carga de Poder, Frenesi ou Tolerância ao Acertar",
           "60% de chance de ganhar uma Carga de Poder, Frenesi ou Tolerância ao Matar",
-          "Chance de Crítico aumentada em 40% por Carga de Poder",
-          "Velocidade de Ataque aumentada em 4% por Carga de Frenesi",
-          "4% de Redução de Dano Físico adicional por Carga de Tolerância",
-          "+4% de todas Resistências Elementais por Carga de Tolerância",
-          "Dano aumentado em 5% por Carga de Frenesi, Poder ou Tolerância"
+          "+1 ao Máximo de Cargas de Poder",
+          "+1 ao Máximo de Cargas de Tolerância",
+          "+1 ao Máximo de Cargas de Frenesi"
         ],
         "visuals": null
       }
@@ -32249,6 +32612,48 @@
     "templates": null,
     "stack_limit": null
   },
+  "ailments_types_grant_double_damage_against_self_child_buff_scorch": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "enemy_chance_to_deal_double_damage_%_against_self"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "ailments_types_grant_double_damage_against_self_child_buff_frostburn": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "enemy_chance_to_deal_double_damage_%_against_self"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "ailments_types_grant_double_damage_against_self_child_buff_sap": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "enemy_chance_to_deal_double_damage_%_against_self"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "atlas_orion_eyrie_hurricane": {
     "description": "Você está sofrendo dano de gelo degenerativo.",
     "invisible": false,
@@ -32926,6 +33331,66 @@
     "stack_limit": null
   },
   "have_ignited_an_enemy_recently": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "have_bleed_an_enemy_recently": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "have_poisoned_an_enemy_recently": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "have_sapped_an_enemy_recently": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "have_brittled_an_enemy_recently": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "have_scorched_an_enemy_recently": {
     "description": "",
     "invisible": true,
     "name": "",
@@ -34531,6 +34996,20 @@
     "templates": null,
     "stack_limit": null
   },
+  "blinded_enemy_cannot_inflict_damaging_ailments": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "never_damaging_ailments"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "intimidated_enemy_self_stun_duration": {
     "description": "",
     "invisible": true,
@@ -35443,6 +35922,20 @@
     "templates": null,
     "stack_limit": null
   },
+  "physical_damage_percent_converted_to_chaos": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "base_from_enemy_physical_damage_%_to_convert_to_chaos"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "stolen_mods_buff_experimented": {
     "description": "Você tomou os mods de um Monstro Mágico morto para si",
     "invisible": false,
@@ -35841,6 +36334,42 @@
     "stack_limit": 40
   },
   "lightning_resonance": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": 40
+  },
+  "physical_unholy_resonance": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": 40
+  },
+  "chaos_unholy_resonance": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": 40
+  },
+  "lightning_unholy_resonance": {
     "description": "",
     "invisible": true,
     "name": "",
@@ -38687,6 +39216,30 @@
     "templates": null,
     "stack_limit": null
   },
+  "resentment": {
+    "description": "Seus ataques com arco causam dano de fogo degenerativo ao atingir.",
+    "invisible": false,
+    "name": "Escórias",
+    "removable": false,
+    "stats": [],
+    "visuals": "resentment_buff_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "animosity": {
+    "description": "Seus ataques com arco causam dano físico degenerativo em inimigos empalados.",
+    "invisible": false,
+    "name": "Lágrimas de Podridão",
+    "removable": false,
+    "stats": [],
+    "visuals": "animosity_buff_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "ultimatum_chaos_degenzone": {
     "description": "Você está sofrendo Dano de Caos degenerativo",
     "invisible": false,
@@ -39181,7 +39734,7 @@
       "number_of_additional_projectiles"
     ],
     "visuals": "invisible",
-    "category": "Buff",
+    "category": null,
     "sources": null,
     "templates": null,
     "stack_limit": null
@@ -39741,6 +40294,18 @@
     ],
     "visuals": "lifetap_buff",
     "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "transfusion_life_spent": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
     "sources": null,
     "templates": null,
     "stack_limit": null
@@ -41250,6 +41815,7 @@
     "removable": true,
     "stats": [
       "storm_blade_energy_shield_+%_final",
+      "attack_speed_+%",
       "wielding_storm_blades"
     ],
     "visuals": "storm_blade",
@@ -41670,13 +42236,13 @@
     "templates": null,
     "stack_limit": null
   },
-  "flask_bonus_reflect_damage_taken_reduction_percent": {
+  "flask_bonus_percent_damage_cannot_be_reflected": {
     "description": "",
     "invisible": true,
     "name": "",
     "removable": false,
     "stats": [
-      "reflect_damage_taken_+%"
+      "%_of_your_damage_cannot_be_reflected"
     ],
     "visuals": "invisible",
     "category": "Flask",
@@ -42962,6 +43528,23 @@
     ],
     "visuals": "invisible",
     "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "astral_chains_grasping_vines_buff": {
+    "description": "Você sofre desaceleração por Grilhões Astrais. Mova-se para rompê-los.",
+    "invisible": false,
+    "name": "Grilhões Astrais",
+    "removable": false,
+    "stats": [
+      "grasping_vines_movement_speed_+%_final",
+      "buff_impl_stat",
+      "buff_impl_stat",
+      "your_travel_skills_are_disabled"
+    ],
+    "visuals": "astral_chains_buff",
+    "category": "Debuff",
     "sources": null,
     "templates": null,
     "stack_limit": null
@@ -67673,6 +68256,20 @@
     "templates": null,
     "stack_limit": null
   },
+  "hexed_enemy_cannot_deal_critical_strikes": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "global_cannot_crit"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "warcry_duration_tracker": {
     "description": "",
     "invisible": true,
@@ -72208,6 +72805,32 @@
     "templates": null,
     "stack_limit": null
   },
+  "number_of_enemies_in_presence": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "skill_track_number_of_enemies_presence": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "player_needs_to_track_number_of_enemies_in_your_presence"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "decay_quant_rarity": {
     "description": "A raridade de itens diminui com o tempo, mas aumenta a cada inimigo abatido.",
     "invisible": false,
@@ -72339,6 +72962,206 @@
     "stack_limit": null
   },
   "generic_league_monster_enhanced": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "monster_difficulty_tankiness_+%",
+      "damage_+%",
+      "from_league_item_rarity_+%_permyriad",
+      "from_league_item_quantity_+%_permyriad"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": {
+      "BreachUnstableEnhancedMonsterBuff": {
+        "aura_radius_metres": null,
+        "stats": {
+          "monster_difficulty_tankiness_+%": 75,
+          "damage_+%": 15,
+          "from_league_item_rarity_+%_permyriad": 1500,
+          "from_league_item_quantity_+%_permyriad": 1000
+        },
+        "stat_text": [
+          "Dano aumentado em 15%"
+        ],
+        "visuals": null
+      },
+      "BreachHiveEnhancedMonsterBuff": {
+        "aura_radius_metres": null,
+        "stats": {
+          "monster_difficulty_tankiness_+%": 60,
+          "damage_+%": 12,
+          "from_league_item_rarity_+%_permyriad": 1200,
+          "from_league_item_quantity_+%_permyriad": 800
+        },
+        "stat_text": [
+          "Dano aumentado em 12%"
+        ],
+        "visuals": null
+      },
+      "ExpeditionEnhancedMonsterBuff": {
+        "aura_radius_metres": null,
+        "stats": {
+          "monster_difficulty_tankiness_+%": 15,
+          "damage_+%": 10,
+          "from_league_item_rarity_+%_permyriad": 1000,
+          "from_league_item_quantity_+%_permyriad": 500
+        },
+        "stat_text": [
+          "Dano aumentado em 10%"
+        ],
+        "visuals": null
+      },
+      "SettlersEscalatingOreEnhancedMonsterBuff": {
+        "aura_radius_metres": null,
+        "stats": {
+          "monster_difficulty_tankiness_+%": 15,
+          "damage_+%": 15,
+          "from_league_item_rarity_+%_permyriad": 500,
+          "from_league_item_quantity_+%_permyriad": 500
+        },
+        "stat_text": [
+          "Dano aumentado em 15%"
+        ],
+        "visuals": null
+      },
+      "AstrolabeMapBossEnhanced": {
+        "aura_radius_metres": null,
+        "stats": {
+          "monster_difficulty_tankiness_+%": 30,
+          "damage_+%": 5,
+          "from_league_item_rarity_+%_permyriad": 900,
+          "from_league_item_quantity_+%_permyriad": 450
+        },
+        "stat_text": [
+          "Dano aumentado em 5%"
+        ],
+        "visuals": null
+      },
+      "AstrolabeHarvestMonsterEnhanced": {
+        "aura_radius_metres": null,
+        "stats": {
+          "monster_difficulty_tankiness_+%": 30,
+          "damage_+%": 5,
+          "from_league_item_rarity_+%_permyriad": 1500,
+          "from_league_item_quantity_+%_permyriad": 750
+        },
+        "stat_text": [
+          "Dano aumentado em 5%"
+        ],
+        "visuals": null
+      },
+      "AstrolabeAbyssMonsterEnhanced": {
+        "aura_radius_metres": null,
+        "stats": {
+          "monster_difficulty_tankiness_+%": 30,
+          "damage_+%": 5,
+          "from_league_item_rarity_+%_permyriad": 900,
+          "from_league_item_quantity_+%_permyriad": 450
+        },
+        "stat_text": [
+          "Dano aumentado em 5%"
+        ],
+        "visuals": null
+      },
+      "AstrolabeBreachMonsterEnhanced": {
+        "aura_radius_metres": null,
+        "stats": {
+          "monster_difficulty_tankiness_+%": 30,
+          "damage_+%": 5,
+          "from_league_item_rarity_+%_permyriad": 900,
+          "from_league_item_quantity_+%_permyriad": 450
+        },
+        "stat_text": [
+          "Dano aumentado em 5%"
+        ],
+        "visuals": null
+      },
+      "AstrolabeRitualMonsterEnhanced": {
+        "aura_radius_metres": null,
+        "stats": {
+          "monster_difficulty_tankiness_+%": 30,
+          "damage_+%": 5,
+          "from_league_item_rarity_+%_permyriad": 1200,
+          "from_league_item_quantity_+%_permyriad": 600
+        },
+        "stat_text": [
+          "Dano aumentado em 5%"
+        ],
+        "visuals": null
+      },
+      "AstrolabeBlightMonsterEnhanced": {
+        "aura_radius_metres": null,
+        "stats": {
+          "monster_difficulty_tankiness_+%": 30,
+          "damage_+%": 5,
+          "from_league_item_rarity_+%_permyriad": 900,
+          "from_league_item_quantity_+%_permyriad": 450
+        },
+        "stat_text": [
+          "Dano aumentado em 5%"
+        ],
+        "visuals": null
+      },
+      "AstrolabeUltimatumMonsterEnhanced": {
+        "aura_radius_metres": null,
+        "stats": {
+          "monster_difficulty_tankiness_+%": 30,
+          "damage_+%": 5,
+          "from_league_item_rarity_+%_permyriad": 1200,
+          "from_league_item_quantity_+%_permyriad": 600
+        },
+        "stat_text": [
+          "Dano aumentado em 5%"
+        ],
+        "visuals": null
+      },
+      "AstrolabeDeliriumMonsterEnhanced": {
+        "aura_radius_metres": null,
+        "stats": {
+          "monster_difficulty_tankiness_+%": 30,
+          "damage_+%": 5,
+          "from_league_item_rarity_+%_permyriad": 1500,
+          "from_league_item_quantity_+%_permyriad": 750
+        },
+        "stat_text": [
+          "Dano aumentado em 5%"
+        ],
+        "visuals": null
+      },
+      "AstrolabeLegionMonsterEnhanced": {
+        "aura_radius_metres": null,
+        "stats": {
+          "monster_difficulty_tankiness_+%": 30,
+          "damage_+%": 5,
+          "from_league_item_rarity_+%_permyriad": 900,
+          "from_league_item_quantity_+%_permyriad": 450
+        },
+        "stat_text": [
+          "Dano aumentado em 5%"
+        ],
+        "visuals": null
+      },
+      "AstrolabeExpeditionMonsterEnhanced": {
+        "aura_radius_metres": null,
+        "stats": {
+          "monster_difficulty_tankiness_+%": 30,
+          "damage_+%": 5,
+          "from_league_item_rarity_+%_permyriad": 1500,
+          "from_league_item_quantity_+%_permyriad": 750
+        },
+        "stat_text": [
+          "Dano aumentado em 5%"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "legion_breakout_monster_enhanced": {
     "description": "",
     "invisible": true,
     "name": "",
@@ -72537,6 +73360,18 @@
     "stack_limit": null
   },
   "retaliation_evisceration_enabled": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "retaliation_shield_of_light_enabled": {
     "description": "",
     "invisible": true,
     "name": "",
@@ -73168,6 +74003,62 @@
     "removable": false,
     "stats": [
       "have_used_life_flask_recently"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "have_used_amethyst_flask_recently": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "have_used_amethyst_flask_recently"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "have_used_ruby_flask_recently": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "have_used_ruby_flask_recently"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "have_used_sapphire_flask_recently": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "have_used_sapphire_flask_recently"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "have_used_topaz_flask_recently": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "have_used_topaz_flask_recently"
     ],
     "visuals": "invisible",
     "category": null,
@@ -75236,13 +76127,15 @@
     "templates": null,
     "stack_limit": null
   },
-  "zana_rose_petal_visual_buff": {
-    "description": "",
-    "invisible": true,
-    "name": "",
+  "zana_rose_petal_buff": {
+    "description": "Mais Pétalas aumentam a chance de obter itens com Fios de Memória.",
+    "invisible": false,
+    "name": "Pétalas de Rosa",
     "removable": false,
-    "stats": [],
-    "visuals": "invisible",
+    "stats": [
+      "found_items_zana_influence_equipment_item_chance_+%_final_divide_by_5"
+    ],
+    "visuals": "zana_rose_petal_charge",
     "category": null,
     "sources": null,
     "templates": null,
@@ -75254,7 +76147,8 @@
     "name": "Excomungado",
     "removable": false,
     "stats": [
-      "base_deal_no_chaos_damage"
+      "base_deal_no_chaos_damage",
+      "is_excommunicated"
     ],
     "visuals": "excommunicated_visual",
     "category": "Debuff",
@@ -75904,6 +76798,18 @@
     "templates": null,
     "stack_limit": null
   },
+  "blood_phylactery": {
+    "description": "Ao sofrer um Ataque Brutal, você perde Tensão Bariátrica para recuperar vida, até o máximo permitido.",
+    "invisible": false,
+    "name": "Tensão Bariátrica",
+    "removable": true,
+    "stats": [],
+    "visuals": "baryatic_tension",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "last_gasp": {
     "description": "",
     "invisible": true,
@@ -76036,7 +76942,7 @@
       "self_take_no_extra_damage_from_critical_strikes"
     ],
     "visuals": "farruls_farric_presence",
-    "category": null,
+    "category": "Buff",
     "sources": {
       "Mods": [
         {
@@ -76074,7 +76980,7 @@
       "base_cannot_be_stunned"
     ],
     "visuals": "farruls_fertile_presence",
-    "category": null,
+    "category": "Buff",
     "sources": {
       "Mods": [
         {
@@ -76113,7 +77019,7 @@
       "action_speed_cannot_be_reduced_below_base"
     ],
     "visuals": "farruls_wild_presence",
-    "category": null,
+    "category": "Buff",
     "sources": {
       "Mods": [
         {
@@ -76177,27 +77083,14 @@
     ],
     "visuals": "alternate_ascendancy_graft_aura",
     "category": "Debuff",
-    "sources": {
-      "PassiveSkills": [
-        {
-          "id": "AlternateAscendancyBreachlord3",
-          "item": null,
-          "name": null,
-          "template": "alternate_ascendency_graft_skill_damage_taken",
-          "stat_text": null,
-          "stats": null
-        }
-      ]
-    },
+    "sources": null,
     "templates": {
       "alternate_ascendency_graft_skill_damage_taken": {
         "aura_radius_metres": 6.0,
         "stats": {
           "damage_taken_+%_from_graft_skills": 100
         },
-        "stat_text": [
-          "Inimigos próximos sofrem dano de habilidades de enxerto aumentado em 100%"
-        ],
+        "stat_text": null,
         "visuals": null
       }
     },
@@ -76317,6 +77210,543 @@
     "templates": null,
     "stack_limit": null
   },
+  "number_of_attack_crit_recently": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "number_of_hallowing_flame_consumed_by_ally_recently": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "shrine_faridun": {
+    "description": "Penalidades expiram mais rapidamente em você e a duração dos bônus e penalidades criados por suas habilidades é aumentada.\r\n Você tem a quantidade de ouro largado ao matar inimigos aumentada.",
+    "invisible": false,
+    "name": "Altar Afarud",
+    "removable": true,
+    "stats": [
+      "debuff_time_passed_+%",
+      "buff_duration_+%",
+      "item_found_gold_+%",
+      "has_shrine_effect"
+    ],
+    "visuals": "shrine_faridun",
+    "category": "Buff shrine",
+    "sources": null,
+    "templates": {
+      "faridun_shrine": {
+        "aura_radius_metres": null,
+        "stats": {
+          "debuff_time_passed_+%": 100,
+          "buff_duration_+%": 25,
+          "item_found_gold_+%": 20,
+          "has_shrine_effect": 1
+        },
+        "stat_text": [
+          "Debuffs em você expiram 100% mais rápido",
+          "Buffs e Debuffs criados por suas habilidades são aumentados em 25%",
+          "Quantidade de Ouro Derrubada por Inimigos Mortos aumentada em 20%"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "divine_sentinel_aura_fire_damage": {
+    "description": "Você ganha dano físico como dano de fogo.",
+    "invisible": false,
+    "name": "Dano de Fogo da Sentinela",
+    "removable": false,
+    "stats": [
+      "physical_damage_%_to_add_as_fire"
+    ],
+    "visuals": "divine_sentinel_aura_fire_damage",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DivineSentinelAuraFireDamage": {
+        "aura_radius_metres": 5.0,
+        "stats": {
+          "physical_damage_%_to_add_as_fire": 15
+        },
+        "stat_text": [
+          "Receba 15% do Dano Físico como Dano de Fogo Extra"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "divine_sentinel_aura_lightning_damage": {
+    "description": "Você ganha dano físico como dano elétrico.",
+    "invisible": false,
+    "name": "Dano Elétrico da Sentinela",
+    "removable": false,
+    "stats": [
+      "physical_damage_%_to_add_as_lightning"
+    ],
+    "visuals": "divine_sentinel_aura_lightning_damage",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DivineSentinelAuraLightningDamage": {
+        "aura_radius_metres": 5.0,
+        "stats": {
+          "physical_damage_%_to_add_as_lightning": 15
+        },
+        "stat_text": [
+          "Receba 15% do Dano Físico como Dano de Raio Extra"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "divine_sentinel_aura_life_regeneration": {
+    "description": "Você está regenerando vida.",
+    "invisible": false,
+    "name": "Regeneração de Vida da Sentinela",
+    "removable": false,
+    "stats": [
+      "life_regeneration_rate_per_minute_%"
+    ],
+    "visuals": "divine_sentinel_aura_life_regeneration",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DivineSentinelAuraLifeRegeneration": {
+        "aura_radius_metres": 5.0,
+        "stats": {
+          "life_regeneration_rate_per_minute_%": 90
+        },
+        "stat_text": [
+          "1.5% de Vida Regenerada por segundo"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "divine_sentinel_aura_mana_regeneration": {
+    "description": "Você tem a velocidade de regeneração de mana aumentada.",
+    "invisible": false,
+    "name": "Regeneração de Mana da Sentinela",
+    "removable": false,
+    "stats": [
+      "mana_regeneration_rate_+%"
+    ],
+    "visuals": "divine_sentinel_aura_mana_regeneration",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DivineSentinelAuraManaRegeneration": {
+        "aura_radius_metres": 5.0,
+        "stats": {
+          "mana_regeneration_rate_+%": 30
+        },
+        "stat_text": [
+          "Regeneração de Mana aumentada em 30%"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "divine_sentinel_aura_chaos_resistance": {
+    "description": "Você tem a resistência a dano de caos aumentada.",
+    "invisible": false,
+    "name": "Resistência a Dano de Caos da Sentinela",
+    "removable": false,
+    "stats": [
+      "base_chaos_damage_resistance_%"
+    ],
+    "visuals": "divine_sentinel_aura_chaos_resistance",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DivineSentinelAuraChaosResistance": {
+        "aura_radius_metres": 5.0,
+        "stats": {
+          "base_chaos_damage_resistance_%": 23
+        },
+        "stat_text": [
+          "+23% de Resistência a Caos"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "divine_sentinel_aura_curse_effect_on_self": {
+    "description": "Maldições em você têm o efeito reduzido.",
+    "invisible": false,
+    "name": "Proteção contra Maldições da Sentinela",
+    "removable": false,
+    "stats": [
+      "curse_effect_on_self_+%"
+    ],
+    "visuals": "divine_sentinel_aura_curse_effect_on_self",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DivineSentinelAuraCurseEffectOnSelf": {
+        "aura_radius_metres": 5.0,
+        "stats": {
+          "curse_effect_on_self_+%": -50
+        },
+        "stat_text": [
+          "Efeitos de Maldições em Você reduzidos em 50%"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "ultimatum_minus_max_resistance": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "additional_maximum_all_resistances_%"
+    ],
+    "visuals": "invisible",
+    "category": "Debuff",
+    "sources": {
+      "UltimatumModifiers": [
+        {
+          "id": "PlayerDebuffMinusMaxElementalResistances",
+          "item": null,
+          "name": null,
+          "template": "PlayerDebuffMinusMaxElementalResistances",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
+    "templates": {
+      "PlayerDebuffMinusMaxElementalResistances": {
+        "aura_radius_metres": null,
+        "stats": {
+          "additional_maximum_all_resistances_%": -9
+        },
+        "stat_text": [
+          "-9% de todas Resistências máximas"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "ultimatum_non_curse_aura_effect": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "non_curse_aura_effect_+%"
+    ],
+    "visuals": "invisible",
+    "category": "Debuff",
+    "sources": {
+      "UltimatumModifiers": [
+        {
+          "id": "PlayerDebuffReducedNonCurseAuraEffect",
+          "item": null,
+          "name": null,
+          "template": "PlayerDebuffReducedNonCurseAuraEffect",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
+    "templates": {
+      "PlayerDebuffReducedNonCurseAuraEffect": {
+        "aura_radius_metres": null,
+        "stats": {
+          "non_curse_aura_effect_+%": -50
+        },
+        "stat_text": [
+          "Efeito de Auras Não Maldições das suas Habilidades reduzido em 50%"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "ultimatum_no_block": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": "Debuff",
+    "sources": {
+      "UltimatumModifiers": [
+        {
+          "id": "PlayerDebuffCannotBlock",
+          "item": null,
+          "name": null,
+          "template": "PlayDebuffNoBlock",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
+    "templates": {
+      "PlayDebuffNoBlock": {
+        "aura_radius_metres": null,
+        "stats": null,
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "static_strike_gathering_lightning": {
+    "description": "Raios de Golpe Estático de Relâmpagos Concentrados se propagam mais uma vez por instância.",
+    "invisible": false,
+    "name": "Relâmpagos Concentrados",
+    "removable": false,
+    "stats": [
+      "num_additional_beam_chains_from_gathering_lightning"
+    ],
+    "visuals": "static_strike_gathering_lightning_visual",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "oasis_ground_buff": {
+    "description": "Você está regenerando vida e mana.",
+    "invisible": false,
+    "name": "Chão de Oásis",
+    "removable": false,
+    "stats": [
+      "life_regeneration_rate_per_minute_%",
+      "mana_regeneration_rate_per_minute_%"
+    ],
+    "visuals": "oasis_ground_buff_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "hallowing_flame_debuff": {
+    "description": "O próximo ataque que você sofrer receberá uma parte do dano físico como dano de fogo adicional.",
+    "invisible": false,
+    "name": "Chama Santificada",
+    "removable": false,
+    "stats": [
+      "self_attack_physical_damage_%_to_add_as_fire"
+    ],
+    "visuals": "hallowing_flame_debuff_visual",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "torment_touched_faridun": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "torment_touched_faridun",
+    "category": null,
+    "sources": {
+      "Mods": [
+        {
+          "id": "TormentTouchedEffectFaridun",
+          "item": null,
+          "name": null,
+          "template": "TormentTouchedEffectFaridun",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
+    "templates": {
+      "TormentTouchedEffectFaridun": {
+        "aura_radius_metres": null,
+        "stats": null,
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "torment_possessed_faridun": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "torment_deserter",
+    "category": null,
+    "sources": {
+      "Mods": [
+        {
+          "id": "TormentPossessedEffectFaridun",
+          "item": null,
+          "name": null,
+          "template": "TormentPossessedEffectFaridun",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
+    "templates": {
+      "TormentPossessedEffectFaridun": {
+        "aura_radius_metres": null,
+        "stats": null,
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "skill_instance_wildshard_stack": {
+    "description": "Com 10 instâncias, você ganhará Regurgitação.",
+    "invisible": false,
+    "name": "Gula",
+    "removable": false,
+    "stats": [],
+    "visuals": "wildshard_stack",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "disgorge": {
+    "description": "Suas magias reforçadas por Gula disparam projéteis adicionais em círculo.",
+    "invisible": false,
+    "name": "Regurgitação",
+    "removable": false,
+    "stats": [
+      "affected_by_disgorge_buff"
+    ],
+    "visuals": "wildshard_disgorge",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "holy_strike_hammer_attach_locked_out": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "minion_pact_sacrifice_player_display_buff": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "shrine_faridun_monster": {
+    "description": "",
+    "invisible": true,
+    "name": "Monstro do Altar Afarud",
+    "removable": true,
+    "stats": [
+      "debuff_time_passed_+%"
+    ],
+    "visuals": "invisible",
+    "category": "Buff shrine",
+    "sources": null,
+    "templates": {
+      "shrine_faridun_monster": {
+        "aura_radius_metres": null,
+        "stats": {
+          "debuff_time_passed_+%": 50
+        },
+        "stat_text": [
+          "Debuffs em você expiram 50% mais rápido"
+        ],
+        "visuals": "shrine_monster_affected"
+      }
+    },
+    "stack_limit": null
+  },
+  "astral_empowered_monster": {
+    "description": "",
+    "invisible": false,
+    "name": "Fortalecimento Astral",
+    "removable": false,
+    "stats": [],
+    "visuals": "astrally_empowered",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "astral_monster_spawn_in_buff": {
+    "description": "",
+    "invisible": false,
+    "name": "[DNT] How did you get this",
+    "removable": false,
+    "stats": [],
+    "visuals": "astral_monster_spawn_in_buff_visual",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "duration_alive_since_gaining_this_buff_tracking": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "saresh_cursed_flesh": {
+    "description": "Você sofre dano físico degenerativo.",
+    "invisible": false,
+    "name": "Carne Amaldiçoada",
+    "removable": false,
+    "stats": [
+      "base_physical_damage_taken_per_minute"
+    ],
+    "visuals": "blood_tendrils",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "mtx_pied_piper_pet_hypnotized": {
     "description": "",
     "invisible": true,
@@ -76327,6 +77757,46 @@
     "category": null,
     "sources": null,
     "templates": null,
+    "stack_limit": null
+  },
+  "faridun_proliferation_buff": {
+    "description": "As afecções elementais infligidas por você se espalham para outros inimigos\nTodo dano causado por você pode esfriar, eletrificar e incendiar",
+    "invisible": false,
+    "name": "Bênção da Tempestade",
+    "removable": false,
+    "stats": [
+      "elemental_status_effect_aura_radius",
+      "all_damage_can_ignite",
+      "always_ignite",
+      "always_shock",
+      "all_damage_can_shock",
+      "all_damage_can_chill"
+    ],
+    "visuals": "mirage_proliferation_buff",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "FaridunProliferationBuff": {
+        "aura_radius_metres": null,
+        "stats": {
+          "elemental_status_effect_aura_radius": 20,
+          "all_damage_can_ignite": 1,
+          "always_ignite": 1,
+          "always_shock": 1,
+          "all_damage_can_shock": 1,
+          "all_damage_can_chill": 1
+        },
+        "stat_text": [
+          "Afecções Elementais que você causa também afetam outros Inimigos próximos",
+          "Todo Dano pode Incendiar",
+          "Seus Acertos empre Incendeiam",
+          "Seus Acertos empre Eletrizam",
+          "Todo Dano pode Eletrizar",
+          "Todo o Dano com Acertos pode Resfriar"
+        ],
+        "visuals": null
+      }
+    },
     "stack_limit": null
   }
 }

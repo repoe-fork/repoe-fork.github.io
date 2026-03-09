@@ -3871,7 +3871,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Unterstützte Fertigkeiten haben {0}% verlängerte Dauer",
+        "string": "Unterstützte Fertigkeiten haben {0}% verlängerte Minendauer",
         "reminder_text": null,
         "is_markup": null
       },
@@ -3891,7 +3891,7 @@
             "negate"
           ]
         ],
-        "string": "Unterstützte Fertigkeiten haben {0}% verkürzte Dauer",
+        "string": "Unterstützte Fertigkeiten haben {0}% verkürzte Minendauer",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4385,6 +4385,60 @@
         ],
         "string": "Projektile von unterstützten Fertigkeiten gabeln sich auf",
         "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "additional_poisons_+_to_apply_vs_non_poisoned_enemies"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Das Vergiften von nicht vergifteten Gegnern mit unterstützten Fertigkeiten wendet ein zusätzliches Gift an",
+        "reminder_text": "(Gift verursacht Chaosschaden über Zeit, basierend auf dem gesamten physischen Schaden und Chaosschaden der Fertigkeit. Mehrere Instanzen von Gift werden gestapelt)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Das Vergiften von nicht vergifteten Gegnern mit unterstützten Fertigkeiten wendet {0} zusätzliche Gifte an",
+        "reminder_text": "(Gift verursacht Chaosschaden über Zeit, basierend auf dem gesamten physischen Schaden und Chaosschaden der Fertigkeit. Mehrere Instanzen von Gift werden gestapelt)",
         "is_markup": null
       }
     ],
@@ -5724,6 +5778,62 @@
         ],
         "string": "Unterstützte Fertigkeiten verursachen {0}% weniger Schaden mit Entzünden",
         "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_lethal_dose_poison_damage_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Unterstützte Fertigkeiten verursachen {0}% mehr Schaden mit Gift",
+        "reminder_text": "(Gift verursacht Chaosschaden über Zeit, basierend auf dem gesamten physischen Schaden und Chaosschaden der Fertigkeit. Mehrere Instanzen von Gift werden gestapelt)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Unterstützte Fertigkeiten verursachen {0}% weniger Schaden mit Gift",
+        "reminder_text": "(Gift verursacht Chaosschaden über Zeit, basierend auf dem gesamten physischen Schaden und Chaosschaden der Fertigkeit. Mehrere Instanzen von Gift werden gestapelt)",
         "is_markup": null
       }
     ],
@@ -9329,6 +9439,46 @@
           }
         ],
         "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds"
+          ]
+        ],
+        "string": "Aufladung hält {0} Sekunde an",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds"
+          ]
+        ],
+        "string": "Aufladung hält {0} Sekunden an",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
           "#"
         ],
         "index_handlers": [
@@ -10428,6 +10578,98 @@
   {
     "English": null,
     "ids": [
+      "gain_unholy_resonance_of_majority_damage_on_hit_for_2_seconds"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Treffer mit unterstützten Fertigkeiten, bei denen der höchste Schadenstyp Blitz-, physischer oder Chaosschaden ist, gewähren Euch für 2 Sekunden 25 Unheilige Resonanz der anderen Typen pro Sekunde\nVerliert 5 Unheilige Resonanz pro Sekunde für jeden Typen, den Ihr nicht erhaltet",
+        "reminder_text": "(Maximal 50 Unheilige Resonanz jeder Art. Unheilige Resonanz gibt es vom Typ Blitz, Physisch und Chaos.)",
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "damage_+%_final_per_10_lowest_unholy_resonance"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Unterstützte Fertigkeiten verursachen {0}% mehr Schaden pro 10 der niedrigsten Unheiligen Resonanz",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Unterstützte Fertigkeiten verursachen {0}% weniger Schaden pro 10 der niedrigsten Unheiligen Resonanz",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "elemental_damage_+%_final_per_5_lowest_resonance"
     ],
     "trade_stats": null,
@@ -10505,6 +10747,114 @@
           []
         ],
         "string": "Unterstützte Fertigkeiten durchdringen {0}% Elementarwiderstände, während jede Resonanz mindestens 25 beträgt",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "hits_ignore_enemy_monster_lightning_and_chaos_resistance_%_chance_while_all_unholy_resonance_is_25"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Unterstützte Fertigkeiten haben {0}% Chance, den gegnerischen Blitz- und Chaoswiderstand zu ignorieren, während jede Unheilige Resonanz mindestens 25 beträgt",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Unterstützte Fertigkeiten ignorieren den gegnerischen Blitz- und Chaoswiderstand, während jede Unheilige Resonanz mindestens 25 beträgt",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "hits_ignore_enemy_monster_physical_damage_reduction_%_chance_while_all_unholy_resonance_is_25"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Unterstützte Fertigkeiten haben {0}% Chance, die gegnerische physische Schadensminderung zu ignorieren, während jede Unheilige Resonanz mindestens 25 beträgt",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Unterstützte Fertigkeiten ignorieren die gegnerische physische Schadensminderung, während jede Unheilige Resonanz mindestens 25 beträgt",
         "reminder_text": null,
         "is_markup": null
       }
@@ -10982,6 +11332,44 @@
   {
     "English": null,
     "ids": [
+      "gain_overloaded_intensity_for_x_ms_after_losing_6_intensity"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "Erhaltet für {0} Sekunden einen Stapel von Überladene Intensität,\nnachdem Ihr mit unterstützten Fertigkeiten 6 Intensität verloren habt",
+        "reminder_text": "(Maximal 3 Stapel von Überladene Intensität. Überladene Intensität zu erhalten, erneuert die Dauer von bereits vorhandenen Stapeln von Überladene Intensität.)",
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "accuracy_rating"
     ],
     "trade_stats": null,
@@ -11374,6 +11762,44 @@
         ],
         "string": "Unterstützte Fertigkeiten haben {0}% Chance, unterkühlte Gegner einzufrieren",
         "reminder_text": "(Einfrieren verringert die gegnerische Aktionsgeschwindigkeit auf Null und verhindert jede Handlung. Die Dauer ist abhängig vom Kälteschaden des Treffers)",
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "additional_critical_strike_chance_per_overloaded_intensity"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          [
+            "divide_by_one_hundred"
+          ]
+        ],
+        "string": "Unterstützte Fertigkeiten haben {0}% zu kritischer Trefferchance pro Überladene Intensität",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -13305,12 +13731,50 @@
           }
         ],
         "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Unterstützte Fertigkeiten haben {0}% beschleunigte Abklingzeit-Rate",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Unterstützte Fertigkeiten haben {0}% verlangsamte Abklingzeit-Rate",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
           "#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "Unterstützte Fertigkeiten haben {0}% beschleunigte Abklingzeit",
+        "string": "Unterstützte Fertigkeiten haben {0}% beschleunigte Abklingzeit-Rate",
         "reminder_text": null,
         "is_markup": null
       },
@@ -13330,7 +13794,7 @@
             "negate"
           ]
         ],
-        "string": "Unterstützte Fertigkeiten haben {0}% verlangsamte Abklingzeit",
+        "string": "Unterstützte Fertigkeiten haben {0}% verlangsamte Abklingzeit-Rate",
         "reminder_text": null,
         "is_markup": null
       }
@@ -14754,6 +15218,60 @@
   {
     "English": null,
     "ids": [
+      "base_total_number_of_sigils_allowed"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Unterstützte Fertigkeiten können ein zusätzliches Zeichen zaubern",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Unterstützte Fertigkeiten können {0} zusätzliche Zeichen zaubern",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "bleed_on_hit_with_attacks_%",
       "global_bleed_on_hit",
       "cannot_cause_bleeding"
@@ -15035,6 +15553,62 @@
           ]
         ],
         "string": "Unterstützte Fertigkeiten verursachen {0}% verringerten Brandschaden",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "cast_on_ward_break_damage_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Unterstützte Fertigkeiten verursachen {0}% mehr Zauberschaden",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Unterstützte Fertigkeiten verursachen {0}% weniger Zauberschaden",
         "reminder_text": null,
         "is_markup": null
       }
@@ -15585,8 +16159,8 @@
       {
         "condition": [
           {
-            "min": null,
-            "max": null,
+            "min": 1,
+            "max": 99,
             "negated": null
           }
         ],
@@ -15597,6 +16171,24 @@
           []
         ],
         "string": "Von unterstützten Fluch-Fertigkeiten angewendete Verhexungen haben {0}% Chance, auf hexgeschützte Gegner angewendet zu werden",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Von unterstützten Fluch-Fertigkeiten angewendete Verhexungen können auf hexgeschützte Gegner angewendet werden",
         "reminder_text": null,
         "is_markup": null
       }
@@ -16234,6 +16826,228 @@
   {
     "English": null,
     "ids": [
+      "consecrated_cry_consecrated_ground_duration_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "Unterstützte Kriegsschreie erzeugen Geweihten Boden, der {0} Sekunde anhält",
+        "reminder_text": "(Verbündete, die auf Eurem geweihtem Boden stehen, regenerieren eine Prozentzahl ihres maximalen Lebens pro Sekunde, und Flüche haben 50% verringerte Wirkung auf sie)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "Unterstützte Kriegsschreie erzeugen Geweihten Boden, der {0} Sekunden anhält",
+        "reminder_text": "(Verbündete, die auf Eurem geweihtem Boden stehen, regenerieren eine Prozentzahl ihres maximalen Lebens pro Sekunde, und Flüche haben 50% verringerte Wirkung auf sie)",
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "consecrated_cry_warcry_area_of_effect_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Unterstützte Kriegsschreie haben {0}% mehr Wirkungsbereich",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Unterstützte Kriegsschreie haben {0}% weniger Wirkungsbereich",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "cooldown_recovery_rate_+%_if_no_enemies_in_your_presence"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% beschleunigte Abklingzeit-Rate, wenn es benutzt wird, während sich keine Gegner in Eurer Präsenz befinden",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% verlangsamte Abklingzeit-Rate, wenn es benutzt wird, während sich keine Gegner in Eurer Präsenz befinden",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "cooldown_recovery_rate_+%_per_100_ward"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Unterstützte Zauber haben {0}% beschleunigte Abklingzeit-Rate pro 100 Schutz",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Unterstützte Zauber haben {0}% verlangsamte Abklingzeit-Rate pro 100 Schutz",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "cooldown_recovery_rate_+%_when_a_unique_enemy_in_your_presence"
     ],
     "trade_stats": null,
@@ -16419,6 +17233,42 @@
           ]
         ],
         "string": "Unterstützte Fertigkeiten haben {0}% verringerte kritische Trefferchance gegen geblendete Gegner",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "critical_strike_multiplier_+_per_overloaded_intensity"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Unterstützte Fertigkeiten haben {0}% zu Multiplikator für kritische Treffer pro Überladene Intensität",
         "reminder_text": null,
         "is_markup": null
       }
@@ -17664,6 +18514,42 @@
   {
     "English": null,
     "ids": [
+      "damage_removed_from_minions_before_life_or_es_%_if_only_one_minion"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Kreaturen von unterstützten Fertigkeiten erleiden {0}% des Trefferschadens von ihrem Leben für Euch,\nwenn sie Eure einzige Kreatur ist",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "damage_vs_cursed_enemies_per_enemy_curse_+%"
     ],
     "trade_stats": null,
@@ -18456,6 +19342,136 @@
   {
     "English": null,
     "ids": [
+      "excommunicate_on_melee_attack_hit_for_X_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "Unterstützte Fertigkeiten bannen Gegner bei Nahkampftreffer für {0} Sekunde",
+        "reminder_text": "(Gebannte Gegner können keinen Chaosschaden verursachen)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "Unterstützte Fertigkeiten bannen Gegner bei Nahkampftreffer für {0} Sekunden",
+        "reminder_text": "(Gebannte Gegner können keinen Chaosschaden verursachen)",
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "explode_enemies_for_10%_life_as_random_element_on_killing_blow_chance_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Tödliche Schläge mit unterstützten Fertigkeiten haben {0}% Chance, Gegner explodieren zu lassen und ein Zehntel ihres maximalen Lebens als Schaden eines zufälligen Elements zu verursachen",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Tödliche Schläge mit unterstützten Fertigkeiten haben {0}% Chance, Gegner explodieren zu lassen und ein Zehntel ihres maximalen Lebens als Schaden eines zufälligen Elements zu verursachen",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Tödliche Schläge mit unterstützten Fertigkeiten lassen Gegner explodieren und verursachen ein Zehntel ihres maximalen Lebens als Schaden eines zufälligen Elements",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "faster_bleed_%"
     ],
     "trade_stats": null,
@@ -18898,6 +19914,98 @@
   {
     "English": null,
     "ids": [
+      "frostmage_gain_cold_damage_%_of_max_reserved_mana"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Unterstützte Fertigkeiten verursachen zusätzlichen Kälteschaden in Höhe von {0}% des reservierten maximalen Manas",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Unterstützte Fertigkeiten verlieren zusätzlichen Kälteschaden in Höhe von {0}% des reservierten maximalen Manas",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "frostmage_cost_equals_%_reserved_mana"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Unterstützte Fertigkeiten erhalten Basismanakosten in Höhe von {0}% des reservierten maximalen Manas",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "gain_%_of_base_wand_damage_as_added_spell_damage",
       "quality_display_wand_damage_as_added_spell_damage_is_gem"
     ],
@@ -18989,6 +20097,60 @@
         ],
         "string": "{0}% Chance, 1 Rausch zu erhalten, wenn Ihr unterstützte Fertigkeiten benutzt",
         "reminder_text": "(Jeder Rausch gewährt 1% mehr Angriffsschaden. Das Maximum beträgt 30. Verliert 10 Rausch pro Sekunde, wenn Ihr in den letzten 2 Sekunden keinen Treffer erlitten oder Rausch erlangt habt)",
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "gain_X_wildshard_stacks_on_cast"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Erhaltet {0} Völlerei beim Zaubern unterstützter Fertigkeiten",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Erhaltet {0} Völlerei beim Zaubern unterstützter Fertigkeiten",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -19348,13 +20510,31 @@
           }
         ],
         "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Unterstützte Fertigkeiten haben {0}% Chance, Monster bei Treffer in die Flucht zu schlagen",
+        "reminder_text": "(Magische Monster haben eine 50% Chance, fliehen zu vermeiden. Seltene und einzigartige Monster können nicht fliehen.)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
           "#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "Unterstützte Fertigkeiten haben {0}% Chance, Monster in die Flucht zu schlagen",
-        "reminder_text": null,
+        "string": "Unterstützte Fertigkeiten haben {0}% Chance, Monster bei Treffer in die Flucht zu schlagen",
+        "reminder_text": "(Magische Monster haben eine 50% Chance, fliehen zu vermeiden. Seltene und einzigartige Monster können nicht fliehen.)",
         "is_markup": null
       }
     ],
@@ -19681,6 +20861,98 @@
   {
     "English": null,
     "ids": [
+      "hallowing_flame_magnitude_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% erhöhte Magnitude von 'Heilige Flamme', die durch unterstützte Fertigkeiten verursacht wird",
+        "reminder_text": "(Angriffe gegen Gegner, die von \"Heilige Flamme\" betroffen sind, verursachen 25% des physischen Schadens als zusätzlichen Feuerschaden. \"Heilige Flamme\" wird entfernt, sobald ein Angriff, der von diesem zusätzlichen Schaden profitiert, erfolgreich ausgeführt wurde. \"Heilige Flamme\" hält sechs Sekunden lang an und kann nicht demjenigen zugute kommen, der sie verursacht hat.)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "{0}% verringerte Magnitude von 'Heilige Flamme', die durch unterstützte Fertigkeiten verursacht wird",
+        "reminder_text": "(Angriffe gegen Gegner, die von \"Heilige Flamme\" betroffen sind, verursachen 25% des physischen Schadens als zusätzlichen Feuerschaden. \"Heilige Flamme\" wird entfernt, sobald ein Angriff, der von diesem zusätzlichen Schaden profitiert, erfolgreich ausgeführt wurde. \"Heilige Flamme\" hält sechs Sekunden lang an und kann nicht demjenigen zugute kommen, der sie verursacht hat.)",
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "herald_no_buff_effect"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Unterstützte Herold-Fertigkeiten haben keine Stärkungswirkung",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "hex_transfer_on_death_range_+%"
     ],
     "trade_stats": null,
@@ -19722,6 +20994,100 @@
           ]
         ],
         "string": "Unterstützte Fertigkeiten haben {0}% verringerte Verhexungs-Übertragungsreichweite",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "hex_zone_trigger_hextoad_every_x_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds"
+          ]
+        ],
+        "string": "Verfluchter Boden von unterstützten Fertigkeiten löst jede {0} Sekunde 'Explodierende Kröte' aus",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds"
+          ]
+        ],
+        "string": "Verfluchter Boden von unterstützten Fertigkeiten löst alle {0} Sekunden 'Explodierende Kröte' aus",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "hexed_enemies_cannot_deal_critical_strikes"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Gegner, die von Verhexungen von unterstützten Fluch-Fertigkeiten betroffen sind, können keine kritischen Treffer verursachen",
         "reminder_text": null,
         "is_markup": null
       }
@@ -19946,6 +21312,42 @@
           ]
         ],
         "string": "Unterstützte Fertigkeiten verursachen {0}% verringerten Schaden mit Treffern",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "hits_cannot_kill_enemies"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Treffer von unterstützten Fertigkeiten können Gegner nicht töten",
         "reminder_text": null,
         "is_markup": null
       }
@@ -20273,6 +21675,60 @@
   {
     "English": null,
     "ids": [
+      "inflict_hallowing_flame_on_melee_hit_chance_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Unterstützte Fertigkeiten haben {0}% Chance, bei Nahkampftreffer 'Heilige Flamme' zu verursachen",
+        "reminder_text": "(Angriffe gegen Gegner, die von \"Heilige Flamme\" betroffen sind, verursachen 25% des physischen Schadens als zusätzlichen Feuerschaden. \"Heilige Flamme\" wird entfernt, sobald ein Angriff, der von diesem zusätzlichen Schaden profitiert, erfolgreich ausgeführt wurde. \"Heilige Flamme\" hält sechs Sekunden lang an und kann nicht demjenigen zugute kommen, der sie verursacht hat.)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Unterstützte Fertigkeiten verursachen bei Nahkampftreffer 'Heilige Flamme'",
+        "reminder_text": "(Angriffe gegen Gegner, die von \"Heilige Flamme\" betroffen sind, verursachen 25% des physischen Schadens als zusätzlichen Feuerschaden. \"Heilige Flamme\" wird entfernt, sobald ein Angriff, der von diesem zusätzlichen Schaden profitiert, erfolgreich ausgeführt wurde. \"Heilige Flamme\" hält sechs Sekunden lang an und kann nicht demjenigen zugute kommen, der sie verursacht hat.)",
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "infusion_grants_life_regeneration_rate_per_minute_%"
     ],
     "trade_stats": null,
@@ -20444,6 +21900,60 @@
           []
         ],
         "string": "Angriffe mit unterstützten Fertigkeiten zählen als potenziert",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "kill_normal_or_magic_enemy_on_hit_if_under_x%_life"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Tötet normale und magische Gegner, die {0}% Leben oder\nweniger haben, wenn sie von unterstützten Fertigkeiten getroffen werden",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Tötet normale und magische Gegner, die {0}% Leben oder\nweniger haben, wenn sie von unterstützten Fertigkeiten getroffen werden",
         "reminder_text": null,
         "is_markup": null
       }
@@ -22045,6 +23555,62 @@
   {
     "English": null,
     "ids": [
+      "minion_area_of_effect_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Kreaturen von unterstützten Fertigkeiten haben {0}% vergrößerten Wirkungsbereich",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Kreaturen von unterstützten Fertigkeiten haben {0}% verkleinerten Wirkungsbereich",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "minion_attack_speed_+%"
     ],
     "trade_stats": null,
@@ -22419,6 +23985,78 @@
         ],
         "string": "Kreaturen von unterstützten Fertigkeiten haben {0}% verringerte kritische Trefferchance",
         "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "minion_critical_strike_chance_+%_per_attack_crit_recently_up_to_100"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Kreaturen von unterstützten Fertigkeiten haben {0}% erhöhte kritische Trefferchance für jedes Mal, das Ihr kürzlich mit einem Angriff kritisch getroffen habt, bis zu 200%",
+        "reminder_text": "(Kürzlich bezieht sich auf die letzten 4 Sekunden)",
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "minion_critical_strike_multiplier_+_per_attack_crit_recently_up_to_100"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Kreaturen von unterstützten Fertigkeiten haben {0}% zu Multiplikator für kritische Treffer für jedes Mal, das Ihr kürzlich mit einem Angriff kritisch getroffen habt, bis zu +100%",
+        "reminder_text": "(Kürzlich bezieht sich auf die letzten 4 Sekunden)",
         "is_markup": null
       }
     ],
@@ -23703,6 +25341,94 @@
   {
     "English": null,
     "ids": [
+      "on_reaching_x_wildshard_stacks_gain_disgorge",
+      "support_gluttony_base_disgorge_buff_duration_ms",
+      "support_gluttony_disgorge_buff_duration_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ],
+          []
+        ],
+        "string": "Beim Erreichen von {0} Völlerei verliert Ihr sämtliche Völlerei und erhaltet für {1} Sekunde Auswurf",
+        "reminder_text": "(Ihr könnt keine 'Völlerei' erhalten, solange Ihr 'Auswurf' habt)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ],
+          []
+        ],
+        "string": "Beim Erreichen von {0} Völlerei verliert Ihr sämtliche Völlerei und erhaltet für {1} Sekunden Auswurf",
+        "reminder_text": "(Ihr könnt keine 'Völlerei' erhalten, solange Ihr 'Auswurf' habt)",
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "onslaught_time_granted_on_killing_shocked_enemy_ms"
     ],
     "trade_stats": null,
@@ -24090,6 +25816,42 @@
           []
         ],
         "string": "Unterstützte Fertigkeiten gewähren eine Energie-Ladung, wenn Eure Falle durch einen Gegner ausgelöst wird",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "physical_damage_%_to_add_as_chaos_per_keystone"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Unterstützte Fertigkeiten verursachen {0}% des physischen Schadens als extra Chaosschaden pro Schlüsselfertigkeit",
         "reminder_text": null,
         "is_markup": null
       }
@@ -24649,6 +26411,42 @@
         ],
         "string": "Projektile von unterstützten Fertigkeiten durchbohren alle Ziele im Umkreis von {0} Metern",
         "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "random_nearby_minion_gain_a_soul_eater_soul_on_X_life_spent"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Eine Kreatur im Umkreis erhält eine Seele für jede {0} Leben, die Ihr für Vorauskosten\nfür unterstützte Zauber verbraucht",
+        "reminder_text": "(Vorauskosten sind alle Kosten, die nicht pro Sekunde entrichtet werden)",
         "is_markup": null
       }
     ],
@@ -25469,6 +27267,62 @@
   {
     "English": null,
     "ids": [
+      "skill_cost_+%_per_keystone"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Unterstützte Fertigkeiten haben {0}% erhöhte Kosten pro Schlüsselfertigkeit",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Unterstützte Fertigkeiten haben {0}% verringerte Kosten pro Schlüsselfertigkeit",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "skill_effect_and_damaging_ailment_duration_+%"
     ],
     "trade_stats": null,
@@ -25830,6 +27684,42 @@
           ]
         ],
         "string": "Unterstützte Fertigkeiten verursachen {0}% weniger Schaden, wenn sie von Heiligen Irrlichtern benutzt werden",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "skills_sacrifice_all_but_one_life_and_energy_shield_on_use"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Unterstützte Fertigkeiten opfern bei Nutzung bis auf 1 Euer sämtliches Leben und Energieschild",
         "reminder_text": null,
         "is_markup": null
       }
@@ -26553,6 +28443,42 @@
   {
     "English": null,
     "ids": [
+      "summoned_sentinels_have_random_templar_aura"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Von unterstützten Fertigkeiten beschworene Wächter haben eine Templer-Aura",
+        "reminder_text": "(Templer-Auren haben einen der folgenden Effekte:\r\n- Erhaltet 15% des physischen Schadens als extra Feuerschaden\r\n- Erhaltet 15% des physischen Schadens als extra Blitzschaden\r\n- Regeneriert 1.5% des Lebens pro Sekunde\r\n- 30% erhöhte Manaregenerations-Rate\r\n- +23% zu Chaoswiderstand\r\n- 50% reduzierte Wirkung von Flüchen auf Euch)",
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "support_added_cooldown_count_if_not_instant"
     ],
     "trade_stats": null,
@@ -27069,6 +28995,60 @@
   {
     "English": null,
     "ids": [
+      "support_blasphemy_enemies_gain_malignant_madness_if_in_aura_for_x_seconds"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Gegner haben Bösartiger Wahnsinn, wenn sie länger als {0} Sekunde in Auren von unterstützten Fertigkeiten waren",
+        "reminder_text": "(Bösartiger Wahnsinn verringert den Schaden und die Aktionsgeschwindigkeit um 10%)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Gegner haben Bösartiger Wahnsinn, wenn sie länger als {0} Sekunden in Auren von unterstützten Fertigkeiten waren",
+        "reminder_text": "(Bösartiger Wahnsinn verringert den Schaden und die Aktionsgeschwindigkeit um 10%)",
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "support_blood_thirst_damage_+%_final"
     ],
     "trade_stats": null,
@@ -27110,6 +29090,140 @@
           ]
         ],
         "string": "Unterstützte Angriffe verursachen {0}% weniger Schaden",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_bloodstained_banner_apply_corrupted_blood_every_x_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "Unterstützte Banner verursachen bei Gegnern innerhalb ihres Bereichs jede Sekunde verderbtes Blut",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "Unterstützte Banner verursachen bei Gegnern innerhalb ihres Bereichs alle {0} Sekunden verderbtes Blut",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_bloodstained_banner_corrupted_blood_base_physical_damage_to_deal_per_minute_per_valour"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "per_minute_to_per_second"
+          ]
+        ],
+        "string": "Verderbtes Blut, das mit unterstützten Bannern verursacht wird, verursacht {0} physischen Basisschaden pro Sekunde pro verbrauchtem Heldenmut",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_bloodstained_banner_apply_corrupted_blood_duration_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "Verderbtes Blut, das mit unterstützten Bannern verursacht wird, hat eine Basisdauer von {0} Sekunden",
         "reminder_text": null,
         "is_markup": null
       }
@@ -27403,6 +29517,60 @@
   {
     "English": null,
     "ids": [
+      "support_call_the_pyre_chance_to_trigger_call_the_pyre_on_melee_hit_vs_ignited_enemies_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Unterstützte Fertigkeiten haben {0}% Chance, bei Nahkampftreffer gegen entzündete Gegner 'Ruf des Scheiterhaufens' auszulösen",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Unterstützte Fertigkeiten lösen bei Nahkampftreffer gegen entzündete Gegner 'Ruf des Scheiterhaufens' aus",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "support_cast_on_crit_quality_attack_damage_+%_final"
     ],
     "trade_stats": null,
@@ -27501,6 +29669,62 @@
         ],
         "string": "Unterstützte ausgelöste Zauber haben {0}% verringerte Wirkung von nicht schädigenden Beeinträchtigungen",
         "reminder_text": "(Beeinträchtigungen, die keinen Schaden verursachen, sind: versengt, unterkühlt, eingefroren, zerbrechlich, geschockt und ausgelaugt)",
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_chain_count_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Unterstützte Fertigkeiten verketten sich {0}% Mal mehr",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Unterstützte Fertigkeiten verketten sich {0}% Mal weniger",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -27668,6 +29892,62 @@
           ]
         ],
         "string": "Unterstützte Fertigkeiten verursachen {0}% weniger Schaden",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_companionship_minion_maximum_life_+%_final_if_at_most_one_minion"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Kreaturen von unterstützten Fertigkeiten haben {0}% mehr maximales Leben, wenn sie Eure einzige Kreatur ist",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Kreaturen von unterstützten Fertigkeiten haben {0}% weniger maximales Leben, wenn sie Eure einzige Kreatur ist",
         "reminder_text": null,
         "is_markup": null
       }
@@ -28239,6 +30519,64 @@
   {
     "English": null,
     "ids": [
+      "support_excommunicate_on_melee_attack_hit_for_X_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "Unterstützte Fertigkeiten bannen Gegner bei Nahkampftreffer für {0} Sekunde",
+        "reminder_text": "(Gebannte Gegner können keinen Chaosschaden verursachen)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "Unterstützte Fertigkeiten bannen Gegner bei Nahkampftreffer für {0} Sekunden",
+        "reminder_text": "(Gebannte Gegner können keinen Chaosschaden verursachen)",
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "support_executioner_damage_vs_enemies_on_low_life_+%_final"
     ],
     "trade_stats": null,
@@ -28467,6 +30805,60 @@
         ],
         "string": "{0}% weniger Dauer von Beeinträchtigungen, die mit unterstützten Fertigkeiten verursacht werden",
         "reminder_text": "(Beeinträchtigungen sind: blutend, entzündet, versengt, unterkühlt, eingefroren, zerbrechlich, geschockt, ausgelaugt und vergiftet)",
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_fissure_trigger_fissure_on_slam_skill_impact_chance_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Unterstützte Fertigkeiten haben {0}% Chance, beim Aufprall mit Hieben 'Spalte' auszulösen",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Unterstützte Fertigkeiten lösen beim Aufprall mit Hieben 'Spalte' aus",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -28851,6 +31243,60 @@
   {
     "English": null,
     "ids": [
+      "support_gluttony_fire_x_additional_projectiles_in_nova_while_affected_by_disgorge"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Während Ihr Auswurf habt, feuern unterstützte Zauber Projektile in einem Kreis\nWährend Ihr Auswurf habt, feuern unterstützte Zauber ein zusätzliches Projektil",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Während Ihr Auswurf habt, feuern unterstützte Zauber Projektile in einem Kreis\nWährend Ihr Auswurf habt, feuern unterstützte Zauber {0} zusätzliche Projektile",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "support_greater_projectile_intensity_projectile_damage_+%_final"
     ],
     "trade_stats": null,
@@ -28892,6 +31338,118 @@
           ]
         ],
         "string": "Unterstützte Fertigkeiten verursachen {0}% weniger Projektilschaden",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_greater_spell_echo_area_of_effect_+%_per_repeat"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Unterstützte Fertigkeiten haben {0}% vergrößerten Wirkungsbereich pro Wiederholung",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Unterstützte Fertigkeiten haben {0}% verkleinerten Wirkungsbereich pro Wiederholung",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_greater_spell_echo_spell_damage_+%_final_per_repeat"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Unterstützte Fertigkeiten verursachen {0}% mehr Zauberschaden pro Wiederholung",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Unterstützte Fertigkeiten verursachen {0}% weniger Zauberschaden pro Wiederholung",
         "reminder_text": null,
         "is_markup": null
       }
@@ -28967,6 +31525,42 @@
         ],
         "string": "Kreaturen von unterstützten Fertigkeiten erleiden {0}% ihres maximalen Lebens und Energieschilds als physischen Schaden pro Sekunde, während eine Aura von einer unterstützten Fertigkeit auf Euch wirkt",
         "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_hallow_inflict_hallowing_flame_on_melee_hit"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Unterstützte Fertigkeiten verursachen bei Nahkampftreffer 'Heilige Flamme'",
+        "reminder_text": "(Angriffe gegen Gegner, die von \"Heilige Flamme\" betroffen sind, verursachen 25% des physischen Schadens als zusätzlichen Feuerschaden. \"Heilige Flamme\" wird entfernt, sobald ein Angriff, der von diesem zusätzlichen Schaden profitiert, erfolgreich ausgeführt wurde. \"Heilige Flamme\" hält sechs Sekunden lang an und kann nicht demjenigen zugute kommen, der sie verursacht hat.)",
         "is_markup": null
       }
     ],
@@ -29132,6 +31726,96 @@
           []
         ],
         "string": "Erhaltet Aufladung, wenn Ihr mit unterstützten Fertigkeiten einen einzigartigen Gegner schockt",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_invention_trap_and_mine_damage_+%_final_per_second_placed_up_to_100"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Unterstützte Fertigkeiten verursachen {0}% mehr Schaden für jede Sekunde, die sie vor dem Auslösen platziert waren, bis zu 100%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_kinetic_instability_chance_to_create_instability_on_critical_strike_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Unterstützte Fertigkeiten haben {0}% Chance, bei kritischem Treffer 'Kinetischer Fluss' auszulösen",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Unterstützte Fertigkeiten lösen bei kritischem Treffer 'Kinetischer Fluss' aus",
         "reminder_text": null,
         "is_markup": null
       }
@@ -30461,6 +33145,44 @@
   {
     "English": null,
     "ids": [
+      "support_minion_pact_sacrifice_nearby_damageable_minion_to_gain_permillage_of_max_life_as_physical_damage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "divide_by_ten_1dp_if_required"
+          ]
+        ],
+        "string": "Unterstützte Zauber opfern beim Wirken eine zufällige Kreatur im Umkreis, die Schaden erleiden kann, und verursachen zusätzlichen physischen Schaden in Höhe von {0}% des geopferten Lebens der Kreatur",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "support_minion_totem_resistance_elemental_damage_+%_final"
     ],
     "trade_stats": null,
@@ -30994,6 +33716,62 @@
         ],
         "string": "Schnelligkeit gewährt {0}% verringerte Bewegungsgeschwindigkeit pro verlorenem Momentum",
         "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_overheat_ailment_damage_+%_final_per_3_fortification_consumed"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Unterstützte Fertigkeiten verbrauchen bei Nutzung sämtliche Verstärkung, was {0}% mehr Schaden mit\nBeeinträchtigungen pro 3 verbrauchter Verstärkung verursacht",
+        "reminder_text": "(Beeinträchtigungen, die Schaden verursachen, sind: blutend, entzündet und vergiftet)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Unterstützte Fertigkeiten verbrauchen bei Nutzung sämtliche Verstärkung, was {0}% weniger Schaden mit\nBeeinträchtigungen pro 3 verbrauchter Verstärkung verursacht",
+        "reminder_text": "(Beeinträchtigungen, die Schaden verursachen, sind: blutend, entzündet und vergiftet)",
         "is_markup": null
       }
     ],
@@ -34275,6 +37053,168 @@
   {
     "English": null,
     "ids": [
+      "support_trigger_enervating_grasp_on_supported_brand_recall_chance_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Unterstützte Zeichen haben {0}% Chance, 'Fauliger Griff' auszulösen, wenn sie zurückgerufen werden",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Unterstützte Zeichen lösen 'Fauliger Griff' aus, wenn sie zurückgerufen werden",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_trigger_great_avalanche_on_offering_chance_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Unterstützte Opfer haben {0}% Chance, bei Nutzung 'Schwarmgeborene beschwören' auszulösen",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Unterstützte Opfer lösen bei Nutzung 'Schwarmgeborene beschwören' aus",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_trigger_seize_the_flesh_on_warcry_chance_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Unterstützte Kriegsschreie haben {0}% Chance, bei Nutzung 'Griff nach Fleisch' auszulösen",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Unterstützte Kriegsschreie lösen bei Nutzung 'Griff nach Fleisch' aus",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "support_trigger_tornados_on_attack_hit_after_moving_X_metres"
     ],
     "trade_stats": null,
@@ -34371,6 +37311,100 @@
         ],
         "string": "Unterstützte Fertigkeiten verursachen {0}% weniger Schaden mit Beeinträchtigungen",
         "reminder_text": "(Beeinträchtigungen, die Schaden verursachen, sind: blutend, entzündet und vergiftet)",
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_undead_army_minion_maximum_count_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% mehr maximale Anzahl von Kreaturen von unterstützten Fertigkeiten",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "{0}% weniger maximale Anzahl von Kreaturen von unterstützten Fertigkeiten",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_vaal_temptation_physical_damage_taken_per_minute_instead_of_soul_gain_prevention"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "per_minute_to_per_second"
+          ]
+        ],
+        "string": "Das Benutzen von unterstützten Vaal-Fertigkeiten verursacht bei Euch 'Versuchung der Vaal', was {0} physischen Schaden pro Sekunde verursacht, statt 'Kein Seelenerhalt' anzuwenden",
+        "reminder_text": "(Versuchung der Vaal hält für die Dauer von 'Kein Seelenerhalt', die angewendet werden würde, an, und kann sich stapeln.)",
         "is_markup": null
       }
     ],
@@ -34482,6 +37516,42 @@
           ]
         ],
         "string": "Unterstützte Fertigkeiten verursachen {0}% weniger Chaosschaden",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_voidstorm_trigger_voidstorm_on_rain_skill_impact"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Unterstützte Fertigkeiten lösen beim Aufprall auf dem Boden 'Leerensturm' aus\nLeerenstürme können innerhalb von 3 Metern von Euch nicht ausgelöst werden",
         "reminder_text": null,
         "is_markup": null
       }
@@ -35009,6 +38079,42 @@
         ],
         "string": "Verhexungen von unterstützten Fertigkeiten werden auf alle Gegner innerhalb von 3 Metern übertragen, wenn der verhexte Gegner stirbt",
         "reminder_text": "(Verhexungen von Auren oder von Verfluchtem Boden können nicht übertragen werden)",
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "trap_and_mine_area_of_effect_+%_per_second_placed_up_to_100"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Unterstützte Fertigkeiten haben {0}% vergrößerten Wirkungsbereich für jede Sekunde, die sie vor dem Auslösen platziert waren, bis zu 100%",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -35757,6 +38863,60 @@
   {
     "English": null,
     "ids": [
+      "treat_enemy_resistances_as_negated_on_elemental_damage_hit_%_chance"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Treffer von unterstützten Fertigkeiten haben {0}% Chance, die Werte von gegnerischen Elementarwiderständen als invertiert zu behandeln",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Treffer von unterstützten Fertigkeiten behandeln die Werte von gegnerischen Elementarwiderständen als invertiert",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "trigger_brand_support_hit_damage_+%_final_vs_branded_enemy"
     ],
     "trade_stats": null,
@@ -35885,6 +39045,60 @@
   {
     "English": null,
     "ids": [
+      "trigger_on_ward_break_%_chance"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% Chance, diesen unterstützten Zauber auszulösen, wenn Euer Schutz unterbrochen wird",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Löst unterstützte Zauber aus, wenn Euer Schutz unterbrochen wird",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "trigger_prismatic_burst_on_hit_%_chance"
     ],
     "trade_stats": null,
@@ -35924,6 +39138,42 @@
           []
         ],
         "string": "Unterstützte Fertigkeiten lösen bei Treffer 'Prismatische Explosion' aus",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "trigger_rings_of_light_on_melee_hit"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Unterstützte Fertigkeiten lösen bei Nahkampftreffer Lichtringe aus",
         "reminder_text": null,
         "is_markup": null
       }
@@ -36320,6 +39570,62 @@
   {
     "English": null,
     "ids": [
+      "warcry_cooldown_speed_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Unterstützte Kriegsschreie haben {0}% beschleunigte Abklingzeit-Rate",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Unterstützte Kriegsschreie haben {0}% verlangsamte Abklingzeit-Rate",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "warcry_grant_damage_+%_to_exerted_attacks"
     ],
     "trade_stats": null,
@@ -36546,6 +39852,64 @@
         ],
         "string": "Ihr und Gegner haben {0}% verringerte Bewegungsgeschwindigkeit während unter dem Einfluss einer Beeinträchtigung von unterstützten Fertigkeiten",
         "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "killing_blow_consumes_corpse_chance_to_gain_soul_per_power_permillage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          [
+            "divide_by_ten_1dp_if_required"
+          ]
+        ],
+        "string": "Das Verbrauchen einer Leiche mit unterstützten Fertigkeiten hat {0}% Chance, pro Stärkegrad eine Seele zu gewähren",
+        "reminder_text": "(Jede Seele gewährt 5% erhöhte Angriffs- und Zaubergeschwindigkeit. Ihr verliert alle 0.5 Sekunden 1 Seele, wenn Ihr kürzlich keine Seelen verzehrt habt. Maximal 45 verzehrte Seelen)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "divide_by_ten_1dp_if_required"
+          ]
+        ],
+        "string": "Das Verbrauchen einer Leiche mit unterstützten Fertigkeiten hat {0}% Chance, pro Stärkegrad eine Seele zu gewähren",
+        "reminder_text": "(Jede Seele gewährt 5% erhöhte Angriffs- und Zaubergeschwindigkeit. Ihr verliert alle 0.5 Sekunden 1 Seele, wenn Ihr kürzlich keine Seelen verzehrt habt. Maximal 45 verzehrte Seelen)",
         "is_markup": null
       }
     ],
@@ -42045,32 +45409,7 @@
     "ids": [
       "map_hidden_spawn_extra_exiles"
     ],
-    "trade_stats": [
-      {
-        "id": "enchant.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "enchant",
-        "option": null
-      },
-      {
-        "id": "explicit.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "explicit",
-        "option": null
-      },
-      {
-        "id": "fractured.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "fractured",
-        "option": null
-      },
-      {
-        "id": "implicit.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "implicit",
-        "option": null
-      }
-    ],
+    "trade_stats": null,
     "hidden": true,
     "French": null,
     "German": [

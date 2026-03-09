@@ -1278,8 +1278,8 @@
         "index_handlers": [
           []
         ],
-        "string": "Kreaturen haben {0}% Chance, Gegner bei Treffer in die Flucht zu schlagen",
-        "reminder_text": null,
+        "string": "Kreaturen haben {0}% Chance, Monster bei Treffer in die Flucht zu schlagen",
+        "reminder_text": "(Magische Monster haben eine 50% Chance, fliehen zu vermeiden. Seltene und einzigartige Monster können nicht fliehen.)",
         "is_markup": null
       }
     ],
@@ -2856,6 +2856,60 @@
   {
     "English": null,
     "ids": [
+      "additional_poisons_+_to_apply_vs_non_poisoned_enemies"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Das Vergiften von nicht vergifteten Gegnern mit Kreaturen wendet ein zusätzliches Gift an",
+        "reminder_text": "(Gift verursacht Chaosschaden über Zeit, basierend auf dem gesamten physischen Schaden und Chaosschaden der Fertigkeit. Mehrere Instanzen von Gift werden gestapelt)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Das Vergiften von nicht vergifteten Gegnern mit Kreaturen wendet {0} zusätzliche Gifte an",
+        "reminder_text": "(Gift verursacht Chaosschaden über Zeit, basierend auf dem gesamten physischen Schaden und Chaosschaden der Fertigkeit. Mehrere Instanzen von Gift werden gestapelt)",
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "support_lesser_multiple_projectile_damage_+%_final"
     ],
     "trade_stats": null,
@@ -3302,6 +3356,62 @@
         ],
         "string": "{0}% des Kälteschadens von Kreaturen in Feuerschaden umgewandelt",
         "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_lethal_dose_poison_damage_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Kreaturen verursachen {0}% mehr Schaden mit Gift",
+        "reminder_text": "(Gift verursacht Chaosschaden über Zeit, basierend auf dem gesamten physischen Schaden und Chaosschaden der Fertigkeit. Mehrere Instanzen von Gift werden gestapelt)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Kreaturen verursachen {0}% weniger Schaden mit Gift",
+        "reminder_text": "(Gift verursacht Chaosschaden über Zeit, basierend auf dem gesamten physischen Schaden und Chaosschaden der Fertigkeit. Mehrere Instanzen von Gift werden gestapelt)",
         "is_markup": null
       }
     ],
@@ -8921,6 +9031,44 @@
   {
     "English": null,
     "ids": [
+      "additional_base_critical_strike_chance"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          [
+            "divide_by_one_hundred"
+          ]
+        ],
+        "string": "Kreaturen haben {0}% zu kritischer Trefferchance",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "maximum_attack_damage_+%_final_from_volatility_support"
     ],
     "trade_stats": null,
@@ -10189,6 +10337,60 @@
   {
     "English": null,
     "ids": [
+      "cover_in_frost_on_hit_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Kreaturen haben {0}% Chance, Gegner bei Treffer mit Frost zu bedecken",
+        "reminder_text": "(Mit Frost bedeckt wendet 50% weniger kritische Trefferchance und 20% erhöhten erlittenen Kälteschaden an, für 4 Sekunden)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Kreaturen bedecken Gegner bei Treffer mit Frost",
+        "reminder_text": "(Mit Frost bedeckt wendet 50% weniger kritische Trefferchance und 20% erhöhten erlittenen Kälteschaden an, für 4 Sekunden)",
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "critical_strike_chance_+%_per_righteous_charge"
     ],
     "trade_stats": null,
@@ -11295,6 +11497,60 @@
   {
     "English": null,
     "ids": [
+      "explode_enemies_for_10%_life_as_random_element_on_killing_blow_chance_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Tödliche Schläge von Kreaturen haben {0}% Chance, Gegner explodieren zu lassen und ein Zehntel ihres maximalen Lebens als Schaden eines zufälligen Elements zu verursachen",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Tödliche Schläge von Kreaturen lassen Gegner explodieren und verursachen ein Zehntel ihres maximalen Lebens als Schaden eines zufälligen Elements",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "gain_frenzy_charge_on_killing_blow_vs_enemies_with_5+_poisons_%"
     ],
     "trade_stats": null,
@@ -11385,6 +11641,42 @@
   {
     "English": null,
     "ids": [
+      "graft_skill_tul_summon_maximum_allowed_demons"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Maximal {0} Schwarmgeborene",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "guardian_relic_explode_on_death_for_%_life_as_element_damage"
     ],
     "trade_stats": null,
@@ -11406,6 +11698,42 @@
           []
         ],
         "string": "Kreaturen explodieren bei Tod und verursachen {0}% ihres maximalen Lebens als Schaden ihres gewählten Elements",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "hits_cannot_kill_enemies"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Treffer von Kreaturen können Gegner nicht töten",
         "reminder_text": null,
         "is_markup": null
       }
@@ -11757,6 +12085,42 @@
         ],
         "string": "Kreaturen verursachen bei Treffer Feuer-, Kälte- und Blitz-Anfälligkeit",
         "reminder_text": "(Jede Anfälligkeit wendet für 4 Sekunden -10% auf den jeweiligen Widerstand an)",
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "kill_normal_or_magic_enemy_on_hit_if_under_x%_life"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Kreaturen töten normale und magische Gegner, die {0}% Leben oder weniger haben, wenn sie getroffen werden",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -15755,6 +16119,62 @@
   {
     "English": null,
     "ids": [
+      "support_overheat_ailment_damage_+%_final_per_3_fortification_consumed"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Kreaturen verbrauchen bei Nahkampfangriff sämtliche Verstärkung, was {0}% mehr Schaden mit\nBeeinträchtigungen pro 3 verbrauchter Verstärkung verursacht",
+        "reminder_text": "(Beeinträchtigungen, die Schaden verursachen, sind: blutend, entzündet und vergiftet)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Kreaturen verbrauchen bei Nahkampfangriff sämtliche Verstärkung, was {0}% weniger Schaden mit\nBeeinträchtigungen pro 3 verbrauchter Verstärkung verursacht",
+        "reminder_text": "(Beeinträchtigungen, die Schaden verursachen, sind: blutend, entzündet und vergiftet)",
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "support_overpowered_base_duration_ms"
     ],
     "trade_stats": null,
@@ -17002,6 +17422,60 @@
           ]
         ],
         "string": "Diese Fertigkeit und Kreaturen haben {0}% verringerte Fallen-Wurfgeschwindigkeit pro Raserei-Ladung",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "treat_enemy_resistances_as_negated_on_elemental_damage_hit_%_chance"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Treffer von Kreaturen haben {0}% Chance, die Werte von gegnerischen Elementarwiderständen als invertiert zu behandeln",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Treffer von Kreaturen behandeln die Werte von gegnerischen Elementarwiderständen als invertiert",
         "reminder_text": null,
         "is_markup": null
       }
@@ -22460,32 +22934,7 @@
     "ids": [
       "map_hidden_spawn_extra_exiles"
     ],
-    "trade_stats": [
-      {
-        "id": "enchant.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "enchant",
-        "option": null
-      },
-      {
-        "id": "explicit.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "explicit",
-        "option": null
-      },
-      {
-        "id": "fractured.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "fractured",
-        "option": null
-      },
-      {
-        "id": "implicit.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "implicit",
-        "option": null
-      }
-    ],
+    "trade_stats": null,
     "hidden": true,
     "French": null,
     "German": [

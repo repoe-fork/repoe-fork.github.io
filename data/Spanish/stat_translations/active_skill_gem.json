@@ -291,6 +291,50 @@
   {
     "English": null,
     "ids": [
+      "off_hand_minimum_added_physical_damage_per_15_shield_armour",
+      "off_hand_maximum_added_physical_damage_per_15_shield_armour"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "De {0} a {1} de daño físico agregado por cada 15 de armadura en el escudo",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "off_hand_minimum_added_physical_damage_per_15_shield_armour_and_evasion_rating",
       "off_hand_maximum_added_physical_damage_per_15_shield_armour_and_evasion_rating"
     ],
@@ -1182,8 +1226,7 @@
   {
     "English": null,
     "ids": [
-      "base_skill_effect_duration",
-      "quality_display_base_duration_is_quality"
+      "base_skill_effect_duration"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -1200,24 +1243,37 @@
             "min": null,
             "max": null,
             "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": null
           }
         ],
         "format": [
-          "#",
-          "ignore"
+          "+#"
         ],
         "index_handlers": [
           [
             "milliseconds_to_seconds_2dp"
-          ],
-          []
+          ]
         ],
-        "string": "La duración base es de {0} segundos",
+        "string": "{0} segundos a la duración base",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp"
+          ]
+        ],
+        "string": "La duración base es de {0} segundo",
         "reminder_text": null,
         "is_markup": null
       },
@@ -1227,24 +1283,17 @@
             "min": null,
             "max": null,
             "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
           }
         ],
         "format": [
-          "+#",
-          "ignore"
+          "#"
         ],
         "index_handlers": [
           [
             "milliseconds_to_seconds_2dp"
-          ],
-          []
+          ]
         ],
-        "string": "{0} segundos a la duración base",
+        "string": "La duración base es de {0} segundos",
         "reminder_text": null,
         "is_markup": null
       }
@@ -1394,7 +1443,7 @@
             "milliseconds_to_seconds_2dp"
           ]
         ],
-        "string": "{0} segundos a la duración de la bonificación por cada carga de aguante eliminada",
+        "string": "{0} segundos a la duración del efecto beneficioso por cada carga de aguante eliminada",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3479,7 +3528,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Los aumentos y las reducciones a la duración de las minas también se aplican a la duración de la bonificación de esta habilidad",
+        "string": "Los aumentos y las reducciones a la duración de las minas también se aplican a la duración del efecto beneficioso de esta habilidad",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3515,7 +3564,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Efecto de la bonificación del tótem de ancestro aumentado un {0}%",
+        "string": "Efecto beneficioso del tótem de ancestro aumentado un {0}%",
         "reminder_text": null,
         "is_markup": null
       },
@@ -3535,7 +3584,7 @@
             "negate"
           ]
         ],
-        "string": "Efecto de la bonificación del tótem de ancestro reducido un {0}%",
+        "string": "Efecto beneficioso del tótem de ancestro reducido un {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4004,6 +4053,50 @@
   {
     "English": null,
     "ids": [
+      "attack_minimum_added_cold_damage_for_elemental_hit",
+      "attack_maximum_added_cold_damage_for_elemental_hit"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "Agrega de {0} a {1} de daño de hielo",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "attack_minimum_added_fire_damage",
       "attack_maximum_added_fire_damage"
     ],
@@ -4048,8 +4141,96 @@
   {
     "English": null,
     "ids": [
+      "attack_minimum_added_fire_damage_for_elemental_hit",
+      "attack_maximum_added_fire_damage_for_elemental_hit"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "Agrega de {0} a {1} de daño de fuego",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "attack_minimum_added_lightning_damage",
       "attack_maximum_added_lightning_damage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "Agrega de {0} a {1} de daño de rayo",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "attack_minimum_added_lightning_damage_for_elemental_hit",
+      "attack_maximum_added_lightning_damage_for_elemental_hit"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -6006,8 +6187,7 @@
   {
     "English": null,
     "ids": [
-      "base_number_of_projectiles",
-      "quality_display_base_number_of_projectiles_is_gem"
+      "base_number_of_projectiles"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -6024,19 +6204,12 @@
             "min": 1,
             "max": 1,
             "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": null
           }
         ],
         "format": [
-          "+#",
-          "ignore"
+          "+#"
         ],
         "index_handlers": [
-          [],
           []
         ],
         "string": "Dispara {0} proyectil",
@@ -6046,22 +6219,33 @@
       {
         "condition": [
           {
-            "min": 1,
-            "max": 1,
-            "negated": null
-          },
-          {
-            "min": null,
+            "min": 2,
             "max": null,
             "negated": null
           }
         ],
         "format": [
-          "ignore",
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Dispara {0} proyectiles",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
           "ignore"
         ],
         "index_handlers": [
-          [],
           []
         ],
         "string": "Dispara 1 proyectil",
@@ -6074,44 +6258,12 @@
             "min": 2,
             "max": null,
             "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": null
           }
         ],
         "format": [
-          "+#",
-          "ignore"
+          "#"
         ],
         "index_handlers": [
-          [],
-          []
-        ],
-        "string": "Dispara {0} proyectiles",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 2,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
           []
         ],
         "string": "Dispara {0} proyectiles",
@@ -11337,7 +11489,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Crea {0} mano",
+        "string": "Crea {0} mano adicional",
         "reminder_text": null,
         "is_markup": null
       },
@@ -11355,7 +11507,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Crea {0} manos",
+        "string": "Crea {0} manos adicionales",
         "reminder_text": null,
         "is_markup": null
       }
@@ -11456,7 +11608,7 @@
   {
     "English": null,
     "ids": [
-      "graft_skill_tul_summon_maximum_allowed_demons"
+      "base_graft_skill_tul_summon_maximum_allowed_demons"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -11467,6 +11619,24 @@
     "Portuguese": null,
     "Russian": null,
     "Spanish": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Máximo de nacidos de la colmena: {0}",
+        "reminder_text": null,
+        "is_markup": null
+      },
       {
         "condition": [
           {
@@ -11715,7 +11885,7 @@
         "index_handlers": [
           []
         ],
-        "string": "La bonificación otorga un {0}% de probabilidad de aplicar un empalamiento adicional a los enemigos que empalas",
+        "string": "El efecto beneficioso otorga un {0}% de probabilidad de aplicar un empalamiento adicional a los enemigos que empalas",
         "reminder_text": "(Cuando un enemigo empalado es golpeado, el empalamiento refleja un 10% del daño físico del golpe empalador a ese enemigo. Empalar dura 5 golpes o 8 segundos)",
         "is_markup": null
       }
@@ -11751,7 +11921,7 @@
         "index_handlers": [
           []
         ],
-        "string": "La bonificación otorga {0} empalamiento adicional",
+        "string": "El efecto beneficioso otorga {0} empalamiento adicional",
         "reminder_text": null,
         "is_markup": null
       },
@@ -11769,7 +11939,7 @@
         "index_handlers": [
           []
         ],
-        "string": "La bonificación otorga {0} empalamientos adicionales",
+        "string": "El efecto beneficioso otorga {0} empalamientos adicionales",
         "reminder_text": null,
         "is_markup": null
       }
@@ -11805,7 +11975,7 @@
         "index_handlers": [
           []
         ],
-        "string": "La bonificación otorga el efecto del empalamiento aumentado un {0}%",
+        "string": "El efecto beneficioso otorga el efecto del empalamiento aumentado un {0}%",
         "reminder_text": "(Cuando un enemigo empalado es golpeado, el empalamiento refleja un 10% del daño físico del golpe empalador a ese enemigo. Empalar dura 5 golpes o 8 segundos)",
         "is_markup": null
       }
@@ -11841,61 +12011,7 @@
         "index_handlers": [
           []
         ],
-        "string": "La bonificación otorga el {0}% del daño físico ganado como el daño elemental extra que coincida con los tipos de estados alterados elementales eliminados",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "graft_skill_xoph_flame_pillars_number_of_pillars"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": 1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Crea {0} pilar ceniciento",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 2,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Crea {0} pilares cenicientos",
+        "string": "El efecto beneficioso otorga el {0}% del daño físico ganado como el daño elemental extra que coincida con los tipos de estados alterados elementales eliminados",
         "reminder_text": null,
         "is_markup": null
       }
@@ -12075,7 +12191,7 @@
         "index_handlers": [
           []
         ],
-        "string": "La bonificación otorga un {0}% más de velocidad de recuperación de vida",
+        "string": "El efecto beneficioso otorga un {0}% más de velocidad de recuperación de vida",
         "reminder_text": null,
         "is_markup": null
       },
@@ -12095,7 +12211,7 @@
             "negate"
           ]
         ],
-        "string": "La bonificación otorga un {0}% menos de velocidad de recuperación de vida",
+        "string": "El efecto beneficioso otorga un {0}% menos de velocidad de recuperación de vida",
         "reminder_text": null,
         "is_markup": null
       }
@@ -12131,7 +12247,7 @@
         "index_handlers": [
           []
         ],
-        "string": "La bonificación otorga {0} carga de aguante cuando la obtienes",
+        "string": "El efecto beneficioso otorga {0} carga de aguante cuando lo obtienes",
         "reminder_text": null,
         "is_markup": null
       },
@@ -12149,7 +12265,7 @@
         "index_handlers": [
           []
         ],
-        "string": "La bonificación otorga {0} cargas de aguante cuando la obtienes",
+        "string": "El efecto beneficioso otorga {0} cargas de aguante cuando lo obtienes",
         "reminder_text": null,
         "is_markup": null
       }
@@ -15737,7 +15853,7 @@
           [],
           []
         ],
-        "string": "El {0}% del daño de los golpes lo recibe la bonificación antes que la vida o el escudo de energía\nLa bonificación puede recibir {1} de daño",
+        "string": "El {0}% del daño de los golpes lo recibe el efecto beneficioso antes que la vida o el escudo de energía\nEl efecto beneficioso puede recibir {1} de daño",
         "reminder_text": null,
         "is_markup": null
       }
@@ -16794,7 +16910,25 @@
       {
         "condition": [
           {
-            "min": null,
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Objetivos máximos del haz: {0}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
             "max": null,
             "negated": null
           }
@@ -16805,7 +16939,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Máximo de objetivos del haz: {0}",
+        "string": "Objetivos máximos del haz: {0}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -23124,32 +23258,7 @@
     "ids": [
       "map_hidden_spawn_extra_exiles"
     ],
-    "trade_stats": [
-      {
-        "id": "enchant.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "enchant",
-        "option": null
-      },
-      {
-        "id": "explicit.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "explicit",
-        "option": null
-      },
-      {
-        "id": "fractured.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "fractured",
-        "option": null
-      },
-      {
-        "id": "implicit.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "implicit",
-        "option": null
-      }
-    ],
+    "trade_stats": null,
     "hidden": true,
     "French": null,
     "German": null,

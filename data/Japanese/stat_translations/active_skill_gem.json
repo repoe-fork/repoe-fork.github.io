@@ -291,6 +291,50 @@
   {
     "English": null,
     "ids": [
+      "off_hand_minimum_added_physical_damage_per_15_shield_armour",
+      "off_hand_maximum_added_physical_damage_per_15_shield_armour"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "盾のアーマー15ごとに{0}から{1}の追加物理ダメージ",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "off_hand_minimum_added_physical_damage_per_15_shield_armour_and_evasion_rating",
       "off_hand_maximum_added_physical_damage_per_15_shield_armour_and_evasion_rating"
     ],
@@ -1182,8 +1226,7 @@
   {
     "English": null,
     "ids": [
-      "base_skill_effect_duration",
-      "quality_display_base_duration_is_quality"
+      "base_skill_effect_duration"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -1196,22 +1239,35 @@
             "min": null,
             "max": null,
             "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": null
           }
         ],
         "format": [
-          "#",
-          "ignore"
+          "+#"
         ],
         "index_handlers": [
           [
             "milliseconds_to_seconds_2dp"
-          ],
-          []
+          ]
+        ],
+        "string": "基礎持続時間 {0}秒",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp"
+          ]
         ],
         "string": "基礎持続時間は{0}秒",
         "reminder_text": null,
@@ -1223,24 +1279,17 @@
             "min": null,
             "max": null,
             "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": true
           }
         ],
         "format": [
-          "+#",
-          "ignore"
+          "#"
         ],
         "index_handlers": [
           [
             "milliseconds_to_seconds_2dp"
-          ],
-          []
+          ]
         ],
-        "string": "基礎持続時間 {0}秒",
+        "string": "基礎持続時間は{0}秒",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4004,6 +4053,50 @@
   {
     "English": null,
     "ids": [
+      "attack_minimum_added_cold_damage_for_elemental_hit",
+      "attack_maximum_added_cold_damage_for_elemental_hit"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "{0}から{1}の追加冷気ダメージ",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "attack_minimum_added_fire_damage",
       "attack_maximum_added_fire_damage"
     ],
@@ -4048,8 +4141,96 @@
   {
     "English": null,
     "ids": [
+      "attack_minimum_added_fire_damage_for_elemental_hit",
+      "attack_maximum_added_fire_damage_for_elemental_hit"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "{0}から{1}の追加火ダメージ",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "attack_minimum_added_lightning_damage",
       "attack_maximum_added_lightning_damage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "{0}から{1}の追加雷ダメージ",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "attack_minimum_added_lightning_damage_for_elemental_hit",
+      "attack_maximum_added_lightning_damage_for_elemental_hit"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -6006,8 +6187,7 @@
   {
     "English": null,
     "ids": [
-      "base_number_of_projectiles",
-      "quality_display_base_number_of_projectiles_is_gem"
+      "base_number_of_projectiles"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -6020,22 +6200,33 @@
             "min": 1,
             "max": 1,
             "negated": null
-          },
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "放つ投射物の数 {0}個",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
           {
-            "min": 0,
-            "max": 0,
+            "min": 2,
+            "max": null,
             "negated": null
           }
         ],
         "format": [
-          "+#",
-          "ignore"
+          "+#"
         ],
         "index_handlers": [
-          [],
           []
         ],
-        "string": "放つ投射物の数が{0}個される",
+        "string": "放つ投射物の数 {0}個",
         "reminder_text": null,
         "is_markup": null
       },
@@ -6045,19 +6236,12 @@
             "min": 1,
             "max": 1,
             "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
           }
         ],
         "format": [
-          "ignore",
           "ignore"
         ],
         "index_handlers": [
-          [],
           []
         ],
         "string": "1個の投射物を放つ",
@@ -6070,44 +6254,12 @@
             "min": 2,
             "max": null,
             "negated": null
-          },
-          {
-            "min": 0,
-            "max": 0,
-            "negated": null
           }
         ],
         "format": [
-          "+#",
-          "ignore"
+          "#"
         ],
         "index_handlers": [
-          [],
-          []
-        ],
-        "string": "放つ投射物の数が{0}個される",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 2,
-            "max": null,
-            "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
           []
         ],
         "string": "{0}個の投射物を放つ",
@@ -11333,7 +11485,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}本の手を生成する",
+        "string": "手を追加で{0}本生成する",
         "reminder_text": null,
         "is_markup": null
       },
@@ -11351,7 +11503,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}本の手を生成する",
+        "string": "手を追加で{0}本生成する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -11456,7 +11608,7 @@
   {
     "English": null,
     "ids": [
-      "graft_skill_tul_summon_maximum_allowed_demons"
+      "base_graft_skill_tul_summon_maximum_allowed_demons"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -11472,12 +11624,30 @@
           }
         ],
         "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ハイヴボーンの最大数 {0}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
           "#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "ハイブボーンの最大数 {0}",
+        "string": "ハイヴボーンの最大数は{0}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -11838,60 +12008,6 @@
           []
         ],
         "string": "バフは物理ダメージの{0}%を取り除いた元素系状態異常の属性と一致する追加元素ダメージとして獲得を付与する",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "graft_skill_xoph_flame_pillars_number_of_pillars"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": 1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "{0}本の灰の柱を生成する",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 2,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "{0}本の灰の柱を生成する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -16790,7 +16906,25 @@
       {
         "condition": [
           {
-            "min": null,
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ビームの対象の最大数は{0}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
             "max": null,
             "negated": null
           }
@@ -16801,7 +16935,7 @@
         "index_handlers": [
           []
         ],
-        "string": "ビームの最大対象数 {0}",
+        "string": "ビームの対象の最大数は{0}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -23124,32 +23258,7 @@
     "ids": [
       "map_hidden_spawn_extra_exiles"
     ],
-    "trade_stats": [
-      {
-        "id": "enchant.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "enchant",
-        "option": null
-      },
-      {
-        "id": "explicit.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "explicit",
-        "option": null
-      },
-      {
-        "id": "fractured.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "fractured",
-        "option": null
-      },
-      {
-        "id": "implicit.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "implicit",
-        "option": null
-      }
-    ],
+    "trade_stats": null,
     "hidden": true,
     "French": null,
     "German": null,

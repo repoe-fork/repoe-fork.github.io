@@ -157,7 +157,7 @@
       {
         "condition": [
           {
-            "min": null,
+            "min": 1,
             "max": null,
             "negated": null
           }
@@ -168,7 +168,27 @@
         "index_handlers": [
           []
         ],
-        "string": "지도 내 균열의 몬스터 밀집도 {0}% 증가",
+        "string": "지도 내 균열 몬스터의 무리 규모 {0}% 증가",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "지도 내 균열 몬스터의 무리 규모 {0}% 감소",
         "reminder_text": null,
         "is_markup": null
       }
@@ -878,42 +898,6 @@
   {
     "English": null,
     "ids": [
-      "atlas_daily_kirac_missions_+"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "매일 키락 임무 {0}개 추가로 획득",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "atlas_daily_master_missions_+"
     ],
     "trade_stats": null,
@@ -1246,7 +1230,7 @@
         "index_handlers": [
           []
         ],
-        "string": "타락한 희귀 지도를 열면 해당 지도와 이에 적용되는\n모든 지도 제작 옵션을 예측 불가능하게 변경",
+        "string": "타락한 희귀 지도를 열면 해당 지도를 예측 불가능하게 변경",
         "reminder_text": null,
         "is_markup": null
       }
@@ -1625,7 +1609,7 @@
           []
         ],
         "string": "지도의 비고정 속성 효과가 무작위로 0~80% 증폭\n지도에 추가 콘텐츠가 등장하지 않음\n지도에 영향력 적용 불가",
-        "reminder_text": "(심연, 이계 악마 포탈, 역병 인카운터, 균열, 탐험 인카운터, 선구자, 군단 인카운터, 환영의 거울 및 환영 현상, 에센스에 갇힌 몬스터, 광맥, 의식 제단, 탈주 유배자, 신성한 숲, 성소, 밀수범의 은닉함, 금고, 폭풍, 고통받는 혼백, 결전 인카운터, 야생림 도깨비불 그리고 알바, 아인하르, 준, 니코 임무는 추가 콘텐츠입니다.)",
+        "reminder_text": "(심연, 이계 악마 포탈, 역병 인카운터, 균열, 탐험 인카운터, 군단 인카운터, 환영의 거울 및 환영 현상, 에센스에 갇힌 몬스터, 광맥, 의식 제단, 탈주 유배자, 신성한 숲, 성소, 밀수범의 은닉함, 금고, 폭풍, 고통받는 혼백, 결전 인카운터, 야생림 도깨비불 그리고 알바, 아인하르, 준, 니코 임무는 추가 콘텐츠입니다.)",
         "is_markup": null
       }
     ],
@@ -3231,98 +3215,6 @@
           []
         ],
         "string": "지도 내 영향을 받는 몬스터가 {0}%의 확률로 희귀 무기 1개를 추가로 떨어뜨림",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "kirac_blight_craft_always_available"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "역병 지도 제작 옵션 항상 사용 가능",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "kirac_blight_craft_cost_+%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "역병 지도 제작 옵션의 비용 {0}% 증가",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "역병 지도 제작 옵션의 비용 {0}% 감소",
         "reminder_text": null,
         "is_markup": null
       }
@@ -7162,42 +7054,6 @@
   {
     "English": null,
     "ids": [
-      "map_atlas_scouting_report_drop_chance_+%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "지도 내 아틀라스 정찰 보고서 출현율 {0}% 증가",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "map_awakener_boss_awakened_support_drop_chance_+%"
     ],
     "trade_stats": null,
@@ -7322,7 +7178,7 @@
         "condition": [
           {
             "min": null,
-            "max": null,
+            "max": 99,
             "negated": null
           }
         ],
@@ -7333,6 +7189,24 @@
           []
         ],
         "string": "지도 내 포획한 붉은 야수가 {0}%의 확률로 피의 제단에 바쳐져도 일정 확률로 소모되지 않도록 하는 속성 획득",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": 100,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "지도 내 포획한 붉은 야수가 피의 제단에 바쳐져도 일정 확률로 소모되지 않도록 하는 속성 획득",
         "reminder_text": null,
         "is_markup": null
       }
@@ -7370,6 +7244,42 @@
         ],
         "string": "지도 내 야수가 {0}%의 확률로 풀려남\n지도 내에서 풀려나는 야수가 흉포한 격노 획득\n야수 처치 시 처치한 야수가 보유한 흉포한 격노 중첩에 따라 사냥꾼의 잔꾀 부여",
         "reminder_text": "(사냥꾼의 잔꾀는 야수로부터 받는 피해 감폭, 야수에게 주는 피해 증가, 처치한 야수에게서 발견하는 아이템의 수량 및 희귀도 증가 효과를 부여합니다)",
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_bestiary_beast_has_x_bestial_rage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "지도 내 포획 가능한 야수가 흉포한 격노 보유\n포획 가능한 야수를 처치하면 사냥꾼의 잔꾀 중첩 1 획득",
+        "reminder_text": "(흉포한 격노는 영향을 받는 야수의 이동 속도, 공격 속도, 피해를 증가시킵니다.)",
         "is_markup": null
       }
     ],
@@ -7423,6 +7333,42 @@
           []
         ],
         "string": "지도 내 붉은 야수가 야수 도감 속성 {0}개 추가로 보유",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_betrayal_%_chance_veiled_items_to_drop_with_fractured_veiled_mod"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "지도 내 처치한 연합 단원이 떨어뜨리는 장막 아이템이 {0}% 확률로 분열된 장막 속성 보유",
         "reminder_text": null,
         "is_markup": null
       }
@@ -9668,6 +9614,62 @@
   {
     "English": null,
     "ids": [
+      "map_blight_monster_item_quantity_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "지도 내 역병 몬스터가 떨어뜨리는 아이템의 수량 {0}% 증가",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "지도 내 역병 몬스터가 떨어뜨리는 아이템의 수량 {0}% 감소",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "map_blight_monsters_damage_taken_from_player_sources_+%_final"
     ],
     "trade_stats": null,
@@ -10272,7 +10274,7 @@
             "divide_by_one_hundred"
           ]
         ],
-        "string": "각 지도 내 최종 지도 보스가 {0}%의 확률로 연결된 지도를 추가로 떨어뜨림",
+        "string": "각 지도 내 최종 지도 보스가 {0}%의 확률로 1등급 높은 지도 1개를 추가로 떨어뜨림",
         "reminder_text": null,
         "is_markup": null
       }
@@ -11690,7 +11692,7 @@
         "index_handlers": [
           []
         ],
-        "string": "균열이 등장하는 지도에 {0}%의 확률로 균열 1개 추가 등장",
+        "string": "불안정한 균열이 등장하는 지도에 {0}%의 확률로 불안정한 균열 1개 추가 등장",
         "reminder_text": null,
         "is_markup": null
       },
@@ -11708,7 +11710,7 @@
         "index_handlers": [
           []
         ],
-        "string": "균열이 등장하는 지도에 균열 1개 추가 등장",
+        "string": "불안정한 균열이 등장하는 지도에 불안정한 균열 1개 추가 등장",
         "reminder_text": null,
         "is_markup": null
       }
@@ -11744,7 +11746,7 @@
         "index_handlers": [
           []
         ],
-        "string": "균열이 등장하는 지도에 {0}%의 확률로 균열 2개 추가 등장",
+        "string": "불안정한 균열이 등장하는 지도에 {0}%의 확률로 불안정한 균열 2개 추가 등장",
         "reminder_text": null,
         "is_markup": null
       },
@@ -11762,7 +11764,7 @@
         "index_handlers": [
           []
         ],
-        "string": "균열이 등장하는 지도에 균열 2개 추가 등장",
+        "string": "불안정한 균열이 등장하는 지도에 불안정한 균열 2개 추가 등장",
         "reminder_text": null,
         "is_markup": null
       }
@@ -11798,7 +11800,7 @@
         "index_handlers": [
           []
         ],
-        "string": "균열이 등장하는 지도에 {0}%의 확률로 균열 3개 추가 등장",
+        "string": "불안정한 균열이 등장하는 지도에 {0}%의 확률로 불안정한 균열 3개 추가 등장",
         "reminder_text": null,
         "is_markup": null
       },
@@ -11816,7 +11818,7 @@
         "index_handlers": [
           []
         ],
-        "string": "균열이 등장하는 지도에 균열 3개 추가 등장",
+        "string": "불안정한 균열이 등장하는 지도에 불안정한 균열 3개 추가 등장",
         "reminder_text": null,
         "is_markup": null
       }
@@ -11852,7 +11854,7 @@
         "index_handlers": [
           []
         ],
-        "string": "균열이 등장하는 지도에 {0}%의 확률로 균열 10개 추가 등장",
+        "string": "불안정한 균열이 등장하는 지도에 {0}%의 확률로 불안정한 균열 10개 추가 등장",
         "reminder_text": null,
         "is_markup": null
       },
@@ -11870,7 +11872,7 @@
         "index_handlers": [
           []
         ],
-        "string": "균열이 등장하는 지도에 균열 10개 추가 등장",
+        "string": "불안정한 균열이 등장하는 지도에 불안정한 균열 10개 추가 등장",
         "reminder_text": null,
         "is_markup": null
       }
@@ -11979,6 +11981,152 @@
           []
         ],
         "string": "지도 내 균열이 희귀 몬스터 {0}마리를 추가로 생성함",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_ancient_wombgift_chance_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "지도에서 발견하는 생명의 결실이 고대 생명의 결실일 확률 {0}% 증가",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "지도에서 발견하는 생명의 결실이 고대 생명의 결실일 확률 {0}% 감소",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_boss_additional_wombgift_chance_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": 100,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "지도 내 균열 보스가 생명의 결실 1개를 추가로 떨어뜨림",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "지도 내 균열 보스가 {0}% 확률로 생명의 결실 1개를 추가로 떨어뜨림",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_boss_hiveblood_instead_of_gold"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "지도 내 균열 보스가 골드 대신 벌레집 피 부여",
         "reminder_text": null,
         "is_markup": null
       }
@@ -12210,6 +12358,656 @@
   {
     "English": null,
     "ids": [
+      "map_breach_fortress_chest_wombgift_chance_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "지도 내 탐욕스러운 궤짝에 생명의 결실이 포함될 확률 {0}% 증가",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "지도 내 탐욕스러운 궤짝에 생명의 결실이 포함될 확률 {0}% 감소",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_hive_breakable_spawners_area_of_effect_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "지도 내 가연성 토굴의 폭발 반경 {0}% 증가",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "지도 내 가연성 토굴의 폭발 반경 {0}% 감소",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_hive_chests_grant_hiveblood_instead_of_gold"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "지도 내 벌레집 요새 상자가 골드 대신 벌레집 피 부여",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_hive_fortress_chance_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "지도 내 균열 벌레집이 요새로 이어질 확률 {0}% 증가",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "지도 내 균열 벌레집이 요새로 이어질 확률 {0}% 감소",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_hive_monsters_toughness_per_broken_spawner_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "지도 내 벌레집 몬스터의 강인함이 파괴된 가연성 토굴 하나당 {0}% 증가",
+        "reminder_text": "(몬스터의 강인함이 높을수록 해당 몬스터가 받는 피해가 감폭됩니다. 강인함이 100% 증가한 몬스터는 받는 피해가 50% 감폭되고, 강인함이 200% 증가한 괴물은 받는 피해가 67% 감폭됩니다. 강인함이 감소하면 몬스터가 받는 피해가 증폭됩니다.)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "지도 내 벌레집 몬스터의 강인함이 파괴된 가연성 토굴 하나당 {0}% 감소",
+        "reminder_text": "(몬스터의 강인함이 높을수록 해당 몬스터가 받는 피해가 감폭됩니다. 강인함이 100% 증가한 몬스터는 받는 피해가 50% 감폭되고, 강인함이 200% 증가한 괴물은 받는 피해가 67% 감폭됩니다. 강인함이 감소하면 몬스터가 받는 피해가 증폭됩니다.)",
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_hive_number_of_breakable_spawners_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "지도 내 균열 벌레집의 가연성 토굴 수 {0}% 증가",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "지도 내 균열 벌레집의 가연성 토굴 수 {0}% 감소",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_hive_number_of_skills_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "지도 내 요새로 이어지지 않는 균열 벌레집 내에서 아일리트가 생성하는\n스킬 수 {0}% 증가",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "지도 내 요새로 이어지지 않는 균열 벌레집 내에서 아일리트가 생성하는\n스킬 수 {0}% 감소",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_hive_skill_damage_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "지도 내 균열 벌레집 내에서 아일리트가 생성하는 스킬의 피해 {0}% 증가",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "지도 내 균열 벌레집 내에서 아일리트가 생성하는 스킬의 피해 {0}% 감소",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_hiveblood_and_wombgift_quantity_per_broken_spawner_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "지도 내 벌레집 인카운터에서 파괴된 가연성 토굴 하나당 획득하는 벌레집 피\n및 생명의 결실 {0}% 증가",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "지도 내 벌레집 인카운터에서 파괴된 가연성 토굴 하나당 획득하는 벌레집 피\n및 생명의 결실 {0}% 감소",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_hiveblood_quantity_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "지도에서 발견하는 벌레집 피 수량 {0}% 증가",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "지도에서 발견하는 벌레집 피 수량 {0}% 감소",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_hives_additional_waves_+"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "지도 내 균열 벌레집이 벌레집 태생 몬스터 웨이브 1개를 추가로 보유",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "지도 내 균열 벌레집이 벌레집 태생 몬스터 웨이브 {0}개를 추가로 보유",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_lavish_wombgift_chance_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "지도에서 발견하는 생명의 결실이 화려한 생명의 결실일 확률 {0}% 증가",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "지도에서 발견하는 생명의 결실이 화려한 생명의 결실일 확률 {0}% 감소",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "map_breach_monster_granted_experience_+%"
     ],
     "trade_stats": null,
@@ -12414,6 +13212,62 @@
   {
     "English": null,
     "ids": [
+      "map_breach_mysterious_wombgift_chance_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "지도에서 발견하는 생명의 결실이 수수께끼의 생명의 결실일 확률 {0}% 증가",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "지도에서 발견하는 생명의 결실이 수수께끼의 생명의 결실일 확률 {0}% 감소",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "map_breach_number_of_magic_packs_+%"
     ],
     "trade_stats": null,
@@ -12457,6 +13311,118 @@
           ]
         ],
         "string": "지도 내 균열에서 생성되는 마법 몬스터 {0}% 감소",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_number_of_rare_packs_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "지도 내 균열에서 생성되는 희귀 몬스터 {0}% 증가",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "지도 내 균열에서 생성되는 희귀 몬스터 {0}% 감소",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_provisioning_wombgift_chance_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "지도에서 발견하는 생명의 결실이 베푸는 생명의 결실일 확률 {0}% 증가",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "지도에서 발견하는 생명의 결실이 베푸는 생명의 결실일 확률 {0}% 감소",
         "reminder_text": null,
         "is_markup": null
       }
@@ -12676,7 +13642,7 @@
         "index_handlers": [
           []
         ],
-        "string": "지도 내 균열이 {0}% 더 빠르게 열리고 닫힘",
+        "string": "지도 내 균열 인카운터 {0}% 가속",
         "reminder_text": null,
         "is_markup": null
       },
@@ -12696,7 +13662,7 @@
             "negate"
           ]
         ],
-        "string": "지도 내 균열이 {0}% 더 느리게 열리고 닫힘",
+        "string": "지도 내 균열 인카운터 {0}% 감속",
         "reminder_text": null,
         "is_markup": null
       }
@@ -12841,6 +13807,62 @@
           []
         ],
         "string": "지도 내 균열 몬스터가 균열 고유 아이템을 떨어뜨릴 확률 {0}% 증가",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_wombgift_quantity_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "지도에서 발견하는 생명의 결실 수량 {0}% 증가",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "지도에서 발견하는 생명의 결실 수량 {0}% 감소",
         "reminder_text": null,
         "is_markup": null
       }
@@ -13277,6 +14299,42 @@
           []
         ],
         "string": "지도에 신성한 숲 등장",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_chance_for_area_%_to_duplicate_breach_boss"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "지도 내 균열 보스가 {0}%의 확률로 복제",
         "reminder_text": null,
         "is_markup": null
       }
@@ -14066,7 +15124,7 @@
   {
     "English": null,
     "ids": [
-      "map_contains_additional_breaches"
+      "map_contains_X_additional_strongboxes_essences_shrines_or_rogue_exiles"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -14088,7 +15146,7 @@
         "index_handlers": [
           []
         ],
-        "string": "지도에 균열 1개 추가 등장",
+        "string": "지도에 금고, 갇힌 몬스터, 성소 또는 탈주 유배자 1개 추가 등장",
         "reminder_text": null,
         "is_markup": null
       },
@@ -14106,7 +15164,7 @@
         "index_handlers": [
           []
         ],
-        "string": "지도에 균열 {0}개 추가 등장",
+        "string": "지도에 금고, 갇힌 몬스터, 성소 또는 탈주 유배자 {0}개 추가 등장",
         "reminder_text": null,
         "is_markup": null
       }
@@ -14516,6 +15574,60 @@
   {
     "English": null,
     "ids": [
+      "map_contains_additional_unstable_breaches"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "지도에 불안정한 균열 1개 추가 등장",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "지도에 불안정한 균열 {0}개 추가 등장",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "map_contains_adjacent_map_item_chance_permyriad"
     ],
     "trade_stats": null,
@@ -14541,6 +15653,78 @@
           ]
         ],
         "string": "각각의 지도에서 몬스터 1마리가 {0}%의 확률로 연결된 지도 1개를 추가로 떨어뜨림",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_contains_an_unspecified_breach"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "지도에 균열 등장",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_contains_breach_hive"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 3,
+            "max": 3,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "지도에 균열 벌레집 등장",
         "reminder_text": null,
         "is_markup": null
       }
@@ -18319,6 +19503,42 @@
   {
     "English": null,
     "ids": [
+      "map_divination_cards_in_area_are_from_two_different_areas"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "지도에서 발견하는 점술 카드를 현재 지도 대신 다른 무작위 지도\n2개에서 가져옴",
+        "reminder_text": "(지도에서 발견할 수 있는 점술 카드의 수가 증폭되면 점술 카드가 나올 확률이 증가합니다.)",
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "map_double_conqueror_progress_chance_%"
     ],
     "trade_stats": null,
@@ -20400,7 +21620,7 @@
           []
         ],
         "string": "지도에 추가 콘텐츠가 등장할 기본 확률 없음",
-        "reminder_text": "(심연, 이계 악마 포탈, 역병 인카운터, 균열, 탐험 인카운터, 선구자, 군단 인카운터, 환영의 거울 및 환영 현상, 에센스에 갇힌 몬스터, 광맥, 의식 제단, 탈주 유배자, 신성한 숲, 성소, 밀수범의 은닉함, 금고, 폭풍, 고통받는 혼백, 결전 인카운터, 야생림 도깨비불 그리고 알바, 아인하르, 준, 니코 임무는 추가 콘텐츠입니다.)",
+        "reminder_text": "(심연, 이계 악마 포탈, 역병 인카운터, 균열, 탐험 인카운터, 군단 인카운터, 환영의 거울 및 환영 현상, 에센스에 갇힌 몬스터, 광맥, 의식 제단, 탈주 유배자, 신성한 숲, 성소, 밀수범의 은닉함, 금고, 폭풍, 고통받는 혼백, 결전 인카운터, 야생림 도깨비불 그리고 알바, 아인하르, 준, 니코 임무는 추가 콘텐츠입니다.)",
         "is_markup": null
       }
     ],
@@ -20436,7 +21656,7 @@
           []
         ],
         "string": "지도에 추가 콘텐츠가 최대 1가지 유형만 등장",
-        "reminder_text": "(심연, 이계 악마 포탈, 역병 인카운터, 균열, 탐험 인카운터, 선구자, 군단 인카운터, 환영의 거울 및 환영 현상, 에센스에 갇힌 몬스터, 광맥, 의식 제단, 탈주 유배자, 신성한 숲, 성소, 밀수범의 은닉함, 금고, 폭풍, 고통받는 혼백, 결전 인카운터, 야생림 도깨비불 그리고 알바, 아인하르, 준, 니코 임무는 추가 콘텐츠입니다.)",
+        "reminder_text": "(심연, 이계 악마 포탈, 역병 인카운터, 균열, 탐험 인카운터, 군단 인카운터, 환영의 거울 및 환영 현상, 에센스에 갇힌 몬스터, 광맥, 의식 제단, 탈주 유배자, 신성한 숲, 성소, 밀수범의 은닉함, 금고, 폭풍, 고통받는 혼백, 결전 인카운터, 야생림 도깨비불 그리고 알바, 아인하르, 준, 니코 임무는 추가 콘텐츠입니다.)",
         "is_markup": null
       }
     ],
@@ -21213,152 +22433,6 @@
   {
     "English": null,
     "ids": [
-      "map_gain_additional_zana_mission_%_chance_on_map_completion"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": 99,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "지도 완료 시 {0}%의 확률로 키락 임무 1개 추가 부여",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 100,
-            "max": 100,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "지도 완료 시 키락 임무 1개 추가 부여",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "map_gain_additional_zana_mission_permyriad_chance_on_map_completion"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": 9999,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "divide_by_one_hundred"
-          ]
-        ],
-        "string": "지도 완료 시 {0}%의 확률로 키락 임무 1개 추가 부여",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 10000,
-            "max": 10000,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "지도 완료 시 키락 임무 1개 추가 부여",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "map_gain_blight_map_craft_on_completion_chance_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "지도 완료 시 {0}%의 확률로 역병 지도 제작 옵션 무료 사용 1회 획득",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "map_gain_master_missions_instead_of_master_naturally_spawning"
     ],
     "trade_stats": null,
@@ -21382,96 +22456,6 @@
           []
         ],
         "string": "지도에 무작위로 만나는 대가가 등장할 경우, 완료 시 해당 대가의 임무를 대신 부여",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "map_gain_random_map_craft_on_completion_chance_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": 99,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "지도 완료 시 {0}%의 확률로 무작위 지도 제작 옵션 무료 사용 1회 획득",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 100,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "지도 완료 시 무작위 지도 제작 옵션 무료 사용 1회 획득",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "map_gain_special_map_craft_on_completion_chance_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "지도 완료 시 {0}%의 확률로 특별 지도 제작 옵션 무료 사용 1회 획득",
         "reminder_text": null,
         "is_markup": null
       }
@@ -25311,62 +26295,6 @@
   {
     "English": null,
     "ids": [
-      "map_kirac_mission_pack_size_+%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "지도 내 키락 임무의 무리 규모 {0}% 증가",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "지도 내 키락 임무의 무리 규모 {0}% 증가",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "map_league_base_chance_+%_final"
     ],
     "trade_stats": null,
@@ -25390,7 +26318,7 @@
           []
         ],
         "string": "지도에 추가 콘텐츠가 등장할 기본 확률 {0}% 증폭",
-        "reminder_text": "(심연, 이계 악마 포탈, 역병 인카운터, 균열, 탐험 인카운터, 선구자, 군단 인카운터, 환영의 거울 및 환영 현상, 에센스에 갇힌 몬스터, 광맥, 의식 제단, 탈주 유배자, 신성한 숲, 성소, 밀수범의 은닉함, 금고, 폭풍, 고통받는 혼백, 결전 인카운터, 야생림 도깨비불 그리고 알바, 아인하르, 준, 니코 임무는 추가 콘텐츠입니다.)",
+        "reminder_text": "(심연, 이계 악마 포탈, 역병 인카운터, 균열, 탐험 인카운터, 군단 인카운터, 환영의 거울 및 환영 현상, 에센스에 갇힌 몬스터, 광맥, 의식 제단, 탈주 유배자, 신성한 숲, 성소, 밀수범의 은닉함, 금고, 폭풍, 고통받는 혼백, 결전 인카운터, 야생림 도깨비불 그리고 알바, 아인하르, 준, 니코 임무는 추가 콘텐츠입니다.)",
         "is_markup": null
       }
     ],
@@ -25426,7 +26354,7 @@
           []
         ],
         "string": "지도에 다른 추가 콘텐츠가 등장할 확률 {0}%",
-        "reminder_text": "(심연, 이계 악마 포탈, 역병 인카운터, 균열, 탐험 인카운터, 선구자, 군단 인카운터, 환영의 거울 및 환영 현상, 에센스에 갇힌 몬스터, 광맥, 의식 제단, 탈주 유배자, 신성한 숲, 성소, 밀수범의 은닉함, 금고, 폭풍, 고통받는 혼백, 결전 인카운터, 야생림 도깨비불 그리고 알바, 아인하르, 준, 니코 임무는 추가 콘텐츠입니다.)",
+        "reminder_text": "(심연, 이계 악마 포탈, 역병 인카운터, 균열, 탐험 인카운터, 군단 인카운터, 환영의 거울 및 환영 현상, 에센스에 갇힌 몬스터, 광맥, 의식 제단, 탈주 유배자, 신성한 숲, 성소, 밀수범의 은닉함, 금고, 폭풍, 고통받는 혼백, 결전 인카운터, 야생림 도깨비불 그리고 알바, 아인하르, 준, 니코 임무는 추가 콘텐츠입니다.)",
         "is_markup": null
       }
     ],
@@ -26844,6 +27772,42 @@
           ]
         ],
         "string": "지도에서 발견하는 마법 아이템이 {0}%의 확률로 식별된 상태 및 분열된 속성 보유",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_map_item_drop_chance_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "지도 내 지도 출현율 {0}% 증가",
         "reminder_text": null,
         "is_markup": null
       }
@@ -28907,6 +29871,62 @@
   {
     "English": null,
     "ids": [
+      "map_mod_effect_+%_per_fragment_used"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "지도와 함께 사용한 조각 하나당 지도에 적용되는 비고정 속성의 효과 {0}% 증가",
+        "reminder_text": "(조각은 비-지도 아이템으로 지도 장치에 넣어 사용할 수 있습니다)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "지도와 함께 사용한 조각 하나당 지도에 적용되는 비고정 속성의 효과 {0}% 감소",
+        "reminder_text": "(조각은 비-지도 아이템으로 지도 장치에 넣어 사용할 수 있습니다)",
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "map_mod_effect_+%_per_mod"
     ],
     "trade_stats": null,
@@ -30299,6 +31319,78 @@
   {
     "English": null,
     "ids": [
+      "map_only_breach_hives"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "지도 내 균열 인카운터가 항상 벌레집",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_only_unstable_breaches"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "지도 내 균열 인카운터가 항상 불안정한 균열",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "map_orb_of_chance_to_unique_item_%"
     ],
     "trade_stats": null,
@@ -31350,7 +32442,7 @@
           []
         ],
         "string": "지도에 아틀라스 패시브 스킬로 비활성화할 수 있는\n다른 추가 콘텐츠가 등장할 확률 {0}%",
-        "reminder_text": "(심연, 역병 인카운터, 균열(스탠다드 리그 전용), 탐험 인카운터, 군단 인카운터, 환영의 거울, 광맥, 의식 제단, 신성한 숲, 밀수범의 은닉함(수호자들 리그 전용), 결전 인카운터는 추가 콘텐츠로, 아틀라스 패시브 트리를 통해 비활성화할 수 있습니다)",
+        "reminder_text": "(심연, 역병 인카운터, 균열, 탐험 인카운터, 군단 인카운터, 환영의 거울, 광맥, 의식 제단, 신성한 숲, 밀수범의 은닉함, 결전 인카운터는 추가 콘텐츠로, 아틀라스 패시브 트리를 통해 비활성화할 수 있습니다.)",
         "is_markup": null
       }
     ],
@@ -33705,384 +34797,6 @@
   {
     "English": null,
     "ids": [
-      "scouting_report_drops_as_blighted_scouting_report_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "지도에서 정찰 보고서가 {0}%의 확률로 역병 걸린 정찰 보고서로 대신 떨어짐",
-        "reminder_text": "(역병 걸린 정찰 보고서는 키락의 아틀라스 임무를 모두 무작위 변경합니다. 결과에는 성유 속성을 가진 역병 걸린 지도가 1개 이상 포함됩니다.)",
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 100,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "지도에서 정찰 보고서가 역병 걸린 정찰 보고서로 대신 떨어짐",
-        "reminder_text": "(역병 걸린 정찰 보고서는 키락의 아틀라스 임무를 모두 무작위 변경합니다. 결과에는 성유 속성을 가진 역병 걸린 지도가 1개 이상 포함됩니다.)",
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "scouting_report_drops_as_comprehensive_scouting_report_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "지도 내 정찰 보고서가 {0}%의 확률로 상세한 정찰 보고서로 떨어짐",
-        "reminder_text": "(상세한 정찰 보고서는 키락의 아틀라스 임무를 모두 무작위 변경하여, 새로운 결과를 포함할 수 있는 임무 옵션을 추가합니다.)",
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 100,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "지도 내 정찰 보고서가 상세한 정찰 보고서로 떨어짐",
-        "reminder_text": "(상세한 정찰 보고서는 키락의 아틀라스 임무를 모두 무작위 변경하여, 새로운 결과를 포함할 수 있는 임무 옵션을 추가합니다.)",
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "scouting_report_drops_as_delirious_scouting_report_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "지도 내 정찰 보고서가 {0}%의 확률로 환영의 정찰 보고서로 떨어짐",
-        "reminder_text": "(환영의 정찰 보고서는 키락의 아틀라스 임무를 모두 무작위 변경하여, 모든 비-고유 지도에 환영 현상을 추가합니다.)",
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 100,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "지도 내 정찰 보고서가 환영의 정찰 보고서로 떨어짐",
-        "reminder_text": "(환영의 정찰 보고서는 키락의 아틀라스 임무를 모두 무작위 변경하여, 모든 비-고유 지도에 환영 현상을 추가합니다.)",
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "scouting_report_drops_as_operatives_scouting_report_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "지도 내 정찰 보고서가 {0}%의 확률로 첩보원의 정찰 보고서로 떨어짐",
-        "reminder_text": "(첩보원의 정찰 보고서는 키락의 아틀라스 임무를 모두 무작위 변경하여, 이를 통해 고정 속성을 보상으로 받는 임무를 진행할 수 있습니다.)",
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 100,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "지도 내 정찰 보고서가 첩보원의 정찰 보고서로 떨어짐",
-        "reminder_text": "(첩보원의 정찰 보고서는 키락의 아틀라스 임무를 모두 무작위 변경하여, 이를 통해 고정 속성을 보상으로 받는 임무를 진행할 수 있습니다.)",
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "scouting_report_drops_as_otherworldly_scouting_report_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "지역 내 정찰 보고서가 {0}%의 확률로 신기한 정찰 보고서로 떨어짐",
-        "reminder_text": "(신기한 정찰 보고서는 키락의 아틀라스 임무를 모두 무작위 변경합니다. 결과에는 균열석이 1개 이상 포함됩니다.)",
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 100,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "지역 내 정찰 보고서가 신기한 정찰 보고서로 떨어짐",
-        "reminder_text": "(신기한 정찰 보고서는 키락의 아틀라스 임무를 모두 무작위 변경합니다. 결과에는 균열석이 1개 이상 포함됩니다.)",
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "scouting_report_drops_as_singular_scouting_report_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "지도 내 정찰 보고서가 {0}%의 확률로 비범한 정찰 보고서로 떨어짐",
-        "reminder_text": "(비범한 정찰 보고서는 키락의 아틀라스 임무를 모두 무작위 변경합니다. 결과에는 고유 지도가 1개 이상 포함됩니다.)",
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 100,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "지도 내 정찰 보고서가 비범한 정찰 보고서로 떨어짐",
-        "reminder_text": "(비범한 정찰 보고서는 키락의 아틀라스 임무를 모두 무작위 변경합니다. 결과에는 고유 지도가 1개 이상 포함됩니다.)",
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "scouting_report_drops_as_vaal_scouting_report_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "지도 내 정찰 보고서가 {0}%의 확률로 바알 정찰 보고서로 떨어짐",
-        "reminder_text": "(바알 정찰 보고서는 키락의 아틀라스 임무를 모두 무작위 변경하여, 비-고유 지도를 모두 타락시킵니다.)",
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 100,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "지도 내 정찰 보고서가 바알 정찰 보고서로 떨어짐",
-        "reminder_text": "(바알 정찰 보고서는 키락의 아틀라스 임무를 모두 무작위 변경하여, 비-고유 지도를 모두 타락시킵니다.)",
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "map_searing_exarch_altar_downside_effect_+%"
     ],
     "trade_stats": null,
@@ -34635,6 +35349,42 @@
         ],
         "string": "지도 내 베리시움 광맥에 대한 집중 유지 시간 {0}% 연장",
         "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_shaped_region_collapses_from_different_map"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "형성된 지역 내의 지도 목표를 완료하면 대신 형성된 지역 내의 다른 지도가 무너짐",
+        "reminder_text": "(기본적으로 형성된 지역 내에 있는 지도에서 목표를 완료하면, 지도가 무너지며 지역에서 빠집니다. 그 결과 지역 내의 다른 모든 지도가 추가 속성을 얻습니다. 형성된 지역이 양분되는 경우, 연결된 지도가 더 많은 지역만 남습니다.)",
         "is_markup": null
       }
     ],
@@ -35388,12 +36138,12 @@
           }
         ],
         "format": [
-          "#"
+          "ignore"
         ],
         "index_handlers": [
           []
         ],
-        "string": "지도에 탈주 유배자 {0}명 추가 등장",
+        "string": "지도에 탈주 유배자 1명 추가 등장",
         "reminder_text": null,
         "is_markup": null
       },
@@ -35692,6 +36442,62 @@
           ]
         ],
         "string": "지도 내 금고에 들어 있는 아이템의 수량 {0}% 감소",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_strongboxes_+%_chance_to_be_artisan"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "지도 내 금고가 장인의 금고일 확률 {0}% 증가",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "지도 내 금고가 장인의 금고일 확률 {0}% 감소",
         "reminder_text": null,
         "is_markup": null
       }
@@ -38285,6 +39091,114 @@
   {
     "English": null,
     "ids": [
+      "map_unstable_breach_additional_x_seconds_before_collapse"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "지도 내 불안정한 균열이 타이머가 차고 1초 후 무너짐",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "지도 내 불안정한 균열이 타이머가 차고 {0}초 후 무너짐",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_unstable_breach_enrage_x_additional_rare_monsters"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "지도 내 불안정한 균열이 안정화되면 희귀 몬스터 1마리를 추가로 생성함",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "지도 내 불안정한 균열이 안정화되면 희귀 몬스터 {0}마리를 추가로 생성함",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "map_upgrade_vaal_side_area_chance_%"
     ],
     "trade_stats": null,
@@ -39515,42 +40429,6 @@
   {
     "English": null,
     "ids": [
-      "maven_invitation_awakened_gem_chance_+%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "메이븐의 시련을 완료하거나 메이븐 처치 시, 각성한 보조 젬이 떨어질 확률 {0}% 증가",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "maven_invitation_item_quantity_+%"
     ],
     "trade_stats": null,
@@ -40154,42 +41032,6 @@
           []
         ],
         "string": "사용 횟수 {0}회 남음",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
-      "sirus_additional_awakened_gem_drop_chance_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "사이러스가 {0}%의 확률로 각성한 보조 젬을 떨어뜨림",
         "reminder_text": null,
         "is_markup": null
       }
@@ -40984,6 +41826,42 @@
           []
         ],
         "string": "지도에서 떨어지는 갑충석이 기습 갑충석일 확률 {0}% 증가",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_influence_scarab_more_likely_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "지도에서 떨어지는 갑충석이 영향력 갑충석일 확률 {0}% 증가",
         "reminder_text": null,
         "is_markup": null
       }
@@ -46508,32 +47386,7 @@
     "ids": [
       "map_hidden_spawn_extra_exiles"
     ],
-    "trade_stats": [
-      {
-        "id": "enchant.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "enchant",
-        "option": null
-      },
-      {
-        "id": "explicit.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "explicit",
-        "option": null
-      },
-      {
-        "id": "fractured.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "fractured",
-        "option": null
-      },
-      {
-        "id": "implicit.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "implicit",
-        "option": null
-      }
-    ],
+    "trade_stats": null,
     "hidden": true,
     "French": null,
     "German": null,

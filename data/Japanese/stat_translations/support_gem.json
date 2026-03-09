@@ -3872,7 +3872,7 @@
         "index_handlers": [
           []
         ],
-        "string": "サポートされたスキルの持続時間が{0}%増加する",
+        "string": "サポートされたスキルはマインの持続時間が{0}%増加する",
         "reminder_text": null,
         "is_markup": null
       },
@@ -3892,7 +3892,7 @@
             "negate"
           ]
         ],
-        "string": "サポートされたスキルの持続時間が{0}%減少する",
+        "string": "サポートされたスキルはマインの持続時間が{0}%減少する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4386,6 +4386,60 @@
         ],
         "string": "サポートされたスキルによる投射物は分岐する",
         "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "additional_poisons_+_to_apply_vs_non_poisoned_enemies"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルにより毒状態でない敵に毒を付与すると毒を追加で1スタック付与する",
+        "reminder_text": "(Poison: 毒は、スキルの基礎物理ダメージと基礎混沌ダメージに基づいて混沌継続ダメージを与える。複数インスタンスの毒がスタックできる)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルにより毒状態でない敵に毒を付与すると毒を追加で{0}スタック付与する",
+        "reminder_text": "(Poison: 毒は、スキルの基礎物理ダメージと基礎混沌ダメージに基づいて混沌継続ダメージを与える。複数インスタンスの毒がスタックできる)",
         "is_markup": null
       }
     ],
@@ -5725,6 +5779,62 @@
         ],
         "string": "サポートされたスキルの発火ダメージが{0}%低下する",
         "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_lethal_dose_poison_damage_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルの毒ダメージが{0}%上昇する",
+        "reminder_text": "(Poison: 毒は、スキルの基礎物理ダメージと基礎混沌ダメージに基づいて混沌継続ダメージを与える。複数インスタンスの毒がスタックできる)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "サポートされたスキルの毒ダメージが{0}%低下する",
+        "reminder_text": "(Poison: 毒は、スキルの基礎物理ダメージと基礎混沌ダメージに基づいて混沌継続ダメージを与える。複数インスタンスの毒がスタックできる)",
         "is_markup": null
       }
     ],
@@ -8805,7 +8915,7 @@
           []
         ],
         "string": "サポートされたスキルの起動時コストおよびその効果により\n合計{0}マナを消費するとアーケインサージを獲得する",
-        "reminder_text": "(Upfront Cost: 発動時コストとは秒単位で支払われない全てのコストのことです)",
+        "reminder_text": "(Upfront Cost: 起動時コストとは秒単位で支払われない全てのコストのことです)",
         "is_markup": null
       }
     ],
@@ -9321,6 +9431,46 @@
     "French": null,
     "German": null,
     "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds"
+          ]
+        ],
+        "string": "電気刺激は{0}秒持続する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds"
+          ]
+        ],
+        "string": "電気刺激は{0}秒持続する",
+        "reminder_text": null,
+        "is_markup": null
+      },
       {
         "condition": [
           {
@@ -10428,6 +10578,98 @@
   {
     "English": null,
     "ids": [
+      "gain_unholy_resonance_of_majority_damage_on_hit_for_2_seconds"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルによるヒットで雷、物理または混沌が最大ダメージを与えたならばその属性以外の属性のアンホーリーレゾナンスを2秒間かけて25ずつ獲得する\nアンホーリーレゾナンスを獲得していない属性のレゾナンスを毎秒5失う",
+        "reminder_text": "(それぞれの属性のアンホーリーレゾナンスの最大数は50。アンホーリーレゾナンスの属性は雷、物理および混沌である)",
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "damage_+%_final_per_10_lowest_unholy_resonance"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルは最低値のアンホーリーレゾナンス10ごとにダメージが{0}%上昇する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "サポートされたスキルは最低値のアンホーリーレゾナンス10ごとにダメージが{0}%低下する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "elemental_damage_+%_final_per_5_lowest_resonance"
     ],
     "trade_stats": null,
@@ -10506,6 +10748,114 @@
           []
         ],
         "string": "サポートされたスキルは各レゾナンスが25以上あるとき{0}%の元素耐性を貫通する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "hits_ignore_enemy_monster_lightning_and_chaos_resistance_%_chance_while_all_unholy_resonance_is_25"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルは各アンホーリーレゾナンスが25以上あるとき{0}%の確率で敵の雷および混沌耐性を無視する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルは各アンホーリーレゾナンスが25以上あるとき敵の雷および混沌耐性を無視する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "hits_ignore_enemy_monster_physical_damage_reduction_%_chance_while_all_unholy_resonance_is_25"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルは各アンホーリーレゾナンスが25以上あるとき{0}%の確率で敵の物理ダメージ軽減を無視する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルは各アンホーリーレゾナンスが25以上あるとき敵の物理ダメージ軽減を無視する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -10982,6 +11332,44 @@
   {
     "English": null,
     "ids": [
+      "gain_overloaded_intensity_for_x_ms_after_losing_6_intensity"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "サポートされたスキルでインテンシティを6失った後に\n過剰インテンシティを1スタック{0}秒間獲得する",
+        "reminder_text": "(オーバーロードインテンシティの最大数は3。オーバーロードインテンシティを獲得すると既存のオーバーロードインテンシティのスタックの持続時間を更新する)",
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "accuracy_rating"
     ],
     "trade_stats": null,
@@ -11375,6 +11763,44 @@
         ],
         "string": "サポートされたスキルが冷却状態の敵を凍結させる確率 {0}%",
         "reminder_text": "(Freeze: 凍結は、敵のアクションスピードを0まで低下させ、行動を妨げる。持続時間はヒットにより受けた冷気ダメージに基づく)",
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "additional_critical_strike_chance_per_overloaded_intensity"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          [
+            "divide_by_one_hundred"
+          ]
+        ],
+        "string": "サポートされたスキルはオーバーロードインテンシティのスタックごとにクリティカル率 {0}%",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -13306,12 +13732,50 @@
           }
         ],
         "format": [
-          "#"
+          "+#"
         ],
         "index_handlers": [
           []
         ],
         "string": "サポートされたスキルのクールダウン解消レートが{0}%増加する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "サポートされたスキルのクールダウン解消レートが{0}%減少する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルはクールダウン解消レートが{0}%増加する",
         "reminder_text": null,
         "is_markup": null
       },
@@ -13331,7 +13795,7 @@
             "negate"
           ]
         ],
-        "string": "サポートされたスキルのクールダウン解消レートが{0}%減少する",
+        "string": "サポートされたスキルはクールダウン解消レートが{0}%減少する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -14754,6 +15218,60 @@
   {
     "English": null,
     "ids": [
+      "base_total_number_of_sigils_allowed"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルはブランドを追加で1個キャストできる",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルはブランドを追加で{0}個キャストできる",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "bleed_on_hit_with_attacks_%",
       "global_bleed_on_hit",
       "cannot_cause_bleeding"
@@ -15036,6 +15554,62 @@
           ]
         ],
         "string": "サポートされたスキルの燃焼ダメージが{0}%減少する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "cast_on_ward_break_damage_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルはスペルダメージが{0}%上昇する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "サポートされたスキルはスペルダメージが{0}%低下する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -15586,8 +16160,8 @@
       {
         "condition": [
           {
-            "min": null,
-            "max": null,
+            "min": 1,
+            "max": 99,
             "negated": null
           }
         ],
@@ -15597,7 +16171,25 @@
         "index_handlers": [
           []
         ],
-        "string": "サポートされた呪いスキルにより付与された呪術は{0}%の確率で呪術無効化の敵にも影響を与える",
+        "string": "サポートされた呪いスキルにより付与された呪術は{0}%の確率でヘックスプルーフの敵に影響する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされた呪いスキルにより付与された呪術はヘックスプルーフの敵に影響する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -16234,6 +16826,228 @@
   {
     "English": null,
     "ids": [
+      "consecrated_cry_consecrated_ground_duration_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "サポートされたウォークライは{0}秒間持続する神聖領域を生成する",
+        "reminder_text": "(Consecrated Ground: プレイヤーの神聖領域上の味方は毎秒最大ライフの1%のライフ自動回復を獲得し、受けている呪いの効果が50%減少する)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "サポートされたウォークライは{0}秒間持続する神聖領域を生成する",
+        "reminder_text": "(Consecrated Ground: プレイヤーの神聖領域上の味方は毎秒最大ライフの1%のライフ自動回復を獲得し、受けている呪いの効果が50%減少する)",
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "consecrated_cry_warcry_area_of_effect_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたウォークライは効果範囲が{0}%上昇する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "サポートされたウォークライは効果範囲が{0}%低下する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "cooldown_recovery_rate_+%_if_no_enemies_in_your_presence"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "プレイヤーの存在下に敵がいない時に使用された場合クールダウン解消レートが{0}%増加する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "プレイヤーの存在下に敵がいない時に使用された場合クールダウン解消レートが{0}%減少する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "cooldown_recovery_rate_+%_per_100_ward"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスペルはワード100ごとにクールダウン解消レートが{0}%増加する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスペルはワード100ごとにクールダウン解消レートが{0}%減少する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "cooldown_recovery_rate_+%_when_a_unique_enemy_in_your_presence"
     ],
     "trade_stats": null,
@@ -16420,6 +17234,42 @@
           ]
         ],
         "string": "盲目状態の敵に対するサポートされたスキルのクリティカル率が{0}%減少する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "critical_strike_multiplier_+_per_overloaded_intensity"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルはオーバーロードインテンシティのスタックごとにクリティカルダメージ倍率 {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -17664,6 +18514,42 @@
   {
     "English": null,
     "ids": [
+      "damage_removed_from_minions_before_life_or_es_%_if_only_one_minion"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルによるミニオンはそれが唯一のミニオンであれば\nヒットダメージの{0}%をプレイヤーの前にそのライフで受ける",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "damage_vs_cursed_enemies_per_enemy_curse_+%"
     ],
     "trade_stats": null,
@@ -18456,6 +19342,136 @@
   {
     "English": null,
     "ids": [
+      "excommunicate_on_melee_attack_hit_for_X_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "サポートされたスキルは近接ヒット時に敵を{0}秒間破門する",
+        "reminder_text": "(破門された敵は混沌ダメージを与えることができない)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "サポートされたスキルは近接ヒット時に敵を{0}秒間破門する",
+        "reminder_text": "(破門された敵は混沌ダメージを与えることができない)",
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "explode_enemies_for_10%_life_as_random_element_on_killing_blow_chance_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルによるキリングブローは敵を{0}%の確率で爆発させ、その最大ライフの10分の1をランダムな元素属性のダメージとして与える",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルによるキリングブローは敵を{0}%の確率で爆発させ、その最大ライフの10分の1をランダムな元素属性のダメージとして与える",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルによるキリングブローは敵を爆発させ、その最大ライフの10分の1をランダムな元素属性のダメージとして与える",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "faster_bleed_%"
     ],
     "trade_stats": null,
@@ -18898,6 +19914,98 @@
   {
     "English": null,
     "ids": [
+      "frostmage_gain_cold_damage_%_of_max_reserved_mana"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルはリザーブされた最大マナの{0}%と同量の追加冷気ダメージを獲得する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "サポートされたスキルはリザーブされた最大マナの{0}%と同量の追加冷気ダメージを失う",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "frostmage_cost_equals_%_reserved_mana"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルはリザーブされた最大マナの{0}%と同量の基礎マナコストを獲得する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "gain_%_of_base_wand_damage_as_added_spell_damage",
       "quality_display_wand_damage_as_added_spell_damage_is_gem"
     ],
@@ -18990,6 +20098,60 @@
         ],
         "string": "サポートされたスキルを使用した時{0}%の確率で憤怒を1スタック獲得する",
         "reminder_text": "(Rage: 1憤怒ごとにアタックダメージ1%上昇。憤怒の最大値は30。過去2秒間にヒットを受けていないか憤怒を獲得していない場合、1秒ごとに10憤怒を失う)",
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "gain_X_wildshard_stacks_on_cast"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルのキャスト時に{0}スタックのグラトニーを獲得する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルのキャスト時に{0}スタックのグラトニーを獲得する",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -19227,7 +20389,7 @@
           []
         ],
         "string": "サポートされたスキルの起動時コストまたはサポートされたスキルの効果で\nマナを消費した時{0}%の確率でインスピレーションチャージを獲得する",
-        "reminder_text": "(Upfront Cost: 発動時コストとは秒単位で支払われない全てのコストのことです)",
+        "reminder_text": "(Upfront Cost: 起動時コストとは秒単位で支払われない全てのコストのことです)",
         "is_markup": null
       },
       {
@@ -19245,7 +20407,7 @@
           []
         ],
         "string": "サポートされたスキルの起動時コストまたはサポートされたスキルの効果で\nマナを消費した時インスピレーションチャージを獲得する",
-        "reminder_text": "(Upfront Cost: 発動時コストとは秒単位で支払われない全てのコストのことです)",
+        "reminder_text": "(Upfront Cost: 起動時コストとは秒単位で支払われない全てのコストのことです)",
         "is_markup": null
       }
     ],
@@ -19349,13 +20511,31 @@
           }
         ],
         "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルはヒット時に{0}%の確率で敵を逃走させる",
+        "reminder_text": "(マジックモンスターは50%の確率で逃走を無効化する。レアおよびユニークモンスターは逃走しない)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
           "#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "サポートされたスキルは{0}%の確率でモンスターを逃走させる",
-        "reminder_text": null,
+        "string": "サポートされたスキルはヒット時に{0}%の確率で敵を逃走させる",
+        "reminder_text": "(マジックモンスターは50%の確率で逃走を無効化する。レアおよびユニークモンスターは逃走しない)",
         "is_markup": null
       }
     ],
@@ -19681,6 +20861,98 @@
   {
     "English": null,
     "ids": [
+      "hallowing_flame_magnitude_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルによって付与される聖別の炎の強度が{0}%増加する",
+        "reminder_text": "(聖別の炎の影響を受けた敵に対して行われたアタックはその物理ダメージの25%を追加火ダメージとして獲得する。聖別の炎はこの追加ダメージの恩恵を受けたアタックが一度行われたら取り除かれる。聖別の炎は6秒持続し、それを付与した本人が恩恵を受けることはできない)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "サポートされたスキルによって付与される聖別の炎の強度が{0}%減少する",
+        "reminder_text": "(聖別の炎の影響を受けた敵に対して行われたアタックはその物理ダメージの25%を追加火ダメージとして獲得する。聖別の炎はこの追加ダメージの恩恵を受けたアタックが一度行われたら取り除かれる。聖別の炎は6秒持続し、それを付与した本人が恩恵を受けることはできない)",
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "herald_no_buff_effect"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたヘラルドスキルのバフ効果がなくなる",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "hex_transfer_on_death_range_+%"
     ],
     "trade_stats": null,
@@ -19723,6 +20995,100 @@
           ]
         ],
         "string": "サポートされたスキルの呪術転移範囲が{0}%減少する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "hex_zone_trigger_hextoad_every_x_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds"
+          ]
+        ],
+        "string": "サポートされたスキルによる呪い領域は{0}秒ごとにカエル爆発をトリガーする",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds"
+          ]
+        ],
+        "string": "サポートされたスキルによる呪い領域は{0}秒ごとにカエル爆発をトリガーする",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "hexed_enemies_cannot_deal_critical_strikes"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされた呪いスキルによる呪術の影響を受けた敵はクリティカルストライクを与えられなくなる",
         "reminder_text": null,
         "is_markup": null
       }
@@ -19947,6 +21313,42 @@
           ]
         ],
         "string": "サポートされたスキルはヒットダメージが{0}%減少する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "hits_cannot_kill_enemies"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルによるヒットで敵をキルできなくなる",
         "reminder_text": null,
         "is_markup": null
       }
@@ -20273,6 +21675,60 @@
   {
     "English": null,
     "ids": [
+      "inflict_hallowing_flame_on_melee_hit_chance_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルは近接ヒット時に{0}%の確率で聖別の炎を付与する",
+        "reminder_text": "(聖別の炎の影響を受けた敵に対して行われたアタックはその物理ダメージの25%を追加火ダメージとして獲得する。聖別の炎はこの追加ダメージの恩恵を受けたアタックが一度行われたら取り除かれる。聖別の炎は6秒持続し、それを付与した本人が恩恵を受けることはできない)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルは近接ヒット時に聖別の炎を付与する",
+        "reminder_text": "(聖別の炎の影響を受けた敵に対して行われたアタックはその物理ダメージの25%を追加火ダメージとして獲得する。聖別の炎はこの追加ダメージの恩恵を受けたアタックが一度行われたら取り除かれる。聖別の炎は6秒持続し、それを付与した本人が恩恵を受けることはできない)",
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "infusion_grants_life_regeneration_rate_per_minute_%"
     ],
     "trade_stats": null,
@@ -20445,6 +21901,60 @@
           []
         ],
         "string": "サポートされたスキルによるアタックは奮起しているとみなされる",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "kill_normal_or_magic_enemy_on_hit_if_under_x%_life"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ノーマルおよびマジックレアリティの敵はサポートされたスキルによるヒットを受けた時に\nライフが{0}%以下であれば即座に倒される",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ノーマルおよびマジックレアリティの敵はサポートされたスキルによるヒットを受けた時に\nライフが{0}%以下であれば即座に倒される",
         "reminder_text": null,
         "is_markup": null
       }
@@ -22045,6 +23555,62 @@
   {
     "English": null,
     "ids": [
+      "minion_area_of_effect_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルによるミニオンの効果範囲が{0}%増加する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "サポートされたスキルによるミニオンの効果範囲が{0}%減少する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "minion_attack_speed_+%"
     ],
     "trade_stats": null,
@@ -22420,6 +23986,78 @@
         ],
         "string": "サポートされたスキルによるミニオンのクリティカル率が{0}%減少する",
         "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "minion_critical_strike_chance_+%_per_attack_crit_recently_up_to_100"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルによるミニオンは直近プレイヤーがアタックでクリティカルストライクを与えた回数ごとにクリティカル率が{0}%増加する、最大200%",
+        "reminder_text": "(Recently: 直近とは過去4秒間を指す)",
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "minion_critical_strike_multiplier_+_per_attack_crit_recently_up_to_100"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルによるミニオンは直近プレイヤーがアタックでクリティカルストライクを与えた回数ごとにクリティカルダメージ倍率が{0}%増加する、最大+100%",
+        "reminder_text": "(Recently: 直近とは過去4秒間を指す)",
         "is_markup": null
       }
     ],
@@ -23703,6 +25341,94 @@
   {
     "English": null,
     "ids": [
+      "on_reaching_x_wildshard_stacks_gain_disgorge",
+      "support_gluttony_base_disgorge_buff_duration_ms",
+      "support_gluttony_disgorge_buff_duration_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ],
+          []
+        ],
+        "string": "グラトニーが{0}に達すると、全てのグラトニーを失い{1}秒間全方位放出を獲得する",
+        "reminder_text": "(全方位放出を持っている間グラトニーを獲得できない)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ],
+          []
+        ],
+        "string": "グラトニーが{0}に達すると、全てのグラトニーを失い{1}秒間全方位放出を獲得する",
+        "reminder_text": "(全方位放出を持っている間グラトニーを獲得できない)",
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "onslaught_time_granted_on_killing_shocked_enemy_ms"
     ],
     "trade_stats": null,
@@ -24091,6 +25817,42 @@
           []
         ],
         "string": "サポートされたスキルによるトラップが敵により作動した時パワーチャージを1個獲得する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "physical_damage_%_to_add_as_chaos_per_keystone"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルはキーストーンの個数ごとに物理ダメージの{0}%を追加の混沌ダメージとして獲得する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -24650,6 +26412,42 @@
         ],
         "string": "サポートされたスキルの投射物は{0}m以内の全ての対象を貫通する",
         "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "random_nearby_minion_gain_a_soul_eater_soul_on_X_life_spent"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスペルの起動時コストとしてプレイヤーが\nライフを{0}使用するごとに近くのミニオン1体はソウルを1獲得する",
+        "reminder_text": "(Upfront Cost: 起動時コストとは秒単位で支払われない全てのコストのことです)",
         "is_markup": null
       }
     ],
@@ -25469,6 +27267,62 @@
   {
     "English": null,
     "ids": [
+      "skill_cost_+%_per_keystone"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルはキーストーンの個数ごとにコストが{0}%増加する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "サポートされたスキルはキーストーンの個数ごとにコストが{0}%減少する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "skill_effect_and_damaging_ailment_duration_+%"
     ],
     "trade_stats": null,
@@ -25831,6 +27685,42 @@
           ]
         ],
         "string": "サポートされたスキルは聖なるウィスプにより使用された時にダメージが{0}%低下する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "skills_sacrifice_all_but_one_life_and_energy_shield_on_use"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルは使用時にライフとエナジシールドを1以外捧げる",
         "reminder_text": null,
         "is_markup": null
       }
@@ -26553,6 +28443,42 @@
   {
     "English": null,
     "ids": [
+      "summoned_sentinels_have_random_templar_aura"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルにより召喚されたセンチネルはテンプラーオーラを持つ",
+        "reminder_text": "(テンプラーオーラは以下の効果の内1種類を持つ:\r\n - 物理ダメージの15%を追加火ダメージとして獲得する\r\n - 物理ダメージの15%を追加雷ダメージとして獲得する\r\n - 毎秒ライフの1.5%を自動回復する\r\n - 混沌耐性 +23%\r\n - プレイヤーに対する呪いの効果が50%減少する)",
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "support_added_cooldown_count_if_not_instant"
     ],
     "trade_stats": null,
@@ -27069,6 +28995,60 @@
   {
     "English": null,
     "ids": [
+      "support_blasphemy_enemies_gain_malignant_madness_if_in_aura_for_x_seconds"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "敵がサポートされたスキルによるオーラの範囲内に{0}秒以上いた場合敵は悪意の狂気を持つ",
+        "reminder_text": "(Malignant Madness: 悪意ある狂気は、ダメージとアクションスピードを10%減少させる。)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "敵がサポートされたスキルによるオーラの範囲内に{0}秒以上いた場合敵は悪意の狂気を持つ",
+        "reminder_text": "(Malignant Madness: 悪意ある狂気は、ダメージとアクションスピードを10%減少させる。)",
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "support_blood_thirst_damage_+%_final"
     ],
     "trade_stats": null,
@@ -27111,6 +29091,140 @@
           ]
         ],
         "string": "サポートされたアタックスキルのダメージが{0}%低下する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_bloodstained_banner_apply_corrupted_blood_every_x_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "サポートされたバナーはその範囲内の敵に1秒ごとに穢れた血を付与する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "サポートされたバナーはその範囲内の敵に{0}秒ごとに穢れた血を付与する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_bloodstained_banner_corrupted_blood_base_physical_damage_to_deal_per_minute_per_valour"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "per_minute_to_per_second"
+          ]
+        ],
+        "string": "サポートされたバナーにより付与された穢れた血は消費した勇猛ごとに毎秒{0}の基礎物理ダメージを与える",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_bloodstained_banner_apply_corrupted_blood_duration_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "サポートされたバナーにより付与された穢れた血は{0}秒の基礎持続時間を持つ",
         "reminder_text": null,
         "is_markup": null
       }
@@ -27403,6 +29517,60 @@
   {
     "English": null,
     "ids": [
+      "support_call_the_pyre_chance_to_trigger_call_the_pyre_on_melee_hit_vs_ignited_enemies_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルは発火状態の敵に対する近接ヒット時に{0}%の確率でコールザパイアをトリガーする",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルは発火状態の敵に対する近接ヒット時にコールザパイアをトリガーする",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "support_cast_on_crit_quality_attack_damage_+%_final"
     ],
     "trade_stats": null,
@@ -27502,6 +29670,62 @@
         ],
         "string": "サポートされたスペルがトリガーされた時に非ダメージ性状態異常の効果が{0}%減少する",
         "reminder_text": "(non-Damaging Ailments: ダメージを与えない状態異常には、焦げ、冷却、凍結、脆弱、感電、消耗がある)",
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_chain_count_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルの連鎖回数が{0}%上昇する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "サポートされたスキルの連鎖回数が{0}%低下する",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -27669,6 +29893,62 @@
           ]
         ],
         "string": "サポートされたスキルのダメージが{0}%低下する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_companionship_minion_maximum_life_+%_final_if_at_most_one_minion"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルによるミニオンはそれが唯一のミニオンであれば最大ライフが{0}%上昇する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "サポートされたスキルによるミニオンはそれが唯一のミニオンであれば最大ライフが{0}%低下する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -28239,6 +30519,64 @@
   {
     "English": null,
     "ids": [
+      "support_excommunicate_on_melee_attack_hit_for_X_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "サポートされたスキルは近接ヒット時に敵を{0}秒間破門する",
+        "reminder_text": "(破門された敵は混沌ダメージを与えることができない)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "サポートされたスキルは近接ヒット時に敵を{0}秒間破門する",
+        "reminder_text": "(破門された敵は混沌ダメージを与えることができない)",
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "support_executioner_damage_vs_enemies_on_low_life_+%_final"
     ],
     "trade_stats": null,
@@ -28468,6 +30806,60 @@
         ],
         "string": "サポートされたスキルにより付与された状態異常の持続時間が{0}%低下する",
         "reminder_text": "(Ailments: 状態異常には、出血、発火、焦げ、冷却、凍結、脆弱、感電、消耗、毒がある)",
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_fissure_trigger_fissure_on_slam_skill_impact_chance_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルはスラム着弾時に{0}%の確率で亀裂をトリガーする",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルはスラム着弾時に亀裂をトリガーする",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -28851,6 +31243,60 @@
   {
     "English": null,
     "ids": [
+      "support_gluttony_fire_x_additional_projectiles_in_nova_while_affected_by_disgorge"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "プレイヤーが全方位放出を持っている間サポートされたスペルは投射物を放射状に放つ\nプレイヤーが全方位放出を持っている間サポートされたスペルは投射物を追加で1個放つ",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "プレイヤーが全方位放出を持っている間サポートされたスペルは投射物を放射状に放つ\nプレイヤーが全方位放出を持っている間サポートされたスペルは投射物を追加で{0}個放つ",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "support_greater_projectile_intensity_projectile_damage_+%_final"
     ],
     "trade_stats": null,
@@ -28893,6 +31339,118 @@
           ]
         ],
         "string": "サポートされたスキルの投射物ダメージが{0}%低下する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_greater_spell_echo_area_of_effect_+%_per_repeat"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルは繰り返すごとに効果範囲が{0}%増加する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "サポートされたスキルは繰り返すごとに効果範囲が{0}%減少する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_greater_spell_echo_spell_damage_+%_final_per_repeat"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルは繰り返すごとにスペルダメージが{0}%上昇する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "サポートされたスキルは繰り返すごとにスペルダメージが{0}%低下する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -28968,6 +31526,42 @@
         ],
         "string": "サポートされたスキルによるミニオンは最大ライフおよびエナジーシールドの合計の{0}%を毎秒物理ダメージとして受ける",
         "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_hallow_inflict_hallowing_flame_on_melee_hit"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルは近接ヒット時に聖別の炎を付与する",
+        "reminder_text": "(聖別の炎の影響を受けた敵に対して行われたアタックはその物理ダメージの25%を追加火ダメージとして獲得する。聖別の炎はこの追加ダメージの恩恵を受けたアタックが一度行われたら取り除かれる。聖別の炎は6秒持続し、それを付与した本人が恩恵を受けることはできない)",
         "is_markup": null
       }
     ],
@@ -29133,6 +31727,96 @@
           []
         ],
         "string": "サポートされたスキルでユニークモンスターを感電させると電気刺激を獲得する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_invention_trap_and_mine_damage_+%_final_per_second_placed_up_to_100"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルは設置されてから作動するまでの秒数ごとにダメージが{0}%上昇する、最大100%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_kinetic_instability_chance_to_create_instability_on_critical_strike_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルはクリティカル時に{0}%の確率でキネティックフラックスをトリガーする",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルはクリティカル時にキネティックフラックスをトリガーする",
         "reminder_text": null,
         "is_markup": null
       }
@@ -30461,6 +33145,44 @@
   {
     "English": null,
     "ids": [
+      "support_minion_pact_sacrifice_nearby_damageable_minion_to_gain_permillage_of_max_life_as_physical_damage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "divide_by_ten_1dp_if_required"
+          ]
+        ],
+        "string": "サポートされたスペルはキャスト時に近くのランダムなダメージを受けることができるミニオンを捧げ\n捧げられたミニオンライフの{0}%と同量の追加物理ダメージを獲得する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "support_minion_totem_resistance_elemental_damage_+%_final"
     ],
     "trade_stats": null,
@@ -30995,6 +33717,62 @@
         ],
         "string": "迅速は失ったモーメンタム1ごとに移動スピード{0}%減少を付与する",
         "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_overheat_ailment_damage_+%_final_per_3_fortification_consumed"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルは使用時に全ての堅牢化を消費し\n消費された堅牢化3スタックごとに状態異常のダメージが{0}%上昇する",
+        "reminder_text": "(Damaging Ailments: ダメージを与える状態異常には、出血、発火、毒がある)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "サポートされたスキルは使用時に全ての堅牢化を消費し\n消費された堅牢化3スタックごとに状態異常のダメージが{0}%低下する",
+        "reminder_text": "(Damaging Ailments: ダメージを与える状態異常には、出血、発火、毒がある)",
         "is_markup": null
       }
     ],
@@ -32466,7 +35244,7 @@
           []
         ],
         "string": "サポートされたスキルの起動時コストまたはその効果で合計{0}マナを消費すると全てのインスピレーションチャージを失う",
-        "reminder_text": "(Upfront Cost: 発動時コストとは秒単位で支払われない全てのコストのことです)",
+        "reminder_text": "(Upfront Cost: 起動時コストとは秒単位で支払われない全てのコストのことです)",
         "is_markup": null
       }
     ],
@@ -34275,6 +37053,168 @@
   {
     "English": null,
     "ids": [
+      "support_trigger_enervating_grasp_on_supported_brand_recall_chance_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたブランドはリコールされた時に{0}%の確率でファウルガスプをトリガーする",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたブランドはリコールされた時にファウルガスプをトリガーする",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_trigger_great_avalanche_on_offering_chance_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたオファリングは使用された時に{0}%の確率でハイヴボーン召喚をトリガーする",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたオファリングは使用された時にハイヴボーン召喚をトリガーする",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_trigger_seize_the_flesh_on_warcry_chance_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたウォークライは使用された時に{0}%の確率でシーズザフレッシュをトリガーする",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたウォークライは使用された時にシーズザフレッシュをトリガーする",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "support_trigger_tornados_on_attack_hit_after_moving_X_metres"
     ],
     "trade_stats": null,
@@ -34372,6 +37312,100 @@
         ],
         "string": "サポートされたスキルの状態異常ダメージが{0}%低下する",
         "reminder_text": "(Damaging Ailments: ダメージを与える状態異常には、出血、発火、毒がある)",
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_undead_army_minion_maximum_count_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルによるミニオンの最大数が{0}%上昇する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "サポートされたスキルによるミニオンの最大数が{0}%低下する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_vaal_temptation_physical_damage_taken_per_minute_instead_of_soul_gain_prevention"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "per_minute_to_per_second"
+          ]
+        ],
+        "string": "サポートされたスキルを使用するとソウル獲得不能を付与する代わりに、プレイヤーにヴァールの誘惑を付与し毎秒{0}の物理ダメージを与える",
+        "reminder_text": "(ヴァールの誘惑はソウル獲得不能と同じ持続時間の間持続し、スタックすることができる)",
         "is_markup": null
       }
     ],
@@ -34483,6 +37517,42 @@
           ]
         ],
         "string": "サポートされたスキルの混沌ダメージが{0}%低下する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_voidstorm_trigger_voidstorm_on_rain_skill_impact"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルは地面と接触した時にヴォイドストームをトリガーする\nヴォイドストームはプレイヤーから3m以内でトリガーできない",
         "reminder_text": null,
         "is_markup": null
       }
@@ -35010,6 +38080,42 @@
         ],
         "string": "サポートされたスキルによる呪術は呪術を受けた敵が死亡した時に3m以内の全ての敵に転移する",
         "reminder_text": "(オーラまたは呪い領域による呪術は転移することがない)",
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "trap_and_mine_area_of_effect_+%_per_second_placed_up_to_100"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルは設置されてから作動するまでにかかった秒数ごとに効果範囲が{0}%増加する、最大100%",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -35757,6 +38863,60 @@
   {
     "English": null,
     "ids": [
+      "treat_enemy_resistances_as_negated_on_elemental_damage_hit_%_chance"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルによるヒットは{0}%の確率で敵モンスターの元素耐性を反転したものとして扱う",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルによるヒットは敵モンスターの元素耐性を反転したものとして扱う",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "trigger_brand_support_hit_damage_+%_final_vs_branded_enemy"
     ],
     "trade_stats": null,
@@ -35885,6 +39045,60 @@
   {
     "English": null,
     "ids": [
+      "trigger_on_ward_break_%_chance"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ワードが破壊された時に{0}%の確率でサポートされたスペルをトリガーする",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ワードが破壊された時にサポートされたスペルをトリガーする",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "trigger_prismatic_burst_on_hit_%_chance"
     ],
     "trade_stats": null,
@@ -35925,6 +39139,42 @@
           []
         ],
         "string": "サポートされたスキルはヒット時にプリズマティックバーストをトリガーする",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "trigger_rings_of_light_on_melee_hit"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルは近接ヒット時にリングオブライトをトリガーする",
         "reminder_text": null,
         "is_markup": null
       }
@@ -36320,6 +39570,62 @@
   {
     "English": null,
     "ids": [
+      "warcry_cooldown_speed_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたウォークライはクールダウン解消レートが{0}%増加する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "サポートされたウォークライはクールダウン解消レートが{0}%減少する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "warcry_grant_damage_+%_to_exerted_attacks"
     ],
     "trade_stats": null,
@@ -36547,6 +39853,64 @@
         ],
         "string": "プレイヤーまたは敵がサポートされたスキルによる状態異常を付与されてる時に移動スピードが{0}%減少する",
         "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "killing_blow_consumes_corpse_chance_to_gain_soul_per_power_permillage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          [
+            "divide_by_ten_1dp_if_required"
+          ]
+        ],
+        "string": "サポートされたスキルで死体を消費すると{0}%の確率でパワーごとにソウルを1付与する",
+        "reminder_text": "(各魂はアタックスピードおよびキャストスピードが5%増加を付与する。直近魂を消化していなければ、0.5秒ごとに1個の魂を失う。消化できる魂の最大値は45。)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "divide_by_ten_1dp_if_required"
+          ]
+        ],
+        "string": "サポートされたスキルで死体を消費すると{0}%の確率でパワーごとにソウルを1付与する",
+        "reminder_text": "(各魂はアタックスピードおよびキャストスピードが5%増加を付与する。直近魂を消化していなければ、0.5秒ごとに1個の魂を失う。消化できる魂の最大値は45。)",
         "is_markup": null
       }
     ],
@@ -42045,32 +45409,7 @@
     "ids": [
       "map_hidden_spawn_extra_exiles"
     ],
-    "trade_stats": [
-      {
-        "id": "enchant.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "enchant",
-        "option": null
-      },
-      {
-        "id": "explicit.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "explicit",
-        "option": null
-      },
-      {
-        "id": "fractured.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "fractured",
-        "option": null
-      },
-      {
-        "id": "implicit.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "implicit",
-        "option": null
-      }
-    ],
+    "trade_stats": null,
     "hidden": true,
     "French": null,
     "German": null,

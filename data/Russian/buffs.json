@@ -943,6 +943,18 @@
     "templates": null,
     "stack_limit": null
   },
+  "number_of_orb_spectres": {
+    "description": "Погибшие призраки сопровождают вас\nв виде духа, возрождаясь при смене области.",
+    "invisible": false,
+    "name": "Погибший призрак",
+    "removable": false,
+    "stats": [],
+    "visuals": "dead_spectre_buff",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "infernal_blow_hit": {
     "description": "",
     "invisible": true,
@@ -3567,6 +3579,20 @@
     "templates": null,
     "stack_limit": null
   },
+  "flesh_shield": {
+    "description": "Вас защищает плоть ваших павших приспешников",
+    "invisible": false,
+    "name": "Гниющий бастион",
+    "removable": false,
+    "stats": [
+      "flesh_shield_amount"
+    ],
+    "visuals": "flesh_shield_visual",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "monster_aura_cannot_die": {
     "description": "Союзники не могут умереть",
     "invisible": false,
@@ -5951,7 +5977,9 @@
       "recover_es_as_well_as_life_from_life_regeneration",
       "curse_effect_on_self_+%",
       "self_damaging_ailment_duration_+%",
-      "base_maximum_chaos_damage_resistance_%"
+      "base_maximum_chaos_damage_resistance_%",
+      "mana_regeneration_rate_+%",
+      "accuracy_rating_+%"
     ],
     "visuals": "ground_consecration",
     "category": "Buff",
@@ -6087,6 +6115,33 @@
           "20% повышение скорости атаки",
           "20% повышение скорости сотворения чар",
           "20% повышение скорости передвижения"
+        ],
+        "visuals": null
+      },
+      "MapModPlayerOnslaught": {
+        "aura_radius_metres": null,
+        "stats": {
+          "attack_speed_+%": 20,
+          "base_cast_speed_+%": 20,
+          "base_movement_velocity_+%": 20
+        },
+        "stat_text": [
+          "20% повышение скорости атаки",
+          "20% повышение скорости сотворения чар",
+          "20% повышение скорости передвижения"
+        ],
+        "visuals": null
+      },
+      "MapModPlayerOnslaughtHardMode": {
+        "aura_radius_metres": null,
+        "stats": {
+          "attack_speed_+%": 20,
+          "base_cast_speed_+%": 20,
+          "base_movement_velocity_+%": 0
+        },
+        "stat_text": [
+          "20% повышение скорости атаки",
+          "20% повышение скорости сотворения чар"
         ],
         "visuals": null
       }
@@ -6485,6 +6540,36 @@
     "templates": null,
     "stack_limit": 10
   },
+  "resentment_debuff": {
+    "description": "Вы получаете постепенный урон от огня.",
+    "invisible": false,
+    "name": "Угольное пламя",
+    "removable": false,
+    "stats": [
+      "base_fire_damage_taken_per_minute",
+      "current_resentment_debuff_stacks"
+    ],
+    "visuals": "resentment_debuff_visual",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": 10
+  },
+  "animosity_debuff": {
+    "description": "Вы получаете постепенный физический урон.",
+    "invisible": false,
+    "name": "Плачущая Чернота",
+    "removable": false,
+    "stats": [
+      "base_physical_damage_taken_per_minute_unaffected_by_level_scaling",
+      "current_animosity_debuff_stacks"
+    ],
+    "visuals": "animosity_debuff_visual",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": 5
+  },
   "shrine_acceleration": {
     "description": "Скорость ваших действий и скорость снарядов повышены",
     "invisible": false,
@@ -6630,22 +6715,6 @@
         ],
         "visuals": "shrine_monster_affected"
       },
-      "brutal_lesser": {
-        "aura_radius_metres": null,
-        "stats": {
-          "damage_+%": 20,
-          "global_knockback": 1,
-          "base_stun_duration_+%": 20,
-          "extra_gore": 0,
-          "has_shrine_effect": 1
-        },
-        "stat_text": [
-          "20% увеличение урона",
-          "Отбрасывает врагов при нанесении удара",
-          "20% увеличение длительности оглушения на врагах"
-        ],
-        "visuals": null
-      },
       "RoyaleShrineBrutal": {
         "aura_radius_metres": null,
         "stats": {
@@ -6660,6 +6729,41 @@
           "Отбрасывает врагов при нанесении удара",
           "30% увеличение длительности оглушения на врагах",
           "Больше крови"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "shrine_lesser_brutal": {
+    "description": "Ваши атаки отталкивают врагов, наносят дополнительный урон, а время их оглушения увеличено",
+    "invisible": false,
+    "name": "Алтарь свирепости",
+    "removable": true,
+    "stats": [
+      "damage_+%",
+      "global_knockback",
+      "base_stun_duration_+%",
+      "extra_gore",
+      "has_shrine_effect"
+    ],
+    "visuals": "shrine_brutal",
+    "category": "Buff shrine",
+    "sources": null,
+    "templates": {
+      "brutal_lesser": {
+        "aura_radius_metres": null,
+        "stats": {
+          "damage_+%": 20,
+          "global_knockback": 1,
+          "base_stun_duration_+%": 20,
+          "extra_gore": 0,
+          "has_shrine_effect": 1
+        },
+        "stat_text": [
+          "20% увеличение урона",
+          "Отбрасывает врагов при нанесении удара",
+          "20% увеличение длительности оглушения на врагах"
         ],
         "visuals": null
       }
@@ -6709,7 +6813,7 @@
     "name": "Алтарь восполнения",
     "removable": true,
     "stats": [
-      "mana_regeneration_rate_per_minute_%",
+      "mana_regeneration_rate_+%",
       "life_regeneration_rate_per_minute_%",
       "has_shrine_effect"
     ],
@@ -6720,12 +6824,12 @@
       "regen_player": {
         "aura_radius_metres": null,
         "stats": {
-          "mana_regeneration_rate_per_minute_%": 600,
+          "mana_regeneration_rate_+%": 200,
           "life_regeneration_rate_per_minute_%": 400,
           "has_shrine_effect": 1
         },
         "stat_text": [
-          "Регенерация 10% маны в секунду",
+          "200% повышение скорости регенерации маны",
           "Регенерация 6.67% здоровья в секунду"
         ],
         "visuals": null
@@ -6733,12 +6837,12 @@
       "regen_monster": {
         "aura_radius_metres": null,
         "stats": {
-          "mana_regeneration_rate_per_minute_%": 400,
+          "mana_regeneration_rate_+%": 200,
           "life_regeneration_rate_per_minute_%": 400,
           "has_shrine_effect": 1
         },
         "stat_text": [
-          "Регенерация 6.7% маны в секунду",
+          "200% повышение скорости регенерации маны",
           "Регенерация 6.67% здоровья в секунду"
         ],
         "visuals": "shrine_monster_affected"
@@ -6746,12 +6850,12 @@
       "regen_lesser": {
         "aura_radius_metres": null,
         "stats": {
-          "mana_regeneration_rate_per_minute_%": 200,
+          "mana_regeneration_rate_+%": 100,
           "life_regeneration_rate_per_minute_%": 200,
           "has_shrine_effect": 1
         },
         "stat_text": [
-          "Регенерация 3.3% маны в секунду",
+          "100% повышение скорости регенерации маны",
           "Регенерация 3.33% здоровья в секунду"
         ],
         "visuals": null
@@ -6759,12 +6863,12 @@
       "RoyaleShrineReplenishing": {
         "aura_radius_metres": null,
         "stats": {
-          "mana_regeneration_rate_per_minute_%": 300,
+          "mana_regeneration_rate_+%": 150,
           "life_regeneration_rate_per_minute_%": 300,
           "has_shrine_effect": 1
         },
         "stat_text": [
-          "Регенерация 5% маны в секунду",
+          "150% повышение скорости регенерации маны",
           "Регенерация 5% здоровья в секунду"
         ],
         "visuals": null
@@ -6883,6 +6987,33 @@
     },
     "stack_limit": null
   },
+  "shrine_greater_lightning": {
+    "description": "От вас исходят кольца молний и вы наносите часть физического урона в виде дополнительного урона от молнии",
+    "invisible": false,
+    "name": "Большой алтарь молний",
+    "removable": true,
+    "stats": [
+      "has_shrine_effect",
+      "physical_damage_%_to_add_as_lightning"
+    ],
+    "visuals": "shrine_lightning",
+    "category": "Buff shrine",
+    "sources": null,
+    "templates": {
+      "lightning_greater_player": {
+        "aura_radius_metres": null,
+        "stats": {
+          "has_shrine_effect": 1,
+          "physical_damage_%_to_add_as_lightning": 30
+        },
+        "stat_text": [
+          "Дарует 30% от физического урона в виде дополнительного урона от молнии"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
   "shrine_cold": {
     "description": "От вас исходят кольца льда",
     "invisible": false,
@@ -6909,6 +7040,33 @@
           "has_shrine_effect": 1
         },
         "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "shrine_greater_cold": {
+    "description": "От вас исходят кольца льда и вы наносите часть физического урона в виде дополнительного урона от холода",
+    "invisible": false,
+    "name": "Большой алтарь стужи",
+    "removable": true,
+    "stats": [
+      "has_shrine_effect",
+      "physical_damage_%_to_add_as_cold"
+    ],
+    "visuals": "shrine_cold",
+    "category": "Buff shrine",
+    "sources": null,
+    "templates": {
+      "cold_greater_player": {
+        "aura_radius_metres": null,
+        "stats": {
+          "has_shrine_effect": 1,
+          "physical_damage_%_to_add_as_cold": 30
+        },
+        "stat_text": [
+          "Дарует 30% от физического урона в виде дополнительного урона от холода"
+        ],
         "visuals": null
       }
     },
@@ -6994,6 +7152,33 @@
           "has_shrine_effect": 1
         },
         "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "shrine_greater_skeleton": {
+    "description": "Вы призываете скелетов и наносите часть физического урона в виде дополнительного урона хаосом",
+    "invisible": false,
+    "name": "Большой алтарь скелетов",
+    "removable": true,
+    "stats": [
+      "has_shrine_effect",
+      "physical_damage_%_to_add_as_chaos"
+    ],
+    "visuals": "shrine_skeleton",
+    "category": "Buff shrine",
+    "sources": null,
+    "templates": {
+      "skeleton_greater_player": {
+        "aura_radius_metres": null,
+        "stats": {
+          "has_shrine_effect": 1,
+          "physical_damage_%_to_add_as_chaos": 30
+        },
+        "stat_text": [
+          "Дарует 30% от физического урона в виде дополнительного урона хаосом"
+        ],
         "visuals": null
       }
     },
@@ -7165,21 +7350,6 @@
         ],
         "visuals": "shrine_monster_affected"
       },
-      "massive_lesser": {
-        "aura_radius_metres": null,
-        "stats": {
-          "base_actor_scale_+%": 10,
-          "base_skill_area_of_effect_+%": 20,
-          "maximum_life_+%": 20,
-          "has_shrine_effect": 1
-        },
-        "stat_text": [
-          "10% увеличение размера персонажа",
-          "20% увеличение области действия",
-          "20% увеличение максимума здоровья"
-        ],
-        "visuals": null
-      },
       "RoyaleShrineMassive": {
         "aura_radius_metres": null,
         "stats": {
@@ -7207,6 +7377,39 @@
           "30% увеличение размера персонажа",
           "40% увеличение области действия",
           "40% увеличение максимума здоровья"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "shrine_lesser_massive": {
+    "description": "У вас увеличено здоровье, область поражения и размер",
+    "invisible": false,
+    "name": "Алтарь величия",
+    "removable": true,
+    "stats": [
+      "base_actor_scale_+%",
+      "base_skill_area_of_effect_+%",
+      "maximum_life_+%",
+      "has_shrine_effect"
+    ],
+    "visuals": "shrine_massive",
+    "category": "Buff shrine",
+    "sources": null,
+    "templates": {
+      "massive_lesser": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_actor_scale_+%": 10,
+          "base_skill_area_of_effect_+%": 20,
+          "maximum_life_+%": 20,
+          "has_shrine_effect": 1
+        },
+        "stat_text": [
+          "10% увеличение размера персонажа",
+          "20% увеличение области действия",
+          "20% увеличение максимума здоровья"
         ],
         "visuals": null
       }
@@ -7378,6 +7581,18 @@
           "Не может получить урон"
         ],
         "visuals": "shrine_monster_affected"
+      },
+      "DivineShrineBuff": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_cannot_be_damaged": 1,
+          "has_shrine_effect": 1,
+          "cannot_die": 1
+        },
+        "stat_text": [
+          "Не может получить урон"
+        ],
+        "visuals": null
       }
     },
     "stack_limit": null
@@ -7906,6 +8121,18 @@
           "grant_cast_speed_+%_to_aura_owner_on_death": 0,
           "grant_damage_reduction_%_to_aura_owner_on_death": 0,
           "soul_is_consumed_on_death": 0
+        },
+        "stat_text": null,
+        "visuals": null
+      },
+      "MapModPlayerSoulEater": {
+        "aura_radius_metres": 7.0,
+        "stats": {
+          "grant_actor_scale_+%_to_aura_owner_on_death": 2,
+          "grant_attack_speed_+%_to_aura_owner_on_death": 5,
+          "grant_cast_speed_+%_to_aura_owner_on_death": 5,
+          "grant_damage_reduction_%_to_aura_owner_on_death": 0,
+          "soul_is_consumed_on_death": 1
         },
         "stat_text": null,
         "visuals": null
@@ -11630,7 +11857,7 @@
     "stack_limit": null
   },
   "replenishing_storm": {
-    "description": "Регенерация маны и здоровья повышена.",
+    "description": "Вы регенерируете здоровье и ману.",
     "invisible": false,
     "name": "Восстанавливающая буря",
     "removable": false,
@@ -15893,15 +16120,15 @@
     "stack_limit": null
   },
   "life_regen_from_spread_poison": {
-    "description": "",
+    "description": "Вы регенерируете здоровье от распространённого яда.",
     "invisible": false,
-    "name": "Регенерация здоровья",
+    "name": "Регенерация здоровья Бино",
     "removable": false,
     "stats": [
       "base_life_regeneration_rate_per_minute"
     ],
     "visuals": "life_regen",
-    "category": null,
+    "category": "Buff",
     "sources": null,
     "templates": null,
     "stack_limit": null
@@ -18677,6 +18904,20 @@
       "action_speed_-%"
     ],
     "visuals": "goddess_slow",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "time_mine_slow": {
+    "description": "[DNT] Stacking time slow",
+    "invisible": false,
+    "name": "[DNT] Timegrasp",
+    "removable": false,
+    "stats": [
+      "action_speed_-%"
+    ],
+    "visuals": "time_mine_slow_visual",
     "category": "Debuff",
     "sources": null,
     "templates": null,
@@ -21737,6 +21978,7 @@
     "stats": [
       "arcane_surge_cast_speed_+%",
       "mana_regeneration_rate_+%",
+      "life_regeneration_rate_+%",
       "spell_damage_+%_final_from_arcane_surge"
     ],
     "visuals": "arcane_surge",
@@ -23429,6 +23671,90 @@
     "templates": null,
     "stack_limit": null
   },
+  "ailments_types_grant_double_damage_against_self_child_buff_shock": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "enemy_chance_to_deal_double_damage_%_against_self"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "ailments_types_grant_double_damage_against_self_child_buff_freeze": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "enemy_chance_to_deal_double_damage_%_against_self"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "ailments_types_grant_double_damage_against_self_child_buff_chill": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "enemy_chance_to_deal_double_damage_%_against_self"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "ailments_types_grant_double_damage_against_self_child_buff_ignite": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "enemy_chance_to_deal_double_damage_%_against_self"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "ailments_types_grant_double_damage_against_self_child_buff_bleeding": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "enemy_chance_to_deal_double_damage_%_against_self"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "ailments_types_grant_double_damage_against_self_child_buff_poison": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "enemy_chance_to_deal_double_damage_%_against_self"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "stolen_mods_elder_stat": {
     "description": "Вы наделены одним из свойств убитого редкого монстра",
     "invisible": false,
@@ -25069,6 +25395,25 @@
         ],
         "visuals": null
       },
+      "MapModPlayerAdrenaline": {
+        "aura_radius_metres": null,
+        "stats": {
+          "has_adrenaline": 1,
+          "damage_+%": 100,
+          "attack_speed_+%": 25,
+          "base_cast_speed_+%": 25,
+          "base_movement_velocity_+%": 25,
+          "base_additional_physical_damage_reduction_%": 10
+        },
+        "stat_text": [
+          "100% увеличение урона",
+          "25% повышение скорости атаки",
+          "25% повышение скорости сотворения чар",
+          "25% повышение скорости передвижения",
+          "10% дополнительного уменьшения получаемого физического урона"
+        ],
+        "visuals": null
+      },
       "NecropolisAdrenaline": {
         "aura_radius_metres": null,
         "stats": {
@@ -25963,6 +26308,20 @@
     ],
     "visuals": "invisible",
     "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "vaal_temptation_instead_of_soul_gain_prevention": {
+    "description": "Вы получаете постепенный физический урон.",
+    "invisible": false,
+    "name": "Искушение ваал",
+    "removable": false,
+    "stats": [
+      "base_physical_damage_taken_per_minute_unaffected_by_level_scaling"
+    ],
+    "visuals": "vaal_temptation",
+    "category": "Debuff",
     "sources": null,
     "templates": null,
     "stack_limit": null
@@ -27846,7 +28205,7 @@
       "buff_impl_stat"
     ],
     "visuals": "invisible",
-    "category": "Buff",
+    "category": null,
     "sources": {
       "Mods": [
         {
@@ -27864,6 +28223,14 @@
           "template": "TriggerRandomOfferingSkillUnique__1",
           "stat_text": null,
           "stats": null
+        },
+        {
+          "id": "CeaselessFleshGrantedSkillUnique__1",
+          "item": null,
+          "name": null,
+          "template": "TriggerRestlessDeadSkillUnique",
+          "stat_text": null,
+          "stats": null
         }
       ]
     },
@@ -27877,6 +28244,14 @@
         "visuals": null
       },
       "TriggerRandomOfferingSkillUnique__1": {
+        "aura_radius_metres": null,
+        "stats": {
+          "buff_impl_stat": 0
+        },
+        "stat_text": null,
+        "visuals": null
+      },
+      "TriggerRestlessDeadSkillUnique": {
         "aura_radius_metres": null,
         "stats": {
           "buff_impl_stat": 0
@@ -28444,7 +28819,9 @@
       "recover_es_as_well_as_life_from_life_regeneration",
       "curse_effect_on_self_+%",
       "self_damaging_ailment_duration_+%",
-      "base_maximum_chaos_damage_resistance_%"
+      "base_maximum_chaos_damage_resistance_%",
+      "mana_regeneration_rate_+%",
+      "accuracy_rating_+%"
     ],
     "visuals": "ground_consecration_elreon",
     "category": "Buff",
@@ -28922,6 +29299,18 @@
     "sources": null,
     "templates": null,
     "stack_limit": null
+  },
+  "overloaded_spell_boost_charge": {
+    "description": "Усиленные Перегруженной интенсивностью умения приобретают дополнительный шанс и множитель критического удара.",
+    "invisible": false,
+    "name": "Перегруженная интенсивность",
+    "removable": false,
+    "stats": [],
+    "visuals": "overloaded_intensity",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": 3
   },
   "anticipation": {
     "description": "",
@@ -29406,21 +29795,17 @@
     "stack_limit": null
   },
   "shrine_resonating": {
-    "description": "У вас есть шанс получить заряд энергии, ярости или выносливости при нанесении удара или убийстве, а заряды дают дополнительные преимущества.",
+    "description": "У вас есть шанс получить заряд энергии, ярости или выносливости при нанесении удара и убийстве, и повышен максимум зарядов энергии, ярости и выносливости.",
     "invisible": false,
-    "name": "Заряженный алтарь",
+    "name": "Алтарь резонанса",
     "removable": true,
     "stats": [
       "chance_to_gain_random_standard_charge_on_hit_%",
       "power_frenzy_or_endurance_charge_on_kill_%",
-      "critical_strike_chance_+%_per_power_charge",
-      "base_attack_speed_+%_per_frenzy_charge",
-      "base_cast_speed_+%_per_frenzy_charge",
-      "object_inherent_damage_+%_final_per_frenzy_charge",
-      "physical_damage_reduction_%_per_endurance_charge",
-      "resist_all_elements_%_per_endurance_charge",
-      "damage_+%_per_frenzy_power_or_endurance_charge",
-      "has_shrine_effect"
+      "has_shrine_effect",
+      "max_power_charges",
+      "max_endurance_charges",
+      "max_frenzy_charges"
     ],
     "visuals": "shrine_resonating",
     "category": "Buff shrine",
@@ -29431,23 +29816,17 @@
         "stats": {
           "chance_to_gain_random_standard_charge_on_hit_%": 20,
           "power_frenzy_or_endurance_charge_on_kill_%": 60,
-          "critical_strike_chance_+%_per_power_charge": 40,
-          "base_attack_speed_+%_per_frenzy_charge": 4,
-          "base_cast_speed_+%_per_frenzy_charge": 4,
-          "object_inherent_damage_+%_final_per_frenzy_charge": 4,
-          "physical_damage_reduction_%_per_endurance_charge": 4,
-          "resist_all_elements_%_per_endurance_charge": 4,
-          "damage_+%_per_frenzy_power_or_endurance_charge": 5,
-          "has_shrine_effect": 1
+          "has_shrine_effect": 1,
+          "max_power_charges": 1,
+          "max_endurance_charges": 1,
+          "max_frenzy_charges": 1
         },
         "stat_text": [
           "20% шанс получить заряд энергии, ярости или выносливости при нанесении удара",
           "60% шанс получить заряд ярости, энергии или выносливости при убийстве",
-          "40% повышение шанса критического удара за заряд энергии",
-          "4% повышение скорости атаки за заряд ярости",
-          "4% дополнительного уменьшения получаемого физического урона за заряд выносливости",
-          "+4% к сопротивлению всем стихиям за заряд выносливости",
-          "5% увеличение урона за заряд ярости, энергии или выносливости"
+          "+1 к максимуму зарядов энергии",
+          "+1 к максимуму зарядов выносливости",
+          "+1 к максимуму зарядов ярости"
         ],
         "visuals": null
       },
@@ -29456,14 +29835,10 @@
         "stats": {
           "chance_to_gain_random_standard_charge_on_hit_%": 100,
           "power_frenzy_or_endurance_charge_on_kill_%": 0,
-          "critical_strike_chance_+%_per_power_charge": 0,
-          "base_attack_speed_+%_per_frenzy_charge": 0,
-          "base_cast_speed_+%_per_frenzy_charge": 0,
-          "object_inherent_damage_+%_final_per_frenzy_charge": 0,
-          "physical_damage_reduction_%_per_endurance_charge": 0,
-          "resist_all_elements_%_per_endurance_charge": 0,
-          "damage_+%_per_frenzy_power_or_endurance_charge": 0,
-          "has_shrine_effect": 1
+          "has_shrine_effect": 1,
+          "max_power_charges": 0,
+          "max_endurance_charges": 0,
+          "max_frenzy_charges": 0
         },
         "stat_text": [
           "100% шанс получить заряд энергии, ярости или выносливости при нанесении удара"
@@ -29475,23 +29850,17 @@
         "stats": {
           "chance_to_gain_random_standard_charge_on_hit_%": 20,
           "power_frenzy_or_endurance_charge_on_kill_%": 60,
-          "critical_strike_chance_+%_per_power_charge": 40,
-          "base_attack_speed_+%_per_frenzy_charge": 4,
-          "base_cast_speed_+%_per_frenzy_charge": 4,
-          "object_inherent_damage_+%_final_per_frenzy_charge": 4,
-          "physical_damage_reduction_%_per_endurance_charge": 4,
-          "resist_all_elements_%_per_endurance_charge": 4,
-          "damage_+%_per_frenzy_power_or_endurance_charge": 5,
-          "has_shrine_effect": 1
+          "has_shrine_effect": 1,
+          "max_power_charges": 1,
+          "max_endurance_charges": 1,
+          "max_frenzy_charges": 1
         },
         "stat_text": [
           "20% шанс получить заряд энергии, ярости или выносливости при нанесении удара",
           "60% шанс получить заряд ярости, энергии или выносливости при убийстве",
-          "40% повышение шанса критического удара за заряд энергии",
-          "4% повышение скорости атаки за заряд ярости",
-          "4% дополнительного уменьшения получаемого физического урона за заряд выносливости",
-          "+4% к сопротивлению всем стихиям за заряд выносливости",
-          "5% увеличение урона за заряд ярости, энергии или выносливости"
+          "+1 к максимуму зарядов энергии",
+          "+1 к максимуму зарядов выносливости",
+          "+1 к максимуму зарядов ярости"
         ],
         "visuals": null
       },
@@ -29500,23 +29869,17 @@
         "stats": {
           "chance_to_gain_random_standard_charge_on_hit_%": 20,
           "power_frenzy_or_endurance_charge_on_kill_%": 60,
-          "critical_strike_chance_+%_per_power_charge": 40,
-          "base_attack_speed_+%_per_frenzy_charge": 4,
-          "base_cast_speed_+%_per_frenzy_charge": 4,
-          "object_inherent_damage_+%_final_per_frenzy_charge": 4,
-          "physical_damage_reduction_%_per_endurance_charge": 4,
-          "resist_all_elements_%_per_endurance_charge": 4,
-          "damage_+%_per_frenzy_power_or_endurance_charge": 5,
-          "has_shrine_effect": 1
+          "has_shrine_effect": 1,
+          "max_power_charges": 1,
+          "max_endurance_charges": 1,
+          "max_frenzy_charges": 1
         },
         "stat_text": [
           "20% шанс получить заряд энергии, ярости или выносливости при нанесении удара",
           "60% шанс получить заряд ярости, энергии или выносливости при убийстве",
-          "40% повышение шанса критического удара за заряд энергии",
-          "4% повышение скорости атаки за заряд ярости",
-          "4% дополнительного уменьшения получаемого физического урона за заряд выносливости",
-          "+4% к сопротивлению всем стихиям за заряд выносливости",
-          "5% увеличение урона за заряд ярости, энергии или выносливости"
+          "+1 к максимуму зарядов энергии",
+          "+1 к максимуму зарядов выносливости",
+          "+1 к максимуму зарядов ярости"
         ],
         "visuals": null
       }
@@ -32249,6 +32612,48 @@
     "templates": null,
     "stack_limit": null
   },
+  "ailments_types_grant_double_damage_against_self_child_buff_scorch": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "enemy_chance_to_deal_double_damage_%_against_self"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "ailments_types_grant_double_damage_against_self_child_buff_frostburn": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "enemy_chance_to_deal_double_damage_%_against_self"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "ailments_types_grant_double_damage_against_self_child_buff_sap": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "enemy_chance_to_deal_double_damage_%_against_self"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "atlas_orion_eyrie_hurricane": {
     "description": "Вы получаете постепенный урон от холода",
     "invisible": false,
@@ -32926,6 +33331,66 @@
     "stack_limit": null
   },
   "have_ignited_an_enemy_recently": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "have_bleed_an_enemy_recently": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "have_poisoned_an_enemy_recently": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "have_sapped_an_enemy_recently": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "have_brittled_an_enemy_recently": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "have_scorched_an_enemy_recently": {
     "description": "",
     "invisible": true,
     "name": "",
@@ -34531,6 +34996,20 @@
     "templates": null,
     "stack_limit": null
   },
+  "blinded_enemy_cannot_inflict_damaging_ailments": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "never_damaging_ailments"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "intimidated_enemy_self_stun_duration": {
     "description": "",
     "invisible": true,
@@ -35443,6 +35922,20 @@
     "templates": null,
     "stack_limit": null
   },
+  "physical_damage_percent_converted_to_chaos": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "base_from_enemy_physical_damage_%_to_convert_to_chaos"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "stolen_mods_buff_experimented": {
     "description": "Вы получили свойства убитого волшебного монстра",
     "invisible": false,
@@ -35841,6 +36334,42 @@
     "stack_limit": 40
   },
   "lightning_resonance": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": 40
+  },
+  "physical_unholy_resonance": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": 40
+  },
+  "chaos_unholy_resonance": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": 40
+  },
+  "lightning_unholy_resonance": {
     "description": "",
     "invisible": true,
     "name": "",
@@ -38687,6 +39216,30 @@
     "templates": null,
     "stack_limit": null
   },
+  "resentment": {
+    "description": "Ваши атаки луками наносят постепенный урон от огня.",
+    "invisible": false,
+    "name": "Угли",
+    "removable": false,
+    "stats": [],
+    "visuals": "resentment_buff_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "animosity": {
+    "description": "Ваши атаки луками наносят постепенный физический урон проколотым врагам.",
+    "invisible": false,
+    "name": "Гниющие раны",
+    "removable": false,
+    "stats": [],
+    "visuals": "animosity_buff_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "ultimatum_chaos_degenzone": {
     "description": "Вы получаете постепенный урон хаосом",
     "invisible": false,
@@ -39181,7 +39734,7 @@
       "number_of_additional_projectiles"
     ],
     "visuals": "invisible",
-    "category": "Buff",
+    "category": null,
     "sources": null,
     "templates": null,
     "stack_limit": null
@@ -39741,6 +40294,18 @@
     ],
     "visuals": "lifetap_buff",
     "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "transfusion_life_spent": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
     "sources": null,
     "templates": null,
     "stack_limit": null
@@ -41250,6 +41815,7 @@
     "removable": true,
     "stats": [
       "storm_blade_energy_shield_+%_final",
+      "attack_speed_+%",
       "wielding_storm_blades"
     ],
     "visuals": "storm_blade",
@@ -41670,13 +42236,13 @@
     "templates": null,
     "stack_limit": null
   },
-  "flask_bonus_reflect_damage_taken_reduction_percent": {
+  "flask_bonus_percent_damage_cannot_be_reflected": {
     "description": "",
     "invisible": true,
     "name": "",
     "removable": false,
     "stats": [
-      "reflect_damage_taken_+%"
+      "%_of_your_damage_cannot_be_reflected"
     ],
     "visuals": "invisible",
     "category": "Flask",
@@ -42962,6 +43528,23 @@
     ],
     "visuals": "invisible",
     "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "astral_chains_grasping_vines_buff": {
+    "description": "Вас замедляют астральные цепи. Начните двигаться, чтобы их разорвать",
+    "invisible": false,
+    "name": "Астральные цепи",
+    "removable": false,
+    "stats": [
+      "grasping_vines_movement_speed_+%_final",
+      "buff_impl_stat",
+      "buff_impl_stat",
+      "your_travel_skills_are_disabled"
+    ],
+    "visuals": "astral_chains_buff",
+    "category": "Debuff",
     "sources": null,
     "templates": null,
     "stack_limit": null
@@ -67673,6 +68256,20 @@
     "templates": null,
     "stack_limit": null
   },
+  "hexed_enemy_cannot_deal_critical_strikes": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "global_cannot_crit"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "warcry_duration_tracker": {
     "description": "",
     "invisible": true,
@@ -72208,6 +72805,32 @@
     "templates": null,
     "stack_limit": null
   },
+  "number_of_enemies_in_presence": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "skill_track_number_of_enemies_presence": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "player_needs_to_track_number_of_enemies_in_your_presence"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "decay_quant_rarity": {
     "description": "Повышение редкости предметов со временем уменьшается и увеличивается за счёт убийств.",
     "invisible": false,
@@ -72339,6 +72962,206 @@
     "stack_limit": null
   },
   "generic_league_monster_enhanced": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "monster_difficulty_tankiness_+%",
+      "damage_+%",
+      "from_league_item_rarity_+%_permyriad",
+      "from_league_item_quantity_+%_permyriad"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": {
+      "BreachUnstableEnhancedMonsterBuff": {
+        "aura_radius_metres": null,
+        "stats": {
+          "monster_difficulty_tankiness_+%": 75,
+          "damage_+%": 15,
+          "from_league_item_rarity_+%_permyriad": 1500,
+          "from_league_item_quantity_+%_permyriad": 1000
+        },
+        "stat_text": [
+          "15% увеличение урона"
+        ],
+        "visuals": null
+      },
+      "BreachHiveEnhancedMonsterBuff": {
+        "aura_radius_metres": null,
+        "stats": {
+          "monster_difficulty_tankiness_+%": 60,
+          "damage_+%": 12,
+          "from_league_item_rarity_+%_permyriad": 1200,
+          "from_league_item_quantity_+%_permyriad": 800
+        },
+        "stat_text": [
+          "12% увеличение урона"
+        ],
+        "visuals": null
+      },
+      "ExpeditionEnhancedMonsterBuff": {
+        "aura_radius_metres": null,
+        "stats": {
+          "monster_difficulty_tankiness_+%": 15,
+          "damage_+%": 10,
+          "from_league_item_rarity_+%_permyriad": 1000,
+          "from_league_item_quantity_+%_permyriad": 500
+        },
+        "stat_text": [
+          "10% увеличение урона"
+        ],
+        "visuals": null
+      },
+      "SettlersEscalatingOreEnhancedMonsterBuff": {
+        "aura_radius_metres": null,
+        "stats": {
+          "monster_difficulty_tankiness_+%": 15,
+          "damage_+%": 15,
+          "from_league_item_rarity_+%_permyriad": 500,
+          "from_league_item_quantity_+%_permyriad": 500
+        },
+        "stat_text": [
+          "15% увеличение урона"
+        ],
+        "visuals": null
+      },
+      "AstrolabeMapBossEnhanced": {
+        "aura_radius_metres": null,
+        "stats": {
+          "monster_difficulty_tankiness_+%": 30,
+          "damage_+%": 5,
+          "from_league_item_rarity_+%_permyriad": 900,
+          "from_league_item_quantity_+%_permyriad": 450
+        },
+        "stat_text": [
+          "5% увеличение урона"
+        ],
+        "visuals": null
+      },
+      "AstrolabeHarvestMonsterEnhanced": {
+        "aura_radius_metres": null,
+        "stats": {
+          "monster_difficulty_tankiness_+%": 30,
+          "damage_+%": 5,
+          "from_league_item_rarity_+%_permyriad": 1500,
+          "from_league_item_quantity_+%_permyriad": 750
+        },
+        "stat_text": [
+          "5% увеличение урона"
+        ],
+        "visuals": null
+      },
+      "AstrolabeAbyssMonsterEnhanced": {
+        "aura_radius_metres": null,
+        "stats": {
+          "monster_difficulty_tankiness_+%": 30,
+          "damage_+%": 5,
+          "from_league_item_rarity_+%_permyriad": 900,
+          "from_league_item_quantity_+%_permyriad": 450
+        },
+        "stat_text": [
+          "5% увеличение урона"
+        ],
+        "visuals": null
+      },
+      "AstrolabeBreachMonsterEnhanced": {
+        "aura_radius_metres": null,
+        "stats": {
+          "monster_difficulty_tankiness_+%": 30,
+          "damage_+%": 5,
+          "from_league_item_rarity_+%_permyriad": 900,
+          "from_league_item_quantity_+%_permyriad": 450
+        },
+        "stat_text": [
+          "5% увеличение урона"
+        ],
+        "visuals": null
+      },
+      "AstrolabeRitualMonsterEnhanced": {
+        "aura_radius_metres": null,
+        "stats": {
+          "monster_difficulty_tankiness_+%": 30,
+          "damage_+%": 5,
+          "from_league_item_rarity_+%_permyriad": 1200,
+          "from_league_item_quantity_+%_permyriad": 600
+        },
+        "stat_text": [
+          "5% увеличение урона"
+        ],
+        "visuals": null
+      },
+      "AstrolabeBlightMonsterEnhanced": {
+        "aura_radius_metres": null,
+        "stats": {
+          "monster_difficulty_tankiness_+%": 30,
+          "damage_+%": 5,
+          "from_league_item_rarity_+%_permyriad": 900,
+          "from_league_item_quantity_+%_permyriad": 450
+        },
+        "stat_text": [
+          "5% увеличение урона"
+        ],
+        "visuals": null
+      },
+      "AstrolabeUltimatumMonsterEnhanced": {
+        "aura_radius_metres": null,
+        "stats": {
+          "monster_difficulty_tankiness_+%": 30,
+          "damage_+%": 5,
+          "from_league_item_rarity_+%_permyriad": 1200,
+          "from_league_item_quantity_+%_permyriad": 600
+        },
+        "stat_text": [
+          "5% увеличение урона"
+        ],
+        "visuals": null
+      },
+      "AstrolabeDeliriumMonsterEnhanced": {
+        "aura_radius_metres": null,
+        "stats": {
+          "monster_difficulty_tankiness_+%": 30,
+          "damage_+%": 5,
+          "from_league_item_rarity_+%_permyriad": 1500,
+          "from_league_item_quantity_+%_permyriad": 750
+        },
+        "stat_text": [
+          "5% увеличение урона"
+        ],
+        "visuals": null
+      },
+      "AstrolabeLegionMonsterEnhanced": {
+        "aura_radius_metres": null,
+        "stats": {
+          "monster_difficulty_tankiness_+%": 30,
+          "damage_+%": 5,
+          "from_league_item_rarity_+%_permyriad": 900,
+          "from_league_item_quantity_+%_permyriad": 450
+        },
+        "stat_text": [
+          "5% увеличение урона"
+        ],
+        "visuals": null
+      },
+      "AstrolabeExpeditionMonsterEnhanced": {
+        "aura_radius_metres": null,
+        "stats": {
+          "monster_difficulty_tankiness_+%": 30,
+          "damage_+%": 5,
+          "from_league_item_rarity_+%_permyriad": 1500,
+          "from_league_item_quantity_+%_permyriad": 750
+        },
+        "stat_text": [
+          "5% увеличение урона"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "legion_breakout_monster_enhanced": {
     "description": "",
     "invisible": true,
     "name": "",
@@ -72537,6 +73360,18 @@
     "stack_limit": null
   },
   "retaliation_evisceration_enabled": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "retaliation_shield_of_light_enabled": {
     "description": "",
     "invisible": true,
     "name": "",
@@ -73168,6 +74003,62 @@
     "removable": false,
     "stats": [
       "have_used_life_flask_recently"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "have_used_amethyst_flask_recently": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "have_used_amethyst_flask_recently"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "have_used_ruby_flask_recently": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "have_used_ruby_flask_recently"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "have_used_sapphire_flask_recently": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "have_used_sapphire_flask_recently"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "have_used_topaz_flask_recently": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "have_used_topaz_flask_recently"
     ],
     "visuals": "invisible",
     "category": null,
@@ -75236,13 +76127,15 @@
     "templates": null,
     "stack_limit": null
   },
-  "zana_rose_petal_visual_buff": {
-    "description": "",
-    "invisible": true,
-    "name": "",
+  "zana_rose_petal_buff": {
+    "description": "Большее число лепестков даёт более высокий шанс выпадения предметов с прядями воспоминаний.",
+    "invisible": false,
+    "name": "Розовые лепестки",
     "removable": false,
-    "stats": [],
-    "visuals": "invisible",
+    "stats": [
+      "found_items_zana_influence_equipment_item_chance_+%_final_divide_by_5"
+    ],
+    "visuals": "zana_rose_petal_charge",
     "category": null,
     "sources": null,
     "templates": null,
@@ -75254,7 +76147,8 @@
     "name": "Отлучение",
     "removable": false,
     "stats": [
-      "base_deal_no_chaos_damage"
+      "base_deal_no_chaos_damage",
+      "is_excommunicated"
     ],
     "visuals": "excommunicated_visual",
     "category": "Debuff",
@@ -75904,6 +76798,18 @@
     "templates": null,
     "stack_limit": null
   },
+  "blood_phylactery": {
+    "description": "Когда вы получаете Жестокий удар, вы теряете Бариятическую напряжённость и восстанавливаете здоровье, вплоть до максимума.",
+    "invisible": false,
+    "name": "Бариятическая напряжённость",
+    "removable": true,
+    "stats": [],
+    "visuals": "baryatic_tension",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "last_gasp": {
     "description": "",
     "invisible": true,
@@ -76036,7 +76942,7 @@
       "self_take_no_extra_damage_from_critical_strikes"
     ],
     "visuals": "farruls_farric_presence",
-    "category": null,
+    "category": "Buff",
     "sources": {
       "Mods": [
         {
@@ -76074,7 +76980,7 @@
       "base_cannot_be_stunned"
     ],
     "visuals": "farruls_fertile_presence",
-    "category": null,
+    "category": "Buff",
     "sources": {
       "Mods": [
         {
@@ -76113,7 +77019,7 @@
       "action_speed_cannot_be_reduced_below_base"
     ],
     "visuals": "farruls_wild_presence",
-    "category": null,
+    "category": "Buff",
     "sources": {
       "Mods": [
         {
@@ -76177,27 +77083,14 @@
     ],
     "visuals": "alternate_ascendancy_graft_aura",
     "category": "Debuff",
-    "sources": {
-      "PassiveSkills": [
-        {
-          "id": "AlternateAscendancyBreachlord3",
-          "item": null,
-          "name": null,
-          "template": "alternate_ascendency_graft_skill_damage_taken",
-          "stat_text": null,
-          "stats": null
-        }
-      ]
-    },
+    "sources": null,
     "templates": {
       "alternate_ascendency_graft_skill_damage_taken": {
         "aura_radius_metres": 6.0,
         "stats": {
           "damage_taken_+%_from_graft_skills": 100
         },
-        "stat_text": [
-          "Ближайшие враги получают увеличенный на 100% урон от умений наростов"
-        ],
+        "stat_text": null,
         "visuals": null
       }
     },
@@ -76317,6 +77210,543 @@
     "templates": null,
     "stack_limit": null
   },
+  "number_of_attack_crit_recently": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "number_of_hallowing_flame_consumed_by_ally_recently": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "shrine_faridun": {
+    "description": "Отрицательные эффекты на вас истекают быстрее, а длительность создаваемых вашими умениями положительных и отрицательных эффектов увеличена.\r\nУбитые враги приносят вам увеличенное количество золота.",
+    "invisible": false,
+    "name": "Алтарь афарудцев",
+    "removable": true,
+    "stats": [
+      "debuff_time_passed_+%",
+      "buff_duration_+%",
+      "item_found_gold_+%",
+      "has_shrine_effect"
+    ],
+    "visuals": "shrine_faridun",
+    "category": "Buff shrine",
+    "sources": null,
+    "templates": {
+      "faridun_shrine": {
+        "aura_radius_metres": null,
+        "stats": {
+          "debuff_time_passed_+%": 100,
+          "buff_duration_+%": 25,
+          "item_found_gold_+%": 20,
+          "has_shrine_effect": 1
+        },
+        "stat_text": [
+          "Отрицательные эффекты на вас заканчиваются на 100% быстрее",
+          "25% увеличение длительности положительных и отрицательных эффектов, наложенных вашими умениями",
+          "20% увеличение количества золота, выпадающего из убитых врагов"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "divine_sentinel_aura_fire_damage": {
+    "description": "Вы приобретаете физический урон в виде урона от огня",
+    "invisible": false,
+    "name": "Урон от огня стража",
+    "removable": false,
+    "stats": [
+      "physical_damage_%_to_add_as_fire"
+    ],
+    "visuals": "divine_sentinel_aura_fire_damage",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DivineSentinelAuraFireDamage": {
+        "aura_radius_metres": 5.0,
+        "stats": {
+          "physical_damage_%_to_add_as_fire": 15
+        },
+        "stat_text": [
+          "Дарует 15% от физического урона в виде дополнительного урона от огня"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "divine_sentinel_aura_lightning_damage": {
+    "description": "Вы приобретаете физический урон в виде урона от молнии",
+    "invisible": false,
+    "name": "Урон от молнии стража",
+    "removable": false,
+    "stats": [
+      "physical_damage_%_to_add_as_lightning"
+    ],
+    "visuals": "divine_sentinel_aura_lightning_damage",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DivineSentinelAuraLightningDamage": {
+        "aura_radius_metres": 5.0,
+        "stats": {
+          "physical_damage_%_to_add_as_lightning": 15
+        },
+        "stat_text": [
+          "Дарует 15% от физического урона в виде дополнительного урона от молнии"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "divine_sentinel_aura_life_regeneration": {
+    "description": "Вы регенерируете здоровье",
+    "invisible": false,
+    "name": "Регенерация здоровья стража",
+    "removable": false,
+    "stats": [
+      "life_regeneration_rate_per_minute_%"
+    ],
+    "visuals": "divine_sentinel_aura_life_regeneration",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DivineSentinelAuraLifeRegeneration": {
+        "aura_radius_metres": 5.0,
+        "stats": {
+          "life_regeneration_rate_per_minute_%": 90
+        },
+        "stat_text": [
+          "Регенерация 1.5% здоровья в секунду"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "divine_sentinel_aura_mana_regeneration": {
+    "description": "У вас повышена скорость регенерации маны",
+    "invisible": false,
+    "name": "Регенерация маны стража",
+    "removable": false,
+    "stats": [
+      "mana_regeneration_rate_+%"
+    ],
+    "visuals": "divine_sentinel_aura_mana_regeneration",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DivineSentinelAuraManaRegeneration": {
+        "aura_radius_metres": 5.0,
+        "stats": {
+          "mana_regeneration_rate_+%": 30
+        },
+        "stat_text": [
+          "30% повышение скорости регенерации маны"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "divine_sentinel_aura_chaos_resistance": {
+    "description": "У вас повышено сопротивление хаосу",
+    "invisible": false,
+    "name": "Сопротивление хаосу стража",
+    "removable": false,
+    "stats": [
+      "base_chaos_damage_resistance_%"
+    ],
+    "visuals": "divine_sentinel_aura_chaos_resistance",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DivineSentinelAuraChaosResistance": {
+        "aura_radius_metres": 5.0,
+        "stats": {
+          "base_chaos_damage_resistance_%": 23
+        },
+        "stat_text": [
+          "+23% к сопротивлению хаосу"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "divine_sentinel_aura_curse_effect_on_self": {
+    "description": "Эффект проклятий на вас ослаблен",
+    "invisible": false,
+    "name": "Защита от проклятий стража",
+    "removable": false,
+    "stats": [
+      "curse_effect_on_self_+%"
+    ],
+    "visuals": "divine_sentinel_aura_curse_effect_on_self",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DivineSentinelAuraCurseEffectOnSelf": {
+        "aura_radius_metres": 5.0,
+        "stats": {
+          "curse_effect_on_self_+%": -50
+        },
+        "stat_text": [
+          "50% ослабление эффектов проклятий на вас"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "ultimatum_minus_max_resistance": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "additional_maximum_all_resistances_%"
+    ],
+    "visuals": "invisible",
+    "category": "Debuff",
+    "sources": {
+      "UltimatumModifiers": [
+        {
+          "id": "PlayerDebuffMinusMaxElementalResistances",
+          "item": null,
+          "name": null,
+          "template": "PlayerDebuffMinusMaxElementalResistances",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
+    "templates": {
+      "PlayerDebuffMinusMaxElementalResistances": {
+        "aura_radius_metres": null,
+        "stats": {
+          "additional_maximum_all_resistances_%": -9
+        },
+        "stat_text": [
+          "-9% к максимуму всех сопротивлений"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "ultimatum_non_curse_aura_effect": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "non_curse_aura_effect_+%"
+    ],
+    "visuals": "invisible",
+    "category": "Debuff",
+    "sources": {
+      "UltimatumModifiers": [
+        {
+          "id": "PlayerDebuffReducedNonCurseAuraEffect",
+          "item": null,
+          "name": null,
+          "template": "PlayerDebuffReducedNonCurseAuraEffect",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
+    "templates": {
+      "PlayerDebuffReducedNonCurseAuraEffect": {
+        "aura_radius_metres": null,
+        "stats": {
+          "non_curse_aura_effect_+%": -50
+        },
+        "stat_text": [
+          "50% ослабление эффекта аур не-проклятий от ваших умений"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "ultimatum_no_block": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": "Debuff",
+    "sources": {
+      "UltimatumModifiers": [
+        {
+          "id": "PlayerDebuffCannotBlock",
+          "item": null,
+          "name": null,
+          "template": "PlayDebuffNoBlock",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
+    "templates": {
+      "PlayDebuffNoBlock": {
+        "aura_radius_metres": null,
+        "stats": null,
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "static_strike_gathering_lightning": {
+    "description": "Разряды от Статичного разряда надвигающейся молнии наносят дополнительный удар по цепи за каждую стадию.",
+    "invisible": false,
+    "name": "Надвигающаяся молния",
+    "removable": false,
+    "stats": [
+      "num_additional_beam_chains_from_gathering_lightning"
+    ],
+    "visuals": "static_strike_gathering_lightning_visual",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "oasis_ground_buff": {
+    "description": "Вы регенерируете здоровье и ману",
+    "invisible": false,
+    "name": "Участок оазиса",
+    "removable": false,
+    "stats": [
+      "life_regeneration_rate_per_minute_%",
+      "mana_regeneration_rate_per_minute_%"
+    ],
+    "visuals": "oasis_ground_buff_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "hallowing_flame_debuff": {
+    "description": "Следующий удар атакой по вам нанесёт часть физического урона в виде дополнительного урона от огня.",
+    "invisible": false,
+    "name": "Освящающее пламя",
+    "removable": false,
+    "stats": [
+      "self_attack_physical_damage_%_to_add_as_fire"
+    ],
+    "visuals": "hallowing_flame_debuff_visual",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "torment_touched_faridun": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "torment_touched_faridun",
+    "category": null,
+    "sources": {
+      "Mods": [
+        {
+          "id": "TormentTouchedEffectFaridun",
+          "item": null,
+          "name": null,
+          "template": "TormentTouchedEffectFaridun",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
+    "templates": {
+      "TormentTouchedEffectFaridun": {
+        "aura_radius_metres": null,
+        "stats": null,
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "torment_possessed_faridun": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "torment_deserter",
+    "category": null,
+    "sources": {
+      "Mods": [
+        {
+          "id": "TormentPossessedEffectFaridun",
+          "item": null,
+          "name": null,
+          "template": "TormentPossessedEffectFaridun",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
+    "templates": {
+      "TormentPossessedEffectFaridun": {
+        "aura_radius_metres": null,
+        "stats": null,
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "skill_instance_wildshard_stack": {
+    "description": "При накоплении 10 эффектов вы получите Изрыгание.",
+    "invisible": false,
+    "name": "Ненасытность",
+    "removable": false,
+    "stats": [],
+    "visuals": "wildshard_stack",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "disgorge": {
+    "description": "Ваши чары, усиленные Ненасытностью, выпускают дополнительные снаряды по кругу.",
+    "invisible": false,
+    "name": "Изрыгание",
+    "removable": false,
+    "stats": [
+      "affected_by_disgorge_buff"
+    ],
+    "visuals": "wildshard_disgorge",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "holy_strike_hammer_attach_locked_out": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "minion_pact_sacrifice_player_display_buff": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "shrine_faridun_monster": {
+    "description": "",
+    "invisible": true,
+    "name": "Монстр алтаря афарудцев",
+    "removable": true,
+    "stats": [
+      "debuff_time_passed_+%"
+    ],
+    "visuals": "invisible",
+    "category": "Buff shrine",
+    "sources": null,
+    "templates": {
+      "shrine_faridun_monster": {
+        "aura_radius_metres": null,
+        "stats": {
+          "debuff_time_passed_+%": 50
+        },
+        "stat_text": [
+          "Отрицательные эффекты на вас заканчиваются на 50% быстрее"
+        ],
+        "visuals": "shrine_monster_affected"
+      }
+    },
+    "stack_limit": null
+  },
+  "astral_empowered_monster": {
+    "description": "",
+    "invisible": false,
+    "name": "Астральное усиление",
+    "removable": false,
+    "stats": [],
+    "visuals": "astrally_empowered",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "astral_monster_spawn_in_buff": {
+    "description": "",
+    "invisible": false,
+    "name": "[DNT] How did you get this",
+    "removable": false,
+    "stats": [],
+    "visuals": "astral_monster_spawn_in_buff_visual",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "duration_alive_since_gaining_this_buff_tracking": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "saresh_cursed_flesh": {
+    "description": "Вы получаете постепенный физический урон",
+    "invisible": false,
+    "name": "Проклятая плоть",
+    "removable": false,
+    "stats": [
+      "base_physical_damage_taken_per_minute"
+    ],
+    "visuals": "blood_tendrils",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "mtx_pied_piper_pet_hypnotized": {
     "description": "",
     "invisible": true,
@@ -76327,6 +77757,46 @@
     "category": null,
     "sources": null,
     "templates": null,
+    "stack_limit": null
+  },
+  "faridun_proliferation_buff": {
+    "description": "Накладываемые вами стихийные состояния распространяются на других врагов\nВесь наносимый вами урон может охладить, наложить шок и поджечь.\r\n",
+    "invisible": false,
+    "name": "Благословение бури",
+    "removable": false,
+    "stats": [
+      "elemental_status_effect_aura_radius",
+      "all_damage_can_ignite",
+      "always_ignite",
+      "always_shock",
+      "all_damage_can_shock",
+      "all_damage_can_chill"
+    ],
+    "visuals": "mirage_proliferation_buff",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "FaridunProliferationBuff": {
+        "aura_radius_metres": null,
+        "stats": {
+          "elemental_status_effect_aura_radius": 20,
+          "all_damage_can_ignite": 1,
+          "always_ignite": 1,
+          "always_shock": 1,
+          "all_damage_can_shock": 1,
+          "all_damage_can_chill": 1
+        },
+        "stat_text": [
+          "Наложенные вами стихийные состояния также действуют на других ближайших врагов",
+          "Весь урон может наложить поджог",
+          "Ваши удары всегда накладывают поджог",
+          "Ваши удары всегда накладывают шок",
+          "Весь урон может наложить шок",
+          "Весь урон от ударов может наложить охлаждение"
+        ],
+        "visuals": null
+      }
+    },
     "stack_limit": null
   }
 }

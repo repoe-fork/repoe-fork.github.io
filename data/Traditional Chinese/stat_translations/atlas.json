@@ -162,7 +162,7 @@
       {
         "condition": [
           {
-            "min": null,
+            "min": 1,
             "max": null,
             "negated": null
           }
@@ -173,7 +173,27 @@
         "index_handlers": [
           []
         ],
-        "string": "你地圖中的裂痕增加 {0}% 怪物密度",
+        "string": "你地圖中的裂痕怪物增加{0}%怪物群大小",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "你地圖中的裂痕怪物減少{0}%怪物群大小",
         "reminder_text": null,
         "is_markup": null
       }
@@ -878,42 +898,6 @@
   {
     "English": null,
     "ids": [
-      "atlas_daily_kirac_missions_+"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "每天獲得 {0} 個額外基拉克任務",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
       "atlas_daily_master_missions_+"
     ],
     "trade_stats": null,
@@ -978,7 +962,7 @@
           []
         ],
         "string": "征服者增加 {0}% 機率掉落 1 顆征服者的崇高石",
-        "reminder_text": "(征服者包含聖戰軍王．巴倫、救贖者．維羅提尼亞、狩獵者．奧赫茲明和總督軍．圖拉克斯)",
+        "reminder_text": "（征服者包含聖戰軍王．巴倫、救贖者．維羅提尼亞、狩獵者．奧赫茲明和總督軍．圖拉克斯）",
         "is_markup": null
       }
     ]
@@ -1251,7 +1235,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你的已汙染稀有地圖和任何套用的地圖工藝選項\n在打開時會隨機調整",
+        "string": "你的已汙染稀有地圖在打開時會被隨機調整",
         "reminder_text": null,
         "is_markup": null
       }
@@ -1360,7 +1344,7 @@
           []
         ],
         "string": "你地圖中的超越傳送門不能產生傳奇頭目\n你地圖中的超越傳送門，有 50% 更小合併範圍",
-        "reminder_text": "(融合範圍是指超越傳送門可以和其它的傳送門融合並產生超越怪物)",
+        "reminder_text": "（融合範圍是指超越傳送門可以和其它的傳送門融合並產生超越怪物）",
         "is_markup": null
       }
     ]
@@ -2660,7 +2644,7 @@
           []
         ],
         "string": "小輿圖天賦沒有效果",
-        "reminder_text": "( 非核心、關鍵或崎點輿圖天賦就是小天賦 )",
+        "reminder_text": "（ 非核心、關鍵或崎點輿圖天賦就是小天賦 ）",
         "is_markup": null
       }
     ]
@@ -2696,7 +2680,7 @@
           []
         ],
         "string": "連結至凡人大門",
-        "reminder_text": "( 配置大門可讓你配置與它相連大門的輿圖天賦 )",
+        "reminder_text": "（ 配置大門可讓你配置與它相連大門的輿圖天賦 ）",
         "is_markup": null
       }
     ]
@@ -2732,7 +2716,7 @@
           []
         ],
         "string": "連結至神秘大門",
-        "reminder_text": "( 配置大門可讓你配置與它相連大門的輿圖天賦 )",
+        "reminder_text": "（ 配置大門可讓你配置與它相連大門的輿圖天賦 ）",
         "is_markup": null
       }
     ]
@@ -2768,7 +2752,7 @@
           []
         ],
         "string": "連結至異能大門",
-        "reminder_text": "( 配置大門可讓你配置與它相連大門的輿圖天賦 )",
+        "reminder_text": "（ 配置大門可讓你配置與它相連大門的輿圖天賦 ）",
         "is_markup": null
       }
     ]
@@ -3244,98 +3228,6 @@
   {
     "English": null,
     "ids": [
-      "kirac_blight_craft_always_available"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "凋落地圖工藝選項必定可選擇",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
-      "kirac_blight_craft_cost_+%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "增加 {0}% 凋落地圖工藝選項的消耗",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "減少 {0}% 凋落地圖工藝選項的消耗",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
       "magic_monster_chance_to_drop_currency_item_permillage"
     ],
     "trade_stats": null,
@@ -3366,7 +3258,7 @@
           ]
         ],
         "string": "你地圖中的魔法怪物有 {0}% 機率掉落 1 個額外基礎通貨",
-        "reminder_text": "(基礎通貨包含非聯盟內容的任何通貨)",
+        "reminder_text": "（基礎通貨包含非聯盟內容的任何通貨）",
         "is_markup": null
       }
     ]
@@ -4004,7 +3896,7 @@
           []
         ],
         "string": "你地圖中絕望深淵的儲物箱掉落 1 個額外基礎通貨",
-        "reminder_text": "(基礎通貨包含非聯盟內容的任何通貨)",
+        "reminder_text": "（基礎通貨包含非聯盟內容的任何通貨）",
         "is_markup": null
       }
     ]
@@ -4765,7 +4657,7 @@
             "divide_by_one_hundred"
           ]
         ],
-        "string": "你地圖中的深淵保險箱和冥河之尖，有 {0}% 機率掉落 1 個深淵聖甲蟲",
+        "string": "你地圖中的深淵保險箱和冥河之尖，有 {0}% 機率掉落 1 個聖甲蟲：深淵",
         "reminder_text": null,
         "is_markup": null
       }
@@ -6910,7 +6802,7 @@
           []
         ],
         "string": "增加 {0}% 小輿圖天賦對額外內容的效果",
-        "reminder_text": "( 非核心、關鍵或崎點輿圖天賦就是小天賦 )",
+        "reminder_text": "（ 非核心、關鍵或崎點輿圖天賦就是小天賦 ）",
         "is_markup": null
       },
       {
@@ -6930,7 +6822,7 @@
           ]
         ],
         "string": "減少 {0}% 小輿圖天賦對額外內容的效果",
-        "reminder_text": "( 非核心、關鍵或崎點輿圖天賦就是小天賦 )",
+        "reminder_text": "（ 非核心、關鍵或崎點輿圖天賦就是小天賦 ）",
         "is_markup": null
       }
     ]
@@ -7162,42 +7054,6 @@
   {
     "English": null,
     "ids": [
-      "map_atlas_scouting_report_drop_chance_+%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "增加 {0}% 你地圖中掉落的輿圖偵查報告",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
       "map_awakener_boss_awakened_support_drop_chance_+%"
     ],
     "trade_stats": null,
@@ -7327,7 +7183,7 @@
         "condition": [
           {
             "min": null,
-            "max": null,
+            "max": 99,
             "negated": null
           }
         ],
@@ -7337,7 +7193,25 @@
         "index_handlers": [
           []
         ],
-        "string": "你地圖中捕獲的紅色野獸有 {0}% 機率獲得 1 個詞綴，使其在血腥神壇獻祭時有一定機率不會被消耗",
+        "string": "你的地圖中捕獲的紅色野獸有 {0}% 機率獲得 1 個詞綴，使其在血腥神壇獻祭時有一定機率不會被消耗",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": 100,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你的地圖中捕獲的紅色野獸獲得 1 個詞綴，使其在血腥神壇獻祭時有一定機率不會被消耗",
         "reminder_text": null,
         "is_markup": null
       }
@@ -7375,6 +7249,42 @@
         ],
         "string": "你的地圖中的野獸有 {0}% 機率掙脫\n你的地圖中掙脫的野獸獲得野獸盛怒\n擊敗野獸後會根據野獸身上擁有的野獸盛怒獲得獵人的狡猾",
         "reminder_text": "（獵人的狡猾可降低來自巨獸的傷害，同時增加對巨獸造成的傷害，從被殺死的巨獸身上發現的物品數量和稀有度亦增加）",
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_bestiary_beast_has_x_bestial_rage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你地圖中可捕獲的野獸擁有野獸盛怒\n擊敗可捕獲的野獸時會給予一層獵人的狡猾",
+        "reminder_text": "（野獸盛怒會增加被影響野獸的移動速度、攻擊速度、和傷害）",
         "is_markup": null
       }
     ]
@@ -7428,6 +7338,42 @@
           []
         ],
         "string": "你地圖中的紅色野獸擁有 {0} 個額外的獸獵詞綴",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_betrayal_%_chance_veiled_items_to_drop_with_fractured_veiled_mod"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "由被擊敗的密教成員所掉落的隱匿物品有{0}%機率擁有一條破裂的隱匿詞綴",
         "reminder_text": null,
         "is_markup": null
       }
@@ -7628,7 +7574,7 @@
           []
         ],
         "string": "完成你的地圖時，獲得 1 個隨機永生密教藏匿處的 {0} 情報",
-        "reminder_text": "(已經被定位的藏匿處仍然可以被隨機選擇)",
+        "reminder_text": "（已經被定位的藏匿處仍然可以被隨機選擇）",
         "is_markup": null
       }
     ]
@@ -8214,7 +8160,7 @@
           []
         ],
         "string": "你地圖的超越傳送門增加 {0}% 機率產生傳奇頭目",
-        "reminder_text": "( 傳奇超越頭目產出後停止產出超越傳送門和惡魔 )",
+        "reminder_text": "（ 傳奇超越頭目產出後停止產出超越傳送門和惡魔 ）",
         "is_markup": null
       },
       {
@@ -8234,7 +8180,7 @@
           ]
         ],
         "string": "你地圖的超越傳送門減少 {0}% 機率產生傳奇頭目",
-        "reminder_text": "( 傳奇超越頭目產出後停止產出超越傳送門和惡魔 )",
+        "reminder_text": "（ 傳奇超越頭目產出後停止產出超越傳送門和惡魔 ）",
         "is_markup": null
       }
     ]
@@ -8270,7 +8216,7 @@
           []
         ],
         "string": "你地圖中的超越傳送門不能產生傳奇頭目",
-        "reminder_text": "( 傳奇超越頭目產出後停止產出超越傳送門和惡魔 )",
+        "reminder_text": "（ 傳奇超越頭目產出後停止產出超越傳送門和惡魔 ）",
         "is_markup": null
       }
     ]
@@ -8752,7 +8698,7 @@
           []
         ],
         "string": "你地圖中的超越傳送門，增加 {0}% 合併範圍",
-        "reminder_text": "(融合範圍是指超越傳送門可以和其它的傳送門融合並產生超越怪物)",
+        "reminder_text": "（融合範圍是指超越傳送門可以和其它的傳送門融合並產生超越怪物）",
         "is_markup": null
       }
     ]
@@ -8788,7 +8734,7 @@
           []
         ],
         "string": "你地圖中的超越傳送門，有 {0}% 更大合併範圍",
-        "reminder_text": "(融合範圍是指超越傳送門可以和其它的傳送門融合並產生超越怪物)",
+        "reminder_text": "（融合範圍是指超越傳送門可以和其它的傳送門融合並產生超越怪物）",
         "is_markup": null
       },
       {
@@ -8808,7 +8754,7 @@
           ]
         ],
         "string": "你地圖中的超越傳送門，有 {0}% 更小合併範圍",
-        "reminder_text": "(融合範圍是指超越傳送門可以和其它的傳送門融合並產生超越怪物)",
+        "reminder_text": "（融合範圍是指超越傳送門可以和其它的傳送門融合並產生超越怪物）",
         "is_markup": null
       }
     ]
@@ -9668,6 +9614,62 @@
   {
     "English": null,
     "ids": [
+      "map_blight_monster_item_quantity_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "增加 {0}% 你地圖中凋落怪物掉落的物品數量",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "減少 {0}% 你地圖中凋落怪物掉落的物品數量",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "map_blight_monsters_damage_taken_from_player_sources_+%_final"
     ],
     "trade_stats": null,
@@ -9808,7 +9810,7 @@
           []
         ],
         "string": "你地圖中的凋落保險箱有 {0}% 含有 1 個精油淬鍊",
-        "reminder_text": "( 精油淬鍊會破壞抹油的物品，來回復其中一個套用抹油的油瓶 )",
+        "reminder_text": "（ 精油淬鍊會破壞抹油的物品，來回復其中一個套用抹油的油瓶 ）",
         "is_markup": null
       }
     ]
@@ -10277,7 +10279,7 @@
             "divide_by_one_hundred"
           ]
         ],
-        "string": "每張地圖的最終地圖頭目有 {0}% 機率掉落 1 張額外相連的地圖",
+        "string": "每張地圖的最終地圖頭目有{0}%機率額外掉落 1 張高一階級的地圖",
         "reminder_text": null,
         "is_markup": null
       }
@@ -11238,7 +11240,7 @@
           []
         ],
         "string": "每張地圖的最終地圖頭目掉落 1 個額外基礎通貨",
-        "reminder_text": "(基礎通貨包含非聯盟內容的任何通貨)",
+        "reminder_text": "（基礎通貨包含非聯盟內容的任何通貨）",
         "is_markup": null
       },
       {
@@ -11256,7 +11258,7 @@
           []
         ],
         "string": "每張地圖的最終地圖頭目掉落 {0} 個額外基礎通貨",
-        "reminder_text": "(基礎通貨包含非聯盟內容的任何通貨)",
+        "reminder_text": "（基礎通貨包含非聯盟內容的任何通貨）",
         "is_markup": null
       }
     ]
@@ -11364,7 +11366,7 @@
           []
         ],
         "string": "地圖頭目有 {0}% 機率伴隨 2 名盜賊流亡者保鑣",
-        "reminder_text": "( 盜賊流亡者保鑣承受 ５0% 更少傷害，並有額外的獎勵 )",
+        "reminder_text": "（ 盜賊流亡者保鑣承受 ５0% 更少傷害，並有額外的獎勵 ）",
         "is_markup": null
       }
     ]
@@ -11695,7 +11697,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你含有裂痕的地圖有 {0}% 機率含有 1 個額外裂痕",
+        "string": "你含有不穩定裂痕的地圖有{0}%機率含有一道額外不穩定裂痕",
         "reminder_text": null,
         "is_markup": null
       },
@@ -11713,7 +11715,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你含有裂痕的地圖含有 1 個額外裂痕",
+        "string": "你含有不穩定裂痕的地圖含有一道額外不穩定裂痕",
         "reminder_text": null,
         "is_markup": null
       }
@@ -11749,7 +11751,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你含有裂痕的地圖有 {0}% 機率含有 2 個額外裂痕",
+        "string": "你含有不穩定裂痕的地圖有{0}%機率含有兩道額外不穩定裂痕",
         "reminder_text": null,
         "is_markup": null
       },
@@ -11767,7 +11769,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你含有裂痕的地圖含有 2 個額外裂痕",
+        "string": "你含有不穩定裂痕的地圖含有兩道額外不穩定裂痕",
         "reminder_text": null,
         "is_markup": null
       }
@@ -11803,7 +11805,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你含有裂痕的地圖有 {0}% 機率含有 3 個額外裂痕",
+        "string": "你含有不穩定裂痕的地圖有{0}%機率含有三道額外不穩定裂痕",
         "reminder_text": null,
         "is_markup": null
       },
@@ -11821,7 +11823,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你含有裂痕的地圖含有 3 個額外裂痕",
+        "string": "你含有不穩定裂痕的地圖含有三道額外不穩定裂痕",
         "reminder_text": null,
         "is_markup": null
       }
@@ -11857,7 +11859,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你含有裂痕的地圖有 {0}% 機率含有 10 個額外裂痕",
+        "string": "你含有不穩定裂痕的地圖有{0}%機率含有十道額外不穩定裂痕",
         "reminder_text": null,
         "is_markup": null
       },
@@ -11875,7 +11877,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你含有裂痕的地圖含有 10 個額外裂痕",
+        "string": "你含有不穩定裂痕的地圖含有十道額外不穩定裂痕",
         "reminder_text": null,
         "is_markup": null
       }
@@ -11984,6 +11986,152 @@
           []
         ],
         "string": "你地圖中的裂痕產生 {0} 個額外稀有怪物",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_ancient_wombgift_chance_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "增加{0}%你地圖中找到的胎贈為古老之胎贈的機率",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "減少{0}%你地圖中找到的胎贈為古老之胎贈的機率",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_boss_additional_wombgift_chance_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": 100,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你地圖中的裂痕頭目會掉落一個額外的胎贈",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你地圖中的裂痕頭目有{0}%機率會掉落一個額外的胎贈",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_boss_hiveblood_instead_of_gold"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你地圖中的裂痕頭目賦予巢裔之血而不是金幣",
         "reminder_text": null,
         "is_markup": null
       }
@@ -12210,6 +12358,656 @@
   {
     "English": null,
     "ids": [
+      "map_breach_fortress_chest_wombgift_chance_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你地圖中的貪握之匣增加{0}%含有胎贈的機率",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "你地圖中的貪握之匣減少{0}%含有胎贈的機率",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_hive_breakable_spawners_area_of_effect_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "增加{0}%你地圖中裂痕可燃洞穴的引爆半徑",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "減少{0}%你地圖中裂痕可燃洞穴的引爆半徑",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_hive_chests_grant_hiveblood_instead_of_gold"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你地圖中的巢裔要塞寶箱含有巢裔之血而不是金幣",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_hive_fortress_chance_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你地圖中的裂痕巢穴增加{0}%通往要塞的機率",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "你地圖中的裂痕巢穴減少{0}%通往要塞的機率",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_hive_monsters_toughness_per_broken_spawner_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你地圖中的巢穴遭遇根據每一摧毀的可燃洞穴\n增加{0}%難度",
+        "reminder_text": "（怪物的堅韌越高，受到的傷害越低。堅韌增加 100% 的怪物受到 50% 更少傷害，堅韌增加 200% 的怪物受到 67% 更少傷害，以此類推。堅韌被降低會使怪物受到更多傷害）",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "你地圖中的巢穴遭遇根據每一摧毀的可燃洞穴\n減少{0}%難度",
+        "reminder_text": "（怪物的堅韌越高，受到的傷害越低。堅韌增加 100% 的怪物受到 50% 更少傷害，堅韌增加 200% 的怪物受到 67% 更少傷害，以此類推。堅韌被降低會使怪物受到更多傷害）",
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_hive_number_of_breakable_spawners_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你地圖中的巢穴增加{0}%可燃洞穴數量",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "你地圖中的巢穴減少{0}%可燃洞穴數量",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_hive_number_of_skills_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "增加{0}%你地圖中艾里絲在不通往要塞的裂痕巢穴\n中所創造的技能數量",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "減少{0}%你地圖中艾里絲在不通往要塞的裂痕巢穴\n中所創造的技能數量",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_hive_skill_damage_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "增加{0}%你地圖中裂痕巢穴裡艾里絲創造的技能傷害",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "減少{0}%你地圖中裂痕巢穴裡艾里絲創造的技能傷害",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_hiveblood_and_wombgift_quantity_per_broken_spawner_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你地圖中的巢穴遭遇根據每一摧毀的可燃洞穴\n增加{0}%賦予的巢裔之血數量",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "你地圖中的巢穴遭遇根據每一摧毀的可燃洞穴\n減少{0}%賦予的巢裔之血數量",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_hiveblood_quantity_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "增加{0}%你地圖中找到的巢裔之血數量",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "減少{0}%你地圖中找到的巢裔之血數量",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_hives_additional_waves_+"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你地圖中的裂痕巢穴有額外一波巢裔怪物",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你地圖中的裂痕巢穴有額外{0}波巢裔怪物",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_lavish_wombgift_chance_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "增加{0}%你地圖中找到的胎贈為奢華之胎贈的機率",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "減少{0}%你地圖中找到的胎贈為奢華之胎贈的機率",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "map_breach_monster_granted_experience_+%"
     ],
     "trade_stats": null,
@@ -12414,6 +13212,62 @@
   {
     "English": null,
     "ids": [
+      "map_breach_mysterious_wombgift_chance_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "增加{0}%你地圖中找到的胎贈為神秘之胎贈的機率",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "減少{0}%你地圖中找到的胎贈為神秘之胎贈的機率",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "map_breach_number_of_magic_packs_+%"
     ],
     "trade_stats": null,
@@ -12462,6 +13316,118 @@
           ]
         ],
         "string": "你地圖中的裂痕減少產生 {0}% 魔法怪物",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_number_of_rare_packs_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "增加{0}%你地圖中的裂痕生成的稀有怪物數量",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "減少{0}%你地圖中的裂痕生成的稀有怪物數量",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_provisioning_wombgift_chance_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "增加{0}%你地圖中找到的胎贈為供應之胎贈的機率",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "減少{0}%你地圖中找到的胎贈為供應之胎贈的機率",
         "reminder_text": null,
         "is_markup": null
       }
@@ -12610,7 +13576,7 @@
           []
         ],
         "string": "你地圖中的裂痕有 {0}% 機率含有佈施者．烈許烏拉",
-        "reminder_text": "( 烈許烏拉會掉落每種裂痕的裂痕石 )",
+        "reminder_text": "（ 烈許烏拉會掉落每種裂痕的裂痕石 ）",
         "is_markup": null
       }
     ]
@@ -12646,7 +13612,7 @@
           []
         ],
         "string": "你地圖中的裂痕有 {0}% 機率含有 1 隻烈許烏拉之手",
-        "reminder_text": "( 烈許烏拉的抑制會掉落每種裂痕的裂痕裂片 )",
+        "reminder_text": "（ 烈許烏拉的抑制會掉落每種裂痕的裂痕裂片 ）",
         "is_markup": null
       }
     ]
@@ -12681,7 +13647,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你地圖中的裂痕開啟和關閉比平常快 {0}%",
+        "string": "你地圖中的裂痕遭遇加速{0}%",
         "reminder_text": null,
         "is_markup": null
       },
@@ -12701,7 +13667,7 @@
             "negate"
           ]
         ],
-        "string": "你地圖中的裂痕開啟和關閉比平常慢 {0}%",
+        "string": "你地圖中的裂痕遭遇減緩{0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -12846,6 +13812,62 @@
           []
         ],
         "string": "你地圖的裂痕怪物增加 {0}% 機率掉落 1 個裂痕傳奇物品",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_breach_wombgift_quantity_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "增加{0}%你地圖中所找到的胎贈數量",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "減少{0}%你地圖中所找到的胎贈數量",
         "reminder_text": null,
         "is_markup": null
       }
@@ -13282,6 +14304,42 @@
           []
         ],
         "string": "你的地圖含有聖殿密園",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_chance_for_area_%_to_duplicate_breach_boss"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你地圖中的裂痕頭目有{0}%機率成對出現",
         "reminder_text": null,
         "is_markup": null
       }
@@ -14066,7 +15124,7 @@
   {
     "English": null,
     "ids": [
-      "map_contains_additional_breaches"
+      "map_contains_X_additional_strongboxes_essences_shrines_or_rogue_exiles"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -14088,12 +15146,12 @@
           }
         ],
         "format": [
-          "ignore"
+          "#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "你的地圖含有額外 1 個裂痕",
+        "string": "你的地圖包含{0}個額外保險箱、被囚禁的怪物、神殿、或盜賊流亡者",
         "reminder_text": null,
         "is_markup": null
       },
@@ -14111,7 +15169,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你的地圖含有額外 {0} 個裂痕",
+        "string": "你的地圖含有{0}個額外保險箱、被囚禁的怪物、神殿、或盜賊流亡者",
         "reminder_text": null,
         "is_markup": null
       }
@@ -14516,6 +15574,60 @@
   {
     "English": null,
     "ids": [
+      "map_contains_additional_unstable_breaches"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你的地圖額外含有一道不穩定的裂痕",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你的地圖額外含有{0}道不穩定的裂痕",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "map_contains_adjacent_map_item_chance_permyriad"
     ],
     "trade_stats": null,
@@ -14546,6 +15658,78 @@
           ]
         ],
         "string": "{0}% 機率使你每張地圖中的 1 隻怪物掉落 1 張額外相連的地圖",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_contains_an_unspecified_breach"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你的地圖含有一道裂痕",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_contains_breach_hive"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 3,
+            "max": 3,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你的地圖含有一道裂痕巢穴",
         "reminder_text": null,
         "is_markup": null
       }
@@ -14618,7 +15802,7 @@
           []
         ],
         "string": "你的地圖有 {0}% 機率含有 1 個賞金目標群",
-        "reminder_text": "( 賞金目標掉落大量的盜賊之印並會掉落契約書 )",
+        "reminder_text": "（ 賞金目標掉落大量的盜賊之印並會掉落契約書 ）",
         "is_markup": null
       }
     ]
@@ -15758,7 +16942,7 @@
           ]
         ],
         "string": "你地圖中掉落的基礎通貨有 {0}% 機率改為掉落堆疊滿層的基礎通貨",
-        "reminder_text": "(基礎通貨包含非聯盟內容的任何通貨)",
+        "reminder_text": "（基礎通貨包含非聯盟內容的任何通貨）",
         "is_markup": null
       }
     ]
@@ -16610,7 +17794,7 @@
           []
         ],
         "string": "你的地圖不能被碎片調整，除了眾神聖器",
-        "reminder_text": "(碎片為可使用於地圖裝置的非地圖物品)",
+        "reminder_text": "（碎片為可使用於地圖裝置的非地圖物品）",
         "is_markup": null
       }
     ]
@@ -16681,7 +17865,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你的地圖不會掉落深淵聖甲蟲",
+        "string": "你的地圖不會掉落聖甲蟲：深淵",
         "reminder_text": null,
         "is_markup": null
       }
@@ -16753,7 +17937,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你的地圖不會掉落凋落聖甲蟲",
+        "string": "你的地圖不會掉落聖甲蟲：凋落",
         "reminder_text": null,
         "is_markup": null
       }
@@ -16825,7 +18009,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你的地圖不會掉落裂痕聖甲蟲",
+        "string": "你的地圖不會掉落聖甲蟲：裂痕",
         "reminder_text": null,
         "is_markup": null
       }
@@ -16897,7 +18081,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你的地圖不會掉落譫妄聖甲蟲",
+        "string": "你的地圖不會掉落聖甲蟲：譫妄",
         "reminder_text": null,
         "is_markup": null
       }
@@ -16969,7 +18153,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你的地圖不會掉落探險聖甲蟲",
+        "string": "你的地圖不會掉落聖甲蟲：探險",
         "reminder_text": null,
         "is_markup": null
       }
@@ -17041,7 +18225,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你的地圖不會掉落豐收聖甲蟲",
+        "string": "你的地圖不會掉落聖甲蟲：豐收",
         "reminder_text": null,
         "is_markup": null
       }
@@ -18319,6 +19503,42 @@
   {
     "English": null,
     "ids": [
+      "map_divination_cards_in_area_are_from_two_different_areas"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你地圖中所找到的命運卡會改為來自其他兩張隨機地圖\n而不是你當前所在的地圖",
+        "reminder_text": "（一張地圖中擁有越多能被找到的命運卡，同時也會增加找到命運卡的機率）",
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "map_double_conqueror_progress_chance_%"
     ],
     "trade_stats": null,
@@ -18347,7 +19567,7 @@
           []
         ],
         "string": "完成輿圖征服者勢力地圖，有 {0}% 機率獲得 2 倍定位他們壁壘位置的進度",
-        "reminder_text": "(征服者包含聖戰軍王．巴倫、救贖者．維羅提尼亞、狩獵者．奧赫茲明和總督軍．圖拉克斯)",
+        "reminder_text": "（征服者包含聖戰軍王．巴倫、救贖者．維羅提尼亞、狩獵者．奧赫茲明和總督軍．圖拉克斯）",
         "is_markup": null
       }
     ]
@@ -19075,7 +20295,7 @@
           []
         ],
         "string": "塑界者、異界尊師和他們的守護者有 {0}% 機率掉落 1 件勢力之物",
-        "reminder_text": "(勢力之物可以有專屬的詞綴)",
+        "reminder_text": "（勢力之物可以有專屬的詞綴）",
         "is_markup": null
       }
     ]
@@ -21213,152 +22433,6 @@
   {
     "English": null,
     "ids": [
-      "map_gain_additional_zana_mission_%_chance_on_map_completion"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": 99,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "完成你的地圖時，有 {0}% 機率獲得 1 個額外基拉克任務",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 100,
-            "max": 100,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "完成你的地圖時，獲得 1 個額外基拉克任務",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
-      "map_gain_additional_zana_mission_permyriad_chance_on_map_completion"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": 9999,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "divide_by_one_hundred"
-          ]
-        ],
-        "string": "完成你的地圖時，有 {0}% 機率獲得 1 個額外基拉克任務",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 10000,
-            "max": 10000,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "完成你的地圖時，獲得 1 個額外基拉克任務",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
-      "map_gain_blight_map_craft_on_completion_chance_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "完成你的地圖時，有 {0}% 機率獲得 1 次免費使用凋落地圖工藝選項",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
       "map_gain_master_missions_instead_of_master_naturally_spawning"
     ],
     "trade_stats": null,
@@ -21387,96 +22461,6 @@
           []
         ],
         "string": "若你地圖含有 1 個隨機大師事件，完成事件時會給予該大師的任務",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
-      "map_gain_random_map_craft_on_completion_chance_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": 99,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "完成你的地圖時有 {0}% 機率獲得 1 次免費隨機地圖工藝的選項",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 100,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "完成你的地圖時獲得 1 次免費隨機地圖工藝的選項",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
-      "map_gain_special_map_craft_on_completion_chance_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "完成你的地圖時有 {0}% 機率獲得 1 次免費特殊地圖工藝的選項",
         "reminder_text": null,
         "is_markup": null
       }
@@ -24353,7 +25337,7 @@
           []
         ],
         "string": "擊殺你地圖中居住的建造者，將提升他們的階級加至存活建造者的房間",
-        "reminder_text": "(居住的建造者可以被擊殺來改變穿越房間)",
+        "reminder_text": "（居住的建造者可以被擊殺來改變穿越房間）",
         "is_markup": null
       }
     ]
@@ -24623,7 +25607,7 @@
           []
         ],
         "string": "擊殺你地圖中非居住的建造者，有 {0}% 機率\n將 1 額外提升階級加至存活建造者的房間",
-        "reminder_text": "(非居住的建造者可以被擊殺來升級穿越房間)",
+        "reminder_text": "（非居住的建造者可以被擊殺來升級穿越房間）",
         "is_markup": null
       }
     ]
@@ -25309,62 +26293,6 @@
   {
     "English": null,
     "ids": [
-      "map_kirac_mission_pack_size_+%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "基拉克任務區域增加 {0}% 怪物群大小",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "基拉克任務區域減少 {0}% 怪物群大小",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
       "map_league_base_chance_+%_final"
     ],
     "trade_stats": null,
@@ -25590,7 +26518,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你地圖中從靜止釋放的戰亂保險箱，增加 {0}% 範圍釋放其它怪物和保險箱",
+        "string": "你地圖中從靜止釋放的戰亂保險箱，增加 {0}% 其釋放其它怪物和保險箱的範圍",
         "reminder_text": null,
         "is_markup": null
       },
@@ -25610,7 +26538,7 @@
             "negate"
           ]
         ],
-        "string": "你地圖中從靜止釋放的戰亂保險箱，減少 {0}% 範圍釋放其它怪物和保險箱",
+        "string": "你地圖中從靜止釋放的戰亂保險箱，減少 {0}% 其釋放其它怪物和保險箱的範圍",
         "reminder_text": null,
         "is_markup": null
       }
@@ -25829,7 +26757,7 @@
           []
         ],
         "string": "你地圖中的戰亂怪物靜止時增加承受 {0}% 傷害",
-        "reminder_text": "(靜止的怪物不會做任何動作)",
+        "reminder_text": "（靜止的怪物不會做任何動作）",
         "is_markup": null
       }
     ]
@@ -25865,7 +26793,7 @@
           []
         ],
         "string": "你地圖中的戰亂事件有 {0}% 更高機率含有 1 個將軍",
-        "reminder_text": "(戰亂將軍包含西里娜馬庫女王、穆希爾斯．獅眼將軍、大主教桑特斯瓦克斯、邪魔毒蛇納普阿茲和漆黑絲克瑪奧庫納)",
+        "reminder_text": "（戰亂將軍包含西里娜馬庫女王、穆希爾斯．獅眼將軍、大主教桑特斯瓦克斯、邪魔毒蛇納普阿茲和漆黑絲克瑪奧庫納）",
         "is_markup": null
       }
     ]
@@ -26855,6 +27783,42 @@
   {
     "English": null,
     "ids": [
+      "map_map_item_drop_chance_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "增加 {0}% 你地圖中掉落的地圖",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "map_maps_drop_with_affliction_enchantments_chance_%"
     ],
     "trade_stats": null,
@@ -27049,7 +28013,7 @@
           []
         ],
         "string": "你的地圖 +{0}% 機率含有 1 個隨機大師事件",
-        "reminder_text": "( 隨機遇到艾瓦、埃哈、瓊恩和尼科大師 )",
+        "reminder_text": "（ 隨機遇到艾瓦、埃哈、瓊恩和尼科大師 ）",
         "is_markup": null
       }
     ]
@@ -28905,6 +29869,62 @@
   {
     "English": null,
     "ids": [
+      "map_mod_effect_+%_per_fragment_used"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "每當一枚碎片與地圖一起使用，即增加{0}%你地圖的固定詞綴效果",
+        "reminder_text": "（碎片為可使用於地圖裝置的非地圖物品）",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "每當一枚碎片與地圖一起使用，即減少{0}%你地圖的固定詞綴效果",
+        "reminder_text": "（碎片為可使用於地圖裝置的非地圖物品）",
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "map_mod_effect_+%_per_mod"
     ],
     "trade_stats": null,
@@ -29137,7 +30157,7 @@
           []
         ],
         "string": "你地圖中的怪物有 {0}% 更多生命",
-        "reminder_text": "( 此詞綴不影響檢測屍體生命的東西 )",
+        "reminder_text": "（ 此詞綴不影響檢測屍體生命的東西 ）",
         "is_markup": null
       },
       {
@@ -29157,7 +30177,7 @@
           ]
         ],
         "string": "你地圖中的怪物有 {0}% 更少生命",
-        "reminder_text": "( 此詞綴不影響檢測屍體生命的東西 )",
+        "reminder_text": "（ 此詞綴不影響檢測屍體生命的東西 ）",
         "is_markup": null
       }
     ]
@@ -29193,7 +30213,7 @@
           []
         ],
         "string": "你地圖中的怪物有 {0}% 更多生命",
-        "reminder_text": "( 此詞綴不影響檢測屍體生命的東西 )",
+        "reminder_text": "（ 此詞綴不影響檢測屍體生命的東西 ）",
         "is_markup": null
       },
       {
@@ -29213,7 +30233,7 @@
           ]
         ],
         "string": "你地圖中的怪物有 {0}% 更少生命",
-        "reminder_text": "( 此詞綴不影響檢測屍體生命的東西 )",
+        "reminder_text": "（ 此詞綴不影響檢測屍體生命的東西 ）",
         "is_markup": null
       }
     ]
@@ -30297,6 +31317,78 @@
   {
     "English": null,
     "ids": [
+      "map_only_breach_hives"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你地圖中的裂痕遭遇總是巢穴",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_only_unstable_breaches"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你地圖中的裂痕遭遇總是不穩定裂痕",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "map_orb_of_chance_to_unique_item_%"
     ],
     "trade_stats": null,
@@ -31353,7 +32445,7 @@
           []
         ],
         "string": "你的地圖有 {0}% 機率含有可以透過\n輿圖天賦關閉的其他額外內容",
-        "reminder_text": "（深淵、凋落事件、裂痕（標準聯盟限定）、探險事件、戰亂事件、譫妄之鏡、礦床、祭祀神壇、聖殿密園、走私者的祕寶和通牒事件為可透過輿圖天賦關閉的額外內容）",
+        "reminder_text": "（深淵、凋落事件、裂痕、探險事件、戰亂事件、譫妄之鏡、礦床、祭祀神壇、聖殿密園、走私者的祕寶和通牒事件為可透過輿圖天賦關閉的額外內容）",
         "is_markup": null
       }
     ]
@@ -31481,7 +32573,7 @@
           []
         ],
         "string": "異能頭目有 {0}% 機率掉落 1 張征服者地圖",
-        "reminder_text": "( 異能頭目為灼烙總督、黯星、吞噬天地、無盡渴望和異界尊師 )",
+        "reminder_text": "（ 異能頭目為灼烙總督、黯星、吞噬天地、無盡渴望和異界尊師 ）",
         "is_markup": null
       }
     ]
@@ -31553,7 +32645,7 @@
           []
         ],
         "string": "你地圖中的稀有超越惡魔有 {0}% 機率掉落 1 個額外基礎通貨",
-        "reminder_text": "(基礎通貨包含非聯盟內容的任何通貨)",
+        "reminder_text": "（基礎通貨包含非聯盟內容的任何通貨）",
         "is_markup": null
       },
       {
@@ -31571,7 +32663,7 @@
           []
         ],
         "string": "你地圖中的稀有超越惡魔掉落 1 個額外基礎通貨",
-        "reminder_text": "(基礎通貨包含非聯盟內容的任何通貨)",
+        "reminder_text": "（基礎通貨包含非聯盟內容的任何通貨）",
         "is_markup": null
       }
     ]
@@ -33703,384 +34795,6 @@
   {
     "English": null,
     "ids": [
-      "scouting_report_drops_as_blighted_scouting_report_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "你地圖中掉落的偵查報告有 {0}% 機率改為掉落凋落偵查報告",
-        "reminder_text": "( 凋落偵查報告重骰全部基拉克的輿圖任務，包含至少 1 個抹油的凋落地圖 )",
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 100,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "你地圖中掉落的偵查報告改為掉落凋落偵查報告",
-        "reminder_text": "( 凋落偵查報告重骰全部基拉克的輿圖任務，包含至少 1 個抹油的凋落地圖 )",
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
-      "scouting_report_drops_as_comprehensive_scouting_report_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "你地圖中的偵查報告有 {0}% 機率改為掉落全面偵查報告",
-        "reminder_text": "( 全面偵查報告重骰全部基拉克的輿圖任務，增加含有新結果的額外任務選項 )",
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 100,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "你地圖中的偵查報告改為掉落全面偵查報告",
-        "reminder_text": "( 全面偵查報告重骰全部基拉克的輿圖任務，增加含有新結果的額外任務選項 )",
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
-      "scouting_report_drops_as_delirious_scouting_report_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "你地圖中的偵查報告有 {0}% 機率改為掉落譫妄偵查報告",
-        "reminder_text": "( 譫妄偵查報告重骰全部基拉克的輿圖任務，增加譫妄層至全部非傳奇地圖 )",
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 100,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "你地圖中的偵查報告改為掉落譫妄偵查報告",
-        "reminder_text": "( 譫妄偵查報告重骰全部基拉克的輿圖任務，增加譫妄層至全部非傳奇地圖 )",
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
-      "scouting_report_drops_as_operatives_scouting_report_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "你地圖中的偵查報告有 {0}% 機率改為掉落技工偵查報告",
-        "reminder_text": "( 技工偵查報告重骰全部基拉克的輿圖任務，增加有獎勵固定詞綴的任務 )",
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 100,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "你地圖中的偵查報告改為掉落技工偵查報告",
-        "reminder_text": "( 技工偵查報告重骰全部基拉克的輿圖任務，增加有獎勵固定詞綴的任務 )",
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
-      "scouting_report_drops_as_otherworldly_scouting_report_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "你地圖中掉落的偵查報告有 {0}% 機率改為掉落超凡偵查報告",
-        "reminder_text": "( 超凡偵查報告重骰全部基拉克的輿圖任務，包含至少 1 個裂痕石 )",
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 100,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "你地圖中掉落的偵查報告改為掉落超凡偵查報告",
-        "reminder_text": "( 超凡偵查報告重骰全部基拉克的輿圖任務，包含至少 1 個裂痕石 )",
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
-      "scouting_report_drops_as_singular_scouting_report_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "你地圖中掉落的偵查報告有 {0}% 機率改為掉落卓越偵查報告",
-        "reminder_text": "(卓越偵查報告重骰全部基拉克的輿圖任務，包含至少 1 張傳奇地圖)",
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 100,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "你地圖中掉落的偵查報告改為掉落卓越偵查報告",
-        "reminder_text": "(卓越偵查報告重骰全部基拉克的輿圖任務，包含至少 1 張傳奇地圖)",
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
-      "scouting_report_drops_as_vaal_scouting_report_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "你地圖中掉落的偵查報告有 {0}% 機率改為掉落瓦爾偵查報告",
-        "reminder_text": "(瓦爾偵查報告重骰全部基拉克的輿圖任務，汙染全部非傳奇地圖)",
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 100,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "你地圖中掉落的偵查報告改為掉落瓦爾偵查報告",
-        "reminder_text": "(瓦爾偵查報告重骰全部基拉克的輿圖任務，汙染全部非傳奇地圖)",
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
       "map_searing_exarch_altar_downside_effect_+%"
     ],
     "trade_stats": null,
@@ -34645,6 +35359,42 @@
   {
     "English": null,
     "ids": [
+      "map_shaped_region_collapses_from_different_map"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "在已塑領域中完成地圖目標時會改為使領域中的另一張不同的地圖崩毀",
+        "reminder_text": "（默認情況下，當你於幻塑界域中的地圖內完成地圖目標時，該地圖會崩毀，將自身從領域中移除。此會使所有領域中的其他地圖獲得額外詞綴。若此行為會使幻塑界域一分為二，則僅擁有較多地圖的領域區塊會被保留）",
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "map_shaper_boss_drops_X_additional_shaper_items"
     ],
     "trade_stats": null,
@@ -34727,7 +35477,7 @@
           []
         ],
         "string": "塑者和尊師守護者在初次到達 33% 生命時被治癒，並且加入 1 個友方\n友方有機率掉落他們的碎片",
-        "reminder_text": "(尊師守護者包含異界．奴役、異界．根除、異界．干擾和異界．淨化)",
+        "reminder_text": "（尊師守護者包含異界．奴役、異界．根除、異界．干擾和異界．淨化）",
         "is_markup": null
       }
     ]
@@ -34983,7 +35733,7 @@
           []
         ],
         "string": "你地圖中的神殿有 {0}% 機率為貪婪神殿",
-        "reminder_text": "對怪物，貪婪神殿的光環增加掉落物品的數量和稀有度，並減少承受傷害。對玩家，貪婪神殿的增益增加掉落物品的數量和稀有度，並增加承受傷害 )",
+        "reminder_text": "對怪物，貪婪神殿的光環增加掉落物品的數量和稀有度，並減少承受傷害。對玩家，貪婪神殿的增益增加掉落物品的數量和稀有度，並增加承受傷害 ）",
         "is_markup": null
       }
     ]
@@ -35414,7 +36164,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你的地圖含有額外 {0} 個盜賊流亡者",
+        "string": "你的地圖含有額外{0}位盜賊流亡者",
         "reminder_text": null,
         "is_markup": null
       }
@@ -35703,6 +36453,62 @@
   {
     "English": null,
     "ids": [
+      "map_strongboxes_+%_chance_to_be_artisan"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你地圖中的保險箱增加{0}%為藝術家的保險箱的機率",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "你地圖中的保險箱減少{0}%為藝術家的保險箱的機率",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "map_strongboxes_additional_pack_chance_%"
     ],
     "trade_stats": null,
@@ -35875,7 +36681,7 @@
           []
         ],
         "string": "你地圖中的保險箱有 {0}% 機率為技工的保險箱",
-        "reminder_text": "(技工的保險箱含有聖甲蟲)",
+        "reminder_text": "（技工的保險箱含有聖甲蟲）",
         "is_markup": null
       }
     ]
@@ -37924,7 +38730,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你地圖中的通牒怪物，減少 {0}% 經驗",
+        "string": "你地圖中的通牒怪物，增加 {0}% 經驗",
         "reminder_text": null,
         "is_markup": null
       },
@@ -38283,6 +39089,114 @@
   {
     "English": null,
     "ids": [
+      "map_unstable_breach_additional_x_seconds_before_collapse"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你地圖中的不穩定裂痕在計時條已滿一秒後才會崩塌",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你地圖中的不穩定裂痕在計時條已滿{0}秒後才會崩塌",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_unstable_breach_enrage_x_additional_rare_monsters"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你地圖中不穩定裂痕在穩定後會生成一隻額外稀有怪物",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你地圖中不穩定裂痕在穩定後會生成{0}隻額外稀有怪物",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "map_upgrade_vaal_side_area_chance_%"
     ],
     "trade_stats": null,
@@ -38311,7 +39225,7 @@
           []
         ],
         "string": "你地圖中的瓦爾區域有 {0}% 機率為誘人的瓦爾區域",
-        "reminder_text": "( 誘人的瓦爾區域更加危險且會掉落凡人碎片 )",
+        "reminder_text": "（ 誘人的瓦爾區域更加危險且會掉落凡人碎片 ）",
         "is_markup": null
       }
     ]
@@ -38509,7 +39423,7 @@
           []
         ],
         "string": "你地區的瓦爾區域不再被汙染",
-        "reminder_text": "( 通貨可以使用於非汙染的瓦爾區域 )",
+        "reminder_text": "（ 通貨可以使用於非汙染的瓦爾區域 ）",
         "is_markup": null
       }
     ]
@@ -39207,7 +40121,7 @@
           []
         ],
         "string": "在你的地圖中所找到之裝備物品的記憶絲縷數量\n有 {0}% 機率帶來幸運",
-        "reminder_text": "(幸運令各種隨機數值計算兩次，並取高值做為結果。)",
+        "reminder_text": "（幸運令各種隨機數值計算兩次，並取高值做為結果。）",
         "is_markup": null
       }
     ]
@@ -39513,42 +40427,6 @@
   {
     "English": null,
     "ids": [
-      "maven_invitation_awakened_gem_chance_+%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "完成釋界的試煉或擊敗釋界，增加 {0}% 機率掉落 1 顆覺醒輔助寶石",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
       "maven_invitation_item_quantity_+%"
     ],
     "trade_stats": null,
@@ -39685,7 +40563,7 @@
           []
         ],
         "string": "你地圖中掉落的非幸運地圖改為掉落基礎通貨",
-        "reminder_text": "(基礎通貨包含非聯盟內容的任何通貨)",
+        "reminder_text": "（基礎通貨包含非聯盟內容的任何通貨）",
         "is_markup": null
       }
     ]
@@ -39777,7 +40655,7 @@
           []
         ],
         "string": "你地圖中的稀有怪物有 {0}% 機率掉落 1 個額外基礎通貨",
-        "reminder_text": "(基礎通貨包含非聯盟內容的任何通貨)",
+        "reminder_text": "（基礎通貨包含非聯盟內容的任何通貨）",
         "is_markup": null
       }
     ]
@@ -40165,42 +41043,6 @@
   {
     "English": null,
     "ids": [
-      "sirus_additional_awakened_gem_drop_chance_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional_Chinese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "賽勒斯有 {0}% 機率掉落 1 顆覺醒輔助寶石",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
       "small_atlas_passive_effect_+%"
     ],
     "trade_stats": null,
@@ -40229,7 +41071,7 @@
           []
         ],
         "string": "增加 {0}% 小輿圖天賦的效果",
-        "reminder_text": "( 非核心、關鍵或崎點輿圖天賦就是小天賦 )",
+        "reminder_text": "（ 非核心、關鍵或崎點輿圖天賦就是小天賦 ）",
         "is_markup": null
       },
       {
@@ -40249,7 +41091,7 @@
           ]
         ],
         "string": "減少 {0}% 小輿圖天賦的效果",
-        "reminder_text": "( 非核心、關鍵或崎點輿圖天賦就是小天賦 )",
+        "reminder_text": "（ 非核心、關鍵或崎點輿圖天賦就是小天賦 ）",
         "is_markup": null
       }
     ]
@@ -40446,7 +41288,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你地圖中掉落的聖甲蟲為深淵聖甲蟲的機率增加 {0}%",
+        "string": "你地圖中掉落的聖甲蟲為聖甲蟲：深淵的機率增加 {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -40482,7 +41324,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你地圖中掉落的聖甲蟲為混亂聖甲蟲的機率增加 {0}%",
+        "string": "你地圖中掉落的聖甲蟲為聖甲蟲：混亂的機率增加 {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -40518,7 +41360,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你地圖中掉落的聖甲蟲為獸獵聖甲蟲的機率增加 {0}%",
+        "string": "你地圖中掉落的聖甲蟲為聖甲蟲：獸獵的機率增加 {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -40554,7 +41396,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你地圖中掉落的聖甲蟲為反叛聖甲蟲的機率增加 {0}%",
+        "string": "你地圖中掉落的聖甲蟲為聖甲蟲：反叛的機率增加 {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -40590,7 +41432,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你地圖中掉落的聖甲蟲為超越聖甲蟲的機率增加 {0}%",
+        "string": "你地圖中掉落的聖甲蟲為聖甲蟲：超越的機率增加 {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -40626,7 +41468,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你地圖中掉落的聖甲蟲為凋落聖甲蟲的機率增加 {0}%",
+        "string": "你地圖中掉落的聖甲蟲為聖甲蟲：凋落的機率增加 {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -40662,7 +41504,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你地圖中掉落的聖甲蟲為裂痕聖甲蟲的機率增加 {0}%",
+        "string": "你地圖中掉落的聖甲蟲為聖甲蟲：裂痕的機率增加 {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -40698,7 +41540,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你地圖中掉落的聖甲蟲為譫妄聖甲蟲的機率增加 {0}%",
+        "string": "你地圖中掉落的聖甲蟲為聖甲蟲：譫妄的機率增加 {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -40770,7 +41612,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你地圖中掉落的聖甲蟲為命運聖甲蟲的機率增加 {0}%",
+        "string": "你地圖中掉落的聖甲蟲為聖甲蟲：命運的機率增加 {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -40806,7 +41648,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你地圖中掉落的聖甲蟲為支配聖甲蟲的機率增加 {0}%",
+        "string": "你地圖中掉落的聖甲蟲為聖甲蟲：支配的機率增加 {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -40842,7 +41684,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你地圖中掉落的聖甲蟲為精髓聖甲蟲的機率增加 {0}%",
+        "string": "你地圖中掉落的聖甲蟲為聖甲蟲：精髓的機率增加 {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -40878,7 +41720,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你地圖中掉落的聖甲蟲為探險聖甲蟲的機率增加 {0}%",
+        "string": "你地圖中掉落的聖甲蟲為聖甲蟲：探險的機率增加 {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -40950,7 +41792,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你地圖中掉落的聖甲蟲為豐收聖甲蟲的機率增加 {0}%",
+        "string": "你地圖中掉落的聖甲蟲為聖甲蟲：豐收的機率增加 {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -40986,7 +41828,43 @@
         "index_handlers": [
           []
         ],
-        "string": "你地圖中掉落的聖甲蟲為穿越聖甲蟲的機率增加 {0}%",
+        "string": "你地圖中掉落的聖甲蟲為聖甲蟲：穿越的機率增加 {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_influence_scarab_more_likely_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "增加{0}%你地圖中掉落的聖甲蟲為勢力聖甲蟲的機率",
         "reminder_text": null,
         "is_markup": null
       }
@@ -46506,32 +47384,7 @@
     "ids": [
       "map_hidden_spawn_extra_exiles"
     ],
-    "trade_stats": [
-      {
-        "id": "enchant.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "enchant",
-        "option": null
-      },
-      {
-        "id": "explicit.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "explicit",
-        "option": null
-      },
-      {
-        "id": "fractured.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "fractured",
-        "option": null
-      },
-      {
-        "id": "implicit.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "implicit",
-        "option": null
-      }
-    ],
+    "trade_stats": null,
     "hidden": true,
     "French": null,
     "German": null,

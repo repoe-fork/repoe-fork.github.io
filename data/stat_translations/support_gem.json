@@ -3864,7 +3864,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Supported Skills have {0}% increased duration",
+        "string": "Supported Skills have {0}% increased Mine Duration",
         "reminder_text": null,
         "is_markup": null
       },
@@ -3884,7 +3884,7 @@
             "negate"
           ]
         ],
-        "string": "Supported Skills have {0}% reduced duration",
+        "string": "Supported Skills have {0}% reduced Mine Duration",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4383,6 +4383,60 @@
     ],
     "ids": [
       "projectiles_fork"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Poisoning non-Poisoned Enemies with Supported Skills inflicts an additional Poison",
+        "reminder_text": "(Poison deals Chaos Damage over time, based on the base Physical and Chaos Damage of the Skill. Multiple instances of Poison stack)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Poisoning non-Poisoned Enemies with Supported Skills inflicts {0} additional Poisons",
+        "reminder_text": "(Poison deals Chaos Damage over time, based on the base Physical and Chaos Damage of the Skill. Multiple instances of Poison stack)",
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "additional_poisons_+_to_apply_vs_non_poisoned_enemies"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -5722,6 +5776,62 @@
     ],
     "ids": [
       "support_ignite_prolif_ignite_damage_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Supported Skills deal {0}% more Damage with Poison",
+        "reminder_text": "(Poison deals Chaos Damage over time, based on the base Physical and Chaos Damage of the Skill. Multiple instances of Poison stack)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Supported Skills deal {0}% less Damage with Poison",
+        "reminder_text": "(Poison deals Chaos Damage over time, based on the base Physical and Chaos Damage of the Skill. Multiple instances of Poison stack)",
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "support_lethal_dose_poison_damage_+%_final"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -9322,6 +9432,46 @@
           }
         ],
         "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds"
+          ]
+        ],
+        "string": "Innervation lasts {0} second",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds"
+          ]
+        ],
+        "string": "Innervation lasts {0} seconds",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
           "#"
         ],
         "index_handlers": [
@@ -10430,6 +10580,98 @@
       {
         "condition": [
           {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Hits with Supported Skills for which the highest Damage Type is Lightning, Physical or Chaos cause you to gain 25 Unholy Resonance of the other types per second for 2 seconds\nLose 5 Unholy Resonance per second of each type you are not gaining",
+        "reminder_text": "(Maximum 50 Unholy Resonance of each type. Unholy Resonance types are Lightning, Physical and Chaos)",
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "gain_unholy_resonance_of_majority_damage_on_hit_for_2_seconds"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Supported Skills deal {0}% more Damage per 10 of lowest Unholy Resonance",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Supported Skills deal {0}% less Damage per 10 of lowest Unholy Resonance",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "damage_+%_final_per_10_lowest_unholy_resonance"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
             "min": 1,
             "max": null,
             "negated": null
@@ -10504,6 +10746,114 @@
     ],
     "ids": [
       "damage_penetrates_%_elemental_resistances_while_all_resonance_is_25"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Supported Skills have {0}% chance to ignore Enemy Lightning and Chaos Resistance while each Unholy Resonance is at least 25",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Supported Skills ignore Enemy Lightning and Chaos Resistance while each Unholy Resonance is at least 25",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "hits_ignore_enemy_monster_lightning_and_chaos_resistance_%_chance_while_all_unholy_resonance_is_25"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Supported Skills have {0}% chance to ignore Enemy Physical Damage Reduction while each Unholy Resonance is at least 25",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Supported Skills ignore Enemy Physical Damage Reduction while each Unholy Resonance is at least 25",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "hits_ignore_enemy_monster_physical_damage_reduction_%_chance_while_all_unholy_resonance_is_25"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -10990,6 +11340,44 @@
           }
         ],
         "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "Gain a stack of Overloaded Intensity for {0} seconds after\nlosing 6 Intensity with Supported Skills",
+        "reminder_text": "(Maximum of 3 Overloaded Intensity. Gaining Overloaded Intensity refreshes the duration of existing stacks of Overloaded Intensity)",
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "gain_overloaded_intensity_for_x_ms_after_losing_6_intensity"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
           "+#"
         ],
         "index_handlers": [
@@ -11372,6 +11760,44 @@
     ],
     "ids": [
       "additional_chance_to_freeze_chilled_enemies_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          [
+            "divide_by_one_hundred"
+          ]
+        ],
+        "string": "Supported Skills have {0}% to Critical Strike Chance per Overloaded Intensity",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "additional_critical_strike_chance_per_overloaded_intensity"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -13298,6 +13724,44 @@
           }
         ],
         "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Supported Skills have {0}% increased Cooldown Recovery Rate",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Supported Skills have {0}% reduced Cooldown Recovery Rate",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
           "#"
         ],
         "index_handlers": [
@@ -14756,6 +15220,60 @@
       {
         "condition": [
           {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Supported Skills can Cast an additional Brand",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Supported Skills can Cast {0} additional Brands",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "base_total_number_of_sigils_allowed"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
             "min": null,
             "max": null,
             "negated": null
@@ -15034,6 +15552,62 @@
     ],
     "ids": [
       "burn_damage_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Supported Skills deal {0}% more Spell Damage",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Supported Skills deal {0}% less Spell Damage",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "cast_on_ward_break_damage_+%_final"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -15391,7 +15965,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Projectiles from Supported Skills have {0}% chance for an additional Projectile when Forking",
+        "string": "Projectiles from Supported Skills have {0}% chance for an additional\nProjectile when Forking",
         "reminder_text": null,
         "is_markup": null
       }
@@ -15578,8 +16152,8 @@
       {
         "condition": [
           {
-            "min": null,
-            "max": null,
+            "min": 1,
+            "max": 99,
             "negated": null
           }
         ],
@@ -15590,6 +16164,24 @@
           []
         ],
         "string": "Hexes applied by Supported Curse Skills have {0}% chance to affect Hexproof Enemies",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Hexes applied by Supported Curse Skills affect Hexproof Enemies",
         "reminder_text": null,
         "is_markup": null
       }
@@ -16236,6 +16828,228 @@
       {
         "condition": [
           {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "Supported Warcries create Consecrated Ground lasting {0} second",
+        "reminder_text": "(Allies on your Consecrated Ground Regenerate a percentage of their Maximum Life per second, and Curses have 50% reduced effect on them)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "Supported Warcries create Consecrated Ground lasting {0} seconds",
+        "reminder_text": "(Allies on your Consecrated Ground Regenerate a percentage of their Maximum Life per second, and Curses have 50% reduced effect on them)",
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "consecrated_cry_consecrated_ground_duration_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Supported Warcries have {0}% more Area of Effect",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Supported Warcries have {0}% less Area of Effect",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "consecrated_cry_warcry_area_of_effect_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% increased Cooldown Recovery Rate if used while no Enemies are in your Presence",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% decreased Cooldown Recovery Rate if used while no Enemies are in your Presence",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "cooldown_recovery_rate_+%_if_no_enemies_in_your_presence"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Supported Spells have {0}% increased Cooldown Recovery Rate per 100 Ward",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Supported Spells have {0}% decreased Cooldown Recovery Rate per 100 Ward",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "cooldown_recovery_rate_+%_per_100_ward"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
             "min": 1,
             "max": null,
             "negated": null
@@ -16418,6 +17232,42 @@
     ],
     "ids": [
       "critical_strike_chance_+%_vs_blinded_enemies"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Supported Skills have {0}% to Critical Strike Multiplier per Overloaded Intensity",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "critical_strike_multiplier_+_per_overloaded_intensity"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -17666,6 +18516,42 @@
       {
         "condition": [
           {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Minions from Supported Skills take {0}% of Hit Damage from their Life before\nyou if they are your only Minion",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "damage_removed_from_minions_before_life_or_es_%_if_only_one_minion"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
             "min": 1,
             "max": null,
             "negated": null
@@ -18458,6 +19344,136 @@
       {
         "condition": [
           {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "Supported Skills Excommunicate Enemies on Melee Hit for {0} second",
+        "reminder_text": "(Excommunicated Enemies cannot deal Chaos Damage)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "Supported Skills Excommunicate Enemies on Melee Hit for {0} seconds",
+        "reminder_text": "(Excommunicated Enemies cannot deal Chaos Damage)",
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "excommunicate_on_melee_attack_hit_for_X_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Killing Blows with Supported Skills cause Enemies to have {0}% chance to Explode, dealing a tenth of their maximum Life as Damage of a Random Element",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Killing Blows with Supported Skills cause Enemies to have a {0}% chance to Explode, dealing a tenth of their maximum Life as Damage of a Random Element",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Killing Blows with Supported Skills cause Enemies to Explode, dealing a tenth of their maximum Life as Damage of a Random Element",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "explode_enemies_for_10%_life_as_random_element_on_killing_blow_chance_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
             "min": null,
             "max": null,
             "negated": null
@@ -18900,6 +19916,98 @@
       {
         "condition": [
           {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Supported Skills gain Added Cold Damage equal to {0}% of Reserved Maximum Mana",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Supported Skills lose Added Cold Damage equal to {0}% of Reserved Maximum Mana",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "frostmage_gain_cold_damage_%_of_max_reserved_mana"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Supported Skills gain Base Mana Cost equal to {0}% of Reserved Maximum Mana",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "frostmage_cost_equals_%_reserved_mana"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
             "min": null,
             "max": null,
             "negated": null
@@ -18987,6 +20095,60 @@
     ],
     "ids": [
       "gain_1_rage_on_use_%_chance"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Gain {0} Gluttony on casting Supported Spells",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Gain {0} Gluttony on casting Supported Spells",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "gain_X_wildshard_stacks_on_cast"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -19341,13 +20503,31 @@
           }
         ],
         "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Supported Skills have {0}% chance to cause Monsters to Flee on Hit",
+        "reminder_text": "(Magic monsters have 50% chance to avoid fleeing. Rare and Unique monsters cannot flee)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
           "#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "Supported Skills have {0}% chance to Cause Monsters to Flee",
-        "reminder_text": null,
+        "string": "Supported Skills have {0}% chance to cause Monsters to Flee on Hit",
+        "reminder_text": "(Magic monsters have 50% chance to avoid fleeing. Rare and Unique monsters cannot flee)",
         "is_markup": null
       }
     ],
@@ -19694,6 +20874,98 @@
         "index_handlers": [
           []
         ],
+        "string": "{0}% increased magnitude of Hallowing Flame inflicted by Supported Skills",
+        "reminder_text": "(Attacks made against Enemies affected by Hallowing Flame gain 25% of Physical Damage as Extra Fire Damage.\r\nHallowing Flame is removed once an Attack that benefits from this Damage as Extra is successfully made.\r\nHallowing Flame lasts for six seconds and cannot benefit the one who inflicted it)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "{0}% reduced magnitude of Hallowing Flame inflicted by Supported Skills",
+        "reminder_text": "(Attacks made against Enemies affected by Hallowing Flame gain 25% of Physical Damage as Extra Fire Damage.\r\nHallowing Flame is removed once an Attack that benefits from this Damage as Extra is successfully made.\r\nHallowing Flame lasts for six seconds and cannot benefit the one who inflicted it)",
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "hallowing_flame_magnitude_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Supported Herald Skills have no Buff Effect",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "herald_no_buff_effect"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
         "string": "Supported Skills have {0}% increased Hex Transfer range",
         "reminder_text": null,
         "is_markup": null
@@ -19721,6 +20993,100 @@
     ],
     "ids": [
       "hex_transfer_on_death_range_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds"
+          ]
+        ],
+        "string": "Cursed Ground from Supported Skills Triggers Bursting Toad every {0} second",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds"
+          ]
+        ],
+        "string": "Cursed Ground from Supported Skills Triggers Bursting Toad every {0} seconds",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "hex_zone_trigger_hextoad_every_x_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Enemies affected by Hexes from Supported Curse Skills cannot deal Critical Strikes",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "hexed_enemies_cannot_deal_critical_strikes"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -19945,6 +21311,42 @@
     ],
     "ids": [
       "hit_damage_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Hits froms Supported Skills cannot kill Enemies",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "hits_cannot_kill_enemies"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -20275,6 +21677,60 @@
       {
         "condition": [
           {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Supported Skills have {0}% chance to inflict Hallowing Flame on Melee Hit",
+        "reminder_text": "(Attacks made against Enemies affected by Hallowing Flame gain 25% of Physical Damage as Extra Fire Damage.\r\nHallowing Flame is removed once an Attack that benefits from this Damage as Extra is successfully made.\r\nHallowing Flame lasts for six seconds and cannot benefit the one who inflicted it)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Supported Skills inflict Hallowing Flame on Melee Hit",
+        "reminder_text": "(Attacks made against Enemies affected by Hallowing Flame gain 25% of Physical Damage as Extra Fire Damage.\r\nHallowing Flame is removed once an Attack that benefits from this Damage as Extra is successfully made.\r\nHallowing Flame lasts for six seconds and cannot benefit the one who inflicted it)",
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "inflict_hallowing_flame_on_melee_hit_chance_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
             "min": null,
             "max": null,
             "negated": null
@@ -20443,6 +21899,60 @@
     ],
     "ids": [
       "number_of_warcries_exerting_this_action"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Kill Normal and Magic Rarity Enemies that have {0}% Life or\nlower when Hit by Supported Skills",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Kill Normal and Magic Rarity Enemies that have {0}% Life or\nlower when Hit by Supported Skills",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "kill_normal_or_magic_enemy_on_hit_if_under_x%_life"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -22072,6 +23582,62 @@
         "index_handlers": [
           []
         ],
+        "string": "Minions from Supported Skills have {0}% increased Area of Effect",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Minions from Supported Skills have {0}% reduced Area of Effect",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "minion_area_of_effect_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
         "string": "Supported Skills have {0}% increased Minion Attack Speed",
         "reminder_text": null,
         "is_markup": null
@@ -22431,6 +23997,78 @@
     ],
     "ids": [
       "minion_critical_strike_chance_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Minions from Supported Skills have {0}% increased Critical Strike Chance for each time you've Critically Struck recently with an Attack, up to 200%",
+        "reminder_text": "(Recently refers to the past 4 seconds)",
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "minion_critical_strike_chance_+%_per_attack_crit_recently_up_to_100"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Minions from Supported Skills have {0}% to Critical Strike Multiplier for each time you've Critically Struck recently with an Attack, up to +100%",
+        "reminder_text": "(Recently refers to the past 4 seconds)",
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "minion_critical_strike_multiplier_+_per_attack_crit_recently_up_to_100"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -23719,6 +25357,94 @@
       {
         "condition": [
           {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ],
+          []
+        ],
+        "string": "On reaching {0} Gluttony, lose all Gluttony and gain Disgorge for {1} second",
+        "reminder_text": "(You cannot gain Gluttony while you have Disgorge)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ],
+          []
+        ],
+        "string": "On reaching {0} Gluttony, lose all Gluttony and gain Disgorge for {1} seconds",
+        "reminder_text": "(You cannot gain Gluttony while you have Disgorge)",
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "on_reaching_x_wildshard_stacks_gain_disgorge",
+      "support_gluttony_base_disgorge_buff_duration_ms",
+      "support_gluttony_disgorge_buff_duration_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
             "min": 1,
             "max": null,
             "negated": null
@@ -24103,6 +25829,42 @@
     ],
     "ids": [
       "%_chance_to_gain_power_charge_on_trap_triggered_by_an_enemy"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Supported Skills gain {0}% of Physical Damage as Extra Chaos Damage per Keystone",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "physical_damage_%_to_add_as_chaos_per_keystone"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -24661,6 +26423,42 @@
     ],
     "ids": [
       "projectiles_pierce_all_targets_in_x_range"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "A nearby Minion gains a Soul for every {0} Life you spend on Upfront\nCosts with Supported Spells",
+        "reminder_text": "(Upfront Costs are all Costs that are not paid per-second)",
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "random_nearby_minion_gain_a_soul_eater_soul_on_X_life_spent"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -25496,6 +27294,62 @@
         "index_handlers": [
           []
         ],
+        "string": "Supported Skills have {0}% increased Cost per Keystone",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Supported Skills have {0}% reduced Cost per Keystone",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "skill_cost_+%_per_keystone"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
         "string": "{0}% increased Duration of Supported Skills and Damaging Ailments they inflict",
         "reminder_text": "(Ailments that deal Damage are Bleeding, Ignited, and Poisoned)",
         "is_markup": null
@@ -25843,6 +27697,42 @@
     ],
     "ids": [
       "skill_used_by_sacred_wisp_damage_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Supported Skills Sacrifice all but 1 of your Life and Energy Shield on Use",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "skills_sacrifice_all_but_one_life_and_energy_shield_on_use"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -26569,6 +28459,42 @@
       {
         "condition": [
           {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Sentinels Summoned from Supported Skills have a Templar Aura",
+        "reminder_text": "(Templar Auras have one of the following effects:\r\n- Gain 15% of Physical Damage as Extra Fire Damage\r\n- Gain 15% of Physical Damage as Extra Lightning Damage\r\n- Regenerate 1.5% of Life per second\r\n- 30% increased Mana Regeneration Rate\r\n- +23% to Chaos Resistance\r\n- 50% reduced Effect of Curses on you)",
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "summoned_sentinels_have_random_templar_aura"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
             "min": 1,
             "max": 1,
             "negated": null
@@ -27086,6 +29012,60 @@
         "condition": [
           {
             "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Enemies have Malignant Madness if they have been in Auras from Supported Skills for more than {0} second",
+        "reminder_text": "(Malignant Madness reduces Damage and Action Speed by 10%)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Enemies have Malignant Madness if they have been in Auras from Supported Skills for more than {0} seconds",
+        "reminder_text": "(Malignant Madness reduces Damage and Action Speed by 10%)",
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "support_blasphemy_enemies_gain_malignant_madness_if_in_aura_for_x_seconds"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
             "max": null,
             "negated": null
           }
@@ -27123,6 +29103,140 @@
     ],
     "ids": [
       "support_blood_thirst_damage_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "Supported Banners inflict Corrupted Blood every second to enemies within their area",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "Supported Banners inflict Corrupted Blood every {0} seconds to enemies within their area",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "support_bloodstained_banner_apply_corrupted_blood_every_x_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "per_minute_to_per_second"
+          ]
+        ],
+        "string": "Corrupted Blood inflicted by Supported Banners deals {0} base Physical Damage per second per Valour consumed",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "support_bloodstained_banner_corrupted_blood_base_physical_damage_to_deal_per_minute_per_valour"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "Corrupted Blood inflicted by Supported Banners has a Base Duration of {0} seconds",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "support_bloodstained_banner_apply_corrupted_blood_duration_ms"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -27420,6 +29534,60 @@
         "condition": [
           {
             "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Supported Skills have {0}% chance to Trigger Call the Pyre on Melee Hit against Ignited Enemies",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Supported Skills Trigger Call the Pyre on Melee Hit against Ignited Enemies",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "support_call_the_pyre_chance_to_trigger_call_the_pyre_on_melee_hit_vs_ignited_enemies_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
             "max": null,
             "negated": null
           }
@@ -27513,6 +29681,62 @@
     ],
     "ids": [
       "support_cast_while_channelling_triggered_skill_non_damaging_ailment_effect_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Supported Skills Chain {0}% more times",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Supported Skills Chain {0}% less times",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "support_chain_count_+%_final"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -27681,6 +29905,62 @@
     ],
     "ids": [
       "support_clustertrap_damage_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Minions from Supported Skills have {0}% more maximum Life if they are your only Minion",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Minions from Supported Skills have {0}% less maximum Life if they are your only Minion",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "support_companionship_minion_maximum_life_+%_final_if_at_most_one_minion"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -28255,6 +30535,64 @@
       {
         "condition": [
           {
+            "min": 1000,
+            "max": 1000,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "Supported Skills Excommunicate Enemies on Melee Hit for {0} second",
+        "reminder_text": "(Excommunicated Enemies cannot deal Chaos Damage)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds_2dp_if_required"
+          ]
+        ],
+        "string": "Supported Skills Excommunicate Enemies on Melee Hit for {0} seconds",
+        "reminder_text": "(Excommunicated Enemies cannot deal Chaos Damage)",
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "support_excommunicate_on_melee_attack_hit_for_X_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
             "min": 1,
             "max": null,
             "negated": null
@@ -28479,6 +30817,60 @@
     ],
     "ids": [
       "support_faster_ailments_ailment_duration_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Supported Skills have {0}% chance to Trigger Fissure on Slam impact",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Supported Skills Trigger Fissure on Slam impact",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "support_fissure_trigger_fissure_on_slam_skill_impact_chance_%"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -28868,6 +31260,60 @@
         "condition": [
           {
             "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "While you have Disgorge Supported Spells fire Projectiles in a circle\nWhile you have Disgorge Supported Spells fire an additional Projectile",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "While you have Disgorge Supported Spells fire Projectiles in a circle\nWhile you have Disgorge Supported Spells fire {0} additional Projectiles",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "support_gluttony_fire_x_additional_projectiles_in_nova_while_affected_by_disgorge"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
             "max": null,
             "negated": null
           }
@@ -28905,6 +31351,118 @@
     ],
     "ids": [
       "support_greater_projectile_intensity_projectile_damage_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Supported Skills have {0}% increased Area of Effect per Repeat",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Supported Skills have {0}% reduced Area of Effect per Repeat",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "support_greater_spell_echo_area_of_effect_+%_per_repeat"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Supported Skills deal {0}% more Spell Damage per Repeat",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Supported Skills deal {0}% less Spell Damage per Repeat",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "support_greater_spell_echo_spell_damage_+%_final_per_repeat"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -28979,6 +31537,42 @@
     ],
     "ids": [
       "support_guardians_blessing_minion_physical_damage_%_of_maximum_life_and_ES_taken_per_minute"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Supported Skills inflict Hallowing Flame on Melee Hit",
+        "reminder_text": "(Attacks made against Enemies affected by Hallowing Flame gain 25% of Physical Damage as Extra Fire Damage.\r\nHallowing Flame is removed once an Attack that benefits from this Damage as Extra is successfully made.\r\nHallowing Flame lasts for six seconds and cannot benefit the one who inflicted it)",
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "support_hallow_inflict_hallowing_flame_on_melee_hit"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -29145,6 +31739,96 @@
     ],
     "ids": [
       "support_innervate_chance_to_gain_buff_on_shock_vs_unique_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Supported Skills deal {0}% more Damage for each second they have been placed before triggering, up to 100%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "support_invention_trap_and_mine_damage_+%_final_per_second_placed_up_to_100"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Supported Skills have {0}% chance to Trigger Kinetic Flux on Critical Strike",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Supported Skills Trigger Kinetic Flux on Critical Strike",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "support_kinetic_instability_chance_to_create_instability_on_critical_strike_%"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -30477,6 +33161,44 @@
       {
         "condition": [
           {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "divide_by_ten_1dp_if_required"
+          ]
+        ],
+        "string": "Supported Spells Sacrifice a random nearby Damageable Minion on Cast to gain added Physical Damage equal to {0}% of Sacrificed Minion's Life",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "support_minion_pact_sacrifice_nearby_damageable_minion_to_gain_permillage_of_max_life_as_physical_damage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
             "min": 1,
             "max": null,
             "negated": null
@@ -31006,6 +33728,62 @@
     ],
     "ids": [
       "support_momentum_movement_speed_+%_per_stack_removed"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Supported Skills consume all Fortification on use, dealing {0}% more Damage with\nAilments per 3 Fortification consumed",
+        "reminder_text": "(Ailments that deal Damage are Bleeding, Ignited, and Poisoned)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Supported Skills consume all Fortification on use, dealing {0}% less Damage with\nAilments per 3 Fortification consumed",
+        "reminder_text": "(Ailments that deal Damage are Bleeding, Ignited, and Poisoned)",
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "support_overheat_ailment_damage_+%_final_per_3_fortification_consumed"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -34292,6 +37070,168 @@
         "condition": [
           {
             "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Supported Brands have {0}% chance to Trigger Foulgrasp when they are Recalled",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Supported Brands Trigger Foulgrasp when they are Recalled",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "support_trigger_enervating_grasp_on_supported_brand_recall_chance_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Supported Offerings have {0}% chance to Trigger Summon Hiveborn when used",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Supported Offerings Trigger Summon Hiveborn when used",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "support_trigger_great_avalanche_on_offering_chance_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Supported Warcries have {0}% chance to Trigger Seize the Flesh on use",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Supported Warcries Trigger Seize the Flesh on use",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "support_trigger_seize_the_flesh_on_warcry_chance_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
             "max": 1,
             "negated": null
           }
@@ -34412,6 +37352,100 @@
         "index_handlers": [
           []
         ],
+        "string": "{0}% more maximum number of Minions from Supported Skills",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "{0}% less maximum number of Minions from Supported Skills",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "support_undead_army_minion_maximum_count_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "per_minute_to_per_second"
+          ]
+        ],
+        "string": "Using Supported Vaal Skills inflicts Vaal Temptation on you dealing {0} Physical Damage per Second, instead of applying Soul Gain Prevention",
+        "reminder_text": "(Vaal Temptation lasts for the duration that Soul Gain Prevention would have applied and can stack)",
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "support_vaal_temptation_physical_damage_taken_per_minute_instead_of_soul_gain_prevention"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
         "string": "Supported Skills deal {0}% more Physical Damage",
         "reminder_text": null,
         "is_markup": null
@@ -34495,6 +37529,42 @@
     ],
     "ids": [
       "support_vicious_projectiles_chaos_damage_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Supported Skills Trigger Voidstorm when impacting the ground\nVoidstorms cannot be Triggered within 3 metres of you",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "support_voidstorm_trigger_voidstorm_on_rain_skill_impact"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -35021,6 +38091,42 @@
     ],
     "ids": [
       "transfer_hexes_to_X_nearby_enemies_on_kill"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Supported Skills have {0}% increased Area of Effect for each second they have been placed before triggering, up to 100%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "trap_and_mine_area_of_effect_+%_per_second_placed_up_to_100"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -35774,6 +38880,60 @@
         "condition": [
           {
             "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Hits from Supported Skills have {0}% chance to treat Enemy Monster Elemental Resistance values as inverted",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Hits from Supported Skills treat Enemy Monster Elemental Resistance values as inverted",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "treat_enemy_resistances_as_negated_on_elemental_damage_hit_%_chance"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
             "max": null,
             "negated": null
           }
@@ -35912,6 +39072,60 @@
         "index_handlers": [
           []
         ],
+        "string": "{0}% chance to Trigger this Supported Spell when your Ward Breaks",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Trigger Supported Spells when your Ward Breaks",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "trigger_on_ward_break_%_chance"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
         "string": "Supported Skills have a {0}% chance to Trigger Prismatic Burst on Hit",
         "reminder_text": null,
         "is_markup": null
@@ -35937,6 +39151,42 @@
     ],
     "ids": [
       "trigger_prismatic_burst_on_hit_%_chance"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Supported Skills Trigger Rings of Light on Melee Hit",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "trigger_rings_of_light_on_melee_hit"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -36336,6 +39586,62 @@
       {
         "condition": [
           {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Supported Warcries have {0}% increased Cooldown Recovery Rate",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Supported Warcries have {0}% reduced Cooldown Recovery Rate",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "warcry_cooldown_speed_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
             "min": null,
             "max": null,
             "negated": null
@@ -36558,6 +39864,64 @@
     ],
     "ids": [
       "you_and_enemy_movement_velocity_+%_while_affected_by_ailment_you_inflicted"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          [
+            "divide_by_ten_1dp_if_required"
+          ]
+        ],
+        "string": "Consuming a Corpse with Supported Skills has {0}% chance to grant a Soul per Power",
+        "reminder_text": "(Each soul grants 5% increased Attack and Cast speed. You lose 1 soul every 0.5 seconds if you have not eaten any souls Recently. Maximum of 45 souls consumed)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "divide_by_ten_1dp_if_required"
+          ]
+        ],
+        "string": "Consuming a Corpse with Supported Skills has {0}% chance to grant a Soul per Power",
+        "reminder_text": "(Each soul grants 5% increased Attack and Cast speed. You lose 1 soul every 0.5 seconds if you have not eaten any souls Recently. Maximum of 45 souls consumed)",
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "killing_blow_consumes_corpse_chance_to_gain_soul_per_power_permillage"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -42096,32 +45460,7 @@
     "ids": [
       "map_hidden_spawn_extra_exiles"
     ],
-    "trade_stats": [
-      {
-        "id": "enchant.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "enchant",
-        "option": null
-      },
-      {
-        "id": "explicit.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "explicit",
-        "option": null
-      },
-      {
-        "id": "fractured.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "fractured",
-        "option": null
-      },
-      {
-        "id": "implicit.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "implicit",
-        "option": null
-      }
-    ],
+    "trade_stats": null,
     "hidden": true,
     "French": null,
     "German": null,

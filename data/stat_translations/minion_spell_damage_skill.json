@@ -722,7 +722,7 @@
           []
         ],
         "string": "This Spell and Minions have {0}% chance to cause Monsters to Flee on Hit",
-        "reminder_text": null,
+        "reminder_text": "(Magic monsters have 50% chance to avoid fleeing. Rare and Unique monsters cannot flee)",
         "is_markup": null
       }
     ],
@@ -1304,6 +1304,116 @@
     ],
     "ids": [
       "support_ignite_proliferation_radius"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "This Spell and Minions that Poison non-Poisoned Enemies inflict an additional Poison",
+        "reminder_text": "(Poison deals Chaos Damage over time, based on the base Physical and Chaos Damage of the Skill. Multiple instances of Poison stack)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "This Spell and Minions that Poison non-Poisoned Enemies inflict {0} additional Poisons",
+        "reminder_text": "(Poison deals Chaos Damage over time, based on the base Physical and Chaos Damage of the Skill. Multiple instances of Poison stack)",
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "additional_poisons_+_to_apply_vs_non_poisoned_enemies"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "This Spell and Minions deal {0}% more Damage with Poison",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "This Spell and Minions deal {0}% less Damage with Poison",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "support_lethal_dose_poison_damage_+%_final"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -1960,6 +2070,44 @@
     ],
     "ids": [
       "base_poison_duration_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          [
+            "divide_by_one_hundred"
+          ]
+        ],
+        "string": "This Spell and Minions have {0}% to Critical Strike Chance",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "additional_base_critical_strike_chance"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -2964,6 +3112,60 @@
         "condition": [
           {
             "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "This Spell and Minion's Killing Blows cause Enemies to have a {0}% chance to Explode, dealing a tenth of their maximum Life as Damage of a Random Element",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "This Spell and Minion's Killing Blows cause Enemies to Explode, dealing a tenth of their maximum Life as Damage of a Random Element",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "explode_enemies_for_10%_life_as_random_element_on_killing_blow_chance_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
             "max": null,
             "negated": null
           }
@@ -2981,6 +3183,42 @@
     ],
     "ids": [
       "gain_power_charge_on_kill_with_hit_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "This Spell and Minion Hits cannot kill Enemies",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "hits_cannot_kill_enemies"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -3089,6 +3327,42 @@
     ],
     "ids": [
       "inflict_all_exposure_on_hit"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Your Spells and Minions kill Normal and Magic Rarity Enemies that have {0}% Life or lower when Hit",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "kill_normal_or_magic_enemy_on_hit_if_under_x%_life"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -4065,6 +4339,60 @@
     ],
     "ids": [
       "support_withered_base_duration_ms"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional_Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Hits from this Spell and Minions have {0}% chance to treat Enemy Monster Elemental Resistance values as inverted",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Hits from this Spell and Minions treat Enemy Monster Elemental Resistance values as inverted",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "treat_enemy_resistances_as_negated_on_elemental_damage_hit_%_chance"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -9395,32 +9723,7 @@
     "ids": [
       "map_hidden_spawn_extra_exiles"
     ],
-    "trade_stats": [
-      {
-        "id": "enchant.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "enchant",
-        "option": null
-      },
-      {
-        "id": "explicit.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "explicit",
-        "option": null
-      },
-      {
-        "id": "fractured.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "fractured",
-        "option": null
-      },
-      {
-        "id": "implicit.stat_3550168289",
-        "text": "Area is inhabited by # additional Rogue Exile",
-        "type": "implicit",
-        "option": null
-      }
-    ],
+    "trade_stats": null,
     "hidden": true,
     "French": null,
     "German": null,
