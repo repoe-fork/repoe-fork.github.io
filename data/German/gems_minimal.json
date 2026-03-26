@@ -2027,6 +2027,161 @@
   },
   {
     "active_skill": {
+      "description": "Schwingt einen Zweihand-Streitkolben oder einen Stab im Kreis und beschwört heilige Hämmer herab, die zufällig auf einer Anzahl von Gegnern landen. Den Treffern dieser heiligen Hämmer kann nicht ausgewichen werden.",
+      "display_name": "Heiliger Rundumschlag der Hammereinschläge",
+      "id": "sweep_alt_x",
+      "is_manually_casted": true,
+      "is_skill_totem": false,
+      "stat_conversions": {
+        "sweep_damage_+%": "damage_+%",
+        "sweep_knockback_chance_%": "base_global_chance_to_knockback_%",
+        "sweep_radius_+%": "base_skill_area_of_effect_+%",
+        "sweep_add_endurance_charge_on_hit_%": "add_endurance_charge_on_skill_hit_%",
+        "cyclone_and_sweep_melee_knockback": "melee_knockback",
+        "cyclone_and_sweep_enemy_knockback_direction_is_reversed": "enemy_knockback_direction_is_reversed"
+      },
+      "types": [
+        "Attack",
+        "Area",
+        "Multistrikeable",
+        "Melee",
+        "Lightning"
+      ],
+      "weapon_restrictions": [
+        "Two Hand Mace",
+        "Warstaff",
+        "Staff"
+      ],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "Heiliger Rundumschlag",
+      "experience_type": "GemProgression12",
+      "id": "Metadata/Items/Gems/SkillGemSweep",
+      "max_level": 20,
+      "release_state": "released"
+    },
+    "cast_time": 1150,
+    "color": "r",
+    "display_name": "Heiliger Rundumschlag der Hammereinschläge",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [
+        {
+          "stat": "{active_skill_base_radius_+/locations_to_metres} Meter zum Radius",
+          "stats": {
+            "active_skill_base_radius_+": 200
+          }
+        }
+      ],
+      "stat_requirements": {
+        "int": null,
+        "str": null,
+        "dex": 0
+      },
+      "stat_text": {
+        "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius": "Basis-Hammer-Wirkungsradius beträgt 1.2 Meter",
+        "skill_physical_damage_%_to_convert_to_lightning": "50% des physischen Schadens werden in Blitzschaden umgewandelt",
+        "holy_sweep_hammerfall_damage_+%_final": "Hammer verursacht 35% weniger Schaden"
+      },
+      "stats": [
+        {
+          "id": "active_skill_base_secondary_area_of_effect_radius",
+          "type": "constant",
+          "value": 12
+        },
+        {
+          "id": "skill_physical_damage_%_to_convert_to_lightning",
+          "type": "constant",
+          "value": 50
+        },
+        {
+          "id": "active_skill_secondary_area_of_effect_description_mode",
+          "type": "constant",
+          "value": 9
+        },
+        {
+          "id": "base_from_skill_shock_art_variation",
+          "type": "constant",
+          "value": 2
+        },
+        {
+          "id": "holy_sweep_hammerfall_damage_+%_final",
+          "type": "constant",
+          "value": -35
+        },
+        {
+          "id": "active_skill_base_area_of_effect_radius",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "holy_sweep_number_of_holy_bolts_to_create",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "is_area_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "console_skill_dont_chase",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "visual_hit_effect_elemental_is_holy",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": -30,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "skill_physical_damage_%_to_convert_to_lightning",
+      "active_skill_base_radius_+",
+      "active_skill_base_area_of_effect_radius",
+      "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius",
+      "holy_sweep_hammerfall_damage_+%_final",
+      "holy_sweep_number_of_holy_bolts_to_create"
+    ],
+    "tags": [
+      "strength",
+      "grants_active_skill",
+      "attack",
+      "area",
+      "melee",
+      "lightning"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": {
+      "act": 1,
+      "classes": [
+        "Marodeur",
+        "Duellant"
+      ],
+      "quest": "Der Ruf der Sirene"
+    },
+    "discriminator": "alt_x",
+    "support_gem": null
+  },
+  {
+    "active_skill": {
       "description": "",
       "display_name": "",
       "id": "discorectangle_slam",

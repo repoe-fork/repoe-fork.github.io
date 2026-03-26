@@ -2027,6 +2027,161 @@
   },
   {
     "active_skill": {
+      "description": "양손 철퇴 또는 지팡이를 원형으로 휘둘러, 명중당한 적들에게 무작위로 신성한 망치를 떨어뜨립니다. 신성한 망치의 명중은 회피할 수 없습니다.",
+      "display_name": "망치 낙하의 신성한 휩쓸기",
+      "id": "sweep_alt_x",
+      "is_manually_casted": true,
+      "is_skill_totem": false,
+      "stat_conversions": {
+        "sweep_damage_+%": "damage_+%",
+        "sweep_knockback_chance_%": "base_global_chance_to_knockback_%",
+        "sweep_radius_+%": "base_skill_area_of_effect_+%",
+        "sweep_add_endurance_charge_on_hit_%": "add_endurance_charge_on_skill_hit_%",
+        "cyclone_and_sweep_melee_knockback": "melee_knockback",
+        "cyclone_and_sweep_enemy_knockback_direction_is_reversed": "enemy_knockback_direction_is_reversed"
+      },
+      "types": [
+        "Attack",
+        "Area",
+        "Multistrikeable",
+        "Melee",
+        "Lightning"
+      ],
+      "weapon_restrictions": [
+        "Two Hand Mace",
+        "Warstaff",
+        "Staff"
+      ],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "신성한 휩쓸기",
+      "experience_type": "GemProgression12",
+      "id": "Metadata/Items/Gems/SkillGemSweep",
+      "max_level": 20,
+      "release_state": "released"
+    },
+    "cast_time": 1150,
+    "color": "r",
+    "display_name": "망치 낙하의 신성한 휩쓸기",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [
+        {
+          "stat": "반경 {active_skill_base_radius_+/locations_to_metres}미터",
+          "stats": {
+            "active_skill_base_radius_+": 200
+          }
+        }
+      ],
+      "stat_requirements": {
+        "int": null,
+        "str": null,
+        "dex": 0
+      },
+      "stat_text": {
+        "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius": "기본 망치 충격 반경 1.2미터",
+        "skill_physical_damage_%_to_convert_to_lightning": "물리 피해의 50%를 번개 피해로 전환",
+        "holy_sweep_hammerfall_damage_+%_final": "망치가 주는 피해 35% 감폭"
+      },
+      "stats": [
+        {
+          "id": "active_skill_base_secondary_area_of_effect_radius",
+          "type": "constant",
+          "value": 12
+        },
+        {
+          "id": "skill_physical_damage_%_to_convert_to_lightning",
+          "type": "constant",
+          "value": 50
+        },
+        {
+          "id": "active_skill_secondary_area_of_effect_description_mode",
+          "type": "constant",
+          "value": 9
+        },
+        {
+          "id": "base_from_skill_shock_art_variation",
+          "type": "constant",
+          "value": 2
+        },
+        {
+          "id": "holy_sweep_hammerfall_damage_+%_final",
+          "type": "constant",
+          "value": -35
+        },
+        {
+          "id": "active_skill_base_area_of_effect_radius",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "holy_sweep_number_of_holy_bolts_to_create",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "is_area_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "console_skill_dont_chase",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "visual_hit_effect_elemental_is_holy",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": -30,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "skill_physical_damage_%_to_convert_to_lightning",
+      "active_skill_base_radius_+",
+      "active_skill_base_area_of_effect_radius",
+      "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius",
+      "holy_sweep_hammerfall_damage_+%_final",
+      "holy_sweep_number_of_holy_bolts_to_create"
+    ],
+    "tags": [
+      "strength",
+      "grants_active_skill",
+      "attack",
+      "area",
+      "melee",
+      "lightning"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": {
+      "act": 1,
+      "classes": [
+        "머라우더",
+        "듀얼리스트"
+      ],
+      "quest": "사이렌의 마침곡"
+    },
+    "discriminator": "alt_x",
+    "support_gem": null
+  },
+  {
+    "active_skill": {
       "description": "",
       "display_name": "",
       "id": "discorectangle_slam",
