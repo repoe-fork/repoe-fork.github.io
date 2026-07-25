@@ -498,7 +498,8 @@
   {
     "English": null,
     "ids": [
-      "map_number_of_magic_packs_+%"
+      "map_number_of_magic_packs_+%",
+      "chart_magic_monsters_voyage_display_stat"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -517,15 +518,22 @@
             "min": null,
             "max": null,
             "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
           }
         ],
         "format": [
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
+          [],
           []
         ],
-        "string": "增加 {0}% 地圖內魔法怪物數量",
+        "string": "增加 {0}% 地圖中魔法怪物數量",
         "reminder_text": null,
         "is_markup": null
       }
@@ -534,7 +542,8 @@
   {
     "English": null,
     "ids": [
-      "map_number_of_rare_packs_+%"
+      "map_number_of_rare_packs_+%",
+      "chart_rare_monsters_voyage_display_stat"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -553,15 +562,22 @@
             "min": null,
             "max": null,
             "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
           }
         ],
         "format": [
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
+          [],
           []
         ],
-        "string": "增加 {0}% 地圖內稀有怪物數量",
+        "string": "增加 {0}% 地圖中稀有怪物數量",
         "reminder_text": null,
         "is_markup": null
       }
@@ -854,6 +870,42 @@
           []
         ],
         "string": "你地圖中的試煉迷宮有 {0}% 機率給予優化的女神祭品",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "abyss_enable_bonus_chests"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你地圖中的[ContainsAbyss|深淵]可以生成[AbyssalSkitterlock|深淵掠行寶庫]而不是深淵寶庫",
         "reminder_text": null,
         "is_markup": null
       }
@@ -1614,7 +1666,7 @@
           []
         ],
         "string": "你的地圖隨機擁有更多變動詞綴效果，機率 0 到 80%\n額外內容無法出現在你的地圖上\n你的地圖無法使用影響",
-        "reminder_text": "（深淵、超越惡魔傳送門、凋落事件、裂痕、探險事件、神諭、戰亂事件、譫妄之鏡與譫妄之層、受精髓囚禁的怪物、礦床、祭祀神壇、盜賊流亡者、聖殿密園、神殿、走私者的祕寶、保險箱、風暴、罪魂、通牒事件、荒林妖精，以及艾瓦、埃哈、瓊恩和尼科任務為額外內容）",
+        "reminder_text": "（深淵、超越惡魔傳送門、凋落事件、裂痕、探險事件、戰亂事件、傭兵、譫妄之鏡與譫妄層數、受精髓囚禁的怪物、礦床、祭祀神壇、盜賊流亡者、聖殿密園、神殿、走私者的祕寶、保險箱、風暴、罪魂、通牒事件、荒林妖精，以及艾瓦、埃哈、瓊恩和尼科任務為額外內容）",
         "is_markup": null
       }
     ]
@@ -2823,7 +2875,7 @@
         "index_handlers": [
           []
         ],
-        "string": "增加 {0}% 你的地圖內符文怪物掉落探險日誌的數量",
+        "string": "增加 {0}% 你的地圖中符文怪物掉落探險日誌的數量",
         "reminder_text": null,
         "is_markup": null
       },
@@ -2841,7 +2893,7 @@
         "index_handlers": [
           []
         ],
-        "string": "減少 {0}% 你的地圖內符文怪物掉落探險日誌的數量",
+        "string": "減少 {0}% 你的地圖中符文怪物掉落探險日誌的數量",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3580,6 +3632,114 @@
   {
     "English": null,
     "ids": [
+      "map_abyss_%_chance_for_1_additional_pit_with_overflow"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你地圖中的[ContainsAbyss|深淵]有 {0}% 機率含有 1 個額外坑洞",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_abyss_%_chance_for_2_additional_pits"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你地圖中的[ContainsAbyss|深淵]有 {0}% 機率含有 2 個額外坑洞",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_abyss_%_chance_for_3_additional_pits"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你地圖中的[ContainsAbyss|深淵]有 {0}% 機率含有 3 個額外坑洞",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "map_abyss_%_chance_path_spawns_at_least_magic_monsters"
     ],
     "trade_stats": null,
@@ -3643,7 +3803,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你地圖中每個該深淵先前坑洞的深淵裂縫有 {0}% 機率產生的全部怪物至少都是魔法",
+        "string": "你地圖中的深淵坑洞有 {0}% 機率根據每一先前已關閉的坑洞使生成的所有怪物至少為魔法",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3679,7 +3839,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你的地圖含有 1 個額外深淵",
+        "string": "你的地圖含有 1 個額外[ContainsAbyss|深淵]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -3697,7 +3857,43 @@
         "index_handlers": [
           []
         ],
-        "string": "你的地圖含有 {0} 個額外深淵",
+        "string": "你的地圖含有 {0} 個額外[ContainsAbyss|深淵]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_abyss_chance_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你的地圖 {0}% 機率含有 1 個[ContainsAbyss|深淵]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3733,7 +3929,115 @@
         "index_handlers": [
           []
         ],
-        "string": "每增加 2% 怪物群大小，使你的地圖 {0}% 機率含有 1 個深淵",
+        "string": "每增加 2% 怪物群大小，你的地圖即有 {0}% 機率含有 1 個[ContainsAbyss|深淵]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_abyss_chance_to_be_amanamu_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "增加{0}%你地圖中生成的[ContainsAbyss|深淵]怪物忠於阿姆那姆的機率",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_abyss_chance_to_be_kurgal_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "增加{0}%你地圖中生成的[ContainsAbyss|深淵]怪物忠於柯戈的機率",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_abyss_chance_to_be_ulaman_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "增加{0}%你地圖中生成的[ContainsAbyss|深淵]怪物忠於烏拉曼的機率",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4183,7 +4487,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你的地圖增加 {0}% 機率含有 1 個深淵",
+        "string": "你的地圖增加 {0}% 機率含有 1 個[ContainsAbyss|深淵]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -4201,7 +4505,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你的地圖減少 {0}% 機率含有 1 個深淵",
+        "string": "你的地圖減少 {0}% 機率含有 1 個[ContainsAbyss|深淵]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4237,7 +4541,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你地圖中深淵保險箱或冥河之尖掉落的深淵珠寶，有 {0}% 機率為已汙染且有 5 或 6 個隨機詞綴",
+        "string": "你地圖中找到的深淵珠寶有 {0}% 機率被汙染\n且擁有 5 或 6 條隨機詞綴",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4328,6 +4632,98 @@
           []
         ],
         "string": "你地圖中的絕望深淵減少 {0}% 機率含有 1 隻妖巫",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_abyss_lucky_pit_count"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你地圖中的[ContainsAbyss|深淵]會重骰坑洞數量兩次，並取最高值",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_abyss_magic_monster_chance_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "增加 {0}% 你地圖中的[ContainsAbyss|深淵]生成的魔法怪物數量",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "減少 {0}% 你地圖中的[ContainsAbyss|深淵]生成的魔法怪物數量",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4475,7 +4871,63 @@
         "index_handlers": [
           []
         ],
-        "string": "你地圖中的深淵根據該深淵每個先前坑洞，增加 {0}% 怪物",
+        "string": "你地圖中的[ContainsAbyss|深淵]會根據該深淵每個先前已關閉的坑洞，增加 {0}% 生成怪物量",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_abyss_no_reward_chance_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": -50,
+            "max": -50,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "區域內的[ContainsAbyss|深淵]坑洞加倍擁有獎勵的機率",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "你地圖中的[ContainsAbyss|深淵]坑洞有 {0}% 更少機率沒有獎勵",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4556,6 +5008,114 @@
   {
     "English": null,
     "ids": [
+      "map_abyss_num_additional_pits"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你地圖中的[ContainsAbyss|深淵]含有 1 個額外坑洞",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你地圖中的[ContainsAbyss|深淵]含有 {0} 個額外坑洞",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_abyss_num_additional_rare_monsters"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[ContainsAbyss|深淵]會生成額外一名稀有怪物",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "[ContainsAbyss|深淵]會生成額外 {0} 名稀有怪物",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "map_abyss_path_chance_%_to_spawn_100%_increased_monsters"
     ],
     "trade_stats": null,
@@ -4584,6 +5144,62 @@
           []
         ],
         "string": "你地圖中的深淵裂縫有 {0}% 機率增加 100% 產生怪物",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_abyss_rare_monster_chance_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "增加 {0}% 你地圖中的[ContainsAbyss|深淵]生成的稀有怪物數量",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "減少 {0}% 你地圖中的[ContainsAbyss|深淵]生成的稀有怪物數量",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4657,7 +5273,7 @@
             "divide_by_one_hundred"
           ]
         ],
-        "string": "你地圖中的深淵保險箱和冥河之尖，有 {0}% 機率掉落 1 個聖甲蟲：深淵",
+        "string": "你地圖中的深淵寶庫和冥河之尖，有 {0}% 機率掉落 1 個聖甲蟲：深淵",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4693,7 +5309,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你地圖中的深淵保險箱和冥河之尖，有 {0}% 機率掉落 1 個有 1 個深淵插槽的稀有物品",
+        "string": "你地圖中的深淵寶庫有 {0}% 機率掉落一個帶有深淵插槽的稀有物品",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4729,7 +5345,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你地圖中深淵保險箱和冥河之尖掉落的深淵珠寶，有 {0}% 機率為稀有和已汙染",
+        "string": "深淵寶庫所掉落的深淵珠寶有 {0}% 機率為稀有且已汙染",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4765,7 +5381,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你地圖中的深淵保險箱等級 {0}",
+        "string": "你地圖中的深淵寶庫等級 {0}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4801,7 +5417,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你地圖中的深淵保險箱，增加 {0}% 物品數量",
+        "string": "你地圖中的深淵寶庫，增加 {0}% 物品數量",
         "reminder_text": null,
         "is_markup": null
       },
@@ -4821,7 +5437,7 @@
             "negate"
           ]
         ],
-        "string": "你地圖中的深淵保險箱，減少 {0}% 物品數量",
+        "string": "你地圖中的深淵寶庫，減少 {0}% 物品數量",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4857,7 +5473,7 @@
         "index_handlers": [
           []
         ],
-        "string": "增加 {0}% 你地圖中深淵保險箱和冥河之尖掉落的物品稀有度",
+        "string": "增加 {0}% 你地圖中深淵寶庫掉落的物品稀有度",
         "reminder_text": null,
         "is_markup": null
       },
@@ -4877,7 +5493,7 @@
             "negate"
           ]
         ],
-        "string": "減少 {0}% 你地圖中深淵保險箱和冥河之尖掉落的物品稀有度",
+        "string": "減少 {0}% 你地圖中深淵寶庫掉落的物品稀有度",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4913,7 +5529,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你地圖中的深淵保險箱和冥河之尖，增加 {0}% 機率含有或掉落 1 個深淵珠寶",
+        "string": "增加 {0}% 你地圖中找到的深淵珠寶數量",
         "reminder_text": null,
         "is_markup": null
       },
@@ -4933,7 +5549,7 @@
             "negate"
           ]
         ],
-        "string": "你地圖中的深淵保險箱和冥河之尖，減少 {0}% 機率含有或掉落 1 個深淵珠寶",
+        "string": "減少 {0}% 你地圖中找到的深淵珠寶數量",
         "reminder_text": null,
         "is_markup": null
       }
@@ -7025,7 +7641,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你的地圖內含有記憶裂口（階級 16 以上）的機率增加 {0}%",
+        "string": "你的地圖中含有記憶裂口（階級 16 以上）的機率增加 {0}%",
         "reminder_text": null,
         "is_markup": null
       },
@@ -7045,7 +7661,7 @@
             "negate"
           ]
         ],
-        "string": "你的地圖內含有記憶裂口（階級 16 以上）的機率減少 {0}%",
+        "string": "你的地圖中含有記憶裂口（階級 16 以上）的機率減少 {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -10178,6 +10794,60 @@
   {
     "English": null,
     "ids": [
+      "map_blueprints_drop_with_additional_special_implicit_%_chance"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你地圖中掉落的藍圖有 {0}% 機率有 1 個特殊固定詞綴",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你地圖中掉落的藍圖有 1 個特殊固定詞綴",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "map_boss_accompanied_by_bodyguards"
     ],
     "trade_stats": null,
@@ -12589,7 +13259,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你地圖中的巢穴遭遇根據每一摧毀的可燃洞穴\n增加{0}%難度",
+        "string": "你地圖中的巢穴遭遇根據每一摧毀的可燃洞穴\n增加{0}%堅韌",
         "reminder_text": "（怪物的堅韌越高，受到的傷害越低。堅韌增加 100% 的怪物受到 50% 更少傷害，堅韌增加 200% 的怪物受到 67% 更少傷害，以此類推。堅韌被降低會使怪物受到更多傷害）",
         "is_markup": null
       },
@@ -12609,7 +13279,7 @@
             "negate"
           ]
         ],
-        "string": "你地圖中的巢穴遭遇根據每一摧毀的可燃洞穴\n減少{0}%難度",
+        "string": "你地圖中的巢穴遭遇根據每一摧毀的可燃洞穴\n減少{0}%堅韌",
         "reminder_text": "（怪物的堅韌越高，受到的傷害越低。堅韌增加 100% 的怪物受到 50% 更少傷害，堅韌增加 200% 的怪物受到 67% 更少傷害，以此類推。堅韌被降低會使怪物受到更多傷害）",
         "is_markup": null
       }
@@ -14690,42 +15360,6 @@
   {
     "English": null,
     "ids": [
-      "map_abyss_chance_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional Chinese": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "+#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "你的地圖 {0}% 機率含有 1 個深淵",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
       "map_chisel_to_map_%"
     ],
     "trade_stats": null,
@@ -15007,7 +15641,7 @@
         "index_handlers": [
           []
         ],
-        "string": "區域中每個使用的異能祭壇，使掉落的異能通貨有 {0}% 機率被複製",
+        "string": "區域內每個使用的異能祭壇，使掉落的異能通貨有 {0}% 機率被複製",
         "reminder_text": null,
         "is_markup": null
       }
@@ -15043,7 +15677,7 @@
         "index_handlers": [
           []
         ],
-        "string": "區域中每個使用的異能祭壇，使玩家增加承受 {0}% 來自敵人的傷害",
+        "string": "區域內每個使用的異能祭壇，使玩家增加承受 {0}% 來自敵人的傷害",
         "reminder_text": null,
         "is_markup": null
       }
@@ -17829,7 +18463,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你的地圖不會含有深淵",
+        "string": "你的地圖不會含有[ContainsAbyss|深淵]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -18370,6 +19004,78 @@
           []
         ],
         "string": "你的地圖不會掉落戰亂聖甲蟲",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_disable_mercenary_from_chance"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你的地圖沒有含有傭兵的機率",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_disable_mercenary_scarab_drops"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你地圖中找到的聖甲蟲不可為特拉特斯聖甲蟲",
         "reminder_text": null,
         "is_markup": null
       }
@@ -19503,6 +20209,42 @@
   {
     "English": null,
     "ids": [
+      "map_divination_card_drop_chance_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "增加 {0}% 你地圖中找到的命運卡數量",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "map_divination_cards_in_area_are_from_two_different_areas"
     ],
     "trade_stats": null,
@@ -19603,6 +20345,42 @@
           []
         ],
         "string": "你地圖中的魔暴硫酸礦脈和寶箱，有 {0}% 機率含有 2 倍硫酸",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_drop_scrying_orb_on_completion_chance_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你的地圖在完成時有 {0}% 機率掉落一個[ScryingOrb|占卜石] （階級 14+）",
         "reminder_text": null,
         "is_markup": null
       }
@@ -19984,7 +20762,7 @@
         "index_handlers": [
           []
         ],
-        "string": "埃哈在你地圖中增加 {0}% 冷卻時間恢復速度",
+        "string": "埃哈在你地圖中增加 {0}% 冷卻時間恢復率",
         "reminder_text": null,
         "is_markup": null
       },
@@ -20004,7 +20782,7 @@
             "negate"
           ]
         ],
-        "string": "埃哈在你地圖中減少 {0}% 冷卻時間恢復速度",
+        "string": "埃哈在你地圖中減少 {0}% 冷卻時間恢復率",
         "reminder_text": null,
         "is_markup": null
       }
@@ -21076,7 +21854,7 @@
         "index_handlers": [
           []
         ],
-        "string": "增加 {0}% 你的地圖內的爆炸範圍",
+        "string": "增加 {0}% 你的地圖中的爆炸範圍",
         "reminder_text": null,
         "is_markup": null
       }
@@ -21112,7 +21890,7 @@
         "index_handlers": [
           []
         ],
-        "string": "增加 {0}% 你的地圖內爆裂物的數量",
+        "string": "增加 {0}% 你的地圖中爆裂物的數量",
         "reminder_text": null,
         "is_markup": null
       }
@@ -21625,7 +22403,7 @@
           []
         ],
         "string": "額外內容沒有在你地圖中出現的基礎機率",
-        "reminder_text": "（深淵、超越惡魔傳送門、凋落事件、裂痕、探險事件、神諭、戰亂事件、譫妄之鏡與譫妄之層、受精髓囚禁的怪物、礦床、祭祀神壇、盜賊流亡者、聖殿密園、神殿、走私者的祕寶、保險箱、風暴、罪魂、通牒事件、荒林妖精，以及艾瓦、埃哈、瓊恩和尼科任務為額外內容）",
+        "reminder_text": "（深淵、超越惡魔傳送門、凋落事件、裂痕、探險事件、戰亂事件、傭兵、譫妄之鏡與譫妄層數、受精髓囚禁的怪物、礦床、祭祀神壇、盜賊流亡者、聖殿密園、神殿、走私者的祕寶、保險箱、風暴、罪魂、通牒事件、荒林妖精，以及艾瓦、埃哈、瓊恩和尼科任務為額外內容）",
         "is_markup": null
       }
     ]
@@ -21661,7 +22439,7 @@
           []
         ],
         "string": "你的地圖中最多含有 1 種額外內容",
-        "reminder_text": "（深淵、超越惡魔傳送門、凋落事件、裂痕、探險事件、神諭、戰亂事件、譫妄之鏡與譫妄之層、受精髓囚禁的怪物、礦床、祭祀神壇、盜賊流亡者、聖殿密園、神殿、走私者的祕寶、保險箱、風暴、罪魂、通牒事件、荒林妖精，以及艾瓦、埃哈、瓊恩和尼科任務為額外內容）",
+        "reminder_text": "（深淵、超越惡魔傳送門、凋落事件、裂痕、探險事件、戰亂事件、傭兵、譫妄之鏡與譫妄層數、受精髓囚禁的怪物、礦床、祭祀神壇、盜賊流亡者、聖殿密園、神殿、走私者的祕寶、保險箱、風暴、罪魂、通牒事件、荒林妖精，以及艾瓦、埃哈、瓊恩和尼科任務為額外內容）",
         "is_markup": null
       }
     ]
@@ -22752,7 +23530,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你地圖中的神諭增加 {0}% 冷卻時間恢復速度",
+        "string": "你地圖中的神諭增加 {0}% 冷卻時間恢復率",
         "reminder_text": null,
         "is_markup": null
       },
@@ -22772,7 +23550,7 @@
             "negate"
           ]
         ],
-        "string": "你地圖中的神諭減少 {0}% 冷卻時間恢復速度",
+        "string": "你地圖中的神諭減少 {0}% 冷卻時間恢復率",
         "reminder_text": null,
         "is_markup": null
       }
@@ -23027,7 +23805,7 @@
           []
         ],
         "string": "地圖有 1 或 2 個額外內容的機率為 0%",
-        "reminder_text": "（深淵、凋落事件、裂痕、探險事件、戰亂事件、譫妄之鏡、礦床、祭祀神壇、聖殿密園、走私者的祕寶、通牒事件、和大師任務為額外內容）",
+        "reminder_text": "（深淵、凋落事件、裂痕、探險事件、戰亂事件、傭兵、譫妄之鏡、礦床、祭祀神壇、聖殿密園、走私者的祕寶、通牒事件、和大師任務為額外內容）",
         "is_markup": null
       }
     ]
@@ -25172,7 +25950,7 @@
         "index_handlers": [
           []
         ],
-        "string": "走私者的祕寶根據區域中每個開啟的走私者的祕寶，掉落 {0}% 更多盜賊之印",
+        "string": "走私者的祕寶根據區域內每個開啟的走私者的祕寶，掉落 {0}% 更多盜賊之印",
         "reminder_text": null,
         "is_markup": null
       },
@@ -25192,7 +25970,7 @@
             "negate"
           ]
         ],
-        "string": "走私者的祕寶根據區域中每個開啟的走私者的祕寶，掉落 {0}% 更少盜賊之印",
+        "string": "走私者的祕寶根據區域內每個開啟的走私者的祕寶，掉落 {0}% 更少盜賊之印",
         "reminder_text": null,
         "is_markup": null
       }
@@ -26073,7 +26851,8 @@
   {
     "English": null,
     "ids": [
-      "map_item_drop_quantity_+%"
+      "map_item_drop_quantity_+%",
+      "chart_quantity_voyage_display_stat"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -26092,12 +26871,19 @@
             "min": 1,
             "max": null,
             "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
           }
         ],
         "format": [
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
+          [],
           []
         ],
         "string": "增加 {0}% 此你的地圖物品掉落數量",
@@ -26110,15 +26896,22 @@
             "min": null,
             "max": -1,
             "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
           }
         ],
         "format": [
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
           [
             "negate"
-          ]
+          ],
+          []
         ],
         "string": "減少 {0}% 此你的地圖物品掉落數量",
         "reminder_text": null,
@@ -26129,7 +26922,8 @@
   {
     "English": null,
     "ids": [
-      "map_item_drop_rarity_+%"
+      "map_item_drop_rarity_+%",
+      "chart_rarity_voyage_display_stat"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -26148,12 +26942,19 @@
             "min": 1,
             "max": null,
             "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
           }
         ],
         "format": [
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
+          [],
           []
         ],
         "string": "增加 {0}% 你地圖中掉落物品的稀有度",
@@ -26166,15 +26967,22 @@
             "min": null,
             "max": -1,
             "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
           }
         ],
         "format": [
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
           [
             "negate"
-          ]
+          ],
+          []
         ],
         "string": "減少 {0}% 你地圖中掉落物品的稀有度",
         "reminder_text": null,
@@ -26321,7 +27129,7 @@
           []
         ],
         "string": "你的地圖有 {0}% 更多基礎機率含有額外內容",
-        "reminder_text": "（深淵、超越惡魔傳送門、凋落事件、裂痕、探險事件、神諭、戰亂事件、譫妄之鏡與譫妄之層、受精髓囚禁的怪物、礦床、祭祀神壇、盜賊流亡者、聖殿密園、神殿、走私者的祕寶、保險箱、風暴、罪魂、通牒事件、荒林妖精，以及艾瓦、埃哈、瓊恩和尼科任務為額外內容）",
+        "reminder_text": "（深淵、超越惡魔傳送門、凋落事件、裂痕、探險事件、戰亂事件、傭兵、譫妄之鏡與譫妄層數、受精髓囚禁的怪物、礦床、祭祀神壇、盜賊流亡者、聖殿密園、神殿、走私者的祕寶、保險箱、風暴、罪魂、通牒事件、荒林妖精，以及艾瓦、埃哈、瓊恩和尼科任務為額外內容）",
         "is_markup": null
       }
     ]
@@ -26357,7 +27165,7 @@
           []
         ],
         "string": "你的地圖 {0}% 機率含有其他額外內容",
-        "reminder_text": "（深淵、超越惡魔傳送門、凋落事件、裂痕、探險事件、神諭、戰亂事件、譫妄之鏡與譫妄之層、受精髓囚禁的怪物、礦床、祭祀神壇、盜賊流亡者、聖殿密園、神殿、走私者的祕寶、保險箱、風暴、罪魂、通牒事件、荒林妖精，以及艾瓦、埃哈、瓊恩和尼科任務為額外內容）",
+        "reminder_text": "（深淵、超越惡魔傳送門、凋落事件、裂痕、探險事件、戰亂事件、傭兵、譫妄之鏡與譫妄層數、受精髓囚禁的怪物、礦床、祭祀神壇、盜賊流亡者、聖殿密園、神殿、走私者的祕寶、保險箱、風暴、罪魂、通牒事件、荒林妖精，以及艾瓦、埃哈、瓊恩和尼科任務為額外內容）",
         "is_markup": null
       }
     ]
@@ -26482,7 +27290,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你地圖中戰亂保險箱掉落的裂片有 {0}% 機率被複製",
+        "string": "你地圖中軍團寶箱含有的永恆裂片有{0}%機率被複製",
         "reminder_text": null,
         "is_markup": null
       }
@@ -26792,7 +27600,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你地圖中的戰亂事件有 {0}% 更高機率含有 1 個將軍",
+        "string": "增加{0}%你地圖中的戰亂遭遇含有一名將軍的機率",
         "reminder_text": "（戰亂將軍包含西里娜馬庫女王、穆希爾斯．獅眼將軍、大主教桑特斯瓦克斯、邪魔毒蛇納普阿茲和漆黑絲克瑪奧庫納）",
         "is_markup": null
       }
@@ -26864,7 +27672,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你地圖中的戰亂將軍掉落 {0}% 更多永恆裂片",
+        "string": "增加{0}%你地圖中戰亂將軍掉落的永恆裂片數量",
         "reminder_text": null,
         "is_markup": null
       },
@@ -26884,7 +27692,7 @@
             "negate"
           ]
         ],
-        "string": "你地圖中的戰亂將軍掉落 {0}% 更少永恆裂片",
+        "string": "減少{0}%你地圖中戰亂將軍掉落的永恆裂片數量",
         "reminder_text": null,
         "is_markup": null
       }
@@ -27254,7 +28062,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你地圖中戰亂怪物或戰亂保險箱掉落的裂片有 {0}% 機率被複製",
+        "string": "你地圖中由戰亂怪物掉落或戰亂寶箱中的永恆碎片有{0}%機率被複製",
         "reminder_text": null,
         "is_markup": null
       }
@@ -27346,7 +28154,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你地圖中戰亂怪物掉落的裂片有 {0}% 機率被複製",
+        "string": "你地圖中由戰亂怪物掉落的永恆碎片有{0}%機率被複製",
         "reminder_text": null,
         "is_markup": null
       }
@@ -27736,7 +28544,7 @@
         "index_handlers": [
           []
         ],
-        "string": "區域中每個使用的異能祭壇，有 {0}% 機率使低階和高階異能通貨改為掉落宏偉異能通貨",
+        "string": "區域內每個使用的異能祭壇，有 {0}% 機率使低階和高階異能通貨改為掉落宏偉異能通貨",
         "reminder_text": null,
         "is_markup": null
       }
@@ -28671,6 +29479,1022 @@
           []
         ],
         "string": "釋界的試煉掉落 {0}% 更多新月裂片",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_mercenary_additional_chance_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你的地圖有{0}%含有一名傭兵",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_mercenary_additional_support_chance_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你地圖中找到的傭兵所裝備的技能有{0}%機率含有一個額外輔助",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你地圖中找到的傭兵所裝備的技能含有一個額外輔助",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_mercenary_aura_effect_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "增加{0}%來自你地圖中找到傭兵的光環技能效果",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "減少{0}%來自你地圖中找到傭兵的光環技能效果",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_mercenary_chance_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "增加{0}%你的地圖含有一名傭兵的機率",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "減少{0}%你的地圖含有一名傭兵的機率",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_mercenary_cooldown_speed_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "增加{0}%你地圖中找到傭兵的冷卻時間恢復率",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "減少{0}%你地圖中找到傭兵的冷卻時間恢復率",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_mercenary_dexterity_aligned_chance_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你地圖中找到的傭兵有{0}%更多機率為敏捷型",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "你地圖中找到的傭兵有{0}%更少機率為敏捷型",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_mercenary_drop_additional_items"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你地圖中找到的傭兵被擊敗時會掉落{0}個其未被拿取的物品",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_mercenary_drop_all_items_chance_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你地圖中找到的傭兵被擊敗時有{0}%機率掉落其所有物品",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你地圖中找到的傭兵被擊敗時掉落其所有物品",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_mercenary_has_random_shrine_effect"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你地圖中找到的傭兵會被一個隨機神殿增益效果影響",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_mercenary_have_onslaught"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你地圖中找到的傭兵擁有猛攻",
+        "reminder_text": "（ 猛攻增加你 20% 攻擊速度、施放速度，和移動速度 ）",
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_mercenary_house_azadi_chance_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "增加{0}%你地圖中找到的傭兵來自愛札丁家族的機率",
+        "reminder_text": "（來自愛札丁家族的傭兵為決鬥者和暗影刺客）",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "增加{0}%你地圖中找到的傭兵來自愛札丁家族的機率",
+        "reminder_text": "（來自愛札丁家族的傭兵為決鬥者和暗影刺客）",
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_mercenary_house_cyaxan_chance_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "增加{0}%你地圖中找到的傭兵來自塞亞珊家族的機率",
+        "reminder_text": "（來自賽亞珊家族的傭兵為女巫和遊俠）",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "增加{0}%你地圖中找到的傭兵來自塞亞珊家族的機率",
+        "reminder_text": "（來自賽亞珊家族的傭兵為女巫和遊俠）",
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_mercenary_house_keita_chance_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "增加{0}%你地圖中找到的傭兵來自凱塔家族的機率",
+        "reminder_text": "（來自凱塔家族的傭兵為聖堂武僧和野蠻人）",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "增加{0}%你地圖中找到的傭兵來自凱塔家族的機率",
+        "reminder_text": "（來自凱塔家族的傭兵為聖堂武僧和野蠻人）",
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_mercenary_infamous_chance_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "增加{0}%你地圖中找到的傭兵為萬惡傭兵的機率",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "減少{0}%你地圖中找到的傭兵為萬惡傭兵的機率",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_mercenary_intelligence_aligned_chance_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你地圖中找到的傭兵有{0}%更多機率為智慧型",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "你地圖中找到的傭兵有{0}%更少機率為智慧型",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_mercenary_rucksack_is_full"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你地圖中找到的傭兵總是全副武裝",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_mercenary_strength_aligned_chance_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "你地圖中找到的傭兵有{0}%更多機率為力量型",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "你地圖中找到的傭兵有{0}%更少機率為力量型",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_mercenary_unique_item_chance_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "增加{0}%地圖中找到的傭兵裝備傳奇物品的機率",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "減少{0}%地圖中找到的傭兵裝備傳奇物品的機率",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_mercenary_wager_gold_amount_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "增加{0}%你地圖中的傭兵所需的僱傭費用",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "減少{0}%你地圖中的傭兵所需的僱傭費用",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_mercenary_wager_gold_returned_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "增加{0}%你地圖中的傭兵在你戰勝時所返還的僱用費用",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "減少{0}%你地圖中的傭兵在你戰勝時所返還的僱用費用",
         "reminder_text": null,
         "is_markup": null
       }
@@ -31178,7 +33002,7 @@
         "index_handlers": [
           []
         ],
-        "string": "地圖每有 5% 品質便增加 {0}% 地圖內魔法怪物數量",
+        "string": "地圖每有 5% 品質便增加 {0}% 地圖中魔法怪物數量",
         "reminder_text": null,
         "is_markup": null
       },
@@ -31198,7 +33022,7 @@
             "negate"
           ]
         ],
-        "string": "地圖每有 5% 品質便減少 {0}% 地圖內魔法怪物數量",
+        "string": "地圖每有 5% 品質便減少 {0}% 地圖中魔法怪物數量",
         "reminder_text": null,
         "is_markup": null
       }
@@ -31234,7 +33058,7 @@
         "index_handlers": [
           []
         ],
-        "string": "地圖每有 5% 品質便增加 {0}% 地圖內稀有怪物數量",
+        "string": "地圖每有 5% 品質便增加 {0}% 地圖中稀有怪物數量",
         "reminder_text": null,
         "is_markup": null
       },
@@ -31254,7 +33078,7 @@
             "negate"
           ]
         ],
-        "string": "地圖每有 5% 品質便減少 {0}% 地圖內稀有怪物數量",
+        "string": "地圖每有 5% 品質便減少 {0}% 地圖中稀有怪物數量",
         "reminder_text": null,
         "is_markup": null
       }
@@ -31517,7 +33341,8 @@
   {
     "English": null,
     "ids": [
-      "map_pack_size_+%"
+      "map_pack_size_+%",
+      "chart_pack_size_voyage_display_stat"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -31536,12 +33361,19 @@
             "min": 1,
             "max": null,
             "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
           }
         ],
         "format": [
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
+          [],
           []
         ],
         "string": "增加 {0}% 地圖怪群大小",
@@ -32445,7 +34277,7 @@
           []
         ],
         "string": "你的地圖有 {0}% 機率含有可以透過\n輿圖天賦關閉的其他額外內容",
-        "reminder_text": "（深淵、凋落事件、裂痕、探險事件、戰亂事件、譫妄之鏡、礦床、祭祀神壇、聖殿密園、走私者的祕寶和通牒事件為可透過輿圖天賦關閉的額外內容）",
+        "reminder_text": "（深淵、凋落事件、裂痕、探險事件、戰亂事件、傭兵、譫妄之鏡、礦床、祭祀神壇、聖殿密園、走私者的祕寶和通牒事件為可透過輿圖天賦關閉的額外內容）",
         "is_markup": null
       }
     ]
@@ -35387,7 +37219,7 @@
           []
         ],
         "string": "在已塑領域中完成地圖目標時會改為使領域中的另一張不同的地圖崩毀",
-        "reminder_text": "（默認情況下，當你於幻塑界域中的地圖內完成地圖目標時，該地圖會崩毀，將自身從領域中移除。此會使所有領域中的其他地圖獲得額外詞綴。若此行為會使幻塑界域一分為二，則僅擁有較多地圖的領域區塊會被保留）",
+        "reminder_text": "（默認情況下，當你於幻塑界域中的地圖中完成地圖目標時，該地圖會崩毀，將自身從領域中移除。此會使所有領域中的其他地圖獲得額外詞綴。若此行為會使幻塑界域一分為二，則僅擁有較多地圖的領域區塊會被保留）",
         "is_markup": null
       }
     ]
@@ -35984,7 +37816,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你的地圖可能有深淵",
+        "string": "你的地圖含有[ContainsAbyss|深淵]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -36572,7 +38404,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你的地圖內的保險箱已汙染",
+        "string": "你的地圖中的保險箱已汙染",
         "reminder_text": null,
         "is_markup": null
       }
@@ -37026,7 +38858,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你的地圖內的保險箱最低稀有度為魔法等級",
+        "string": "你的地圖中的保險箱最低稀有度為魔法等級",
         "reminder_text": null,
         "is_markup": null
       },
@@ -37044,7 +38876,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你的地圖內的保險箱最低稀有度為稀有等級",
+        "string": "你的地圖中的保險箱最低稀有度為稀有等級",
         "reminder_text": null,
         "is_markup": null
       },
@@ -37062,7 +38894,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你的地圖內的保險箱最低稀有度為傳奇等級",
+        "string": "你的地圖中的保險箱最低稀有度為傳奇等級",
         "reminder_text": null,
         "is_markup": null
       }
@@ -39260,7 +41092,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你的地圖內已汙染瓦爾怪物掉落物品，有 {0}% 機率為已汙染",
+        "string": "你的地圖中已汙染瓦爾怪物掉落物品，有 {0}% 機率為已汙染",
         "reminder_text": null,
         "is_markup": null
       },
@@ -39278,7 +41110,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你的地圖內已汙染瓦爾怪物掉落物品為已汙染",
+        "string": "你的地圖中已汙染瓦爾怪物掉落物品為已汙染",
         "reminder_text": null,
         "is_markup": null
       }
@@ -39810,7 +41642,7 @@
         "index_handlers": [
           []
         ],
-        "string": "你的地圖內含 {0} 個額外異界尊師惡魔群",
+        "string": "你的地圖中含 {0} 個額外異界尊師惡魔群",
         "reminder_text": null,
         "is_markup": null
       }
@@ -41937,6 +43769,42 @@
           []
         ],
         "string": "你地圖中掉落的聖甲蟲為製圖聖甲蟲的機率增加 {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_mercenary_scarab_more_likely_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "增加{0}%你地圖中掉落的聖甲蟲為特拉特斯聖甲蟲的機率",
         "reminder_text": null,
         "is_markup": null
       }

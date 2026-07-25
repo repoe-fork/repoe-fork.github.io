@@ -501,7 +501,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Monsters have {0}% chance to Avoid All Damage from Hits",
+        "string": "Monsters have {0}% chance to Avoid Damage of each Type from Hits",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2389,12 +2389,19 @@
             "min": null,
             "max": null,
             "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
           }
         ],
         "format": [
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
+          [],
           []
         ],
         "string": "{0}% increased number of Rare Monsters",
@@ -2403,17 +2410,18 @@
       }
     ],
     "ids": [
-      "map_number_of_rare_packs_+%"
+      "map_number_of_rare_packs_+%",
+      "chart_rare_monsters_voyage_display_stat"
     ],
     "trade_stats": [
       {
-        "id": "explicit.stat_3793155082",
+        "id": "explicit.stat_3126771445",
         "text": "#% increased number of Rare Monsters",
         "type": "explicit",
         "option": null
       },
       {
-        "id": "fractured.stat_3793155082",
+        "id": "fractured.stat_3126771445",
         "text": "#% increased number of Rare Monsters",
         "type": "fractured",
         "option": null
@@ -2671,12 +2679,19 @@
             "min": null,
             "max": null,
             "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
           }
         ],
         "format": [
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
+          [],
           []
         ],
         "string": "{0}% increased number of Magic Monsters",
@@ -2685,7 +2700,8 @@
       }
     ],
     "ids": [
-      "map_number_of_magic_packs_+%"
+      "map_number_of_magic_packs_+%",
+      "chart_magic_monsters_voyage_display_stat"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -6908,12 +6924,19 @@
             "min": 1,
             "max": null,
             "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
           }
         ],
         "format": [
+          "ignore",
           "ignore"
         ],
         "index_handlers": [
+          [],
           []
         ],
         "string": "<enchanted>{{{0}% increased Pack size}}",
@@ -6926,15 +6949,22 @@
             "min": null,
             "max": -1,
             "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
           }
         ],
         "format": [
+          "ignore",
           "ignore"
         ],
         "index_handlers": [
           [
             "negate"
-          ]
+          ],
+          []
         ],
         "string": "<enchanted>{{{0}% reduced Pack size}}",
         "reminder_text": null,
@@ -6942,7 +6972,8 @@
       }
     ],
     "ids": [
-      "map_pack_size_+%"
+      "map_pack_size_+%",
+      "chart_pack_size_voyage_display_stat"
     ],
     "trade_stats": null,
     "hidden": null,

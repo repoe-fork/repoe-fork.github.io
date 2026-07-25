@@ -1813,7 +1813,7 @@
         "index_handlers": [
           []
         ],
-        "string": "ดรอป ไอเทมยูนิคต่างมิติ 1 ชิ้น เมื่อ มอนสเตอร์ยูนิคต่างมิติ ตัวแรกถูกสังหาร ในด่านถัดไป",
+        "string": "ดรอป ไอเทมยูนิคต่างมิติ 1 ชิ้น เมื่อ มอนสเตอร์ต่างมิติยูนิค ตัวแรกถูกสังหาร ในด่านถัดไป",
         "reminder_text": null,
         "is_markup": null
       },
@@ -1831,7 +1831,7 @@
         "index_handlers": [
           []
         ],
-        "string": "ดรอป ไอเทมยูนิคต่างมิติ {0} ชิ้น เมื่อ มอนสเตอร์ยูนิคต่างมิติ ตัวแรกถูกสังหาร ในด่านถัดไป",
+        "string": "ดรอป ไอเทมยูนิคต่างมิติ {0} ชิ้น เมื่อ มอนสเตอร์ต่างมิติยูนิค ตัวแรกถูกสังหาร ในด่านถัดไป",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2297,7 +2297,8 @@
   {
     "English": null,
     "ids": [
-      "map_item_drop_quantity_+%"
+      "map_item_drop_quantity_+%",
+      "chart_quantity_voyage_display_stat"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -2315,12 +2316,19 @@
             "min": 1,
             "max": null,
             "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
           }
         ],
         "format": [
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
+          [],
           []
         ],
         "string": "เพิ่มจำนวนของ ไอเทม ที่พบในด่านถัดไป {0}%",
@@ -2333,15 +2341,22 @@
             "min": null,
             "max": -1,
             "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
           }
         ],
         "format": [
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
           [
             "negate"
-          ]
+          ],
+          []
         ],
         "string": "ลดจำนวนของ ไอเทม ที่พบในด่านถัดไป {0}%",
         "reminder_text": null,
@@ -2353,7 +2368,8 @@
   {
     "English": null,
     "ids": [
-      "map_item_drop_rarity_+%"
+      "map_item_drop_rarity_+%",
+      "chart_rarity_voyage_display_stat"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -2371,12 +2387,19 @@
             "min": 1,
             "max": null,
             "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
           }
         ],
         "format": [
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
+          [],
           []
         ],
         "string": "เพิ่มระดับความหายากของ ไอเทม ที่พบในด่านถัดไป {0}%",
@@ -2389,15 +2412,22 @@
             "min": null,
             "max": -1,
             "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
           }
         ],
         "format": [
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
           [
             "negate"
-          ]
+          ],
+          []
         ],
         "string": "ลดระดับความหายากของ ไอเทม ที่พบในด่านถัดไป {0}%",
         "reminder_text": null,
@@ -6623,7 +6653,7 @@
         "index_handlers": [
           []
         ],
-        "string": "มอนสเตอร์แรร์บรีช ในด่านถัดไป มีโอกาสดรอป แหวนบรีช 1 วง {0}%",
+        "string": "มอนสเตอร์บรีชแรร์ ในด่านถัดไป มีโอกาสดรอป แหวนบรีช 1 วง {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -6659,7 +6689,7 @@
         "index_handlers": [
           []
         ],
-        "string": "มอนสเตอร์แรร์บรีช ในด่านถัดไปดรอป สะเก็ด เพิ่มเติม 1 ชิ้น",
+        "string": "มอนสเตอร์บรีชแรร์ ในด่านถัดไปดรอป สะเก็ด เพิ่มเติม 1 ชิ้น",
         "reminder_text": null,
         "is_markup": null
       },
@@ -6677,7 +6707,7 @@
         "index_handlers": [
           []
         ],
-        "string": "มอนสเตอร์แรร์บรีช ในด่านถัดไปดรอป สะเก็ด เพิ่มเติม {0} ชิ้น",
+        "string": "มอนสเตอร์บรีชแรร์ ในด่านถัดไปดรอป สะเก็ด เพิ่มเติม {0} ชิ้น",
         "reminder_text": null,
         "is_markup": null
       }
@@ -7401,7 +7431,7 @@
         "index_handlers": [
           []
         ],
-        "string": "มอนสเตอร์ยูนิคต่างมิติ ในด่านถัดไป มีโอกาสอัญเชิญ มอนสเตอร์ยูนิคต่างมิติ เพิ่มเติม 1 ตน {0}% เมื่อถูกสังหาร",
+        "string": "มอนสเตอร์ต่างมิติยูนิค ในด่านถัดไป มีโอกาสอัญเชิญ มอนสเตอร์ต่างมิติยูนิค เพิ่มเติม 1 ตน {0}% เมื่อถูกสังหาร",
         "reminder_text": null,
         "is_markup": null
       },
@@ -7419,7 +7449,7 @@
         "index_handlers": [
           []
         ],
-        "string": "มอนสเตอร์ยูนิคต่างมิติ ในด่านถัดไป จะอัญเชิญ มอนสเตอร์ยูนิคต่างมิติ เพิ่มเติม 1 ตนเมื่อถูกสังหาร",
+        "string": "มอนสเตอร์ต่างมิติยูนิค ในด่านถัดไป จะอัญเชิญ มอนสเตอร์ต่างมิติยูนิค เพิ่มเติม 1 ตนเมื่อถูกสังหาร",
         "reminder_text": null,
         "is_markup": null
       }

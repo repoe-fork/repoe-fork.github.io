@@ -499,7 +499,7 @@
   "power_charge": {
     "description": "Каждый заряд энергии даёт больше урона от чар и повышает шанс критического удара",
     "invisible": false,
-    "name": "Заряд энергии",
+    "name": "Заряды энергии",
     "removable": false,
     "stats": [],
     "visuals": "power_charge",
@@ -513,6 +513,18 @@
         "visuals": null
       }
     },
+    "stack_limit": null
+  },
+  "brine_charge": {
+    "description": "Каждый морской заряд даёт часть физического урона в виде дополнительного урона от молнии и дополнительного урона от холода",
+    "invisible": false,
+    "name": "Морские заряды",
+    "removable": false,
+    "stats": [],
+    "visuals": "brine_charge_visual",
+    "category": "Charge",
+    "sources": null,
+    "templates": null,
     "stack_limit": null
   },
   "spirit_charge": {
@@ -5705,7 +5717,7 @@
   "lightning_thorns": {
     "description": "Вы выпускаете снаряды молнии при получении удара",
     "invisible": false,
-    "name": "Шипы молний",
+    "name": "Месть молний",
     "removable": false,
     "stats": [
       "minimum_lightning_damage_to_return_when_hit",
@@ -6267,6 +6279,14 @@
       "Mods": [
         {
           "id": "DamageAuraUniqueHelmetDexInt2",
+          "item": null,
+          "name": null,
+          "template": "DamageAuraUniqueHelmetDexInt2",
+          "stat_text": null,
+          "stats": null
+        },
+        {
+          "id": "DivergentDisplayDamageAuraUniqueHelmetDexInt2",
           "item": null,
           "name": null,
           "template": "DamageAuraUniqueHelmetDexInt2",
@@ -7600,7 +7620,7 @@
   "shrine_resistance": {
     "description": "Вы получаете дополнительное сопротивление урону от стихий",
     "invisible": false,
-    "name": "Алтарь сопротивления",
+    "name": "Алтарь выдержки",
     "removable": true,
     "stats": [
       "base_resist_all_elements_%",
@@ -8169,6 +8189,23 @@
     "templates": null,
     "stack_limit": null
   },
+  "soul_eater_player": {
+    "description": "У вас увеличены скорость атаки, скорость сотворения чар и размер персонажа",
+    "invisible": false,
+    "name": "Пожиратель душ",
+    "removable": false,
+    "stats": [
+      "capped_actor_scale_+%",
+      "attack_speed_+%",
+      "base_cast_speed_+%",
+      "damage_taken_+%_final_from_soul_eater_if_not_player"
+    ],
+    "visuals": "soul_eater",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "frostwall_epk": {
     "description": "",
     "invisible": true,
@@ -8536,54 +8573,34 @@
     "stack_limit": null
   },
   "unholy_might": {
-    "description": "Ваш физический урон становится уроном хаоса и вы с 25% шансом можете наложить истощение",
+    "description": "Ваш физический урон становится уроном хаоса и вы с 25% шансом можете наложить Истощение при нанесении удара",
     "invisible": false,
     "name": "Нечестивое могущество",
     "removable": false,
     "stats": [
-      "has_unholy_might"
+      "has_unholy_might",
+      "base_physical_damage_%_to_convert_to_chaos",
+      "withered_on_hit_for_2_seconds_%_chance",
+      "withered_effect_+%",
+      "reduce_enemy_chaos_resistance_%"
     ],
     "visuals": "unholy_might",
     "category": "Buff",
-    "sources": {
-      "Mods": [
-        {
-          "id": "GrantsUnholyMightUnique__1",
-          "item": null,
-          "name": null,
-          "template": "GrantsUnholyMightUnique__1",
-          "stat_text": null,
-          "stats": null
-        }
-      ]
-    },
-    "templates": {
-      "GrantsUnholyMightUnique__1": {
-        "aura_radius_metres": null,
-        "stats": {
-          "has_unholy_might": 0
-        },
-        "stat_text": null,
-        "visuals": null
-      },
-      "SentinelPlayerUnholyMight": {
-        "aura_radius_metres": null,
-        "stats": {
-          "has_unholy_might": 1
-        },
-        "stat_text": null,
-        "visuals": null
-      }
-    },
+    "sources": null,
+    "templates": null,
     "stack_limit": null
   },
   "unholy_might_permanent": {
-    "description": "Ваш физический урон становится уроном хаоса и вы с 25% шансом можете наложить истощение",
+    "description": "Ваш физический урон становится уроном хаоса и вы с 25% шансом можете наложить Истощение при нанесении удара",
     "invisible": false,
     "name": "Нечестивое могущество",
     "removable": false,
     "stats": [
-      "has_unholy_might"
+      "has_unholy_might",
+      "base_physical_damage_%_to_convert_to_chaos",
+      "withered_on_hit_for_2_seconds_%_chance",
+      "withered_effect_+%",
+      "reduce_enemy_chaos_resistance_%"
     ],
     "visuals": "unholy_might",
     "category": "Buff",
@@ -8593,16 +8610,57 @@
   },
   "unholy_might_from_flask": {
     "description": "Ваш физический урон становится уроном хаоса и вы с 25% шансом можете наложить истощение",
+    "invisible": true,
+    "name": "Нечестивое могущество",
+    "removable": false,
+    "stats": [
+      "base_should_have_unholy_might"
+    ],
+    "visuals": "invisible",
+    "category": "Flask",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "unholy_might_from_stat": {
+    "description": "Ваш физический урон становится уроном хаоса и вы с 25% шансом можете наложить Истощение при нанесении удара",
     "invisible": false,
     "name": "Нечестивое могущество",
     "removable": false,
     "stats": [
-      "has_unholy_might"
+      "has_unholy_might",
+      "base_physical_damage_%_to_convert_to_chaos",
+      "withered_on_hit_for_2_seconds_%_chance",
+      "withered_effect_+%",
+      "reduce_enemy_chaos_resistance_%"
     ],
     "visuals": "unholy_might",
-    "category": "Flask",
+    "category": "Buff",
     "sources": null,
     "templates": null,
+    "stack_limit": null
+  },
+  "sentinal_unholy_might": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "base_should_have_unholy_might"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": {
+      "SentinelPlayerUnholyMight": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_should_have_unholy_might": 1
+        },
+        "stat_text": null,
+        "visuals": null
+      }
+    },
     "stack_limit": null
   },
   "daemon_delay": {
@@ -12668,7 +12726,7 @@
           "template": null,
           "stat_text": [
             "Форма призрака",
-            "25% шанс избежать всего урона от ударов"
+            "25% шанс избежать урона от каждого типа от ударов"
           ],
           "stats": {
             "phase_through_objects": 1,
@@ -13648,8 +13706,7 @@
     "name": "Истощение",
     "removable": false,
     "stats": [
-      "chaos_damage_taken_+%",
-      "is_withered"
+      "chaos_damage_taken_+%"
     ],
     "visuals": "wither_resistance",
     "category": "Debuff",
@@ -13658,8 +13715,7 @@
       "BreachWithered": {
         "aura_radius_metres": 2.5,
         "stats": {
-          "chaos_damage_taken_+%": 5,
-          "is_withered": 1
+          "chaos_damage_taken_+%": 5
         },
         "stat_text": [
           "5% увеличение получаемого урона хаосом"
@@ -13787,6 +13843,8 @@
     "removable": false,
     "stats": [
       "base_movement_velocity_+%",
+      "global_cannot_crit",
+      "enemy_critical_strike_chance_+%_final_against_self_from_abyssal_gaze",
       "is_maimed"
     ],
     "visuals": "maim",
@@ -21977,7 +22035,9 @@
       "arcane_surge_cast_speed_+%",
       "mana_regeneration_rate_+%",
       "life_regeneration_rate_+%",
-      "spell_damage_+%_final_from_arcane_surge"
+      "spell_damage_+%_final_from_arcane_surge",
+      "damage_taken_goes_to_mana_%",
+      "base_mana_cost_efficiency_+%"
     ],
     "visuals": "arcane_surge",
     "category": "Buff",
@@ -23371,6 +23431,14 @@
           "template": "GainReducedManaCostOnManaSpentUnique__1",
           "stat_text": null,
           "stats": null
+        },
+        {
+          "id": "MutatedUniqueGlovesInt4GainManaCostEfficiencyOnManaSpent",
+          "item": null,
+          "name": null,
+          "template": "GainReducedManaCostOnManaSpentUnique__1",
+          "stat_text": null,
+          "stats": null
         }
       ]
     },
@@ -23391,6 +23459,20 @@
     "removable": false,
     "stats": [
       "base_mana_cost_-%"
+    ],
+    "visuals": "critical_strike_chance_unique",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "mana_cost_efficiency_unique": {
+    "description": "У вас повышена эффективность расхода маны.",
+    "invisible": false,
+    "name": "Радость Калисы",
+    "removable": false,
+    "stats": [
+      "base_mana_cost_efficiency_+%"
     ],
     "visuals": "critical_strike_chance_unique",
     "category": "Buff",
@@ -23433,6 +23515,14 @@
       "Mods": [
         {
           "id": "NearbyStationaryEnemiesGainVinesUnique__1",
+          "item": null,
+          "name": null,
+          "template": "NearbyStationaryEnemiesGainGraspingVineUnique",
+          "stat_text": null,
+          "stats": null
+        },
+        {
+          "id": "DivergentNearbyStationaryEnemiesGainVinesUnique__1",
           "item": null,
           "name": null,
           "template": "NearbyStationaryEnemiesGainGraspingVineUnique",
@@ -24537,8 +24627,7 @@
     "name": "Дух краба",
     "removable": true,
     "stats": [
-      "physical_damage_reduction_%_per_crab_aspect_stack",
-      "max_crab_aspect_stacks"
+      "physical_damage_reduction_%_per_crab_aspect_stack"
     ],
     "visuals": "crab_aspect",
     "category": "Aspect",
@@ -24551,8 +24640,7 @@
           "template": null,
           "stat_text": null,
           "stats": {
-            "physical_damage_reduction_%_per_crab_aspect_stack": 1,
-            "max_crab_aspect_stacks": 1
+            "physical_damage_reduction_%_per_crab_aspect_stack": 1
           }
         }
       ]
@@ -27831,6 +27919,14 @@
           "template": "NearbyEnemiesHaveReducedAllResistancesUnique__1",
           "stat_text": null,
           "stats": null
+        },
+        {
+          "id": "DivergentNearbyEnemiesHaveReducedAllResistancesUnique__1",
+          "item": null,
+          "name": null,
+          "template": "NearbyEnemiesHaveReducedAllResistancesUnique__1",
+          "stat_text": null,
+          "stats": null
         }
       ]
     },
@@ -28208,6 +28304,14 @@
       "Mods": [
         {
           "id": "TriggerFeastOfFleshSkillUnique__1_",
+          "item": null,
+          "name": null,
+          "template": "TriggerFeastOfFleshSkillUnique__1_",
+          "stat_text": null,
+          "stats": null
+        },
+        {
+          "id": "DivergentTriggerFeastOfFleshSkillUnique__1_",
           "item": null,
           "name": null,
           "template": "TriggerFeastOfFleshSkillUnique__1_",
@@ -29440,6 +29544,14 @@
       "Mods": [
         {
           "id": "NearbyEnemiesCannotCritUnique__1",
+          "item": null,
+          "name": null,
+          "template": "NearbyEnemiesCannotCritUnique__1",
+          "stat_text": null,
+          "stats": null
+        },
+        {
+          "id": "DivergentNearbyEnemiesCannotCritUnique__1",
           "item": null,
           "name": null,
           "template": "NearbyEnemiesCannotCritUnique__1",
@@ -33623,6 +33735,14 @@
           "stats": null
         },
         {
+          "id": "DivergentNearbyEnemiesAreScorchedUnique__1",
+          "item": null,
+          "name": null,
+          "template": "NearbyEnemiesAreScorchedUnique__1",
+          "stat_text": null,
+          "stats": null
+        },
+        {
           "id": "MonsterEnemiesTaunted1",
           "item": null,
           "name": null,
@@ -33859,6 +33979,14 @@
           "stats": null
         },
         {
+          "id": "HearbyEnemiesAreHinderedBloodShrine",
+          "item": null,
+          "name": null,
+          "template": "HearbyEnemiesAreHinderedBloodShrine",
+          "stat_text": null,
+          "stats": null
+        },
+        {
           "id": "CleansingAltarDownsideBossHinderAura",
           "item": null,
           "name": null,
@@ -33887,6 +34015,14 @@
       },
       "HearbyEnemiesAreHinderedUltimatum_": {
         "aura_radius_metres": 2.8,
+        "stats": {
+          "hinder_aura_behaviour_variation": 0
+        },
+        "stat_text": null,
+        "visuals": "hinder"
+      },
+      "HearbyEnemiesAreHinderedBloodShrine": {
+        "aura_radius_metres": 2.0,
         "stats": {
           "hinder_aura_behaviour_variation": 0
         },
@@ -34415,6 +34551,14 @@
           "stats": null
         },
         {
+          "id": "DivergentShockedGroundWhileMovingUnique__1",
+          "item": null,
+          "name": null,
+          "template": "ShockedGroundWhileMovingUnique__1_",
+          "stat_text": null,
+          "stats": null
+        },
+        {
           "id": "ScorchedGroundWhileMovingUnique__1",
           "item": null,
           "name": null,
@@ -34660,20 +34804,6 @@
       "on_profane_ground"
     ],
     "visuals": "ground_profane",
-    "category": "Buff",
-    "sources": null,
-    "templates": null,
-    "stack_limit": null
-  },
-  "unholy_might_while_no_es": {
-    "description": "Ваш физический урон становится уроном хаоса и вы с 25% шансом можете наложить истощение",
-    "invisible": false,
-    "name": "Нечестивое могущество",
-    "removable": false,
-    "stats": [
-      "has_unholy_might"
-    ],
-    "visuals": "unholy_might",
     "category": "Buff",
     "sources": null,
     "templates": null,
@@ -35263,6 +35393,20 @@
       "base_damage_taken_+%"
     ],
     "visuals": "blackhole_damage_taken",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "abyssal_well_blackhole_damage_over_time": {
+    "description": "[DNT] You are taking Chaos Damage over time",
+    "invisible": false,
+    "name": "[DNT] Abyssal Well",
+    "removable": false,
+    "stats": [
+      "base_chaos_damage_taken_per_minute"
+    ],
+    "visuals": "frostglobe_damage_absorb",
     "category": "Debuff",
     "sources": null,
     "templates": null,
@@ -35989,6 +36133,14 @@
       "Mods": [
         {
           "id": "ManaRegenerationAuraUnique__1",
+          "item": null,
+          "name": null,
+          "template": "ManaRegenerationAuraUnique__1",
+          "stat_text": null,
+          "stats": null
+        },
+        {
+          "id": "DivergentManaRegenerationAuraUnique__1",
           "item": null,
           "name": null,
           "template": "ManaRegenerationAuraUnique__1",
@@ -37053,7 +37205,7 @@
     "stack_limit": null
   },
   "fanaticism": {
-    "description": "Самостоятельно сотворяемые вами чары имеют большую скорость сотворения и увеличенную область действия и расходуют меньше маны",
+    "description": "Самостоятельно сотворяемые вами чары имеют большую скорость сотворения, меньший расход и увеличенную область действия",
     "invisible": false,
     "name": "Фанатичность",
     "removable": false,
@@ -41283,6 +41435,20 @@
     "templates": null,
     "stack_limit": null
   },
+  "abyss_pinnacle_burning_arms": {
+    "description": "Вы получаете постепенный урон от огня",
+    "invisible": false,
+    "name": "Пламя Колодца",
+    "removable": false,
+    "stats": [
+      "base_fire_damage_taken_per_minute"
+    ],
+    "visuals": "abyss_pinnacle_burning_arms_visual",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "stuck_stabbed": {
     "description": "Вы не можете двигаться",
     "invisible": false,
@@ -42209,6 +42375,18 @@
     "stack_limit": null
   },
   "track_gain_spell_cost_every_fifth_cast": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "track_gain_spell_cost_every_third_cast": {
     "description": "",
     "invisible": true,
     "name": "",
@@ -47587,6 +47765,54 @@
         },
         {
           "id": "CurseEffectPunishmentEldritchImplicitUniquePresence6",
+          "item": null,
+          "name": null,
+          "template": "InfluenceStatConditionPresenceUniqueMonster",
+          "stat_text": null,
+          "stats": null
+        },
+        {
+          "id": "ManaCostEfficiencyEldritchImplicitUniquePresence1",
+          "item": null,
+          "name": null,
+          "template": "InfluenceStatConditionPresenceUniqueMonster",
+          "stat_text": null,
+          "stats": null
+        },
+        {
+          "id": "ManaCostEfficiencyEldritchImplicitUniquePresence2",
+          "item": null,
+          "name": null,
+          "template": "InfluenceStatConditionPresenceUniqueMonster",
+          "stat_text": null,
+          "stats": null
+        },
+        {
+          "id": "ManaCostEfficiencyEldritchImplicitUniquePresence3",
+          "item": null,
+          "name": null,
+          "template": "InfluenceStatConditionPresenceUniqueMonster",
+          "stat_text": null,
+          "stats": null
+        },
+        {
+          "id": "ManaCostEfficiencyEldritchImplicitUniquePresence4",
+          "item": null,
+          "name": null,
+          "template": "InfluenceStatConditionPresenceUniqueMonster",
+          "stat_text": null,
+          "stats": null
+        },
+        {
+          "id": "ManaCostEfficiencyEldritchImplicitUniquePresence5",
+          "item": null,
+          "name": null,
+          "template": "InfluenceStatConditionPresenceUniqueMonster",
+          "stat_text": null,
+          "stats": null
+        },
+        {
+          "id": "ManaCostEfficiencyEldritchImplicitUniquePresence6",
           "item": null,
           "name": null,
           "template": "InfluenceStatConditionPresenceUniqueMonster",
@@ -58416,6 +58642,54 @@
           "stats": null
         },
         {
+          "id": "ManaCostEfficiencyEldritchImplicitPinnaclePresence1",
+          "item": null,
+          "name": null,
+          "template": "InfluenceStatConditionPresenceCelestialBoss",
+          "stat_text": null,
+          "stats": null
+        },
+        {
+          "id": "ManaCostEfficiencyEldritchImplicitPinnaclePresence2",
+          "item": null,
+          "name": null,
+          "template": "InfluenceStatConditionPresenceCelestialBoss",
+          "stat_text": null,
+          "stats": null
+        },
+        {
+          "id": "ManaCostEfficiencyEldritchImplicitPinnaclePresence3",
+          "item": null,
+          "name": null,
+          "template": "InfluenceStatConditionPresenceCelestialBoss",
+          "stat_text": null,
+          "stats": null
+        },
+        {
+          "id": "ManaCostEfficiencyEldritchImplicitPinnaclePresence4",
+          "item": null,
+          "name": null,
+          "template": "InfluenceStatConditionPresenceCelestialBoss",
+          "stat_text": null,
+          "stats": null
+        },
+        {
+          "id": "ManaCostEfficiencyEldritchImplicitPinnaclePresence5",
+          "item": null,
+          "name": null,
+          "template": "InfluenceStatConditionPresenceCelestialBoss",
+          "stat_text": null,
+          "stats": null
+        },
+        {
+          "id": "ManaCostEfficiencyEldritchImplicitPinnaclePresence6",
+          "item": null,
+          "name": null,
+          "template": "InfluenceStatConditionPresenceCelestialBoss",
+          "stat_text": null,
+          "stats": null
+        },
+        {
           "id": "ReducedAttackManaCostEldritchImplicitPinnaclePresence1",
           "item": null,
           "name": null,
@@ -67748,6 +68022,14 @@
           "template": "UniqueEnemyLifeReserved",
           "stat_text": null,
           "stats": null
+        },
+        {
+          "id": "DivergentNearbyEnemyReservesLifeUnique__1",
+          "item": null,
+          "name": null,
+          "template": "UniqueEnemyLifeReserved",
+          "stat_text": null,
+          "stats": null
         }
       ],
       "PassiveSkills": [
@@ -69764,7 +70046,7 @@
           "avoid_damage_%": 75
         },
         "stat_text": [
-          "75% шанс избежать всего урона от ударов"
+          "75% шанс избежать урона от каждого типа от ударов"
         ],
         "visuals": null
       }
@@ -69931,6 +70213,40 @@
     },
     "templates": {
       "UniqueEnemyPhysicalDamageConvertedToFire": {
+        "aura_radius_metres": 6.0,
+        "stats": {
+          "base_from_enemy_physical_damage_%_to_convert_to_fire": 25
+        },
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "ascendancy_nearby_enemies_convert_physical_damage_to_fire": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "base_from_enemy_physical_damage_%_to_convert_to_fire"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": {
+      "PassiveSkills": [
+        {
+          "id": "AscendancyReliquarian30",
+          "item": null,
+          "name": null,
+          "template": "AscedancyEnemyPhysicalDamageConvertedToFire",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
+    "templates": {
+      "AscedancyEnemyPhysicalDamageConvertedToFire": {
         "aura_radius_metres": 6.0,
         "stats": {
           "base_from_enemy_physical_damage_%_to_convert_to_fire": 25
@@ -71430,7 +71746,7 @@
     "stack_limit": null
   },
   "azmeri_caster_demon_crit_multi_aura": {
-    "description": "У вас повышен множитель критического удара",
+    "description": "У вас повышен множитель критического удара ",
     "invisible": false,
     "name": "Множитель критического удара",
     "removable": false,
@@ -72348,9 +72664,9 @@
     "stack_limit": null
   },
   "beyond_boss_buff_1": {
-    "description": "В вас течёт украденная сила К'таш. Вы наносите часть физического урона в виде дополнительного урона от огня и убитые вами враги имеют шанс взорваться, нанеся 10% от их максимума здоровья в виде урона от огня",
+    "description": "В вас течёт украденная сила К'Таш. Вы наносите часть физического урона в виде дополнительного урона от огня и убитые вами враги имеют шанс взорваться, нанеся 10% от их максимума здоровья в виде урона от огня",
     "invisible": false,
-    "name": "Великолепие К'таш",
+    "name": "Великолепие К'Таш",
     "removable": false,
     "stats": [
       "base_actor_scale_+%",
@@ -73023,6 +73339,45 @@
         },
         "stat_text": [
           "15% увеличение урона"
+        ],
+        "visuals": null
+      },
+      "WildMercenaryEnhancedMonsterBuff": {
+        "aura_radius_metres": null,
+        "stats": {
+          "monster_difficulty_tankiness_+%": 30,
+          "damage_+%": 5,
+          "from_league_item_rarity_+%_permyriad": 0,
+          "from_league_item_quantity_+%_permyriad": 0
+        },
+        "stat_text": [
+          "5% увеличение урона"
+        ],
+        "visuals": null
+      },
+      "AbyssPitsClosedEnhancedMonsterBuff": {
+        "aura_radius_metres": null,
+        "stats": {
+          "monster_difficulty_tankiness_+%": 30,
+          "damage_+%": 8,
+          "from_league_item_rarity_+%_permyriad": 750,
+          "from_league_item_quantity_+%_permyriad": 750
+        },
+        "stat_text": [
+          "8% увеличение урона"
+        ],
+        "visuals": null
+      },
+      "AbyssEnragingCrystalsDestroyedEnhancedMonsterBuff": {
+        "aura_radius_metres": null,
+        "stats": {
+          "monster_difficulty_tankiness_+%": 50,
+          "damage_+%": 12,
+          "from_league_item_rarity_+%_permyriad": 750,
+          "from_league_item_quantity_+%_permyriad": 750
+        },
+        "stat_text": [
+          "12% увеличение урона"
         ],
         "visuals": null
       },
@@ -74849,6 +75204,18 @@
     "templates": null,
     "stack_limit": null
   },
+  "blood_shrine_buff_every_x_ms_from_ascendancy": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "benevolenceboss_collectable1_debuff": {
     "description": "Вы получаете увеличенный урон, но у вас повышена скорость передвижения",
     "invisible": false,
@@ -75230,7 +75597,7 @@
         "stat_text": [
           "20% повышение скорости атаки и сотворения чар",
           "100% повышение глобального шанса критического удара",
-          "15% шанс избежать всего урона от ударов",
+          "15% шанс избежать урона от каждого типа от ударов",
           "100% увеличение скрытности"
         ],
         "visuals": null
@@ -76041,6 +76408,14 @@
       "Mods": [
         {
           "id": "GrantsSummonVoidSpawnUnique__1",
+          "item": null,
+          "name": null,
+          "template": "TriggerSummonVoidSpawnSkillUnique__1",
+          "stat_text": null,
+          "stats": null
+        },
+        {
+          "id": "DivergentGrantsSummonVoidSpawnUnique__1",
           "item": null,
           "name": null,
           "template": "TriggerSummonVoidSpawnSkillUnique__1",
@@ -77797,6 +78172,222 @@
     },
     "stack_limit": null
   },
+  "blood_shrine_rat": {
+    "description": "Вы наносите часть урона от стихий в виде дополнительного урона хаосом.\r\nПока на вас действует этот эффект, периодически порождает торнадо из крыс, которое наносит постепенный физический урон и снижает скорость восстановления здоровья и энергетического щита.",
+    "invisible": false,
+    "name": "Кровавый алтарь крыс",
+    "removable": false,
+    "stats": [
+      "elemental_damage_%_to_add_as_chaos"
+    ],
+    "visuals": "blood_shrine_rat_visual",
+    "category": "Buff shrine",
+    "sources": null,
+    "templates": {
+      "blood_shrine_rat": {
+        "aura_radius_metres": null,
+        "stats": {
+          "elemental_damage_%_to_add_as_chaos": 30
+        },
+        "stat_text": [
+          "Дарует 30% от урона от стихий в виде дополнительного урона хаосом"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "blood_shrine_swarm": {
+    "description": "У вас увеличен множитель постепенного урона.\r\nПока на вас действует этот эффект, периодически порождает рой саранчи, сковывающий врагов.",
+    "invisible": false,
+    "name": "Кровавый алтарь саранчи",
+    "removable": false,
+    "stats": [
+      "dot_multiplier_+"
+    ],
+    "visuals": "blood_shrine_swarm_visual",
+    "category": "Buff shrine",
+    "sources": null,
+    "templates": {
+      "blood_shrine_swarm": {
+        "aura_radius_metres": null,
+        "stats": {
+          "dot_multiplier_+": 30
+        },
+        "stat_text": [
+          "+30% к множителю постепенного урона"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "blood_shrine_toads": {
+    "description": "Дополнительный шанс срабатывания Взрывной жабы при убийстве врага.",
+    "invisible": false,
+    "name": "Кровавый алтарь жаб",
+    "removable": false,
+    "stats": [
+      "exploding_toad_trigger_%_chance_from_unique"
+    ],
+    "visuals": "blood_shrine_toads_visual",
+    "category": "Buff shrine",
+    "sources": null,
+    "templates": {
+      "blood_shrine_toads": {
+        "aura_radius_metres": null,
+        "stats": {
+          "exploding_toad_trigger_%_chance_from_unique": 25
+        },
+        "stat_text": [
+          "25% шанс вызвать срабатывание Взрывной жабы, когда вы убиваете врага"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "blood_shrine_chaos_resistance": {
+    "description": "Вы получаете часть физического урона и урона от стихий в виде урона хаосом и ваше сопротивление хаосу повышено.",
+    "invisible": false,
+    "name": "Кровавый алтарь ворон",
+    "removable": false,
+    "stats": [
+      "base_chaos_damage_resistance_%",
+      "physical_damage_taken_%_as_chaos",
+      "elemental_damage_taken_%_as_chaos"
+    ],
+    "visuals": "blood_shrine_chaos_resistance_visual",
+    "category": "Buff shrine",
+    "sources": null,
+    "templates": {
+      "blood_shrine_chaos_resistance": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_chaos_damage_resistance_%": 50,
+          "physical_damage_taken_%_as_chaos": 10,
+          "elemental_damage_taken_%_as_chaos": 10
+        },
+        "stat_text": [
+          "+50% к сопротивлению хаосу",
+          "10% получаемого физического урона от ударов становится уроном хаосом",
+          "10% получаемого урона от стихий от ударов становится уроном хаосом"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "blood_shrine_curses": {
+    "description": "Проклинает врагов Слабостью при нанесении удара и вы можете накладывать на врагов дополнительное проклятие.",
+    "invisible": false,
+    "name": "Кровавый алтарь летучих мышей",
+    "removable": false,
+    "stats": [
+      "curse_on_hit_%_enfeeble",
+      "number_of_additional_curses_allowed"
+    ],
+    "visuals": "blood_shrine_curses_visual",
+    "category": "Buff shrine",
+    "sources": null,
+    "templates": {
+      "blood_shrine_curses": {
+        "aura_radius_metres": null,
+        "stats": {
+          "curse_on_hit_%_enfeeble": 100,
+          "number_of_additional_curses_allowed": 1
+        },
+        "stat_text": [
+          "Проклинает врагов Слабостью при нанесении удара",
+          "Вы можете наложить дополнительное проклятие"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "flask_all_damage_from_critical_strikes_can_shock": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "all_damage_from_critical_strikes_can_shock"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "flask_all_damage_from_critical_strikes_can_sap": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "all_damage_from_critical_strikes_can_sap"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "flask_all_damage_from_critical_strikes_can_inflict_brittle": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "all_damage_from_critical_strikes_can_inflict_brittle"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "flask_all_damage_from_critical_strikes_can_chill": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "all_damage_from_critical_strikes_can_chill"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "flask_all_damage_from_critical_strikes_can_freeze": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "all_damage_from_critical_strikes_can_freeze"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "discus_slam_alternate_orb_counter": {
+    "description": "У вас есть сферы Божественного взрыва",
+    "invisible": false,
+    "name": "Божественный взрыв света",
+    "removable": false,
+    "stats": [],
+    "visuals": "divine_blast_alt_x_buff_visual",
+    "category": "Active skill",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "gauntlet_ruin": {
     "description": "На вас эффект Гибели. По достижении 7 эффектов Гибели вы умрёте",
     "invisible": false,
@@ -77817,6 +78408,1617 @@
     "stats": [],
     "visuals": "foulgrasp",
     "category": "Active skill",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "deepwater_lantern_buff": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "in_range_of_deepwater_lantern"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": {
+      "DeepwaterLanternBuff": {
+        "aura_radius_metres": 0.1,
+        "stats": {
+          "in_range_of_deepwater_lantern": 1
+        },
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_hag_buff": {
+    "description": "Ваша плоть бурлит и пузырится.",
+    "invisible": true,
+    "name": "Благословение Морской карги",
+    "removable": false,
+    "stats": [
+      "action_speed_-%"
+    ],
+    "visuals": "deepwater_hag_buff_visual",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "verisium_channel_shield": {
+    "description": "Вас нельзя оглушить и нельзя нанести вам урон, пока вы вливаете энергию в веризий.",
+    "invisible": false,
+    "name": "Веризиевая энергия",
+    "removable": false,
+    "stats": [
+      "base_cannot_be_damaged",
+      "base_cannot_be_stunned"
+    ],
+    "visuals": "verisium_channel_shield",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "ghost_furnace_soul_buff": {
+    "description": "[DNT] Ghostflame Furnace has increased Area of Effect and you have increased Fire Damage over Time Multiplier per Ghostflame Soul",
+    "invisible": false,
+    "name": "[DNT] Ghostflame Soul",
+    "removable": false,
+    "stats": [
+      "ghost_furnace_area_of_effect_+%",
+      "fire_dot_multiplier_+",
+      "ghostflame_lantern_souls"
+    ],
+    "visuals": "ghost_furnace_soul_buff_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "ghost_furnace_aura": {
+    "description": "[DNT] You are taking burning damage from being near an enemy using Ghost Furnace",
+    "invisible": false,
+    "name": "[DNT] Ghost Furnace Aura",
+    "removable": false,
+    "stats": [
+      "base_fire_damage_taken_per_minute"
+    ],
+    "visuals": "ghost_furnace_buff_visual",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "oceans_fury": {
+    "description": "У вас повышена скорость передвижения и вы наносите часть физического урона в виде дополнительного урона от холода.",
+    "invisible": false,
+    "name": "Ярость Тсоаты",
+    "removable": false,
+    "stats": [
+      "physical_damage_%_to_add_as_cold",
+      "base_movement_velocity_+%"
+    ],
+    "visuals": "oceans_fury_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "abyssal_touched": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "monster_aggro_radius_+%"
+    ],
+    "visuals": "abyssal_touched",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "abyssal_touched_drain": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "life_loss_%_per_minute"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "abyss_pinnacle_totem_charged": {
+    "description": "Этот филактерий заряжен и будет стрелять",
+    "invisible": false,
+    "name": "Заряженный филактерий",
+    "removable": false,
+    "stats": [],
+    "visuals": "abyss_pinnacle_totem_charged_visual",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "rat_tornado_degen_and_recovery_debuff": {
+    "description": "Вы получаете постепенный физический урон, а регенерация и скорость перезарядки вашего здоровья и энергетического щита снижена",
+    "invisible": false,
+    "name": "Крысиное торнадо",
+    "removable": false,
+    "stats": [
+      "base_physical_damage_taken_per_minute",
+      "life_regeneration_rate_+%",
+      "energy_shield_regeneration_rate_+%",
+      "energy_shield_recharge_rate_+%"
+    ],
+    "visuals": "blood_tendrils",
+    "category": "Debuff",
+    "sources": {
+      "Mods": [
+        {
+          "id": "MonsterAuraEnemyLifeDegenRatTornado",
+          "item": null,
+          "name": null,
+          "template": "MonsterAuraEnemyLifeDegenPhysical",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
+    "templates": {
+      "MonsterAuraEnemyLifeDegenPhysical": {
+        "aura_radius_metres": 2.5,
+        "stats": {
+          "base_physical_damage_taken_per_minute": 6000,
+          "life_regeneration_rate_+%": -50,
+          "energy_shield_regeneration_rate_+%": -50,
+          "energy_shield_recharge_rate_+%": -50
+        },
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "abyss_pinnacle_phylactery_buff": {
+    "description": "Активные филактерии усиливают этого босса",
+    "invisible": false,
+    "name": "Филактерий",
+    "removable": false,
+    "stats": [
+      "base_damage_taken_+%"
+    ],
+    "visuals": "abyss_pinnacle_phylactery_buff",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "brine_ground_buff": {
+    "description": "Вы наносите часть физического урона в виде дополнительного урона от холода и молнии",
+    "invisible": false,
+    "name": "Морская земля",
+    "removable": false,
+    "stats": [
+      "physical_damage_%_to_add_as_cold",
+      "physical_damage_%_to_add_as_lightning"
+    ],
+    "visuals": "oasis_ground_buff_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "brine_ground_debuff": {
+    "description": "Ваша броня и уклонение уменьшены, а состояния холода и молнии на вас имеют увеличение эффекта",
+    "invisible": false,
+    "name": "Морская земля",
+    "removable": false,
+    "stats": [
+      "cold_ailment_effect_on_self_+%",
+      "evasion_and_physical_damage_reduction_rating_+%",
+      "lightning_ailment_effect_on_self_+%"
+    ],
+    "visuals": "oasis_ground_buff_visual",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "barnicle": {
+    "description": "Увеличение длительности охлаждения и заморозки на вас и часть вашего физического урона становится уроном от холода за каждый заряд моллюсков на вас",
+    "invisible": false,
+    "name": "Моллюски",
+    "removable": false,
+    "stats": [
+      "base_self_chill_duration_-%",
+      "base_from_enemy_physical_damage_%_to_convert_to_cold",
+      "base_self_freeze_duration_-%"
+    ],
+    "visuals": "barnacle_debuff",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": 10
+  },
+  "barnicle_aura": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "buff_impl_stat",
+      "buff_impl_stat",
+      "buff_impl_stat"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": {
+      "PassiveSkills": [
+        {
+          "id": "AlternateAscendancyBrinerot2_",
+          "item": null,
+          "name": null,
+          "template": "CrustaceousGrowthBarnicleAura",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
+    "templates": {
+      "CrustaceousGrowthBarnicleAura": {
+        "aura_radius_metres": 5.0,
+        "stats": {
+          "buff_impl_stat": -5
+        },
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "brine_rot": {
+    "description": "Вы находитесь внутри утопляющей сферы. Часть полученного внутри утопляющей сферы постепенного урона теряется в виде здоровья, когда вы покинете сферу",
+    "invisible": false,
+    "name": "Утопляющая сфера",
+    "removable": false,
+    "stats": [],
+    "visuals": "brinerot_debuff",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "brine_rot_aura": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "brinerot_aura",
+    "category": null,
+    "sources": {
+      "PassiveSkills": [
+        {
+          "id": "AlternateAscendancyBrinerot3",
+          "item": null,
+          "name": null,
+          "template": "BrineRotAura",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
+    "templates": {
+      "BrineRotAura": {
+        "aura_radius_metres": 5.0,
+        "stats": null,
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "brinerot_encounter_completion_buff": {
+    "description": "Выпадающее из убитых монстров золото с некоторым шансом может быть продублировано.",
+    "invisible": false,
+    "name": "Фонарь моряка",
+    "removable": false,
+    "stats": [
+      "%_chance_to_duplicate_dropped_gold"
+    ],
+    "visuals": "brinerot_encounter_completion_buff_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "banner_dot_multi_buff": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "dot_multiplier_+"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "coral_encounter_completion_buff": {
+    "description": "Убийство редких или уникальных врагов призовёт мстительных крабов",
+    "invisible": false,
+    "name": "Зов Краценна",
+    "removable": false,
+    "stats": [
+      "chance_%_to_spawn_crab_pack_on_kill_vs_rare_or_unique"
+    ],
+    "visuals": "coral_encounter_completion_buff_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "deepwater_drowning": {
+    "description": "Вы тонете и скоро умрёте",
+    "invisible": false,
+    "name": "Утопление",
+    "removable": false,
+    "stats": [
+      "deepwater_drowning_action_speed_+%_maximum_value"
+    ],
+    "visuals": "tangle_drowning",
+    "category": "Debuff",
+    "sources": null,
+    "templates": {
+      "DeepwaterDrowning": {
+        "aura_radius_metres": null,
+        "stats": {
+          "deepwater_drowning_action_speed_+%_maximum_value": -75
+        },
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "ghost_furnace_display": {
+    "description": "",
+    "invisible": false,
+    "name": "[DNT] Ghost Furnace",
+    "removable": false,
+    "stats": [],
+    "visuals": "ghost_furnace_display",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "deepwater_altar_fish": {
+    "description": "Вы принесли корм для Тсоаты в жертву Морскому царю.\r\nВы наносите увеличенный урон и имеете увеличение сопротивления холоду.",
+    "invisible": false,
+    "name": "Корм для Тсоаты",
+    "removable": true,
+    "stats": [
+      "base_cold_damage_resistance_%",
+      "damage_+%"
+    ],
+    "visuals": "deepwater_altar_fish",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarFish": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_cold_damage_resistance_%": 15,
+          "damage_+%": 30
+        },
+        "stat_text": [
+          "+15% к сопротивлению холоду",
+          "30% увеличение урона"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_octopus": {
+    "description": "Вы принесли тянущиеся щупальца в жертву Морскому царю.\r\nВаши умения выпускают дополнительные снаряды, имеют увеличенную дальность ударов ближнего боя и область действия.",
+    "invisible": false,
+    "name": "Тянущиеся щупальца",
+    "removable": true,
+    "stats": [
+      "number_of_additional_projectiles",
+      "melee_range_+",
+      "base_skill_area_of_effect_+%"
+    ],
+    "visuals": "deepwater_altar_octopus",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarOctopus": {
+        "aura_radius_metres": null,
+        "stats": {
+          "number_of_additional_projectiles": 2,
+          "melee_range_+": 10,
+          "base_skill_area_of_effect_+%": 20
+        },
+        "stat_text": [
+          "Умения выпускают дополнительных снарядов: 2",
+          "+1 м к дальности ударов ближнего боя",
+          "20% увеличение области действия"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_pufferfish": {
+    "description": "Вы принесли токсичные шипы в жертву Морскому царю.\r\nВы отражаете часть получаемого урона в ближнем бою. Весь наносимый вами урон может отравить, вы всегда отравляете при нанесении удара и невосприимчивы к яду.",
+    "invisible": false,
+    "name": "Токсичные шипы",
+    "removable": true,
+    "stats": [
+      "all_damage_can_poison",
+      "base_chance_to_poison_on_hit_%",
+      "melee_physical_damage_taken_%_to_deal_to_attacker",
+      "base_unaffected_by_poison"
+    ],
+    "visuals": "deepwater_altar_pufferfish",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarPufferFish": {
+        "aura_radius_metres": null,
+        "stats": {
+          "all_damage_can_poison": 1,
+          "base_chance_to_poison_on_hit_%": 100,
+          "melee_physical_damage_taken_%_to_deal_to_attacker": 100,
+          "base_unaffected_by_poison": 1
+        },
+        "stat_text": [
+          "Весь урон от ударов может наложить отравление",
+          "Всегда отравляет при нанесении удара",
+          "100% полученного физического урона в ближнем бою отражается атакующему",
+          "Невосприимчивость к яду"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_crab": {
+    "description": "Вы принесли жёсткую раковину в жертву Морскому царю.\r\nВаш шанс блока урона от атак и чар увеличен.",
+    "invisible": false,
+    "name": "Жёсткая раковина",
+    "removable": true,
+    "stats": [
+      "base_spell_block_%",
+      "monster_base_block_%"
+    ],
+    "visuals": "deepwater_altar_crab",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarCrab": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_spell_block_%": 20,
+          "monster_base_block_%": 20
+        },
+        "stat_text": [
+          "20% шанс блокировать урон от чар",
+          "20% шанс блокировать урон от атак"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_coral": {
+    "description": "Вы принесли прочный коралл в жертву Морскому царю.\r\nВас нельзя оглушить и накладываете на врагов оглушение с увеличенной длительностью.",
+    "invisible": false,
+    "name": "Прочный коралл",
+    "removable": true,
+    "stats": [
+      "base_cannot_be_stunned",
+      "base_stun_duration_+%"
+    ],
+    "visuals": "deepwater_altar_coral",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarCoral": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_cannot_be_stunned": 1,
+          "base_stun_duration_+%": 50
+        },
+        "stat_text": [
+          "Не может быть оглушен",
+          "50% увеличение длительности оглушения на врагах"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_fish_buffed": {
+    "description": "Морской царь дарует вам морские плавники.\r\nВы наносите увеличенный урон, имеете повышенную скорость передвижения, сопротивление холоду и максимум сопротивления холоду.",
+    "invisible": false,
+    "name": "Морские плавники",
+    "removable": true,
+    "stats": [
+      "base_cold_damage_resistance_%",
+      "damage_+%",
+      "base_movement_velocity_+%",
+      "base_maximum_cold_damage_resistance_%"
+    ],
+    "visuals": "deepwater_altar_fish_buffed",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarFishEmpowered": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_cold_damage_resistance_%": 15,
+          "damage_+%": 30,
+          "base_movement_velocity_+%": 15,
+          "base_maximum_cold_damage_resistance_%": 5
+        },
+        "stat_text": [
+          "+15% к сопротивлению холоду",
+          "30% увеличение урона",
+          "15% повышение скорости передвижения",
+          "+5% к максимальному сопротивлению холоду"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_octopus_buffed": {
+    "description": "Морской царь дарует вам хваткие щупальца.\r\nВаши умения выпускают дополнительные снаряды, имеют увеличенную дальность ударов ближнего боя и область действия.\r\nВы также получаете Неуловимость при убийстве и имеете усиление эффекта Неуловимости.",
+    "invisible": false,
+    "name": "Хваткие щупальца",
+    "removable": true,
+    "stats": [
+      "number_of_additional_projectiles",
+      "melee_range_+",
+      "base_skill_area_of_effect_+%",
+      "gain_elusive_on_kill_chance_%",
+      "elusive_effect_+%"
+    ],
+    "visuals": "deepwater_altar_octopus_buffed",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarOctopusEmpowered": {
+        "aura_radius_metres": null,
+        "stats": {
+          "number_of_additional_projectiles": 2,
+          "melee_range_+": 10,
+          "base_skill_area_of_effect_+%": 20,
+          "gain_elusive_on_kill_chance_%": 100,
+          "elusive_effect_+%": 30
+        },
+        "stat_text": [
+          "Умения выпускают дополнительных снарядов: 2",
+          "+1 м к дальности ударов ближнего боя",
+          "20% увеличение области действия",
+          "Дарует Неуловимость при убийстве",
+          "30% усиление эффекта Неуловимости"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_pufferfish_buffed": {
+    "description": "Морской царь дарует вам смертоносные шипы.\r\nВы отражаете часть получаемого урона в ближнем бою. Весь наносимый вами урон может отравить, вы всегда отравляете при нанесении удара и невосприимчивы к яду.\r\nВраги, которых вы отравили, не могут регенерировать здоровье и у вас есть шанс, когда вы накладываете яд, наложить дополнительный яд на ту же цель.",
+    "invisible": false,
+    "name": "Смертоносные шипы",
+    "removable": true,
+    "stats": [
+      "all_damage_can_poison",
+      "base_chance_to_poison_on_hit_%",
+      "melee_physical_damage_taken_%_to_deal_to_attacker",
+      "enemies_poisoned_by_you_cannot_regen_life",
+      "additional_poison_chance_%_when_inflicting_poison"
+    ],
+    "visuals": "deepwater_altar_pufferfish_buffed",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarPufferFishEmpowered": {
+        "aura_radius_metres": null,
+        "stats": {
+          "all_damage_can_poison": 1,
+          "base_chance_to_poison_on_hit_%": 100,
+          "melee_physical_damage_taken_%_to_deal_to_attacker": 100,
+          "enemies_poisoned_by_you_cannot_regen_life": 1,
+          "additional_poison_chance_%_when_inflicting_poison": 30
+        },
+        "stat_text": [
+          "Весь урон от ударов может наложить отравление",
+          "Всегда отравляет при нанесении удара",
+          "100% полученного физического урона в ближнем бою отражается атакующему",
+          "Отравленные вами враги не могут регенерировать здоровье",
+          "30% шанс при наложении вами отравления наложить еще один заряд отравления на ту же цель"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_crab_buffed": {
+    "description": "Морской царь дарует вам непроницаемую раковину.\r\nВаш шанс блока урона от атак и чар увеличен.\r\nВы также получаете дополнительный максимум сопротивления стихиям и уменьшение получаемого физического урона.",
+    "invisible": false,
+    "name": "Непроницаемая раковина",
+    "removable": true,
+    "stats": [
+      "base_spell_block_%",
+      "monster_base_block_%",
+      "additional_maximum_all_elemental_resistances_%",
+      "base_additional_physical_damage_reduction_%"
+    ],
+    "visuals": "deepwater_altar_crab_buffed",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarCrabEmpowered": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_spell_block_%": 20,
+          "monster_base_block_%": 20,
+          "additional_maximum_all_elemental_resistances_%": 3,
+          "base_additional_physical_damage_reduction_%": 10
+        },
+        "stat_text": [
+          "20% шанс блокировать урон от чар",
+          "20% шанс блокировать урон от атак",
+          "+3% к максимуму сопротивлений всем стихиям",
+          "10% дополнительного уменьшения получаемого физического урона"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_coral_buffed": {
+    "description": "Морской царь дарует вам боевой коралл.\r\nВас нельзя оглушить и накладываете на врагов оглушение с увеличенной длительностью.\r\nВы также имеете уменьшение порога оглушение врага и шанс нанести двойной урон, если недавно вы оглушали врага.",
+    "invisible": false,
+    "name": "Боевой коралл",
+    "removable": true,
+    "stats": [
+      "base_cannot_be_stunned",
+      "base_stun_duration_+%",
+      "chance_to_deal_double_damage_%_if_have_stunned_an_enemy_recently",
+      "base_stun_threshold_reduction_+%"
+    ],
+    "visuals": "deepwater_altar_coral_buffed",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarCoralEmpowered": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_cannot_be_stunned": 1,
+          "base_stun_duration_+%": 50,
+          "chance_to_deal_double_damage_%_if_have_stunned_an_enemy_recently": 30,
+          "base_stun_threshold_reduction_+%": 30
+        },
+        "stat_text": [
+          "Не может быть оглушен",
+          "50% увеличение длительности оглушения на врагах",
+          "30% шанс нанести двойной урон, если недавно вы оглушали врага",
+          "30% снижение порога оглушения врагов"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_cursed_ducat_debuff": {
+    "description": "Вы чувствуете взгляды утопших вокруг себя",
+    "invisible": false,
+    "name": "Гнев утопших",
+    "removable": false,
+    "stats": [],
+    "visuals": "deepwater_cursed_ducat_debuff",
+    "category": "Debuff",
+    "sources": null,
+    "templates": {
+      "DeepwaterCursedDucatDebuff": {
+        "aura_radius_metres": null,
+        "stats": null,
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "monster_physical_thorns_active": {
+    "description": "",
+    "invisible": false,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "monster_physical_thorns_active"
+    ],
+    "visuals": "monster_thorns_physical_new",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "monster_elemental_thorns_active": {
+    "description": "",
+    "invisible": false,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "monster_elemental_thorns_active"
+    ],
+    "visuals": "monster_thorns_elemental_new",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "bloodrite": {
+    "description": "Вы периодически активируете Разрыв плоти. С каждой стадией эффекта Разрыв плоти срабатывает всё чаще.",
+    "invisible": false,
+    "name": "Голод Гхорра",
+    "removable": true,
+    "stats": [],
+    "visuals": "bloodrite",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": 3
+  },
+  "bloodrend": {
+    "description": "Вы получаете постепенный физический урон, а также увеличенный постепенный урон от всех источников.",
+    "invisible": false,
+    "name": "Разрыв плоти",
+    "removable": false,
+    "stats": [
+      "base_physical_damage_taken_per_minute",
+      "degen_effect_+%"
+    ],
+    "visuals": "bloodrend",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": 3
+  },
+  "pact_affliction_movement_speed": {
+    "description": "Скорость вашего передвижения снижена на 20%",
+    "invisible": false,
+    "name": "Поношенные сандалии",
+    "removable": false,
+    "stats": [
+      "base_movement_velocity_+%"
+    ],
+    "visuals": "pact_affliction_movement_speed",
+    "category": "Debuff",
+    "sources": null,
+    "templates": {
+      "PactAfflictionMovementSpeed": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_movement_velocity_+%": -20
+        },
+        "stat_text": [
+          "20% снижение скорости передвижения"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "pact_affliction_damage": {
+    "description": "Вы наносите уменьшенный на 50% урон",
+    "invisible": false,
+    "name": "Маска страха",
+    "removable": false,
+    "stats": [
+      "damage_+%"
+    ],
+    "visuals": "pact_affliction_damage",
+    "category": "Debuff",
+    "sources": null,
+    "templates": {
+      "PactAfflictionDamage": {
+        "aura_radius_metres": null,
+        "stats": {
+          "damage_+%": -50
+        },
+        "stat_text": [
+          "50% уменьшение урона"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "pact_affliction_damage_taken": {
+    "description": "Вы получаете увеличенный на 20% урон",
+    "invisible": false,
+    "name": "Заточенные когти",
+    "removable": false,
+    "stats": [
+      "base_damage_taken_+%"
+    ],
+    "visuals": "pact_affliction_damage_taken",
+    "category": "Debuff",
+    "sources": null,
+    "templates": {
+      "PactAfflictionDamageTaken": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_damage_taken_+%": 20
+        },
+        "stat_text": [
+          "20% увеличение получаемого урона"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "pact_affliction_defences": {
+    "description": "Ваша защита снижена на 50%",
+    "invisible": false,
+    "name": "Расколотый щит",
+    "removable": false,
+    "stats": [
+      "global_defences_+%"
+    ],
+    "visuals": "pact_affliction_defences",
+    "category": "Debuff",
+    "sources": null,
+    "templates": {
+      "PactAfflictionDefences": {
+        "aura_radius_metres": null,
+        "stats": {
+          "global_defences_+%": -50
+        },
+        "stat_text": [
+          "50% снижение глобальной защиты"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "pact_affliction_resistances": {
+    "description": "Вы получаете -20% ко всем сопротивлениям",
+    "invisible": false,
+    "name": "Нечестивая урна",
+    "removable": false,
+    "stats": [
+      "base_resist_all_elements_%",
+      "base_chaos_damage_resistance_%"
+    ],
+    "visuals": "pact_affliction_resistances",
+    "category": "Debuff",
+    "sources": null,
+    "templates": {
+      "PactAfflictionResistances": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_resist_all_elements_%": -20,
+          "base_chaos_damage_resistance_%": -20
+        },
+        "stat_text": [
+          "-20% к сопротивлению всем стихиям",
+          "-20% к сопротивлению хаосу"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "pact_affliction_critical_strike_chance": {
+    "description": "Ваш шанс критического удара снижен на 100%",
+    "invisible": false,
+    "name": "Демонический череп",
+    "removable": false,
+    "stats": [
+      "critical_strike_chance_+%"
+    ],
+    "visuals": "pact_affliction_critical_strike_chance",
+    "category": "Debuff",
+    "sources": null,
+    "templates": {
+      "PactAfflictionCriticalStrikeChance": {
+        "aura_radius_metres": null,
+        "stats": {
+          "critical_strike_chance_+%": -100
+        },
+        "stat_text": [
+          "100% снижение глобального шанса критического удара"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "pact_affliction_cast_speed": {
+    "description": "Ваша скорость сотворения чар снижена на 20%",
+    "invisible": false,
+    "name": "Железные кандалы",
+    "removable": false,
+    "stats": [
+      "base_cast_speed_+%"
+    ],
+    "visuals": "pact_affliction_cast_speed",
+    "category": "Debuff",
+    "sources": null,
+    "templates": {
+      "PactAfflictionCastSpeed": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_cast_speed_+%": -20
+        },
+        "stat_text": [
+          "20% снижение скорости сотворения чар"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "pact_affliction_life_degen": {
+    "description": "Скорость восстановления вашего здоровья снижена на 25%",
+    "invisible": false,
+    "name": "Отравленная вода",
+    "removable": false,
+    "stats": [
+      "life_recovery_rate_+%"
+    ],
+    "visuals": "pact_affliction_life_degen",
+    "category": "Debuff",
+    "sources": null,
+    "templates": {
+      "PactAfflictionLifeDegen": {
+        "aura_radius_metres": null,
+        "stats": {
+          "life_recovery_rate_+%": -25
+        },
+        "stat_text": [
+          "25% снижение скорости восстановления здоровья"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "pact_affliction_mana_degen": {
+    "description": "Скорость восстановления вашей маны снижена на 25%",
+    "invisible": false,
+    "name": "Проклятая призма",
+    "removable": false,
+    "stats": [
+      "mana_recovery_rate_+%"
+    ],
+    "visuals": "pact_affliction_mana_degen",
+    "category": "Debuff",
+    "sources": null,
+    "templates": {
+      "PactAfflictionManaDegen": {
+        "aura_radius_metres": null,
+        "stats": {
+          "mana_recovery_rate_+%": -25
+        },
+        "stat_text": [
+          "25% снижение скорости восстановления маны"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "pact_affliction_light_radius": {
+    "description": "Ваш радиус обзора уменьшен на 80%",
+    "invisible": false,
+    "name": "Чёрный дым",
+    "removable": false,
+    "stats": [
+      "light_radius_+%"
+    ],
+    "visuals": "pact_affliction_light_radius",
+    "category": "Debuff",
+    "sources": null,
+    "templates": {
+      "PactAfflictionLightRadius": {
+        "aura_radius_metres": null,
+        "stats": {
+          "light_radius_+%": -80
+        },
+        "stat_text": [
+          "80% уменьшение радиуса обзора"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "pact_affliction_critical_strike_chance_against_self": {
+    "description": "Враги имеют повышенный на 100% шанс критического удара по вам",
+    "invisible": false,
+    "name": "Призрачная коса",
+    "removable": false,
+    "stats": [
+      "base_enemy_critical_strike_chance_+%_against_self"
+    ],
+    "visuals": "pact_affliction_critical_strike_chance_against_self",
+    "category": "Debuff",
+    "sources": null,
+    "templates": {
+      "PactAfflictionCriticalStrikeChanceAgainstSelf": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_enemy_critical_strike_chance_+%_against_self": 100
+        },
+        "stat_text": [
+          "Удары по вам имеют на 100% повышенный шанс критического удара"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "pact_affliction_action_speed": {
+    "description": "Скорость ваших действий снижена на 15%",
+    "invisible": false,
+    "name": "Тёмная яма",
+    "removable": false,
+    "stats": [
+      "action_speed_-%"
+    ],
+    "visuals": "pact_affliction_action_speed",
+    "category": "Debuff",
+    "sources": null,
+    "templates": {
+      "PactAfflictionActionSpeed": {
+        "aura_radius_metres": null,
+        "stats": {
+          "action_speed_-%": 15
+        },
+        "stat_text": [
+          "15% снижение скорости действий"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "pact_boon_movement_speed": {
+    "description": "Скорость вашего передвижения повышена на 20%",
+    "invisible": false,
+    "name": "Заячья лапка",
+    "removable": true,
+    "stats": [
+      "base_movement_velocity_+%"
+    ],
+    "visuals": "pact_boon_movement_speed",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "PactBoonMovementSpeed": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_movement_velocity_+%": 20
+        },
+        "stat_text": [
+          "20% повышение скорости передвижения"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "pact_boon_damage": {
+    "description": "Вы наносите увеличенный на 50% урон",
+    "invisible": false,
+    "name": "Украшенный кинжал",
+    "removable": true,
+    "stats": [
+      "damage_+%"
+    ],
+    "visuals": "pact_boon_damage",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "PactBoonDamage": {
+        "aura_radius_metres": null,
+        "stats": {
+          "damage_+%": 50
+        },
+        "stat_text": [
+          "50% увеличение урона"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "pact_boon_damage_taken": {
+    "description": "Вы получаете уменьшенный на 20% урон",
+    "invisible": false,
+    "name": "Золотые заметки",
+    "removable": true,
+    "stats": [
+      "base_damage_taken_+%"
+    ],
+    "visuals": "pact_boon_damage_taken",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "PactBoonDamageTaken": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_damage_taken_+%": -20
+        },
+        "stat_text": [
+          "20% уменьшение получаемого урона"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "pact_boon_defences": {
+    "description": "Ваша защита повышена на 50%",
+    "invisible": false,
+    "name": "Сверкающий лак",
+    "removable": true,
+    "stats": [
+      "global_defences_+%"
+    ],
+    "visuals": "pact_boon_defences",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "PactBoonDefences": {
+        "aura_radius_metres": null,
+        "stats": {
+          "global_defences_+%": 50
+        },
+        "stat_text": [
+          "50% повышение глобальной защиты"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "pact_boon_resistances": {
+    "description": "Вы получаете +20% ко всем сопротивлениям",
+    "invisible": false,
+    "name": "Серебряные заметки",
+    "removable": true,
+    "stats": [
+      "base_resist_all_elements_%",
+      "base_chaos_damage_resistance_%"
+    ],
+    "visuals": "pact_boon_resistances",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "PactBoonResistances": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_resist_all_elements_%": 20,
+          "base_chaos_damage_resistance_%": 20
+        },
+        "stat_text": [
+          "+20% к сопротивлению всем стихиям",
+          "+20% к сопротивлению хаосу"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "pact_boon_critical_strike_chance": {
+    "description": "Ваш шанс критического удара повышен на 100%",
+    "invisible": false,
+    "name": "Клинок убийцы",
+    "removable": true,
+    "stats": [
+      "critical_strike_chance_+%"
+    ],
+    "visuals": "pact_boon_critical_strike_chance",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "PactBoonCriticalStrikeChance": {
+        "aura_radius_metres": null,
+        "stats": {
+          "critical_strike_chance_+%": 100
+        },
+        "stat_text": [
+          "100% повышение глобального шанса критического удара"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "pact_boon_cast_speed": {
+    "description": "Ваша скорость сотворения чар повышена на 20%",
+    "invisible": false,
+    "name": "Ненастроенная лютня",
+    "removable": true,
+    "stats": [
+      "base_cast_speed_+%"
+    ],
+    "visuals": "pact_boon_cast_speed",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "PactBoonCastSpeed": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_cast_speed_+%": 20
+        },
+        "stat_text": [
+          "20% повышение скорости сотворения чар"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "pact_boon_life_degen": {
+    "description": "Скорость восстановления вашего здоровья повышена на 25%",
+    "invisible": false,
+    "name": "Святая вода",
+    "removable": true,
+    "stats": [
+      "life_recovery_rate_+%"
+    ],
+    "visuals": "pact_boon_life_degen",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "PactBoonLifeDegen": {
+        "aura_radius_metres": null,
+        "stats": {
+          "life_recovery_rate_+%": 25
+        },
+        "stat_text": [
+          "25% повышение скорости восстановления здоровья"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "pact_boon_mana_degen": {
+    "description": "Скорость восстановления вашей маны повышена на 25%",
+    "invisible": false,
+    "name": "Затхлое вино",
+    "removable": true,
+    "stats": [
+      "mana_recovery_rate_+%"
+    ],
+    "visuals": "pact_boon_mana_degen",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "PactBoonManaDegen": {
+        "aura_radius_metres": null,
+        "stats": {
+          "mana_recovery_rate_+%": 25
+        },
+        "stat_text": [
+          "25% повышение скорости восстановления маны"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "pact_boon_light_radius": {
+    "description": "Ваш радиус обзора увеличен на 80%",
+    "invisible": false,
+    "name": "Светящаяся сфера",
+    "removable": true,
+    "stats": [
+      "light_radius_+%"
+    ],
+    "visuals": "pact_boon_light_radius",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "PactBoonLightRadius": {
+        "aura_radius_metres": null,
+        "stats": {
+          "light_radius_+%": 80
+        },
+        "stat_text": [
+          "80% увеличение радиуса обзора"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "pact_boon_critical_strike_chance_against_self": {
+    "description": "Враги имеют сниженный на 100% шанс критического удара по вам",
+    "invisible": false,
+    "name": "Гравированная сфера",
+    "removable": true,
+    "stats": [
+      "base_enemy_critical_strike_chance_+%_against_self"
+    ],
+    "visuals": "pact_boon_critical_strike_chance_against_self",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "PactBoonCriticalStrikeChanceAgainstSelf": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_enemy_critical_strike_chance_+%_against_self": -100
+        },
+        "stat_text": [
+          "Удары по вам имеют на 100% сниженный шанс критического удара"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "pact_boon_action_speed": {
+    "description": "Скорость ваших действий повышена на 15%",
+    "invisible": false,
+    "name": "Фонтан молодости",
+    "removable": true,
+    "stats": [
+      "action_speed_-%"
+    ],
+    "visuals": "pact_boon_action_speed",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "PactBoonActionSpeed": {
+        "aura_radius_metres": null,
+        "stats": {
+          "action_speed_-%": -15
+        },
+        "stat_text": [
+          "15% повышение скорости действий"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "lunaris_aspect_elemental_rebuff": {
+    "description": "Дух Лунарис уменьшает получаемый вами урон от стихий",
+    "invisible": false,
+    "name": "Лунное сопротивление",
+    "removable": false,
+    "stats": [],
+    "visuals": "lunaris_aspect_elemental_rebuff_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": 8
+  },
+  "lunaris_aspect_physical_rebuff": {
+    "description": "Дух Лунарис уменьшает получаемый вами физический урон",
+    "invisible": false,
+    "name": "Лунная защита",
+    "removable": false,
+    "stats": [],
+    "visuals": "lunaris_aspect_physical_rebuff_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": 8
+  },
+  "solaris_aspect_exposure_debuff": {
+    "description": "Вы имеете усиление эффекта восприимчивости на вас",
+    "invisible": false,
+    "name": "Солнечный ожог",
+    "removable": false,
+    "stats": [
+      "exposure_effect_+%"
+    ],
+    "visuals": "solaris_aspect_exposure_debuff_visual",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": 5
+  },
+  "display_num_empowered_spells": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "pact_empowered_visual_display_buff",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "deepwater_lantern_wider_buff": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "is_near_deepwater_lantern"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": {
+      "DeepwaterLanternWiderBuff": {
+        "aura_radius_metres": 0.1,
+        "stats": {
+          "is_near_deepwater_lantern": -1
+        },
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "mana_infused_staff": {
+    "description": "У вас увеличен шанс блока и вы расходуете меньше маны на умения",
+    "invisible": false,
+    "name": "Насыщенный маной посох",
+    "removable": true,
+    "stats": [
+      "skill_mana_cost_+%_final_from_mana_infused_staff",
+      "block_chance_+%_final_from_mana_infused_staff"
+    ],
+    "visuals": "mana_infused_staff",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "brine_king_aspect": {
+    "description": "Вы накладываете более сильное охлаждение и ваш урон пробивает сопротивление холоду у охлажденных врагов",
+    "invisible": true,
+    "name": "Дух Морского царя",
+    "removable": false,
+    "stats": [
+      "chill_effect_+%",
+      "cold_penetration_%_vs_chilled_enemies"
+    ],
+    "visuals": "brine_king_aspect_primary_buff",
+    "category": "Aspect",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "solaris_aspect": {
+    "description": "",
+    "invisible": true,
+    "name": "Дух Солярис",
+    "removable": false,
+    "stats": [],
+    "visuals": "solaris_aspect_primary_buff",
+    "category": "Aspect",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "lunaris_aspect": {
+    "description": "",
+    "invisible": true,
+    "name": "Дух Лунарис",
+    "removable": false,
+    "stats": [
+      "lunaris_aspect_elemental_damage_taken_+%_final_per_ele_rebuff",
+      "lunaris_aspect_physical_damage_taken_+%_final_per_phys_rebuff",
+      "lunaris_aspect_gain_rebuff_matching_damage_taken"
+    ],
+    "visuals": "lunaris_aspect_primary_buff",
+    "category": "Aspect",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "arakaali_aspect": {
+    "description": "",
+    "invisible": true,
+    "name": "Дух Аракаали",
+    "removable": false,
+    "stats": [
+      "withered_on_hit_for_2_seconds_%_chance",
+      "life_recovery_rate_+%_per_wither_on_self",
+      "withered_reflected_to_self"
+    ],
+    "visuals": "arakaali_aspect_primary_buff",
+    "category": "Aspect",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "spirit_infusion": {
+    "description": "Каждая стадия Насыщения духом дарует 15% ускорение начала перезарядки энергетического щита, на 5% больше урона от поддерживаемых чар и на 10% больше расхода ресурсов поддерживаемыми чарами. ",
+    "invisible": false,
+    "name": "Насыщение духом",
+    "removable": false,
+    "stats": [
+      "energy_shield_delay_-%",
+      "channelling_spell_damage_+%_final_from_spirit_infusion",
+      "channelling_spell_mana_cost_+%_final_from_spirit_infusion"
+    ],
+    "visuals": "spirit_infusion",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": 10
+  },
+  "deepwater_golden_lantern": {
+    "description": "У вас значительно увеличена редкость находимых предметов",
+    "invisible": false,
+    "name": "Свет золотого фонаря",
+    "removable": false,
+    "stats": [
+      "base_item_found_rarity_+%"
+    ],
+    "visuals": "deepwater_golden_lantern_buff",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "VelkaFightableBuff": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "velka_fightable_buff",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "VisualAllflameCoralBuff": {
+    "description": "Вы получаете увеличенное количество Серы Мертвеца,\r\nно уменьшенное количество золота.",
+    "invisible": false,
+    "name": "Насыщенный Всепламенем коралл",
+    "removable": false,
+    "stats": [],
+    "visuals": "deepwater_allflame_coral_buff",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "chill_cold_damage_taken_modifier": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
     "sources": null,
     "templates": null,
     "stack_limit": null

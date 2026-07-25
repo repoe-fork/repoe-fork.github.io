@@ -47,13 +47,13 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 600,
+      "crit_chance": 500,
       "damage_effectiveness": null,
       "quality_stats": [
         {
           "stat": "기본 반경 {active_skill_base_area_of_effect_radius/locations_to_metres}미터",
           "stats": {
-            "active_skill_base_area_of_effect_radius": 100
+            "active_skill_base_area_of_effect_radius": 150
           }
         }
       ],
@@ -178,13 +178,13 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 600,
-      "damage_effectiveness": 140,
+      "crit_chance": 500,
+      "damage_effectiveness": null,
       "quality_stats": [
         {
           "stat": "기본 반경 {active_skill_base_area_of_effect_radius/locations_to_metres}미터",
           "stats": {
-            "active_skill_base_area_of_effect_radius": 100
+            "active_skill_base_area_of_effect_radius": 150
           }
         }
       ],
@@ -329,7 +329,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 600,
+      "crit_chance": 750,
       "damage_effectiveness": null,
       "quality_stats": [
         {
@@ -344,7 +344,9 @@
         "str": 0,
         "dex": 0
       },
-      "stat_text": null,
+      "stat_text": {
+        "base_chance_to_freeze_%": "25%의 확률로 적을 동결"
+      },
       "stats": [
         {
           "id": "spell_minimum_base_cold_damage",
@@ -360,6 +362,11 @@
           "id": "active_skill_base_area_of_effect_radius",
           "type": "constant",
           "value": 26
+        },
+        {
+          "id": "base_chance_to_freeze_%",
+          "type": "constant",
+          "value": 25
         },
         {
           "id": "active_skill_base_area_of_effect_radius",
@@ -386,6 +393,7 @@
     },
     "tooltip_order": [
       "spell_minimum_base_cold_damage\nspell_maximum_base_cold_damage",
+      "base_chance_to_freeze_%",
       "active_skill_base_area_of_effect_radius",
       "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius\nactive_skill_area_of_effect_radius"
     ],
@@ -454,7 +462,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 600,
+      "crit_chance": 750,
       "damage_effectiveness": 30,
       "quality_stats": [
         {
@@ -470,6 +478,7 @@
         "dex": 0
       },
       "stat_text": {
+        "base_chance_to_freeze_%": "25%의 확률로 적을 동결",
         "ice_nova_number_of_frost_bolts_to_cast_on": "서리 구체 투사체 최대 2개에서 확장 가능",
         "ice_nova_damage_when_cast_on_frostbolt_+%_final": "서리 구체에 시전 시 명중 및 상태 이상 피해 50% 증폭"
       },
@@ -488,6 +497,11 @@
           "id": "active_skill_base_area_of_effect_radius",
           "type": "constant",
           "value": 18
+        },
+        {
+          "id": "base_chance_to_freeze_%",
+          "type": "constant",
+          "value": 25
         },
         {
           "id": "ice_nova_number_of_frost_bolts_to_cast_on",
@@ -524,6 +538,7 @@
     },
     "tooltip_order": [
       "spell_minimum_base_cold_damage\nspell_maximum_base_cold_damage",
+      "base_chance_to_freeze_%",
       "active_skill_base_area_of_effect_radius",
       "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius\nactive_skill_area_of_effect_radius",
       "ice_nova_damage_when_cast_on_frostbolt_+%_final",
@@ -594,8 +609,8 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 600,
-      "damage_effectiveness": 40,
+      "crit_chance": 750,
+      "damage_effectiveness": 80,
       "quality_stats": [
         {
           "stat": "{ice_nova_freeze_as_though_damage_+%_final}% 증폭된 피해를 준 것처럼 적을 동결",
@@ -610,7 +625,7 @@
         "dex": 0
       },
       "stat_text": {
-        "base_chance_to_freeze_%": "50%의 확률로 적을 동결"
+        "base_chance_to_freeze_%": "항상 동결 유발"
       },
       "stats": [
         {
@@ -626,7 +641,7 @@
         {
           "id": "base_chance_to_freeze_%",
           "type": "constant",
-          "value": 50
+          "value": 100
         },
         {
           "id": "active_skill_base_area_of_effect_radius",
@@ -828,8 +843,8 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 600,
-      "damage_effectiveness": 20,
+      "crit_chance": 750,
+      "damage_effectiveness": 80,
       "quality_stats": [
         {
           "stat": "기본 반경 {active_skill_base_area_of_effect_radius/locations_to_metres}미터",
@@ -846,7 +861,8 @@
       "stat_text": {
         "active_skill_base_area_of_effect_radius": "기본 반경 2.6미터",
         "ice_nova_number_of_repeats": "적 명중 시 최대 5회의 소규모 폭발 발생",
-        "ice_nova_radius_+%_per_repeat": "반복될 때마다 효과 범위 20% 감소"
+        "ice_nova_radius_+%_per_repeat": "반복될 때마다 효과 범위 15% 감소",
+        "base_chance_to_freeze_%": "25%의 확률로 적을 동결"
       },
       "stats": [
         {
@@ -872,7 +888,12 @@
         {
           "id": "ice_nova_radius_+%_per_repeat",
           "type": "constant",
-          "value": -20
+          "value": -15
+        },
+        {
+          "id": "base_chance_to_freeze_%",
+          "type": "constant",
+          "value": 25
         },
         {
           "id": "is_area_damage",
@@ -907,6 +928,7 @@
     },
     "tooltip_order": [
       "spell_minimum_base_cold_damage\nspell_maximum_base_cold_damage",
+      "base_chance_to_freeze_%",
       "ice_nova_number_of_repeats",
       "ice_nova_radius_+%_per_repeat",
       "active_skill_base_area_of_effect_radius",
@@ -2003,7 +2025,8 @@
       "active_skill_base_area_of_effect_radius",
       "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius",
       "holy_sweep_hammerfall_damage_+%_final",
-      "holy_sweep_number_of_holy_bolts_to_create"
+      "holy_sweep_number_of_holy_bolts_to_create",
+      "holy_sweep_number_of_holy_bolts_to_create\nholy_sweep_hammerfall_description_mode"
     ],
     "tags": [
       "strength",
@@ -2027,7 +2050,7 @@
   },
   {
     "active_skill": {
-      "description": "양손 철퇴 또는 지팡이를 원형으로 휘둘러, 명중당한 적들에게 무작위로 신성한 망치를 떨어뜨립니다. 신성한 망치의 명중은 회피할 수 없습니다.",
+      "description": "양손 철퇴 또는 지팡이를 원형으로 휘둘러, 일정 시간 동안 신성한 망치를 파도처럼 떨어뜨립니다. 연속타격의 보조는 받을 수 없습니다.",
       "display_name": "망치 낙하의 신성한 휩쓸기",
       "id": "sweep_alt_x",
       "is_manually_casted": true,
@@ -2043,9 +2066,10 @@
       "types": [
         "Attack",
         "Area",
-        "Multistrikeable",
         "Melee",
-        "Lightning"
+        "Lightning",
+        "Cooldown",
+        "Duration"
       ],
       "weapon_restrictions": [
         "Two Hand Mace",
@@ -2072,9 +2096,9 @@
       "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "반경 {active_skill_base_radius_+/locations_to_metres}미터",
+          "stat": "기본 지속시간 {base_skill_effect_duration/milliseconds_to_seconds_2dp}초",
           "stats": {
-            "active_skill_base_radius_+": 200
+            "base_skill_effect_duration": 25000
           }
         }
       ],
@@ -2086,7 +2110,10 @@
       "stat_text": {
         "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius": "기본 망치 충격 반경 1.2미터",
         "skill_physical_damage_%_to_convert_to_lightning": "물리 피해의 50%를 번개 피해로 전환",
-        "holy_sweep_hammerfall_damage_+%_final": "망치가 주는 피해 35% 감폭"
+        "base_skill_effect_duration": "기본 지속시간 3.00초",
+        "holy_sweep_number_of_holy_bolts_to_create\nholy_sweep_hammerfall_description_mode": "망치 낙하 1회당 신성한 망치를 3개 떨어뜨림",
+        "holy_sweep_hammerfall_damage_+%_final": "망치가 주는 피해 50% 감폭",
+        "holy_sweep_hammerfall_rate_ms": "망치 낙하 0.7초에 한 번씩 발동\n공격 속도 증가 및 감소가 망치 낙하 속도에도 적용"
       },
       "stats": [
         {
@@ -2110,17 +2137,37 @@
           "value": 2
         },
         {
-          "id": "holy_sweep_hammerfall_damage_+%_final",
+          "id": "base_skill_effect_duration",
           "type": "constant",
-          "value": -35
-        },
-        {
-          "id": "active_skill_base_area_of_effect_radius",
-          "type": "additional",
-          "value": null
+          "value": 3000
         },
         {
           "id": "holy_sweep_number_of_holy_bolts_to_create",
+          "type": "constant",
+          "value": 3
+        },
+        {
+          "id": "active_skill_base_area_of_effect_radius",
+          "type": "constant",
+          "value": 5
+        },
+        {
+          "id": "holy_sweep_hammerfall_description_mode",
+          "type": "constant",
+          "value": 1
+        },
+        {
+          "id": "holy_sweep_hammerfall_damage_+%_final",
+          "type": "constant",
+          "value": -50
+        },
+        {
+          "id": "holy_sweep_hammerfall_rate_ms",
+          "type": "constant",
+          "value": 700
+        },
+        {
+          "id": "active_skill_base_area_of_effect_radius",
           "type": "additional",
           "value": null
         },
@@ -2138,13 +2185,23 @@
           "id": "visual_hit_effect_elemental_is_holy",
           "type": "implicit",
           "value": 1
+        },
+        {
+          "id": "base_skill_show_average_damage_instead_of_dps",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "skill_can_add_multiple_charges_per_action",
+          "type": "implicit",
+          "value": 1
         }
       ],
       "vaal": null,
       "costs": null,
       "attack_speed_multiplier": -30,
-      "cooldown": null,
-      "stored_uses": null,
+      "cooldown": 5000,
+      "stored_uses": 1,
       "cost_multiplier": null,
       "cooldown_bypass_type": null,
       "required_level": null,
@@ -2154,11 +2211,12 @@
     },
     "tooltip_order": [
       "skill_physical_damage_%_to_convert_to_lightning",
-      "active_skill_base_radius_+",
+      "base_skill_effect_duration",
       "active_skill_base_area_of_effect_radius",
       "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius",
       "holy_sweep_hammerfall_damage_+%_final",
-      "holy_sweep_number_of_holy_bolts_to_create"
+      "holy_sweep_hammerfall_rate_ms",
+      "holy_sweep_number_of_holy_bolts_to_create\nholy_sweep_hammerfall_description_mode"
     ],
     "tags": [
       "strength",
@@ -2166,7 +2224,8 @@
       "attack",
       "area",
       "melee",
-      "lightning"
+      "lightning",
+      "duration"
     ],
     "secondary_granted_effect": null,
     "quest_reward": {
@@ -2961,9 +3020,9 @@
       "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "주변에 있는 적 하나당 반경 +0.1미터, 최대 +1미터",
+          "stat": "주변에 있는 적 하나당 반경 {cleave_+1_base_radius_per_nearby_enemy_up_to_10/locations_to_metres}미터, 최대 +1미터",
           "stats": {
-            "cleave_+1_base_radius_per_nearby_enemy_up_to_10": 1000
+            "cleave_+1_base_radius_per_nearby_enemy_up_to_10": 50
           }
         }
       ],
@@ -6355,7 +6414,7 @@
         "volatile_dead_base_number_of_corpses_to_consume": "시신 최대 3구 소모",
         "volatile_dead_max_cores_allowed": "한 번에 구슬 최대 60개",
         "active_skill_base_area_of_effect_radius": "기본 반경 2.8미터",
-        "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius": "기본 폭발 반경 2미터",
+        "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius": "기본 폭발 반경 2.3미터",
         "base_skill_effect_duration": "기본 지속시간 1.50초"
       },
       "stats": [
@@ -6387,7 +6446,7 @@
         {
           "id": "active_skill_base_secondary_area_of_effect_radius",
           "type": "constant",
-          "value": 20
+          "value": 23
         },
         {
           "id": "active_skill_secondary_area_of_effect_description_mode",
@@ -6638,7 +6697,8 @@
         "CanRapidFire",
         "Area",
         "AreaSpell",
-        "Physical"
+        "Physical",
+        "CreatesCorpse"
       ],
       "weapon_restrictions": [],
       "minion_types": null,
@@ -6657,7 +6717,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 600,
+      "crit_chance": 1000,
       "damage_effectiveness": 40,
       "quality_stats": [
         {
@@ -7847,7 +7907,8 @@
         "Duration",
         "ChillingArea",
         "AreaSpell",
-        "Cooldown"
+        "Cooldown",
+        "DamageOverTime"
       ],
       "weapon_restrictions": [],
       "minion_types": null,
@@ -7860,13 +7921,13 @@
       "max_level": 20,
       "release_state": "released"
     },
-    "cast_time": 850,
+    "cast_time": 800,
     "color": "b",
     "display_name": "한파",
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 600,
+      "crit_chance": 750,
       "damage_effectiveness": null,
       "quality_stats": [
         {
@@ -7887,6 +7948,7 @@
         "active_skill_tertiary_area_of_effect_description_mode\nactive_skill_base_tertiary_area_of_effect_radius": "얼음 지대 기본 최종 반경 3미터",
         "base_skill_effect_duration": "기본 지속시간 5.00초",
         "chance_to_gain_frenzy_charge_on_killing_enemy_affected_by_cold_snap_ground_%": "이 스킬 범위 내에서 적 사망 시 25%의 확률로 격분 충전 획득",
+        "base_chance_to_freeze_%": "25%의 확률로 적을 동결",
         "spell_damage_modifiers_apply_to_skill_dot": "주문 피해 속성 부여 수치를 이 스킬의 지속 피해 효과에도 적용"
       },
       "stats": [
@@ -7946,6 +8008,11 @@
           "value": 25
         },
         {
+          "id": "base_chance_to_freeze_%",
+          "type": "constant",
+          "value": 25
+        },
+        {
           "id": "base_skill_show_average_damage_instead_of_dps",
           "type": "implicit",
           "value": 1
@@ -7978,6 +8045,7 @@
       "base_skill_effect_duration",
       "base_cold_damage_to_deal_per_minute",
       "spell_damage_modifiers_apply_to_skill_dot",
+      "base_chance_to_freeze_%",
       "active_skill_chill_effect_+%_final",
       "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius",
       "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius",
@@ -8031,7 +8099,8 @@
         "Cold",
         "Cascadable",
         "AreaSpell",
-        "Cooldown"
+        "Cooldown",
+        "DamageOverTime"
       ],
       "weapon_restrictions": [],
       "minion_types": null,
@@ -8069,7 +8138,8 @@
         "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius": "격발 기본 반경 2.5미터",
         "active_skill_secondary_area_of_effect_description_mode": "",
         "active_skill_tertiary_area_of_effect_description_mode": "",
-        "add_power_charge_on_critical_strike_%": "치명타 명중 시 30%의 확률로 권능 충전 획득"
+        "base_chance_to_freeze_%": "25%의 확률로 적을 동결",
+        "add_power_charge_on_critical_strike_%": "치명타 명중 시 50%의 확률로 권능 충전 획득"
       },
       "stats": [
         {
@@ -8103,9 +8173,14 @@
           "value": 2
         },
         {
+          "id": "base_chance_to_freeze_%",
+          "type": "constant",
+          "value": 25
+        },
+        {
           "id": "add_power_charge_on_critical_strike_%",
           "type": "constant",
-          "value": 30
+          "value": 50
         },
         {
           "id": "base_skill_show_average_damage_instead_of_dps",
@@ -8132,6 +8207,7 @@
     },
     "tooltip_order": [
       "spell_minimum_base_cold_damage\nspell_maximum_base_cold_damage",
+      "base_chance_to_freeze_%",
       "add_power_charge_on_critical_strike_%",
       "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius",
       "active_skill_secondary_area_of_effect_description_mode",
@@ -8184,7 +8260,8 @@
         "Cold",
         "ChillingArea",
         "AreaSpell",
-        "Multicastable"
+        "Multicastable",
+        "DamageOverTime"
       ],
       "weapon_restrictions": [],
       "minion_types": null,
@@ -8197,13 +8274,13 @@
       "max_level": 20,
       "release_state": "released"
     },
-    "cast_time": 850,
+    "cast_time": 800,
     "color": "b",
     "display_name": "바알 한파",
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 600,
+      "crit_chance": 750,
       "damage_effectiveness": null,
       "quality_stats": [
         {
@@ -8311,8 +8388,8 @@
         }
       ],
       "vaal": {
-        "souls": 35,
-        "stored_uses": 1
+        "souls": 25,
+        "stored_uses": 2
       },
       "costs": null,
       "attack_speed_multiplier": null,
@@ -9949,7 +10026,7 @@
       "vaal": null,
       "costs": null,
       "attack_speed_multiplier": null,
-      "cooldown": 2000,
+      "cooldown": 1000,
       "stored_uses": 1,
       "cost_multiplier": null,
       "cooldown_bypass_type": null,
@@ -11471,7 +11548,7 @@
       "max_level": 20,
       "release_state": "released"
     },
-    "cast_time": 650,
+    "cast_time": 600,
     "color": "b",
     "display_name": "전기불꽃",
     "is_support": false,
@@ -11600,7 +11677,7 @@
       "max_level": 20,
       "release_state": "released"
     },
-    "cast_time": 750,
+    "cast_time": 700,
     "color": "b",
     "display_name": "폭발의 전기불꽃",
     "is_support": false,
@@ -11640,11 +11717,6 @@
           "id": "base_skill_effect_duration",
           "type": "constant",
           "value": 2000
-        },
-        {
-          "id": "base_number_of_projectiles",
-          "type": "constant",
-          "value": 4
         },
         {
           "id": "base_number_of_projectiles",
@@ -11741,7 +11813,7 @@
       "max_level": 20,
       "release_state": "released"
     },
-    "cast_time": 650,
+    "cast_time": 600,
     "color": "b",
     "display_name": "예측 불허의 전기불꽃",
     "is_support": false,
@@ -11870,14 +11942,14 @@
       "max_level": 20,
       "release_state": "released"
     },
-    "cast_time": 650,
+    "cast_time": 600,
     "color": "b",
     "display_name": "바알 전기불꽃",
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 500,
-      "damage_effectiveness": -60,
+      "crit_chance": 600,
+      "damage_effectiveness": -40,
       "quality_stats": [
         {
           "stat": "투사체 {base_number_of_projectiles}개 발사",
@@ -11892,7 +11964,7 @@
         "dex": 0
       },
       "stat_text": {
-        "base_skill_effect_duration": "기본 지속시간 2.00초",
+        "base_skill_effect_duration": "기본 지속시간 3.00초",
         "base_number_of_projectiles_in_spiral_nova": "임의의 방향으로 투사체 발사",
         "modifiers_to_skill_effect_duration_also_affect_soul_prevention_duration": "스킬 효과 지속시간 속성 부여 수치를 이 스킬의 영혼 획득 방지에도 적용"
       },
@@ -11910,7 +11982,7 @@
         {
           "id": "base_skill_effect_duration",
           "type": "constant",
-          "value": 2000
+          "value": 3000
         },
         {
           "id": "base_number_of_projectiles_in_spiral_nova",
@@ -12168,7 +12240,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 700,
+      "crit_chance": 750,
       "damage_effectiveness": 30,
       "quality_stats": [
         {
@@ -12311,7 +12383,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 500,
+      "crit_chance": 750,
       "damage_effectiveness": 230,
       "quality_stats": [
         {
@@ -14112,7 +14184,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 600,
+      "crit_chance": 750,
       "damage_effectiveness": null,
       "quality_stats": [
         {
@@ -14140,6 +14212,11 @@
         {
           "id": "spell_maximum_base_cold_damage",
           "type": "float",
+          "value": null
+        },
+        {
+          "id": "base_number_of_projectiles",
+          "type": "additional",
           "value": null
         },
         {
@@ -14173,6 +14250,7 @@
     "tooltip_order": [
       "spell_minimum_base_cold_damage\nspell_maximum_base_cold_damage",
       "always_pierce",
+      "base_number_of_projectiles",
       "display_what_freezing_pulse_does",
       "base_projectile_speed_+%"
     ],
@@ -14233,7 +14311,7 @@
       "max_level": 20,
       "release_state": "released"
     },
-    "cast_time": 700,
+    "cast_time": 600,
     "color": "b",
     "display_name": "충격 폭발",
     "is_support": false,
@@ -14586,7 +14664,6 @@
         "Multistrikeable",
         "Melee",
         "MeleeSingleTarget",
-        "DamageOverTime",
         "Chaos"
       ],
       "weapon_restrictions": [
@@ -14730,7 +14807,6 @@
         "Multistrikeable",
         "Melee",
         "MeleeSingleTarget",
-        "DamageOverTime",
         "Chaos"
       ],
       "weapon_restrictions": [
@@ -16853,13 +16929,13 @@
       "max_level": 20,
       "release_state": "released"
     },
-    "cast_time": 700,
+    "cast_time": 600,
     "color": "b",
     "display_name": "번개 차원 이동",
     "is_support": false,
     "stat_translation_file": "stat_translations/variable_duration_skill",
     "static": {
-      "crit_chance": 500,
+      "crit_chance": 600,
       "damage_effectiveness": -10,
       "quality_stats": [
         {
@@ -17909,7 +17985,7 @@
       "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "주문 피해에 적용된 증가 및 감소 수치의 {active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value}%를 이 스킬로 인한 공격 피해에도 적용",
+          "stat": "비전 완력 {active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value}%",
           "stats": {
             "active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value": 1000
           }
@@ -17922,7 +17998,7 @@
       },
       "stat_text": {
         "chance_to_deal_double_damage_%_per_10_intelligence": "지능 10당 2% 확률로 2배의 피해를 줌",
-        "active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value\nquality_display_spell_damage_to_attack_damage_is_gem": "주문 피해에 적용된 증가 및 감소 수치의 150%를 이 스킬로 인한 공격 피해에도 적용"
+        "active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value\nquality_display_spell_damage_to_attack_damage_is_gem": "비전 완력 150%"
       },
       "stats": [
         {
@@ -20064,7 +20140,7 @@
         {
           "stat": "기본 반경 {active_skill_base_area_of_effect_radius/locations_to_metres}미터",
           "stats": {
-            "active_skill_base_area_of_effect_radius": 100
+            "active_skill_base_area_of_effect_radius": 150
           }
         }
       ],
@@ -20074,7 +20150,7 @@
         "dex": 0
       },
       "stat_text": {
-        "active_skill_base_area_of_effect_radius": "기본 반경 2.3미터"
+        "active_skill_base_area_of_effect_radius": "기본 반경 2.6미터"
       },
       "stats": [
         {
@@ -20090,7 +20166,12 @@
         {
           "id": "active_skill_base_area_of_effect_radius",
           "type": "constant",
-          "value": 23
+          "value": 26
+        },
+        {
+          "id": "additional_base_firestorm_drop_radius_+",
+          "type": "constant",
+          "value": 7
         },
         {
           "id": "is_area_damage",
@@ -20908,6 +20989,153 @@
   },
   {
     "active_skill": {
+      "description": "지팡이에 비전 에너지를 불어넣어, 마나 소모량을 낮추고 막기 확률을 증가시킵니다. 막아낼 시 비전 파동을 방출하여 고리 모양 범위에 있는 적들에게 일정 시간 동안 피해를 줍니다.",
+      "display_name": "마나 주입 지팡이",
+      "id": "mana_infused_staff",
+      "is_manually_casted": true,
+      "is_skill_totem": false,
+      "stat_conversions": {},
+      "types": [
+        "RequiresStaff",
+        "Arcane",
+        "TotemCastsAlone",
+        "Buff",
+        "HasReservation",
+        "Instant",
+        "InstantNoRepeatWhenHeld",
+        "Cooldown",
+        "Spell",
+        "Area",
+        "Damage",
+        "Duration",
+        "Lightning",
+        "AreaSpell"
+      ],
+      "weapon_restrictions": [],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "마나 주입 지팡이",
+      "experience_type": "GemProgression16",
+      "id": "Metadata/Items/Gems/SkillGemManaInfusedStaff",
+      "max_level": 20,
+      "release_state": "released"
+    },
+    "cast_time": 0,
+    "color": "b",
+    "display_name": "마나 주입 지팡이",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/buff_skill",
+    "static": {
+      "crit_chance": 600,
+      "damage_effectiveness": 350,
+      "quality_stats": [
+        {
+          "stat": "기본 지속시간 {base_skill_effect_duration/milliseconds_to_seconds_2dp}초",
+          "stats": {
+            "base_skill_effect_duration": 2500
+          }
+        }
+      ],
+      "stat_requirements": {
+        "int": null,
+        "str": null,
+        "dex": 0
+      },
+      "stat_text": {
+        "active_skill_always_reserves_unmodifiable_X%_of_mana": "이 스킬의 마나 점유가 30%로 고정",
+        "active_skill_buff_mana_cost_+%_final_to_grant": "버프 시 스킬의 마나 소모 30% 감폭",
+        "mana_infused_staff_base_trigger_interval_ms": "막아낼 시 비전 물결 방출, 1초마다 최대 1번",
+        "base_skill_effect_duration": "기본 지속시간 0.35초"
+      },
+      "stats": [
+        {
+          "id": "active_skill_always_reserves_unmodifiable_X%_of_mana",
+          "type": "constant",
+          "value": 30
+        },
+        {
+          "id": "active_skill_buff_mana_cost_+%_final_to_grant",
+          "type": "constant",
+          "value": -30
+        },
+        {
+          "id": "mana_infused_staff_base_trigger_interval_ms",
+          "type": "constant",
+          "value": 1000
+        },
+        {
+          "id": "base_skill_effect_duration",
+          "type": "constant",
+          "value": 350
+        },
+        {
+          "id": "active_skill_buff_block_chance_+%_final_to_grant",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "skill_has_added_lightning_damage_equal_to_%_of_maximum_mana",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "is_area_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "base_skill_show_average_damage_instead_of_dps",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": 1000,
+      "stored_uses": 1,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": {
+        "mana_percent": 30.0,
+        "mana_flat": null
+      },
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "base_skill_effect_duration",
+      "active_skill_always_reserves_unmodifiable_X%_of_mana",
+      "skill_has_added_lightning_damage_equal_to_%_of_maximum_mana",
+      "active_skill_buff_mana_cost_+%_final_to_grant",
+      "active_skill_buff_block_chance_+%_final_to_grant",
+      "mana_infused_staff_base_trigger_interval_ms"
+    ],
+    "tags": [
+      "intelligence",
+      "grants_active_skill",
+      "arcane",
+      "spell",
+      "area",
+      "duration",
+      "lightning"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": {
+      "act": 2,
+      "classes": [
+        "템플러"
+      ],
+      "quest": "검은 침략자"
+    },
+    "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
       "description": "시전자에게 방어도를 추가하는 버프를 적용하여, 고갈되기 전까지 피격 시 받는 피해의 일부를 대신 받도록 합니다. 버프가 만료되거나 고갈될 경우, 버프가 받아낸 총 피해에 기반하여 주변의 적들에게 반사 피해를 줍니다. 다른 수호 스킬과 재사용 대기시간을 공유합니다.",
       "display_name": "용암 방패",
       "id": "molten_shell",
@@ -21296,7 +21524,7 @@
         "chance_to_gain_power_charge_on_rare_or_unique_enemy_hit_%": "투사체로 희귀 또는 고유 적 명중 시 20%의 확률로 권능 충전 획득",
         "critical_strike_multiplier_+_per_power_charge": "권능 충전 하나당 치명타 피해 배율 +20%",
         "critical_strike_chance_+%_final_per_power_charge_from_power_siphon": "권능 충전 하나당 치명타 확률 10% 증폭",
-        "active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value\nquality_display_spell_damage_to_attack_damage_is_gem": "주문 피해에 적용된 증가 및 감소 수치의 150%를 이 스킬로 인한 공격 피해에도 적용",
+        "active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value\nquality_display_spell_damage_to_attack_damage_is_gem": "비전 완력 150%",
         "kill_enemy_on_hit_if_under_10%_life": "마무리 타격"
       },
       "stats": [
@@ -21449,7 +21677,7 @@
       },
       "stat_text": {
         "chance_to_gain_power_charge_on_rare_or_unique_enemy_hit_%": "투사체로 희귀 또는 고유 적 명중 시 20%의 확률로 권능 충전 획득",
-        "active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value\nquality_display_spell_damage_to_attack_damage_is_gem": "주문 피해에 적용된 증가 및 감소 수치의 150%를 이 스킬로 인한 공격 피해에도 적용",
+        "active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value\nquality_display_spell_damage_to_attack_damage_is_gem": "비전 완력 150%",
         "kill_enemy_on_hit_if_under_10%_life": "마무리 타격"
       },
       "stats": [
@@ -21599,7 +21827,7 @@
         "chance_to_gain_power_charge_on_rare_or_unique_enemy_hit_%": "투사체로 희귀 또는 고유 적 명중 시 권능 충전 획득",
         "critical_strike_multiplier_+_per_power_charge": "권능 충전 하나당 치명타 피해 배율 +25%",
         "critical_strike_chance_+%_final_per_power_charge_from_power_siphon": "권능 충전 하나당 치명타 확률 20% 증폭",
-        "active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value\nquality_display_spell_damage_to_attack_damage_is_gem": "주문 피해에 적용된 증가 및 감소 수치의 150%를 이 스킬로 인한 공격 피해에도 적용",
+        "active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value\nquality_display_spell_damage_to_attack_damage_is_gem": "비전 완력 150%",
         "power_siphon_fire_at_all_targets": "주변의 모든 적에게 투사체 발사",
         "global_always_hit": "회피 불가",
         "kill_enemy_on_hit_if_under_10%_life": "마무리 타격"
@@ -21726,7 +21954,6 @@
         "Trappable",
         "Mineable",
         "Totemable",
-        "DamageOverTime",
         "Triggerable",
         "Physical"
       ],
@@ -21857,7 +22084,6 @@
         "Multistrikeable",
         "Melee",
         "Duration",
-        "DamageOverTime",
         "Physical"
       ],
       "weapon_restrictions": [
@@ -25092,13 +25318,15 @@
       "support_name": "",
       "support_text": "비-발동형 주문 스킬에 적용됩니다. 토템을 소환하여 시전자 대신 주문을 시전하게 합니다.",
       "excluded_types": [
-        "InbuiltTrigger"
+        "InbuiltTrigger",
+        "SupportedByCrabTotem"
       ],
       "added_types": [
         "Trappable",
         "Mineable",
         "SummonsTotem",
-        "ReservationBecomesCost"
+        "ReservationBecomesCost",
+        "SupportedBySpellTotem"
       ],
       "added_minion_types": null
     }
@@ -25203,7 +25431,7 @@
       "attack_speed_multiplier": null,
       "cooldown": null,
       "stored_uses": null,
-      "cost_multiplier": 50,
+      "cost_multiplier": 65,
       "cooldown_bypass_type": null,
       "required_level": null,
       "experience": null,
@@ -27715,13 +27943,13 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 600,
+      "crit_chance": 1000,
       "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "투사체 {base_number_of_projectiles}개 발사",
+          "stat": "투사체 속도 {active_skill_projectile_speed_+%_final}% 증폭",
           "stats": {
-            "base_number_of_projectiles": 100
+            "active_skill_projectile_speed_+%_final": 1000
           }
         }
       ],
@@ -27782,7 +28010,8 @@
     },
     "tooltip_order": [
       "spell_minimum_base_physical_damage\nspell_maximum_base_physical_damage",
-      "base_number_of_projectiles"
+      "base_number_of_projectiles",
+      "active_skill_projectile_speed_+%_final"
     ],
     "tags": [
       "dexterity",
@@ -27850,7 +28079,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 600,
+      "crit_chance": 1000,
       "damage_effectiveness": null,
       "quality_stats": [
         {
@@ -28006,7 +28235,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 600,
+      "crit_chance": 1000,
       "damage_effectiveness": null,
       "quality_stats": [
         {
@@ -28489,7 +28718,8 @@
         "Cold",
         "ChillingArea",
         "CanRapidFire",
-        "AreaSpell"
+        "AreaSpell",
+        "DamageOverTime"
       ],
       "weapon_restrictions": [],
       "minion_types": null,
@@ -28508,8 +28738,8 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 600,
-      "damage_effectiveness": null,
+      "crit_chance": 750,
+      "damage_effectiveness": -10,
       "quality_stats": [
         {
           "stat": "반경 {active_skill_base_radius_+/locations_to_metres}미터",
@@ -28527,7 +28757,6 @@
         "arctic_breath_maximum_number_of_skulls_allowed": "냉각 지역 최대 10개 보유 가능",
         "base_skill_effect_duration": "기본 지속시간 5.00초",
         "active_skill_base_area_of_effect_radius": "기본 반경 1.5미터",
-        "active_skill_base_secondary_area_of_effect_radius": "기본 2차 반경 1.8미터",
         "spell_damage_modifiers_apply_to_skill_dot": "주문 피해 속성 부여 수치를 이 스킬의 지속 피해 효과에도 적용"
       },
       "stats": [
@@ -28573,8 +28802,8 @@
         },
         {
           "id": "active_skill_base_secondary_area_of_effect_radius",
-          "type": "constant",
-          "value": 18
+          "type": "additional",
+          "value": null
         },
         {
           "id": "spell_damage_modifiers_apply_to_skill_dot",
@@ -28659,7 +28888,8 @@
         "Cold",
         "ChillingArea",
         "CanRapidFire",
-        "AreaSpell"
+        "AreaSpell",
+        "DamageOverTime"
       ],
       "weapon_restrictions": [],
       "minion_types": null,
@@ -28678,8 +28908,8 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 600,
-      "damage_effectiveness": null,
+      "crit_chance": 750,
+      "damage_effectiveness": -35,
       "quality_stats": [
         {
           "stat": "냉각 지역 이동 속도 {chilling_area_movement_velocity_+%}% 증가",
@@ -28697,7 +28927,6 @@
         "arctic_breath_maximum_number_of_skulls_allowed": "냉각 지역 최대 5개 보유 가능",
         "base_skill_effect_duration": "기본 지속시간 5.00초",
         "active_skill_base_area_of_effect_radius": "기본 반경 1.5미터",
-        "active_skill_base_secondary_area_of_effect_radius": "기본 2차 반경 2.2미터",
         "spell_damage_modifiers_apply_to_skill_dot": "주문 피해 속성 부여 수치를 이 스킬의 지속 피해 효과에도 적용",
         "modifiers_to_projectile_count_do_not_apply": "투사체 개수 속성이 이 스킬에 적용되지 않음"
       },
@@ -28745,7 +28974,12 @@
         {
           "id": "active_skill_base_secondary_area_of_effect_radius",
           "type": "constant",
-          "value": 22
+          "value": 4
+        },
+        {
+          "id": "active_skill_base_secondary_area_of_effect_radius",
+          "type": "additional",
+          "value": null
         },
         {
           "id": "chilling_area_movement_velocity_+%",
@@ -28850,7 +29084,7 @@
       "max_level": 20,
       "release_state": "released"
     },
-    "cast_time": 700,
+    "cast_time": 600,
     "color": "b",
     "display_name": "연쇄 번개",
     "is_support": false,
@@ -28985,7 +29219,7 @@
       "max_level": 20,
       "release_state": "released"
     },
-    "cast_time": 700,
+    "cast_time": 600,
     "color": "b",
     "display_name": "쇄도의 연쇄 번개",
     "is_support": false,
@@ -29116,7 +29350,7 @@
       "max_level": 20,
       "release_state": "released"
     },
-    "cast_time": 700,
+    "cast_time": 600,
     "color": "b",
     "display_name": "뇌동의 연쇄 번개",
     "is_support": false,
@@ -29829,7 +30063,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 500,
+      "crit_chance": 600,
       "damage_effectiveness": -65,
       "quality_stats": [
         {
@@ -30016,7 +30250,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 500,
+      "crit_chance": 600,
       "damage_effectiveness": -60,
       "quality_stats": [
         {
@@ -31472,7 +31706,7 @@
     "stat_translation_file": "stat_translations/skill",
     "static": {
       "crit_chance": 600,
-      "damage_effectiveness": -65,
+      "damage_effectiveness": -55,
       "quality_stats": [
         {
           "stat": "기본 지속시간 {base_skill_effect_duration/milliseconds_to_seconds_2dp}초",
@@ -31632,7 +31866,7 @@
     "stat_translation_file": "stat_translations/skill",
     "static": {
       "crit_chance": 600,
-      "damage_effectiveness": -30,
+      "damage_effectiveness": -20,
       "quality_stats": [
         {
           "stat": "기본 지속시간 {base_skill_effect_duration/milliseconds_to_seconds_2dp}초",
@@ -31785,14 +32019,14 @@
       "max_level": 20,
       "release_state": "released"
     },
-    "cast_time": 200,
+    "cast_time": 180,
     "color": "b",
     "display_name": "소각",
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
       "crit_chance": 500,
-      "damage_effectiveness": -50,
+      "damage_effectiveness": null,
       "quality_stats": [
         {
           "stat": "최대 단계 {expanding_fire_cone_maximum_number_of_stages}",
@@ -31807,7 +32041,7 @@
         "dex": 0
       },
       "stat_text": {
-        "expanding_fire_cone_maximum_number_of_stages\nquality_display_incinerate_is_gem_stages": "8의 최대 단계",
+        "expanding_fire_cone_maximum_number_of_stages\nquality_display_incinerate_is_gem_stages": "10의 최대 단계",
         "grant_expanding_fire_cone_release_ignite_damage_+%_final\nquality_display_incinerate_is_gem_ingite": "마지막 파도가 주는 점화 피해가 250% 증폭",
         "expanding_fire_cone_release_hit_damage_+%_final\nquality_display_incinerate_is_gem_hit": "마지막 파도 명중 시 피해 500% 증폭",
         "flamethrower_damage_+%_per_stage_final": "단계마다 적중 및 상태 이상 피해 25% 증폭",
@@ -31828,7 +32062,7 @@
         {
           "id": "expanding_fire_cone_maximum_number_of_stages",
           "type": "constant",
-          "value": 8
+          "value": 10
         },
         {
           "id": "grant_expanding_fire_cone_release_ignite_damage_+%_final",
@@ -31968,7 +32202,7 @@
     "stat_translation_file": "stat_translations/skill",
     "static": {
       "crit_chance": 500,
-      "damage_effectiveness": -50,
+      "damage_effectiveness": null,
       "quality_stats": [
         {
           "stat": "마지막 파도 명중 시 피해 {expanding_fire_cone_release_hit_damage_+%_final}% 증폭\n마지막 파도가 주는 점화 피해가 {grant_expanding_fire_cone_release_ignite_damage_+%_final}% 증폭",
@@ -32145,7 +32379,7 @@
     "stat_translation_file": "stat_translations/skill",
     "static": {
       "crit_chance": 500,
-      "damage_effectiveness": -45,
+      "damage_effectiveness": null,
       "quality_stats": [
         {
           "stat": "최대 단계 {expanding_fire_cone_maximum_number_of_stages}",
@@ -33202,7 +33436,7 @@
       },
       "stat_text": {
         "base_totem_duration": "8초간 토템 지속",
-        "number_of_additional_totems_allowed": "소환 가능한 토템 최대치 +1",
+        "number_of_additional_totems_allowed": "소환 가능한 토템 최대치 +2",
         "is_totem": "이 스킬을 사용하는 토템 1개 소환",
         "spell_damage_modifiers_apply_to_skill_dot": "주문 피해 속성 부여 수치를 이 스킬의 지속 피해 효과에도 적용"
       },
@@ -33225,7 +33459,7 @@
         {
           "id": "number_of_additional_totems_allowed",
           "type": "constant",
-          "value": 1
+          "value": 2
         },
         {
           "id": "is_totem",
@@ -38416,7 +38650,7 @@
       "max_level": 20,
       "release_state": "released"
     },
-    "cast_time": 500,
+    "cast_time": 400,
     "color": "b",
     "display_name": "폭풍 부름",
     "is_support": false,
@@ -38561,7 +38795,7 @@
     "stat_translation_file": "stat_translations/skill",
     "static": {
       "crit_chance": 600,
-      "damage_effectiveness": 135,
+      "damage_effectiveness": 150,
       "quality_stats": [
         {
           "stat": "기본 2차 지속시간 {base_secondary_skill_effect_duration/milliseconds_to_seconds_2dp}초",
@@ -38608,6 +38842,11 @@
         },
         {
           "id": "active_skill_base_radius_+",
+          "type": "constant",
+          "value": 3
+        },
+        {
+          "id": "active_skill_base_radius_+",
           "type": "additional",
           "value": null
         },
@@ -38649,7 +38888,8 @@
       "base_physical_damage_to_deal_per_minute",
       "base_skill_effect_duration",
       "base_secondary_skill_effect_duration",
-      "spell_damage_modifiers_apply_to_skill_dot"
+      "spell_damage_modifiers_apply_to_skill_dot",
+      "active_skill_base_radius_+"
     ],
     "tags": [
       "intelligence",
@@ -38708,19 +38948,19 @@
       "max_level": 20,
       "release_state": "released"
     },
-    "cast_time": 500,
+    "cast_time": 400,
     "color": "b",
     "display_name": "바알 폭풍 부름",
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
       "crit_chance": 600,
-      "damage_effectiveness": 30,
+      "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "효과 범위 {base_skill_area_of_effect_+%}% 증가",
+          "stat": "기본 지속시간 {base_skill_effect_duration/milliseconds_to_seconds_2dp}초",
           "stats": {
-            "base_skill_area_of_effect_+%": 500
+            "base_skill_effect_duration": 50000
           }
         }
       ],
@@ -38731,7 +38971,7 @@
       },
       "stat_text": {
         "base_skill_effect_duration": "기본 지속시간 6.00초",
-        "vaal_storm_call_base_delay_ms": "0.25초마다 적 타격",
+        "vaal_storm_call_base_delay_ms": "0.20초마다 적 타격",
         "modifiers_to_skill_effect_duration_also_affect_soul_prevention_duration": "스킬 효과 지속시간 속성 부여 수치를 이 스킬의 영혼 획득 방지에도 적용"
       },
       "stats": [
@@ -38753,7 +38993,7 @@
         {
           "id": "vaal_storm_call_base_delay_ms",
           "type": "constant",
-          "value": 250
+          "value": 200
         },
         {
           "id": "is_area_damage",
@@ -38805,7 +39045,6 @@
       "spell_minimum_base_lightning_damage\nspell_maximum_base_lightning_damage",
       "base_skill_effect_duration",
       "modifiers_to_skill_effect_duration_also_affect_soul_prevention_duration",
-      "base_skill_area_of_effect_+%",
       "vaal_storm_call_base_delay_ms"
     ],
     "tags": [
@@ -38864,7 +39103,7 @@
     "stat_translation_file": "stat_translations/skill",
     "static": {
       "crit_chance": 500,
-      "damage_effectiveness": -10,
+      "damage_effectiveness": 20,
       "quality_stats": [
         {
           "stat": "최대 단계 {flameblast_maximum_stages}",
@@ -38882,7 +39121,7 @@
         "charged_blast_spell_damage_+%_final_per_stack": "단계마다 주문 피해 165% 증폭",
         "flameblast_ailment_damage_+%_final_per_stack": "단계마다 상태 이상 피해 60% 증폭",
         "base_chance_to_ignite_%": "50%의 확률로 적을 점화",
-        "vaal_flameblast_radius_+_per_stage": "단계 하나당 반경 +0.3미터",
+        "vaal_flameblast_radius_+_per_stage": "단계 하나당 반경 +0.4미터",
         "flameblast_maximum_stages\nquality_display_flameblast_is_gem": "10의 최대 단계"
       },
       "stats": [
@@ -38914,7 +39153,7 @@
         {
           "id": "vaal_flameblast_radius_+_per_stage",
           "type": "constant",
-          "value": 3
+          "value": 4
         },
         {
           "id": "flameblast_maximum_stages",
@@ -39020,7 +39259,7 @@
     "stat_translation_file": "stat_translations/skill",
     "static": {
       "crit_chance": 500,
-      "damage_effectiveness": null,
+      "damage_effectiveness": 40,
       "quality_stats": [
         {
           "stat": "단계마다 주문 피해 {charged_blast_spell_damage_+%_final_per_stack}% 증폭",
@@ -39037,7 +39276,7 @@
       "stat_text": {
         "vaal_flameblast_radius_+_per_stage": "단계 하나당 반경 +0.7미터",
         "flameblast_maximum_stages\nquality_display_flameblast_is_gem": "3의 최대 단계",
-        "flameblast_base_radius_override": "기본 반경 0.8미터",
+        "flameblast_base_radius_override": "기본 반경 1미터",
         "charged_blast_spell_damage_+%_final_per_stack": "단계마다 주문 피해 220% 증폭"
       },
       "stats": [
@@ -39064,7 +39303,7 @@
         {
           "id": "flameblast_base_radius_override",
           "type": "constant",
-          "value": 8
+          "value": 10
         },
         {
           "id": "charged_blast_spell_damage_+%_final_per_stack",
@@ -39169,7 +39408,7 @@
     "stat_translation_file": "stat_translations/skill",
     "static": {
       "crit_chance": 500,
-      "damage_effectiveness": -70,
+      "damage_effectiveness": -60,
       "quality_stats": [
         {
           "stat": "최대 단계 {flameblast_maximum_stages}",
@@ -39187,7 +39426,7 @@
         "base_chance_to_ignite_%": "50%의 확률로 적을 점화",
         "vaal_flameblast_radius_+_per_stage": "단계 하나당 반경 -0.2미터",
         "flameblast_maximum_stages\nquality_display_flameblast_is_gem": "10의 최대 단계",
-        "flameblast_base_radius_override": "기본 반경 2.6미터",
+        "flameblast_base_radius_override": "기본 반경 3미터",
         "charged_blast_spell_damage_+%_final_per_stack": "단계마다 주문 피해 600% 증폭",
         "flameblast_ailment_damage_+%_final_per_stack": "단계마다 상태 이상 피해 250% 증폭"
       },
@@ -39220,7 +39459,7 @@
         {
           "id": "flameblast_base_radius_override",
           "type": "constant",
-          "value": 26
+          "value": 30
         },
         {
           "id": "charged_blast_spell_damage_+%_final_per_stack",
@@ -39331,7 +39570,7 @@
     "stat_translation_file": "stat_translations/skill",
     "static": {
       "crit_chance": 500,
-      "damage_effectiveness": -40,
+      "damage_effectiveness": -10,
       "quality_stats": [
         {
           "stat": "피해 {damage_+%}% 증가",
@@ -39500,14 +39739,14 @@
         "dex": null
       },
       "stat_text": {
-        "base_number_of_projectiles": "투사체 5개 발사",
+        "base_number_of_projectiles": "투사체 6개 발사",
         "projectiles_barrage": "연속해서 투사체 발사"
       },
       "stats": [
         {
           "id": "base_number_of_projectiles",
           "type": "constant",
-          "value": 5
+          "value": 6
         },
         {
           "id": "skill_can_fire_arrows",
@@ -39724,7 +39963,7 @@
       "max_level": 20,
       "release_state": "released"
     },
-    "cast_time": 700,
+    "cast_time": 600,
     "color": "b",
     "display_name": "구형 번개",
     "is_support": false,
@@ -39746,7 +39985,7 @@
         "dex": 0
       },
       "stat_text": {
-        "active_skill_base_area_of_effect_radius": "기본 반경 1.8미터"
+        "active_skill_base_area_of_effect_radius": "기본 반경 2미터"
       },
       "stats": [
         {
@@ -39767,7 +40006,7 @@
         {
           "id": "active_skill_base_area_of_effect_radius",
           "type": "constant",
-          "value": 18
+          "value": 20
         },
         {
           "id": "base_is_projectile",
@@ -39855,7 +40094,7 @@
       "max_level": 20,
       "release_state": "released"
     },
-    "cast_time": 600,
+    "cast_time": 500,
     "color": "b",
     "display_name": "공전의 구형 번개",
     "is_support": false,
@@ -40000,7 +40239,7 @@
       "max_level": 20,
       "release_state": "released"
     },
-    "cast_time": 700,
+    "cast_time": 600,
     "color": "b",
     "display_name": "정전기의 구형 번개",
     "is_support": false,
@@ -40055,7 +40294,7 @@
       "costs": null,
       "attack_speed_multiplier": null,
       "cooldown": 1500,
-      "stored_uses": 3,
+      "stored_uses": 4,
       "cost_multiplier": null,
       "cooldown_bypass_type": null,
       "required_level": null,
@@ -40748,8 +40987,8 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 600,
-      "damage_effectiveness": 90,
+      "crit_chance": 500,
+      "damage_effectiveness": 170,
       "quality_stats": [
         {
           "stat": "화상 상태의 적에 대한 명중 피해 {flame_whip_damage_+%_final_vs_burning_enemies}% 증폭",
@@ -40764,7 +41003,7 @@
         "dex": 0
       },
       "stat_text": {
-        "flame_surge_ignite_damage_as_burning_ground_damage_%": "용암 지대가 적에게 영향을 주는 점화의 1초당 화염 피해의 25%와 동일한 피해를 줌",
+        "flame_surge_ignite_damage_as_burning_ground_damage_%": "용암 지대가 적에게 영향을 주는 점화의 1초당 화염 피해의 30%와 동일한 피해를 줌",
         "flame_surge_burning_ground_creation_cooldown_ms": "점화된 적에게 명중 시 용암 지대 생성, 2초마다 최대 1번 생성",
         "base_skill_effect_duration": "기본 지속시간 4.00초",
         "never_ignite": "점화 불가"
@@ -40783,7 +41022,7 @@
         {
           "id": "flame_surge_ignite_damage_as_burning_ground_damage_%",
           "type": "constant",
-          "value": 25
+          "value": 30
         },
         {
           "id": "flame_surge_burning_ground_creation_cooldown_ms",
@@ -40897,8 +41136,8 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 600,
-      "damage_effectiveness": 210,
+      "crit_chance": 500,
+      "damage_effectiveness": 310,
       "quality_stats": [
         {
           "stat": "용암 지대가 유발한 점화의 1초당 화염 피해의 {flame_surge_burning_ground_on_ignite_damage_%}%와 동일한 피해를 줌",
@@ -41083,7 +41322,8 @@
         "Multicastable",
         "Chaos",
         "Cascadable",
-        "AreaSpell"
+        "AreaSpell",
+        "CreatesCorpse"
       ],
       "weapon_restrictions": [],
       "minion_types": null,
@@ -41611,8 +41851,8 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 500,
-      "damage_effectiveness": -35,
+      "crit_chance": 600,
+      "damage_effectiveness": null,
       "quality_stats": [
         {
           "stat": "마지막 폭발이 주는 피해 +{glacial_cascade_final_spike_damage_+%_final}% 증폭",
@@ -41627,7 +41867,7 @@
         "dex": 0
       },
       "stat_text": {
-        "upheaval_number_of_spikes\nquality_display_glacial_cascade_num_spikes_is_gem": "폭발 4회 유발",
+        "upheaval_number_of_spikes": "폭발 4회 유발",
         "skill_physical_damage_%_to_convert_to_cold": "물리 피해의 100%를 냉기 피해로 전환",
         "glacial_cascade_final_spike_damage_+%_final\nquality_display_glacial_cascade_is_gem": "1초에 1회 이상 고유 적을 밀어낼 수 없음\n마지막 폭발이 주는 피해 200% 증폭\n마지막 폭발의 반경 100% 증폭\n마지막 폭발은 적을 밀어낼 수 없음",
         "global_knockback": "명중 시 적을 밀어냄"
@@ -41696,7 +41936,7 @@
       "global_knockback",
       "skill_physical_damage_%_to_convert_to_cold",
       "glacial_cascade_final_spike_damage_+%_final\nquality_display_glacial_cascade_is_gem",
-      "upheaval_number_of_spikes\nquality_display_glacial_cascade_num_spikes_is_gem"
+      "upheaval_number_of_spikes"
     ],
     "tags": [
       "intelligence",
@@ -41778,7 +42018,7 @@
         "dex": 0
       },
       "stat_text": {
-        "upheaval_number_of_spikes\nquality_display_glacial_cascade_num_spikes_is_gem": "폭발 6회 유발",
+        "upheaval_number_of_spikes": "폭발 6회 유발",
         "skill_physical_damage_%_to_convert_to_cold": "물리 피해의 100%를 냉기 피해로 전환"
       },
       "stats": [
@@ -41828,7 +42068,7 @@
     "tooltip_order": [
       "spell_minimum_base_physical_damage\nspell_maximum_base_physical_damage",
       "skill_physical_damage_%_to_convert_to_cold",
-      "upheaval_number_of_spikes\nquality_display_glacial_cascade_num_spikes_is_gem"
+      "upheaval_number_of_spikes"
     ],
     "tags": [
       "intelligence",
@@ -44289,7 +44529,7 @@
       "max_level": 20,
       "release_state": "released"
     },
-    "cast_time": 230,
+    "cast_time": 200,
     "color": "b",
     "display_name": "덩굴 번개",
     "is_support": false,
@@ -44327,7 +44567,7 @@
         {
           "id": "active_skill_base_area_of_effect_radius",
           "type": "constant",
-          "value": 24
+          "value": 26
         },
         {
           "id": "lightning_tendrils_channelled_larger_pulse_interval",
@@ -44428,7 +44668,7 @@
       "max_level": 20,
       "release_state": "released"
     },
-    "cast_time": 230,
+    "cast_time": 200,
     "color": "b",
     "display_name": "기행의 덩굴 번개",
     "is_support": false,
@@ -44468,7 +44708,7 @@
         {
           "id": "active_skill_base_area_of_effect_radius",
           "type": "constant",
-          "value": 24
+          "value": 26
         },
         {
           "id": "lightning_tendrils_channelled_larger_pulse_interval",
@@ -44581,7 +44821,7 @@
       "max_level": 20,
       "release_state": "released"
     },
-    "cast_time": 350,
+    "cast_time": 300,
     "color": "b",
     "display_name": "격화의 덩굴 번개",
     "is_support": false,
@@ -44591,9 +44831,9 @@
       "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "기본 반경 {active_skill_base_area_of_effect_radius/locations_to_metres}미터",
+          "stat": "감전의 최대 효과 {shock_maximum_magnitude_+}%",
           "stats": {
-            "active_skill_base_area_of_effect_radius": 100
+            "shock_maximum_magnitude_+": 500
           }
         }
       ],
@@ -44619,7 +44859,7 @@
         {
           "id": "active_skill_base_area_of_effect_radius",
           "type": "constant",
-          "value": 24
+          "value": 26
         },
         {
           "id": "lightning_tendrils_channelled_base_radius_+_per_second_while_channelling",
@@ -44657,8 +44897,8 @@
     "tooltip_order": [
       "spell_minimum_base_lightning_damage\nspell_maximum_base_lightning_damage",
       "active_skill_base_area_of_effect_radius",
-      "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius\nactive_skill_area_of_effect_radius",
-      "lightning_tendrils_channelled_base_radius_+_per_second_while_channelling"
+      "lightning_tendrils_channelled_base_radius_+_per_second_while_channelling",
+      "shock_maximum_magnitude_+"
     ],
     "tags": [
       "intelligence",
@@ -44714,7 +44954,7 @@
       "max_level": 1,
       "release_state": "released"
     },
-    "cast_time": 230,
+    "cast_time": 200,
     "color": "b",
     "display_name": "덩굴 번개",
     "is_support": false,
@@ -44752,7 +44992,7 @@
         {
           "id": "active_skill_base_area_of_effect_radius",
           "type": "constant",
-          "value": 24
+          "value": 26
         },
         {
           "id": "lightning_tendrils_channelled_larger_pulse_interval",
@@ -45044,10 +45284,10 @@
       },
       "stat_text": {
         "cluster_burst_spawn_amount": "역학 폭발이 4회 추가 폭발 유발",
-        "active_skill_area_damage_+%_final\nquality_display_active_skill_area_damage_is_gem": "범위 피해 35% 감폭",
+        "active_skill_area_damage_+%_final\nquality_display_active_skill_area_damage_is_gem": "범위 피해 40% 감폭",
         "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius": "기본 폭발 반경 1.4미터",
         "active_skill_base_secondary_area_of_effect_radius": "기본 2차 반경 2미터",
-        "active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value\nquality_display_spell_damage_to_attack_damage_is_gem": "주문 피해에 적용된 증가 및 감소 수치의 200%를 이 스킬로 인한 공격 피해에도 적용"
+        "active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value\nquality_display_spell_damage_to_attack_damage_is_gem": "비전 완력 150%"
       },
       "stats": [
         {
@@ -45058,7 +45298,7 @@
         {
           "id": "active_skill_area_damage_+%_final",
           "type": "constant",
-          "value": -35
+          "value": -40
         },
         {
           "id": "active_skill_base_area_of_effect_radius",
@@ -45078,7 +45318,7 @@
         {
           "id": "active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value",
           "type": "constant",
-          "value": 200
+          "value": 150
         },
         {
           "id": "base_is_projectile",
@@ -45199,7 +45439,7 @@
       "stat_text": {
         "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius": "기본 폭발 반경 1.9미터",
         "active_skill_base_secondary_area_of_effect_radius": "기본 2차 반경 2.8미터",
-        "active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value\nquality_display_spell_damage_to_attack_damage_is_gem": "주문 피해에 적용된 증가 및 감소 수치의 200%를 이 스킬로 인한 공격 피해에도 적용",
+        "active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value\nquality_display_spell_damage_to_attack_damage_is_gem": "비전 완력 150%",
         "cluster_burst_spawn_amount": "역학 폭발이 3회 추가 폭발 유발",
         "quality_display_active_skill_area_damage_is_gem": "",
         "kinetic_blast_modifiers_to_number_of_projectiles_instead_apply_to_number_of_clusters": "투사체 개수 속성이 투사체 개수가 아닌 폭발 횟수에 적용",
@@ -45224,7 +45464,7 @@
         {
           "id": "active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value",
           "type": "constant",
-          "value": 200
+          "value": 150
         },
         {
           "id": "cluster_burst_spawn_amount",
@@ -46507,8 +46747,8 @@
     },
     "tooltip_order": [
       "off_hand_local_minimum_added_physical_damage\noff_hand_local_maximum_added_physical_damage",
-      "off_hand_minimum_added_physical_damage_per_15_shield_armour_and_evasion_rating\noff_hand_maximum_added_physical_damage_per_15_shield_armour_and_evasion_rating",
       "retaliation_base_use_window_duration_ms",
+      "off_hand_minimum_added_physical_damage_per_15_shield_armour_and_evasion_rating\noff_hand_maximum_added_physical_damage_per_15_shield_armour_and_evasion_rating",
       "always_freeze",
       "skill_physical_damage_%_to_convert_to_cold",
       "global_always_hit",
@@ -47466,7 +47706,7 @@
     "stat_translation_file": "stat_translations/skill",
     "static": {
       "crit_chance": 600,
-      "damage_effectiveness": 290,
+      "damage_effectiveness": null,
       "quality_stats": [
         {
           "stat": "재사용 대기시간 회복 속도 {base_cooldown_speed_+%}% 증가",
@@ -47556,7 +47796,7 @@
       "vaal": null,
       "costs": null,
       "attack_speed_multiplier": null,
-      "cooldown": 5000,
+      "cooldown": 4000,
       "stored_uses": 1,
       "cost_multiplier": null,
       "cooldown_bypass_type": null,
@@ -50198,7 +50438,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 600,
+      "crit_chance": 500,
       "damage_effectiveness": null,
       "quality_stats": [
         {
@@ -50334,7 +50574,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 600,
+      "crit_chance": 500,
       "damage_effectiveness": null,
       "quality_stats": [
         {
@@ -53112,7 +53352,7 @@
     "stat_translation_file": "stat_translations/skill",
     "static": {
       "crit_chance": 1000,
-      "damage_effectiveness": 40,
+      "damage_effectiveness": 60,
       "quality_stats": [
         {
           "stat": "칼날 {bladefall_number_of_volleys}개 추가",
@@ -53257,7 +53497,7 @@
     "stat_translation_file": "stat_translations/skill",
     "static": {
       "crit_chance": 1000,
-      "damage_effectiveness": null,
+      "damage_effectiveness": 20,
       "quality_stats": [
         {
           "stat": "칼날 {bladefall_number_of_volleys}개 추가",
@@ -53394,8 +53634,8 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 1500,
-      "damage_effectiveness": 40,
+      "crit_chance": 2500,
+      "damage_effectiveness": 70,
       "quality_stats": [
         {
           "stat": "꿰뚫기 효과 {impale_debuff_effect_+%}% 증가",
@@ -53537,7 +53777,7 @@
     "stat_translation_file": "stat_translations/skill",
     "static": {
       "crit_chance": 1000,
-      "damage_effectiveness": 20,
+      "damage_effectiveness": 40,
       "quality_stats": [
         {
           "stat": "기본 반경 {active_skill_base_area_of_effect_radius/locations_to_metres}미터",
@@ -53727,7 +53967,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 600,
+      "crit_chance": 1000,
       "damage_effectiveness": -70,
       "quality_stats": [
         {
@@ -53745,8 +53985,8 @@
       "stat_text": {
         "base_skill_effect_duration": "기본 지속시간 4.00초",
         "maximum_number_of_spinning_blades": "활성화된 회전 칼날 최대 10개 보유 가능",
-        "blade_vortex_hit_rate_+%_per_blade\nquality_display_blade_vortex_is_gem": "칼날 하나당 타격 속도 35% 증가",
-        "blade_vortex_damage_+%_per_blade_final": "칼날 하나당 피해 35% 증폭"
+        "blade_vortex_hit_rate_+%_per_blade\nquality_display_blade_vortex_is_gem": "칼날 하나당 타격 속도 30% 증가",
+        "blade_vortex_damage_+%_per_blade_final": "칼날 하나당 피해 30% 증폭"
       },
       "stats": [
         {
@@ -53772,12 +54012,12 @@
         {
           "id": "blade_vortex_hit_rate_+%_per_blade",
           "type": "constant",
-          "value": 35
+          "value": 30
         },
         {
           "id": "blade_vortex_damage_+%_per_blade_final",
           "type": "constant",
-          "value": 35
+          "value": 30
         },
         {
           "id": "active_skill_base_radius_+",
@@ -53904,13 +54144,13 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 600,
-      "damage_effectiveness": 200,
+      "crit_chance": 1000,
+      "damage_effectiveness": 270,
       "quality_stats": [
         {
-          "stat": "주는 물리 피해 {active_skill_physical_damage_+%_final}% 증폭",
+          "stat": "반경 {active_skill_base_radius_+/locations_to_metres}미터",
           "stats": {
-            "active_skill_physical_damage_+%_final": 1000
+            "active_skill_base_radius_+": 150
           }
         }
       ],
@@ -54000,7 +54240,6 @@
     },
     "tooltip_order": [
       "spell_minimum_base_physical_damage\nspell_maximum_base_physical_damage",
-      "active_skill_physical_damage_+%_final",
       "base_skill_effect_duration",
       "active_skill_base_radius_+",
       "quality_display_blade_vortex_is_gem",
@@ -54070,7 +54309,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 600,
+      "crit_chance": 1000,
       "damage_effectiveness": -40,
       "quality_stats": [
         {
@@ -54389,7 +54628,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/debuff_skill",
     "static": {
-      "crit_chance": 600,
+      "crit_chance": 750,
       "damage_effectiveness": null,
       "quality_stats": [
         {
@@ -54408,7 +54647,8 @@
         "base_skill_effect_duration": "기본 지속시간 2.00초",
         "base_secondary_skill_effect_duration": "기본 2차 지속시간 5.00초",
         "base_cold_damage_resistance_%": "냉기 노출이 냉기 저항 -15% 적용",
-        "life_regeneration_rate_+%": "생명력 재생 속도 75% 감소"
+        "life_regeneration_rate_+%": "생명력 재생 속도 75% 감소",
+        "base_chance_to_freeze_%": "25%의 확률로 적을 동결"
       },
       "stats": [
         {
@@ -54447,6 +54687,11 @@
           "value": -75
         },
         {
+          "id": "base_chance_to_freeze_%",
+          "type": "constant",
+          "value": 25
+        },
+        {
           "id": "active_skill_base_area_of_effect_radius",
           "type": "additional",
           "value": null
@@ -54478,6 +54723,7 @@
       "spell_minimum_base_cold_damage\nspell_maximum_base_cold_damage",
       "base_skill_effect_duration",
       "base_secondary_skill_effect_duration",
+      "base_chance_to_freeze_%",
       "life_regeneration_rate_+%",
       "active_skill_base_area_of_effect_radius",
       "base_cooldown_speed_+%",
@@ -54550,7 +54796,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 600,
+      "crit_chance": 750,
       "damage_effectiveness": null,
       "quality_stats": [
         {
@@ -54566,7 +54812,8 @@
         "dex": 0
       },
       "stat_text": {
-        "base_skill_effect_duration": "기본 지속시간 1.50초"
+        "base_skill_effect_duration": "기본 지속시간 1.50초",
+        "base_chance_to_freeze_%": "25%의 확률로 적을 동결"
       },
       "stats": [
         {
@@ -54583,6 +54830,11 @@
           "id": "base_skill_effect_duration",
           "type": "constant",
           "value": 1500
+        },
+        {
+          "id": "base_chance_to_freeze_%",
+          "type": "constant",
+          "value": 25
         },
         {
           "id": "active_skill_base_area_of_effect_radius",
@@ -54615,6 +54867,7 @@
     "tooltip_order": [
       "spell_minimum_base_cold_damage\nspell_maximum_base_cold_damage",
       "base_skill_effect_duration",
+      "base_chance_to_freeze_%",
       "active_skill_base_area_of_effect_radius",
       "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius\nactive_skill_area_of_effect_radius"
     ],
@@ -54684,7 +54937,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 600,
+      "crit_chance": 750,
       "damage_effectiveness": null,
       "quality_stats": [
         {
@@ -54700,7 +54953,8 @@
         "dex": 0
       },
       "stat_text": {
-        "base_skill_effect_duration": "기본 지속시간 2.50초",
+        "base_skill_effect_duration": "기본 지속시간 2.00초",
+        "base_chance_to_freeze_%": "25%의 확률로 적을 동결",
         "active_skill_hit_damage_+%_final_per_100ms_duration": "지속시간 0.1초당 명중 피해 10% 증폭",
         "active_skill_ailment_damage_+%_final_per_100ms_duration": "지속시간 0.1초당 상태 이상 피해 3% 증폭"
       },
@@ -54718,7 +54972,12 @@
         {
           "id": "base_skill_effect_duration",
           "type": "constant",
-          "value": 2500
+          "value": 2000
+        },
+        {
+          "id": "base_chance_to_freeze_%",
+          "type": "constant",
+          "value": 25
         },
         {
           "id": "active_skill_hit_damage_+%_final_per_100ms_duration",
@@ -54768,6 +55027,7 @@
       "base_skill_effect_duration",
       "active_skill_hit_damage_+%_final_per_100ms_duration",
       "active_skill_ailment_damage_+%_final_per_100ms_duration",
+      "base_chance_to_freeze_%",
       "active_skill_base_area_of_effect_radius"
     ],
     "tags": [
@@ -55313,7 +55573,7 @@
       "max_level": 20,
       "release_state": "released"
     },
-    "cast_time": 500,
+    "cast_time": 400,
     "color": "b",
     "display_name": "폭풍 보주",
     "is_support": false,
@@ -55478,7 +55738,7 @@
       "max_level": 20,
       "release_state": "released"
     },
-    "cast_time": 500,
+    "cast_time": 400,
     "color": "b",
     "display_name": "돌풍의 폭풍 보주",
     "is_support": false,
@@ -56558,7 +56818,6 @@
       },
       "stat_text": {
         "base_skill_effect_duration": "기본 지속시간 5.00초",
-        "active_skill_base_area_of_effect_radius": "기본 반경 1.7미터",
         "spell_damage_modifiers_apply_to_skill_dot": "주문 피해 속성 부여 수치를 이 스킬의 지속 피해 효과에도 적용",
         "contagion_display_spread_on_death": "영향을 받는 적이 사망하면 확산"
       },
@@ -56575,8 +56834,8 @@
         },
         {
           "id": "active_skill_base_area_of_effect_radius",
-          "type": "constant",
-          "value": 17
+          "type": "additional",
+          "value": null
         },
         {
           "id": "is_area_damage",
@@ -56696,7 +56955,6 @@
       },
       "stat_text": {
         "base_skill_effect_duration": "기본 지속시간 5.00초",
-        "active_skill_base_area_of_effect_radius": "기본 반경 1.7미터",
         "spell_damage_modifiers_apply_to_skill_dot": "주문 피해 속성 부여 수치를 이 스킬의 지속 피해 효과에도 적용",
         "contagion_display_spread_on_death": "영향을 받는 적이 사망하면 확산"
       },
@@ -56713,8 +56971,8 @@
         },
         {
           "id": "active_skill_base_area_of_effect_radius",
-          "type": "constant",
-          "value": 17
+          "type": "additional",
+          "value": null
         },
         {
           "id": "is_area_damage",
@@ -56834,7 +57092,6 @@
       },
       "stat_text": {
         "base_skill_effect_duration": "기본 지속시간 5.00초",
-        "active_skill_base_area_of_effect_radius": "기본 반경 2미터",
         "contagion_spread_on_hit_affected_enemy_%": "영향을 받는 적이 피격당하면 확산",
         "spell_damage_modifiers_apply_to_skill_dot": "주문 피해 속성 부여 수치를 이 스킬의 지속 피해 효과에도 적용"
       },
@@ -56852,12 +57109,17 @@
         {
           "id": "active_skill_base_area_of_effect_radius",
           "type": "constant",
-          "value": 20
+          "value": 3
         },
         {
           "id": "contagion_spread_on_hit_affected_enemy_%",
           "type": "constant",
           "value": 100
+        },
+        {
+          "id": "active_skill_base_area_of_effect_radius",
+          "type": "additional",
+          "value": null
         },
         {
           "id": "is_area_damage",
@@ -57211,7 +57473,7 @@
       "max_level": 20,
       "release_state": "released"
     },
-    "cast_time": 250,
+    "cast_time": 200,
     "color": "b",
     "display_name": "전염의 황폐",
     "is_support": false,
@@ -57866,6 +58128,11 @@
           "value": 100
         },
         {
+          "id": "base_number_of_projectiles",
+          "type": "additional",
+          "value": null
+        },
+        {
           "id": "spell_damage_modifiers_apply_to_skill_dot",
           "type": "implicit",
           "value": 1
@@ -57903,6 +58170,7 @@
       "always_pierce",
       "base_chaos_damage_to_deal_per_minute",
       "base_skill_effect_duration",
+      "base_number_of_projectiles",
       "spell_damage_modifiers_apply_to_skill_dot",
       "siphon_life_leech_from_damage_permyriad\nquality_display_essence_drain_is_gem"
     ],
@@ -59382,7 +59650,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 500,
+      "crit_chance": 750,
       "damage_effectiveness": null,
       "quality_stats": [
         {
@@ -59398,6 +59666,7 @@
         "dex": 0
       },
       "stat_text": {
+        "base_chance_to_freeze_%": "25%의 확률로 적을 동결",
         "always_pierce": "투사체가 모든 대상 관통"
       },
       "stats": [
@@ -59410,6 +59679,11 @@
           "id": "spell_maximum_base_cold_damage",
           "type": "float",
           "value": null
+        },
+        {
+          "id": "base_chance_to_freeze_%",
+          "type": "constant",
+          "value": 25
         },
         {
           "id": "base_is_projectile",
@@ -59437,6 +59711,7 @@
     "tooltip_order": [
       "spell_minimum_base_cold_damage\nspell_maximum_base_cold_damage",
       "always_pierce",
+      "base_chance_to_freeze_%",
       "projectile_damage_+%_final_if_pierced_enemy"
     ],
     "tags": [
@@ -59486,7 +59761,8 @@
         "ChillingArea",
         "AreaSpell",
         "Nova",
-        "CanRapidFire"
+        "CanRapidFire",
+        "DamageOverTime"
       ],
       "weapon_restrictions": [],
       "minion_types": null,
@@ -59499,13 +59775,13 @@
       "max_level": 20,
       "release_state": "released"
     },
-    "cast_time": 750,
+    "cast_time": 600,
     "color": "b",
     "display_name": "소용돌이",
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 600,
+      "crit_chance": 750,
       "damage_effectiveness": null,
       "quality_stats": [
         {
@@ -59522,8 +59798,9 @@
       },
       "stat_text": {
         "base_skill_effect_duration": "기본 지속시간 3.00초",
-        "active_skill_base_area_of_effect_radius": "기본 반경 2미터",
-        "active_skill_base_secondary_area_of_effect_radius": "기본 2차 반경 2미터",
+        "active_skill_base_area_of_effect_radius": "기본 반경 2.3미터",
+        "active_skill_base_secondary_area_of_effect_radius": "기본 2차 반경 2.3미터",
+        "base_chance_to_freeze_%": "25%의 확률로 적을 동결",
         "spell_damage_modifiers_apply_to_skill_dot": "주문 피해 속성 부여 수치를 이 스킬의 지속 피해 효과에도 적용"
       },
       "stats": [
@@ -59550,12 +59827,17 @@
         {
           "id": "active_skill_base_area_of_effect_radius",
           "type": "constant",
-          "value": 20
+          "value": 23
         },
         {
           "id": "active_skill_base_secondary_area_of_effect_radius",
           "type": "constant",
-          "value": 20
+          "value": 23
+        },
+        {
+          "id": "base_chance_to_freeze_%",
+          "type": "constant",
+          "value": 25
         },
         {
           "id": "is_area_damage",
@@ -59586,6 +59868,7 @@
       "base_cold_damage_to_deal_per_minute",
       "spell_damage_modifiers_apply_to_skill_dot",
       "active_skill_base_radius_+",
+      "base_chance_to_freeze_%",
       "active_skill_base_area_of_effect_radius",
       "active_skill_base_secondary_area_of_effect_radius"
     ],
@@ -59632,7 +59915,8 @@
         "ChillingArea",
         "AreaSpell",
         "Nova",
-        "CanRapidFire"
+        "CanRapidFire",
+        "DamageOverTime"
       ],
       "weapon_restrictions": [],
       "minion_types": null,
@@ -59645,13 +59929,13 @@
       "max_level": 20,
       "release_state": "released"
     },
-    "cast_time": 750,
+    "cast_time": 600,
     "color": "b",
     "display_name": "투영의 소용돌이",
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 600,
+      "crit_chance": 750,
       "damage_effectiveness": null,
       "quality_stats": [
         {
@@ -59668,8 +59952,9 @@
       },
       "stat_text": {
         "base_skill_effect_duration": "기본 지속시간 1.50초",
-        "active_skill_base_area_of_effect_radius": "기본 반경 2미터",
-        "active_skill_base_secondary_area_of_effect_radius": "기본 2차 반경 2미터",
+        "active_skill_base_area_of_effect_radius": "기본 반경 2.2미터",
+        "active_skill_base_secondary_area_of_effect_radius": "기본 2차 반경 2.2미터",
+        "base_chance_to_freeze_%": "25%의 확률로 적을 동결",
         "frost_bolt_nova_number_of_frost_bolts_to_detonate": "서리 구체 투사체 최대 5개에서 폭발 가능",
         "active_skill_area_of_effect_+%_final_when_cast_on_frostbolt": "서리 구체 시전 시 효과 범위 50% 증폭",
         "active_skill_if_used_through_frostbolt_damage_+%_final": "서리 구체 시전 시 피해 50% 증폭",
@@ -59704,12 +59989,17 @@
         {
           "id": "active_skill_base_area_of_effect_radius",
           "type": "constant",
-          "value": 20
+          "value": 22
         },
         {
           "id": "active_skill_base_secondary_area_of_effect_radius",
           "type": "constant",
-          "value": 20
+          "value": 22
+        },
+        {
+          "id": "base_chance_to_freeze_%",
+          "type": "constant",
+          "value": 25
         },
         {
           "id": "frost_bolt_nova_number_of_frost_bolts_to_detonate",
@@ -59755,6 +60045,7 @@
       "base_cold_damage_to_deal_per_minute",
       "spell_damage_modifiers_apply_to_skill_dot",
       "active_skill_base_radius_+",
+      "base_chance_to_freeze_%",
       "active_skill_area_of_effect_+%_final_when_cast_on_frostbolt",
       "active_skill_base_area_of_effect_radius",
       "active_skill_if_used_through_frostbolt_damage_+%_final",
@@ -60164,7 +60455,7 @@
   {
     "active_skill": {
       "description": "시전자나 대상 지점에 있는 해골 소환수 중 하나의 생명력 일부를 제거하고 주위에 카오스 피해를 줍니다. 해당 효과는 근처에 있는 다른 해골들에게 연쇄됩니다. 시전자 또는 근처에 해골이 없을 경우, 시전자의 생명력을 희생하여 피해를 줍니다.",
-      "display_name": "어둠의 서약",
+      "display_name": "어둠의 협상",
       "id": "dark_pact",
       "is_manually_casted": true,
       "is_skill_totem": false,
@@ -60195,7 +60486,7 @@
       "skill_totem_life_multiplier": null
     },
     "base_item": {
-      "display_name": "어둠의 서약",
+      "display_name": "어둠의 협상",
       "experience_type": "GemProgression28",
       "id": "Metadata/Items/Gems/SkillGemDarkPact",
       "max_level": 20,
@@ -60203,11 +60494,11 @@
     },
     "cast_time": 500,
     "color": "b",
-    "display_name": "어둠의 서약",
+    "display_name": "어둠의 협상",
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 700,
+      "crit_chance": 1000,
       "damage_effectiveness": null,
       "quality_stats": [
         {
@@ -60306,7 +60597,7 @@
   {
     "active_skill": {
       "description": "이 주문은 시전자 주위의 일정 범위 내에 카오스 피해를 줍니다. 이 주문이 7번째 파탄을 부여할 경우, 생명력의 큰 부분을 희생하여 희생량에 따라 대량의 카오스 피해를 주고, 시전자에게 걸린 파탄을 모두 제거합니다.",
-      "display_name": "트라투스의 어둠의 서약",
+      "display_name": "트라투스의 어둠의 협상",
       "id": "dark_pact_alt_x",
       "is_manually_casted": true,
       "is_skill_totem": false,
@@ -60335,7 +60626,7 @@
       "skill_totem_life_multiplier": null
     },
     "base_item": {
-      "display_name": "어둠의 서약",
+      "display_name": "어둠의 협상",
       "experience_type": "GemProgression28",
       "id": "Metadata/Items/Gems/SkillGemDarkPact",
       "max_level": 20,
@@ -60343,11 +60634,11 @@
     },
     "cast_time": 500,
     "color": "b",
-    "display_name": "트라투스의 어둠의 서약",
+    "display_name": "트라투스의 어둠의 협상",
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 700,
+      "crit_chance": 1000,
       "damage_effectiveness": null,
       "quality_stats": [
         {
@@ -60363,7 +60654,7 @@
         "dex": 0
       },
       "stat_text": {
-        "dark_pact_sacrifice_%_life_from_max_ruin\ndark_pact_chaos_damage_added_from_sacrifice_+%": "사용 시 파탄 1 획득\n파탄 7 도달 시 생명력의 50%를 희생하여\n희생한 생명력의 500%와 동일한 카오스 피해를 줌",
+        "dark_pact_sacrifice_%_life_from_max_ruin\ndark_pact_chaos_damage_added_from_sacrifice_+%": "사용 시 파탄 1 획득\n파탄 7 도달 시 생명력의 50%를 희생하여\n희생한 생명력의 600%와 동일한 카오스 피해를 줌",
         "active_skill_ailment_damage_+%_final": "상태 이상 피해 50% 감폭"
       },
       "stats": [
@@ -60385,7 +60676,7 @@
         {
           "id": "dark_pact_chaos_damage_added_from_sacrifice_+%",
           "type": "constant",
-          "value": 500
+          "value": 600
         },
         {
           "id": "active_skill_ailment_damage_+%_final",
@@ -60461,7 +60752,7 @@
       "max_level": 20,
       "release_state": "released"
     },
-    "cast_time": 250,
+    "cast_time": 220,
     "color": "b",
     "display_name": "작열 광선",
     "is_support": false,
@@ -60621,7 +60912,7 @@
         "dex": 0
       },
       "stat_text": {
-        "base_skill_effect_duration": "기본 지속시간 3.00초",
+        "base_skill_effect_duration": "기본 지속시간 4.00초",
         "fire_beam_additional_stack_damage_+%_final\nquality_display_firebeam_is_gem": "디버프 단계 추가 시 피해 10% 추가",
         "display_max_fire_beam_stacks": "화상 디버프가 최대 8단계까지 가능",
         "spell_damage_modifiers_apply_to_skill_dot": "주문 피해 속성 부여 수치를 이 스킬의 지속 피해 효과에도 적용"
@@ -60635,7 +60926,7 @@
         {
           "id": "base_skill_effect_duration",
           "type": "constant",
-          "value": 3000
+          "value": 4000
         },
         {
           "id": "fire_beam_additional_stack_damage_+%_final",
@@ -62552,7 +62843,7 @@
         {
           "stat": "투사체 발사 {cremation_fires_projectiles_faster_+%_final}% 가속",
           "stats": {
-            "cremation_fires_projectiles_faster_+%_final": 500
+            "cremation_fires_projectiles_faster_+%_final": 750
           }
         }
       ],
@@ -62565,7 +62856,7 @@
         "base_skill_effect_duration": "기본 지속시간 8.00초",
         "corpse_erruption_base_maximum_number_of_geyers": "1회에 간헐천 최대치 3개",
         "base_number_of_projectiles": "투사체 4개 발사",
-        "cremation_base_fires_projectile_every_x_ms": "1.0초마다 투사체 발사"
+        "cremation_base_fires_projectile_every_x_ms": "1초마다 투사체 발사"
       },
       "stats": [
         {
@@ -62735,7 +63026,7 @@
         {
           "stat": "투사체 발사 {cremation_fires_projectiles_faster_+%_final}% 가속",
           "stats": {
-            "cremation_fires_projectiles_faster_+%_final": 500
+            "cremation_fires_projectiles_faster_+%_final": 750
           }
         }
       ],
@@ -62747,8 +63038,8 @@
       "stat_text": {
         "base_skill_effect_duration": "기본 지속시간 8.00초",
         "corpse_erruption_base_maximum_number_of_geyers": "1회에 간헐천 최대치 1개",
-        "base_number_of_projectiles": "투사체 4개 발사",
-        "cremation_base_fires_projectile_every_x_ms": "1.0초마다 투사체 발사",
+        "base_number_of_projectiles": "투사체 3개 발사",
+        "cremation_base_fires_projectile_every_x_ms": "0.8초마다 투사체 발사",
         "cremation_chance_to_explode_nearby_corpse_when_firing_projectiles": "투사체 발사 시 주변의 시신이 폭발"
       },
       "stats": [
@@ -62775,12 +63066,12 @@
         {
           "id": "base_number_of_projectiles",
           "type": "constant",
-          "value": 4
+          "value": 3
         },
         {
           "id": "cremation_base_fires_projectile_every_x_ms",
           "type": "constant",
-          "value": 1000
+          "value": 800
         },
         {
           "id": "cremation_chance_to_explode_nearby_corpse_when_firing_projectiles",
@@ -62923,9 +63214,9 @@
       "damage_effectiveness": -30,
       "quality_stats": [
         {
-          "stat": "투사체 발사 {cremation_fires_projectiles_faster_+%_final}% 가속",
+          "stat": "1회에 간헐천 최대치 {corpse_erruption_base_maximum_number_of_geyers}개",
           "stats": {
-            "cremation_fires_projectiles_faster_+%_final": 500
+            "corpse_erruption_base_maximum_number_of_geyers": 100
           }
         }
       ],
@@ -62935,10 +63226,10 @@
         "dex": null
       },
       "stat_text": {
-        "base_skill_effect_duration": "기본 지속시간 2.50초",
-        "corpse_erruption_base_maximum_number_of_geyers": "1회에 간헐천 최대치 6개",
+        "base_skill_effect_duration": "기본 지속시간 2.00초",
+        "corpse_erruption_base_maximum_number_of_geyers": "1회에 간헐천 최대치 8개",
         "base_number_of_projectiles": "투사체 4개 발사",
-        "cremation_base_fires_projectile_every_x_ms": "1.0초마다 투사체 발사"
+        "cremation_base_fires_projectile_every_x_ms": "1초마다 투사체 발사"
       },
       "stats": [
         {
@@ -62954,12 +63245,12 @@
         {
           "id": "base_skill_effect_duration",
           "type": "constant",
-          "value": 2500
+          "value": 2000
         },
         {
           "id": "corpse_erruption_base_maximum_number_of_geyers",
           "type": "constant",
-          "value": 6
+          "value": 8
         },
         {
           "id": "base_number_of_projectiles",
@@ -63019,8 +63310,7 @@
       "base_skill_effect_duration",
       "spell_minimum_base_fire_damage\nspell_maximum_base_fire_damage",
       "base_number_of_projectiles",
-      "corpse_erruption_base_maximum_number_of_geyers",
-      "cremation_fires_projectiles_faster_+%_final"
+      "corpse_erruption_base_maximum_number_of_geyers"
     ],
     "tags": [
       "dexterity",
@@ -63079,7 +63369,7 @@
       "max_level": 20,
       "release_state": "released"
     },
-    "cast_time": 700,
+    "cast_time": 650,
     "color": "b",
     "display_name": "신체 전환",
     "is_support": false,
@@ -63091,7 +63381,7 @@
         {
           "stat": "최대 생명력의 {spell_base_fire_damage_%_maximum_life}%를 기본 화염 피해로 줌",
           "stats": {
-            "spell_base_fire_damage_%_maximum_life": 200
+            "spell_base_fire_damage_%_maximum_life": 300
           }
         }
       ],
@@ -63101,7 +63391,7 @@
         "dex": null
       },
       "stat_text": {
-        "corpse_warp_area_of_effect_+%_final_when_consuming_corpse": "시체를 바쳤을 경우, 효과 범위 200% 증폭"
+        "corpse_warp_area_of_effect_+%_final_when_consuming_corpse": "시체를 바쳤을 경우, 효과 범위 300% 증폭"
       },
       "stats": [
         {
@@ -63117,12 +63407,12 @@
         {
           "id": "spell_base_fire_damage_%_maximum_life",
           "type": "constant",
-          "value": 4
+          "value": 6
         },
         {
           "id": "corpse_warp_area_of_effect_+%_final_when_consuming_corpse",
           "type": "constant",
-          "value": 200
+          "value": 300
         },
         {
           "id": "corpse_explosion_monster_life_permillage_fire",
@@ -63213,7 +63503,7 @@
       "max_level": 20,
       "release_state": "released"
     },
-    "cast_time": 700,
+    "cast_time": 650,
     "color": "b",
     "display_name": "희생의 신체 전환",
     "is_support": false,
@@ -63235,7 +63525,7 @@
         "dex": null
       },
       "stat_text": {
-        "corpse_warp_area_of_effect_+%_final_when_consuming_minion": "소환수를 바쳤을 경우, 효과 범위 200% 증폭",
+        "corpse_warp_area_of_effect_+%_final_when_consuming_minion": "소환수를 바쳤을 경우, 효과 범위 300% 증폭",
         "active_skill_ailment_damage_+%_final": "상태 이상 피해 50% 감폭"
       },
       "stats": [
@@ -63252,7 +63542,7 @@
         {
           "id": "corpse_warp_area_of_effect_+%_final_when_consuming_minion",
           "type": "constant",
-          "value": 200
+          "value": 300
         },
         {
           "id": "active_skill_ailment_damage_+%_final",
@@ -65380,7 +65670,6 @@
       "stat_text": {
         "base_trap_duration\nquality_display_trap_duration_is_gem": "4초간 덫 지속",
         "base_skill_effect_duration": "기본 지속시간 3.00초",
-        "active_skill_base_area_of_effect_radius": "기본 반경 3미터",
         "is_trap": "",
         "spell_damage_modifiers_apply_to_skill_dot": "주문 피해 속성 부여 수치를 이 스킬의 지속 피해 효과에도 적용"
       },
@@ -65401,17 +65690,17 @@
           "value": 3000
         },
         {
-          "id": "active_skill_base_area_of_effect_radius",
-          "type": "constant",
-          "value": 30
-        },
-        {
           "id": "ice_siphon_trap_max_beam_targets",
           "type": "constant",
           "value": 10
         },
         {
           "id": "ice_siphon_trap_max_beam_targets",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "active_skill_base_area_of_effect_radius",
           "type": "additional",
           "value": null
         },
@@ -66972,7 +67261,7 @@
       "max_level": 20,
       "release_state": "released"
     },
-    "cast_time": 600,
+    "cast_time": 500,
     "color": "b",
     "display_name": "바알 황폐",
     "is_support": false,
@@ -66998,7 +67287,7 @@
         "base_secondary_skill_effect_duration": "기본 2차 지속시간 3.00초",
         "base_movement_velocity_+%": "이동 속도 80% 감소",
         "display_max_blight_stacks": "디버프가 최대 20겹까지 적용되어 피해를 줄 수 있음",
-        "hinder_enemy_chaos_damage_taken_+%": "이동 방해를 받는 적에 대한 카오스 피해 20% 증가",
+        "hinder_enemy_chaos_damage_taken_+%": "이동 방해를 받는 적에 대한 카오스 피해 30% 증가",
         "spell_damage_modifiers_apply_to_skill_dot": "주문 피해 속성 부여 수치를 이 스킬의 지속 피해 효과에도 적용",
         "modifiers_to_skill_effect_duration_also_affect_soul_prevention_duration": "스킬 효과 지속시간 속성 부여 수치를 이 스킬의 영혼 획득 방지에도 적용"
       },
@@ -67031,7 +67320,7 @@
         {
           "id": "hinder_enemy_chaos_damage_taken_+%",
           "type": "constant",
-          "value": 20
+          "value": 30
         },
         {
           "id": "active_skill_base_radius_+",
@@ -67060,8 +67349,8 @@
         }
       ],
       "vaal": {
-        "souls": 30,
-        "stored_uses": 1
+        "souls": 25,
+        "stored_uses": 2
       },
       "costs": null,
       "attack_speed_multiplier": null,
@@ -67234,19 +67523,19 @@
         "dex": null
       },
       "stat_text": {
-        "mine_throwing_speed_+%_per_frenzy_charge": "격분 충전 하나당 보조 대상 스킬의 지뢰 투척 속도 10% 증가",
-        "mine_critical_strike_chance_+%_per_power_charge": "지뢰에 의해 사용될 시 권능 충전 하나당 보조 대상 스킬의\n치명타 확률 25% 증가"
+        "mine_throwing_speed_+%_per_frenzy_charge": "격분 충전 하나당 보조 대상 스킬의 지뢰 투척 속도 8% 증가",
+        "mine_critical_strike_chance_+%_per_power_charge": "지뢰에 의해 사용될 시 권능 충전 하나당 보조 대상 스킬의\n치명타 확률 20% 증가"
       },
       "stats": [
         {
           "id": "mine_throwing_speed_+%_per_frenzy_charge",
           "type": "constant",
-          "value": 10
+          "value": 8
         },
         {
           "id": "mine_critical_strike_chance_+%_per_power_charge",
           "type": "constant",
-          "value": 25
+          "value": 20
         },
         {
           "id": "%_chance_to_gain_frenzy_charge_on_mine_detonated_targeting_an_enemy",
@@ -67264,7 +67553,7 @@
       "attack_speed_multiplier": null,
       "cooldown": null,
       "stored_uses": null,
-      "cost_multiplier": 120,
+      "cost_multiplier": 140,
       "cooldown_bypass_type": null,
       "required_level": null,
       "experience": null,
@@ -69520,7 +69809,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 600,
+      "crit_chance": 750,
       "damage_effectiveness": -20,
       "quality_stats": [
         {
@@ -69542,6 +69831,7 @@
         "frost_fury_fire_speed_+%_per_stage": "단계 하나당 투사체 빈도 20% 증가",
         "frost_fury_fire_speed_+%_final_while_channelling": "집중 유지하는 동안 투사체 빈도 80% 증폭",
         "base_skill_effect_duration": "기본 지속시간 1.60초",
+        "base_chance_to_freeze_%": "25%의 확률로 적을 동결",
         "display_frost_fury_additive_cast_speed_modifiers_apply_to_fire_speed": "시전 속도 증가 및 감소가 투사체 빈도에도 적용"
       },
       "stats": [
@@ -69594,6 +69884,16 @@
           "id": "base_skill_effect_duration",
           "type": "constant",
           "value": 1600
+        },
+        {
+          "id": "base_chance_to_freeze_%",
+          "type": "constant",
+          "value": 25
+        },
+        {
+          "id": "base_number_of_projectiles",
+          "type": "additional",
+          "value": null
         },
         {
           "id": "base_is_projectile",
@@ -69651,7 +69951,9 @@
     "tooltip_order": [
       "spell_minimum_base_cold_damage\nspell_maximum_base_cold_damage",
       "base_skill_effect_duration",
+      "base_number_of_projectiles",
       "display_frost_fury_additive_cast_speed_modifiers_apply_to_fire_speed",
+      "base_chance_to_freeze_%",
       "frost_fury_base_fire_interval_ms",
       "frost_fury_duration_+%_per_stage",
       "frost_fury_fire_speed_+%_final_while_channelling",
@@ -71782,7 +72084,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 550,
+      "crit_chance": 600,
       "damage_effectiveness": null,
       "quality_stats": [
         {
@@ -71945,7 +72247,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 550,
+      "crit_chance": 600,
       "damage_effectiveness": null,
       "quality_stats": [
         {
@@ -72097,7 +72399,7 @@
       "max_level": 20,
       "release_state": "released"
     },
-    "cast_time": 800,
+    "cast_time": 700,
     "color": "b",
     "display_name": "영혼 분리",
     "is_support": false,
@@ -72256,7 +72558,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 700,
+      "crit_chance": 1000,
       "damage_effectiveness": 300,
       "quality_stats": [
         {
@@ -72296,6 +72598,11 @@
           "value": 400
         },
         {
+          "id": "base_number_of_projectiles",
+          "type": "additional",
+          "value": null
+        },
+        {
           "id": "base_is_projectile",
           "type": "implicit",
           "value": 1
@@ -72315,6 +72622,7 @@
     },
     "tooltip_order": [
       "spell_minimum_base_chaos_damage\nspell_maximum_base_chaos_damage",
+      "base_number_of_projectiles",
       "base_projectile_speed_+%",
       "base_energy_shield_leech_from_spell_damage_permyriad"
     ],
@@ -72565,7 +72873,7 @@
       },
       "stat_text": {
         "display_linked_curse_effect_+%_final": "적용된 저주 효과 25% 감폭",
-        "dark_ritual_skill_effect_duration_+%_per_curse_applied": "적용된 저주마다 디버프 지속시간 50% 증가",
+        "dark_ritual_skill_effect_duration_+%_per_curse_applied": "적용된 저주마다 디버프 지속시간 100% 증가",
         "base_skill_effect_duration": "기본 지속시간 2.00초",
         "spell_damage_modifiers_apply_to_skill_dot": "주문 피해 속성 부여 수치를 이 스킬의 지속 피해 효과에도 적용"
       },
@@ -72583,17 +72891,12 @@
         {
           "id": "dark_ritual_skill_effect_duration_+%_per_curse_applied",
           "type": "constant",
-          "value": 50
+          "value": 100
         },
         {
           "id": "base_skill_effect_duration",
           "type": "constant",
           "value": 2000
-        },
-        {
-          "id": "active_skill_base_area_of_effect_radius",
-          "type": "constant",
-          "value": 21
         },
         {
           "id": "active_skill_base_area_of_effect_radius",
@@ -72720,10 +73023,9 @@
         "dex": 0
       },
       "stat_text": {
-        "dark_ritual_skill_effect_duration_+%_per_curse_applied": "적용된 저주마다 디버프 지속시간 100% 증가",
         "base_skill_effect_duration": "기본 지속시간 1.00초",
-        "active_skill_base_area_of_effect_radius": "기본 반경 0.8미터",
-        "dark_ritual_damage_+%_final_per_curse_applied": "적용된 저주마다 피해 60% 증폭",
+        "active_skill_base_area_of_effect_radius": "기본 반경 1.2미터",
+        "dark_ritual_damage_+%_final_per_curse_applied": "적용된 저주마다 피해 100% 증폭",
         "spell_damage_modifiers_apply_to_skill_dot": "주문 피해 속성 부여 수치를 이 스킬의 지속 피해 효과에도 적용"
       },
       "stats": [
@@ -72733,11 +73035,6 @@
           "value": null
         },
         {
-          "id": "dark_ritual_skill_effect_duration_+%_per_curse_applied",
-          "type": "constant",
-          "value": 100
-        },
-        {
           "id": "base_skill_effect_duration",
           "type": "constant",
           "value": 1000
@@ -72745,12 +73042,12 @@
         {
           "id": "active_skill_base_area_of_effect_radius",
           "type": "constant",
-          "value": 8
+          "value": 12
         },
         {
           "id": "dark_ritual_damage_+%_final_per_curse_applied",
           "type": "constant",
-          "value": 60
+          "value": 100
         },
         {
           "id": "display_dark_ritual_curse_max_skill_level_requirement",
@@ -72781,8 +73078,7 @@
       "base_skill_effect_duration",
       "spell_damage_modifiers_apply_to_skill_dot",
       "active_skill_base_area_of_effect_radius",
-      "dark_ritual_damage_+%_final_per_curse_applied",
-      "dark_ritual_skill_effect_duration_+%_per_curse_applied"
+      "dark_ritual_damage_+%_final_per_curse_applied"
     ],
     "tags": [
       "chaos",
@@ -72936,7 +73232,7 @@
       "max_level": 20,
       "release_state": "released"
     },
-    "cast_time": 700,
+    "cast_time": 600,
     "color": "b",
     "display_name": "신념의 파도",
     "is_support": false,
@@ -73101,7 +73397,7 @@
       "max_level": 20,
       "release_state": "released"
     },
-    "cast_time": 700,
+    "cast_time": 600,
     "color": "b",
     "display_name": "트라투스의 신념의 파도",
     "is_support": false,
@@ -73378,7 +73674,7 @@
     "stat_translation_file": "stat_translations/skill",
     "static": {
       "crit_chance": 600,
-      "damage_effectiveness": -50,
+      "damage_effectiveness": -25,
       "quality_stats": [
         {
           "stat": "광선 폭 {divine_tempest_beam_width_+%}% 증가",
@@ -73528,7 +73824,7 @@
     "stat_translation_file": "stat_translations/skill",
     "static": {
       "crit_chance": 600,
-      "damage_effectiveness": -35,
+      "damage_effectiveness": null,
       "quality_stats": [
         {
           "stat": "단계 획득 시 주변의 적 {divine_tempest_base_number_of_nearby_enemies_to_zap}명에게 피해",
@@ -73683,7 +73979,7 @@
     "stat_translation_file": "stat_translations/skill",
     "static": {
       "crit_chance": 600,
-      "damage_effectiveness": 30,
+      "damage_effectiveness": 40,
       "quality_stats": [
         {
           "stat": "광선 폭 {divine_tempest_beam_width_+%}% 증가",
@@ -75920,8 +76216,8 @@
   },
   {
     "active_skill": {
-      "description": "부채꼴 범위 내 다수의 적에게 사슬을 던져, 각 적의 뒤에 범위 피해를 줍니다. 플레이어로부터 멀리 떨어진 적은 플레이어 쪽으로 끌려옵니다. 한손 철퇴나 셉터, 검, 도끼가 필요합니다.",
-      "display_name": "당김의 사슬 갈고리",
+      "description": "전방의 여러 적에게 낚싯대를 휘두릅니다. 플레이어로부터 멀리 있는 비-고유 적은 플레이어 쪽으로 끌려옵니다.",
+      "display_name": "낚시의 사슬 갈고리",
       "id": "chain_hook_alt_x",
       "is_manually_casted": true,
       "is_skill_totem": false,
@@ -75931,17 +76227,11 @@
       },
       "types": [
         "Attack",
-        "Area",
         "Damage",
         "Melee",
         "Multistrikeable"
       ],
       "weapon_restrictions": [
-        "One Hand Sword",
-        "Thrusting One Hand Sword",
-        "One Hand Axe",
-        "One Hand Mace",
-        "Sceptre",
         "FishingRod"
       ],
       "minion_types": null,
@@ -75956,7 +76246,7 @@
     },
     "cast_time": 1000,
     "color": "r",
-    "display_name": "당김의 사슬 갈고리",
+    "display_name": "낚시의 사슬 갈고리",
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
@@ -75975,30 +76265,12 @@
         "str": null,
         "dex": 0
       },
-      "stat_text": {
-        "chain_strike_cone_radius_+_per_x_rage": "격노 5당 반경 +0.1미터",
-        "gain_x_rage_on_attack_hit": "공격 명중 시 격노 2 획득"
-      },
+      "stat_text": null,
       "stats": [
-        {
-          "id": "chain_strike_cone_radius_+_per_x_rage",
-          "type": "constant",
-          "value": 5
-        },
-        {
-          "id": "gain_x_rage_on_attack_hit",
-          "type": "constant",
-          "value": 2
-        },
         {
           "id": "chain_grab_number_of_targets",
           "type": "additional",
           "value": null
-        },
-        {
-          "id": "is_area_damage",
-          "type": "implicit",
-          "value": 1
         }
       ],
       "vaal": null,
@@ -76015,15 +76287,12 @@
     },
     "tooltip_order": [
       "chain_grab_number_of_targets",
-      "chain_hook_range_+%",
-      "chain_strike_cone_radius_+_per_x_rage",
-      "gain_x_rage_on_attack_hit"
+      "chain_hook_range_+%"
     ],
     "tags": [
       "strength",
       "grants_active_skill",
       "attack",
-      "area",
       "melee"
     ],
     "secondary_granted_effect": null,
@@ -76535,7 +76804,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 500,
+      "crit_chance": 750,
       "damage_effectiveness": null,
       "quality_stats": [
         {
@@ -76683,7 +76952,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 500,
+      "crit_chance": 750,
       "damage_effectiveness": null,
       "quality_stats": [
         {
@@ -79479,7 +79748,7 @@
       "attack_speed_multiplier": null,
       "cooldown": null,
       "stored_uses": null,
-      "cost_multiplier": 50,
+      "cost_multiplier": 65,
       "cooldown_bypass_type": null,
       "required_level": null,
       "experience": null,
@@ -80587,9 +80856,9 @@
         "dex": null
       },
       "stat_text": {
-        "number_of_additional_projectiles": "보조 대상 스킬이 투사체 3개 추가 발사",
-        "support_barrage_attack_time_+%_per_projectile_fired": "투사체 하나당 보조 대상 스킬의 공격 시간 5% 증폭",
-        "support_barrage_trap_and_mine_throwing_time_+%_final_per_projectile_fired": "투사체 하나당 보조 대상 스킬의 덫 및 지뢰 투척 시간 5% 증폭",
+        "number_of_additional_projectiles": "보조 대상 스킬이 투사체 4개 추가 발사",
+        "support_barrage_attack_time_+%_per_projectile_fired": "투사체 하나당 보조 대상 스킬의 공격 시간 10% 증폭",
+        "support_barrage_trap_and_mine_throwing_time_+%_final_per_projectile_fired": "투사체 하나당 보조 대상 스킬의 덫 및 지뢰 투척 시간 10% 증폭",
         "projectiles_barrage": "보조 대상 스킬이 연속해서 투사체 발사",
         "skill_can_only_use_non_melee_weapons": "활이나 마법봉으로만 보조 대상 스킬 사용 가능"
       },
@@ -80597,17 +80866,17 @@
         {
           "id": "number_of_additional_projectiles",
           "type": "constant",
-          "value": 3
+          "value": 4
         },
         {
           "id": "support_barrage_attack_time_+%_per_projectile_fired",
           "type": "constant",
-          "value": 5
+          "value": 10
         },
         {
           "id": "support_barrage_trap_and_mine_throwing_time_+%_final_per_projectile_fired",
           "type": "constant",
-          "value": 5
+          "value": 10
         },
         {
           "id": "support_barrage_damage_+%_final",
@@ -80630,7 +80899,7 @@
       "attack_speed_multiplier": null,
       "cooldown": null,
       "stored_uses": null,
-      "cost_multiplier": 150,
+      "cost_multiplier": 200,
       "cooldown_bypass_type": null,
       "required_level": null,
       "experience": null,
@@ -85007,6 +85276,7 @@
       "stat_text": {
         "arcane_cloak_damage_absorbed_%": "피격 시 피해의 75%가 생명력이나 에너지 보호막보다 버프에 먼저 적용\n버프는 이 스킬의 효과로 소모한 마나와 동일한 양의 피해 흡수 가능",
         "base_skill_effect_duration": "기본 지속시간 3.00초",
+        "arcane_cloak_gain_%_of_consumed_mana_as_lightning_damage": "버프가 이 스킬의 효과로 소모한 마나의 10%와 동일한 추가 번개 피해 부여",
         "display_this_skill_cooldown_does_not_recover_during_buff": "효과를 발휘하는 동안 재사용 대기시간을 채우지 않음"
       },
       "stats": [
@@ -85028,7 +85298,7 @@
         {
           "id": "arcane_cloak_gain_%_of_consumed_mana_as_lightning_damage",
           "type": "additional",
-          "value": null
+          "value": 10
         },
         {
           "id": "base_deal_no_damage",
@@ -85209,7 +85479,7 @@
     "stat_translation_file": "stat_translations/skill",
     "static": {
       "crit_chance": 600,
-      "damage_effectiveness": 60,
+      "damage_effectiveness": null,
       "quality_stats": [
         {
           "stat": "향상 1회당 룬의 효과 범위 {rune_paint_area_of_effect_+%_final_per_rune_level}% 증폭",
@@ -85387,7 +85657,7 @@
     "stat_translation_file": "stat_translations/skill",
     "static": {
       "crit_chance": 600,
-      "damage_effectiveness": 60,
+      "damage_effectiveness": null,
       "quality_stats": [
         {
           "stat": "향상 1회당 룬의 효과 범위 {rune_paint_area_of_effect_+%_final_per_rune_level}% 증폭",
@@ -85573,7 +85843,7 @@
       "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "주문 피해에 적용된 증가 및 감소 수치의 {active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value}%를 이 스킬로 인한 공격 피해에도 적용",
+          "stat": "비전 완력 {active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value}%",
           "stats": {
             "active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value": 2500
           }
@@ -85585,7 +85855,7 @@
         "dex": 0
       },
       "stat_text": {
-        "active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value\nquality_display_spell_damage_to_attack_damage_is_gem": "주문 피해에 적용된 증가 및 감소 수치의 200%를 이 스킬로 인한 공격 피해에도 적용",
+        "active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value\nquality_display_spell_damage_to_attack_damage_is_gem": "비전 완력 200%",
         "kinetic_bolt_forks_apply_to_zig_zags": "투사체의 방향 전환 횟수를 추가하는 대신 투사체가 갈래로 나누어지는 속성 부여"
       },
       "stats": [
@@ -85827,7 +86097,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 600,
+      "crit_chance": 1000,
       "damage_effectiveness": -30,
       "quality_stats": [
         {
@@ -85843,7 +86113,7 @@
         "dex": null
       },
       "stat_text": {
-        "active_skill_base_area_of_effect_radius": "기본 반경 1.4미터"
+        "active_skill_base_area_of_effect_radius": "기본 반경 1.5미터"
       },
       "stats": [
         {
@@ -85859,7 +86129,7 @@
         {
           "id": "active_skill_base_area_of_effect_radius",
           "type": "constant",
-          "value": 14
+          "value": 15
         },
         {
           "id": "is_area_damage",
@@ -85946,7 +86216,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 600,
+      "crit_chance": 1000,
       "damage_effectiveness": 150,
       "quality_stats": [
         {
@@ -85963,7 +86233,7 @@
       },
       "stat_text": {
         "active_skill_base_area_of_effect_radius": "기본 반경 1.6미터",
-        "blade_burst_area_of_effect_+%_final_per_blade_vortex_blade_detonated": "칼날 소용돌이의 폭발한 칼날 1개당 효과 범위 80% 증폭",
+        "blade_burst_area_of_effect_+%_final_per_blade_vortex_blade_detonated": "칼날 소용돌이의 폭발한 칼날 1개당 효과 범위 100% 증폭",
         "blade_vortex_damage_+%_per_blade_final\ndamage_per_blade_vortex_blade_description_mode": "칼날 소용돌이의 칼날 하나당 피해 5% 증폭"
       },
       "stats": [
@@ -85985,7 +86255,7 @@
         {
           "id": "blade_burst_area_of_effect_+%_final_per_blade_vortex_blade_detonated",
           "type": "constant",
-          "value": 80
+          "value": 100
         },
         {
           "id": "blade_vortex_damage_+%_per_blade_final",
@@ -86084,7 +86354,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 600,
+      "crit_chance": 1000,
       "damage_effectiveness": null,
       "quality_stats": [
         {
@@ -86100,7 +86370,7 @@
         "dex": null
       },
       "stat_text": {
-        "active_skill_base_area_of_effect_radius": "기본 반경 2.6미터"
+        "active_skill_base_area_of_effect_radius": "기본 반경 2.8미터"
       },
       "stats": [
         {
@@ -86116,7 +86386,7 @@
         {
           "id": "active_skill_base_area_of_effect_radius",
           "type": "constant",
-          "value": 26
+          "value": 28
         },
         {
           "id": "gain_%_of_base_dagger_damage_as_added_spell_damage",
@@ -87802,7 +88072,7 @@
       },
       "stat_text": {
         "base_secondary_skill_effect_duration": "총 6.00초의 지속시간 동안 분리 가능",
-        "base_tertiary_skill_effect_duration": "기본 디버프 지속시간 1.00초",
+        "base_tertiary_skill_effect_duration": "기본 디버프 지속시간 2.00초",
         "base_sigil_repeat_frequency_ms": "낙인이 부착된 동안 0.25초마다 활성화",
         "immolation_brand_burn_damage_+%_final_per_stage\nquality_display_wintertide_brand_is_gem": "디버프가 단계 하나당 주는 피해 20% 증폭",
         "winter_brand_max_number_of_stages": "최대 20 단계",
@@ -87830,7 +88100,7 @@
         {
           "id": "base_tertiary_skill_effect_duration",
           "type": "constant",
-          "value": 1000
+          "value": 2000
         },
         {
           "id": "base_sigil_repeat_frequency_ms",
@@ -88885,7 +89155,7 @@
     "stat_translation_file": "stat_translations/skill",
     "static": {
       "crit_chance": 600,
-      "damage_effectiveness": -40,
+      "damage_effectiveness": -30,
       "quality_stats": [
         {
           "stat": "반경 {active_skill_base_radius_+/locations_to_metres}미터",
@@ -89150,7 +89420,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 500,
+      "crit_chance": 700,
       "damage_effectiveness": null,
       "quality_stats": [
         {
@@ -89166,7 +89436,7 @@
         "dex": 0
       },
       "stat_text": {
-        "skill_physical_damage_%_to_convert_to_chaos": "물리 피해의 40%를 카오스 피해로 전환",
+        "skill_physical_damage_%_to_convert_to_chaos": "물리 피해의 60%를 카오스 피해로 전환",
         "base_blackhole_tick_rate_ms": "0.40초마다 파동",
         "base_skill_effect_duration": "기본 지속시간 5.00초",
         "active_skill_base_area_of_effect_radius": "기본 반경 3.8미터"
@@ -89185,7 +89455,7 @@
         {
           "id": "skill_physical_damage_%_to_convert_to_chaos",
           "type": "constant",
-          "value": 40
+          "value": 60
         },
         {
           "id": "base_blackhole_tick_rate_ms",
@@ -89201,6 +89471,11 @@
           "id": "active_skill_base_area_of_effect_radius",
           "type": "constant",
           "value": 38
+        },
+        {
+          "id": "black_hole_hinder_description_mode",
+          "type": "constant",
+          "value": 1
         },
         {
           "id": "blackhole_hinder_%",
@@ -89242,7 +89517,7 @@
       "skill_physical_damage_%_to_convert_to_chaos",
       "active_skill_base_area_of_effect_radius",
       "base_cooldown_speed_+%",
-      "blackhole_hinder_%"
+      "blackhole_hinder_%\nblack_hole_hinder_description_mode"
     ],
     "tags": [
       "intelligence",
@@ -89309,7 +89584,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 500,
+      "crit_chance": 700,
       "damage_effectiveness": null,
       "quality_stats": [
         {
@@ -89325,10 +89600,10 @@
         "dex": 0
       },
       "stat_text": {
-        "skill_physical_damage_%_to_convert_to_chaos": "물리 피해의 40%를 카오스 피해로 전환",
+        "skill_physical_damage_%_to_convert_to_chaos": "물리 피해의 60%를 카오스 피해로 전환",
         "base_blackhole_tick_rate_ms": "0.25초마다 파동",
         "base_skill_effect_duration": "기본 지속시간 2.00초",
-        "active_skill_base_area_of_effect_radius": "기본 반경 2.4미터"
+        "active_skill_base_area_of_effect_radius": "기본 반경 2.8미터"
       },
       "stats": [
         {
@@ -89344,7 +89619,7 @@
         {
           "id": "skill_physical_damage_%_to_convert_to_chaos",
           "type": "constant",
-          "value": 40
+          "value": 60
         },
         {
           "id": "base_blackhole_tick_rate_ms",
@@ -89359,7 +89634,12 @@
         {
           "id": "active_skill_base_area_of_effect_radius",
           "type": "constant",
-          "value": 24
+          "value": 28
+        },
+        {
+          "id": "black_hole_hinder_description_mode",
+          "type": "constant",
+          "value": 1
         },
         {
           "id": "blackhole_hinder_%",
@@ -89400,7 +89680,7 @@
       "base_blackhole_tick_rate_ms",
       "skill_physical_damage_%_to_convert_to_chaos",
       "active_skill_base_area_of_effect_radius",
-      "blackhole_hinder_%"
+      "blackhole_hinder_%\nblack_hole_hinder_description_mode"
     ],
     "tags": [
       "intelligence",
@@ -89464,7 +89744,7 @@
       "max_level": 20,
       "release_state": "released"
     },
-    "cast_time": 650,
+    "cast_time": 500,
     "color": "b",
     "display_name": "치직대는 창",
     "is_support": false,
@@ -89607,7 +89887,7 @@
       "max_level": 20,
       "release_state": "released"
     },
-    "cast_time": 750,
+    "cast_time": 600,
     "color": "b",
     "display_name": "파생의 치직대는 창",
     "is_support": false,
@@ -89725,7 +90005,7 @@
       "max_level": 20,
       "release_state": "released"
     },
-    "cast_time": 750,
+    "cast_time": 600,
     "color": "b",
     "display_name": "분해의 치직대는 창",
     "is_support": false,
@@ -90495,7 +90775,7 @@
         {
           "stat": "한 번에 활성화되어 있는 화염 벽 최대치 {number_of_allowed_firewalls}개",
           "stats": {
-            "number_of_allowed_firewalls": 50
+            "number_of_allowed_firewalls": 100
           }
         }
       ],
@@ -91106,7 +91386,7 @@
       "max_level": 20,
       "release_state": "released"
     },
-    "cast_time": 1000,
+    "cast_time": 850,
     "color": "b",
     "display_name": "사술 폭발",
     "is_support": false,
@@ -91180,7 +91460,7 @@
       "vaal": null,
       "costs": null,
       "attack_speed_multiplier": null,
-      "cooldown": 2000,
+      "cooldown": 1000,
       "stored_uses": 3,
       "cost_multiplier": null,
       "cooldown_bypass_type": null,
@@ -91258,13 +91538,13 @@
       "max_level": 20,
       "release_state": "released"
     },
-    "cast_time": 1000,
+    "cast_time": 850,
     "color": "b",
     "display_name": "상반의 사술폭발",
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 600,
+      "crit_chance": 750,
       "damage_effectiveness": 240,
       "quality_stats": [
         {
@@ -91332,7 +91612,7 @@
       "vaal": null,
       "costs": null,
       "attack_speed_multiplier": null,
-      "cooldown": 2000,
+      "cooldown": 1000,
       "stored_uses": 3,
       "cost_multiplier": null,
       "cooldown_bypass_type": null,
@@ -91415,13 +91695,13 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 600,
+      "crit_chance": 1000,
       "damage_effectiveness": 270,
       "quality_stats": [
         {
           "stat": "기본 반경 {active_skill_base_area_of_effect_radius/locations_to_metres}미터",
           "stats": {
-            "active_skill_base_area_of_effect_radius": 100
+            "active_skill_base_area_of_effect_radius": 150
           }
         }
       ],
@@ -91432,7 +91712,7 @@
       },
       "stat_text": {
         "hexblast_display_innate_remove_hex_100%_chance\nhexblast_%_chance_to_not_consume_hex": "",
-        "active_skill_base_area_of_effect_radius": "기본 반경 2.5미터"
+        "active_skill_base_area_of_effect_radius": "기본 반경 2.8미터"
       },
       "stats": [
         {
@@ -91453,7 +91733,7 @@
         {
           "id": "active_skill_base_area_of_effect_radius",
           "type": "constant",
-          "value": 25
+          "value": 28
         },
         {
           "id": "hexblast_display_innate_remove_hex_100%_chance",
@@ -91656,7 +91936,8 @@
         "Trappable",
         "Mineable",
         "Fire",
-        "Triggerable"
+        "Triggerable",
+        "DamageOverTime"
       ],
       "weapon_restrictions": [
         "Bow"
@@ -91830,7 +92111,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 500,
+      "crit_chance": 600,
       "damage_effectiveness": null,
       "quality_stats": [
         {
@@ -92136,7 +92417,7 @@
         "dex": 0
       },
       "stat_text": {
-        "base_chaos_damage_to_deal_per_minute": "1초마다 1250의 기본 카오스 피해를 줌",
+        "base_chaos_damage_to_deal_per_minute": "1초마다 1600의 기본 카오스 피해를 줌",
         "cast_on_gain_skill": "이 주문은 획득 시 발동",
         "no_cost": "해당 스킬의 비용 소모 없음"
       },
@@ -92144,7 +92425,7 @@
         {
           "id": "base_chaos_damage_to_deal_per_minute",
           "type": "constant",
-          "value": 75000
+          "value": 96000
         },
         {
           "id": "cast_on_gain_skill",
@@ -92870,7 +93151,7 @@
         "dex": 0
       },
       "stat_text": {
-        "base_secondary_skill_effect_duration": "기본 디버프 지속시간 1.00초",
+        "base_secondary_skill_effect_duration": "기본 디버프 지속시간 1.50초",
         "base_skill_effect_duration": "기본 지속시간 6.00초"
       },
       "stats": [
@@ -92882,7 +93163,7 @@
         {
           "id": "base_secondary_skill_effect_duration",
           "type": "constant",
-          "value": 1000
+          "value": 1500
         },
         {
           "id": "base_skill_effect_duration",
@@ -93097,6 +93378,7 @@
         "blood_scythe_damage_+%_final_per_charge\nquality_display_reap_is_gem": "피 충전 하나당 주는 피해 15% 증폭",
         "blood_scythe_cost_+%_final_per_charge": "피 충전 하나당 생명력 소모 20% 증폭",
         "base_skill_effect_duration": "기본 지속시간 1.00초",
+        "active_skill_base_area_of_effect_radius": "기본 반경 2.5미터",
         "spell_damage_modifiers_apply_to_skill_dot": "주문 피해 속성 부여 수치를 이 스킬의 지속 피해 효과에도 적용",
         "lose_blood_scythe_charge_on_kill": "이 스킬이 적들에게 명중하고 적이 1마리도 죽지 않을 경우 피 충전 획득\n적이 이 스킬 디버프의 영향을 받는 동안 죽으면 피 충전 상실"
       },
@@ -93130,6 +93412,11 @@
           "id": "base_skill_effect_duration",
           "type": "constant",
           "value": 1000
+        },
+        {
+          "id": "active_skill_base_area_of_effect_radius",
+          "type": "constant",
+          "value": 25
         },
         {
           "id": "spell_damage_modifiers_apply_to_skill_dot",
@@ -93169,6 +93456,7 @@
       "base_physical_damage_to_deal_per_minute",
       "base_skill_effect_duration",
       "spell_damage_modifiers_apply_to_skill_dot",
+      "active_skill_base_area_of_effect_radius",
       "lose_blood_scythe_charge_on_kill",
       "blood_scythe_cost_+%_final_per_charge",
       "blood_scythe_damage_+%_final_per_charge\nquality_display_reap_is_gem"
@@ -93190,6 +93478,172 @@
       "quest": "오른팔 잘라내기"
     },
     "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "피투성이 낫이 플레이어의 주변을 휩쓸어, 지속 물리 피해 디버프를 적용하고 적을 명중하여 물리 피해를 줍니다. 살아남은 적이 있으면 스킬의 피해와 비용을 증가시키는 피 충전을 1개 획득합니다. 플레이어는 피 충전을 5개까지 보유할 수 있습니다.",
+      "display_name": "도살의 낫질",
+      "id": "reap_alt_x",
+      "is_manually_casted": true,
+      "is_skill_totem": false,
+      "stat_conversions": {
+        "bloodreap_damage_+%": "damage_+%",
+        "bloodreap_skill_area_of_effect_+%": "base_skill_area_of_effect_+%",
+        "exsanguinate_and_reap_skill_physical_damage_%_to_convert_to_fire": "skill_physical_damage_%_to_convert_to_fire",
+        "reap_debuff_deals_fire_damage_instead_of_physical_damage": "physical_skill_uses_fire_dot_damage_per_minute_instead"
+      },
+      "types": [
+        "Spell",
+        "Damage",
+        "Physical",
+        "DamageOverTime",
+        "Area",
+        "AreaSpell",
+        "Duration",
+        "Trappable",
+        "Totemable",
+        "Mineable",
+        "Multicastable",
+        "CanRapidFire",
+        "Triggerable"
+      ],
+      "weapon_restrictions": [],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "낫질",
+      "experience_type": "GemProgression28",
+      "id": "Metadata/Items/Gems/SkillGemBloodreap",
+      "max_level": 20,
+      "release_state": "released"
+    },
+    "cast_time": 1000,
+    "color": "r",
+    "display_name": "도살의 낫질",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": 600,
+      "damage_effectiveness": 30,
+      "quality_stats": [
+        {
+          "stat": "피 충전 하나당 주는 피해 {blood_scythe_damage_+%_final_per_charge}% 증폭",
+          "stats": {
+            "blood_scythe_damage_+%_final_per_charge": 250
+          }
+        }
+      ],
+      "stat_requirements": {
+        "int": null,
+        "str": null,
+        "dex": 0
+      },
+      "stat_text": {
+        "blood_scythe_damage_+%_final_per_charge\nquality_display_reap_is_gem": "피 충전 하나당 주는 피해 25% 증폭",
+        "blood_scythe_cost_+%_final_per_charge": "피 충전 하나당 생명력 소모 20% 증폭",
+        "base_skill_effect_duration": "기본 지속시간 2.00초",
+        "active_skill_base_area_of_effect_radius": "기본 반경 3.2미터",
+        "spell_damage_modifiers_apply_to_skill_dot": "주문 피해 속성 부여 수치를 이 스킬의 지속 피해 효과에도 적용",
+        "lose_blood_scythe_charge_on_kill": "이 스킬이 적들에게 명중하고 적이 1마리도 죽지 않을 경우 피 충전 획득\n적이 이 스킬 디버프의 영향을 받는 동안 죽으면 피 충전 상실"
+      },
+      "stats": [
+        {
+          "id": "spell_minimum_base_physical_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "spell_maximum_base_physical_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "base_physical_damage_to_deal_per_minute",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "blood_scythe_damage_+%_final_per_charge",
+          "type": "constant",
+          "value": 25
+        },
+        {
+          "id": "blood_scythe_cost_+%_final_per_charge",
+          "type": "constant",
+          "value": 20
+        },
+        {
+          "id": "base_skill_effect_duration",
+          "type": "constant",
+          "value": 2000
+        },
+        {
+          "id": "active_skill_base_area_of_effect_radius",
+          "type": "constant",
+          "value": 32
+        },
+        {
+          "id": "spell_damage_modifiers_apply_to_skill_dot",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "is_area_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "lose_blood_scythe_charge_on_kill",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "quality_display_reap_is_gem",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "spell_minimum_base_physical_damage\nspell_maximum_base_physical_damage",
+      "base_physical_damage_to_deal_per_minute",
+      "base_skill_effect_duration",
+      "spell_damage_modifiers_apply_to_skill_dot",
+      "active_skill_base_area_of_effect_radius",
+      "lose_blood_scythe_charge_on_kill",
+      "blood_scythe_cost_+%_final_per_charge",
+      "blood_scythe_damage_+%_final_per_charge\nquality_display_reap_is_gem"
+    ],
+    "tags": [
+      "strength",
+      "grants_active_skill",
+      "spell",
+      "physical",
+      "area",
+      "duration"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": {
+      "act": 3,
+      "classes": [
+        "사이온"
+      ],
+      "quest": "오른팔 잘라내기"
+    },
+    "discriminator": "alt_x",
     "support_gem": null
   },
   {
@@ -96448,7 +96902,6 @@
         "Trappable",
         "Mineable",
         "Totemable",
-        "DamageOverTime",
         "Triggerable",
         "Physical"
       ],
@@ -97639,7 +98092,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 600,
+      "crit_chance": 1000,
       "damage_effectiveness": -50,
       "quality_stats": [],
       "stat_requirements": {
@@ -97745,7 +98198,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 600,
+      "crit_chance": 1000,
       "damage_effectiveness": -70,
       "quality_stats": [],
       "stat_requirements": {
@@ -98216,7 +98669,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 500,
+      "crit_chance": 700,
       "damage_effectiveness": -45,
       "quality_stats": [],
       "stat_requirements": {
@@ -98227,7 +98680,8 @@
       "stat_text": {
         "skill_physical_damage_%_to_convert_to_chaos": "물리 피해의 40%를 카오스 피해로 전환",
         "base_blackhole_tick_rate_ms": "1.00초마다 파동",
-        "base_skill_effect_duration": "기본 지속시간 5.00초"
+        "base_skill_effect_duration": "기본 지속시간 5.00초",
+        "blackhole_hinder_%": ""
       },
       "stats": [
         {
@@ -98661,7 +99115,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 500,
+      "crit_chance": 750,
       "damage_effectiveness": 220,
       "quality_stats": [],
       "stat_requirements": {
@@ -98766,7 +99220,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 600,
+      "crit_chance": 750,
       "damage_effectiveness": 45,
       "quality_stats": [],
       "stat_requirements": {
@@ -99033,7 +99487,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 550,
+      "crit_chance": 600,
       "damage_effectiveness": 130,
       "quality_stats": [],
       "stat_requirements": {
@@ -99453,7 +99907,7 @@
         "corpse_erruption_base_maximum_number_of_geyers": "1회에 간헐천 최대치 3개",
         "corpse_explosion_monster_life_%": "폭발로 시신 최대 생명력의 4% 와 동일한 기본 화염 피해를 줌",
         "number_of_additional_projectiles": "투사체 3개 추가 발사",
-        "cremation_base_fires_projectile_every_x_ms": "1.0초마다 투사체 발사"
+        "cremation_base_fires_projectile_every_x_ms": "1초마다 투사체 발사"
       },
       "stats": [
         {
@@ -99608,7 +100062,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/debuff_skill",
     "static": {
-      "crit_chance": 600,
+      "crit_chance": 750,
       "damage_effectiveness": 180,
       "quality_stats": [],
       "stat_requirements": {
@@ -99766,7 +100220,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 500,
+      "crit_chance": 600,
       "damage_effectiveness": -40,
       "quality_stats": [],
       "stat_requirements": {
@@ -100343,7 +100797,8 @@
         "Cold",
         "ChillingArea",
         "CanRapidFire",
-        "AreaSpell"
+        "AreaSpell",
+        "DamageOverTime"
       ],
       "weapon_restrictions": [],
       "minion_types": null,
@@ -100362,7 +100817,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 600,
+      "crit_chance": 750,
       "damage_effectiveness": -20,
       "quality_stats": [],
       "stat_requirements": {
@@ -100498,7 +100953,8 @@
         "ChillingArea",
         "AreaSpell",
         "Nova",
-        "CanRapidFire"
+        "CanRapidFire",
+        "DamageOverTime"
       ],
       "weapon_restrictions": [],
       "minion_types": null,
@@ -100517,7 +100973,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 650,
+      "crit_chance": 750,
       "damage_effectiveness": null,
       "quality_stats": [],
       "stat_requirements": {
@@ -100669,7 +101125,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 500,
+      "crit_chance": 600,
       "damage_effectiveness": -40,
       "quality_stats": [],
       "stat_requirements": {
@@ -102592,7 +103048,8 @@
         "Multicastable",
         "Chaos",
         "Cascadable",
-        "AreaSpell"
+        "AreaSpell",
+        "CreatesCorpse"
       ],
       "weapon_restrictions": [],
       "minion_types": null,
@@ -103804,7 +104261,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/variable_duration_skill",
     "static": {
-      "crit_chance": 500,
+      "crit_chance": 600,
       "damage_effectiveness": -15,
       "quality_stats": [],
       "stat_requirements": {
@@ -103927,7 +104384,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 600,
+      "crit_chance": 500,
       "damage_effectiveness": -20,
       "quality_stats": [],
       "stat_requirements": {
@@ -104045,7 +104502,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 500,
+      "crit_chance": 750,
       "damage_effectiveness": 80,
       "quality_stats": [],
       "stat_requirements": {
@@ -106467,8 +106924,8 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 650,
-      "damage_effectiveness": null,
+      "crit_chance": 1000,
+      "damage_effectiveness": 150,
       "quality_stats": [
         {
           "stat": "이 주문의 대기 중인 시전 하나당 명중 및 상태 이상 피해 {voltaxic_burst_hit_and_ailment_damage_+%_final_per_stack}% 증폭",
@@ -106483,8 +106940,8 @@
         "dex": null
       },
       "stat_text": {
-        "skill_lightning_damage_%_to_convert_to_chaos": "번개 피해의 40%를 카오스 피해로 전환",
-        "corpse_explosion_monster_life_%_lightning": "폭발로 시신 최대 생명력의 6%와 동일한 기본 번개 피해를 줌",
+        "skill_lightning_damage_%_to_convert_to_chaos": "번개 피해의 60%를 카오스 피해로 전환",
+        "corpse_explosion_monster_life_%_lightning": "폭발로 시신 최대 생명력의 10%와 동일한 기본 번개 피해를 줌",
         "voltaxic_burst_hit_and_ailment_damage_+%_final_per_stack\nquality_display_voltaxic_burst_is_gem": "이 주문의 대기 중인 시전 하나당 명중 및 상태 이상 피해 1% 증폭",
         "base_skill_effect_duration": "기본 지속시간 2.50초"
       },
@@ -106502,12 +106959,12 @@
         {
           "id": "skill_lightning_damage_%_to_convert_to_chaos",
           "type": "constant",
-          "value": 40
+          "value": 60
         },
         {
           "id": "corpse_explosion_monster_life_%_lightning",
           "type": "constant",
-          "value": 6
+          "value": 10
         },
         {
           "id": "voltaxic_burst_hit_and_ailment_damage_+%_final_per_stack",
@@ -107564,7 +108021,7 @@
       "max_level": 20,
       "release_state": "released"
     },
-    "cast_time": 750,
+    "cast_time": 650,
     "color": "r",
     "display_name": "면죄",
     "is_support": false,
@@ -107740,7 +108197,7 @@
       "max_level": 20,
       "release_state": "released"
     },
-    "cast_time": 750,
+    "cast_time": 650,
     "color": "r",
     "display_name": "격려의 면죄",
     "is_support": false,
@@ -109718,7 +110175,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 600,
+      "crit_chance": 1000,
       "damage_effectiveness": 20,
       "quality_stats": [],
       "stat_requirements": {
@@ -109847,7 +110304,8 @@
         "CanRapidFire",
         "Area",
         "AreaSpell",
-        "Physical"
+        "Physical",
+        "CreatesCorpse"
       ],
       "weapon_restrictions": [],
       "minion_types": null,
@@ -109866,7 +110324,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 600,
+      "crit_chance": 1000,
       "damage_effectiveness": -10,
       "quality_stats": [],
       "stat_requirements": {
@@ -110188,7 +110646,8 @@
         "Duration",
         "ChillingArea",
         "AreaSpell",
-        "Cooldown"
+        "Cooldown",
+        "DamageOverTime"
       ],
       "weapon_restrictions": [],
       "minion_types": null,
@@ -110343,7 +110802,7 @@
   {
     "active_skill": {
       "description": "시전자나 대상 지점에 있는 해골 소환수 중 하나의 생명력 일부를 제거하고 주위에 카오스 피해를 줍니다. 해당 효과는 근처에 있는 다른 해골들에게 연쇄됩니다. 시전자 또는 근처에 해골이 없을 경우, 시전자의 생명력을 희생하여 피해를 줍니다.",
-      "display_name": "어둠의 서약",
+      "display_name": "어둠의 협상",
       "id": "dark_pact",
       "is_manually_casted": true,
       "is_skill_totem": false,
@@ -110374,7 +110833,7 @@
       "skill_totem_life_multiplier": null
     },
     "base_item": {
-      "display_name": "어둠의 서약",
+      "display_name": "어둠의 협상",
       "experience_type": "GemProgressionRoyale4",
       "id": "Metadata/Items/Gems/SkillGemDarkPactRoyale",
       "max_level": 10,
@@ -110382,11 +110841,11 @@
     },
     "cast_time": 500,
     "color": "b",
-    "display_name": "어둠의 서약",
+    "display_name": "어둠의 협상",
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 700,
+      "crit_chance": 1000,
       "damage_effectiveness": null,
       "quality_stats": [],
       "stat_requirements": {
@@ -110658,7 +111117,7 @@
         "dex": 0
       },
       "stat_text": {
-        "upheaval_number_of_spikes": "폭발 +4회 유발",
+        "upheaval_number_of_spikes": "폭발 4회 유발",
         "skill_physical_damage_%_to_convert_to_cold": "물리 피해의 100%를 냉기 피해로 전환",
         "glacial_cascade_final_spike_damage_+%_final\nquality_display_glacial_cascade_is_gem": "1초에 1회 이상 고유 적을 밀어낼 수 없음\n마지막 폭발이 주는 피해 200% 증폭\n마지막 폭발의 반경 100% 증폭\n마지막 폭발은 적을 밀어낼 수 없음",
         "global_knockback": "명중 시 적을 밀어냄"
@@ -112697,7 +113156,6 @@
         "Multistrikeable",
         "Melee",
         "MeleeSingleTarget",
-        "DamageOverTime",
         "Chaos"
       ],
       "weapon_restrictions": [
@@ -114071,7 +114529,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 700,
+      "crit_chance": 750,
       "damage_effectiveness": -20,
       "quality_stats": [],
       "stat_requirements": {
@@ -114311,7 +114769,7 @@
       },
       "stat_text": {
         "soulfeast_take_%_maximum_life_as_chaos_damage\nsoulfeast_take_%_maximum_energy_shield_as_chaos_damage": "최대 생명력의 40%와 에너지 보호막 최대치의 25%를 카오스 피해로 받음",
-        "skill_base_chaos_damage_%_maximum_life": "최대 생명력의 12%를 기본 카오스 피해로 줌",
+        "skill_base_chaos_damage_%_maximum_life": "최대 생명력의 14%를 기본 카오스 피해로 줌",
         "skill_base_chaos_damage_%_maximum_energy_shield": "에너지 보호막 최대치의 5%를 기본 카오스 피해로 줌"
       },
       "stats": [
@@ -114333,7 +114791,7 @@
         {
           "id": "skill_base_chaos_damage_%_maximum_life",
           "type": "constant",
-          "value": 12
+          "value": 14
         },
         {
           "id": "skill_base_chaos_damage_%_maximum_energy_shield",
@@ -114735,7 +115193,7 @@
       "max_level": 20,
       "release_state": "released"
     },
-    "cast_time": 800,
+    "cast_time": 600,
     "color": "b",
     "display_name": "마나 결속",
     "is_support": false,
@@ -117633,7 +118091,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 600,
+      "crit_chance": 750,
       "damage_effectiveness": -45,
       "quality_stats": [
         {
@@ -117792,7 +118250,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 600,
+      "crit_chance": 750,
       "damage_effectiveness": -20,
       "quality_stats": [
         {
@@ -117950,7 +118408,7 @@
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
-      "crit_chance": 600,
+      "crit_chance": 750,
       "damage_effectiveness": 20,
       "quality_stats": [
         {
@@ -118878,7 +119336,7 @@
     "stat_translation_file": "stat_translations/skill",
     "static": {
       "crit_chance": 500,
-      "damage_effectiveness": -35,
+      "damage_effectiveness": -20,
       "quality_stats": [
         {
           "stat": "회오리 이동 속도 {tornado_movement_speed_+%}% 증가",
@@ -119009,7 +119467,7 @@
   },
   {
     "active_skill": {
-      "description": "플레이어의 최대 에너지 보호막을 크게 감소시키는 버프를 부여하고 장착한 무기를 변형하여 해당 에너지로 이루어진 검의 형태를 띄게 합니다. 주문을 다시 시전하면 버프가 사라집니다. 활은 사용할 수 없습니다. 이 스킬은 발동되지 않습니다.",
+      "description": "플레이어의 최대 에너지 보호막을 크게 감소시키는 버프를 부여하고 장착한 검을 변형하여 해당 에너지로 이루어진 검의 형태를 띄게 합니다. 주문을 다시 시전하면 버프가 사라집니다. 활은 사용할 수 없습니다. 이 스킬은 발동되지 않으며 검이 아닌 무기로 사용할 수 없습니다.",
       "display_name": "에너지 칼날",
       "id": "energy_blade",
       "is_manually_casted": true,
@@ -119022,21 +119480,9 @@
         "Cooldown"
       ],
       "weapon_restrictions": [
-        "Claw",
-        "Dagger",
-        "FishingRod",
-        "One Hand Axe",
-        "One Hand Mace",
         "One Hand Sword",
-        "Sceptre",
-        "Staff",
         "Thrusting One Hand Sword",
-        "Two Hand Axe",
-        "Two Hand Mace",
-        "Two Hand Sword",
-        "Wand",
-        "Warstaff",
-        "Rune Dagger"
+        "Two Hand Sword"
       ],
       "minion_types": null,
       "skill_totem_life_multiplier": null
@@ -120276,7 +120722,7 @@
     "stat_translation_file": "stat_translations/skill",
     "static": {
       "crit_chance": 600,
-      "damage_effectiveness": 40,
+      "damage_effectiveness": 70,
       "quality_stats": [
         {
           "stat": "적에게 유발된 감전 효과 5%당 명중 피해 {energy_release_damage_+%_final_per_5%_increased_damage_taken_from_shock_on_target}% 증폭",
@@ -120406,7 +120852,7 @@
       "max_level": 20,
       "release_state": "released"
     },
-    "cast_time": 700,
+    "cast_time": 600,
     "color": "b",
     "display_name": "천국의 번개 도관",
     "is_support": false,
@@ -120428,7 +120874,8 @@
         "dex": 0
       },
       "stat_text": {
-        "active_skill_base_area_of_effect_radius": "기본 반경 4미터"
+        "active_skill_base_area_of_effect_radius": "기본 반경 4미터",
+        "active_skill_shock_as_though_damage_+%_final": "200% 증폭된 피해를 준 것처럼 적에게 감전 유발"
       },
       "stats": [
         {
@@ -120447,11 +120894,6 @@
           "value": 40
         },
         {
-          "id": "active_skill_shock_as_though_damage_+%_final",
-          "type": "constant",
-          "value": 20
-        },
-        {
           "id": "lightning_conduit_max_num_targets",
           "type": "additional",
           "value": null
@@ -120459,7 +120901,7 @@
         {
           "id": "active_skill_shock_as_though_damage_+%_final",
           "type": "additional",
-          "value": null
+          "value": 200
         }
       ],
       "vaal": null,
@@ -120556,7 +120998,7 @@
       },
       "stat_text": {
         "base_skill_effect_duration": "기본 지속시간 6.00초",
-        "base_chance_to_shock_%_from_skill\nquality_display_shock_chance_from_skill_is_gem": "버프 시 20%의 확률로 적을 감전",
+        "base_chance_to_shock_%_from_skill\nquality_display_shock_chance_from_skill_is_gem": "버프 시 50%의 확률로 적을 감전",
         "base_galvanic_field_beam_delay_ms": "0.10초마다 광선 발사",
         "galvanic_field_maximum_number_of_spheres": "장 최대 1개",
         "galvanic_field_radius_+_per_10%_increased_damage_taken_from_shock": "장이 생성될 때 적에게 유발된 감전 효과 10%당 장의 반경 +0.1미터",
@@ -120581,7 +121023,7 @@
         {
           "id": "base_chance_to_shock_%_from_skill",
           "type": "constant",
-          "value": 20
+          "value": 50
         },
         {
           "id": "base_galvanic_field_beam_delay_ms",
@@ -120731,9 +121173,8 @@
       },
       "stat_text": {
         "base_skill_effect_duration": "기본 지속시간 6.00초",
-        "base_chance_to_shock_%_from_skill\nquality_display_shock_chance_from_skill_is_gem": "오라가 20%의 확률로 감전 유발",
+        "base_chance_to_shock_%_from_skill\nquality_display_shock_chance_from_skill_is_gem": "오라가 50%의 확률로 감전 유발",
         "galvanic_field_maximum_number_of_spheres": "장 최대 1개",
-        "galvanic_field_retargeting_delay_ms": "0.70초마다 한 번만 각 적을 대상으로 지정 가능",
         "base_galvanic_field_beam_delay_ms": "0.20초마다 광선 발사",
         "never_shock": "감전 불가"
       },
@@ -120756,7 +121197,7 @@
         {
           "id": "base_chance_to_shock_%_from_skill",
           "type": "constant",
-          "value": 20
+          "value": 50
         },
         {
           "id": "galvanic_field_maximum_number_of_spheres",
@@ -120764,14 +121205,14 @@
           "value": 1
         },
         {
-          "id": "galvanic_field_retargeting_delay_ms",
-          "type": "constant",
-          "value": 700
-        },
-        {
           "id": "base_galvanic_field_beam_delay_ms",
           "type": "constant",
           "value": 200
+        },
+        {
+          "id": "galvanic_field_retargeting_delay_ms",
+          "type": "additional",
+          "value": null
         },
         {
           "id": "never_shock",
@@ -121666,9 +122107,9 @@
       "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "주변에 있는 적 하나당 반경 +0.1미터, 최대 +1미터",
+          "stat": "주변에 있는 적 하나당 반경 {cleave_+1_base_radius_per_nearby_enemy_up_to_10/locations_to_metres}미터, 최대 +1미터",
           "stats": {
-            "cleave_+1_base_radius_per_nearby_enemy_up_to_10": 1000
+            "cleave_+1_base_radius_per_nearby_enemy_up_to_10": 50
           }
         }
       ],
@@ -122975,7 +123416,7 @@
       "stat_text": {
         "base_skill_effect_duration": "기본 지속시간 5.00초",
         "vaal_reap_additional_maximum_blood_charges": "피 충전 최대치 +4",
-        "blood_ground_leaving_area_lasts_for_ms": "끓는 피의 효과가 2초 더 유지됨",
+        "blood_ground_leaving_area_lasts_for_ms": "끓는 피의 효과가 4초 더 유지됨",
         "base_secondary_skill_effect_duration": "기본 2차 지속시간 8.00초",
         "spell_damage_modifiers_apply_to_skill_dot": "주문 피해 속성 부여 수치를 이 스킬의 지속 피해 효과에도 적용",
         "modifiers_to_skill_effect_duration_also_affect_soul_prevention_duration": "스킬 효과 지속시간 속성 부여 수치를 이 스킬의 영혼 획득 방지에도 적용",
@@ -123010,7 +123451,7 @@
         {
           "id": "blood_ground_leaving_area_lasts_for_ms",
           "type": "constant",
-          "value": 2000
+          "value": 4000
         },
         {
           "id": "base_secondary_skill_effect_duration",
@@ -123050,7 +123491,7 @@
       ],
       "vaal": {
         "souls": 25,
-        "stored_uses": 1
+        "stored_uses": 2
       },
       "costs": null,
       "attack_speed_multiplier": null,
@@ -123891,7 +124332,8 @@
         "Fire",
         "AreaSpell",
         "Vaal",
-        "Multicastable"
+        "Multicastable",
+        "DamageOverTime"
       ],
       "weapon_restrictions": [],
       "minion_types": null,
@@ -123927,9 +124369,9 @@
       },
       "stat_text": {
         "fire_storm_fireball_delay_ms\nvaal_firestorm_number_of_meteors": "화살 16개",
-        "firestorm_drop_burning_ground_duration_ms": "4.00초간 용암 지대 지속",
+        "firestorm_drop_burning_ground_duration_ms": "6.00초간 용암 지대 지속",
         "vaal_firestorm_gem_explosion_area_of_effect_+%_final": "충격의 효과 범위 20% 증폭",
-        "active_skill_base_area_of_effect_radius": "기본 반경 1.3미터",
+        "active_skill_base_area_of_effect_radius": "기본 반경 1.8미터",
         "modifiers_to_skill_effect_duration_also_affect_soul_prevention_duration": "스킬 효과 지속시간 속성 부여 수치를 이 스킬의 영혼 획득 방지에도 적용"
       },
       "stats": [
@@ -123961,7 +124403,7 @@
         {
           "id": "firestorm_drop_burning_ground_duration_ms",
           "type": "constant",
-          "value": 4000
+          "value": 6000
         },
         {
           "id": "vaal_firestorm_gem_explosion_area_of_effect_+%_final",
@@ -123971,7 +124413,7 @@
         {
           "id": "active_skill_base_area_of_effect_radius",
           "type": "constant",
-          "value": 13
+          "value": 18
         },
         {
           "id": "base_skill_show_average_damage_instead_of_dps",
@@ -124701,7 +125143,8 @@
         "Mineable",
         "Triggerable",
         "Rain",
-        "Duration"
+        "Duration",
+        "DamageOverTime"
       ],
       "weapon_restrictions": [
         "Bow"
@@ -124726,7 +125169,7 @@
       "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "폭발의 적중 및 상태 이상 피해 {napalm_arrow_detonation_hit_damage_+%_final}% 증폭",
+          "stat": "폭발의 명중 및 상태 이상 피해 {napalm_arrow_detonation_hit_damage_+%_final}% 증폭",
           "stats": {
             "napalm_arrow_detonation_hit_damage_+%_final": 1500
           }
@@ -124741,115 +125184,13 @@
         "base_skill_effect_duration": "기본 지속시간 6.00초",
         "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius": "첫 낙하 후의 화살들이 3미터의 기본 반경 내에 떨어짐",
         "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius": "기본 충격 반경 1미터",
-        "napalm_arrow_detonation_hit_damage_+%_final": "폭발의 적중 및 상태 이상 피해 50% 증폭",
+        "napalm_arrow_detonation_hit_damage_+%_final": "폭발의 명중 및 상태 이상 피해 50% 증폭",
         "napalm_arrow_maximum_number_of_unprimed_arrows_allowed": "꽂힌 화살 최대치 20개",
         "skill_physical_damage_%_to_convert_to_fire": "물리 피해의 100%를 화염 피해로 전환",
         "base_secondary_skill_effect_duration": "기본 디버프 지속시간 4.00초",
-        "base_number_of_projectiles": "투사체 3개 발사",
         "projectile_damage_modifiers_apply_to_skill_dot": "투사체 피해 속성 부여 수치를 이 스킬의 지속 피해 효과에도 적용"
       },
-      "stats": [
-        {
-          "id": "base_fire_damage_to_deal_per_minute",
-          "type": "float",
-          "value": null
-        },
-        {
-          "id": "base_skill_effect_duration",
-          "type": "constant",
-          "value": 6000
-        },
-        {
-          "id": "active_skill_area_of_effect_description_mode",
-          "type": "constant",
-          "value": 7
-        },
-        {
-          "id": "active_skill_base_area_of_effect_radius",
-          "type": "constant",
-          "value": 30
-        },
-        {
-          "id": "active_skill_secondary_area_of_effect_description_mode",
-          "type": "constant",
-          "value": 7
-        },
-        {
-          "id": "active_skill_base_secondary_area_of_effect_radius",
-          "type": "constant",
-          "value": 10
-        },
-        {
-          "id": "active_skill_tertiary_area_of_effect_description_mode",
-          "type": "constant",
-          "value": 1
-        },
-        {
-          "id": "napalm_arrow_detonation_hit_damage_+%_final",
-          "type": "constant",
-          "value": 50
-        },
-        {
-          "id": "napalm_arrow_maximum_number_of_unprimed_arrows_allowed",
-          "type": "constant",
-          "value": 20
-        },
-        {
-          "id": "skill_physical_damage_%_to_convert_to_fire",
-          "type": "constant",
-          "value": 100
-        },
-        {
-          "id": "base_secondary_skill_effect_duration",
-          "type": "constant",
-          "value": 4000
-        },
-        {
-          "id": "blast_rain_arrow_delay_ms",
-          "type": "constant",
-          "value": 90
-        },
-        {
-          "id": "base_number_of_projectiles",
-          "type": "constant",
-          "value": 3
-        },
-        {
-          "id": "active_skill_base_tertiary_area_of_effect_radius",
-          "type": "additional",
-          "value": null
-        },
-        {
-          "id": "base_is_projectile",
-          "type": "implicit",
-          "value": 1
-        },
-        {
-          "id": "is_area_damage",
-          "type": "implicit",
-          "value": 1
-        },
-        {
-          "id": "skill_can_fire_arrows",
-          "type": "implicit",
-          "value": 1
-        },
-        {
-          "id": "base_skill_show_average_damage_instead_of_dps",
-          "type": "implicit",
-          "value": 1
-        },
-        {
-          "id": "quality_display_base_number_of_projectiles_is_gem",
-          "type": "implicit",
-          "value": 1
-        },
-        {
-          "id": "projectile_damage_modifiers_apply_to_skill_dot",
-          "type": "implicit",
-          "value": 1
-        }
-      ],
+      "stats": null,
       "vaal": null,
       "costs": null,
       "attack_speed_multiplier": null,
@@ -124870,6 +125211,7 @@
       "skill_physical_damage_%_to_convert_to_fire",
       "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius",
       "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius",
+      "active_skill_tertiary_area_of_effect_description_mode",
       "active_skill_tertiary_area_of_effect_description_mode\nactive_skill_base_tertiary_area_of_effect_radius",
       "base_secondary_skill_effect_duration",
       "napalm_arrow_detonation_hit_damage_+%_final",
@@ -124950,7 +125292,7 @@
         "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius": "기본 대상 지정 범위 길이 9미터",
         "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius": "기본 대상 지정 범위 폭 4.5미터",
         "active_skill_tertiary_area_of_effect_description_mode\nactive_skill_base_tertiary_area_of_effect_radius": "기본 폭발 반경 1.2미터",
-        "active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value\nquality_display_spell_damage_to_attack_damage_is_gem": "주문 피해에 적용된 증가 및 감소 수치의 150%를 이 스킬로 인한 공격 피해에도 적용",
+        "active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value\nquality_display_spell_damage_to_attack_damage_is_gem": "비전 완력 200%",
         "base_number_of_projectiles": "투사체 8개 발사"
       },
       "stats": [
@@ -124987,7 +125329,7 @@
         {
           "id": "active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value",
           "type": "constant",
-          "value": 150
+          "value": 200
         },
         {
           "id": "base_number_of_projectiles",
@@ -125122,7 +125464,7 @@
         "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius": "기본 대상 지정 범위 길이 9미터",
         "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius": "기본 대상 지정 범위 폭 4.5미터",
         "active_skill_tertiary_area_of_effect_description_mode\nactive_skill_base_tertiary_area_of_effect_radius": "기본 폭발 반경 1.2미터",
-        "active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value\nquality_display_spell_damage_to_attack_damage_is_gem": "주문 피해에 적용된 증가 및 감소 수치의 150%를 이 스킬로 인한 공격 피해에도 적용",
+        "active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value\nquality_display_spell_damage_to_attack_damage_is_gem": "비전 완력 200%",
         "base_number_of_projectiles": "투사체 10개 발사"
       },
       "stats": [
@@ -125159,7 +125501,7 @@
         {
           "id": "active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value",
           "type": "constant",
-          "value": 150
+          "value": 200
         },
         {
           "id": "base_number_of_projectiles",
@@ -125291,8 +125633,8 @@
       },
       "stat_text": {
         "base_skill_effect_duration": "기본 지속시간 5.00초",
-        "active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value\nquality_display_spell_damage_to_attack_damage_is_gem": "주문 피해에 적용된 증가 및 감소 수치의 150%를 이 스킬로 인한 공격 피해에도 적용",
-        "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius": "기본 폭발 반경 1.5미터",
+        "active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value\nquality_display_spell_damage_to_attack_damage_is_gem": "비전 완력 150%",
+        "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius": "기본 폭발 반경 1.8미터",
         "kinetic_shell_immunity_after_explosion_ms": "껍질이 폭발 후 0.2초 동안 동일한 대상에게 다시 적용되지 않음",
         "kinetic_shell_transfer_to_X_targets_on_projectile_hit": "폭발로 발사된 투사체가 새로운 껍질을 최대 1개까지 적용 가능",
         "active_skill_area_damage_+%_final\nquality_display_active_skill_area_damage_is_gem": "범위 피해 750% 증폭",
@@ -125317,7 +125659,7 @@
         {
           "id": "active_skill_base_area_of_effect_radius",
           "type": "constant",
-          "value": 15
+          "value": 18
         },
         {
           "id": "active_skill_area_of_effect_description_mode",
@@ -125382,7 +125724,7 @@
       ],
       "vaal": null,
       "costs": null,
-      "attack_speed_multiplier": null,
+      "attack_speed_multiplier": 15,
       "cooldown": null,
       "stored_uses": null,
       "cost_multiplier": null,
@@ -125663,17 +126005,17 @@
         "dex": 0
       },
       "stat_text": {
-        "base_skill_effect_duration": "기본 지속시간 0.70초",
+        "base_skill_effect_duration": "기본 지속시간 0.50초",
         "number_of_chains": "연쇄 +3회",
         "kinetic_fusillade_maximum_floating_projectiles": "공중에 뜬 투사체 최대 12개",
-        "active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value\nquality_display_spell_damage_to_attack_damage_is_gem": "주문 피해에 적용된 증가 및 감소 수치의 150%를 이 스킬로 인한 공격 피해에도 적용",
+        "active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value\nquality_display_spell_damage_to_attack_damage_is_gem": "비전 완력 150%",
         "active_skill_base_area_of_effect_radius": "기본 반경 1.2미터"
       },
       "stats": [
         {
           "id": "base_skill_effect_duration",
           "type": "constant",
-          "value": 700
+          "value": 500
         },
         {
           "id": "number_of_chains",
@@ -125738,7 +126080,7 @@
       ],
       "vaal": null,
       "costs": null,
-      "attack_speed_multiplier": 100,
+      "attack_speed_multiplier": 25,
       "cooldown": null,
       "stored_uses": null,
       "cost_multiplier": null,
@@ -125825,7 +126167,7 @@
       "stat_text": {
         "base_skill_effect_duration": "기본 지속시간 0.70초",
         "kinetic_fusillade_maximum_floating_projectiles": "공중에 뜬 투사체 최대 18개",
-        "active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value\nquality_display_spell_damage_to_attack_damage_is_gem": "주문 피해에 적용된 증가 및 감소 수치의 150%를 이 스킬로 인한 공격 피해에도 적용",
+        "active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value\nquality_display_spell_damage_to_attack_damage_is_gem": "비전 완력 150%",
         "base_number_of_projectiles": "투사체 3개 발사"
       },
       "stats": [
@@ -125989,12 +126331,18 @@
         "dex": 0
       },
       "stat_text": {
+        "holy_hammers_maximum_number_of_hammerslam_cascades": "신성한 망치가 최대 2번 일렬로 나감",
         "holy_hammers_num_additional_hammerslams_if_consuming_power_charge": "권능 충전을 쓰면 신성한 망치를 추가로 2개 떨어뜨림",
         "skill_physical_damage_%_to_convert_to_lightning": "물리 피해의 50%를 번개 피해로 전환",
         "holy_hammers_damage_+%_final_for_initial_hammer_in_cascade": "일렬을 이루는 첫 번째 망치가 주는 피해 100% 증폭",
-        "holy_hammers_maximum_number_of_hammerslam_cascades": "신성한 망치가 최대 2번 일렬로 나감"
+        "active_skill_base_area_of_effect_radius": "기본 반경 1.8미터"
       },
       "stats": [
+        {
+          "id": "holy_hammers_maximum_number_of_hammerslam_cascades",
+          "type": "constant",
+          "value": 2
+        },
         {
           "id": "holy_hammers_num_additional_hammerslams_if_consuming_power_charge",
           "type": "constant",
@@ -126016,14 +126364,9 @@
           "value": 100
         },
         {
-          "id": "holy_hammers_maximum_number_of_hammerslam_cascades",
-          "type": "constant",
-          "value": 2
-        },
-        {
           "id": "active_skill_base_area_of_effect_radius",
-          "type": "additional",
-          "value": null
+          "type": "constant",
+          "value": 18
         },
         {
           "id": "is_area_damage",
@@ -126079,6 +126422,159 @@
       "quest": "오른팔 잘라내기"
     },
     "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "지면을 강타하여 권능 충전을 모두 소모하고, 하늘에서 신성한 망치의 비를 바깥으로 소용돌이를 그리며 떨어뜨립니다. 그 후 소모된 권능 충전의 수에 따라 추가적인 망치가 떨어집니다. 철퇴, 셉터 또는 지팡이가 필요합니다.",
+      "display_name": "나선의 신성한 망치",
+      "id": "holy_hammers_alt_x",
+      "is_manually_casted": true,
+      "is_skill_totem": false,
+      "stat_conversions": {},
+      "types": [
+        "Attack",
+        "Slam",
+        "Melee",
+        "Area",
+        "Lightning",
+        "Totemable",
+        "Multistrikeable"
+      ],
+      "weapon_restrictions": [
+        "Staff",
+        "Warstaff",
+        "One Hand Mace",
+        "Two Hand Mace",
+        "Sceptre"
+      ],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "신성한 망치",
+      "experience_type": "GemProgression28",
+      "id": "Metadata/Items/Gems/SkillGemHolyHammers",
+      "max_level": 20,
+      "release_state": "released"
+    },
+    "cast_time": 1000,
+    "color": "r",
+    "display_name": "나선의 신성한 망치",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [
+        {
+          "stat": "제거된 권능 충전 하나당 피해 {holy_hammers_damage_+%_final_per_power_charge_consumed}% 증폭",
+          "stats": {
+            "holy_hammers_damage_+%_final_per_power_charge_consumed": 250
+          }
+        }
+      ],
+      "stat_requirements": {
+        "int": null,
+        "str": null,
+        "dex": 0
+      },
+      "stat_text": {
+        "skill_physical_damage_%_to_convert_to_lightning": "물리 피해의 50%를 번개 피해로 전환",
+        "holy_hammers_maximum_number_of_hammerslam_cascades": "신성한 망치가 최대 6번 일렬로 나감",
+        "holy_hammers_damage_+%_final_per_power_charge_consumed": "제거된 권능 충전 하나당 피해 15% 증폭",
+        "holy_hammers_num_additional_hammerslams_per_consumed_power_charge": "제거된 권능 충전 하나당 연속 +1",
+        "active_skill_base_area_of_effect_radius": "기본 반경 1.2미터"
+      },
+      "stats": [
+        {
+          "id": "skill_physical_damage_%_to_convert_to_lightning",
+          "type": "constant",
+          "value": 50
+        },
+        {
+          "id": "base_from_skill_shock_art_variation",
+          "type": "constant",
+          "value": 2
+        },
+        {
+          "id": "holy_hammers_maximum_number_of_hammerslam_cascades",
+          "type": "constant",
+          "value": 6
+        },
+        {
+          "id": "holy_hammers_damage_+%_final_per_power_charge_consumed",
+          "type": "constant",
+          "value": 15
+        },
+        {
+          "id": "holy_hammers_num_additional_hammerslams_per_consumed_power_charge",
+          "type": "constant",
+          "value": 1
+        },
+        {
+          "id": "active_skill_base_area_of_effect_radius",
+          "type": "constant",
+          "value": 12
+        },
+        {
+          "id": "is_area_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "visual_hit_effect_elemental_is_holy",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "console_skill_dont_chase",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "skill_can_add_multiple_charges_per_action",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": -15,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "skill_physical_damage_%_to_convert_to_lightning",
+      "active_skill_base_area_of_effect_radius",
+      "holy_hammers_damage_+%_final_per_power_charge_consumed",
+      "holy_hammers_maximum_number_of_hammerslam_cascades",
+      "holy_hammers_num_additional_hammerslams_per_consumed_power_charge"
+    ],
+    "tags": [
+      "strength",
+      "grants_active_skill",
+      "attack",
+      "slam",
+      "melee",
+      "area",
+      "lightning"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": {
+      "act": 3,
+      "classes": [
+        "템플러"
+      ],
+      "quest": "오른팔 잘라내기"
+    },
+    "discriminator": "alt_x",
     "support_gem": null
   },
   {
@@ -126503,7 +126999,7 @@
         "skill_physical_damage_%_to_convert_to_fire": "물리 피해의 50%를 화염 피해로 전환",
         "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius": "기본 폭발 반경 2.6미터",
         "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius": "기본 내파 반경 1.2미터",
-        "base_skill_effect_duration": "기본 지속시간 1.50초",
+        "base_skill_effect_duration": "기본 지속시간 1.20초",
         "off_hand_critical_strike_chance_+_per_10_es_on_shield": "방패의 에너지 보호막 최대치 10당 보조 장비 치명타 확률 +0.1%"
       },
       "stats": [
@@ -126540,7 +127036,7 @@
         {
           "id": "base_skill_effect_duration",
           "type": "constant",
-          "value": 1500
+          "value": 1200
         },
         {
           "id": "attack_maximum_action_distance_+",
@@ -126634,6 +127130,207 @@
       "quest": "오른팔 잘라내기"
     },
     "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "방패에서 대상 지점에 신성한 빛의 광선을 투사하여, 신성한 에너지의 내파를 일으킵니다. 이 에너지는 보주의 형태로 잠시 동안 남아 있으면서 주기적으로 더 큰 폭발을 일으킵니다. 공격 속도의 증가 및 감소가 폭발 주기에 영향을 미칩니다.",
+      "display_name": "광휘의 신성한 폭발",
+      "id": "discus_slam_alt_x",
+      "is_manually_casted": true,
+      "is_skill_totem": false,
+      "stat_conversions": {},
+      "types": [
+        "Area",
+        "Attack",
+        "Physical",
+        "Duration",
+        "Fire",
+        "Orb"
+      ],
+      "weapon_restrictions": [
+        "Shield"
+      ],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "신성한 폭발",
+      "experience_type": "GemProgression28",
+      "id": "Metadata/Items/Gems/SkillGemDivineBlast",
+      "max_level": 20,
+      "release_state": "released"
+    },
+    "cast_time": 1000,
+    "color": "r",
+    "display_name": "광휘의 신성한 폭발",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [
+        {
+          "stat": "반경 {active_skill_base_radius_+/locations_to_metres}미터",
+          "stats": {
+            "active_skill_base_radius_+": 150
+          }
+        }
+      ],
+      "stat_requirements": {
+        "int": null,
+        "str": null,
+        "dex": 0
+      },
+      "stat_text": {
+        "skill_physical_damage_%_to_convert_to_fire": "물리 피해의 50%를 화염 피해로 전환",
+        "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius": "기본 폭발 반경 2.2미터",
+        "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius": "기본 내파 반경 1.2미터",
+        "off_hand_critical_strike_chance_+_per_10_es_on_shield": "방패의 에너지 보호막 최대치 10당 보조 장비 치명타 확률 +0.1%",
+        "discus_slam_maximum_orb_count_allowed": "보주 최대 3개",
+        "base_skill_effect_duration": "기본 지속시간 5.00초",
+        "discus_slam_orb_activate_base_rate_ms": "보주의 기본 폭발 주기 1초당 1번"
+      },
+      "stats": [
+        {
+          "id": "off_hand_local_minimum_added_physical_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "off_hand_local_maximum_added_physical_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "skill_physical_damage_%_to_convert_to_fire",
+          "type": "constant",
+          "value": 50
+        },
+        {
+          "id": "active_skill_base_area_of_effect_radius",
+          "type": "constant",
+          "value": 22
+        },
+        {
+          "id": "active_skill_base_secondary_area_of_effect_radius",
+          "type": "constant",
+          "value": 12
+        },
+        {
+          "id": "attack_maximum_action_distance_+",
+          "type": "constant",
+          "value": 70
+        },
+        {
+          "id": "off_hand_critical_strike_chance_+_per_10_es_on_shield",
+          "type": "constant",
+          "value": 10
+        },
+        {
+          "id": "active_skill_area_of_effect_description_mode",
+          "type": "constant",
+          "value": 1
+        },
+        {
+          "id": "active_skill_secondary_area_of_effect_description_mode",
+          "type": "constant",
+          "value": 11
+        },
+        {
+          "id": "discus_slam_maximum_orb_count_allowed",
+          "type": "constant",
+          "value": 3
+        },
+        {
+          "id": "base_skill_effect_duration",
+          "type": "constant",
+          "value": 5000
+        },
+        {
+          "id": "discus_slam_orb_activate_base_rate_ms",
+          "type": "constant",
+          "value": 1000
+        },
+        {
+          "id": "off_hand_minimum_added_physical_damage_per_15_shield_armour",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "off_hand_maximum_added_physical_damage_per_15_shield_armour",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "is_area_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "visual_hit_effect_elemental_is_holy",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "attack_is_not_melee_override",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "console_skill_dont_chase",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "skill_can_add_multiple_charges_per_action",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "off_hand_critical_strike_chance_+_per_10_es_on_shield",
+      "off_hand_local_minimum_added_physical_damage\noff_hand_local_maximum_added_physical_damage",
+      "off_hand_minimum_added_physical_damage_per_15_shield_armour\noff_hand_maximum_added_physical_damage_per_15_shield_armour",
+      "base_skill_effect_duration",
+      "active_skill_base_radius_+",
+      "skill_physical_damage_%_to_convert_to_fire",
+      "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius",
+      "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius",
+      "discus_slam_maximum_orb_count_allowed",
+      "discus_slam_orb_activate_base_rate_ms"
+    ],
+    "tags": [
+      "strength",
+      "grants_active_skill",
+      "area",
+      "attack",
+      "physical",
+      "duration",
+      "fire",
+      "orb"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": {
+      "act": 3,
+      "classes": [
+        "템플러"
+      ],
+      "quest": "오른팔 잘라내기"
+    },
+    "discriminator": "alt_x",
     "support_gem": null
   },
   {
@@ -127707,7 +128404,7 @@
         "dex": 0
       },
       "stat_text": {
-        "support_damaging_links_base_duration_ms\nsupport_damaging_links_base_duration_is_gem": "피해와 냉각이 기본 지속시간 2초 동안 더 유지됨",
+        "support_damaging_links_base_duration_ms\nsupport_damaging_links_base_duration_is_gem": "피해와 냉각이 기본 지속시간 3초 동안 더 유지됨",
         "link_skills_deal_cold_dot_to_enemies_in_beam_aoe": "보조 대상 스킬이 플레이어와 연결된 대상 사이에 있는 적에게 피해를 주고 냉각 유발",
         "spell_damage_modifiers_apply_to_skill_dot": "주문 피해에 부여된 속성이 보조 대상 스킬의 지속 피해 효과에 적용"
       },
@@ -127720,7 +128417,7 @@
         {
           "id": "support_damaging_links_base_duration_ms",
           "type": "constant",
-          "value": 2000
+          "value": 3000
         },
         {
           "id": "link_skills_deal_cold_dot_to_enemies_in_beam_aoe",
@@ -129091,7 +129788,7 @@
       },
       "stat_text": {
         "trigger_on_ward_break_%_chance": "수호 파괴 시 보조 대상 주문 발동",
-        "cooldown_recovery_rate_+%_per_100_ward": "수호 100당 보조 대상 주문의 재사용 대기시간 회복 속도 5% 증가"
+        "cooldown_recovery_rate_+%_per_100_ward": "수호 100당 보조 대상 주문의 재사용 대기시간 회복 속도 5%씩, 최대 400%까지 증가"
       },
       "stats": [
         {
@@ -130821,7 +131518,7 @@
           "value": 15
         },
         {
-          "id": "support_companionship_minion_maximum_life_+%_final_if_at_most_one_minion",
+          "id": "support_companionship_minion_damage_taken_+%_final_if_at_most_one_minion",
           "type": "additional",
           "value": null
         }
@@ -130841,7 +131538,7 @@
     "tooltip_order": [
       "damage_removed_from_minions_before_life_or_es_%_if_only_one_minion",
       "minion_maximum_life_+%",
-      "support_companionship_minion_maximum_life_+%_final_if_at_most_one_minion"
+      "support_companionship_minion_damage_taken_+%_final_if_at_most_one_minion"
     ],
     "tags": [
       "low_max_level",
@@ -132599,7 +133296,7 @@
   {
     "active_skill": null,
     "base_item": {
-      "display_name": "소환수 맹약 보조",
+      "display_name": "교감 보조",
       "experience_type": "GemProgressionExceptional",
       "id": "Metadata/Items/Gems/SupportGemMinionPact",
       "max_level": 3,
@@ -132607,7 +133304,7 @@
     },
     "cast_time": null,
     "color": "b",
-    "display_name": "소환수 맹약 보조",
+    "display_name": "교감 보조",
     "is_support": true,
     "stat_translation_file": "stat_translations/support_gem",
     "static": {
@@ -132629,8 +133326,13 @@
       "stat_text": null,
       "stats": [
         {
-          "id": "support_minion_pact_sacrifice_nearby_damageable_minion_to_gain_permillage_of_max_life_as_physical_damage",
-          "type": "additional",
+          "id": "spell_minimum_added_physical_damage_per_active_permanent_minion",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "spell_maximum_added_physical_damage_per_active_permanent_minion",
+          "type": "float",
           "value": null
         }
       ],
@@ -132639,7 +133341,7 @@
       "attack_speed_multiplier": null,
       "cooldown": null,
       "stored_uses": null,
-      "cost_multiplier": 100,
+      "cost_multiplier": 150,
       "cooldown_bypass_type": null,
       "required_level": null,
       "experience": null,
@@ -132648,7 +133350,7 @@
     },
     "tooltip_order": [
       "spell_damage_+%",
-      "support_minion_pact_sacrifice_nearby_damageable_minion_to_gain_permillage_of_max_life_as_physical_damage"
+      "spell_minimum_added_physical_damage_per_active_permanent_minion\nspell_maximum_added_physical_damage_per_active_permanent_minion"
     ],
     "tags": [
       "low_max_level",
@@ -132671,17 +133373,8 @@
       "letter": "^",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "적을 명중하고 점유가 없는 주문 스킬에 적용됩니다. 낙인 스킬, 보주 스킬, 집중 유지 스킬, 비전 스킬, 바알 스킬 또는 덫이나 지뢰로 사용하는 스킬에는 적용되지 않습니다. 소환수가 사용하는 스킬에도 적용되지 않습니다.",
-      "excluded_types": [
-        "HasReservation",
-        "Vaal",
-        "Channel",
-        "Trapped",
-        "RemoteMined",
-        "Orb",
-        "Brand",
-        "Arcane"
-      ],
+      "support_text": "적에게 명중하는 주문 스킬에 적용됩니다. 소환수가 사용하는 스킬에는 적용되지 않습니다.",
+      "excluded_types": null,
       "added_types": null,
       "added_minion_types": null
     }
@@ -133051,6 +133744,192 @@
       "support_text": "비-축복 주문에 적용됩니다.",
       "excluded_types": [
         "Blessing"
+      ],
+      "added_types": null,
+      "added_minion_types": null
+    }
+  },
+  {
+    "active_skill": null,
+    "base_item": {
+      "display_name": "세차게 흐르는 전류 보조",
+      "experience_type": "GemProgressionExceptional",
+      "id": "Metadata/Items/Gems/SupportGemCrustaceousGrasp",
+      "max_level": 3,
+      "release_state": "released"
+    },
+    "cast_time": null,
+    "color": "b",
+    "display_name": "세차게 흐르는 전류 보조",
+    "is_support": true,
+    "stat_translation_file": "stat_translations/support_gem",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [
+        {
+          "stat": "보조 대상 스킬로 유발하는 상태 이상 지속시간 {base_all_ailment_duration_+%}% 증가",
+          "stats": {
+            "base_all_ailment_duration_+%": 500
+          }
+        }
+      ],
+      "stat_requirements": {
+        "int": null,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "inflict_equivalent_shock_on_inflicting_chill_with_hits": "적이 플레이어의 명중으로 냉각될 때 해당 적을 감전시켜, 냉각 효과로 받는 피해를 증가시킴",
+        "inflict_equivalent_chill_on_inflicting_shock_with_hits": "적이 플레이어의 명중으로 감전될 때 해당 적을 냉각시켜, 감전 효과로 인한 동작 속도를 감소시킴"
+      },
+      "stats": [
+        {
+          "id": "chill_effect_+%",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "shock_effect_+%",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "inflict_equivalent_shock_on_inflicting_chill_with_hits",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "inflict_equivalent_chill_on_inflicting_shock_with_hits",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": 130,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "chill_effect_+%",
+      "shock_effect_+%",
+      "base_all_ailment_duration_+%",
+      "inflict_equivalent_chill_on_inflicting_shock_with_hits",
+      "inflict_equivalent_shock_on_inflicting_chill_with_hits"
+    ],
+    "tags": [
+      "low_max_level",
+      "exceptional",
+      "intelligence",
+      "support"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": {
+      "allowed_types": [
+        "Damage"
+      ],
+      "letter": "⊙",
+      "supports_gems_only": false,
+      "support_name": "",
+      "support_text": "적에게 명중하는 스킬에 적용됩니다.",
+      "excluded_types": null,
+      "added_types": null,
+      "added_minion_types": null
+    }
+  },
+  {
+    "active_skill": null,
+    "base_item": {
+      "display_name": "수정 낙하 보조",
+      "experience_type": "GemProgressionExceptional",
+      "id": "Metadata/Items/Gems/SupportGemCrystalfall",
+      "max_level": 3,
+      "release_state": "released"
+    },
+    "cast_time": null,
+    "color": "r",
+    "display_name": "수정 낙하 보조",
+    "is_support": true,
+    "stat_translation_file": "stat_translations/support_gem",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [
+        {
+          "stat": "보조 대상 스킬로 주는 근접 피해 {melee_damage_+%}% 증가",
+          "stats": {
+            "melee_damage_+%": 500
+          }
+        }
+      ],
+      "stat_requirements": {
+        "int": 0,
+        "str": null,
+        "dex": 0
+      },
+      "stat_text": {
+        "support_crystalfall_chance_to_trigger_crystalfall_on_hit_%": "보조 대상 스킬 명중 시 수정 낙하 발동"
+      },
+      "stats": [
+        {
+          "id": "support_crystalfall_chance_to_trigger_crystalfall_on_hit_%",
+          "type": "constant",
+          "value": 100
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": 150,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "melee_damage_+%",
+      "support_crystalfall_chance_to_trigger_crystalfall_on_hit_%"
+    ],
+    "tags": [
+      "low_max_level",
+      "exceptional",
+      "attack",
+      "strength",
+      "support",
+      "grants_active_skill",
+      "slam",
+      "area",
+      "melee"
+    ],
+    "secondary_granted_effect": "TriggeredSupportCrystalfall",
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": {
+      "allowed_types": [
+        "Slam"
+      ],
+      "letter": "~",
+      "supports_gems_only": false,
+      "support_name": "",
+      "support_text": "강타 스킬을 보조합니다. 발동형 스킬 또는 플레이어가 아닌 개체가 사용하는 스킬에는 적용되지 않습니다.",
+      "excluded_types": [
+        "Triggered",
+        "OtherThingUsesSkill",
+        "DisallowTriggerSupports",
+        "SummonsTotem",
+        "CreatesMinion"
       ],
       "added_types": null,
       "added_minion_types": null
@@ -136143,6 +137022,525 @@
       "grants_active_skill"
     ],
     "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "맹약을 시전합니다. 투사체를 발사하거나 대상 지점 주위의 범위에 효과를 적용하거나 연쇄되는 광선을 발사하는 비-정신 집중 주문이 [EmpoweredSpell|강화]되어, 주는 피해가 증폭되고 범위가 커집니다. 하지만 이 스킬을 사용하면 [PactAffliction|고난]을 얻게 됩니다.",
+      "display_name": "베이다트의 맹약",
+      "id": "pact_of_beidat",
+      "is_manually_casted": true,
+      "is_skill_totem": false,
+      "stat_conversions": {},
+      "types": [
+        "Spell",
+        "Pact",
+        "Buff",
+        "Cooldown",
+        "InstantNoRepeatWhenHeld",
+        "InstantShiftAttackForLeftMouse",
+        "Triggerable"
+      ],
+      "weapon_restrictions": [],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "베이다트의 맹약",
+      "experience_type": "GemProgression24",
+      "id": "Metadata/Items/Gems/SkillGemPactOfBeidat",
+      "max_level": 20,
+      "release_state": "released"
+    },
+    "cast_time": 800,
+    "color": "w",
+    "display_name": "베이다트의 맹약",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [
+        {
+          "stat": "다음에 시전하는 주문 {skill_empowers_next_x_spells_cast}개 [EmpoweredSpell|강화]",
+          "stats": {
+            "skill_empowers_next_x_spells_cast": 100
+          }
+        }
+      ],
+      "stat_requirements": {
+        "int": 0,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "skill_empowers_next_x_spells_cast": "다음에 시전하는 주문 6개 [EmpoweredSpell|강화]"
+      },
+      "stats": [
+        {
+          "id": "skill_empowers_next_x_spells_cast",
+          "type": "constant",
+          "value": 6
+        },
+        {
+          "id": "pact_empower_limitation_specifier_for_stat_description",
+          "type": "constant",
+          "value": 0
+        },
+        {
+          "id": "pact_skill_additional_beam_only_chains",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "pact_skill_grant_x_additional_projectiles_fired_in_nova",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "pact_skill_grant_x_cascades_to_do_in_spiral",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "pact_skill_damage_+%_final_with_hits_and_ailments_to_grant",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "base_deal_no_attack_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "base_deal_no_spell_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "base_deal_no_secondary_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "cannot_cancel_skill_before_contact_point",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": 4000,
+      "stored_uses": 1,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "skill_empowers_next_x_spells_cast",
+      "skill_empowers_next_x_spells_cast\npact_empower_limitation_specifier_for_stat_description",
+      "pact_skill_damage_+%_final_with_hits_and_ailments_to_grant",
+      "pact_skill_grant_x_cascades_to_do_in_spiral",
+      "pact_skill_additional_beam_only_chains",
+      "pact_skill_grant_x_additional_projectiles_fired_in_nova"
+    ],
+    "tags": [
+      "exceptional",
+      "projectile",
+      "chaining",
+      "area",
+      "grants_active_skill",
+      "spell",
+      "pact"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "맹약을 시전합니다. 지속 피해 주문이 [EmpoweredSpell|강화]되지만, [PactAffliction|고난]을 얻게 됩니다. 이 스킬은 또한 일정 시간 동안 [HungerOfGhorr|고르의 굶주림] 버프를 부여하여, 살점 난도가 주기적으로 발동되게 합니다.",
+      "display_name": "고르의 맹약",
+      "id": "pact_of_ghorr",
+      "is_manually_casted": true,
+      "is_skill_totem": false,
+      "stat_conversions": {},
+      "types": [
+        "Spell",
+        "Pact",
+        "Buff",
+        "Cooldown",
+        "InstantNoRepeatWhenHeld",
+        "InstantShiftAttackForLeftMouse",
+        "Triggerable"
+      ],
+      "weapon_restrictions": [],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "고르의 맹약",
+      "experience_type": "GemProgression24",
+      "id": "Metadata/Items/Gems/SkillGemPactOfGhorr",
+      "max_level": 20,
+      "release_state": "released"
+    },
+    "cast_time": 800,
+    "color": "w",
+    "display_name": "고르의 맹약",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": 0,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "skill_empowers_next_x_spells_cast\npact_empower_limitation_specifier_for_stat_description": "플레이어가 시전하는 다음 비-상태 이상 지속 피해 주문 3개 [EmpoweredSpell|강화]",
+        "pact_skill_grant_damage_over_time_+%_final_to_spells": "강화된 스킬로 주는 지속 피해 40% 증폭",
+        "skill_grants_bloodrite_for_base_X_ms_on_use": "[HungerOfGhorr|고르의 굶주림] 기본 지속시간 6초",
+        "bloodrite_base_trigger_frequency_ms": "[HungerOfGhorr|고르의 굶주림]이 2초마다 살점 난도 발동",
+        "bloodrite_trigger_frequency_+%_per_stage": "[HungerOfGhorr|고르의 굶주림] 단계 하나당 살점 난도 발동 속도 150% 가속"
+      },
+      "stats": [
+        {
+          "id": "skill_empowers_next_x_spells_cast",
+          "type": "constant",
+          "value": 3
+        },
+        {
+          "id": "pact_empower_limitation_specifier_for_stat_description",
+          "type": "constant",
+          "value": 1
+        },
+        {
+          "id": "pact_skill_grant_damage_over_time_+%_final_to_spells",
+          "type": "constant",
+          "value": 40
+        },
+        {
+          "id": "skill_grants_bloodrite_for_base_X_ms_on_use",
+          "type": "constant",
+          "value": 6000
+        },
+        {
+          "id": "bloodrite_base_trigger_frequency_ms",
+          "type": "constant",
+          "value": 2000
+        },
+        {
+          "id": "bloodrite_trigger_frequency_+%_per_stage",
+          "type": "constant",
+          "value": 150
+        },
+        {
+          "id": "base_deal_no_attack_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "base_deal_no_spell_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "base_deal_no_secondary_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "cannot_cancel_skill_before_contact_point",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": 4000,
+      "stored_uses": 1,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "skill_empowers_next_x_spells_cast\npact_empower_limitation_specifier_for_stat_description",
+      "pact_skill_grant_damage_over_time_+%_final_to_spells",
+      "skill_grants_bloodrite_for_base_X_ms_on_use",
+      "bloodrite_base_trigger_frequency_ms",
+      "bloodrite_trigger_frequency_+%_per_stage"
+    ],
+    "tags": [
+      "exceptional",
+      "grants_active_skill",
+      "spell",
+      "pact",
+      "area",
+      "duration",
+      "projectile",
+      "physical",
+      "trigger"
+    ],
+    "secondary_granted_effect": "TriggeredBloodrend",
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "맹약을 시전합니다. 피해를 주는 바알 주문이 [EmpoweredSpell|강화]되지만, [PactAffliction|고난]을 얻게 됩니다. 바알 주문을 강화하면 주는 피해가 증폭되고, 영혼 획득 방지 시간이 감폭되고, 사용 시 소모한 영혼을 돌려받습니다.",
+      "display_name": "크타쉬의 맹약",
+      "id": "pact_of_ktash",
+      "is_manually_casted": true,
+      "is_skill_totem": false,
+      "stat_conversions": {},
+      "types": [
+        "Spell",
+        "Pact",
+        "Buff",
+        "Cooldown",
+        "InstantNoRepeatWhenHeld",
+        "InstantShiftAttackForLeftMouse",
+        "Triggerable"
+      ],
+      "weapon_restrictions": [],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "크타쉬의 맹약",
+      "experience_type": "GemProgression24",
+      "id": "Metadata/Items/Gems/SkillGemPactOfKtash",
+      "max_level": 20,
+      "release_state": "released"
+    },
+    "cast_time": 800,
+    "color": "w",
+    "display_name": "크타쉬의 맹약",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [
+        {
+          "stat": "재사용 대기시간 회복 속도 {base_cooldown_speed_+%}% 증가",
+          "stats": {
+            "base_cooldown_speed_+%": 500
+          }
+        }
+      ],
+      "stat_requirements": {
+        "int": 0,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "skill_empowers_next_x_spells_cast\npact_empower_limitation_specifier_for_stat_description": "다음에 시전하는 피해를 주는 바알 주문 [EmpoweredSpell|강화]",
+        "active_skill_osm_vaal_skill_soul_refund_chance_%_to_grant": "강화된 스킬 사용 시 소모한 영혼을 돌려받음",
+        "active_skill_osm_vaal_skill_soul_gain_prevention_+%_final_to_grant": "강화된 스킬의 영혼 획득 방지 지속시간 50% 감폭"
+      },
+      "stats": [
+        {
+          "id": "skill_empowers_next_x_spells_cast",
+          "type": "constant",
+          "value": 1
+        },
+        {
+          "id": "pact_empower_limitation_specifier_for_stat_description",
+          "type": "constant",
+          "value": 2
+        },
+        {
+          "id": "active_skill_osm_vaal_skill_soul_refund_chance_%_to_grant",
+          "type": "constant",
+          "value": 100
+        },
+        {
+          "id": "active_skill_osm_vaal_skill_soul_gain_prevention_+%_final_to_grant",
+          "type": "constant",
+          "value": -50
+        },
+        {
+          "id": "pact_skill_grant_damage_+%_final_to_exerted_skills",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "base_deal_no_attack_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "base_deal_no_spell_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "base_deal_no_secondary_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "cannot_cancel_skill_before_contact_point",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": 6000,
+      "stored_uses": 1,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "base_cooldown_speed_+%",
+      "skill_empowers_next_x_spells_cast\npact_empower_limitation_specifier_for_stat_description",
+      "pact_skill_grant_damage_+%_final_to_exerted_skills",
+      "active_skill_osm_vaal_skill_soul_gain_prevention_+%_final_to_grant",
+      "active_skill_osm_vaal_skill_soul_refund_chance_%_to_grant"
+    ],
+    "tags": [
+      "exceptional",
+      "grants_active_skill",
+      "spell",
+      "pact"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "맹약을 시전합니다. 직접 시전하는 다음 집중 유지 주문이 [EmpoweredSpell|강화]되지만, [PactAffliction|고난]을 얻게 됩니다. 강화된 주문은 주는 피해가 증폭되고 집중을 유지하는 동안 주기적으로 번갯불을 발동합니다.",
+      "display_name": "리키아의 맹약",
+      "id": "pact_of_lycia",
+      "is_manually_casted": true,
+      "is_skill_totem": false,
+      "stat_conversions": {},
+      "types": [
+        "Spell",
+        "Pact",
+        "Buff",
+        "Cooldown",
+        "InstantNoRepeatWhenHeld",
+        "InstantShiftAttackForLeftMouse",
+        "Triggerable"
+      ],
+      "weapon_restrictions": [],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "리키아의 맹약",
+      "experience_type": "GemProgression24",
+      "id": "Metadata/Items/Gems/SkillGemPactOfLycia",
+      "max_level": 20,
+      "release_state": "released"
+    },
+    "cast_time": 800,
+    "color": "w",
+    "display_name": "리키아의 맹약",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": 0,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "skill_empowers_next_x_spells_cast\npact_empower_limitation_specifier_for_stat_description": "다음에 시전하는 집중 유지 주문 3개 [EmpoweredSpell|강화]",
+        "pact_skill_grant_damage_+%_final_to_exerted_skills": "강화된 스킬이 주는 피해 40% 증폭"
+      },
+      "stats": [
+        {
+          "id": "skill_empowers_next_x_spells_cast",
+          "type": "constant",
+          "value": 3
+        },
+        {
+          "id": "pact_empower_limitation_specifier_for_stat_description",
+          "type": "constant",
+          "value": 3
+        },
+        {
+          "id": "pact_skill_grant_damage_+%_final_to_exerted_skills",
+          "type": "constant",
+          "value": 40
+        },
+        {
+          "id": "base_deal_no_attack_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "base_deal_no_spell_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "base_deal_no_secondary_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "cannot_cancel_skill_before_contact_point",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": 4000,
+      "stored_uses": 1,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "skill_empowers_next_x_spells_cast\npact_empower_limitation_specifier_for_stat_description",
+      "pact_skill_grant_damage_+%_final_to_exerted_skills"
+    ],
+    "tags": [
+      "exceptional",
+      "channelling",
+      "grants_active_skill",
+      "spell",
+      "pact",
+      "lightning",
+      "area",
+      "trigger"
+    ],
+    "secondary_granted_effect": "TriggeredHeavensScourge",
     "quest_reward": null,
     "discriminator": null,
     "support_gem": null

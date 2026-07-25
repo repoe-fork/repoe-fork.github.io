@@ -9847,6 +9847,62 @@
         "index_handlers": [
           []
         ],
+        "string": "{0}% increased Effect of Shock inflicted with Supported Skills",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "{0}% reduced Effect of Shock inflicted with Supported Skills",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "shock_effect_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
         "string": "Enemies Chilled by Supported Skills take {0}% increased Cold Damage over Time",
         "reminder_text": "(Chill reduces Enemy Action Speed by up to 30%, depending on the amount of Cold Damage in the hit, for 2 seconds)",
         "is_markup": null
@@ -11482,33 +11538,8 @@
           [],
           []
         ],
-        "string": "Increases and Reductions to Spell Damage also apply to Attack Damage from this Skill at {0}% of their value",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 100,
-            "max": 100,
-            "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          []
-        ],
-        "string": "Increases and Reductions to Spell Damage also apply to Attack Damage from this Skill",
-        "reminder_text": null,
+        "string": "{0}% Arcane Might",
+        "reminder_text": "(Arcane Might causes Increases and Reductions to Spell Damage to also apply to Attack Damage at that percentage of their value)",
         "is_markup": null
       },
       {
@@ -11532,8 +11563,8 @@
           [],
           []
         ],
-        "string": "Increases and Reductions to Spell Damage also apply to Attack Damage from this Skill at {0}% of their value",
-        "reminder_text": null,
+        "string": "{0}% Arcane Might",
+        "reminder_text": "(Arcane Might causes Increases and Reductions to Spell Damage to also apply to Attack Damage at that percentage of their value)",
         "is_markup": null
       }
     ],
@@ -16552,8 +16583,8 @@
       {
         "condition": [
           {
-            "min": null,
-            "max": null,
+            "min": 100,
+            "max": 100,
             "negated": null
           }
         ],
@@ -16561,9 +16592,31 @@
           "ignore"
         ],
         "index_handlers": [
-          []
+          [
+            "locations_to_metres"
+          ]
         ],
-        "string": "+0.1 metres to radius per Nearby Enemy, up to a maximum of +1 metre",
+        "string": "+1 metre to radius per Nearby Enemy, up to a maximum of +1 metre",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          [
+            "locations_to_metres"
+          ]
+        ],
+        "string": "{0} metres to radius per Nearby Enemy, up to a maximum of +1 metre",
         "reminder_text": null,
         "is_markup": null
       }
@@ -17007,7 +17060,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Supported Spells have {0}% increased Cooldown Recovery Rate per 100 Ward",
+        "string": "Supported Spells have {0}% increased Cooldown Recovery Rate per 100 Ward, up to 400%",
         "reminder_text": null,
         "is_markup": null
       },
@@ -17025,7 +17078,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Supported Spells have {0}% reduced Cooldown Recovery Rate per 100 Ward",
+        "string": "Supported Spells have {0}% reduced Cooldown Recovery Rate per 100 Ward, up to 400%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -21677,6 +21730,78 @@
       {
         "condition": [
           {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Chill enemies when they are Shocked by your Hits, reducing Action Speed by Shock Effect",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "inflict_equivalent_chill_on_inflicting_shock_with_hits"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Shock enemies when they are Chilled by your Hits, increasing Damage taken by Chill Effect",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "inflict_equivalent_shock_on_inflicting_chill_with_hits"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
             "min": 1,
             "max": 99,
             "negated": null
@@ -26282,7 +26407,7 @@
             "locations_to_metres"
           ]
         ],
-        "string": "Projectiles from Supported Skills have {0} metre maximum range",
+        "string": "Projectiles from Supported Skills have {0} metre maximum [DirectFlight|Direct Flight]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -26302,7 +26427,7 @@
             "locations_to_metres"
           ]
         ],
-        "string": "Projectiles from Supported Skills have {0} metres maximum range",
+        "string": "Projectiles from Supported Skills have {0} metres maximum [DirectFlight|Direct Flight]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -28201,6 +28326,50 @@
       {
         "condition": [
           {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "Supported Spells deal {0} to {1} added Physical Damage for each permanent Minion",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "spell_minimum_added_physical_damage_per_active_permanent_minion",
+      "spell_maximum_added_physical_damage_per_active_permanent_minion"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
             "min": 1000,
             "max": 1000,
             "negated": null
@@ -28477,6 +28646,60 @@
     ],
     "ids": [
       "summoned_sentinels_have_random_templar_aura"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Supported Skills have a {0}% chance to Trigger Abyssal Maw when creating a Corpse",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Supported Skills will Trigger Abyssal Maw when creating a Corpse",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "support_abyssal_well_chance_to_create_well_on_corpse_creation_%"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -29934,7 +30157,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Minions from Supported Skills have {0}% more maximum Life if they are your only Minion",
+        "string": "Minions from Supported Skills take {0}% more Damage if they are your only Minion",
         "reminder_text": null,
         "is_markup": null
       },
@@ -29954,13 +30177,13 @@
             "negate"
           ]
         ],
-        "string": "Minions from Supported Skills have {0}% less maximum Life if they are your only Minion",
+        "string": "Minions from Supported Skills take {0}% less Damage if they are your only Minion",
         "reminder_text": null,
         "is_markup": null
       }
     ],
     "ids": [
-      "support_companionship_minion_maximum_life_+%_final_if_at_most_one_minion"
+      "support_companionship_minion_damage_taken_+%_final_if_at_most_one_minion"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -30349,6 +30572,60 @@
     ],
     "ids": [
       "support_corrupting_cry_warcry_applies_X_stacks_of_corrupted_blood"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Supported Skills have {0}% chance to Trigger Falling Crystal on Hit",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Supported Skills will Trigger Falling Crystal on Hit",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "support_crystalfall_chance_to_trigger_crystalfall_on_hit_%"
     ],
     "trade_stats": null,
     "hidden": null,

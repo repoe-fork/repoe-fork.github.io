@@ -8964,7 +8964,7 @@
           [],
           []
         ],
-        "string": "秘能波動增加 {1}% 魔力回復率",
+        "string": "秘能波動增加 {1}% 魔力恢復率",
         "reminder_text": null,
         "is_markup": null
       },
@@ -8989,7 +8989,7 @@
           [],
           []
         ],
-        "string": "秘能波動增加 {0}% 施放速度\n秘能波動增加 {1}% 魔力回復率",
+        "string": "秘能波動增加 {0}% 施放速度\n秘能波動增加 {1}% 魔力恢復率",
         "reminder_text": null,
         "is_markup": null
       }
@@ -9826,6 +9826,62 @@
           ]
         ],
         "string": "被輔助的技能減少 {0}% 敵人冰緩時間",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "shock_effect_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "增加 {0}% 以被輔助的技能施加的感電效果",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "減少 {0}% 以被輔助的技能施加的感電效果",
         "reminder_text": null,
         "is_markup": null
       }
@@ -11497,33 +11553,8 @@
           [],
           []
         ],
-        "string": "增加和減少法術傷害同時以 {0}% 它們的值，套用至來自此技能的攻擊傷害",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 100,
-            "max": 100,
-            "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          []
-        ],
-        "string": "增加和減少法術傷害同時套用至來自此技能的攻擊傷害",
-        "reminder_text": null,
+        "string": "{0}%秘能奇技",
+        "reminder_text": "（秘能奇技會使對法術傷害的增減同時以一定比例套用其數值至攻擊傷害）",
         "is_markup": null
       },
       {
@@ -11547,8 +11578,8 @@
           [],
           []
         ],
-        "string": "增加和減少法術傷害同時以 {0}% 它們的值，套用至來自此技能的攻擊傷害",
-        "reminder_text": null,
+        "string": "{0}%秘能奇技",
+        "reminder_text": "（秘能奇技會使對法術傷害的增減同時以一定比例套用其數值至攻擊傷害）",
         "is_markup": null
       }
     ]
@@ -13743,7 +13774,7 @@
         "index_handlers": [
           []
         ],
-        "string": "被輔助的技能增加 {0}% 冷卻時間恢復速度",
+        "string": "被輔助的技能增加 {0}% 冷卻時間恢復率",
         "reminder_text": null,
         "is_markup": null
       },
@@ -13763,7 +13794,7 @@
             "negate"
           ]
         ],
-        "string": "被輔助的技能減少 {0}% 冷卻時間恢復速度",
+        "string": "被輔助的技能減少 {0}% 冷卻時間恢復率",
         "reminder_text": null,
         "is_markup": null
       },
@@ -13781,7 +13812,7 @@
         "index_handlers": [
           []
         ],
-        "string": "被輔助的技能增加{0}%冷卻回復速度",
+        "string": "被輔助的技能增加{0}%冷卻時間恢復率",
         "reminder_text": null,
         "is_markup": null
       },
@@ -13801,7 +13832,7 @@
             "negate"
           ]
         ],
-        "string": "被輔助的技能降低{0}%冷卻回復速度",
+        "string": "被輔助的技能降低{0}%冷卻時間恢復率",
         "reminder_text": null,
         "is_markup": null
       }
@@ -15077,7 +15108,7 @@
         "index_handlers": [
           []
         ],
-        "string": "被輔助的法術增加 {0}% 冷卻時間恢復速度",
+        "string": "被輔助的法術增加 {0}% 冷卻時間恢復率",
         "reminder_text": null,
         "is_markup": null
       },
@@ -15097,7 +15128,7 @@
             "negate"
           ]
         ],
-        "string": "被輔助的法術減少 {0}% 冷卻時間恢復速度",
+        "string": "被輔助的法術減少 {0}% 冷卻時間恢復率",
         "reminder_text": null,
         "is_markup": null
       }
@@ -16566,8 +16597,8 @@
       {
         "condition": [
           {
-            "min": null,
-            "max": null,
+            "min": 100,
+            "max": 100,
             "negated": null
           }
         ],
@@ -16575,9 +16606,31 @@
           "ignore"
         ],
         "index_handlers": [
-          []
+          [
+            "locations_to_metres"
+          ]
         ],
-        "string": "附近每個敵人 +0.1 米範圍，最多 +1 米",
+        "string": "周遭每有一名敵人會+1公尺半徑範圍， 至多+1公尺",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          [
+            "locations_to_metres"
+          ]
+        ],
+        "string": "周遭每有一名敵人會{0}公尺半徑範圍， 至多+1公尺",
         "reminder_text": null,
         "is_markup": null
       }
@@ -16967,7 +17020,7 @@
         "index_handlers": [
           []
         ],
-        "string": "若使用時存在範圍內沒有敵人，增加{0}%冷卻回復率",
+        "string": "若使用時存在範圍內沒有敵人，增加{0}%冷卻時間恢復率",
         "reminder_text": null,
         "is_markup": null
       },
@@ -16985,7 +17038,7 @@
         "index_handlers": [
           []
         ],
-        "string": "若使用時存在範圍內沒有敵人，減少{0}%冷卻回復率",
+        "string": "若使用時存在範圍內沒有敵人，減少{0}%冷卻時間恢復率",
         "reminder_text": null,
         "is_markup": null
       }
@@ -17021,7 +17074,7 @@
         "index_handlers": [
           []
         ],
-        "string": "每100保護會使被輔助的法術增加{0}%冷卻回復率",
+        "string": "被輔助的法術每 100 保護增加 {0}% 冷卻時間恢復率，最多400%",
         "reminder_text": null,
         "is_markup": null
       },
@@ -17039,7 +17092,7 @@
         "index_handlers": [
           []
         ],
-        "string": "每100保護會使被輔助的法術減少{0}%冷卻回復率",
+        "string": "被輔助的法術每 100 保護減少 {0}% 冷卻時間恢復率，最多400%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -17075,7 +17128,7 @@
         "index_handlers": [
           []
         ],
-        "string": "若有傳奇敵人在你視線內使用，增加 {0}% 冷卻時間恢復速度",
+        "string": "若有傳奇敵人在你視線內使用，增加 {0}% 冷卻時間恢復率",
         "reminder_text": null,
         "is_markup": null
       },
@@ -17093,7 +17146,7 @@
         "index_handlers": [
           []
         ],
-        "string": "若有傳奇敵人在你視線內使用，減少 {0}% 冷卻時間恢復速度",
+        "string": "若有傳奇敵人在你視線內使用，減少 {0}% 冷卻時間恢復率",
         "reminder_text": null,
         "is_markup": null
       }
@@ -21675,6 +21728,78 @@
   {
     "English": null,
     "ids": [
+      "inflict_equivalent_chill_on_inflicting_shock_with_hits"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "當你的擊中使敵人感電時同時使其冰緩，減少行動速度被感電效果影響",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "inflict_equivalent_shock_on_inflicting_chill_with_hits"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "當你的擊中使敵人冰緩時同時使其感電，增加承受傷害被冰緩效果影響",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "inflict_hallowing_flame_on_melee_hit_chance_%"
     ],
     "trade_stats": null,
@@ -23914,7 +24039,7 @@
         "index_handlers": [
           []
         ],
-        "string": "來自被輔助技能的召喚物增加 {0}% 冷卻時間恢復速度",
+        "string": "來自被輔助技能的召喚物增加 {0}% 冷卻時間恢復率",
         "reminder_text": null,
         "is_markup": null
       },
@@ -23934,7 +24059,7 @@
             "negate"
           ]
         ],
-        "string": "來自被輔助技能的召喚物減少 {0}% 冷卻時間恢復速度",
+        "string": "來自被輔助技能的召喚物減少 {0}% 冷卻時間恢復率",
         "reminder_text": null,
         "is_markup": null
       }
@@ -26058,7 +26183,7 @@
         "index_handlers": [
           []
         ],
-        "string": "被輔助的技能加快 {0}% 陷阱投擲冷卻時間恢復速度",
+        "string": "被輔助的技能加快 {0}% 陷阱投擲冷卻時間恢復率",
         "reminder_text": null,
         "is_markup": null
       },
@@ -26078,7 +26203,7 @@
             "negate"
           ]
         ],
-        "string": "被輔助的技能減緩 {0}% 陷阱投擲冷卻時間恢復速度",
+        "string": "被輔助的技能減緩 {0}% 陷阱投擲冷卻時間恢復率",
         "reminder_text": null,
         "is_markup": null
       }
@@ -26282,7 +26407,7 @@
             "locations_to_metres"
           ]
         ],
-        "string": "被輔助的技能的投射物有 {0} 米最大距離",
+        "string": "來自被輔助技能的投射物擁有 {0} 公尺最大[DirectFlight|直線飛行]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -26302,7 +26427,7 @@
             "locations_to_metres"
           ]
         ],
-        "string": "被輔助的技能的投射物有 {0} 米最大距離",
+        "string": "來自被輔助技能的投射物擁有 {0} 公尺最大[DirectFlight|直線飛行]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -28185,6 +28310,50 @@
   {
     "English": null,
     "ids": [
+      "spell_minimum_added_physical_damage_per_active_permanent_minion",
+      "spell_maximum_added_physical_damage_per_active_permanent_minion"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "被輔助的法術每擁有一名永久召喚物，即附加 {0} 至 {1} 物理傷害",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "static_strike_base_zap_frequency_ms"
     ],
     "trade_stats": null,
@@ -28472,6 +28641,60 @@
         ],
         "string": "來自被輔助技能的護衛召喚物擁有一個聖堂光環",
         "reminder_text": "（聖堂光環會有以下其中一種效果：\r\n- 獲得等同15%物理傷害的額外火焰傷害\r\n- 獲得等同15%物理傷害的額外閃電傷害\r\n- 每秒回復1.5%生命\r\n- 增加30%魔力回復率\r\n- +23%混沌抗性\r\n- 減少50%作用於你的詛咒效果）",
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_abyssal_well_chance_to_create_well_on_corpse_creation_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "被輔助的技能在創造屍體時有{0}%機率觸發深淵巨口",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "被輔助的技能在創造屍體時觸發深淵巨口",
+        "reminder_text": null,
         "is_markup": null
       }
     ]
@@ -29907,7 +30130,7 @@
   {
     "English": null,
     "ids": [
-      "support_companionship_minion_maximum_life_+%_final_if_at_most_one_minion"
+      "support_companionship_minion_damage_taken_+%_final_if_at_most_one_minion"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -29934,7 +30157,7 @@
         "index_handlers": [
           []
         ],
-        "string": "若被輔助技能的召喚物為你的唯一召喚物，其有{0}%更多最大生命",
+        "string": "若來自被輔助技能的召喚物為你的唯一召喚物，其承受 {0}% 更多傷害",
         "reminder_text": null,
         "is_markup": null
       },
@@ -29954,7 +30177,7 @@
             "negate"
           ]
         ],
-        "string": "若被輔助技能的召喚物為你的唯一召喚物，其有{0}%更少最大生命",
+        "string": "若來自被輔助技能的召喚物為你的唯一召喚物，其承受 {0}% 更少傷害",
         "reminder_text": null,
         "is_markup": null
       }
@@ -30351,6 +30574,60 @@
   {
     "English": null,
     "ids": [
+      "support_crystalfall_chance_to_trigger_crystalfall_on_hit_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "被輔助的技能擊中時有{0}%機率觸發淵晶墜擊",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "被輔助的技能擊中時觸發淵晶墜擊",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "support_divine_cry_damage_+%_final"
     ],
     "trade_stats": null,
@@ -30734,7 +31011,7 @@
         "index_handlers": [
           []
         ],
-        "string": "被輔助的技能有 {0}% 更多冷卻時間恢復速度",
+        "string": "被輔助的技能有 {0}% 更多冷卻時間恢復率",
         "reminder_text": null,
         "is_markup": null
       },
@@ -30754,7 +31031,7 @@
             "negate"
           ]
         ],
-        "string": "被輔助的技能有 {0}% 更少冷卻時間恢復速度",
+        "string": "被輔助的技能有 {0}% 更少冷卻時間恢復率",
         "reminder_text": null,
         "is_markup": null
       }
@@ -39597,7 +39874,7 @@
         "index_handlers": [
           []
         ],
-        "string": "被輔助的戰吼增加{0}%冷卻回復速度",
+        "string": "被輔助的戰吼增加{0}%冷卻時間恢復率",
         "reminder_text": null,
         "is_markup": null
       },
@@ -39617,7 +39894,7 @@
             "negate"
           ]
         ],
-        "string": "被輔助的戰吼減少{0}%冷卻回復速度",
+        "string": "被輔助的戰吼減少{0}%冷卻時間恢復率",
         "reminder_text": null,
         "is_markup": null
       }
@@ -39896,7 +40173,7 @@
           ]
         ],
         "string": "以被輔助技能消耗屍體時每有1強度即有{0}%機率獲得1靈魂",
-        "reminder_text": "（每個靈魂會賦予 5% 攻擊和施法速度。若你近期沒有吞噬靈魂，每 0.5 秒便會失去 1 個靈魂。最多可吞噬 45 個靈魂）",
+        "reminder_text": "（每個靈魂會賦予 5% 攻擊和施放速度。若你近期沒有吞噬靈魂，每 0.5 秒便會失去 1 個靈魂。最多可吞噬 45 個靈魂）",
         "is_markup": null
       },
       {
@@ -39916,7 +40193,7 @@
           ]
         ],
         "string": "以被輔助技能消耗屍體時每有1強度即有{0}%機率獲得1靈魂",
-        "reminder_text": "（每個靈魂會賦予 5% 攻擊和施法速度。若你近期沒有吞噬靈魂，每 0.5 秒便會失去 1 個靈魂。最多可吞噬 45 個靈魂）",
+        "reminder_text": "（每個靈魂會賦予 5% 攻擊和施放速度。若你近期沒有吞噬靈魂，每 0.5 秒便會失去 1 個靈魂。最多可吞噬 45 個靈魂）",
         "is_markup": null
       }
     ]

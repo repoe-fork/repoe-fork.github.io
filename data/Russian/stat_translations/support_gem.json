@@ -9834,6 +9834,62 @@
   {
     "English": null,
     "ids": [
+      "shock_effect_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% усиление эффекта шока, накладываемого усиленными умениями",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "{0}% ослабление эффекта шока, накладываемого усиленными умениями",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "support_chills_also_grant_cold_damage_taken_per_minute_+%"
     ],
     "trade_stats": null,
@@ -11494,33 +11550,8 @@
           [],
           []
         ],
-        "string": "Увеличения и уменьшения к урону от чар также применяются к урону от атак от этого умения в размере {0}% от их значения",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 100,
-            "max": 100,
-            "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          []
-        ],
-        "string": "Увеличения и уменьшения к урону от чар также применяются к урону от атак от этого умения",
-        "reminder_text": null,
+        "string": "{0}% колдовской мощи",
+        "reminder_text": "(Колдовская мощь заставляет увеличения и уменьшения урона от чар также применяться к урону от атак в размере указанного процента от их значения)",
         "is_markup": null
       },
       {
@@ -11544,8 +11575,8 @@
           [],
           []
         ],
-        "string": "Увеличения и уменьшения к урону от чар также применяются к урону от атак от этого умения в размере {0}% от их значения",
-        "reminder_text": null,
+        "string": "{0}% колдовской мощи",
+        "reminder_text": "(Колдовская мощь заставляет увеличения и уменьшения урона от чар также применяться к урону от атак в размере указанного процента от их значения)",
         "is_markup": null
       }
     ],
@@ -16563,8 +16594,8 @@
       {
         "condition": [
           {
-            "min": null,
-            "max": null,
+            "min": 100,
+            "max": 100,
             "negated": null
           }
         ],
@@ -16572,9 +16603,31 @@
           "ignore"
         ],
         "index_handlers": [
-          []
+          [
+            "locations_to_metres"
+          ]
         ],
-        "string": "+0.1 м к радиусу за каждого ближайшего врага, вплоть до максимума в +1 м",
+        "string": "+1 м к радиусу за каждого ближайшего врага, в плоть до максимума в +1 м",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          [
+            "locations_to_metres"
+          ]
+        ],
+        "string": "{0} м к радиусу за каждого ближайшего врага, в плоть до максимума в +1 м",
         "reminder_text": null,
         "is_markup": null
       }
@@ -17018,7 +17071,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% повышение скорости перезарядки усиленных чар за каждые 100 барьера",
+        "string": "{0}% повышение скорости перезарядки усиленных чар за каждые 100 барьера, вплоть до максимума в 400%",
         "reminder_text": null,
         "is_markup": null
       },
@@ -17036,7 +17089,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% снижение скорости перезарядки усиленных чар за каждые 100 барьера",
+        "string": "{0}% снижение скорости перезарядки усиленных чар за каждые 100 барьера, вплоть до максимума в 400%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -21675,6 +21728,78 @@
   {
     "English": null,
     "ids": [
+      "inflict_equivalent_chill_on_inflicting_shock_with_hits"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Охлаждает врагов, когда они поражаются шоком от ваших ударов, снижая их скорость действий на величину эффекта шока",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "inflict_equivalent_shock_on_inflicting_chill_with_hits"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Поражает шоком охлаждаемых вашими ударами врагов, увеличивая получаемый ими урон на величину эффекта охлаждения",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "inflict_hallowing_flame_on_melee_hit_chance_%"
     ],
     "trade_stats": null,
@@ -26279,7 +26404,7 @@
             "locations_to_metres"
           ]
         ],
-        "string": "Усиленные умения имеют ограниченную дальность полета снарядов в {0} м",
+        "string": "Снаряды усиленных умений имеют ограниченную [DirectFlight|дальность полета] в {0} м",
         "reminder_text": null,
         "is_markup": null
       },
@@ -26299,7 +26424,7 @@
             "locations_to_metres"
           ]
         ],
-        "string": "Усиленные умения имеют ограниченную дальность полета снарядов в {0} м",
+        "string": "Снаряды усиленных умений имеют ограниченную [DirectFlight|дальность полета] в {0} м",
         "reminder_text": null,
         "is_markup": null
       }
@@ -28185,6 +28310,50 @@
   {
     "English": null,
     "ids": [
+      "spell_minimum_added_physical_damage_per_active_permanent_minion",
+      "spell_maximum_added_physical_damage_per_active_permanent_minion"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "Усиленные чары наносят от {0} до {1} дополнительного физического урона за каждого постоянного приспешника",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "static_strike_base_zap_frequency_ms"
     ],
     "trade_stats": null,
@@ -28469,6 +28638,60 @@
         ],
         "string": "Призванные усиленными умениями стражи обладают аурой жреца",
         "reminder_text": "(Жреческие ауры имеют один из следующих эффектов:\r\n- Дарует 15% физического урона в виде дополнительного урона от огня\r\n- Дарует 15% физического урона в виде дополнительного урона от молнии\r\n- Регенерирует 1,5% здоровья в секунду\r\n- 30% повышение скорости регенерации маны\r\n- +23% к сопротивлению хаосу\r\n- 50% ослабление эффекта проклятий на вас)",
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_abyssal_well_chance_to_create_well_on_corpse_creation_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Усиленные умения с {0}% шансом могут вызвать срабатывание Пасти Бездны при создании трупа",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Усиленные умения вызывают срабатывание Пасти Бездны при создании трупа",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -29907,7 +30130,7 @@
   {
     "English": null,
     "ids": [
-      "support_companionship_minion_maximum_life_+%_final_if_at_most_one_minion"
+      "support_companionship_minion_damage_taken_+%_final_if_at_most_one_minion"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -29931,7 +30154,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Приспешники от усиленных умений имеют на {0}% больше максимума здоровья, если они являются вашим единственным приспешником",
+        "string": "Приспешники от усиленных умений получают на {0}% больше урона, если они являются вашим единственным приспешником",
         "reminder_text": null,
         "is_markup": null
       },
@@ -29951,7 +30174,7 @@
             "negate"
           ]
         ],
-        "string": "Приспешники от усиленных умений имеют на {0}% меньше максимума здоровья, если они являются вашим единственным приспешником",
+        "string": "Приспешники от усиленных умений получают на {0}% меньше урона, если они являются вашим единственным приспешником",
         "reminder_text": null,
         "is_markup": null
       }
@@ -30340,6 +30563,60 @@
           []
         ],
         "string": "Усиленные боевые кличи накладывают {0} отрицательных эффекта Оскверненной крови",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_crystalfall_chance_to_trigger_crystalfall_on_hit_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Усиленные умения с {0}% шансом могут вызвать срабатывание Падающего кристалла при нанесении удара",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Усиленные умения вызывают срабатывание Падающего кристалла при нанесении удара",
         "reminder_text": null,
         "is_markup": null
       }
@@ -37880,7 +38157,7 @@
           []
         ],
         "string": "Усиленные умения можно использовать только с булавами, скипетрами и посохами",
-        "reminder_text": "(Боевые посохи считаются посохами)",
+        "reminder_text": "(Воинские посохи считаются посохами)",
         "is_markup": null
       }
     ],
@@ -40067,7 +40344,7 @@
           []
         ],
         "string": "Усиленные умения можно использовать только с топорами, булавами, скипетрами или посохами",
-        "reminder_text": "(Боевые посохи считаются посохами)",
+        "reminder_text": "(Воинские посохи считаются посохами)",
         "is_markup": null
       }
     ],

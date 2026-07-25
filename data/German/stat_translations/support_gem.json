@@ -2893,7 +2893,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Schadensbonus durch Stärke gilt sowohl für Projektilangriffsschaden als auch für unterstützte Fertigkeiten",
+        "string": "Schadensbonus durch Stärke gilt sowohl für Projektil-Angriffsschaden als auch für unterstützte Fertigkeiten",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3599,7 +3599,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Unterstützte Fertigkeiten haben {0} zu maximaler Anzahl an beschworenen Ballistentotems",
+        "string": "Unterstützte Fertigkeiten haben {0} zu maximaler Anzahl von beschworenen Ballistentotems",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3635,7 +3635,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Unterstützte Fertigkeiten haben {0} zu maximaler Anzahl an beschworenen Totems",
+        "string": "Unterstützte Fertigkeiten haben {0} zu maximaler Anzahl von beschworenen Totems",
         "reminder_text": null,
         "is_markup": null
       }
@@ -7372,7 +7372,7 @@
             "milliseconds_to_seconds_2dp"
           ]
         ],
-        "string": "Löst einen unterstützten Zauber alle {0} Sekunden aus, während unterstützte Fertigkeiten kanalisiert werden",
+        "string": "Löst alle {0} Sekunden einen unterstützten Zauber aus, während unterstützte Fertigkeiten kanalisiert werden",
         "reminder_text": null,
         "is_markup": null
       }
@@ -9834,6 +9834,62 @@
   {
     "English": null,
     "ids": [
+      "shock_effect_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% erhöhte Wirkung von Schocks, die mit unterstützten Fertigkeiten verursacht werden",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "{0}% verringerte Wirkung von Schocks, die mit unterstützten Fertigkeiten verursacht werden",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "support_chills_also_grant_cold_damage_taken_per_minute_+%"
     ],
     "trade_stats": null,
@@ -11490,33 +11546,8 @@
           [],
           []
         ],
-        "string": "Erhöhungen und Verringerungen von Zauberschaden gelten zu {0}% ihres Werts auch für den Angriffsschaden dieser Fertigkeit",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 100,
-            "max": 100,
-            "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          []
-        ],
-        "string": "Erhöhungen und Verringerungen von Zauberschaden gelten auch für den Angriffsschaden dieser Fertigkeit",
-        "reminder_text": null,
+        "string": "{0}% Arkane Macht",
+        "reminder_text": "(Arkane Macht lässt Erhöhungen und Verringerungen des Zauberschadens prozentual zu ihrem Wert auch für den Angriffsschaden gelten)",
         "is_markup": null
       },
       {
@@ -11540,8 +11571,8 @@
           [],
           []
         ],
-        "string": "Erhöhungen und Verringerungen von Zauberschaden gelten zu {0}% ihres Werts auch für den Angriffsschaden dieser Fertigkeit",
-        "reminder_text": null,
+        "string": "{0}% Arkane Macht",
+        "reminder_text": "(Arkane Macht lässt Erhöhungen und Verringerungen des Zauberschadens prozentual zu ihrem Wert auch für den Angriffsschaden gelten)",
         "is_markup": null
       }
     ],
@@ -16559,8 +16590,8 @@
       {
         "condition": [
           {
-            "min": null,
-            "max": null,
+            "min": 100,
+            "max": 100,
             "negated": null
           }
         ],
@@ -16568,9 +16599,31 @@
           "ignore"
         ],
         "index_handlers": [
-          []
+          [
+            "locations_to_metres"
+          ]
         ],
-        "string": "+0.1 Meter zum Radius pro Gegner im Umkreis, bis zu einem Maximum von +1 Meter",
+        "string": "+1 Meter zum Radius pro Gegner im Umkreis, bis zu einem Maximum von +1 Meter",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          [
+            "locations_to_metres"
+          ]
+        ],
+        "string": "{0} Meter zum Radius pro Gegner im Umkreis, bis zu einem Maximum von +1 Meter",
         "reminder_text": null,
         "is_markup": null
       }
@@ -17014,7 +17067,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Unterstützte Zauber haben {0}% beschleunigte Abklingzeit-Rate pro 100 Schutz",
+        "string": "Unterstützte Zauber haben {0}% beschleunigte Abklingzeit-Rate pro 100 Schutz, bis zu 400%",
         "reminder_text": null,
         "is_markup": null
       },
@@ -17032,7 +17085,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Unterstützte Zauber haben {0}% verlangsamte Abklingzeit-Rate pro 100 Schutz",
+        "string": "Unterstützte Zauber haben {0}% verlangsamte Abklingzeit-Rate pro 100 Schutz, bis zu 400%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -21675,6 +21728,78 @@
   {
     "English": null,
     "ids": [
+      "inflict_equivalent_chill_on_inflicting_shock_with_hits"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Unterkühlt Gegner, wenn sie durch Eure Treffer geschockt werden, wobei die Aktionsgeschwindigkeit durch die Schockwirkung verringert wird",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "inflict_equivalent_shock_on_inflicting_chill_with_hits"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Schockt Gegner, wenn sie durch Eure Treffer unterkühlt werden, wobei der durch die Unterkühlungswirkung erlittene Schaden erhöht wird",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "inflict_hallowing_flame_on_melee_hit_chance_%"
     ],
     "trade_stats": null,
@@ -23031,7 +23156,7 @@
             "locations_to_metres"
           ]
         ],
-        "string": "Unterstützte Fertigkeiten haben {0} Meter zur Nahkampf-Schlagreichweite",
+        "string": "Unterstützte Fertigkeiten haben {0} Meter zur Nahkampfschlagreichweite",
         "reminder_text": "(Beeinflusst Nahkampfschläge, einschließlich des Standardangriffs. Wirkt sich nicht auf Wirkungsbereiche aus)",
         "is_markup": null
       },
@@ -23051,7 +23176,7 @@
             "locations_to_metres"
           ]
         ],
-        "string": "Unterstützte Fertigkeiten haben {0} Meter zur Nahkampf-Schlagreichweite",
+        "string": "Unterstützte Fertigkeiten haben {0} Meter zur Nahkampfschlagreichweite",
         "reminder_text": "(Beeinflusst Nahkampfschläge, einschließlich des Standardangriffs. Wirkt sich nicht auf Wirkungsbereiche aus)",
         "is_markup": null
       }
@@ -26275,7 +26400,7 @@
             "locations_to_metres"
           ]
         ],
-        "string": "Projektile von unterstützten Fertigkeiten haben eine maximale Reichweite von {0} Meter",
+        "string": "Projektile von unterstützten Fertigkeiten haben einen maximalen [DirectFlight|Direktflug] von {0} Meter",
         "reminder_text": null,
         "is_markup": null
       },
@@ -26295,7 +26420,7 @@
             "locations_to_metres"
           ]
         ],
-        "string": "Projektile von unterstützten Fertigkeiten haben eine maximale Reichweite von {0} Metern",
+        "string": "Projektile von unterstützten Fertigkeiten haben einen maximalen [DirectFlight|Direktflug] von {0} Metern",
         "reminder_text": null,
         "is_markup": null
       }
@@ -28185,6 +28310,50 @@
   {
     "English": null,
     "ids": [
+      "spell_minimum_added_physical_damage_per_active_permanent_minion",
+      "spell_maximum_added_physical_damage_per_active_permanent_minion"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "Unterstützte Zauber verursachen {0} bis {1} zusätzlichen physischen Schaden für jede permanente Kreatur",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "static_strike_base_zap_frequency_ms"
     ],
     "trade_stats": null,
@@ -28465,6 +28634,60 @@
         ],
         "string": "Von unterstützten Fertigkeiten beschworene Wächter haben eine Templer-Aura",
         "reminder_text": "(Templer-Auren haben einen der folgenden Effekte:\r\n- Erhaltet 15% des physischen Schadens als extra Feuerschaden\r\n- Erhaltet 15% des physischen Schadens als extra Blitzschaden\r\n- Regeneriert 1.5% des Lebens pro Sekunde\r\n- 30% erhöhte Manaregenerations-Rate\r\n- +23% zu Chaoswiderstand\r\n- 50% reduzierte Wirkung von Flüchen auf Euch)",
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_abyssal_well_chance_to_create_well_on_corpse_creation_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Unterstützte Fertigkeiten haben {0}% Chance, 'Abgründiger Schlund' auszulösen, wenn eine Leiche erzeugt wird",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Unterstützte Fertigkeiten lösen 'Abgründiger Schlund' aus, wenn eine Leiche erzeugt wird",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -29907,7 +30130,7 @@
   {
     "English": null,
     "ids": [
-      "support_companionship_minion_maximum_life_+%_final_if_at_most_one_minion"
+      "support_companionship_minion_damage_taken_+%_final_if_at_most_one_minion"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -29927,7 +30150,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Kreaturen von unterstützten Fertigkeiten haben {0}% mehr maximales Leben, wenn sie Eure einzige Kreatur ist",
+        "string": "Kreaturen von unterstützten Fertigkeiten erleiden {0}% mehr Schaden, wenn sie Eure einzige Kreatur ist",
         "reminder_text": null,
         "is_markup": null
       },
@@ -29947,7 +30170,7 @@
             "negate"
           ]
         ],
-        "string": "Kreaturen von unterstützten Fertigkeiten haben {0}% weniger maximales Leben, wenn sie Eure einzige Kreatur ist",
+        "string": "Kreaturen von unterstützten Fertigkeiten erleiden {0}% weniger Schaden, wenn sie Eure einzige Kreatur ist",
         "reminder_text": null,
         "is_markup": null
       }
@@ -30336,6 +30559,60 @@
           []
         ],
         "string": "Unterstützte Kriegsschreie verursachen {0} Schwächungen von Verderbtem Blut",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_crystalfall_chance_to_trigger_crystalfall_on_hit_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Unterstützte Fertigkeiten haben {0}% Chance, bei Treffer 'Kristallfall' auszulösen",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Unterstützte Fertigkeiten lösen bei Treffer 'Kristallfall' aus",
         "reminder_text": null,
         "is_markup": null
       }

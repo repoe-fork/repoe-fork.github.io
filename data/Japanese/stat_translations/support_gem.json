@@ -9834,6 +9834,62 @@
   {
     "English": null,
     "ids": [
+      "shock_effect_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルで付与された感電の効果が{0}%増加する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "サポートされたスキルで付与された感電の効果が{0}%減少する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "support_chills_also_grant_cold_damage_taken_per_minute_+%"
     ],
     "trade_stats": null,
@@ -11491,33 +11547,8 @@
           [],
           []
         ],
-        "string": "スペルダメージの増減はその数値の{0}%がこのスキルによるアタックダメージにも適用される",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 100,
-            "max": 100,
-            "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          []
-        ],
-        "string": "スペルダメージの増減はこのスキルによるアタックダメージにも適用される",
-        "reminder_text": null,
+        "string": "{0}%のアーケインマイト",
+        "reminder_text": "(アーケインマイトはスペルダメージの増減のモッドをその一定割合をアタックダメージにも適用されるようにする)",
         "is_markup": null
       },
       {
@@ -11541,8 +11572,8 @@
           [],
           []
         ],
-        "string": "スペルダメージの増減はその数値の{0}%がこのスキルによるアタックダメージにも適用される",
-        "reminder_text": null,
+        "string": "{0}%のアーケインマイト",
+        "reminder_text": "(アーケインマイトはスペルダメージの増減のモッドをその一定割合をアタックダメージにも適用されるようにする)",
         "is_markup": null
       }
     ],
@@ -16560,8 +16591,8 @@
       {
         "condition": [
           {
-            "min": null,
-            "max": null,
+            "min": 100,
+            "max": 100,
             "negated": null
           }
         ],
@@ -16569,9 +16600,31 @@
           "ignore"
         ],
         "index_handlers": [
-          []
+          [
+            "locations_to_metres"
+          ]
         ],
-        "string": "周囲の敵1体ごとに半径が+0.1mされ、最大+1mになる",
+        "string": "近くの敵1体ごとに半径+1m、最大+1m",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          [
+            "locations_to_metres"
+          ]
+        ],
+        "string": "近くの敵1体ごとに半径+{0}m、最大+1m",
         "reminder_text": null,
         "is_markup": null
       }
@@ -17015,7 +17068,7 @@
         "index_handlers": [
           []
         ],
-        "string": "サポートされたスペルはワード100ごとにクールダウン解消レートが{0}%増加する",
+        "string": "サポートされたスキルはワード100ごとにクールダウン解消レートが{0}%増加する、最大400%",
         "reminder_text": null,
         "is_markup": null
       },
@@ -17033,7 +17086,7 @@
         "index_handlers": [
           []
         ],
-        "string": "サポートされたスペルはワード100ごとにクールダウン解消レートが{0}%減少する",
+        "string": "サポートされたスキルはワード100ごとにクールダウン解消レートが{0}%減少する、最大400%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -21675,6 +21728,78 @@
   {
     "English": null,
     "ids": [
+      "inflict_equivalent_chill_on_inflicting_shock_with_hits"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "プレイヤーのヒットにより敵を感電させた時にその敵に冷却を付与し、感電効果と同じ数値だけアクションスピードを減少させる",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "inflict_equivalent_shock_on_inflicting_chill_with_hits"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "プレイヤーのヒットにより敵を冷却させた時にその敵に感電を付与し、冷却効果と同じ数値だけ受けるダメージを増加させる",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "inflict_hallowing_flame_on_melee_hit_chance_%"
     ],
     "trade_stats": null,
@@ -26276,7 +26401,7 @@
             "locations_to_metres"
           ]
         ],
-        "string": "サポートされたスキルの投射物は{0}mの最大距離を持つ",
+        "string": "サポートされたスキルによる投射物は{0}mの最大[DirectFlight|直進距離]を持つ",
         "reminder_text": null,
         "is_markup": null
       },
@@ -26296,7 +26421,7 @@
             "locations_to_metres"
           ]
         ],
-        "string": "サポートされたスキルの投射物は{0}mの最大距離を持つ",
+        "string": "サポートされたスキルによる投射物は{0}mの最大[DirectFlight|直進距離]を持つ",
         "reminder_text": null,
         "is_markup": null
       }
@@ -28185,6 +28310,50 @@
   {
     "English": null,
     "ids": [
+      "spell_minimum_added_physical_damage_per_active_permanent_minion",
+      "spell_maximum_added_physical_damage_per_active_permanent_minion"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "サポートされたスペルは永続ミニオン1体ごとに{0}から{1}の追加物理ダメージを与える",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "static_strike_base_zap_frequency_ms"
     ],
     "trade_stats": null,
@@ -28466,6 +28635,60 @@
         ],
         "string": "サポートされたスキルにより召喚されたセンチネルはテンプラーオーラを持つ",
         "reminder_text": "(テンプラーオーラは以下の効果の内1種類を持つ:\r\n - 物理ダメージの15%を追加火ダメージとして獲得する\r\n - 物理ダメージの15%を追加雷ダメージとして獲得する\r\n - 毎秒ライフの1.5%を自動回復する\r\n - 混沌耐性 +23%\r\n - プレイヤーに対する呪いの効果が50%減少する)",
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_abyssal_well_chance_to_create_well_on_corpse_creation_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルは死体を生成した時に{0}%の確率でアビサルモーをトリガーする",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルは死体を生成した時にアビサルモーをトリガーする",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -29907,7 +30130,7 @@
   {
     "English": null,
     "ids": [
-      "support_companionship_minion_maximum_life_+%_final_if_at_most_one_minion"
+      "support_companionship_minion_damage_taken_+%_final_if_at_most_one_minion"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -29928,7 +30151,7 @@
         "index_handlers": [
           []
         ],
-        "string": "サポートされたスキルによるミニオンはそれが唯一のミニオンであれば最大ライフが{0}%上昇する",
+        "string": "サポートされたスキルによるミニオンはそれが唯一のミニオンであれば受けるダメージが{0}%上昇する",
         "reminder_text": null,
         "is_markup": null
       },
@@ -29948,7 +30171,7 @@
             "negate"
           ]
         ],
-        "string": "サポートされたスキルによるミニオンはそれが唯一のミニオンであれば最大ライフが{0}%低下する",
+        "string": "サポートされたスキルによるミニオンはそれが唯一のミニオンであれば受けるダメージが{0}%低下する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -30337,6 +30560,60 @@
           []
         ],
         "string": "サポートされたウォークライは穢れた血を{0}スタック付与する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_crystalfall_chance_to_trigger_crystalfall_on_hit_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルはヒット時に{0}%の確率でクリスタルフォールをトリガーする",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルはヒット時にクリスタルフォールをトリガーする",
         "reminder_text": null,
         "is_markup": null
       }

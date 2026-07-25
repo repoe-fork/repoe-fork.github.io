@@ -9834,6 +9834,62 @@
   {
     "English": null,
     "ids": [
+      "shock_effect_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Efecto de la electrocución aplicada por las habilidades asistidas aumentado un {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Efecto de la electrocución aplicada por las habilidades asistidas reducido un {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "support_chills_also_grant_cold_damage_taken_per_minute_+%"
     ],
     "trade_stats": null,
@@ -11495,33 +11551,8 @@
           [],
           []
         ],
-        "string": "Los aumentos y las reducciones al daño de hechizos también se aplican al daño de los ataques de esta habilidad a {0}% de su valor",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 100,
-            "max": 100,
-            "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          []
-        ],
-        "string": "Los aumentos y las reducciones al daño de hechizos también se aplican al daño de los ataques de esta habilidad",
-        "reminder_text": null,
+        "string": "{0}% de Poder arcano",
+        "reminder_text": "(Poder arcano hace que los aumentos y las reducciones al daño de hechizos también se apliquen al daño de ataques en ese porcentaje de su valor)\r\n",
         "is_markup": null
       },
       {
@@ -11545,8 +11576,8 @@
           [],
           []
         ],
-        "string": "Los aumentos y las reducciones al daño de hechizos también se aplican al daño de los ataques de esta habilidad al {0}% de su valor",
-        "reminder_text": null,
+        "string": "{0}% de Poder arcano",
+        "reminder_text": "(Poder arcano hace que los aumentos y las reducciones al daño de hechizos también se apliquen al daño de ataques en ese porcentaje de su valor)\r\n",
         "is_markup": null
       }
     ],
@@ -16564,8 +16595,8 @@
       {
         "condition": [
           {
-            "min": null,
-            "max": null,
+            "min": 100,
+            "max": 100,
             "negated": null
           }
         ],
@@ -16573,9 +16604,31 @@
           "ignore"
         ],
         "index_handlers": [
-          []
+          [
+            "locations_to_metres"
+          ]
         ],
-        "string": "+0.1 metros al radio por cada enemigo cercano, hasta un máximo de +1 metro",
+        "string": "+1 metro al radio por cada enemigo cercano, hasta un máximo de +1 metro",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          [
+            "locations_to_metres"
+          ]
+        ],
+        "string": "{0} metros al radio por cada enemigo cercano, hasta un máximo de +1 metro",
         "reminder_text": null,
         "is_markup": null
       }
@@ -17019,7 +17072,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Los hechizos asistidos tienen la recuperación del tiempo de recarga aumentada un {0}% por cada 100 de barrera",
+        "string": "Los hechizos asistidos tienen la velocidad de recuperación del enfriamiento aumentada un {0}% por cada 100 de barrera, hasta un 400%",
         "reminder_text": null,
         "is_markup": null
       },
@@ -17037,7 +17090,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Los hechizos asistidos tienen la recuperación del tiempo de recarga reducida un {0}% por cada 100 de barrera",
+        "string": "Los hechizos asistidos tienen la velocidad de recuperación del enfriamiento reducida un {0}% por cada 100 de barrera, hasta un 400%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -18035,7 +18088,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Las habilidades asistidas infligen daño aumentado un {0}% con golpes y estados alterados por cada congelamiento, electrocucción o quemadura que tenga el enemigo",
+        "string": "Las habilidades asistidas infligen daño aumentado un {0}% con golpes y estados alterados por cada congelamiento, electrocución o quemadura que tenga el enemigo",
         "reminder_text": "(Los estados alterados dañinos, o estados alterados que infligen daño, son sangrado, quemado y envenenado)",
         "is_markup": null
       },
@@ -18055,7 +18108,7 @@
             "negate"
           ]
         ],
-        "string": "Las habilidades asistidas infligen daño reducido un {0}% con golpes y estados alterados por cada congelamiento, electrocucción o quemadura que tenga el enemigo",
+        "string": "Las habilidades asistidas infligen daño reducido un {0}% con golpes y estados alterados por cada congelamiento, electrocución o quemadura que tenga el enemigo",
         "reminder_text": "(Los estados alterados dañinos, o estados alterados que infligen daño, son sangrado, quemado y envenenado)",
         "is_markup": null
       }
@@ -21665,6 +21718,78 @@
           ]
         ],
         "string": "Las habilidades asistidas infligen un {0}% menos de daño en área",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "inflict_equivalent_chill_on_inflicting_shock_with_hits"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Escarcha a los enemigos cuando tus impactos los electrocutan, lo que reduce la velocidad de acción por el efecto de la electrocución",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "inflict_equivalent_shock_on_inflicting_chill_with_hits"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Electrocuta a los enemigos cuando tus impactos los escarchan, lo que aumenta el daño recibido por el efecto del escarchamiento",
         "reminder_text": null,
         "is_markup": null
       }
@@ -26280,7 +26405,7 @@
             "locations_to_metres"
           ]
         ],
-        "string": "Los proyectiles de las habilidades asistidas tienen un alcance máximo de {0} metro",
+        "string": "Los proyectiles de las habilidades asistidas tienen un [DirectFlight|vuelo directo] máximo de {0} metro",
         "reminder_text": null,
         "is_markup": null
       },
@@ -26300,7 +26425,7 @@
             "locations_to_metres"
           ]
         ],
-        "string": "Los proyectiles de las habilidades asistidas tienen un alcance máximo de {0} metros",
+        "string": "Los proyectiles de las habilidades asistidas tienen un [DirectFlight|vuelo directo] máximo de {0} metros",
         "reminder_text": null,
         "is_markup": null
       }
@@ -28185,6 +28310,50 @@
   {
     "English": null,
     "ids": [
+      "spell_minimum_added_physical_damage_per_active_permanent_minion",
+      "spell_maximum_added_physical_damage_per_active_permanent_minion"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "Los hechizos asistidos infligen de {0} a {1} de daño físico agregado por cada esbirro permanente",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "static_strike_base_zap_frequency_ms"
     ],
     "trade_stats": null,
@@ -28479,6 +28648,60 @@
   {
     "English": null,
     "ids": [
+      "support_abyssal_well_chance_to_create_well_on_corpse_creation_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Las habilidades asistidas tienen un {0}% de probabilidad de activar Fauces abisales al crear un cadáver",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Las habilidades asistidas activan Fauces abisales al crear un cadáver",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "support_added_cooldown_count_if_not_instant"
     ],
     "trade_stats": null,
@@ -28504,7 +28727,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Las habilidades asisitidas que no son instantáneas tienen {0} uso de tiempo de recarga",
+        "string": "Las habilidades asistidas que no son instantáneas tienen {0} uso de tiempo de recarga",
         "reminder_text": null,
         "is_markup": null
       },
@@ -28522,7 +28745,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Las habilidades asisitidas que no son instantáneas tienen {0} usos de tiempo de recarga",
+        "string": "Las habilidades asistidas que no son instantáneas tienen {0} usos de tiempo de recarga",
         "reminder_text": null,
         "is_markup": null
       }
@@ -29907,7 +30130,7 @@
   {
     "English": null,
     "ids": [
-      "support_companionship_minion_maximum_life_+%_final_if_at_most_one_minion"
+      "support_companionship_minion_damage_taken_+%_final_if_at_most_one_minion"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -29932,7 +30155,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Los esbirros de las habilidades asistidas tienen un {0}% más de vida máxima si son tu único esbirro",
+        "string": "Los esbirros de las habilidades asistidas reciben un {0}% más de daño si son tu único esbirro",
         "reminder_text": null,
         "is_markup": null
       },
@@ -29952,7 +30175,7 @@
             "negate"
           ]
         ],
-        "string": "Los esbirros de las habilidades asistidas tienen un {0}% menos de vida máxima si son tu único esbirro",
+        "string": "Los esbirros de las habilidades asistidas reciben un {0}% menos de daño si son tu único esbirro",
         "reminder_text": null,
         "is_markup": null
       }
@@ -30341,6 +30564,60 @@
           []
         ],
         "string": "Los gritos de guerra asistidos aplican {0} efectos nocivos de sangre corrupta",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_crystalfall_chance_to_trigger_crystalfall_on_hit_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Las habilidades asistidas tienen un {0}% de probabilidad de activar Caída cristalina al golpear",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Las habilidades asistidas activan Caída cristalina al golpear",
         "reminder_text": null,
         "is_markup": null
       }
@@ -34872,7 +35149,7 @@
           ],
           []
         ],
-        "string": "Cada habilidad asistida inflige un {0}% menos de daño de quemadura por cada quemadura que dicha habilidad haya aplicado recientementee",
+        "string": "Cada habilidad asistida inflige un {0}% menos de daño de quemadura por cada quemadura que dicha habilidad haya aplicado recientemente",
         "reminder_text": "(Recientemente se refiere a los últimos 4 segundos)",
         "is_markup": null
       }
@@ -35914,7 +36191,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Adrenalina de combate otorga un {0}% más de velocidad de ataque a las habilidades de viaje\nque no estén asistidas por Combate cerrado",
+        "string": "Adrenalina de combate otorga un {0}% más de velocidad de ataque a las habilidades de viaje\nque no estén asistidas por Combate cercano",
         "reminder_text": null,
         "is_markup": null
       },
@@ -35934,7 +36211,7 @@
             "negate"
           ]
         ],
-        "string": "Adrenalina de combate otorga un {0}% menos de velocidad de ataque a las habilidades de viaje\nque no estén asistidas por Combate cerrado",
+        "string": "Adrenalina de combate otorga un {0}% menos de velocidad de ataque a las habilidades de viaje\nque no estén asistidas por Combate cercano",
         "reminder_text": null,
         "is_markup": null
       }

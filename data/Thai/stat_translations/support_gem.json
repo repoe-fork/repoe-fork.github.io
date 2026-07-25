@@ -9834,6 +9834,62 @@
   {
     "English": null,
     "ids": [
+      "shock_effect_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "เพิ่มผลของสถานะ ช็อค ที่สร้างด้วยสกิลที่เสริม {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "ลดผลของสถานะ ช็อค ที่สร้างด้วยสกิลที่เสริม {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "support_chills_also_grant_cold_damage_taken_per_minute_+%"
     ],
     "trade_stats": null,
@@ -11496,33 +11552,8 @@
           [],
           []
         ],
-        "string": "การเพิ่มและลด ความเสียหาย เวท ส่งผลต่อ ความเสียหาย โจมตี ของสกิลนี้ เช่นกันในสัดส่วน {0}% ของค่าดังกล่าว",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 100,
-            "max": 100,
-            "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          []
-        ],
-        "string": "การเพิ่มและลด ความเสียหาย เวท ส่งผลต่อ ความเสียหาย โจมตี ของสกิลนี้ เช่นกัน",
-        "reminder_text": null,
+        "string": "อำนาจอาคม {0}%",
+        "reminder_text": "(อำนาจอาคม ทำให้การเพิ่มและลดความเสียหาย เวท ส่งผลต่อความเสียหาย โจมตี เป็นเปอร์เซ็นต์ของค่าดังกล่าวเช่นกัน)",
         "is_markup": null
       },
       {
@@ -11546,8 +11577,8 @@
           [],
           []
         ],
-        "string": "การเพิ่มและลด ความเสียหาย เวท ส่งผลต่อ ความเสียหาย โจมตี ของสกิลนี้ เช่นกันในสัดส่วน {0}% ของค่าดังกล่าว",
-        "reminder_text": null,
+        "string": "อำนาจอาคม {0}%",
+        "reminder_text": "(อำนาจอาคม ทำให้การเพิ่มและลดความเสียหาย เวท ส่งผลต่อความเสียหาย โจมตี เป็นเปอร์เซ็นต์ของค่าดังกล่าวเช่นกัน)",
         "is_markup": null
       }
     ],
@@ -16565,8 +16596,8 @@
       {
         "condition": [
           {
-            "min": null,
-            "max": null,
+            "min": 100,
+            "max": 100,
             "negated": null
           }
         ],
@@ -16574,9 +16605,31 @@
           "ignore"
         ],
         "index_handlers": [
-          []
+          [
+            "locations_to_metres"
+          ]
         ],
-        "string": "รัศมี +0.1 เมตร ต่อจำนวนศัตรูที่อยู่ใกล้ สูงสุด +1 เมตร",
+        "string": "รัศมี +1 เมตร ต่อจำนวนศัตรูที่อยู่ใกล้ สูงสุด +1 เมตร",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          [
+            "locations_to_metres"
+          ]
+        ],
+        "string": "รัศมี {0} เมตร ต่อจำนวนศัตรูที่อยู่ใกล้ สูงสุด +1 เมตร",
         "reminder_text": null,
         "is_markup": null
       }
@@ -17020,7 +17073,7 @@
         "index_handlers": [
           []
         ],
-        "string": "เวทที่เสริม มีความเร็วในการฟื้นฟูคูลดาวน์ เพิ่มขึ้น {0}% ต่อวอร์ดคุ้มภัย 100",
+        "string": "เวทที่เสริม มีความเร็วในการฟื้นฟูคูลดาวน์ เพิ่มขึ้น {0}% ต่อวอร์ดคุ้มภัย 100 สูงสุด 400%",
         "reminder_text": null,
         "is_markup": null
       },
@@ -17038,7 +17091,7 @@
         "index_handlers": [
           []
         ],
-        "string": "เวทที่เสริม มีความเร็วในการฟื้นฟูคูลดาวน์ ลดลง {0}% ต่อวอร์ดคุ้มภัย 100",
+        "string": "เวทที่เสริม มีความเร็วในการฟื้นฟูคูลดาวน์ ลดลง {0}% ต่อวอร์ดคุ้มภัย 100 สูงสุด 400%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -21675,6 +21728,78 @@
   {
     "English": null,
     "ids": [
+      "inflict_equivalent_chill_on_inflicting_shock_with_hits"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "สร้างสถานะ หนาวเย็น ต่อศัตรูที่ติดสถานะ ช็อค จากการปะทะของคุณ ซึ่งจะลดความเร็วในการกระทำของมัน เท่ากับ ผลของสถานะ ช็อค",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "inflict_equivalent_shock_on_inflicting_chill_with_hits"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "สร้างสถานะ ช็อค ต่อศัตรูที่ติดสถานะ หนาวเย็น จากการปะทะของคุณ ซึ่งจะเพิ่มความเสียหายที่ได้รับ เท่ากับ ผลของสถานะ หนาวเย็น",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "inflict_hallowing_flame_on_melee_hit_chance_%"
     ],
     "trade_stats": null,
@@ -26281,7 +26406,7 @@
             "locations_to_metres"
           ]
         ],
-        "string": "โพรเจกไทล์จากสกิลที่เสริม มีระยะสูงสุด {0} เมตร",
+        "string": "โพรเจกไทล์จากสกิลที่เสริม มี[DirectFlight|ระยะทางโดยตรง]สูงสุด {0} เมตร",
         "reminder_text": null,
         "is_markup": null
       },
@@ -26301,7 +26426,7 @@
             "locations_to_metres"
           ]
         ],
-        "string": "โพรเจกไทล์จากสกิลที่เสริม มีระยะสูงสุด {0} เมตร",
+        "string": "โพรเจกไทล์จากสกิลที่เสริม มี[DirectFlight|ระยะทางโดยตรง]สูงสุด {0} เมตร",
         "reminder_text": null,
         "is_markup": null
       }
@@ -28185,6 +28310,50 @@
   {
     "English": null,
     "ids": [
+      "spell_minimum_added_physical_damage_per_active_permanent_minion",
+      "spell_maximum_added_physical_damage_per_active_permanent_minion"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "เวทที่เสริม สร้างความเสียหาย กายภาพ เพิ่มเติม {0} ถึง {1} ต่อจำนวน มิเนียนถาวร",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "static_strike_base_zap_frequency_ms"
     ],
     "trade_stats": null,
@@ -28471,6 +28640,60 @@
         ],
         "string": "ทหารยามอัญเชิญ จากสกิลที่เสริมมี ออร่าเทมพลาร์",
         "reminder_text": "(ออร่าเทมพลาร์ ให้ผลอย่างหนึ่งจากผลต่อไปนี้:\r\n- นำความเสียหาย กายภาพ 15% ไปเสริมเป็น ไฟ\r\n- นำความเสียหาย กายภาพ 15% ไปเสริมเป็น สายฟ้า\r\n- ฟื้นฟูพลังชีวิต 1.5% ต่อวินาที\r\n- เพิ่มความเร็วในการ ฟื้นฟูมานา 30%\r\n- ค่าต้านทาน เคออส +23%\r\n- ลดผลของคำสาป ต่อตัวคุณ 50%)",
+        "is_markup": null
+      }
+    ],
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_abyssal_well_chance_to_create_well_on_corpse_creation_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "สกิลที่เสริม มีโอกาสทริกเกอร์ ปากอะบิส (Abyssal Maw) {0}% เมื่อสร้างศพ",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "สกิลที่เสริม ทริกเกอร์ ปากอะบิส (Abyssal Maw) เมื่อสร้างศพ",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -29907,7 +30130,7 @@
   {
     "English": null,
     "ids": [
-      "support_companionship_minion_maximum_life_+%_final_if_at_most_one_minion"
+      "support_companionship_minion_damage_taken_+%_final_if_at_most_one_minion"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -29933,7 +30156,7 @@
         "index_handlers": [
           []
         ],
-        "string": "มิเนียนจากสกิลที่เสริม มีพลังชีวิตสูงสุด เพิ่มขึ้น อีก {0}% หากมันเป็นมิเนียนตัวเดียวที่คุณมี",
+        "string": "มิเนียนจากสกิลที่เสริม ได้รับความเสียหาย เพิ่มขึ้น อีก {0}% หากมันเป็นมิเนียนตัวเดียวที่คุณมี",
         "reminder_text": null,
         "is_markup": null
       },
@@ -29953,7 +30176,7 @@
             "negate"
           ]
         ],
-        "string": "มิเนียนจากสกิลที่เสริม มีพลังชีวิตสูงสุด ลดลง อีก {0}% หากมันเป็นมิเนียนตัวเดียวที่คุณมี",
+        "string": "มิเนียนจากสกิลที่เสริม ได้รับความเสียหาย ลดลง อีก {0}% หากมันเป็นมิเนียนตัวเดียวที่คุณมี",
         "reminder_text": null,
         "is_markup": null
       }
@@ -30342,6 +30565,60 @@
           []
         ],
         "string": "การคำรามที่เสริม สร้างดีบัฟ โลหิตมลทิน {0} ระดับ",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_crystalfall_chance_to_trigger_crystalfall_on_hit_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "สกิลที่เสริม มีโอกาสทริกเกอร์ คริสตัลถล่ม (Crystalfall) {0}% เมื่อปะทะ",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "สกิลที่เสริม ทริกเกอร์ คริสตัลถล่ม (Crystalfall) เมื่อปะทะ",
         "reminder_text": null,
         "is_markup": null
       }
@@ -39976,7 +40253,7 @@
           [],
           []
         ],
-        "string": "เวทที่เสริม จะได้รับ 1 ผนึกทุก {0} วินาที สูงสุดที่ {2} ผนึก\nปลดปล่อยผนึกเมื่อร่าย เวทที่เสริม เพื่อทำให้ผลของสกิลเกิดซ้ำต่อจำนวน ผนึกที่สูญเสียไป",
+        "string": "เวทที่เสริม ได้รับผนึก 1 ระดับ ทุก {0} วินาที สูงสุด {2} ระดับ\nปลดปล่อยผนึกเมื่อร่าย เวทที่เสริม เพื่อทำให้ผลของสกิลเกิดซ้ำต่อจำนวน ผนึกที่สูญเสียไป",
         "reminder_text": "(เวลาในการร่ายเวท นานขึ้น 10% ทุกครั้งที่เวทนั้นเกิดซ้ำ)",
         "is_markup": null
       }

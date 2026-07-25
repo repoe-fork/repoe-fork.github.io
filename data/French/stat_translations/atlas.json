@@ -498,7 +498,8 @@
   {
     "English": null,
     "ids": [
-      "map_number_of_magic_packs_+%"
+      "map_number_of_magic_packs_+%",
+      "chart_magic_monsters_voyage_display_stat"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -509,12 +510,19 @@
             "min": null,
             "max": null,
             "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
           }
         ],
         "format": [
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
+          [],
           []
         ],
         "string": "{0}% d'Augmentation du nombre de Monstres Magiques dans vos Cartes",
@@ -534,7 +542,8 @@
   {
     "English": null,
     "ids": [
-      "map_number_of_rare_packs_+%"
+      "map_number_of_rare_packs_+%",
+      "chart_rare_monsters_voyage_display_stat"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -545,12 +554,19 @@
             "min": null,
             "max": null,
             "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
           }
         ],
         "format": [
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
+          [],
           []
         ],
         "string": "{0}% d'Augmentation du nombre de Monstres Rares dans vos Cartes",
@@ -846,6 +862,42 @@
           []
         ],
         "string": "Dans vos Cartes, les Épreuves du Labyrinthe ont {0}% de chances de vous récompenser d'une Offrande à la déesse améliorée",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "abyss_enable_bonus_chests"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Dans vos Cartes, les [ContainsAbyss|Abysses] peuvent faire apparaître des [AbyssalSkitterlock|Coffres grouillants abyssaux] à la place des Trésors abyssaux",
         "reminder_text": null,
         "is_markup": null
       }
@@ -1606,7 +1658,7 @@
           []
         ],
         "string": "Les Modificateurs explicites de vos Cartes ont aléatoirement entre 0% et 80% Davantage d'Effet\nVos Cartes ne peuvent pas générer de Contenu supplémentaire\nVous ne pouvez pas appliquer d'Influence à vos Cartes",
-        "reminder_text": "(Les différents Contenus supplémentaires sont : les Abysses, les Portails de Démon d'Ailleurs, les rencontres avec l'Infestation, les Brèches, les rencontres d'Expédition, les rencontres de Légions, les Miroirs du Délire, les monstres emprisonnés par des Essences, les Gisements de Minerai, les Autels de Rituel, les Exilés renégats, le Bosquet sacré, les Autels, les Caches de contrebandier, les Coffres-forts, les Tempêtes, les Esprits tourmentés, les rencontres d'Ultimatum, les Flammeroles de la Sylve et les missions de Jun, Alva, Einhar et Niko)",
+        "reminder_text": "(Les différents Contenus supplémentaires sont : les Abysses, les Portails de Démons d'Ailleurs, les Rencontres d'Infestation, les Brèches, les Rencontres d'Expédition, les Rencontres de Légion, les Mercenaires, les Miroirs du Délire et les Statdes de Délire, les Monstres emprisonnés par des Essences, les Gisements de Minerai, les Autels de Rituel, les Exilés renégats, le Bosquet sacré, les Autels, les Caches de contrebandier, les Coffres-forts, les Tempêtes, les Esprits tourmentés, les Rencontres d'Ultimatum, les Flammeroles de la Sylve et les Missions de Jun, Alva, Einhar et Niko)",
         "is_markup": null
       }
     ],
@@ -3563,7 +3615,115 @@
         "index_handlers": [
           []
         ],
-        "string": "Dans vos Cartes, les trous des Abysses ont {0}% de chances de générer des Monstres qui sont au moins Magiques",
+        "string": "Dans vos Cartes, les Fosses d'Abysse ont {0}% de chances de générer des Monstres qui sont au moins Magiques",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_abyss_%_chance_for_1_additional_pit_with_overflow"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Dans vos Cartes, les [ContainsAbyss|Abysses] ont {0}% de chances de contenir un Fosse supplémentaire",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_abyss_%_chance_for_2_additional_pits"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Dans vos Cartes, les [ContainsAbyss|Abysses] ont {0}% de chances de contenir 2 Fosses supplémentaires",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_abyss_%_chance_for_3_additional_pits"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Dans vos Cartes, les [ContainsAbyss|Abysses] ont {0}% de chances de contenir 3 Fosses supplémentaires",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3635,7 +3795,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Dans vos Cartes, les failles des Abysses ont {0}% de chances de ne générer que des Monstres Magiques pour chaque trou précédent de cet Abysse",
+        "string": "Dans vos Cartes, les Fosses d'Abysse ont {0}% de chances de générer des Monstres qui sont au moins Magiques pour chaque Fosse précédemment fermée",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3671,7 +3831,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Vos Cartes contiennent un Abysse supplémentaire",
+        "string": "Vos Cartes contiennent un [ContainsAbyss|Abysse] supplémentaire",
         "reminder_text": null,
         "is_markup": null
       },
@@ -3689,7 +3849,43 @@
         "index_handlers": [
           []
         ],
-        "string": "Vos Cartes contiennent {0} Abysses supplémentaires",
+        "string": "Vos Cartes contiennent {0} [ContainsAbyss|Abysses] supplémentaires",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_abyss_chance_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Vos Cartes ont {0}% de chances de contenir un [ContainsAbyss|Abysse]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3725,7 +3921,115 @@
         "index_handlers": [
           []
         ],
-        "string": "Vos Cartes ont {0}% de chances de contenir un Abysse tous les 2% d'Augmentation de Taille des Groupes",
+        "string": "Vos Cartes ont {0}% de chances de contenir un [ContainsAbyss|Abysse] tous les 2% d'Augmentation de Taille des Groupes",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_abyss_chance_to_be_amanamu_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Dans vos Cartes, les [ContainsAbyss|Abysses] ont {0}% d'Augmentation de chances de générer des monstres fidèles à Amanamu",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_abyss_chance_to_be_kurgal_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Dans vos Cartes, les [ContainsAbyss|Abysses] ont {0}% d'Augmentation de chances de générer des monstres fidèles à Kurgal",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_abyss_chance_to_be_ulaman_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Dans vos Cartes, les [ContainsAbyss|Abysses] ont {0}% d'Augmentation de chances de générer des monstres fidèles à Ulaman",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3761,7 +4065,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Dans vos Cartes, les trous des Abysses ont {0}% de chances de générer 5 Monstres Rares supplémentaires",
+        "string": "Dans vos Cartes, les Fosses d'Abysse ont {0}% de chances de générer 5 Monstres Rares supplémentaires",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3797,7 +4101,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Dans vos Cartes, les trous des Abysses ont {0}% de chances d'avoir 100% d'Augmentation du nombre de Monstres générés",
+        "string": "Dans vos Cartes, les Fosses d'Abysse ont {0}% de chances d'avoir 100% d'Augmentation du nombre de Monstres générés",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4175,7 +4479,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Vos Cartes ont {0}% d'Augmentation de chances de contenir un Abysse",
+        "string": "Vos Cartes ont {0}% d'Augmentation de chances de contenir un [ContainsAbyss|Abysse]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -4193,7 +4497,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Vos Cartes ont {0}% de Réduction de chances de contenir un Abysse",
+        "string": "Vos Cartes ont {0}% de Réduction de chances de contenir un [ContainsAbyss|Abysse]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4229,7 +4533,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Dans vos Cartes, les Joyaux abyssaux trouvés dans ou cédés par les Cimes stygiennes ont {0}% de chances d'être Corrompus et d'avoir 5 ou 6 Modificateurs aléatoires",
+        "string": "Les Joyaux abyssaux trouvés dans vos Cartes ont {0}% de chances d'être Corrompus\net d'avoir 5 ou 6 Modificateurs aléatoires",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4320,6 +4624,98 @@
           []
         ],
         "string": "Dans vos Cartes, les Profondeurs abyssales ont {0}% de Réduction de chances de contenir une Liche",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_abyss_lucky_pit_count"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Dans vos Cartes, les [ContainsAbyss|Abysses] lancent deux fois leur nombre de Fosses et conservent la valeur la plus élevée",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_abyss_magic_monster_chance_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Dans vos Cartes, les [ContainsAbyss|Abysses] ont {0}% d'Augmentation du nombre de Monstres Magiques générés",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Dans vos Cartes, les [ContainsAbyss|Abysses] ont {0}% de Réduction du nombre de Monstres Magiques générés",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4467,7 +4863,63 @@
         "index_handlers": [
           []
         ],
-        "string": "Dans vos Cartes, les Abysses ont {0}% d'Augmentation du nombre de Monstres générés pour chaque trou précédent de cet Abysse",
+        "string": "Dans vos Cartes, les Fosses d'[ContainsAbyss|Abysse] ont {0}% d'Augmentation du nombre de Monstres générés pour chaque Fosse précédemment fermée",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_abyss_no_reward_chance_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": -50,
+            "max": -50,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Les Fosses d'[ContainsAbyss|Abysse] de la Zone ont deux fois plus de chances d'avoir des Récompenses",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Les Fosses d'[ContainsAbyss|Abysse] de la Zone ont {0}% de perte de chances d'avoir des Récompenses",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4556,6 +5008,114 @@
   {
     "English": null,
     "ids": [
+      "map_abyss_num_additional_pits"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Dans vos Cartes, les [ContainsAbyss|Abysses] contiennent une Fosse supplémentaire",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Dans vos Cartes, les [ContainsAbyss|Abysses] contiennent {0} Fosses supplémentaires",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_abyss_num_additional_rare_monsters"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Les [ContainsAbyss|Abysses] génèrent un Monstre Rare supplémentaire",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Les [ContainsAbyss|Abysses] génèrent {0} Monstres Rares supplémentaires",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "map_abyss_path_chance_%_to_spawn_100%_increased_monsters"
     ],
     "trade_stats": null,
@@ -4576,6 +5136,62 @@
           []
         ],
         "string": "Dans vos Cartes, les failles des Abysses ont {0}% de chances d'avoir 100% d'Augmentation du nombre de Monstres générés",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_abyss_rare_monster_chance_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Dans vos Cartes, les [ContainsAbyss|Abysses] ont {0}% d'Augmentation du nombre de Monstres Rares générés",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Dans vos Cartes, les [ContainsAbyss|Abysses] ont {0}% de Réduction du nombre de Monstres Rares générés",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4685,7 +5301,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Dans vos Cartes, les Trésors abyssaux et Cimes stygiennes ont {0}% de chances de céder un Objet Rare doté d'une Châsse abyssale",
+        "string": "Dans vos Cartes, les Trésors abyssaux ont {0}% de chances de céder un objet Rare doté d'une Châsse abyssale",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4721,7 +5337,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Dans vos Cartes, les Joyaux abyssaux cédés par les Trésors abyssaux ou Cimes stygiennes ont {0}% de chances d'être Rares et Corrompus",
+        "string": "Les Joyaux abyssaux cédés par les Trésors abyssaux ont {0}% de chances d'être Rares et Corrompus",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4849,7 +5465,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Dans vos Cartes, les Trésors abyssaux et Cimes stygiennes ont {0}% d'Augmentation de Rareté des Objets cédés",
+        "string": "{0}% d'Augmentation de la Rareté des Objets cédés par les Trésors abyssaux dans vos Cartes",
         "reminder_text": null,
         "is_markup": null
       },
@@ -4869,7 +5485,7 @@
             "negate"
           ]
         ],
-        "string": "Dans vos Cartes, les Trésors abyssaux et Cimes stygiennes ont {0}% de Réduction de Rareté des Objets cédés",
+        "string": "{0}% de Réduction de la Rareté des Objets cédés par les Trésors abyssaux dans vos Cartes",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4905,7 +5521,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Dans vos Cartes, les Trésors abyssaux et Cimes stygiennes ont {0}% d'Augmentation de chances de contenir ou céder un Joyau abyssal",
+        "string": "{0}% d'Augmentation de la quantité de Joyaux abyssaux trouvés dans vos Cartes",
         "reminder_text": null,
         "is_markup": null
       },
@@ -4925,7 +5541,7 @@
             "negate"
           ]
         ],
-        "string": "Dans vos Cartes, les Trésors abyssaux et Cimes stygiennes ont {0}% de Réduction de chances de contenir ou céder un Joyau abyssal",
+        "string": "{0}% de Réduction de la quantité de Joyaux abyssaux trouvés dans vos Cartes",
         "reminder_text": null,
         "is_markup": null
       }
@@ -10178,6 +10794,60 @@
   {
     "English": null,
     "ids": [
+      "map_blueprints_drop_with_additional_special_implicit_%_chance"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Les Plans trouvés dans vos Cartes ont {0}% de chances d'avoir un implicite spécial",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Les Plans trouvés dans vos Cartes ont un implicite spécial",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "map_boss_accompanied_by_bodyguards"
     ],
     "trade_stats": null,
@@ -14690,42 +15360,6 @@
   {
     "English": null,
     "ids": [
-      "map_abyss_chance_%"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": [
-      {
-        "condition": [
-          {
-            "min": 1,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "+#"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Vos Cartes ont {0}% de chances de contenir un Abysse",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "map_chisel_to_map_%"
     ],
     "trade_stats": null,
@@ -17821,7 +18455,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Vos Cartes n'ont aucune chance de contenir des Abysses",
+        "string": "Vos Cartes n'ont aucune chance de contenir des [ContainsAbyss|Abysses]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -18362,6 +18996,78 @@
           []
         ],
         "string": "Les Scarabées trouvés dans vos Cartes ne peuvent pas être des Scarabées de Légion",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_disable_mercenary_from_chance"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Vos Cartes n'ont aucune chance de contenir des Mercenaires",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_disable_mercenary_scarab_drops"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Les Scarabées trouvés dans vos Cartes ne peuvent pas être des Scarabées trarthiens",
         "reminder_text": null,
         "is_markup": null
       }
@@ -19503,6 +20209,42 @@
   {
     "English": null,
     "ids": [
+      "map_divination_card_drop_chance_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% d'Augmentation du nombre de Cartes divinatoires trouvées dans vos Cartes",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "map_divination_cards_in_area_are_from_two_different_areas"
     ],
     "trade_stats": null,
@@ -19595,6 +20337,42 @@
           []
         ],
         "string": "Dans vos Cartes, les Filons et les Coffres de Sulfite voltaxique ont {0}% de chances de contenir deux fois plus de Sulfite",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_drop_scrying_orb_on_completion_chance_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Vos Cartes ont {0}% de chances de céder un [ScryingOrb|Orbe de scrutation] lors de leur complétion (Palier 14+)",
         "reminder_text": null,
         "is_markup": null
       }
@@ -21617,7 +22395,7 @@
           []
         ],
         "string": "Vos Cartes n'ont aucune chance de générer du Contenu supplémentaire",
-        "reminder_text": "(Les différents Contenus supplémentaires sont : les Abysses, les Portails de Démon d'Ailleurs, les rencontres avec l'Infestation, les Brèches, les rencontres d'Expédition, les rencontres de Légions, les Miroirs du Délire, les monstres emprisonnés par des Essences, les Gisements de Minerai, les Autels de Rituel, les Exilés renégats, le Bosquet sacré, les Autels, les Caches de contrebandier, les Coffres-forts, les Tempêtes, les Esprits tourmentés, les rencontres d'Ultimatum, les Flammeroles de la Sylve et les missions de Jun, Alva, Einhar et Niko)",
+        "reminder_text": "(Les différents Contenus supplémentaires sont : les Abysses, les Portails de Démons d'Ailleurs, les Rencontres d'Infestation, les Brèches, les Rencontres d'Expédition, les Rencontres de Légion, les Mercenaires, les Miroirs du Délire et les Statdes de Délire, les Monstres emprisonnés par des Essences, les Gisements de Minerai, les Autels de Rituel, les Exilés renégats, le Bosquet sacré, les Autels, les Caches de contrebandier, les Coffres-forts, les Tempêtes, les Esprits tourmentés, les Rencontres d'Ultimatum, les Flammeroles de la Sylve et les Missions de Jun, Alva, Einhar et Niko)",
         "is_markup": null
       }
     ],
@@ -21653,7 +22431,7 @@
           []
         ],
         "string": "Vos Cartes peuvent générer au maximum un type de Contenu supplémentaire",
-        "reminder_text": "(Les différents Contenus supplémentaires sont : les Abysses, les Portails de Démon d'Ailleurs, les rencontres avec l'Infestation, les Brèches, les rencontres d'Expédition, les rencontres de Légions, les Miroirs du Délire, les monstres emprisonnés par des Essences, les Gisements de Minerai, les Autels de Rituel, les Exilés renégats, le Bosquet sacré, les Autels, les Caches de contrebandier, les Coffres-forts, les Tempêtes, les Esprits tourmentés, les rencontres d'Ultimatum, les Flammeroles de la Sylve et les missions de Jun, Alva, Einhar et Niko)",
+        "reminder_text": "(Les différents Contenus supplémentaires sont : les Abysses, les Portails de Démons d'Ailleurs, les Rencontres d'Infestation, les Brèches, les Rencontres d'Expédition, les Rencontres de Légion, les Mercenaires, les Miroirs du Délire et les Statdes de Délire, les Monstres emprisonnés par des Essences, les Gisements de Minerai, les Autels de Rituel, les Exilés renégats, le Bosquet sacré, les Autels, les Caches de contrebandier, les Coffres-forts, les Tempêtes, les Esprits tourmentés, les Rencontres d'Ultimatum, les Flammeroles de la Sylve et les Missions de Jun, Alva, Einhar et Niko)",
         "is_markup": null
       }
     ],
@@ -23019,7 +23797,7 @@
           []
         ],
         "string": "Les Cartes ont 0% de chances d'avoir 1 ou 2 types de Contenu bonus",
-        "reminder_text": "(Les différents Contenus bonus sont : les Abysses, les Rencontres avec l'Infestation, les Brèches, les Rencontres d'Expédition, les Rencontres de Légions, les Miroirs du Délire, les Gisements de Minerai, les Autels de Rituel, le Bosquet sacré, les Caches de contrebandier, les Rencontres d'Ultimatum, et les Missions de Maître)",
+        "reminder_text": "(Les différents Contenus bonus sont : les Abysses, les Rencontres d'Infestation, les Brèches, les Rencontres d'Expédition, les Rencontres de Légion, les Mercenaires, les Miroirs du Délire, les Gisements de Minerai, les Autels de Rituel, le Bosquet sacré, les Caches de contrebandier, les Rencontres d'Ultimatum, et les Missions de Maître)",
         "is_markup": null
       }
     ],
@@ -26073,7 +26851,8 @@
   {
     "English": null,
     "ids": [
-      "map_item_drop_quantity_+%"
+      "map_item_drop_quantity_+%",
+      "chart_quantity_voyage_display_stat"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -26084,12 +26863,19 @@
             "min": 1,
             "max": null,
             "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
           }
         ],
         "format": [
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
+          [],
           []
         ],
         "string": "Vos Cartes ont {0}% d'Augmentation de la Quantité d'Objets cédés",
@@ -26102,15 +26888,22 @@
             "min": null,
             "max": -1,
             "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
           }
         ],
         "format": [
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
           [
             "negate"
-          ]
+          ],
+          []
         ],
         "string": "Vos Cartes ont {0}% de Réduction de la Quantité d'Objets cédés",
         "reminder_text": null,
@@ -26129,7 +26922,8 @@
   {
     "English": null,
     "ids": [
-      "map_item_drop_rarity_+%"
+      "map_item_drop_rarity_+%",
+      "chart_rarity_voyage_display_stat"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -26140,12 +26934,19 @@
             "min": 1,
             "max": null,
             "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
           }
         ],
         "format": [
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
+          [],
           []
         ],
         "string": "Vos Cartes ont {0}% d'Augmentation de Rareté des Objets trouvés",
@@ -26158,15 +26959,22 @@
             "min": null,
             "max": -1,
             "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
           }
         ],
         "format": [
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
           [
             "negate"
-          ]
+          ],
+          []
         ],
         "string": "Vos Cartes ont {0}% de Réduction de Rareté des Objets trouvés",
         "reminder_text": null,
@@ -26315,7 +27123,7 @@
           []
         ],
         "string": "Vos Cartes ont {0}% Davantage de chances de base de contenir du Contenu supplémentaire",
-        "reminder_text": "(Les différents Contenus supplémentaires sont : les Abysses, les Portails de Démon d'Ailleurs, les rencontres avec l'Infestation, les Brèches, les rencontres d'Expédition, les rencontres de Légions, les Miroirs du Délire, les monstres emprisonnés par des Essences, les Gisements de Minerai, les Autels de Rituel, les Exilés renégats, le Bosquet sacré, les Autels, les Caches de contrebandier, les Coffres-forts, les Tempêtes, les Esprits tourmentés, les rencontres d'Ultimatum, les Flammeroles de la Sylve et les missions de Jun, Alva, Einhar et Niko)",
+        "reminder_text": "(Les différents Contenus supplémentaires sont : les Abysses, les Portails de Démons d'Ailleurs, les Rencontres d'Infestation, les Brèches, les Rencontres d'Expédition, les Rencontres de Légion, les Mercenaires, les Miroirs du Délire et les Statdes de Délire, les Monstres emprisonnés par des Essences, les Gisements de Minerai, les Autels de Rituel, les Exilés renégats, le Bosquet sacré, les Autels, les Caches de contrebandier, les Coffres-forts, les Tempêtes, les Esprits tourmentés, les Rencontres d'Ultimatum, les Flammeroles de la Sylve et les Missions de Jun, Alva, Einhar et Niko)",
         "is_markup": null
       }
     ],
@@ -26351,7 +27159,7 @@
           []
         ],
         "string": "Vos Cartes ont {0}% de chances de contenir du Contenu supplémentaire",
-        "reminder_text": "(Les différents Contenus supplémentaires sont : les Abysses, les Portails de Démon d'Ailleurs, les rencontres avec l'Infestation, les Brèches, les rencontres d'Expédition, les rencontres de Légions, les Miroirs du Délire, les monstres emprisonnés par des Essences, les Gisements de Minerai, les Autels de Rituel, les Exilés renégats, le Bosquet sacré, les Autels, les Caches de contrebandier, les Coffres-forts, les Tempêtes, les Esprits tourmentés, les rencontres d'Ultimatum, les Flammeroles de la Sylve et les missions de Jun, Alva, Einhar et Niko)",
+        "reminder_text": "(Les différents Contenus supplémentaires sont : les Abysses, les Portails de Démons d'Ailleurs, les Rencontres d'Infestation, les Brèches, les Rencontres d'Expédition, les Rencontres de Légion, les Mercenaires, les Miroirs du Délire et les Statdes de Délire, les Monstres emprisonnés par des Essences, les Gisements de Minerai, les Autels de Rituel, les Exilés renégats, le Bosquet sacré, les Autels, les Caches de contrebandier, les Coffres-forts, les Tempêtes, les Esprits tourmentés, les Rencontres d'Ultimatum, les Flammeroles de la Sylve et les Missions de Jun, Alva, Einhar et Niko)",
         "is_markup": null
       }
     ],
@@ -26476,7 +27284,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Dans vos Cartes, les Esquilles contenues dans les Coffres de Légion ont {0}% de chances d'être dupliquées",
+        "string": "Dans vos Cartes, les Esquilles intemporelles contenues dans les Coffres de Légion ont {0}% de chances d'être Dupliquées",
         "reminder_text": null,
         "is_markup": null
       }
@@ -26786,7 +27594,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Dans vos Cartes, les rencontres de Légions ont {0}% Davantage de chances de contenir un Général",
+        "string": "Dans vos Cartes, les Rencontres de Légion ont {0}% d'Augmentation de chances d'inclure un Général",
         "reminder_text": "(Les Généraux de Légion sont la Reine Hyrri Ngamaku, le Général Marcéus Œil de Lion, le Cardinal Sanctus Vox, la Vipère Napuatzi et Aukuna, la Sekhema noire)",
         "is_markup": null
       }
@@ -26858,7 +27666,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Dans vos Cartes, les Généraux de Légion ont {0}% Davantage d'Esquilles intemporelles cédées",
+        "string": "{0}% d'Augmentation de la Quantité d'Esquilles intemporelles cédées par les Généraux de Légion dans vos Cartes",
         "reminder_text": null,
         "is_markup": null
       },
@@ -26878,7 +27686,7 @@
             "negate"
           ]
         ],
-        "string": "Dans vos Cartes, les Généraux de Légion ont {0}% de Perte d'Esquilles intemporelles cédées",
+        "string": "{0}% de Réduction de la Quantité d'Esquilles intemporelles cédées par les Généraux de Légion dans vos Cartes",
         "reminder_text": null,
         "is_markup": null
       }
@@ -27248,7 +28056,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Dans vos Cartes, les Esquilles cédées par les Monstres de Légion ou contenues dans les Coffres de Légion ont {0}% de chances d'être Dupliquées",
+        "string": "Dans vos Cartes, les Esquilles intemporelles cédées par les Monstres de Légion ou contenues dans les Coffres de Légion ont {0}% de chances d'être Dupliquées",
         "reminder_text": null,
         "is_markup": null
       }
@@ -27340,7 +28148,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Dans vos Cartes, les Esquilles cédées par les Monstres de Légion ont {0}% de chances d'être dupliquées",
+        "string": "Dans vos Cartes, les Esquilles intemporelles cédées par les Monstres de Légion ont {0}% de chances d'être Dupliquées",
         "reminder_text": null,
         "is_markup": null
       }
@@ -27412,7 +28220,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Dans vos Cartes, les Monstres de Légion ont {0}% de chances de céder un Éclat intemporel supplémentaire\nDans vos Cartes, les Coffres de Légion ont {0}% de chances de contenir un Éclat intemporel supplémentaire",
+        "string": "Dans vos Cartes, les Monstres de Légion ont {0}% de chances de céder une Esquille intemporelle supplémentaire\nDans vos Cartes, les Coffres de Légion ont {0}% de chances de contenir une Esquille intemporelle supplémentaire",
         "reminder_text": null,
         "is_markup": null
       }
@@ -28665,6 +29473,1022 @@
           []
         ],
         "string": "{0}% Davantage d'Esquilles falciformes trouvées dans le Creuset de la Prodige",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_mercenary_additional_chance_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Vos Cartes ont {0}% de chances d'être habitées par un Mercenaire",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_mercenary_additional_support_chance_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Les Aptitudes des Mercenaires trouvés dans vos Cartes ont {0}% de chances d'être affectées par une Gemme de soutien supplémentaire",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Les Aptitudes des Mercenaires trouvés dans vos Cartes sont affectées par une Gemme de soutien supplémentaire",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_mercenary_aura_effect_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Les Auras issues des Aptitudes des Mercenaires trouvés dans vos Cartes ont {0}% d'Augmentation d'effet",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Les Auras issues des Aptitudes des Mercenaires trouvés dans vos Cartes ont {0}% de Réduction d'effet",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_mercenary_chance_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Vos Cartes ont {0}% d'Augmentation de chances d'être habitées par un Mercenaire",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Vos Cartes ont {0}% de Réduction de chances d'être habitées par un Mercenaire",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_mercenary_cooldown_speed_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Les Mercenaires trouvés dans vos Cartes ont {0}% d'Augmentation de Vitesse de recharge",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Les Mercenaires trouvés dans vos Cartes ont {0}% de Réduction de Vitesse de recharge",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_mercenary_dexterity_aligned_chance_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Les Mercenaires trouvés dans vos Cartes ont {0}% Davantage de chances d'être spécialisés en Dextérité",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Les Mercenaires trouvés dans vos Cartes ont {0}% de Perte de chances d'être spécialisés en Dextérité",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_mercenary_drop_additional_items"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Les Mercenaires vaincus dans vos Cartes cèdent {0} de leurs objets non revendiqués",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_mercenary_drop_all_items_chance_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Les Mercenaires vaincus dans vos Cartes ont {0}% de chances de céder tous leurs objets",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Les Mercenaires vaincus dans vos Cartes cèdent tous leurs objets",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_mercenary_has_random_shrine_effect"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Les Mercenaires trouvés dans vos Cartes sont affectés par un effet bénéfique d'Autel aléatoire",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_mercenary_have_onslaught"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Les Mercenaires trouvés dans vos Cartes ont Assaut",
+        "reminder_text": "(Assaut octroie 20% d'Augmentation de Vitesse d'attaque, d'incantation et de déplacement)",
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_mercenary_house_azadi_chance_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Les Mercenaires trouvés dans vos Cartes ont {0}% d'Augmentation de chances d'appartenir à la Maison Azadi",
+        "reminder_text": "(Les Mercenaires issus de la Maison Azadi sont des Duellistes et des Ombres)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Les Mercenaires trouvés dans vos Cartes ont {0}% d'Augmentation de chances d'appartenir à la Maison Azadi",
+        "reminder_text": "(Les Mercenaires issus de la Maison Azadi sont des Duellistes et des Ombres)",
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_mercenary_house_cyaxan_chance_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Les Mercenaires trouvés dans vos Cartes ont {0}% d'Augmentation de chances d'appartenir à la Maison Cyaxan",
+        "reminder_text": "(Les Mercenaires issus de la Maison Cyaxan sont des Sorcières et des Rôdeuses)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Les Mercenaires trouvés dans vos Cartes ont {0}% d'Augmentation de chances d'appartenir à la Maison Cyaxan",
+        "reminder_text": "(Les Mercenaires issus de la Maison Cyaxan sont des Sorcières et des Rôdeuses)",
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_mercenary_house_keita_chance_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Les Mercenaires trouvés dans vos Cartes ont {0}% d'Augmentation de chances d'appartenir à la Maison Keita",
+        "reminder_text": "(Les Mercenaires issus de la Maison Keita sont des Templiers et des Maraudeurs)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Les Mercenaires trouvés dans vos Cartes ont {0}% d'Augmentation de chances d'appartenir à la Maison Keita",
+        "reminder_text": "(Les Mercenaires issus de la Maison Keita sont des Templiers et des Maraudeurs)",
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_mercenary_infamous_chance_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Les Mercenaires trouvés dans vos Cartes ont {0}% d'Augmentation de chances d'être Infâmes",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Les Mercenaires trouvés dans vos Cartes ont {0}% de Réduction de chances d'être Infâmes",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_mercenary_intelligence_aligned_chance_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Les Mercenaires trouvés dans vos Cartes ont {0}% Davantage de chances d'être spécialisés en Intelligence",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Les Mercenaires trouvés dans vos Cartes ont {0}% de Perte de chances d'être spécialisés en Intelligence",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_mercenary_rucksack_is_full"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "La Sacoche des Mercenaires trouvés dans vos Cartes est toujours pleine",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_mercenary_strength_aligned_chance_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Les Mercenaires trouvés dans vos Cartes ont {0}% Davantage de chances d'être spécialisés en Force",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Les Mercenaires trouvés dans vos Cartes ont {0}% de Perte de chances d'être spécialisés en Force",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_mercenary_unique_item_chance_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Les objets portés par les Mercenaires trouvés dans vos Cartes ont {0}% d'Augmentation de chances d'être Uniques",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Les objets portés par les Mercenaires trouvés dans vos Cartes ont {0}% de Réduction de chances d'être Uniques",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_mercenary_wager_gold_amount_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Dans vos Cartes, les Mises des Mercenaires requièrent {0}% d'Augmentation d'Or",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Dans vos Cartes, les Mises des Mercenaires requièrent {0}% de Réduction d'Or",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_mercenary_wager_gold_returned_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Dans vos Cartes, les Mises des Mercenaires rapportent {0}% d'Augmentation d'Or si vous gagnez",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Dans vos Cartes, les Mises des Mercenaires rapportent {0}% de Réduction d'Or si vous gagnez",
         "reminder_text": null,
         "is_markup": null
       }
@@ -31521,7 +33345,8 @@
   {
     "English": null,
     "ids": [
-      "map_pack_size_+%"
+      "map_pack_size_+%",
+      "chart_pack_size_voyage_display_stat"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -31532,12 +33357,19 @@
             "min": 1,
             "max": null,
             "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
           }
         ],
         "format": [
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
+          [],
           []
         ],
         "string": "{0}% d'Augmentation de la taille des Groupes dans vos Cartes",
@@ -32441,7 +34273,7 @@
           []
         ],
         "string": "Vos Cartes ont {0}% de chances de contenir du Contenu supplémentaire qui\npeut être désactivé avec les Talents de l'Atlas",
-        "reminder_text": "(Les contenus supplémentaires qui peuvent être désactivés grâce à des Talents de l'Atlas sont : les Abysses, les Rencontres avec l'Infestation, les Brèches, les Rencontres d'Expédition, les Rencontres de Légions, les Miroirs du Délire, les Gisements de Minerai, les Autels de Rituel, le Bosquet sacré, les Caches de contrebandier et les Rencontres d'Ultimatum.)",
+        "reminder_text": "(Les contenus supplémentaires qui peuvent être désactivés grâce à des Talents de l'Atlas sont : les Abysses, les Rencontres d'Infestation, les Brèches, les Rencontres d'Expédition, les Rencontres de Légion, les Mercenaires, les Miroirs du Délire, les Gisements de Minerai, les Autels de Rituel, le Bosquet sacré, les Caches de contrebandier et les Rencontres d'Ultimatum.)",
         "is_markup": null
       }
     ],
@@ -33485,7 +35317,7 @@
             "divide_by_one_hundred_2dp_if_required"
           ]
         ],
-        "string": "Dans vos Cartes, les Éclats intemporels cédés ont {0}% de chances de devenir des Emblèmes intemporels",
+        "string": "Dans vos Cartes, les Esquilles intemporelles cédées ont {0}% de chances de devenir des Emblèmes intemporels",
         "reminder_text": null,
         "is_markup": null
       }
@@ -35980,7 +37812,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Vos Cartes peuvent contenir des Abysses",
+        "string": "Vos Cartes contiennent des [ContainsAbyss|Abysses]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -36016,7 +37848,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Vos Cartes contiennent un miroir du Délire",
+        "string": "Vos Cartes contiennent un Miroir du Délire",
         "reminder_text": null,
         "is_markup": null
       }
@@ -41933,6 +43765,42 @@
           []
         ],
         "string": "Les Scarabées cédés dans vos Cartes ont {0}% d'Augmentation de chances d'être des Scarabées de Cartographie",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_mercenary_scarab_more_likely_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Les Scarabées cédés dans vos Cartes ont {0}% d'Augmentation de chances d'être des Scarabées trarthiens",
         "reminder_text": null,
         "is_markup": null
       }

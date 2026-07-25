@@ -515,6 +515,18 @@
     },
     "stack_limit": null
   },
+  "brine_charge": {
+    "description": "Spieler verursachen einen Teil des physischen Schadens als extra Blitz- und Kälteschaden für jede Gischt-Ladung.",
+    "invisible": false,
+    "name": "Gischt-Ladungen",
+    "removable": false,
+    "stats": [],
+    "visuals": "brine_charge_visual",
+    "category": "Charge",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "spirit_charge": {
     "description": "Werden für die Verwendung bestimmter Fertigkeiten benötigt.",
     "invisible": false,
@@ -5705,7 +5717,7 @@
   "lightning_thorns": {
     "description": "Ihr sendet bei erlittenem Treffer Blitzprojektile aus.",
     "invisible": false,
-    "name": "Blitzdornen",
+    "name": "Blitzende Vergeltung",
     "removable": false,
     "stats": [
       "minimum_lightning_damage_to_return_when_hit",
@@ -6267,6 +6279,14 @@
       "Mods": [
         {
           "id": "DamageAuraUniqueHelmetDexInt2",
+          "item": null,
+          "name": null,
+          "template": "DamageAuraUniqueHelmetDexInt2",
+          "stat_text": null,
+          "stats": null
+        },
+        {
+          "id": "DivergentDisplayDamageAuraUniqueHelmetDexInt2",
           "item": null,
           "name": null,
           "template": "DamageAuraUniqueHelmetDexInt2",
@@ -8169,6 +8189,23 @@
     "templates": null,
     "stack_limit": null
   },
+  "soul_eater_player": {
+    "description": "Ihr verfügt über erhöhte Angriffsgeschwindigkeit, Zaubergeschwindigkeit und Charaktergröße.",
+    "invisible": false,
+    "name": "Seelenfresser",
+    "removable": false,
+    "stats": [
+      "capped_actor_scale_+%",
+      "attack_speed_+%",
+      "base_cast_speed_+%",
+      "damage_taken_+%_final_from_soul_eater_if_not_player"
+    ],
+    "visuals": "soul_eater",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "frostwall_epk": {
     "description": "",
     "invisible": true,
@@ -8355,7 +8392,7 @@
     "stack_limit": null
   },
   "unique_dying_breath_curse_aura": {
-    "description": "Ihr erleidet erhöhte Flucheffekte.",
+    "description": "Flüche haben eine erhöhte Wirkung auf Euch.",
     "invisible": false,
     "name": "Todeshauch",
     "removable": false,
@@ -8541,40 +8578,16 @@
     "name": "Unheilige Macht",
     "removable": false,
     "stats": [
-      "has_unholy_might"
+      "has_unholy_might",
+      "base_physical_damage_%_to_convert_to_chaos",
+      "withered_on_hit_for_2_seconds_%_chance",
+      "withered_effect_+%",
+      "reduce_enemy_chaos_resistance_%"
     ],
     "visuals": "unholy_might",
     "category": "Buff",
-    "sources": {
-      "Mods": [
-        {
-          "id": "GrantsUnholyMightUnique__1",
-          "item": null,
-          "name": null,
-          "template": "GrantsUnholyMightUnique__1",
-          "stat_text": null,
-          "stats": null
-        }
-      ]
-    },
-    "templates": {
-      "GrantsUnholyMightUnique__1": {
-        "aura_radius_metres": null,
-        "stats": {
-          "has_unholy_might": 0
-        },
-        "stat_text": null,
-        "visuals": null
-      },
-      "SentinelPlayerUnholyMight": {
-        "aura_radius_metres": null,
-        "stats": {
-          "has_unholy_might": 1
-        },
-        "stat_text": null,
-        "visuals": null
-      }
-    },
+    "sources": null,
+    "templates": null,
     "stack_limit": null
   },
   "unholy_might_permanent": {
@@ -8583,7 +8596,11 @@
     "name": "Unheilige Macht",
     "removable": false,
     "stats": [
-      "has_unholy_might"
+      "has_unholy_might",
+      "base_physical_damage_%_to_convert_to_chaos",
+      "withered_on_hit_for_2_seconds_%_chance",
+      "withered_effect_+%",
+      "reduce_enemy_chaos_resistance_%"
     ],
     "visuals": "unholy_might",
     "category": "Buff",
@@ -8593,16 +8610,57 @@
   },
   "unholy_might_from_flask": {
     "description": "Euer physischer Schaden wird in Chaosschaden umgewandelt und Ihr habt 25% Chance, bei Treffer Verkümmerung anzuwenden.",
+    "invisible": true,
+    "name": "Unheilige Macht",
+    "removable": false,
+    "stats": [
+      "base_should_have_unholy_might"
+    ],
+    "visuals": "invisible",
+    "category": "Flask",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "unholy_might_from_stat": {
+    "description": "Euer physischer Schaden wird in Chaosschaden umgewandelt und Ihr habt 25% Chance, bei Treffer Verkümmerung anzuwenden.",
     "invisible": false,
     "name": "Unheilige Macht",
     "removable": false,
     "stats": [
-      "has_unholy_might"
+      "has_unholy_might",
+      "base_physical_damage_%_to_convert_to_chaos",
+      "withered_on_hit_for_2_seconds_%_chance",
+      "withered_effect_+%",
+      "reduce_enemy_chaos_resistance_%"
     ],
     "visuals": "unholy_might",
-    "category": "Flask",
+    "category": "Buff",
     "sources": null,
     "templates": null,
+    "stack_limit": null
+  },
+  "sentinal_unholy_might": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "base_should_have_unholy_might"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": {
+      "SentinelPlayerUnholyMight": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_should_have_unholy_might": 1
+        },
+        "stat_text": null,
+        "visuals": null
+      }
+    },
     "stack_limit": null
   },
   "daemon_delay": {
@@ -9026,7 +9084,7 @@
   "marauder_mission_have_idol": {
     "description": "Bringt die Karui-Seele zurück zum Eingang.",
     "invisible": false,
-    "name": "Ihr besitzt die Karui-Seele.",
+    "name": "Ihr besitzt die Karui-Seele",
     "removable": true,
     "stats": [],
     "visuals": "marauder_mission_have_treasure",
@@ -12591,7 +12649,7 @@
           "name": null,
           "template": null,
           "stat_text": [
-            "Setzt Elementarwiderstände auf Null",
+            "Elementarwiderstände sind null",
             "40% verkleinerter Lichtradius"
           ],
           "stats": {
@@ -12668,7 +12726,7 @@
           "template": null,
           "stat_text": [
             "Schemenform",
-            "25% Chance, sämtlichen Schaden von Treffern zu vermeiden"
+            "25% Chance, Schaden von jedem Schadenstyp von Treffern zu vermeiden"
           ],
           "stats": {
             "phase_through_objects": 1,
@@ -12873,7 +12931,7 @@
     "stack_limit": null
   },
   "status_immunity_storm": {
-    "description": "Ihr könnt nicht unterkühlt, eingefroren, entzündet oder geschockt werden. Ihr besitzt zusätzliche Elementarresistenzen und die maximalen Elementarresistenzen.",
+    "description": "Ihr könnt nicht unterkühlt, eingefroren, entzündet oder geschockt werden. Ihr besitzt zusätzliche Elementarwiderstände und maximale Elementarwiderstände.",
     "invisible": false,
     "name": "Widerstehender Sturm",
     "removable": false,
@@ -13648,8 +13706,7 @@
     "name": "Verkümmert",
     "removable": false,
     "stats": [
-      "chaos_damage_taken_+%",
-      "is_withered"
+      "chaos_damage_taken_+%"
     ],
     "visuals": "wither_resistance",
     "category": "Debuff",
@@ -13658,8 +13715,7 @@
       "BreachWithered": {
         "aura_radius_metres": 2.5,
         "stats": {
-          "chaos_damage_taken_+%": 5,
-          "is_withered": 1
+          "chaos_damage_taken_+%": 5
         },
         "stat_text": [
           "5% erhöhter erlittener Chaosschaden"
@@ -13787,6 +13843,8 @@
     "removable": false,
     "stats": [
       "base_movement_velocity_+%",
+      "global_cannot_crit",
+      "enemy_critical_strike_chance_+%_final_against_self_from_abyssal_gaze",
       "is_maimed"
     ],
     "visuals": "maim",
@@ -15378,7 +15436,7 @@
     "stack_limit": null
   },
   "shield_defence_aura": {
-    "description": "Euch werden die Schild-Verteidigungswerte eines verbündeten Wächters gewährt.",
+    "description": "Euch werden die Schild-Defensiven eines verbündeten Wächters gewährt.",
     "invisible": true,
     "name": "Schildbeherrschung",
     "removable": false,
@@ -21977,7 +22035,9 @@
       "arcane_surge_cast_speed_+%",
       "mana_regeneration_rate_+%",
       "life_regeneration_rate_+%",
-      "spell_damage_+%_final_from_arcane_surge"
+      "spell_damage_+%_final_from_arcane_surge",
+      "damage_taken_goes_to_mana_%",
+      "base_mana_cost_efficiency_+%"
     ],
     "visuals": "arcane_surge",
     "category": "Buff",
@@ -23371,6 +23431,14 @@
           "template": "GainReducedManaCostOnManaSpentUnique__1",
           "stat_text": null,
           "stats": null
+        },
+        {
+          "id": "MutatedUniqueGlovesInt4GainManaCostEfficiencyOnManaSpent",
+          "item": null,
+          "name": null,
+          "template": "GainReducedManaCostOnManaSpentUnique__1",
+          "stat_text": null,
+          "stats": null
         }
       ]
     },
@@ -23391,6 +23459,20 @@
     "removable": false,
     "stats": [
       "base_mana_cost_-%"
+    ],
+    "visuals": "critical_strike_chance_unique",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "mana_cost_efficiency_unique": {
+    "description": "Ihr verfügt über erhöhte Manakosteneffizienz.",
+    "invisible": false,
+    "name": "Kalisas Freude",
+    "removable": false,
+    "stats": [
+      "base_mana_cost_efficiency_+%"
     ],
     "visuals": "critical_strike_chance_unique",
     "category": "Buff",
@@ -23433,6 +23515,14 @@
       "Mods": [
         {
           "id": "NearbyStationaryEnemiesGainVinesUnique__1",
+          "item": null,
+          "name": null,
+          "template": "NearbyStationaryEnemiesGainGraspingVineUnique",
+          "stat_text": null,
+          "stats": null
+        },
+        {
+          "id": "DivergentNearbyStationaryEnemiesGainVinesUnique__1",
           "item": null,
           "name": null,
           "template": "NearbyStationaryEnemiesGainGraspingVineUnique",
@@ -24537,8 +24627,7 @@
     "name": "Aspekt des Krebses",
     "removable": true,
     "stats": [
-      "physical_damage_reduction_%_per_crab_aspect_stack",
-      "max_crab_aspect_stacks"
+      "physical_damage_reduction_%_per_crab_aspect_stack"
     ],
     "visuals": "crab_aspect",
     "category": "Aspect",
@@ -24551,8 +24640,7 @@
           "template": null,
           "stat_text": null,
           "stats": {
-            "physical_damage_reduction_%_per_crab_aspect_stack": 1,
-            "max_crab_aspect_stacks": 1
+            "physical_damage_reduction_%_per_crab_aspect_stack": 1
           }
         }
       ]
@@ -27831,6 +27919,14 @@
           "template": "NearbyEnemiesHaveReducedAllResistancesUnique__1",
           "stat_text": null,
           "stats": null
+        },
+        {
+          "id": "DivergentNearbyEnemiesHaveReducedAllResistancesUnique__1",
+          "item": null,
+          "name": null,
+          "template": "NearbyEnemiesHaveReducedAllResistancesUnique__1",
+          "stat_text": null,
+          "stats": null
         }
       ]
     },
@@ -28215,6 +28311,14 @@
           "stats": null
         },
         {
+          "id": "DivergentTriggerFeastOfFleshSkillUnique__1_",
+          "item": null,
+          "name": null,
+          "template": "TriggerFeastOfFleshSkillUnique__1_",
+          "stat_text": null,
+          "stats": null
+        },
+        {
           "id": "TriggerRandomOfferingSkillUnique__1",
           "item": null,
           "name": null,
@@ -28454,7 +28558,7 @@
   "flask_bonus_stun_avoidance": {
     "description": "Ihr habt eine Chance, Betäubungen zu vermeiden, solange dieses Fläschchen aktiv ist.",
     "invisible": true,
-    "name": "Betäubungsvermeidung",
+    "name": "Betäubung vermeiden",
     "removable": false,
     "stats": [
       "base_avoid_stun_%"
@@ -29445,6 +29549,14 @@
           "template": "NearbyEnemiesCannotCritUnique__1",
           "stat_text": null,
           "stats": null
+        },
+        {
+          "id": "DivergentNearbyEnemiesCannotCritUnique__1",
+          "item": null,
+          "name": null,
+          "template": "NearbyEnemiesCannotCritUnique__1",
+          "stat_text": null,
+          "stats": null
         }
       ]
     },
@@ -29822,9 +29934,9 @@
         "stat_text": [
           "20% Chance, bei Treffer eine Energie-, Raserei- oder Widerstands-Ladung zu erhalten",
           "60% Chance, bei Tötung eine Energie-, Raserei- oder Widerstands-Ladung zu erhalten",
-          "+1 zu maximaler Anzahl an Energie-Ladungen",
-          "+1 zu maximaler Anzahl an Widerstands-Ladungen",
-          "+1 zu maximaler Anzahl an Raserei-Ladungen"
+          "+1 zu maximaler Anzahl von Energie-Ladungen",
+          "+1 zu maximaler Anzahl von Widerstands-Ladungen",
+          "+1 zu maximaler Anzahl von Raserei-Ladungen"
         ],
         "visuals": null
       },
@@ -29856,9 +29968,9 @@
         "stat_text": [
           "20% Chance, bei Treffer eine Energie-, Raserei- oder Widerstands-Ladung zu erhalten",
           "60% Chance, bei Tötung eine Energie-, Raserei- oder Widerstands-Ladung zu erhalten",
-          "+1 zu maximaler Anzahl an Energie-Ladungen",
-          "+1 zu maximaler Anzahl an Widerstands-Ladungen",
-          "+1 zu maximaler Anzahl an Raserei-Ladungen"
+          "+1 zu maximaler Anzahl von Energie-Ladungen",
+          "+1 zu maximaler Anzahl von Widerstands-Ladungen",
+          "+1 zu maximaler Anzahl von Raserei-Ladungen"
         ],
         "visuals": null
       },
@@ -29875,9 +29987,9 @@
         "stat_text": [
           "20% Chance, bei Treffer eine Energie-, Raserei- oder Widerstands-Ladung zu erhalten",
           "60% Chance, bei Tötung eine Energie-, Raserei- oder Widerstands-Ladung zu erhalten",
-          "+1 zu maximaler Anzahl an Energie-Ladungen",
-          "+1 zu maximaler Anzahl an Widerstands-Ladungen",
-          "+1 zu maximaler Anzahl an Raserei-Ladungen"
+          "+1 zu maximaler Anzahl von Energie-Ladungen",
+          "+1 zu maximaler Anzahl von Widerstands-Ladungen",
+          "+1 zu maximaler Anzahl von Raserei-Ladungen"
         ],
         "visuals": null
       }
@@ -33623,6 +33735,14 @@
           "stats": null
         },
         {
+          "id": "DivergentNearbyEnemiesAreScorchedUnique__1",
+          "item": null,
+          "name": null,
+          "template": "NearbyEnemiesAreScorchedUnique__1",
+          "stat_text": null,
+          "stats": null
+        },
+        {
           "id": "MonsterEnemiesTaunted1",
           "item": null,
           "name": null,
@@ -33859,6 +33979,14 @@
           "stats": null
         },
         {
+          "id": "HearbyEnemiesAreHinderedBloodShrine",
+          "item": null,
+          "name": null,
+          "template": "HearbyEnemiesAreHinderedBloodShrine",
+          "stat_text": null,
+          "stats": null
+        },
+        {
           "id": "CleansingAltarDownsideBossHinderAura",
           "item": null,
           "name": null,
@@ -33887,6 +34015,14 @@
       },
       "HearbyEnemiesAreHinderedUltimatum_": {
         "aura_radius_metres": 2.8,
+        "stats": {
+          "hinder_aura_behaviour_variation": 0
+        },
+        "stat_text": null,
+        "visuals": "hinder"
+      },
+      "HearbyEnemiesAreHinderedBloodShrine": {
+        "aura_radius_metres": 2.0,
         "stats": {
           "hinder_aura_behaviour_variation": 0
         },
@@ -34415,6 +34551,14 @@
           "stats": null
         },
         {
+          "id": "DivergentShockedGroundWhileMovingUnique__1",
+          "item": null,
+          "name": null,
+          "template": "ShockedGroundWhileMovingUnique__1_",
+          "stat_text": null,
+          "stats": null
+        },
+        {
           "id": "ScorchedGroundWhileMovingUnique__1",
           "item": null,
           "name": null,
@@ -34665,20 +34809,6 @@
     "templates": null,
     "stack_limit": null
   },
-  "unholy_might_while_no_es": {
-    "description": "Euer physischer Schaden wird in Chaosschaden umgewandelt und Ihr habt 25% Chance, bei Treffer Verkümmerung anzuwenden.",
-    "invisible": false,
-    "name": "Unheilige Macht",
-    "removable": false,
-    "stats": [
-      "has_unholy_might"
-    ],
-    "visuals": "unholy_might",
-    "category": "Buff",
-    "sources": null,
-    "templates": null,
-    "stack_limit": null
-  },
   "dynamo_mana_recovery": {
     "description": "",
     "invisible": true,
@@ -34706,7 +34836,7 @@
     "stack_limit": null
   },
   "alchemists_genius": {
-    "description": "Fläschchen haben auf Euch erhöhte Wirkung und Ihr erhaltet eine erhöhte Anzahl an Fläschchenfüllungen.",
+    "description": "Fläschchen haben auf Euch erhöhte Wirkung und Ihr erhaltet eine erhöhte Anzahl von Fläschchenfüllungen.",
     "invisible": false,
     "name": "Genie des Alchemisten",
     "removable": false,
@@ -35268,6 +35398,20 @@
     "templates": null,
     "stack_limit": null
   },
+  "abyssal_well_blackhole_damage_over_time": {
+    "description": "[DNT] You are taking Chaos Damage over time",
+    "invisible": false,
+    "name": "[DNT] Abyssal Well",
+    "removable": false,
+    "stats": [
+      "base_chaos_damage_taken_per_minute"
+    ],
+    "visuals": "frostglobe_damage_absorb",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "frostglobe_absorb_damage": {
     "description": "Der Frostschild erleidet einen Teil des Schadens für Euch.",
     "invisible": false,
@@ -35667,7 +35811,7 @@
     "stack_limit": null
   },
   "steel_charge": {
-    "description": "Ihr verfügt über zusätzliche Chance, Projektilangriffsschaden zu blocken.",
+    "description": "Ihr verfügt über zusätzliche Chance, Projektil-Angriffsschaden zu blocken.",
     "invisible": false,
     "name": "Stahl-Ladung",
     "removable": false,
@@ -35989,6 +36133,14 @@
       "Mods": [
         {
           "id": "ManaRegenerationAuraUnique__1",
+          "item": null,
+          "name": null,
+          "template": "ManaRegenerationAuraUnique__1",
+          "stat_text": null,
+          "stats": null
+        },
+        {
+          "id": "DivergentManaRegenerationAuraUnique__1",
           "item": null,
           "name": null,
           "template": "ManaRegenerationAuraUnique__1",
@@ -37053,7 +37205,7 @@
     "stack_limit": null
   },
   "fanaticism": {
-    "description": "Zauber, die Ihr selbst wirkt, haben mehr Zaubergeschwindigkeit, verringerte Kosten und vergrößerten Wirkungsbereich.",
+    "description": "Zauber, die Ihr selbst wirkt, haben mehr Zaubergeschwindigkeit, weniger Kosten und vergrößerten Wirkungsbereich.",
     "invisible": false,
     "name": "Fanatismus",
     "removable": false,
@@ -41283,6 +41435,20 @@
     "templates": null,
     "stack_limit": null
   },
+  "abyss_pinnacle_burning_arms": {
+    "description": "Ihr erleidet Feuerschaden über Zeit.",
+    "invisible": false,
+    "name": "Flamme des Brunnens",
+    "removable": false,
+    "stats": [
+      "base_fire_damage_taken_per_minute"
+    ],
+    "visuals": "abyss_pinnacle_burning_arms_visual",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "stuck_stabbed": {
     "description": "Ihr könnt Euch nicht bewegen.",
     "invisible": false,
@@ -42209,6 +42375,18 @@
     "stack_limit": null
   },
   "track_gain_spell_cost_every_fifth_cast": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "track_gain_spell_cost_every_third_cast": {
     "description": "",
     "invisible": true,
     "name": "",
@@ -47587,6 +47765,54 @@
         },
         {
           "id": "CurseEffectPunishmentEldritchImplicitUniquePresence6",
+          "item": null,
+          "name": null,
+          "template": "InfluenceStatConditionPresenceUniqueMonster",
+          "stat_text": null,
+          "stats": null
+        },
+        {
+          "id": "ManaCostEfficiencyEldritchImplicitUniquePresence1",
+          "item": null,
+          "name": null,
+          "template": "InfluenceStatConditionPresenceUniqueMonster",
+          "stat_text": null,
+          "stats": null
+        },
+        {
+          "id": "ManaCostEfficiencyEldritchImplicitUniquePresence2",
+          "item": null,
+          "name": null,
+          "template": "InfluenceStatConditionPresenceUniqueMonster",
+          "stat_text": null,
+          "stats": null
+        },
+        {
+          "id": "ManaCostEfficiencyEldritchImplicitUniquePresence3",
+          "item": null,
+          "name": null,
+          "template": "InfluenceStatConditionPresenceUniqueMonster",
+          "stat_text": null,
+          "stats": null
+        },
+        {
+          "id": "ManaCostEfficiencyEldritchImplicitUniquePresence4",
+          "item": null,
+          "name": null,
+          "template": "InfluenceStatConditionPresenceUniqueMonster",
+          "stat_text": null,
+          "stats": null
+        },
+        {
+          "id": "ManaCostEfficiencyEldritchImplicitUniquePresence5",
+          "item": null,
+          "name": null,
+          "template": "InfluenceStatConditionPresenceUniqueMonster",
+          "stat_text": null,
+          "stats": null
+        },
+        {
+          "id": "ManaCostEfficiencyEldritchImplicitUniquePresence6",
           "item": null,
           "name": null,
           "template": "InfluenceStatConditionPresenceUniqueMonster",
@@ -58416,6 +58642,54 @@
           "stats": null
         },
         {
+          "id": "ManaCostEfficiencyEldritchImplicitPinnaclePresence1",
+          "item": null,
+          "name": null,
+          "template": "InfluenceStatConditionPresenceCelestialBoss",
+          "stat_text": null,
+          "stats": null
+        },
+        {
+          "id": "ManaCostEfficiencyEldritchImplicitPinnaclePresence2",
+          "item": null,
+          "name": null,
+          "template": "InfluenceStatConditionPresenceCelestialBoss",
+          "stat_text": null,
+          "stats": null
+        },
+        {
+          "id": "ManaCostEfficiencyEldritchImplicitPinnaclePresence3",
+          "item": null,
+          "name": null,
+          "template": "InfluenceStatConditionPresenceCelestialBoss",
+          "stat_text": null,
+          "stats": null
+        },
+        {
+          "id": "ManaCostEfficiencyEldritchImplicitPinnaclePresence4",
+          "item": null,
+          "name": null,
+          "template": "InfluenceStatConditionPresenceCelestialBoss",
+          "stat_text": null,
+          "stats": null
+        },
+        {
+          "id": "ManaCostEfficiencyEldritchImplicitPinnaclePresence5",
+          "item": null,
+          "name": null,
+          "template": "InfluenceStatConditionPresenceCelestialBoss",
+          "stat_text": null,
+          "stats": null
+        },
+        {
+          "id": "ManaCostEfficiencyEldritchImplicitPinnaclePresence6",
+          "item": null,
+          "name": null,
+          "template": "InfluenceStatConditionPresenceCelestialBoss",
+          "stat_text": null,
+          "stats": null
+        },
+        {
           "id": "ReducedAttackManaCostEldritchImplicitPinnaclePresence1",
           "item": null,
           "name": null,
@@ -65718,7 +65992,7 @@
           "global_defences_+%_per_frenzy_charge": -4
         },
         "stat_text": [
-          "4% verringerte Verteidigungswerte pro Raserei-Ladung"
+          "4% verringerte Defensiven pro Raserei-Ladung"
         ],
         "visuals": null
       }
@@ -67748,6 +68022,14 @@
           "template": "UniqueEnemyLifeReserved",
           "stat_text": null,
           "stats": null
+        },
+        {
+          "id": "DivergentNearbyEnemyReservesLifeUnique__1",
+          "item": null,
+          "name": null,
+          "template": "UniqueEnemyLifeReserved",
+          "stat_text": null,
+          "stats": null
         }
       ],
       "PassiveSkills": [
@@ -69764,7 +70046,7 @@
           "avoid_damage_%": 75
         },
         "stat_text": [
-          "75% Chance, sämtlichen Schaden von Treffern zu vermeiden"
+          "75% Chance, Schaden von jedem Schadenstyp von Treffern zu vermeiden"
         ],
         "visuals": null
       }
@@ -69931,6 +70213,40 @@
     },
     "templates": {
       "UniqueEnemyPhysicalDamageConvertedToFire": {
+        "aura_radius_metres": 6.0,
+        "stats": {
+          "base_from_enemy_physical_damage_%_to_convert_to_fire": 25
+        },
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "ascendancy_nearby_enemies_convert_physical_damage_to_fire": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "base_from_enemy_physical_damage_%_to_convert_to_fire"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": {
+      "PassiveSkills": [
+        {
+          "id": "AscendancyReliquarian30",
+          "item": null,
+          "name": null,
+          "template": "AscedancyEnemyPhysicalDamageConvertedToFire",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
+    "templates": {
+      "AscedancyEnemyPhysicalDamageConvertedToFire": {
         "aura_radius_metres": 6.0,
         "stats": {
           "base_from_enemy_physical_damage_%_to_convert_to_fire": 25
@@ -70625,9 +70941,9 @@
     "stack_limit": null
   },
   "minion_sacrifice_regen": {
-    "description": "Ihr regeneriert Leben, da Eure Kreaturen durch Befall betroffen sind.",
+    "description": "Ihr regeneriert Leben, da Eure Kreaturen von Verfall betroffen sind.",
     "invisible": false,
-    "name": "Befall-Regeneration",
+    "name": "Verfall-Regeneration",
     "removable": false,
     "stats": [
       "base_life_regeneration_rate_per_minute"
@@ -70708,7 +71024,7 @@
         {
           "id": null,
           "item": null,
-          "name": "Unheimlich",
+          "name": "Übernatürlich",
           "template": null,
           "stat_text": null,
           "stats": {
@@ -71208,9 +71524,9 @@
     "stack_limit": null
   },
   "voodoo_king_maze_debuff": {
-    "description": "Ihr erleidet physischen und Chaosschaden, während Ihr im Wachsenden Befall steht.",
+    "description": "Ihr erleidet physischen und Chaosschaden, während Ihr im Wachsenden Verfall steht.",
     "invisible": false,
-    "name": "Wachsender Befall",
+    "name": "Wachsender Verfall",
     "removable": false,
     "stats": [
       "base_physical_damage_taken_per_minute",
@@ -72348,9 +72664,9 @@
     "stack_limit": null
   },
   "beyond_boss_buff_1": {
-    "description": "Die gestohlene Macht von K'tash fließt durch Euch. Ihr verursacht einen Teil Eures physischen Schadens als extra Feuerschaden, und Gegner, die Ihr tötet, haben eine Chance zu explodieren und 10% ihres maximalen Lebens als Feuerschaden zu verursachen.",
+    "description": "Die gestohlene Macht von K'Tash fließt durch Euch. Ihr verursacht einen Teil Eures physischen Schadens als extra Feuerschaden, und Gegner, die Ihr tötet, haben eine Chance zu explodieren und 10% ihres maximalen Lebens als Feuerschaden zu verursachen.",
     "invisible": false,
-    "name": "K'tashs Herrlichkeit",
+    "name": "K'Tashs Herrlichkeit",
     "removable": false,
     "stats": [
       "base_actor_scale_+%",
@@ -73026,6 +73342,45 @@
         ],
         "visuals": null
       },
+      "WildMercenaryEnhancedMonsterBuff": {
+        "aura_radius_metres": null,
+        "stats": {
+          "monster_difficulty_tankiness_+%": 30,
+          "damage_+%": 5,
+          "from_league_item_rarity_+%_permyriad": 0,
+          "from_league_item_quantity_+%_permyriad": 0
+        },
+        "stat_text": [
+          "5% erhöhter Schaden"
+        ],
+        "visuals": null
+      },
+      "AbyssPitsClosedEnhancedMonsterBuff": {
+        "aura_radius_metres": null,
+        "stats": {
+          "monster_difficulty_tankiness_+%": 30,
+          "damage_+%": 8,
+          "from_league_item_rarity_+%_permyriad": 750,
+          "from_league_item_quantity_+%_permyriad": 750
+        },
+        "stat_text": [
+          "8% erhöhter Schaden"
+        ],
+        "visuals": null
+      },
+      "AbyssEnragingCrystalsDestroyedEnhancedMonsterBuff": {
+        "aura_radius_metres": null,
+        "stats": {
+          "monster_difficulty_tankiness_+%": 50,
+          "damage_+%": 12,
+          "from_league_item_rarity_+%_permyriad": 750,
+          "from_league_item_quantity_+%_permyriad": 750
+        },
+        "stat_text": [
+          "12% erhöhter Schaden"
+        ],
+        "visuals": null
+      },
       "AstrolabeMapBossEnhanced": {
         "aura_radius_metres": null,
         "stats": {
@@ -73601,9 +73956,9 @@
     "stack_limit": null
   },
   "demon_copper_meteors": {
-    "description": "Erfüllt von K'tash's Wut.",
+    "description": "Erfüllt von K'Tashs Wut.",
     "invisible": false,
-    "name": "K'tash's Wut",
+    "name": "K'Tashs Wut",
     "removable": false,
     "stats": [],
     "visuals": "demon_copper_meteors",
@@ -74849,6 +75204,18 @@
     "templates": null,
     "stack_limit": null
   },
+  "blood_shrine_buff_every_x_ms_from_ascendancy": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "benevolenceboss_collectable1_debuff": {
     "description": "Ihr erleidet erhöhten Schaden, habt aber erhöhte Bewegungsgeschwindigkeit.",
     "invisible": false,
@@ -75230,7 +75597,7 @@
         "stat_text": [
           "20% erhöhte Angriffs- und Zaubergeschwindigkeit",
           "100% erhöhte globale kritische Trefferchance",
-          "15% Chance, sämtlichen Schaden von Treffern zu vermeiden",
+          "15% Chance, Schaden von jedem Schadenstyp von Treffern zu vermeiden",
           "100% erhöhte Tarnung"
         ],
         "visuals": null
@@ -75831,7 +76198,7 @@
           "damage_+%": 100
         },
         "stat_text": [
-          "100% erhöhte globale Verteidigungswerte",
+          "100% erhöhte globale Defensiven",
           "100% erhöhter Schaden"
         ],
         "visuals": null
@@ -76041,6 +76408,14 @@
       "Mods": [
         {
           "id": "GrantsSummonVoidSpawnUnique__1",
+          "item": null,
+          "name": null,
+          "template": "TriggerSummonVoidSpawnSkillUnique__1",
+          "stat_text": null,
+          "stats": null
+        },
+        {
+          "id": "DivergentGrantsSummonVoidSpawnUnique__1",
           "item": null,
           "name": null,
           "template": "TriggerSummonVoidSpawnSkillUnique__1",
@@ -76646,7 +77021,7 @@
     "stack_limit": null
   },
   "graft_skill_uul_netol_life_recovery": {
-    "description": "Eure Lebenswiederherstellungsrate ist bedeutend höher.",
+    "description": "Eure Lebenswiederherstellungs-Rate ist bedeutend höher.",
     "invisible": false,
     "name": "Zärtliche Umarmung",
     "removable": false,
@@ -77797,6 +78172,222 @@
     },
     "stack_limit": null
   },
+  "blood_shrine_rat": {
+    "description": "Ihr verursacht einen Teil des Elementarschadens als extra Chaosschaden.\r\nWährend Ihr diese Stärkung habt, beschwört Ihr in regelmäßigen Abständen einen Ratten-Tornado, der physischen Schaden über Zeit verursacht und die Lebens- und Energieschild-Wiederaufladungsrate verringert.",
+    "invisible": false,
+    "name": "Blutschrein der Ratten",
+    "removable": false,
+    "stats": [
+      "elemental_damage_%_to_add_as_chaos"
+    ],
+    "visuals": "blood_shrine_rat_visual",
+    "category": "Buff shrine",
+    "sources": null,
+    "templates": {
+      "blood_shrine_rat": {
+        "aura_radius_metres": null,
+        "stats": {
+          "elemental_damage_%_to_add_as_chaos": 30
+        },
+        "stat_text": [
+          "Verursacht 30% des Elementarschadens als extra Chaosschaden"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "blood_shrine_swarm": {
+    "description": "Ihr erhaltet eine Erhöhung auf Euren Multiplikator für Schaden über Zeit.\r\nWährend Ihr diese Stärkung habt, beschwört Ihr in regelmäßigen Abständen einen Heuschreckenschwarm, der Gegner lähmt.",
+    "invisible": false,
+    "name": "Blutschrein der Heuschrecken",
+    "removable": false,
+    "stats": [
+      "dot_multiplier_+"
+    ],
+    "visuals": "blood_shrine_swarm_visual",
+    "category": "Buff shrine",
+    "sources": null,
+    "templates": {
+      "blood_shrine_swarm": {
+        "aura_radius_metres": null,
+        "stats": {
+          "dot_multiplier_+": 30
+        },
+        "stat_text": [
+          "+30% zu Multiplikator für Schaden über Zeit"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "blood_shrine_toads": {
+    "description": "Explosive Kröte hat eine zusätzliche Chance ausgelöst zu werden, wenn Ihr einen Gegner tötet.",
+    "invisible": false,
+    "name": "Blutschrein der Kröten",
+    "removable": false,
+    "stats": [
+      "exploding_toad_trigger_%_chance_from_unique"
+    ],
+    "visuals": "blood_shrine_toads_visual",
+    "category": "Buff shrine",
+    "sources": null,
+    "templates": {
+      "blood_shrine_toads": {
+        "aura_radius_metres": null,
+        "stats": {
+          "exploding_toad_trigger_%_chance_from_unique": 25
+        },
+        "stat_text": [
+          "25% Chance, 'Explosive Kröte' auszulösen, wenn Ihr einen Gegner tötet"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "blood_shrine_chaos_resistance": {
+    "description": "Ihr erleidet einen Teil des physischen Schadens und Elementarschadens als Chaosschaden und erhaltet erhöhten Chaoswiderstand.",
+    "invisible": false,
+    "name": "Blutschrein der Krähen",
+    "removable": false,
+    "stats": [
+      "base_chaos_damage_resistance_%",
+      "physical_damage_taken_%_as_chaos",
+      "elemental_damage_taken_%_as_chaos"
+    ],
+    "visuals": "blood_shrine_chaos_resistance_visual",
+    "category": "Buff shrine",
+    "sources": null,
+    "templates": {
+      "blood_shrine_chaos_resistance": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_chaos_damage_resistance_%": 50,
+          "physical_damage_taken_%_as_chaos": 10,
+          "elemental_damage_taken_%_as_chaos": 10
+        },
+        "stat_text": [
+          "+50% zu Chaoswiderstand",
+          "Erleidet 10% des physischen Schadens von Treffern als Chaosschaden",
+          "Erleidet 10% des Elementarschadens von Treffern als Chaosschaden"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "blood_shrine_curses": {
+    "description": "Verflucht Gegner bei Treffer mit 'Schwächen' und Ihr könnt einen zusätzlichen Fluch anwenden.",
+    "invisible": false,
+    "name": "Blutschrein der Fledermäuse",
+    "removable": false,
+    "stats": [
+      "curse_on_hit_%_enfeeble",
+      "number_of_additional_curses_allowed"
+    ],
+    "visuals": "blood_shrine_curses_visual",
+    "category": "Buff shrine",
+    "sources": null,
+    "templates": {
+      "blood_shrine_curses": {
+        "aura_radius_metres": null,
+        "stats": {
+          "curse_on_hit_%_enfeeble": 100,
+          "number_of_additional_curses_allowed": 1
+        },
+        "stat_text": [
+          "Verflucht Gegner bei Treffer mit 'Schwächen'",
+          "Ihr könnt einen zusätzlichen Fluch anwenden"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "flask_all_damage_from_critical_strikes_can_shock": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "all_damage_from_critical_strikes_can_shock"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "flask_all_damage_from_critical_strikes_can_sap": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "all_damage_from_critical_strikes_can_sap"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "flask_all_damage_from_critical_strikes_can_inflict_brittle": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "all_damage_from_critical_strikes_can_inflict_brittle"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "flask_all_damage_from_critical_strikes_can_chill": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "all_damage_from_critical_strikes_can_chill"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "flask_all_damage_from_critical_strikes_can_freeze": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "all_damage_from_critical_strikes_can_freeze"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "discus_slam_alternate_orb_counter": {
+    "description": "Ihr verfügt über Sphären von 'Göttliche Explosion'.",
+    "invisible": false,
+    "name": "Göttliche Explosion der Herrlichkeit",
+    "removable": false,
+    "stats": [],
+    "visuals": "divine_blast_alt_x_buff_visual",
+    "category": "Active skill",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "gauntlet_ruin": {
     "description": "Ihr leidet unter Verderben. Beim Erreichen von 7 Verderben sterbt Ihr.",
     "invisible": false,
@@ -77817,6 +78408,1617 @@
     "stats": [],
     "visuals": "foulgrasp",
     "category": "Active skill",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "deepwater_lantern_buff": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "in_range_of_deepwater_lantern"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": {
+      "DeepwaterLanternBuff": {
+        "aura_radius_metres": 0.1,
+        "stats": {
+          "in_range_of_deepwater_lantern": 1
+        },
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_hag_buff": {
+    "description": "Euer Fleisch brodelt und schwillt an.",
+    "invisible": true,
+    "name": "Segen der Seehexe",
+    "removable": false,
+    "stats": [
+      "action_speed_-%"
+    ],
+    "visuals": "deepwater_hag_buff_visual",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "verisium_channel_shield": {
+    "description": "Ihr könnt während der Kanalisierung von Verisium weder betäubt werden noch Schaden erleiden.",
+    "invisible": false,
+    "name": "Verisium-Energie",
+    "removable": false,
+    "stats": [
+      "base_cannot_be_damaged",
+      "base_cannot_be_stunned"
+    ],
+    "visuals": "verisium_channel_shield",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "ghost_furnace_soul_buff": {
+    "description": "[DNT] Ghostflame Furnace has increased Area of Effect and you have increased Fire Damage over Time Multiplier per Ghostflame Soul",
+    "invisible": false,
+    "name": "[DNT] Ghostflame Soul",
+    "removable": false,
+    "stats": [
+      "ghost_furnace_area_of_effect_+%",
+      "fire_dot_multiplier_+",
+      "ghostflame_lantern_souls"
+    ],
+    "visuals": "ghost_furnace_soul_buff_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "ghost_furnace_aura": {
+    "description": "[DNT] You are taking burning damage from being near an enemy using Ghost Furnace",
+    "invisible": false,
+    "name": "[DNT] Ghost Furnace Aura",
+    "removable": false,
+    "stats": [
+      "base_fire_damage_taken_per_minute"
+    ],
+    "visuals": "ghost_furnace_buff_visual",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "oceans_fury": {
+    "description": "Ihr habt erhöhte Bewegungsgeschwindigkeit und verursacht einen Teil des physischen Schadens als extra Kälteschaden.",
+    "invisible": false,
+    "name": "Tsoathas Wut",
+    "removable": false,
+    "stats": [
+      "physical_damage_%_to_add_as_cold",
+      "base_movement_velocity_+%"
+    ],
+    "visuals": "oceans_fury_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "abyssal_touched": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "monster_aggro_radius_+%"
+    ],
+    "visuals": "abyssal_touched",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "abyssal_touched_drain": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "life_loss_%_per_minute"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "abyss_pinnacle_totem_charged": {
+    "description": "Dieses Phylakterium ist aufgeladen und wird feuern.",
+    "invisible": false,
+    "name": "Geladenes Phylakterium",
+    "removable": false,
+    "stats": [],
+    "visuals": "abyss_pinnacle_totem_charged_visual",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "rat_tornado_degen_and_recovery_debuff": {
+    "description": "Ihr erleidet physischen Schaden über Zeit, während Eure Lebens- und Energieschild-Regeneration sowie -Wiederaufladungsrate verringert ist.",
+    "invisible": false,
+    "name": "Ratten-Tornado",
+    "removable": false,
+    "stats": [
+      "base_physical_damage_taken_per_minute",
+      "life_regeneration_rate_+%",
+      "energy_shield_regeneration_rate_+%",
+      "energy_shield_recharge_rate_+%"
+    ],
+    "visuals": "blood_tendrils",
+    "category": "Debuff",
+    "sources": {
+      "Mods": [
+        {
+          "id": "MonsterAuraEnemyLifeDegenRatTornado",
+          "item": null,
+          "name": null,
+          "template": "MonsterAuraEnemyLifeDegenPhysical",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
+    "templates": {
+      "MonsterAuraEnemyLifeDegenPhysical": {
+        "aura_radius_metres": 2.5,
+        "stats": {
+          "base_physical_damage_taken_per_minute": 6000,
+          "life_regeneration_rate_+%": -50,
+          "energy_shield_regeneration_rate_+%": -50,
+          "energy_shield_recharge_rate_+%": -50
+        },
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "abyss_pinnacle_phylactery_buff": {
+    "description": "Aktive Phylakterien gewähren diesem Boss eine Stärkung.",
+    "invisible": false,
+    "name": "Phylakterium",
+    "removable": false,
+    "stats": [
+      "base_damage_taken_+%"
+    ],
+    "visuals": "abyss_pinnacle_phylactery_buff",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "brine_ground_buff": {
+    "description": "Ihr verursacht einen Teil des physischen Schadens als extra Kälte- und extra Blitzschaden.",
+    "invisible": false,
+    "name": "Gischtboden",
+    "removable": false,
+    "stats": [
+      "physical_damage_%_to_add_as_cold",
+      "physical_damage_%_to_add_as_lightning"
+    ],
+    "visuals": "oasis_ground_buff_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "brine_ground_debuff": {
+    "description": "Ihr habt verringerte Rüstung und Ausweichwert und habt erhöhte Wirkung von Blitz- und Kälte-Beeinträchtigungen auf Euch.",
+    "invisible": false,
+    "name": "Gischtboden",
+    "removable": false,
+    "stats": [
+      "cold_ailment_effect_on_self_+%",
+      "evasion_and_physical_damage_reduction_rating_+%",
+      "lightning_ailment_effect_on_self_+%"
+    ],
+    "visuals": "oasis_ground_buff_visual",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "barnicle": {
+    "description": "Ihr habt verlängerte Dauer von Unterkühlen und Einfrieren auf Euch, und ein Teil Eures physischen Schadens wird pro Seepocken-Stapel auf Euch in Kälteschaden umgewandelt.",
+    "invisible": false,
+    "name": "Seepocken",
+    "removable": false,
+    "stats": [
+      "base_self_chill_duration_-%",
+      "base_from_enemy_physical_damage_%_to_convert_to_cold",
+      "base_self_freeze_duration_-%"
+    ],
+    "visuals": "barnacle_debuff",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": 10
+  },
+  "barnicle_aura": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "buff_impl_stat",
+      "buff_impl_stat",
+      "buff_impl_stat"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": {
+      "PassiveSkills": [
+        {
+          "id": "AlternateAscendancyBrinerot2_",
+          "item": null,
+          "name": null,
+          "template": "CrustaceousGrowthBarnicleAura",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
+    "templates": {
+      "CrustaceousGrowthBarnicleAura": {
+        "aura_radius_metres": 5.0,
+        "stats": {
+          "buff_impl_stat": -5
+        },
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "brine_rot": {
+    "description": "Ihr befindet Euch im Ertrinkungsbereich, und ein Teil des Schadens über Zeit, den Ihr im Ertrinkungsbereich erleidet, wird beim Verlassen des Bereichs als Leben verloren.",
+    "invisible": false,
+    "name": "Ertrinkungsbereich",
+    "removable": false,
+    "stats": [],
+    "visuals": "brinerot_debuff",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "brine_rot_aura": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "brinerot_aura",
+    "category": null,
+    "sources": {
+      "PassiveSkills": [
+        {
+          "id": "AlternateAscendancyBrinerot3",
+          "item": null,
+          "name": null,
+          "template": "BrineRotAura",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
+    "templates": {
+      "BrineRotAura": {
+        "aura_radius_metres": 5.0,
+        "stats": null,
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "brinerot_encounter_completion_buff": {
+    "description": "Fallen gelassenes Gold hat eine Chance, dupliziert zu werden.",
+    "invisible": false,
+    "name": "Seemannslaterne",
+    "removable": false,
+    "stats": [
+      "%_chance_to_duplicate_dropped_gold"
+    ],
+    "visuals": "brinerot_encounter_completion_buff_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "banner_dot_multi_buff": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "dot_multiplier_+"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "coral_encounter_completion_buff": {
+    "description": "Das Töten von seltenen oder einzigartigen Gegnern bringt rachsüchtige Krebse hervor.",
+    "invisible": false,
+    "name": "Craiceanns Ruf",
+    "removable": false,
+    "stats": [
+      "chance_%_to_spawn_crab_pack_on_kill_vs_rare_or_unique"
+    ],
+    "visuals": "coral_encounter_completion_buff_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "deepwater_drowning": {
+    "description": "Ihr ertrinkt und werdet bald sterben.",
+    "invisible": false,
+    "name": "Ertrinken",
+    "removable": false,
+    "stats": [
+      "deepwater_drowning_action_speed_+%_maximum_value"
+    ],
+    "visuals": "tangle_drowning",
+    "category": "Debuff",
+    "sources": null,
+    "templates": {
+      "DeepwaterDrowning": {
+        "aura_radius_metres": null,
+        "stats": {
+          "deepwater_drowning_action_speed_+%_maximum_value": -75
+        },
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "ghost_furnace_display": {
+    "description": "",
+    "invisible": false,
+    "name": "[DNT] Ghost Furnace",
+    "removable": false,
+    "stats": [],
+    "visuals": "ghost_furnace_display",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "deepwater_altar_fish": {
+    "description": "Ihr habt dem Gischtkönig Tsoathas Futter dargebracht\r\nIhr habt erhöhten Schaden und Kältewiderstand",
+    "invisible": false,
+    "name": "Tsoathas Futter",
+    "removable": true,
+    "stats": [
+      "base_cold_damage_resistance_%",
+      "damage_+%"
+    ],
+    "visuals": "deepwater_altar_fish",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarFish": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_cold_damage_resistance_%": 15,
+          "damage_+%": 30
+        },
+        "stat_text": [
+          "+15% zu Kältewiderstand",
+          "30% erhöhter Schaden"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_octopus": {
+    "description": "Ihr habt dem Gischtkönig Ausstreckende Tentakel dargebracht\r\nEure Fertigkeiten feuern zusätzliche Projektile, haben vergrößerte Nahkampfschlagreichweite und vergrößerten Wirkungsbereich",
+    "invisible": false,
+    "name": "Ausstreckende Tentakel",
+    "removable": true,
+    "stats": [
+      "number_of_additional_projectiles",
+      "melee_range_+",
+      "base_skill_area_of_effect_+%"
+    ],
+    "visuals": "deepwater_altar_octopus",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarOctopus": {
+        "aura_radius_metres": null,
+        "stats": {
+          "number_of_additional_projectiles": 2,
+          "melee_range_+": 10,
+          "base_skill_area_of_effect_+%": 20
+        },
+        "stat_text": [
+          "Fertigkeiten feuern 2 zusätzliche Projektile",
+          "+1 Meter zur Nahkampfschlagreichweite",
+          "20% vergrößerter Wirkungsbereich"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_pufferfish": {
+    "description": "Ihr habt dem Gischtkönig Giftige Stacheln dargebracht\r\nIhr reflektiert einen Teil des erlittenen physischen Nahkampfschadens, sämtlicher Schaden von Euch kann vergiften, Ihr vergiftet immer bei Treffer und seid unbeeinträchtigt von Gift",
+    "invisible": false,
+    "name": "Giftige Stacheln",
+    "removable": true,
+    "stats": [
+      "all_damage_can_poison",
+      "base_chance_to_poison_on_hit_%",
+      "melee_physical_damage_taken_%_to_deal_to_attacker",
+      "base_unaffected_by_poison"
+    ],
+    "visuals": "deepwater_altar_pufferfish",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarPufferFish": {
+        "aura_radius_metres": null,
+        "stats": {
+          "all_damage_can_poison": 1,
+          "base_chance_to_poison_on_hit_%": 100,
+          "melee_physical_damage_taken_%_to_deal_to_attacker": 100,
+          "base_unaffected_by_poison": 1
+        },
+        "stat_text": [
+          "Sämtlicher Schaden von Treffern kann vergiften",
+          "Vergiftet immer bei Treffer",
+          "Reflektiert 100% des erlittenen physischen Nahkampfschadens auf Angreifer",
+          "Unbeeinträchtigt von Gift"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_crab": {
+    "description": "Ihr habt dem Gischtkönig Harte Schale dargebracht\r\nIhr habt zusätzliche Chance, Angriffs- und Zauberschaden zu blocken",
+    "invisible": false,
+    "name": "Harte Schale",
+    "removable": true,
+    "stats": [
+      "base_spell_block_%",
+      "monster_base_block_%"
+    ],
+    "visuals": "deepwater_altar_crab",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarCrab": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_spell_block_%": 20,
+          "monster_base_block_%": 20
+        },
+        "stat_text": [
+          "20% Chance, Zauberschaden zu blocken",
+          "20% Chance, Angriffsschaden zu blocken"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_coral": {
+    "description": "Ihr habt dem Gischtkönig Robuste Koralle dargebracht\r\nIhr könnt nicht betäubt werden und habt verlängerte Betäubungsdauer bei Gegnern",
+    "invisible": false,
+    "name": "Robuste Koralle",
+    "removable": true,
+    "stats": [
+      "base_cannot_be_stunned",
+      "base_stun_duration_+%"
+    ],
+    "visuals": "deepwater_altar_coral",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarCoral": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_cannot_be_stunned": 1,
+          "base_stun_duration_+%": 50
+        },
+        "stat_text": [
+          "Kann nicht betäubt werden",
+          "50% verlängerte Betäubungsdauer bei Gegnern"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_fish_buffed": {
+    "description": "Der Gischtkönig verleiht Euch Gischtflossen\r\nIhr habt erhöhten Schaden, Bewegungsgeschwindigkeit, Kältewiderstand und maximalen Kältewiderstand",
+    "invisible": false,
+    "name": "Gischtflossen",
+    "removable": true,
+    "stats": [
+      "base_cold_damage_resistance_%",
+      "damage_+%",
+      "base_movement_velocity_+%",
+      "base_maximum_cold_damage_resistance_%"
+    ],
+    "visuals": "deepwater_altar_fish_buffed",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarFishEmpowered": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_cold_damage_resistance_%": 15,
+          "damage_+%": 30,
+          "base_movement_velocity_+%": 15,
+          "base_maximum_cold_damage_resistance_%": 5
+        },
+        "stat_text": [
+          "+15% zu Kältewiderstand",
+          "30% erhöhter Schaden",
+          "15% erhöhte Bewegungsgeschwindigkeit",
+          "+5% zu maximalem Kältewiderstand"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_octopus_buffed": {
+    "description": "Der Gischtkönig verleiht Euch Umgreifende Tentakel\r\nEure Fertigkeiten feuern zusätzliche Projektile, haben vergrößerte Nahkampfschlagreichweite und vergrößerten Wirkungsbereich\r\nIhr erhaltet Schattenhaft bei Tötung und habt erhöhte Wirkung von Schattenhaft",
+    "invisible": false,
+    "name": "Umgreifende Tentakel",
+    "removable": true,
+    "stats": [
+      "number_of_additional_projectiles",
+      "melee_range_+",
+      "base_skill_area_of_effect_+%",
+      "gain_elusive_on_kill_chance_%",
+      "elusive_effect_+%"
+    ],
+    "visuals": "deepwater_altar_octopus_buffed",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarOctopusEmpowered": {
+        "aura_radius_metres": null,
+        "stats": {
+          "number_of_additional_projectiles": 2,
+          "melee_range_+": 10,
+          "base_skill_area_of_effect_+%": 20,
+          "gain_elusive_on_kill_chance_%": 100,
+          "elusive_effect_+%": 30
+        },
+        "stat_text": [
+          "Fertigkeiten feuern 2 zusätzliche Projektile",
+          "+1 Meter zur Nahkampfschlagreichweite",
+          "20% vergrößerter Wirkungsbereich",
+          "Erhaltet Schattenhaft bei Tötung",
+          "30% erhöhte Wirkung von Schattenhaft"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_pufferfish_buffed": {
+    "description": "Der Gischtkönig verleiht Euch Tödliche Stacheln\r\nIhr reflektiert einen Teil des erlittenen physischen Nahkampfschadens, sämtlicher Schaden von Euch kann vergiften, Ihr vergiftet immer bei Treffer und seid unbeeinträchtigt von Gift\r\nDurch Euch vergiftete Gegner können kein Leben regenerieren und Ihr habt eine Chance, beim selben Ziel ein zusätzliches Gift anzuwenden, wenn Ihr einen Gegner vergiftet",
+    "invisible": false,
+    "name": "Tödliche Stacheln",
+    "removable": true,
+    "stats": [
+      "all_damage_can_poison",
+      "base_chance_to_poison_on_hit_%",
+      "melee_physical_damage_taken_%_to_deal_to_attacker",
+      "enemies_poisoned_by_you_cannot_regen_life",
+      "additional_poison_chance_%_when_inflicting_poison"
+    ],
+    "visuals": "deepwater_altar_pufferfish_buffed",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarPufferFishEmpowered": {
+        "aura_radius_metres": null,
+        "stats": {
+          "all_damage_can_poison": 1,
+          "base_chance_to_poison_on_hit_%": 100,
+          "melee_physical_damage_taken_%_to_deal_to_attacker": 100,
+          "enemies_poisoned_by_you_cannot_regen_life": 1,
+          "additional_poison_chance_%_when_inflicting_poison": 30
+        },
+        "stat_text": [
+          "Sämtlicher Schaden von Treffern kann vergiften",
+          "Vergiftet immer bei Treffer",
+          "Reflektiert 100% des erlittenen physischen Nahkampfschadens auf Angreifer",
+          "Durch Euch vergiftete Gegner können können kein Leben regenerieren",
+          "30% Chance, beim selben Ziel ein zusätzliches Gift anzuwenden, wenn Ihr einen Gegner vergiftet"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_crab_buffed": {
+    "description": "Der Gischtkönig verleiht Euch Undurchdringliche Schale\r\nIhr habt zusätzliche Chance, Angriffs- und Zauberschaden zu blocken\r\nIhr habt zusätzliche maximale Elementarwiderstände und physische Schadensminderung",
+    "invisible": false,
+    "name": "Undurchdringliche Schale",
+    "removable": true,
+    "stats": [
+      "base_spell_block_%",
+      "monster_base_block_%",
+      "additional_maximum_all_elemental_resistances_%",
+      "base_additional_physical_damage_reduction_%"
+    ],
+    "visuals": "deepwater_altar_crab_buffed",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarCrabEmpowered": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_spell_block_%": 20,
+          "monster_base_block_%": 20,
+          "additional_maximum_all_elemental_resistances_%": 3,
+          "base_additional_physical_damage_reduction_%": 10
+        },
+        "stat_text": [
+          "20% Chance, Zauberschaden zu blocken",
+          "20% Chance, Angriffsschaden zu blocken",
+          "+3% zu allen maximalen Elementarwiderständen",
+          "10% zusätzliche physische Schadensminderung"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_coral_buffed": {
+    "description": "Der Gischtkönig verleiht Euch Wehrhafte Koralle\r\nIhr könnt nicht betäubt werden und habt verlängerte Betäubungsdauer bei Gegnern\r\nIhr habt eine Chance, doppelten Schaden zu verursachen, wenn Ihr kürzlich einen Gegner betäubt habt, und Ihr habt verringerte gegnerische Betäubungsschwelle",
+    "invisible": false,
+    "name": "Wehrhafte Koralle",
+    "removable": true,
+    "stats": [
+      "base_cannot_be_stunned",
+      "base_stun_duration_+%",
+      "chance_to_deal_double_damage_%_if_have_stunned_an_enemy_recently",
+      "base_stun_threshold_reduction_+%"
+    ],
+    "visuals": "deepwater_altar_coral_buffed",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarCoralEmpowered": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_cannot_be_stunned": 1,
+          "base_stun_duration_+%": 50,
+          "chance_to_deal_double_damage_%_if_have_stunned_an_enemy_recently": 30,
+          "base_stun_threshold_reduction_+%": 30
+        },
+        "stat_text": [
+          "Kann nicht betäubt werden",
+          "50% verlängerte Betäubungsdauer bei Gegnern",
+          "30% Chance, doppelten Schaden zu verursachen, wenn Ihr kürzlich einen Gegner betäubt habt",
+          "30% verringerte gegnerische Betäubungsschwelle"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_cursed_ducat_debuff": {
+    "description": "Ihr spürt die Blicke der Ertrunkenen überall um Euch herum.",
+    "invisible": false,
+    "name": "Zorn der Ertrunkenen",
+    "removable": false,
+    "stats": [],
+    "visuals": "deepwater_cursed_ducat_debuff",
+    "category": "Debuff",
+    "sources": null,
+    "templates": {
+      "DeepwaterCursedDucatDebuff": {
+        "aura_radius_metres": null,
+        "stats": null,
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "monster_physical_thorns_active": {
+    "description": "",
+    "invisible": false,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "monster_physical_thorns_active"
+    ],
+    "visuals": "monster_thorns_physical_new",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "monster_elemental_thorns_active": {
+    "description": "",
+    "invisible": false,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "monster_elemental_thorns_active"
+    ],
+    "visuals": "monster_thorns_elemental_new",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "bloodrite": {
+    "description": "Ihr löst periodisch 'Fleischreißer' aus. Jede Phase der Stärkung bewirkt, dass 'Fleischreißer' häufiger ausgelöst wird.",
+    "invisible": false,
+    "name": "Hunger von Ghorr",
+    "removable": true,
+    "stats": [],
+    "visuals": "bloodrite",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": 3
+  },
+  "bloodrend": {
+    "description": "Ihr erleidet physischen Schaden über Zeit und erhöhten Schaden über Zeit aus allen Quellen.",
+    "invisible": false,
+    "name": "Fleischreißer",
+    "removable": false,
+    "stats": [
+      "base_physical_damage_taken_per_minute",
+      "degen_effect_+%"
+    ],
+    "visuals": "bloodrend",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": 3
+  },
+  "pact_affliction_movement_speed": {
+    "description": "Ihr habt 20% verringerte Bewegungsgeschwindigkeit.",
+    "invisible": false,
+    "name": "Abgetragene Sandalen",
+    "removable": false,
+    "stats": [
+      "base_movement_velocity_+%"
+    ],
+    "visuals": "pact_affliction_movement_speed",
+    "category": "Debuff",
+    "sources": null,
+    "templates": {
+      "PactAfflictionMovementSpeed": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_movement_velocity_+%": -20
+        },
+        "stat_text": [
+          "20% verringerte Bewegungsgeschwindigkeit"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "pact_affliction_damage": {
+    "description": "Ihr verursacht 50% verringerten Schaden.",
+    "invisible": false,
+    "name": "Schreckensmaske",
+    "removable": false,
+    "stats": [
+      "damage_+%"
+    ],
+    "visuals": "pact_affliction_damage",
+    "category": "Debuff",
+    "sources": null,
+    "templates": {
+      "PactAfflictionDamage": {
+        "aura_radius_metres": null,
+        "stats": {
+          "damage_+%": -50
+        },
+        "stat_text": [
+          "50% verringerter Schaden"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "pact_affliction_damage_taken": {
+    "description": "Ihr erleidet 20% erhöhten Schaden.",
+    "invisible": false,
+    "name": "Gewetzte Krallen",
+    "removable": false,
+    "stats": [
+      "base_damage_taken_+%"
+    ],
+    "visuals": "pact_affliction_damage_taken",
+    "category": "Debuff",
+    "sources": null,
+    "templates": {
+      "PactAfflictionDamageTaken": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_damage_taken_+%": 20
+        },
+        "stat_text": [
+          "20% erhöhter erlittener Schaden"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "pact_affliction_defences": {
+    "description": "Ihr habt 50% verringerte Defensiven.",
+    "invisible": false,
+    "name": "Zerschmetterter Schild",
+    "removable": false,
+    "stats": [
+      "global_defences_+%"
+    ],
+    "visuals": "pact_affliction_defences",
+    "category": "Debuff",
+    "sources": null,
+    "templates": {
+      "PactAfflictionDefences": {
+        "aura_radius_metres": null,
+        "stats": {
+          "global_defences_+%": -50
+        },
+        "stat_text": [
+          "50% verringerte globale Defensiven"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "pact_affliction_resistances": {
+    "description": "Ihr habt -20% zu allen Widerständen.",
+    "invisible": false,
+    "name": "Unheilige Urne",
+    "removable": false,
+    "stats": [
+      "base_resist_all_elements_%",
+      "base_chaos_damage_resistance_%"
+    ],
+    "visuals": "pact_affliction_resistances",
+    "category": "Debuff",
+    "sources": null,
+    "templates": {
+      "PactAfflictionResistances": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_resist_all_elements_%": -20,
+          "base_chaos_damage_resistance_%": -20
+        },
+        "stat_text": [
+          "-20% zu allen Elementarwiderständen",
+          "-20% zu Chaoswiderstand"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "pact_affliction_critical_strike_chance": {
+    "description": "Ihr habt 100% verringerte kritische Trefferchance.",
+    "invisible": false,
+    "name": "Dämonenschädel",
+    "removable": false,
+    "stats": [
+      "critical_strike_chance_+%"
+    ],
+    "visuals": "pact_affliction_critical_strike_chance",
+    "category": "Debuff",
+    "sources": null,
+    "templates": {
+      "PactAfflictionCriticalStrikeChance": {
+        "aura_radius_metres": null,
+        "stats": {
+          "critical_strike_chance_+%": -100
+        },
+        "stat_text": [
+          "100% verringerte globale kritische Trefferchance"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "pact_affliction_cast_speed": {
+    "description": "Ihr habt 20% verringerte Zaubergeschwindigkeit.",
+    "invisible": false,
+    "name": "Eiserne Fesseln",
+    "removable": false,
+    "stats": [
+      "base_cast_speed_+%"
+    ],
+    "visuals": "pact_affliction_cast_speed",
+    "category": "Debuff",
+    "sources": null,
+    "templates": {
+      "PactAfflictionCastSpeed": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_cast_speed_+%": -20
+        },
+        "stat_text": [
+          "20% verringerte Zaubergeschwindigkeit"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "pact_affliction_life_degen": {
+    "description": "Ihr habt 25% verringerte Lebenswiederherstellungs-Rate.",
+    "invisible": false,
+    "name": "Vergiftetes Wasser",
+    "removable": false,
+    "stats": [
+      "life_recovery_rate_+%"
+    ],
+    "visuals": "pact_affliction_life_degen",
+    "category": "Debuff",
+    "sources": null,
+    "templates": {
+      "PactAfflictionLifeDegen": {
+        "aura_radius_metres": null,
+        "stats": {
+          "life_recovery_rate_+%": -25
+        },
+        "stat_text": [
+          "25% verringerte Lebenswiederherstellungs-Rate"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "pact_affliction_mana_degen": {
+    "description": "Ihr habt 25% verringerte Manawiederherstellungs-Rate.",
+    "invisible": false,
+    "name": "Verfluchtes Prisma",
+    "removable": false,
+    "stats": [
+      "mana_recovery_rate_+%"
+    ],
+    "visuals": "pact_affliction_mana_degen",
+    "category": "Debuff",
+    "sources": null,
+    "templates": {
+      "PactAfflictionManaDegen": {
+        "aura_radius_metres": null,
+        "stats": {
+          "mana_recovery_rate_+%": -25
+        },
+        "stat_text": [
+          "25% verringerte Manawiederherstellungs-Rate"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "pact_affliction_light_radius": {
+    "description": "Ihr habt 80% verringerten Lichtradius.",
+    "invisible": false,
+    "name": "Schwarzer Rauch",
+    "removable": false,
+    "stats": [
+      "light_radius_+%"
+    ],
+    "visuals": "pact_affliction_light_radius",
+    "category": "Debuff",
+    "sources": null,
+    "templates": {
+      "PactAfflictionLightRadius": {
+        "aura_radius_metres": null,
+        "stats": {
+          "light_radius_+%": -80
+        },
+        "stat_text": [
+          "80% verkleinerter Lichtradius"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "pact_affliction_critical_strike_chance_against_self": {
+    "description": "Gegner haben 100% erhöhte kritische Trefferchance gegen Euch.",
+    "invisible": false,
+    "name": "Grausige Sense",
+    "removable": false,
+    "stats": [
+      "base_enemy_critical_strike_chance_+%_against_self"
+    ],
+    "visuals": "pact_affliction_critical_strike_chance_against_self",
+    "category": "Debuff",
+    "sources": null,
+    "templates": {
+      "PactAfflictionCriticalStrikeChanceAgainstSelf": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_enemy_critical_strike_chance_+%_against_self": 100
+        },
+        "stat_text": [
+          "Treffer haben 100% erhöhte kritische Trefferchance gegen Euch"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "pact_affliction_action_speed": {
+    "description": "Ihr habt 15% verringerte Aktionsgeschwindigkeit.",
+    "invisible": false,
+    "name": "Dunkle Grube",
+    "removable": false,
+    "stats": [
+      "action_speed_-%"
+    ],
+    "visuals": "pact_affliction_action_speed",
+    "category": "Debuff",
+    "sources": null,
+    "templates": {
+      "PactAfflictionActionSpeed": {
+        "aura_radius_metres": null,
+        "stats": {
+          "action_speed_-%": 15
+        },
+        "stat_text": [
+          "15% verringerte Aktionsgeschwindigkeit"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "pact_boon_movement_speed": {
+    "description": "Ihr habt 20% erhöhte Bewegungsgeschwindigkeit.",
+    "invisible": false,
+    "name": "Hasenpfote",
+    "removable": true,
+    "stats": [
+      "base_movement_velocity_+%"
+    ],
+    "visuals": "pact_boon_movement_speed",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "PactBoonMovementSpeed": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_movement_velocity_+%": 20
+        },
+        "stat_text": [
+          "20% erhöhte Bewegungsgeschwindigkeit"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "pact_boon_damage": {
+    "description": "Ihr verursacht 50% erhöhten Schaden.",
+    "invisible": false,
+    "name": "Verzierter Dolch",
+    "removable": true,
+    "stats": [
+      "damage_+%"
+    ],
+    "visuals": "pact_boon_damage",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "PactBoonDamage": {
+        "aura_radius_metres": null,
+        "stats": {
+          "damage_+%": 50
+        },
+        "stat_text": [
+          "50% erhöhter Schaden"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "pact_boon_damage_taken": {
+    "description": "Ihr erleidet 20% verringerten Schaden.",
+    "invisible": false,
+    "name": "Goldener Blick",
+    "removable": true,
+    "stats": [
+      "base_damage_taken_+%"
+    ],
+    "visuals": "pact_boon_damage_taken",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "PactBoonDamageTaken": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_damage_taken_+%": -20
+        },
+        "stat_text": [
+          "20% verringerter erlittener Schaden"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "pact_boon_defences": {
+    "description": "Ihr habt 50% erhöhte Defensiven.",
+    "invisible": false,
+    "name": "Glänzender Lack",
+    "removable": true,
+    "stats": [
+      "global_defences_+%"
+    ],
+    "visuals": "pact_boon_defences",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "PactBoonDefences": {
+        "aura_radius_metres": null,
+        "stats": {
+          "global_defences_+%": 50
+        },
+        "stat_text": [
+          "50% erhöhte globale Defensiven"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "pact_boon_resistances": {
+    "description": "Ihr habt +20% zu allen Widerständen.",
+    "invisible": false,
+    "name": "Silberner Blick",
+    "removable": true,
+    "stats": [
+      "base_resist_all_elements_%",
+      "base_chaos_damage_resistance_%"
+    ],
+    "visuals": "pact_boon_resistances",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "PactBoonResistances": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_resist_all_elements_%": 20,
+          "base_chaos_damage_resistance_%": 20
+        },
+        "stat_text": [
+          "+20% zu allen Elementarwiderständen",
+          "+20% zu Chaoswiderstand"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "pact_boon_critical_strike_chance": {
+    "description": "Ihr habt 100% erhöhte kritische Trefferchance.",
+    "invisible": false,
+    "name": "Klinge des Assassinen",
+    "removable": true,
+    "stats": [
+      "critical_strike_chance_+%"
+    ],
+    "visuals": "pact_boon_critical_strike_chance",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "PactBoonCriticalStrikeChance": {
+        "aura_radius_metres": null,
+        "stats": {
+          "critical_strike_chance_+%": 100
+        },
+        "stat_text": [
+          "100% erhöhte globale kritische Trefferchance"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "pact_boon_cast_speed": {
+    "description": "Ihr habt 20% erhöhte Zaubergeschwindigkeit.",
+    "invisible": false,
+    "name": "Verstimmte Laute",
+    "removable": true,
+    "stats": [
+      "base_cast_speed_+%"
+    ],
+    "visuals": "pact_boon_cast_speed",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "PactBoonCastSpeed": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_cast_speed_+%": 20
+        },
+        "stat_text": [
+          "20% erhöhte Zaubergeschwindigkeit"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "pact_boon_life_degen": {
+    "description": "Ihr habt 25% erhöhte Lebenswiederherstellungs-Rate.",
+    "invisible": false,
+    "name": "Weihwasser",
+    "removable": true,
+    "stats": [
+      "life_recovery_rate_+%"
+    ],
+    "visuals": "pact_boon_life_degen",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "PactBoonLifeDegen": {
+        "aura_radius_metres": null,
+        "stats": {
+          "life_recovery_rate_+%": 25
+        },
+        "stat_text": [
+          "25% erhöhte Lebenswiederherstellungs-Rate"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "pact_boon_mana_degen": {
+    "description": "Ihr habt 25% erhöhte Manawiederherstellungs-Rate.",
+    "invisible": false,
+    "name": "Muffiger Wein",
+    "removable": true,
+    "stats": [
+      "mana_recovery_rate_+%"
+    ],
+    "visuals": "pact_boon_mana_degen",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "PactBoonManaDegen": {
+        "aura_radius_metres": null,
+        "stats": {
+          "mana_recovery_rate_+%": 25
+        },
+        "stat_text": [
+          "25% erhöhte Manawiederherstellungs-Rate"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "pact_boon_light_radius": {
+    "description": "Ihr habt 80% erhöhten Lichtradius.",
+    "invisible": false,
+    "name": "Leuchtende Sphäre",
+    "removable": true,
+    "stats": [
+      "light_radius_+%"
+    ],
+    "visuals": "pact_boon_light_radius",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "PactBoonLightRadius": {
+        "aura_radius_metres": null,
+        "stats": {
+          "light_radius_+%": 80
+        },
+        "stat_text": [
+          "80% vergrößerter Lichtradius"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "pact_boon_critical_strike_chance_against_self": {
+    "description": "Gegner haben 100% verringerte kritische Trefferchance gegen Euch.",
+    "invisible": false,
+    "name": "Gravierte Sphäre",
+    "removable": true,
+    "stats": [
+      "base_enemy_critical_strike_chance_+%_against_self"
+    ],
+    "visuals": "pact_boon_critical_strike_chance_against_self",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "PactBoonCriticalStrikeChanceAgainstSelf": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_enemy_critical_strike_chance_+%_against_self": -100
+        },
+        "stat_text": [
+          "Treffer haben 100% verringerte kritische Trefferchance gegen Euch"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "pact_boon_action_speed": {
+    "description": "Ihr habt 15% erhöhte Aktionsgeschwindigkeit.",
+    "invisible": false,
+    "name": "Jungbrunnen",
+    "removable": true,
+    "stats": [
+      "action_speed_-%"
+    ],
+    "visuals": "pact_boon_action_speed",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "PactBoonActionSpeed": {
+        "aura_radius_metres": null,
+        "stats": {
+          "action_speed_-%": -15
+        },
+        "stat_text": [
+          "15% erhöhte Aktionsgeschwindigkeit"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "lunaris_aspect_elemental_rebuff": {
+    "description": "'Aspekt von Lunaris' mindert den von Euch erlittenen Elementarschaden.",
+    "invisible": false,
+    "name": "Mondwiderstand",
+    "removable": false,
+    "stats": [],
+    "visuals": "lunaris_aspect_elemental_rebuff_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": 8
+  },
+  "lunaris_aspect_physical_rebuff": {
+    "description": "'Aspekt von Lunaris' mindert den von Euch erlittenen physischen Schaden.",
+    "invisible": false,
+    "name": "Mondschutz",
+    "removable": false,
+    "stats": [],
+    "visuals": "lunaris_aspect_physical_rebuff_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": 8
+  },
+  "solaris_aspect_exposure_debuff": {
+    "description": "Anfälligkeit hat eine erhöhte Wirkung auf Euch.",
+    "invisible": false,
+    "name": "Sonnenbrand",
+    "removable": false,
+    "stats": [
+      "exposure_effect_+%"
+    ],
+    "visuals": "solaris_aspect_exposure_debuff_visual",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": 5
+  },
+  "display_num_empowered_spells": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "pact_empowered_visual_display_buff",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "deepwater_lantern_wider_buff": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "is_near_deepwater_lantern"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": {
+      "DeepwaterLanternWiderBuff": {
+        "aura_radius_metres": 0.1,
+        "stats": {
+          "is_near_deepwater_lantern": -1
+        },
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "mana_infused_staff": {
+    "description": "Ihr habt erhöhte Chance auf Blocken und weniger Manakosten von Fertigkeiten.",
+    "invisible": false,
+    "name": "Manaverstärkter Stab",
+    "removable": true,
+    "stats": [
+      "skill_mana_cost_+%_final_from_mana_infused_staff",
+      "block_chance_+%_final_from_mana_infused_staff"
+    ],
+    "visuals": "mana_infused_staff",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "brine_king_aspect": {
+    "description": "Eure Unterkühlungen sind mächtiger, und Euer Schaden durchdringt den Kältewiderstand von unterkühlten Gegnern.",
+    "invisible": true,
+    "name": "Aspekt des Gischtkönigs",
+    "removable": false,
+    "stats": [
+      "chill_effect_+%",
+      "cold_penetration_%_vs_chilled_enemies"
+    ],
+    "visuals": "brine_king_aspect_primary_buff",
+    "category": "Aspect",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "solaris_aspect": {
+    "description": "",
+    "invisible": true,
+    "name": "Aspekt von Solaris",
+    "removable": false,
+    "stats": [],
+    "visuals": "solaris_aspect_primary_buff",
+    "category": "Aspect",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "lunaris_aspect": {
+    "description": "",
+    "invisible": true,
+    "name": "Aspekt von Lunaris",
+    "removable": false,
+    "stats": [
+      "lunaris_aspect_elemental_damage_taken_+%_final_per_ele_rebuff",
+      "lunaris_aspect_physical_damage_taken_+%_final_per_phys_rebuff",
+      "lunaris_aspect_gain_rebuff_matching_damage_taken"
+    ],
+    "visuals": "lunaris_aspect_primary_buff",
+    "category": "Aspect",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "arakaali_aspect": {
+    "description": "",
+    "invisible": true,
+    "name": "Aspekt von Arakaali",
+    "removable": false,
+    "stats": [
+      "withered_on_hit_for_2_seconds_%_chance",
+      "life_recovery_rate_+%_per_wither_on_self",
+      "withered_reflected_to_self"
+    ],
+    "visuals": "arakaali_aspect_primary_buff",
+    "category": "Aspect",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "spirit_infusion": {
+    "description": "Jeder Stapel von Infusion des Geistes gewährt 15% schnelleren Beginn der Energieschild-Wiederaufladung, 5% mehr Schaden mit kanalisierten Zaubern und 10% mehr Kosten von kanalisierten Zaubern.",
+    "invisible": false,
+    "name": "Infusion des Geistes",
+    "removable": false,
+    "stats": [
+      "energy_shield_delay_-%",
+      "channelling_spell_damage_+%_final_from_spirit_infusion",
+      "channelling_spell_mana_cost_+%_final_from_spirit_infusion"
+    ],
+    "visuals": "spirit_infusion",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": 10
+  },
+  "deepwater_golden_lantern": {
+    "description": "Ihr habt eine bedeutend höhere Seltenheit gefundener Gegenstände.",
+    "invisible": false,
+    "name": "Leuchten der Goldenen Laterne",
+    "removable": false,
+    "stats": [
+      "base_item_found_rarity_+%"
+    ],
+    "visuals": "deepwater_golden_lantern_buff",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "VelkaFightableBuff": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "velka_fightable_buff",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "VisualAllflameCoralBuff": {
+    "description": "Erhaltet erhöhten gefundenen Totenschwefel,\r\naber verringertes gefundenes Gold.",
+    "invisible": false,
+    "name": "Allflammeverstärkte Koralle",
+    "removable": false,
+    "stats": [],
+    "visuals": "deepwater_allflame_coral_buff",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "chill_cold_damage_taken_modifier": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
     "sources": null,
     "templates": null,
     "stack_limit": null

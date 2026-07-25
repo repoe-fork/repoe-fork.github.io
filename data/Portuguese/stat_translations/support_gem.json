@@ -9834,6 +9834,62 @@
   {
     "English": null,
     "ids": [
+      "shock_effect_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Efeito de eletrificações infligidos com habilidades reforçadas aumentado em {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Efeito de eletrificações infligidos com habilidades reforçadas reduzido em {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "support_chills_also_grant_cold_damage_taken_per_minute_+%"
     ],
     "trade_stats": null,
@@ -11493,33 +11549,8 @@
           [],
           []
         ],
-        "string": "Aumentos e Reduções ao Dano Mágico também são aplicados ao Dano com Ataques para esta Habilidade em {0}% de seu valor",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 100,
-            "max": 100,
-            "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          []
-        ],
-        "string": "Aumentos e Reduções ao Dano Mágico também são aplicados ao Dano com Ataques para esta Habilidade",
-        "reminder_text": null,
+        "string": "{0}% de Poder Arcano",
+        "reminder_text": "(Poder Arcano faz com que aumentos e reduções de dano mágico também se apliquem ao dano de ataque na mesma porcentagem do seu valor)",
         "is_markup": null
       },
       {
@@ -11543,8 +11574,8 @@
           [],
           []
         ],
-        "string": "Aumentos e Reduções ao Dano Mágico também são aplicados ao Dano com Ataques para esta Habilidade em {0}% de seu valor",
-        "reminder_text": null,
+        "string": "{0}% de Poder Arcano",
+        "reminder_text": "(Poder Arcano faz com que aumentos e reduções de dano mágico também se apliquem ao dano de ataque na mesma porcentagem do seu valor)",
         "is_markup": null
       }
     ],
@@ -16562,8 +16593,8 @@
       {
         "condition": [
           {
-            "min": null,
-            "max": null,
+            "min": 100,
+            "max": 100,
             "negated": null
           }
         ],
@@ -16571,9 +16602,31 @@
           "ignore"
         ],
         "index_handlers": [
-          []
+          [
+            "locations_to_metres"
+          ]
         ],
-        "string": "+0.1 metros de raio por Inimigo Próximo, máximo de +1 metro",
+        "string": "ㅤ+1 metro de raio por inimigo próximo, até +1 metro",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          [
+            "locations_to_metres"
+          ]
+        ],
+        "string": "ㅤ{0} metros de raio por inimigo próximo, até +1 metro",
         "reminder_text": null,
         "is_markup": null
       }
@@ -17017,7 +17070,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Magias reforçadas têm a velocidade de recarga aumentada em {0}% por 100 Salvaguarda",
+        "string": "Magias reforçadas têm a velocidade de recarga aumentada em {0}% por 100 Salvaguarda, até 400%",
         "reminder_text": null,
         "is_markup": null
       },
@@ -17035,7 +17088,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Magias reforçadas têm a velocidade de recarga reduzida em {0}% por 100 Salvaguarda",
+        "string": "Magias reforçadas têm a velocidade de recarga reduzida em {0}% por 100 Salvaguarda, até 400%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -21675,6 +21728,78 @@
   {
     "English": null,
     "ids": [
+      "inflict_equivalent_chill_on_inflicting_shock_with_hits"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Esfria inimigos quando eles são eletrificados por seus ataques, reduzindo a velocidade de ação com base no efeito de eletrificação",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "inflict_equivalent_shock_on_inflicting_chill_with_hits"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Eletrifica inimigos quando eles são esfriados por seus ataques, aumentando o dano sofrido com base no efeito de esfriamento",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "inflict_hallowing_flame_on_melee_hit_chance_%"
     ],
     "trade_stats": null,
@@ -26278,7 +26403,7 @@
             "locations_to_metres"
           ]
         ],
-        "string": "Projéteis de Habilidades Suportadas têm {0} metro ao alcance máximo",
+        "string": "Projéteis de habilidades reforçadas têm um [DirectFlight|voo direto] máximo de {0} metro",
         "reminder_text": null,
         "is_markup": null
       },
@@ -26298,7 +26423,7 @@
             "locations_to_metres"
           ]
         ],
-        "string": "Projéteis de Habilidades Suportadas têm {0} metros ao alcance máximo",
+        "string": "Projéteis de habilidades reforçadas têm um [DirectFlight|voo direto] máximo de {0} metros",
         "reminder_text": null,
         "is_markup": null
       }
@@ -28185,6 +28310,50 @@
   {
     "English": null,
     "ids": [
+      "spell_minimum_added_physical_damage_per_active_permanent_minion",
+      "spell_maximum_added_physical_damage_per_active_permanent_minion"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "Magias reforçadas causam de {0} a {1} de dano físico adicionado para cada lacaio permanente",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "static_strike_base_zap_frequency_ms"
     ],
     "trade_stats": null,
@@ -28468,6 +28637,60 @@
         ],
         "string": "Sentinelas invocadas de habilidades reforçadas têm uma aura templária",
         "reminder_text": "(Auras templárias têm um dos seguintes efeitos:\r\n - Ganha 15% do dano físico como dano de fogo adicional\r\n - Ganha 15% do dano físico como dano elétrico adicional\r\n - Regenera 1,5% de vida por segundo\r\n - Velocidade de regeneração de mana aumentada em 30%\r\n - +23% de resistência a dano de caos\r\n - Maldições em você têm o efeito reduzido em 50%)",
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_abyssal_well_chance_to_create_well_on_corpse_creation_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Habilidades reforçadas têm {0}% de chance de ativar Bocarra Abissal ao criar um cadáver",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Habilidades reforçadas ativam Bocarra Abissal ao criar um cadáver",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -29907,7 +30130,7 @@
   {
     "English": null,
     "ids": [
-      "support_companionship_minion_maximum_life_+%_final_if_at_most_one_minion"
+      "support_companionship_minion_damage_taken_+%_final_if_at_most_one_minion"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -29930,7 +30153,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Lacaios de habilidades reforçadas têm +{0}% de vida máxima, se eles forem seus únicos lacaios",
+        "string": "Lacaios de habilidades reforçadas sofrem +{0}% de dano, se eles forem seus únicos lacaios",
         "reminder_text": null,
         "is_markup": null
       },
@@ -29950,7 +30173,7 @@
             "negate"
           ]
         ],
-        "string": "Lacaios de habilidades reforçadas têm -{0}% de vida máxima, se eles forem seus únicos lacaios",
+        "string": "Lacaios de habilidades reforçadas sofrem -{0}% de dano, se eles forem seus únicos lacaios",
         "reminder_text": null,
         "is_markup": null
       }
@@ -30339,6 +30562,60 @@
           []
         ],
         "string": "Clamores Suportados infligem {0} Debuffs de Sangue Corrompido",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_crystalfall_chance_to_trigger_crystalfall_on_hit_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Habilidades reforçadas têm {0}% de chance ativar Cristal em Queda ao atingir",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Habilidades reforçadas ativam Cristal em Queda ao atingir",
         "reminder_text": null,
         "is_markup": null
       }

@@ -9834,6 +9834,62 @@
   {
     "English": null,
     "ids": [
+      "shock_effect_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "보조 대상 스킬로 유발하는 감전 효과 {0}% 증가",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "보조 대상 스킬로 유발하는 감전 효과 {0}% 감소",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "support_chills_also_grant_cold_damage_taken_per_minute_+%"
     ],
     "trade_stats": null,
@@ -11492,33 +11548,8 @@
           [],
           []
         ],
-        "string": "주문 피해에 적용된 증가 및 감소 수치의 {0}%를 이 스킬로 인한 공격 피해에도 적용",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": 100,
-            "max": 100,
-            "negated": null
-          },
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore",
-          "ignore"
-        ],
-        "index_handlers": [
-          [],
-          []
-        ],
-        "string": "주문 피해에 적용된 증가 및 감소 수치를 이 스킬로 인한 공격 피해에도 적용",
-        "reminder_text": null,
+        "string": "비전 완력 {0}%",
+        "reminder_text": "(비전 완력은 주문 피해에 적용되는 증가 및 감소 효과를 그 수치의 해당 비율만큼 공격 피해에도 적용시킴)",
         "is_markup": null
       },
       {
@@ -11542,8 +11573,8 @@
           [],
           []
         ],
-        "string": "주문 피해에 적용된 증가 및 감소 수치의 {0}%를 이 스킬로 인한 공격 피해에도 적용",
-        "reminder_text": null,
+        "string": "비전 완력 {0}%",
+        "reminder_text": "(비전 완력은 주문 피해에 적용되는 증가 및 감소 효과를 그 수치의 해당 비율만큼 공격 피해에도 적용시킴)",
         "is_markup": null
       }
     ],
@@ -16561,8 +16592,8 @@
       {
         "condition": [
           {
-            "min": null,
-            "max": null,
+            "min": 100,
+            "max": 100,
             "negated": null
           }
         ],
@@ -16570,9 +16601,31 @@
           "ignore"
         ],
         "index_handlers": [
-          []
+          [
+            "locations_to_metres"
+          ]
         ],
-        "string": "주변에 있는 적 하나당 반경 +0.1미터, 최대 +1미터",
+        "string": "주변에 있는 적 하나당 반경 +1미터, 최대 +1미터",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          [
+            "locations_to_metres"
+          ]
+        ],
+        "string": "주변에 있는 적 하나당 반경 {0}미터, 최대 +1미터",
         "reminder_text": null,
         "is_markup": null
       }
@@ -17016,7 +17069,7 @@
         "index_handlers": [
           []
         ],
-        "string": "수호 100당 보조 대상 주문의 재사용 대기시간 회복 속도 {0}% 증가",
+        "string": "수호 100당 보조 대상 주문의 재사용 대기시간 회복 속도 {0}%씩, 최대 400%까지 증가",
         "reminder_text": null,
         "is_markup": null
       },
@@ -17034,7 +17087,7 @@
         "index_handlers": [
           []
         ],
-        "string": "수호 100당 보조 대상 주문의 재사용 대기시간 회복 속도 {0}% 감소",
+        "string": "수호 100당 보조 대상 주문의 재사용 대기시간 회복 속도 {0}%씩, 최대 400%까지 감소",
         "reminder_text": null,
         "is_markup": null
       }
@@ -21675,6 +21728,78 @@
   {
     "English": null,
     "ids": [
+      "inflict_equivalent_chill_on_inflicting_shock_with_hits"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "적이 플레이어의 명중으로 감전될 때 해당 적을 냉각시켜, 감전 효과로 인한 동작 속도를 감소시킴",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "inflict_equivalent_shock_on_inflicting_chill_with_hits"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "적이 플레이어의 명중으로 냉각될 때 해당 적을 감전시켜, 냉각 효과로 받는 피해를 증가시킴",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "inflict_hallowing_flame_on_melee_hit_chance_%"
     ],
     "trade_stats": null,
@@ -26277,7 +26402,7 @@
             "locations_to_metres"
           ]
         ],
-        "string": "보조 대상 스킬의 투사체의 최대 범위 {0}미터",
+        "string": "보조 대상 스킬의 투사체의 최대 [DirectFlight|직접 비행] {0}미터",
         "reminder_text": null,
         "is_markup": null
       },
@@ -26297,7 +26422,7 @@
             "locations_to_metres"
           ]
         ],
-        "string": "보조 대상 스킬의 투사체의 최대 범위 {0}미터",
+        "string": "보조 대상 스킬의 투사체의 최대 [DirectFlight|직접 비행] {0}미터",
         "reminder_text": null,
         "is_markup": null
       }
@@ -28185,6 +28310,50 @@
   {
     "English": null,
     "ids": [
+      "spell_minimum_added_physical_damage_per_active_permanent_minion",
+      "spell_maximum_added_physical_damage_per_active_permanent_minion"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "영구 소환수 하나당 보조 대상 주문이 주는 물리 피해 {0}~{1} 추가",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "static_strike_base_zap_frequency_ms"
     ],
     "trade_stats": null,
@@ -28467,6 +28636,60 @@
         ],
         "string": "보조 대상 스킬로 소환된 파수꾼이 템플러 오라 보유",
         "reminder_text": "(템플러 오라의 효과:\r\n- 물리 피해의 15%를 추가 화염 피해로 획득\r\n- 물리 피해의 15%를 추가 번개 피해로 획득\r\n- 1초마다 생명력의 1.5% 재생\r\n- 마나 재생 속도 30% 증가\r\n- 카오스 저항 +23%\r\n- 플레이어에게 적용되는 저주 효과 50% 감소)",
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_abyssal_well_chance_to_create_well_on_corpse_creation_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "보조 대상 스킬이 시신 생성 시 {0}% 확률로 심연의 아귀 발동",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "보조 대상 스킬이 시신 생성 시 심연의 아귀 발동",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -29907,7 +30130,7 @@
   {
     "English": null,
     "ids": [
-      "support_companionship_minion_maximum_life_+%_final_if_at_most_one_minion"
+      "support_companionship_minion_damage_taken_+%_final_if_at_most_one_minion"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -29929,7 +30152,7 @@
         "index_handlers": [
           []
         ],
-        "string": "보조 대상 스킬로 소환된 소환수가 플레이어의 유일한 소환수인 경우 해당 소환수의 생명력 최대치 {0}% 증폭",
+        "string": "보조 대상 스킬로 소환된 소환수가 플레이어의 유일한 소환수인 경우 받는 피해 {0}% 증폭",
         "reminder_text": null,
         "is_markup": null
       },
@@ -29949,7 +30172,7 @@
             "negate"
           ]
         ],
-        "string": "보조 대상 스킬로 소환된 소환수가 플레이어의 유일한 소환수인 경우 해당 소환수의 생명력 최대치 {0}% 감폭",
+        "string": "보조 대상 스킬로 소환된 소환수가 플레이어의 유일한 소환수인 경우 받는 피해 {0}% 감폭",
         "reminder_text": null,
         "is_markup": null
       }
@@ -30338,6 +30561,60 @@
           []
         ],
         "string": "보조 대상 함성이 타락한 피 디버프 {0}개 유발",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_crystalfall_chance_to_trigger_crystalfall_on_hit_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 99,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "보조 대상 스킬 명중 시 {0}% 확률로 수정 낙하 발동",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 100,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "보조 대상 스킬 명중 시 수정 낙하 발동",
         "reminder_text": null,
         "is_markup": null
       }

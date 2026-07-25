@@ -474,7 +474,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Monster haben {0}% Chance, sämtlichen Schaden von Treffern zu vermeiden",
+        "string": "Monster haben {0}% Chance, Schaden von jedem Schadenstyp von Treffern zu vermeiden",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2228,7 +2228,8 @@
   {
     "English": null,
     "ids": [
-      "map_number_of_rare_packs_+%"
+      "map_number_of_rare_packs_+%",
+      "chart_rare_monsters_voyage_display_stat"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -2240,12 +2241,19 @@
             "min": null,
             "max": null,
             "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
           }
         ],
         "format": [
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
+          [],
           []
         ],
         "string": "{0}% erhöhte Anzahl von seltenen Monstern",
@@ -2484,7 +2492,8 @@
   {
     "English": null,
     "ids": [
-      "map_number_of_magic_packs_+%"
+      "map_number_of_magic_packs_+%",
+      "chart_magic_monsters_voyage_display_stat"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -2496,12 +2505,19 @@
             "min": null,
             "max": null,
             "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
           }
         ],
         "format": [
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
+          [],
           []
         ],
         "string": "{0}% erhöhte Anzahl von magischen Monstern",
@@ -3566,7 +3582,7 @@
         "index_handlers": [
           []
         ],
-        "string": "<enchanted>{{Freigelegte Truhen haben {0}% Chance, zusätzliche Simulacrum-Splitter zu enthalten}}",
+        "string": "<enchanted>{{Freigelegte Truhen haben {0}% Chance, zusätzliche Simulakrum-Splitter zu enthalten}}",
         "reminder_text": null,
         "is_markup": null
       },
@@ -3584,7 +3600,7 @@
         "index_handlers": [
           []
         ],
-        "string": "<enchanted>{{Freigelegte Truhen enthalten zusätzliche Simulacrum-Splitter}}",
+        "string": "<enchanted>{{Freigelegte Truhen enthalten zusätzliche Simulakrum-Splitter}}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3944,7 +3960,7 @@
         "index_handlers": [
           []
         ],
-        "string": "<enchanted>{{Freigelegte Truhen haben {0}% Chance, einen zusätzlichen Heist-Auftrag zu enthalten}}",
+        "string": "<enchanted>{{Freigelegte Truhen haben {0}% Chance, einen zusätzlichen Raubüberfall-Auftrag zu enthalten}}",
         "reminder_text": null,
         "is_markup": null
       },
@@ -3962,7 +3978,7 @@
         "index_handlers": [
           []
         ],
-        "string": "<enchanted>{{Freigelegte Truhen enthalten einen zusätzlichen Heist-Auftrag}}",
+        "string": "<enchanted>{{Freigelegte Truhen enthalten einen zusätzlichen Raubüberfall-Auftrag}}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5240,7 +5256,7 @@
         "index_handlers": [
           []
         ],
-        "string": "<enchanted>{{Runenmonster haben {0}% Chance, zusätzliche Simulacrum-Splitter fallen zu lassen}}",
+        "string": "<enchanted>{{Runenmonster haben {0}% Chance, zusätzliche Simulakrum-Splitter fallen zu lassen}}",
         "reminder_text": null,
         "is_markup": null
       },
@@ -5258,7 +5274,7 @@
         "index_handlers": [
           []
         ],
-        "string": "<enchanted>{{Runenmonster lassen zusätzliche Simulacrum-Splitter fallen}}",
+        "string": "<enchanted>{{Runenmonster lassen zusätzliche Simulakrum-Splitter fallen}}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5654,7 +5670,7 @@
         "index_handlers": [
           []
         ],
-        "string": "<enchanted>{{Runenmonster haben {0}% Chance, einen zusätzlichen Heist-Auftrag fallen zu lassen}}",
+        "string": "<enchanted>{{Runenmonster haben {0}% Chance, einen zusätzlichen Raubüberfall-Auftrag fallen zu lassen}}",
         "reminder_text": null,
         "is_markup": null
       },
@@ -5672,7 +5688,7 @@
         "index_handlers": [
           []
         ],
-        "string": "<enchanted>{{Runenmonster lassen einen zusätzlichen Heist-Auftrag fallen}}",
+        "string": "<enchanted>{{Runenmonster lassen einen zusätzlichen Raubüberfall-Auftrag fallen}}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -6714,7 +6730,8 @@
   {
     "English": null,
     "ids": [
-      "map_pack_size_+%"
+      "map_pack_size_+%",
+      "chart_pack_size_voyage_display_stat"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -6726,12 +6743,19 @@
             "min": 1,
             "max": null,
             "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
           }
         ],
         "format": [
+          "ignore",
           "ignore"
         ],
         "index_handlers": [
+          [],
           []
         ],
         "string": "<enchanted>{{{0}% erhöhte Gruppengröße}}",
@@ -6744,15 +6768,22 @@
             "min": null,
             "max": -1,
             "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
           }
         ],
         "format": [
+          "ignore",
           "ignore"
         ],
         "index_handlers": [
           [
             "negate"
-          ]
+          ],
+          []
         ],
         "string": "<enchanted>{{{0}% verringerte Gruppengröße}}",
         "reminder_text": null,
