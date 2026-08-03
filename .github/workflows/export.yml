@@ -65,7 +65,7 @@ jobs:
         run: find poe1/data '(' -name '*.json' -not -path '*/pob/*' -o -name '*.html' -o -name '*.txt' ')' -delete -print | wc -l
       - run: poetry install
         working-directory: RePoE
-      - run: poetry run pypoe_schema_import -a stable
+      - run: poetry run pypoe_schema_import -a stable -u https://repoe-fork.github.io/dat-export/poe/filtered.json
         working-directory: RePoE
       - run: |
           cp RePoE/schema/* ../poe1/data/data-formats
