@@ -91509,7 +91509,7 @@
     "color": "b",
     "display_name": "Hydrosphere",
     "is_support": false,
-    "stat_translation_file": "stat_translations/skill",
+    "stat_translation_file": "stat_translations/debuff_skill",
     "static": {
       "crit_chance": 600,
       "damage_effectiveness": null,
@@ -99618,7 +99618,7 @@
     "color": "b",
     "display_name": "Hydrosphere",
     "is_support": false,
-    "stat_translation_file": "stat_translations/skill",
+    "stat_translation_file": "stat_translations/debuff_skill",
     "static": {
       "crit_chance": 600,
       "damage_effectiveness": -40,
@@ -133180,8 +133180,8 @@
         "dex": 0
       },
       "stat_text": {
-        "inflict_equivalent_shock_on_inflicting_chill_with_hits": "Shock enemies when they are Chilled by your Hits, increasing Damage taken by Chill Effect",
-        "inflict_equivalent_chill_on_inflicting_shock_with_hits": "Chill enemies when they are Shocked by your Hits, reducing Action Speed by Shock Effect"
+        "inflict_equivalent_shock_on_inflicting_chill_with_hits": "Shock enemies when they are Chilled by Hits from Supported Skills, increasing Damage taken by Chill Effect",
+        "inflict_equivalent_chill_on_inflicting_shock_with_hits": "Chill enemies when they are Shocked by Hits from Supported Skills, reducing Action Speed by Shock Effect"
       },
       "stats": [
         {
@@ -133227,6 +133227,8 @@
     "tags": [
       "low_max_level",
       "exceptional",
+      "cold",
+      "lightning",
       "intelligence",
       "support"
     ],
@@ -133235,12 +133237,13 @@
     "discriminator": null,
     "support_gem": {
       "allowed_types": [
+        "Attack",
         "Damage"
       ],
       "letter": "⊙",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "Supports skills that hit enemies.",
+      "support_text": "Supports any skill that hits enemies.",
       "excluded_types": null,
       "added_types": null,
       "added_minion_types": null

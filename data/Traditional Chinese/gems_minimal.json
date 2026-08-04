@@ -62856,7 +62856,7 @@
         "base_skill_effect_duration": "基礎持續時間為 8.00 秒",
         "corpse_erruption_base_maximum_number_of_geyers": "同時最多 3 個熔炎泉",
         "base_number_of_projectiles": "發射4個投射物",
-        "cremation_base_fires_projectile_every_x_ms": "Fires Projectiles every second"
+        "cremation_base_fires_projectile_every_x_ms": "每秒發射投射物"
       },
       "stats": [
         {
@@ -63039,7 +63039,7 @@
         "base_skill_effect_duration": "基礎持續時間為 8.00 秒",
         "corpse_erruption_base_maximum_number_of_geyers": "同時最多 1 個熔炎泉",
         "base_number_of_projectiles": "發射3個投射物",
-        "cremation_base_fires_projectile_every_x_ms": "Fires Projectiles every 0.8 seconds",
+        "cremation_base_fires_projectile_every_x_ms": "每 0.8 秒發射投射物",
         "cremation_chance_to_explode_nearby_corpse_when_firing_projectiles": "當發射投射物時，使附近屍體爆炸"
       },
       "stats": [
@@ -63229,7 +63229,7 @@
         "base_skill_effect_duration": "基礎持續時間為 2.00 秒",
         "corpse_erruption_base_maximum_number_of_geyers": "同時最多 8 個熔炎泉",
         "base_number_of_projectiles": "發射4個投射物",
-        "cremation_base_fires_projectile_every_x_ms": "Fires Projectiles every second"
+        "cremation_base_fires_projectile_every_x_ms": "每秒發射投射物"
       },
       "stats": [
         {
@@ -92109,7 +92109,7 @@
     "color": "b",
     "display_name": "水弒界",
     "is_support": false,
-    "stat_translation_file": "stat_translations/skill",
+    "stat_translation_file": "stat_translations/debuff_skill",
     "static": {
       "crit_chance": 600,
       "damage_effectiveness": null,
@@ -99907,7 +99907,7 @@
         "corpse_erruption_base_maximum_number_of_geyers": "同時最多 3 個熔炎泉",
         "corpse_explosion_monster_life_%": "爆炸造成的火焰傷害等同 4% 屍體的最大生命",
         "number_of_additional_projectiles": "發射 3 個額外投射物",
-        "cremation_base_fires_projectile_every_x_ms": "Fires Projectiles every second"
+        "cremation_base_fires_projectile_every_x_ms": "每秒發射投射物"
       },
       "stats": [
         {
@@ -100218,7 +100218,7 @@
     "color": "b",
     "display_name": "水弒界",
     "is_support": false,
-    "stat_translation_file": "stat_translations/skill",
+    "stat_translation_file": "stat_translations/debuff_skill",
     "static": {
       "crit_chance": 600,
       "damage_effectiveness": -40,
@@ -133780,8 +133780,8 @@
         "dex": 0
       },
       "stat_text": {
-        "inflict_equivalent_shock_on_inflicting_chill_with_hits": "當你的擊中使敵人冰緩時同時使其感電，增加承受傷害被冰緩效果影響",
-        "inflict_equivalent_chill_on_inflicting_shock_with_hits": "當你的擊中使敵人感電時同時使其冰緩，減少行動速度被感電效果影響"
+        "inflict_equivalent_shock_on_inflicting_chill_with_hits": "當被輔助的技能擊中敵人造成冰緩時同時使其感電，根據冰緩效果增加承受傷害",
+        "inflict_equivalent_chill_on_inflicting_shock_with_hits": "當被輔助的技能擊中敵人造成感電時同時使其冰緩，根據感電效果減少行動速度"
       },
       "stats": [
         {
@@ -133827,6 +133827,8 @@
     "tags": [
       "low_max_level",
       "exceptional",
+      "cold",
+      "lightning",
       "intelligence",
       "support"
     ],
@@ -133835,12 +133837,13 @@
     "discriminator": null,
     "support_gem": {
       "allowed_types": [
+        "Attack",
         "Damage"
       ],
       "letter": "⊙",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "輔助可擊中敵人的技能。",
+      "support_text": "輔助任何可擊中敵人的技能。",
       "excluded_types": null,
       "added_types": null,
       "added_minion_types": null

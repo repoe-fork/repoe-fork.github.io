@@ -92109,7 +92109,7 @@
     "color": "b",
     "display_name": "물의 구체",
     "is_support": false,
-    "stat_translation_file": "stat_translations/skill",
+    "stat_translation_file": "stat_translations/debuff_skill",
     "static": {
       "crit_chance": 600,
       "damage_effectiveness": null,
@@ -100218,7 +100218,7 @@
     "color": "b",
     "display_name": "물의 구체",
     "is_support": false,
-    "stat_translation_file": "stat_translations/skill",
+    "stat_translation_file": "stat_translations/debuff_skill",
     "static": {
       "crit_chance": 600,
       "damage_effectiveness": -40,
@@ -133780,8 +133780,8 @@
         "dex": 0
       },
       "stat_text": {
-        "inflict_equivalent_shock_on_inflicting_chill_with_hits": "적이 플레이어의 명중으로 냉각될 때 해당 적을 감전시켜, 냉각 효과로 받는 피해를 증가시킴",
-        "inflict_equivalent_chill_on_inflicting_shock_with_hits": "적이 플레이어의 명중으로 감전될 때 해당 적을 냉각시켜, 감전 효과로 인한 동작 속도를 감소시킴"
+        "inflict_equivalent_shock_on_inflicting_chill_with_hits": "적이 보조 대상 스킬의 명중으로 냉각될 때 해당 적을 감전시켜, 냉각 효과로 받는 피해를 증가시킴",
+        "inflict_equivalent_chill_on_inflicting_shock_with_hits": "적이 보조 대상 스킬의 명중으로 감전될 때 해당 적을 냉각시켜, 감전 효과로 인한 동작 속도를 감소시킴"
       },
       "stats": [
         {
@@ -133827,6 +133827,8 @@
     "tags": [
       "low_max_level",
       "exceptional",
+      "cold",
+      "lightning",
       "intelligence",
       "support"
     ],
@@ -133835,12 +133837,13 @@
     "discriminator": null,
     "support_gem": {
       "allowed_types": [
+        "Attack",
         "Damage"
       ],
       "letter": "⊙",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "적에게 명중하는 스킬에 적용됩니다.",
+      "support_text": "적을 명중하는 모든 스킬에 적용됩니다.",
       "excluded_types": null,
       "added_types": null,
       "added_minion_types": null

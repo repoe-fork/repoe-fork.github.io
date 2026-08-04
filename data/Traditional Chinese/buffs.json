@@ -35152,6 +35152,21 @@
     "templates": null,
     "stack_limit": null
   },
+  "intimidated_enemy_temp_child_buff": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "damage_+%_final_from_intimitate",
+      "attack_damage_taken_+%"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "unnerved_enemy_self_spell_crit_chance": {
     "description": "",
     "invisible": true,
@@ -73371,13 +73386,13 @@
       "AbyssEnragingCrystalsDestroyedEnhancedMonsterBuff": {
         "aura_radius_metres": null,
         "stats": {
-          "monster_difficulty_tankiness_+%": 50,
-          "damage_+%": 12,
-          "from_league_item_rarity_+%_permyriad": 750,
-          "from_league_item_quantity_+%_permyriad": 750
+          "monster_difficulty_tankiness_+%": 75,
+          "damage_+%": 15,
+          "from_league_item_rarity_+%_permyriad": 1500,
+          "from_league_item_quantity_+%_permyriad": 1000
         },
         "stat_text": [
-          "增加 12% 傷害"
+          "增加 15% 傷害"
         ],
         "visuals": null
       },
@@ -78465,12 +78480,11 @@
     "stack_limit": null
   },
   "ghost_furnace_soul_buff": {
-    "description": "[DNT] Ghostflame Furnace has increased Area of Effect and you have increased Fire Damage over Time Multiplier per Ghostflame Soul",
+    "description": "[DNT] You have increased Fire Damage over Time Multiplier per Ghostflame Soul",
     "invisible": false,
     "name": "[DNT] Ghostflame Soul",
     "removable": false,
     "stats": [
-      "ghost_furnace_area_of_effect_+%",
       "fire_dot_multiplier_+",
       "ghostflame_lantern_souls"
     ],
@@ -78481,14 +78495,14 @@
     "stack_limit": null
   },
   "ghost_furnace_aura": {
-    "description": "[DNT] You are taking burning damage from being near an enemy using Ghost Furnace",
+    "description": "你正在承受火焰持續傷害",
     "invisible": false,
-    "name": "[DNT] Ghost Furnace Aura",
+    "name": "屍鬼之焰燃燒",
     "removable": false,
     "stats": [
       "base_fire_damage_taken_per_minute"
     ],
-    "visuals": "ghost_furnace_buff_visual",
+    "visuals": "ghost_furnace_aura_visual",
     "category": "Debuff",
     "sources": null,
     "templates": null,
@@ -78793,22 +78807,379 @@
     },
     "stack_limit": null
   },
-  "ghost_furnace_display": {
-    "description": "",
+  "ghost_furnace_buff": {
+    "description": "你正在對 3 公尺內的敵人造成火焰持續傷害",
     "invisible": false,
-    "name": "[DNT] Ghost Furnace",
+    "name": "屍鬼之焰",
     "removable": false,
-    "stats": [],
-    "visuals": "ghost_furnace_display",
+    "stats": [
+      "ghost_furnace_fire_damage_to_deal_per_minute"
+    ],
+    "visuals": "ghost_furnace_buff",
     "category": null,
     "sources": null,
     "templates": null,
     "stack_limit": null
   },
   "deepwater_altar_fish": {
-    "description": "你已將索薩沙的飼料獻給了海洋王\r\n你獲得傷害提高和冰冷抗性",
+    "description": "你已將特索塔的飼料獻給了海洋王\r\n你獲得傷害提高和冰冷抗性\r\n蛻變石有機率改為掉落混沌石",
     "invisible": false,
-    "name": "索薩沙的飼料",
+    "name": "特索塔的飼料",
+    "removable": true,
+    "stats": [
+      "base_cold_damage_resistance_%",
+      "damage_+%",
+      "deepwater_transmute_to_chaos_%"
+    ],
+    "visuals": "deepwater_altar_fish",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarFish": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_cold_damage_resistance_%": 15,
+          "damage_+%": 30,
+          "deepwater_transmute_to_chaos_%": 4
+        },
+        "stat_text": [
+          "+15% 冰冷抗性",
+          "增加 30% 傷害",
+          "蛻變石有機率改為掉落混沌石"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_octopus": {
+    "description": "你已將延展觸手獻給了海洋王\r\n你的技能會發射額外的拋射物，並獲得增加的近戰打擊距離和增加的範圍效果\r\n機會石有機率改為掉落古變石",
+    "invisible": false,
+    "name": "延展觸手",
+    "removable": true,
+    "stats": [
+      "number_of_additional_projectiles",
+      "melee_range_+",
+      "base_skill_area_of_effect_+%",
+      "deepwater_chance_to_ancient_%"
+    ],
+    "visuals": "deepwater_altar_octopus",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarOctopus": {
+        "aura_radius_metres": null,
+        "stats": {
+          "number_of_additional_projectiles": 2,
+          "melee_range_+": 10,
+          "base_skill_area_of_effect_+%": 20,
+          "deepwater_chance_to_ancient_%": 4
+        },
+        "stat_text": [
+          "技能發射 2 個額外投射物",
+          "+1 米近戰打擊距離",
+          "增加 20% 範圍效果",
+          "機會石有機率改為掉落古變石"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_pufferfish": {
+    "description": "你已將劇毒尖刺獻給了海洋王\r\n你反射一定比例的近戰物理傷害，你造成的所有傷害都可以中毒，你的擊中總是造成中毒，且你不受中毒影響\r\n工匠石有機率改為掉落幻色石",
+    "invisible": false,
+    "name": "劇毒尖刺",
+    "removable": true,
+    "stats": [
+      "all_damage_can_poison",
+      "base_chance_to_poison_on_hit_%",
+      "melee_physical_damage_taken_%_to_deal_to_attacker",
+      "base_unaffected_by_poison",
+      "deepwater_jeweller_to_chromatic_%"
+    ],
+    "visuals": "deepwater_altar_pufferfish",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarPufferFish": {
+        "aura_radius_metres": null,
+        "stats": {
+          "all_damage_can_poison": 1,
+          "base_chance_to_poison_on_hit_%": 100,
+          "melee_physical_damage_taken_%_to_deal_to_attacker": 100,
+          "base_unaffected_by_poison": 1,
+          "deepwater_jeweller_to_chromatic_%": 4
+        },
+        "stat_text": [
+          "全部來自擊中的傷害可以造成中毒",
+          "擊中時使敵人中毒",
+          "承受的近戰物理 100% 傷害反射給攻擊者",
+          "不被中毒影響",
+          "工匠石有機率改為掉落幻色石"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_crab": {
+    "description": "你已將堅硬甲殼獻給了海洋王\r\n你獲得額外的格擋攻擊和法術傷害機率\r\n混沌石有機率改為掉落神聖石",
+    "invisible": false,
+    "name": "堅硬甲殼",
+    "removable": true,
+    "stats": [
+      "base_spell_block_%",
+      "monster_base_block_%",
+      "deepwater_chaos_to_divine_%"
+    ],
+    "visuals": "deepwater_altar_crab",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarCrab": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_spell_block_%": 20,
+          "monster_base_block_%": 20,
+          "deepwater_chaos_to_divine_%": 4
+        },
+        "stat_text": [
+          "20% 法術傷害格擋率",
+          "20% 攻擊傷害格擋率",
+          "混沌石有機率改為掉落神聖石"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_coral": {
+    "description": "你已將堅固珊瑚獻給了海洋王\r\n你不會被暈眩，且你使敵人暈眩的持續時間增加\r\n重鑄石有機率改為掉落無效石",
+    "invisible": false,
+    "name": "堅固珊瑚",
+    "removable": true,
+    "stats": [
+      "base_cannot_be_stunned",
+      "base_stun_duration_+%",
+      "deepwater_scour_to_annulment_%"
+    ],
+    "visuals": "deepwater_altar_coral",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarCoral": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_cannot_be_stunned": 1,
+          "base_stun_duration_+%": 50,
+          "deepwater_scour_to_annulment_%": 4
+        },
+        "stat_text": [
+          "不會被暈眩",
+          "增加 50% 敵人暈眩時間",
+          "重鑄石有機率改為掉落無效石"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_fish_buffed": {
+    "description": "海洋王賜予你海潮之鰭\r\n你獲得傷害提高、移動速度、冰冷抗性和冰冷抗性上限提高\r\n蛻變石有機率改為掉落混沌石",
+    "invisible": false,
+    "name": "海潮之鰭",
+    "removable": true,
+    "stats": [
+      "base_cold_damage_resistance_%",
+      "damage_+%",
+      "base_movement_velocity_+%",
+      "base_maximum_cold_damage_resistance_%",
+      "deepwater_transmute_to_chaos_%"
+    ],
+    "visuals": "deepwater_altar_fish_buffed",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarFishEmpowered": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_cold_damage_resistance_%": 15,
+          "damage_+%": 30,
+          "base_movement_velocity_+%": 15,
+          "base_maximum_cold_damage_resistance_%": 5,
+          "deepwater_transmute_to_chaos_%": 8
+        },
+        "stat_text": [
+          "+15% 冰冷抗性",
+          "增加 30% 傷害",
+          "增加 15% 移動速度",
+          "+5% 最大冰冷抗性",
+          "蛻變石有機率改為掉落混沌石"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_octopus_buffed": {
+    "description": "海洋王賜予你環繞觸手\r\n你的技能會發射額外的拋射物，並獲得增加的近戰打擊距離和增加的範圍效果\r\n你也在擊殺時獲得靈巧，且靈巧效果增加\r\n機會石有機率改為掉落古變石",
+    "invisible": false,
+    "name": "環繞觸手",
+    "removable": true,
+    "stats": [
+      "number_of_additional_projectiles",
+      "melee_range_+",
+      "base_skill_area_of_effect_+%",
+      "gain_elusive_on_kill_chance_%",
+      "elusive_effect_+%",
+      "deepwater_chance_to_ancient_%"
+    ],
+    "visuals": "deepwater_altar_octopus_buffed",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarOctopusEmpowered": {
+        "aura_radius_metres": null,
+        "stats": {
+          "number_of_additional_projectiles": 2,
+          "melee_range_+": 10,
+          "base_skill_area_of_effect_+%": 20,
+          "gain_elusive_on_kill_chance_%": 100,
+          "elusive_effect_+%": 30,
+          "deepwater_chance_to_ancient_%": 8
+        },
+        "stat_text": [
+          "技能發射 2 個額外投射物",
+          "+1 米近戰打擊距離",
+          "增加 20% 範圍效果",
+          "擊殺時獲得靈巧",
+          "增加 30% 靈巧效果",
+          "機會石有機率改為掉落古變石"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_pufferfish_buffed": {
+    "description": "海洋王賜予你致命尖刺\r\n你反射一定比例的近戰物理傷害，你造成的所有傷害都可以中毒，你的擊中總是造成中毒，且你不受中毒影響\r\n被你中毒的敵人無法回復生命，且你在造成中毒時有機率對同一目標施加額外的中毒\r\n工匠石有機率改為掉落幻色石",
+    "invisible": false,
+    "name": "致命尖刺",
+    "removable": true,
+    "stats": [
+      "all_damage_can_poison",
+      "base_chance_to_poison_on_hit_%",
+      "melee_physical_damage_taken_%_to_deal_to_attacker",
+      "enemies_poisoned_by_you_cannot_regen_life",
+      "additional_poison_chance_%_when_inflicting_poison",
+      "deepwater_jeweller_to_chromatic_%"
+    ],
+    "visuals": "deepwater_altar_pufferfish_buffed",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarPufferFishEmpowered": {
+        "aura_radius_metres": null,
+        "stats": {
+          "all_damage_can_poison": 1,
+          "base_chance_to_poison_on_hit_%": 100,
+          "melee_physical_damage_taken_%_to_deal_to_attacker": 100,
+          "enemies_poisoned_by_you_cannot_regen_life": 1,
+          "additional_poison_chance_%_when_inflicting_poison": 30,
+          "deepwater_jeweller_to_chromatic_%": 8
+        },
+        "stat_text": [
+          "全部來自擊中的傷害可以造成中毒",
+          "擊中時使敵人中毒",
+          "承受的近戰物理 100% 傷害反射給攻擊者",
+          "被你中毒的敵人不能回復生命",
+          "你造成中毒時，有 30% 機率對同一目標造成額外一次中毒",
+          "工匠石有機率改為掉落幻色石"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_crab_buffed": {
+    "description": "海洋王賜予你堅不可摧之殼\r\n你獲得額外的格擋攻擊和法術傷害機率\r\n你也獲得額外的元素抗性上限和物理傷害減免\r\n混沌石有機率改為掉落神聖石",
+    "invisible": false,
+    "name": "堅不可摧之殼",
+    "removable": true,
+    "stats": [
+      "base_spell_block_%",
+      "monster_base_block_%",
+      "additional_maximum_all_elemental_resistances_%",
+      "base_additional_physical_damage_reduction_%",
+      "deepwater_chaos_to_divine_%"
+    ],
+    "visuals": "deepwater_altar_crab_buffed",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarCrabEmpowered": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_spell_block_%": 20,
+          "monster_base_block_%": 20,
+          "additional_maximum_all_elemental_resistances_%": 3,
+          "base_additional_physical_damage_reduction_%": 10,
+          "deepwater_chaos_to_divine_%": 8
+        },
+        "stat_text": [
+          "20% 法術傷害格擋率",
+          "20% 攻擊傷害格擋率",
+          "+3% 全部最大元素抗性",
+          "10% 額外物理傷害減免",
+          "混沌石有機率改為掉落神聖石"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_coral_buffed": {
+    "description": "海洋王賜予你軍武珊瑚\r\n你不會被暈眩，且你使敵人暈眩的持續時間增加\r\n你也在最近使敵人暈眩過的情況下有機率造成雙倍傷害，並降低敵人的暈眩門檻\r\n重鑄石有機率改為掉落無效石",
+    "invisible": false,
+    "name": "軍武珊瑚",
+    "removable": true,
+    "stats": [
+      "base_cannot_be_stunned",
+      "base_stun_duration_+%",
+      "chance_to_deal_double_damage_%_if_have_stunned_an_enemy_recently",
+      "base_stun_threshold_reduction_+%",
+      "deepwater_scour_to_annulment_%"
+    ],
+    "visuals": "deepwater_altar_coral_buffed",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarCoralEmpowered": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_cannot_be_stunned": 1,
+          "base_stun_duration_+%": 50,
+          "chance_to_deal_double_damage_%_if_have_stunned_an_enemy_recently": 30,
+          "base_stun_threshold_reduction_+%": 30,
+          "deepwater_scour_to_annulment_%": 8
+        },
+        "stat_text": [
+          "不會被暈眩",
+          "增加 50% 敵人暈眩時間",
+          "若你近期有暈眩敵人，有 30% 機率造成兩倍傷害",
+          "減少 30% 敵人暈眩門檻",
+          "重鑄石有機率改為掉落無效石"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_fish_hardmode": {
+    "description": "你已將特索塔的飼料獻給了海洋王\r\n你獲得傷害提高和冰冷抗性",
+    "invisible": false,
+    "name": "特索塔的飼料",
     "removable": true,
     "stats": [
       "base_cold_damage_resistance_%",
@@ -78818,7 +79189,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarFish": {
+      "DeepwaterAltarFishHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "base_cold_damage_resistance_%": 15,
@@ -78833,7 +79204,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_octopus": {
+  "deepwater_altar_octopus_hardmode": {
     "description": "你已將延展觸手獻給了海洋王\r\n你的技能會發射額外的拋射物，並獲得增加的近戰打擊距離和增加的範圍效果",
     "invisible": false,
     "name": "延展觸手",
@@ -78847,7 +79218,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarOctopus": {
+      "DeepwaterAltarOctopusHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "number_of_additional_projectiles": 2,
@@ -78864,7 +79235,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_pufferfish": {
+  "deepwater_altar_pufferfish_hardmode": {
     "description": "你已將劇毒尖刺獻給了海洋王\r\n你反射一定比例的近戰物理傷害，你造成的所有傷害都可以中毒，你的擊中總是造成中毒，且你不受中毒影響",
     "invisible": false,
     "name": "劇毒尖刺",
@@ -78879,7 +79250,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarPufferFish": {
+      "DeepwaterAltarPufferFishHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "all_damage_can_poison": 1,
@@ -78898,7 +79269,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_crab": {
+  "deepwater_altar_crab_hardmode": {
     "description": "你已將堅硬甲殼獻給了海洋王\r\n你獲得額外的格擋攻擊和法術傷害機率",
     "invisible": false,
     "name": "堅硬甲殼",
@@ -78911,7 +79282,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarCrab": {
+      "DeepwaterAltarCrabHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "base_spell_block_%": 20,
@@ -78926,7 +79297,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_coral": {
+  "deepwater_altar_coral_hardmode": {
     "description": "你已將堅固珊瑚獻給了海洋王\r\n你不會被暈眩，且你使敵人暈眩的持續時間增加",
     "invisible": false,
     "name": "堅固珊瑚",
@@ -78939,7 +79310,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarCoral": {
+      "DeepwaterAltarCoralHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "base_cannot_be_stunned": 1,
@@ -78954,7 +79325,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_fish_buffed": {
+  "deepwater_altar_fish_buffed_hardmode": {
     "description": "海洋王賜予你海潮之鰭\r\n你獲得傷害提高、移動速度、冰冷抗性和冰冷抗性上限提高",
     "invisible": false,
     "name": "海潮之鰭",
@@ -78969,7 +79340,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarFishEmpowered": {
+      "DeepwaterAltarFishEmpoweredHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "base_cold_damage_resistance_%": 15,
@@ -78988,7 +79359,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_octopus_buffed": {
+  "deepwater_altar_octopus_buffed_hardmode": {
     "description": "海洋王賜予你環繞觸手\r\n你的技能會發射額外的拋射物，並獲得增加的近戰打擊距離和增加的範圍效果\r\n你也在擊殺時獲得靈巧，且靈巧效果增加",
     "invisible": false,
     "name": "環繞觸手",
@@ -79004,7 +79375,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarOctopusEmpowered": {
+      "DeepwaterAltarOctopusEmpoweredHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "number_of_additional_projectiles": 2,
@@ -79025,7 +79396,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_pufferfish_buffed": {
+  "deepwater_altar_pufferfish_buffed_hardmode": {
     "description": "海洋王賜予你致命尖刺\r\n你反射一定比例的近戰物理傷害，你造成的所有傷害都可以中毒，你的擊中總是造成中毒，且你不受中毒影響\r\n被你中毒的敵人無法回復生命，且你在造成中毒時有機率對同一目標施加額外的中毒",
     "invisible": false,
     "name": "致命尖刺",
@@ -79041,7 +79412,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarPufferFishEmpowered": {
+      "DeepwaterAltarPufferFishEmpoweredHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "all_damage_can_poison": 1,
@@ -79062,7 +79433,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_crab_buffed": {
+  "deepwater_altar_crab_buffed_hardmode": {
     "description": "海洋王賜予你堅不可摧之殼\r\n你獲得額外的格擋攻擊和法術傷害機率\r\n你也獲得額外的元素抗性上限和物理傷害減免",
     "invisible": false,
     "name": "堅不可摧之殼",
@@ -79077,7 +79448,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarCrabEmpowered": {
+      "DeepwaterAltarCrabEmpoweredHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "base_spell_block_%": 20,
@@ -79096,7 +79467,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_coral_buffed": {
+  "deepwater_altar_coral_buffed_hardmode": {
     "description": "海洋王賜予你軍武珊瑚\r\n你不會被暈眩，且你使敵人暈眩的持續時間增加\r\n你也在最近使敵人暈眩過的情況下有機率造成雙倍傷害，並降低敵人的暈眩門檻",
     "invisible": false,
     "name": "軍武珊瑚",
@@ -79111,7 +79482,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarCoralEmpowered": {
+      "DeepwaterAltarCoralEmpoweredHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "base_cannot_be_stunned": 1,
@@ -79974,7 +80345,7 @@
     "stack_limit": 10
   },
   "deepwater_golden_lantern": {
-    "description": "你大幅增加找到的物品稀有度。",
+    "description": "你大幅增加找到的物品數量和稀有度。",
     "invisible": false,
     "name": "黃金燈籠之輝",
     "removable": false,
@@ -80013,6 +80384,30 @@
     "stack_limit": null
   },
   "chill_cold_damage_taken_modifier": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "abyssal_wasting": {
+    "description": "你的擊中傷害很不幸",
+    "invisible": false,
+    "name": "深淵萎靡",
+    "removable": false,
+    "stats": [],
+    "visuals": "abyssal_wasting",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "bonefeeders_active_corpse_aura_buff": {
     "description": "",
     "invisible": true,
     "name": "",

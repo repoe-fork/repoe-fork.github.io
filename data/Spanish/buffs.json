@@ -35152,6 +35152,21 @@
     "templates": null,
     "stack_limit": null
   },
+  "intimidated_enemy_temp_child_buff": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "damage_+%_final_from_intimitate",
+      "attack_damage_taken_+%"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "unnerved_enemy_self_spell_crit_chance": {
     "description": "",
     "invisible": true,
@@ -73371,13 +73386,13 @@
       "AbyssEnragingCrystalsDestroyedEnhancedMonsterBuff": {
         "aura_radius_metres": null,
         "stats": {
-          "monster_difficulty_tankiness_+%": 50,
-          "damage_+%": 12,
-          "from_league_item_rarity_+%_permyriad": 750,
-          "from_league_item_quantity_+%_permyriad": 750
+          "monster_difficulty_tankiness_+%": 75,
+          "damage_+%": 15,
+          "from_league_item_rarity_+%_permyriad": 1500,
+          "from_league_item_quantity_+%_permyriad": 1000
         },
         "stat_text": [
-          "Daño aumentado un 12%"
+          "Daño aumentado un 15%"
         ],
         "visuals": null
       },
@@ -78465,12 +78480,11 @@
     "stack_limit": null
   },
   "ghost_furnace_soul_buff": {
-    "description": "[DNT] Ghostflame Furnace has increased Area of Effect and you have increased Fire Damage over Time Multiplier per Ghostflame Soul",
+    "description": "[DNT] You have increased Fire Damage over Time Multiplier per Ghostflame Soul",
     "invisible": false,
     "name": "[DNT] Ghostflame Soul",
     "removable": false,
     "stats": [
-      "ghost_furnace_area_of_effect_+%",
       "fire_dot_multiplier_+",
       "ghostflame_lantern_souls"
     ],
@@ -78481,14 +78495,14 @@
     "stack_limit": null
   },
   "ghost_furnace_aura": {
-    "description": "[DNT] You are taking burning damage from being near an enemy using Ghost Furnace",
+    "description": "Recibes daño de fuego degenerativo",
     "invisible": false,
-    "name": "[DNT] Ghost Furnace Aura",
+    "name": "Incendio de Llama del Draugur",
     "removable": false,
     "stats": [
       "base_fire_damage_taken_per_minute"
     ],
-    "visuals": "ghost_furnace_buff_visual",
+    "visuals": "ghost_furnace_aura_visual",
     "category": "Debuff",
     "sources": null,
     "templates": null,
@@ -78793,19 +78807,376 @@
     },
     "stack_limit": null
   },
-  "ghost_furnace_display": {
-    "description": "",
+  "ghost_furnace_buff": {
+    "description": "Infliges daño de fuego degenerativo a\r\nlos enemigos que están a menos de 3 metros",
     "invisible": false,
-    "name": "[DNT] Ghost Furnace",
+    "name": "Llama de Draugur",
     "removable": false,
-    "stats": [],
-    "visuals": "ghost_furnace_display",
+    "stats": [
+      "ghost_furnace_fire_damage_to_deal_per_minute"
+    ],
+    "visuals": "ghost_furnace_buff",
     "category": null,
     "sources": null,
     "templates": null,
     "stack_limit": null
   },
   "deepwater_altar_fish": {
+    "description": "Has ofrecido Alimento de Tsoatha al Rey del mar\r\nTienes daño y resistencia al hielo aumentados\r\nProbabilidad de que los orbes de transmutación caigan como orbes de caos",
+    "invisible": false,
+    "name": "Alimento de Tsoatha",
+    "removable": true,
+    "stats": [
+      "base_cold_damage_resistance_%",
+      "damage_+%",
+      "deepwater_transmute_to_chaos_%"
+    ],
+    "visuals": "deepwater_altar_fish",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarFish": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_cold_damage_resistance_%": 15,
+          "damage_+%": 30,
+          "deepwater_transmute_to_chaos_%": 4
+        },
+        "stat_text": [
+          "+15% a la resistencia al hielo",
+          "Daño aumentado un 30%",
+          "Probabilidad de que los orbes de transmutación caigan como orbes de caos"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_octopus": {
+    "description": "Has ofrecido Tentáculos elásticos al Rey del mar\r\nTus habilidades disparan proyectiles adicionales, tienen el alcance de los golpes cuerpo a cuerpo aumentado y el área de efecto aumentada\r\nProbabilidad de que los orbes de azar caigan como orbes antiguos",
+    "invisible": false,
+    "name": "Tentáculos elásticos",
+    "removable": true,
+    "stats": [
+      "number_of_additional_projectiles",
+      "melee_range_+",
+      "base_skill_area_of_effect_+%",
+      "deepwater_chance_to_ancient_%"
+    ],
+    "visuals": "deepwater_altar_octopus",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarOctopus": {
+        "aura_radius_metres": null,
+        "stats": {
+          "number_of_additional_projectiles": 2,
+          "melee_range_+": 10,
+          "base_skill_area_of_effect_+%": 20,
+          "deepwater_chance_to_ancient_%": 4
+        },
+        "stat_text": [
+          "Las habilidades disparan 2 proyectiles adicionales",
+          "+1 metros al alcance de los golpes cuerpo a cuerpo",
+          "Área de efecto aumentada un 20%",
+          "Probabilidad de que los orbes de azar caigan como orbes antiguos"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_pufferfish": {
+    "description": "Has ofrecido Espinas tóxicas al Rey del mar\r\nReflejas un porcentaje del daño físico cuerpo a cuerpo recibido, todo el daño que infliges puede envenenar, siempre envenenas al golpear y no te afecta el veneno\r\nProbabilidad de que los orbes de joyero caigan como orbes cromáticos",
+    "invisible": false,
+    "name": "Espinas tóxicas",
+    "removable": true,
+    "stats": [
+      "all_damage_can_poison",
+      "base_chance_to_poison_on_hit_%",
+      "melee_physical_damage_taken_%_to_deal_to_attacker",
+      "base_unaffected_by_poison",
+      "deepwater_jeweller_to_chromatic_%"
+    ],
+    "visuals": "deepwater_altar_pufferfish",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarPufferFish": {
+        "aura_radius_metres": null,
+        "stats": {
+          "all_damage_can_poison": 1,
+          "base_chance_to_poison_on_hit_%": 100,
+          "melee_physical_damage_taken_%_to_deal_to_attacker": 100,
+          "base_unaffected_by_poison": 1,
+          "deepwater_jeweller_to_chromatic_%": 4
+        },
+        "stat_text": [
+          "Todo el daño de los golpes puede envenenar",
+          "Siempre envenena con cada golpe",
+          "El 100% del daño físico cuerpo a cuerpo recibido se refleja al atacante",
+          "No te afecta el veneno",
+          "Probabilidad de que los orbes de joyero caigan como orbes cromáticos"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_crab": {
+    "description": "Has ofrecido Caparazón rígido al Rey del mar\r\nTienes probabilidad agregada de bloquear el daño de ataques y hechizos\r\nProbabilidad de que los orbes de caos caigan como orbes divinos",
+    "invisible": false,
+    "name": "Caparazón rígido",
+    "removable": true,
+    "stats": [
+      "base_spell_block_%",
+      "monster_base_block_%",
+      "deepwater_chaos_to_divine_%"
+    ],
+    "visuals": "deepwater_altar_crab",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarCrab": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_spell_block_%": 20,
+          "monster_base_block_%": 20,
+          "deepwater_chaos_to_divine_%": 4
+        },
+        "stat_text": [
+          "20% de probabilidad de bloquear el daño de hechizos",
+          "20% de probabilidad de bloquear el daño de ataques",
+          "Probabilidad de que los orbes de caos caigan como orbes divinos"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_coral": {
+    "description": "Has ofrecido Coral resistente al Rey del mar\r\nNo te pueden aturdir y tus aturdimientos tienen su duración aumentada sobre los enemigos\r\nProbabilidad de que los orbes de purga caigan como orbes de anulación",
+    "invisible": false,
+    "name": "Coral resistente",
+    "removable": true,
+    "stats": [
+      "base_cannot_be_stunned",
+      "base_stun_duration_+%",
+      "deepwater_scour_to_annulment_%"
+    ],
+    "visuals": "deepwater_altar_coral",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarCoral": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_cannot_be_stunned": 1,
+          "base_stun_duration_+%": 50,
+          "deepwater_scour_to_annulment_%": 4
+        },
+        "stat_text": [
+          "No te pueden aturdir",
+          "Duración del aturdimiento en los enemigos aumentada un 50%",
+          "Probabilidad de que los orbes de purga caigan como orbes de anulación"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_fish_buffed": {
+    "description": "El Rey del mar te otorga Aletas de mar\r\nTienes daño, velocidad de movimiento, resistencia al hielo y resistencia al hielo máxima aumentados\r\nProbabilidad de que los orbes de transmutación caigan como orbes de caos",
+    "invisible": false,
+    "name": "Aletas de mar",
+    "removable": true,
+    "stats": [
+      "base_cold_damage_resistance_%",
+      "damage_+%",
+      "base_movement_velocity_+%",
+      "base_maximum_cold_damage_resistance_%",
+      "deepwater_transmute_to_chaos_%"
+    ],
+    "visuals": "deepwater_altar_fish_buffed",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarFishEmpowered": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_cold_damage_resistance_%": 15,
+          "damage_+%": 30,
+          "base_movement_velocity_+%": 15,
+          "base_maximum_cold_damage_resistance_%": 5,
+          "deepwater_transmute_to_chaos_%": 8
+        },
+        "stat_text": [
+          "+15% a la resistencia al hielo",
+          "Daño aumentado un 30%",
+          "Velocidad de movimiento aumentada un 15%",
+          "+5% a la resistencia al hielo máxima",
+          "Probabilidad de que los orbes de transmutación caigan como orbes de caos"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_octopus_buffed": {
+    "description": "El Rey del mar te otorga Tentáculos envolventes\r\nTus habilidades disparan proyectiles adicionales, tienen el alcance de los golpes cuerpo a cuerpo aumentado y el área de efecto aumentada\r\nTambién obtienes Elusivo al matar y tienes el efecto de Elusivo aumentado\r\nProbabilidad de que los orbes de azar caigan como orbes antiguos",
+    "invisible": false,
+    "name": "Tentáculos envolventes",
+    "removable": true,
+    "stats": [
+      "number_of_additional_projectiles",
+      "melee_range_+",
+      "base_skill_area_of_effect_+%",
+      "gain_elusive_on_kill_chance_%",
+      "elusive_effect_+%",
+      "deepwater_chance_to_ancient_%"
+    ],
+    "visuals": "deepwater_altar_octopus_buffed",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarOctopusEmpowered": {
+        "aura_radius_metres": null,
+        "stats": {
+          "number_of_additional_projectiles": 2,
+          "melee_range_+": 10,
+          "base_skill_area_of_effect_+%": 20,
+          "gain_elusive_on_kill_chance_%": 100,
+          "elusive_effect_+%": 30,
+          "deepwater_chance_to_ancient_%": 8
+        },
+        "stat_text": [
+          "Las habilidades disparan 2 proyectiles adicionales",
+          "+1 metros al alcance de los golpes cuerpo a cuerpo",
+          "Área de efecto aumentada un 20%",
+          "Ganas Elusivo al matar",
+          "Efecto de Elusivo aumentado un 30%",
+          "Probabilidad de que los orbes de azar caigan como orbes antiguos"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_pufferfish_buffed": {
+    "description": "El Rey del mar te otorga Espinas letales\r\nReflejas un porcentaje del daño físico cuerpo a cuerpo recibido, todo el daño que infliges puede envenenar, siempre envenenas al golpear y no te afecta el veneno\r\nLos enemigos que envenenas no pueden regenerar vida y tienes una probabilidad de aplicar un veneno adicional al mismo objetivo cuando aplicas veneno\r\nProbabilidad de que los orbes de joyero caigan como orbes cromáticos",
+    "invisible": false,
+    "name": "Espinas letales",
+    "removable": true,
+    "stats": [
+      "all_damage_can_poison",
+      "base_chance_to_poison_on_hit_%",
+      "melee_physical_damage_taken_%_to_deal_to_attacker",
+      "enemies_poisoned_by_you_cannot_regen_life",
+      "additional_poison_chance_%_when_inflicting_poison",
+      "deepwater_jeweller_to_chromatic_%"
+    ],
+    "visuals": "deepwater_altar_pufferfish_buffed",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarPufferFishEmpowered": {
+        "aura_radius_metres": null,
+        "stats": {
+          "all_damage_can_poison": 1,
+          "base_chance_to_poison_on_hit_%": 100,
+          "melee_physical_damage_taken_%_to_deal_to_attacker": 100,
+          "enemies_poisoned_by_you_cannot_regen_life": 1,
+          "additional_poison_chance_%_when_inflicting_poison": 30,
+          "deepwater_jeweller_to_chromatic_%": 8
+        },
+        "stat_text": [
+          "Todo el daño de los golpes puede envenenar",
+          "Siempre envenena con cada golpe",
+          "El 100% del daño físico cuerpo a cuerpo recibido se refleja al atacante",
+          "Los enemigos que tú envenenas no pueden regenerar vida",
+          "30% de probabilidad de aplicar un veneno adicional al mismo objetivo cuando aplicas veneno",
+          "Probabilidad de que los orbes de joyero caigan como orbes cromáticos"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_crab_buffed": {
+    "description": "El Rey del mar te otorga Caparazón impenetrable\r\nTienes probabilidad agregada de bloquear el daño de ataques y hechizos\r\nTambién tienes resistencias elementales máximas adicionales y reducción de daño físico\r\nProbabilidad de que los orbes de caos caigan como orbes divinos",
+    "invisible": false,
+    "name": "Caparazón impenetrable",
+    "removable": true,
+    "stats": [
+      "base_spell_block_%",
+      "monster_base_block_%",
+      "additional_maximum_all_elemental_resistances_%",
+      "base_additional_physical_damage_reduction_%",
+      "deepwater_chaos_to_divine_%"
+    ],
+    "visuals": "deepwater_altar_crab_buffed",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarCrabEmpowered": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_spell_block_%": 20,
+          "monster_base_block_%": 20,
+          "additional_maximum_all_elemental_resistances_%": 3,
+          "base_additional_physical_damage_reduction_%": 10,
+          "deepwater_chaos_to_divine_%": 8
+        },
+        "stat_text": [
+          "20% de probabilidad de bloquear el daño de hechizos",
+          "20% de probabilidad de bloquear el daño de ataques",
+          "+3% a todas las resistencias elementales máximas",
+          "10% de reducción adicional de daño físico",
+          "Probabilidad de que los orbes de caos caigan como orbes divinos"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_coral_buffed": {
+    "description": "El Rey del mar te otorga Coral militarizado\r\nNo te pueden aturdir y tus aturdimientos tienen su duración aumentada sobre los enemigos\r\nTambién tienes una probabilidad de infligir daño doble si has aturdido a un enemigo recientemente, y el umbral de aturdimiento de los enemigos está reducido\r\nProbabilidad de que los orbes de purga caigan como orbes de anulación",
+    "invisible": false,
+    "name": "Coral militarizado",
+    "removable": true,
+    "stats": [
+      "base_cannot_be_stunned",
+      "base_stun_duration_+%",
+      "chance_to_deal_double_damage_%_if_have_stunned_an_enemy_recently",
+      "base_stun_threshold_reduction_+%",
+      "deepwater_scour_to_annulment_%"
+    ],
+    "visuals": "deepwater_altar_coral_buffed",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarCoralEmpowered": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_cannot_be_stunned": 1,
+          "base_stun_duration_+%": 50,
+          "chance_to_deal_double_damage_%_if_have_stunned_an_enemy_recently": 30,
+          "base_stun_threshold_reduction_+%": 30,
+          "deepwater_scour_to_annulment_%": 8
+        },
+        "stat_text": [
+          "No te pueden aturdir",
+          "Duración del aturdimiento en los enemigos aumentada un 50%",
+          "30% de probabilidad de infligir daño doble si has aturdido a un enemigo recientemente",
+          "Umbral de aturdimiento de los enemigos reducido un 30%",
+          "Probabilidad de que los orbes de purga caigan como orbes de anulación"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_fish_hardmode": {
     "description": "Has ofrecido Alimento de Tsoatha al Rey del mar\r\nTienes daño y resistencia al hielo aumentados",
     "invisible": false,
     "name": "Alimento de Tsoatha",
@@ -78818,7 +79189,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarFish": {
+      "DeepwaterAltarFishHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "base_cold_damage_resistance_%": 15,
@@ -78833,7 +79204,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_octopus": {
+  "deepwater_altar_octopus_hardmode": {
     "description": "Has ofrecido Tentáculos elásticos al Rey del mar\r\nTus habilidades disparan proyectiles adicionales, tienen el alcance de los golpes cuerpo a cuerpo aumentado y el área de efecto aumentada",
     "invisible": false,
     "name": "Tentáculos elásticos",
@@ -78847,7 +79218,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarOctopus": {
+      "DeepwaterAltarOctopusHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "number_of_additional_projectiles": 2,
@@ -78864,7 +79235,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_pufferfish": {
+  "deepwater_altar_pufferfish_hardmode": {
     "description": "Has ofrecido Espinas tóxicas al Rey del mar\r\nReflejas un porcentaje del daño físico cuerpo a cuerpo recibido, todo el daño que infliges puede envenenar, siempre envenenas al golpear y no te afecta el veneno",
     "invisible": false,
     "name": "Espinas tóxicas",
@@ -78879,7 +79250,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarPufferFish": {
+      "DeepwaterAltarPufferFishHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "all_damage_can_poison": 1,
@@ -78898,8 +79269,8 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_crab": {
-    "description": "Has ofrecido Caparazón rígido al Rey del mar\r\nTienes probabilidad agregada de bloquear el daño de ataques y hechizos",
+  "deepwater_altar_crab_hardmode": {
+    "description": "Has ofrecido Caparazón rígido al Rey del mar\r\nTienes probabilidad agregada de bloquear daño de ataques y hechizos",
     "invisible": false,
     "name": "Caparazón rígido",
     "removable": true,
@@ -78911,7 +79282,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarCrab": {
+      "DeepwaterAltarCrabHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "base_spell_block_%": 20,
@@ -78926,8 +79297,8 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_coral": {
-    "description": "Has ofrecido Coral resistente al Rey del mar\r\nNo te pueden aturdir y tus aturdimientos tienen su duración aumentada sobre los enemigos",
+  "deepwater_altar_coral_hardmode": {
+    "description": "Has ofrecido Coral resistente al Rey del mar\r\nNo te pueden aturdir y los aturdimientos tienen la duración aumentada sobre los enemigos",
     "invisible": false,
     "name": "Coral resistente",
     "removable": true,
@@ -78939,7 +79310,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarCoral": {
+      "DeepwaterAltarCoralHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "base_cannot_be_stunned": 1,
@@ -78954,7 +79325,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_fish_buffed": {
+  "deepwater_altar_fish_buffed_hardmode": {
     "description": "El Rey del mar te otorga Aletas de mar\r\nTienes daño, velocidad de movimiento, resistencia al hielo y resistencia al hielo máxima aumentados",
     "invisible": false,
     "name": "Aletas de mar",
@@ -78969,7 +79340,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarFishEmpowered": {
+      "DeepwaterAltarFishEmpoweredHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "base_cold_damage_resistance_%": 15,
@@ -78988,7 +79359,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_octopus_buffed": {
+  "deepwater_altar_octopus_buffed_hardmode": {
     "description": "El Rey del mar te otorga Tentáculos envolventes\r\nTus habilidades disparan proyectiles adicionales, tienen el alcance de los golpes cuerpo a cuerpo aumentado y el área de efecto aumentada\r\nTambién obtienes Elusivo al matar y tienes el efecto de Elusivo aumentado",
     "invisible": false,
     "name": "Tentáculos envolventes",
@@ -79004,7 +79375,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarOctopusEmpowered": {
+      "DeepwaterAltarOctopusEmpoweredHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "number_of_additional_projectiles": 2,
@@ -79025,7 +79396,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_pufferfish_buffed": {
+  "deepwater_altar_pufferfish_buffed_hardmode": {
     "description": "El Rey del mar te otorga Espinas letales\r\nReflejas un porcentaje del daño físico cuerpo a cuerpo recibido, todo el daño que infliges puede envenenar, siempre envenenas al golpear y no te afecta el veneno\r\nLos enemigos que envenenas no pueden regenerar vida y tienes una probabilidad de aplicar un veneno adicional al mismo objetivo cuando aplicas veneno",
     "invisible": false,
     "name": "Espinas letales",
@@ -79041,7 +79412,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarPufferFishEmpowered": {
+      "DeepwaterAltarPufferFishEmpoweredHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "all_damage_can_poison": 1,
@@ -79062,7 +79433,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_crab_buffed": {
+  "deepwater_altar_crab_buffed_hardmode": {
     "description": "El Rey del mar te otorga Caparazón impenetrable\r\nTienes probabilidad agregada de bloquear el daño de ataques y hechizos\r\nTambién tienes resistencias elementales máximas adicionales y reducción de daño físico",
     "invisible": false,
     "name": "Caparazón impenetrable",
@@ -79077,7 +79448,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarCrabEmpowered": {
+      "DeepwaterAltarCrabEmpoweredHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "base_spell_block_%": 20,
@@ -79096,8 +79467,8 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_coral_buffed": {
-    "description": "El Rey del mar te otorga Coral militarizado\r\nNo te pueden aturdir y tus aturdimientos tienen su duración aumentada sobre los enemigos\r\nTambién tienes una probabilidad de infligir daño doble si has aturdido a un enemigo recientemente, y el umbral de aturdimiento de los enemigos está reducido",
+  "deepwater_altar_coral_buffed_hardmode": {
+    "description": "El Rey del mar te otorga Coral militarizado\r\nNo te pueden aturdir y los aturdimientos de los enemigos tienen la duración aumentada\r\nTambién tienes una probabilidad de infligir daño doble si has aturdido a un enemigo recientemente, y el umbral de aturdimiento de los enemigos está reducido",
     "invisible": false,
     "name": "Coral militarizado",
     "removable": true,
@@ -79111,7 +79482,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarCoralEmpowered": {
+      "DeepwaterAltarCoralEmpoweredHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "base_cannot_be_stunned": 1,
@@ -79974,7 +80345,7 @@
     "stack_limit": 10
   },
   "deepwater_golden_lantern": {
-    "description": "Tienes la rareza de los objetos encontrados muy aumentada.",
+    "description": "Tienes la rareza y la cantidad de objetos encontrados muy aumentadas.",
     "invisible": false,
     "name": "Resplandor del farol dorado",
     "removable": false,
@@ -80013,6 +80384,30 @@
     "stack_limit": null
   },
   "chill_cold_damage_taken_modifier": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "abyssal_wasting": {
+    "description": "Tu daño con golpes es desafortunado",
+    "invisible": false,
+    "name": "Desgaste abisal",
+    "removable": false,
+    "stats": [],
+    "visuals": "abyssal_wasting",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "bonefeeders_active_corpse_aura_buff": {
     "description": "",
     "invisible": true,
     "name": "",

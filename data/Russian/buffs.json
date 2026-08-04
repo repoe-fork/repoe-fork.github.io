@@ -35152,6 +35152,21 @@
     "templates": null,
     "stack_limit": null
   },
+  "intimidated_enemy_temp_child_buff": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "damage_+%_final_from_intimitate",
+      "attack_damage_taken_+%"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "unnerved_enemy_self_spell_crit_chance": {
     "description": "",
     "invisible": true,
@@ -73371,13 +73386,13 @@
       "AbyssEnragingCrystalsDestroyedEnhancedMonsterBuff": {
         "aura_radius_metres": null,
         "stats": {
-          "monster_difficulty_tankiness_+%": 50,
-          "damage_+%": 12,
-          "from_league_item_rarity_+%_permyriad": 750,
-          "from_league_item_quantity_+%_permyriad": 750
+          "monster_difficulty_tankiness_+%": 75,
+          "damage_+%": 15,
+          "from_league_item_rarity_+%_permyriad": 1500,
+          "from_league_item_quantity_+%_permyriad": 1000
         },
         "stat_text": [
-          "12% увеличение урона"
+          "15% увеличение урона"
         ],
         "visuals": null
       },
@@ -78465,12 +78480,11 @@
     "stack_limit": null
   },
   "ghost_furnace_soul_buff": {
-    "description": "[DNT] Ghostflame Furnace has increased Area of Effect and you have increased Fire Damage over Time Multiplier per Ghostflame Soul",
+    "description": "[DNT] You have increased Fire Damage over Time Multiplier per Ghostflame Soul",
     "invisible": false,
     "name": "[DNT] Ghostflame Soul",
     "removable": false,
     "stats": [
-      "ghost_furnace_area_of_effect_+%",
       "fire_dot_multiplier_+",
       "ghostflame_lantern_souls"
     ],
@@ -78481,14 +78495,14 @@
     "stack_limit": null
   },
   "ghost_furnace_aura": {
-    "description": "[DNT] You are taking burning damage from being near an enemy using Ghost Furnace",
+    "description": "Вы получаете постепенный урон от огня.",
     "invisible": false,
-    "name": "[DNT] Ghost Furnace Aura",
+    "name": "Горение Пламени Драугра",
     "removable": false,
     "stats": [
       "base_fire_damage_taken_per_minute"
     ],
-    "visuals": "ghost_furnace_buff_visual",
+    "visuals": "ghost_furnace_aura_visual",
     "category": "Debuff",
     "sources": null,
     "templates": null,
@@ -78793,19 +78807,376 @@
     },
     "stack_limit": null
   },
-  "ghost_furnace_display": {
-    "description": "",
+  "ghost_furnace_buff": {
+    "description": "Вы наносите постепенный урон от огня\r\nврагам в радиусе 3 метров",
     "invisible": false,
-    "name": "[DNT] Ghost Furnace",
+    "name": "Пламя Драугра",
     "removable": false,
-    "stats": [],
-    "visuals": "ghost_furnace_display",
+    "stats": [
+      "ghost_furnace_fire_damage_to_deal_per_minute"
+    ],
+    "visuals": "ghost_furnace_buff",
     "category": null,
     "sources": null,
     "templates": null,
     "stack_limit": null
   },
   "deepwater_altar_fish": {
+    "description": "Вы принесли корм для Тсоаты в жертву Морскому царю.\r\nВы наносите увеличенный урон и имеете увеличение сопротивления холоду\r\nШанс выпадения сфер превращения в виде сфер хаоса",
+    "invisible": false,
+    "name": "Корм для Тсоаты",
+    "removable": true,
+    "stats": [
+      "base_cold_damage_resistance_%",
+      "damage_+%",
+      "deepwater_transmute_to_chaos_%"
+    ],
+    "visuals": "deepwater_altar_fish",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarFish": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_cold_damage_resistance_%": 15,
+          "damage_+%": 30,
+          "deepwater_transmute_to_chaos_%": 4
+        },
+        "stat_text": [
+          "+15% к сопротивлению холоду",
+          "30% увеличение урона",
+          "Сферы превращения могут выпасть в виде сфер хаосп"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_octopus": {
+    "description": "Вы принесли тянущиеся щупальца в жертву Морскому царю.\r\nВаши умения выпускают дополнительные снаряды, имеют увеличенную дальность ударов ближнего боя и область действия\r\nШанс выпадения сфер удачи в виде древних сфер",
+    "invisible": false,
+    "name": "Тянущиеся щупальца",
+    "removable": true,
+    "stats": [
+      "number_of_additional_projectiles",
+      "melee_range_+",
+      "base_skill_area_of_effect_+%",
+      "deepwater_chance_to_ancient_%"
+    ],
+    "visuals": "deepwater_altar_octopus",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarOctopus": {
+        "aura_radius_metres": null,
+        "stats": {
+          "number_of_additional_projectiles": 2,
+          "melee_range_+": 10,
+          "base_skill_area_of_effect_+%": 20,
+          "deepwater_chance_to_ancient_%": 4
+        },
+        "stat_text": [
+          "Умения выпускают дополнительных снарядов: 2",
+          "+1 м к дальности ударов ближнего боя",
+          "20% увеличение области действия",
+          "Сферы удачи могут выпасть в виде древних сфер"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_pufferfish": {
+    "description": "Вы принесли токсичные шипы в жертву Морскому царю.\r\nВы отражаете часть получаемого урона в ближнем бою. Весь наносимый вами урон может отравить, вы всегда отравляете при нанесении удара и невосприимчивы к яду\r\nШанс выпадения сфер златокузнеца в виде цветных сфер",
+    "invisible": false,
+    "name": "Токсичные шипы",
+    "removable": true,
+    "stats": [
+      "all_damage_can_poison",
+      "base_chance_to_poison_on_hit_%",
+      "melee_physical_damage_taken_%_to_deal_to_attacker",
+      "base_unaffected_by_poison",
+      "deepwater_jeweller_to_chromatic_%"
+    ],
+    "visuals": "deepwater_altar_pufferfish",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarPufferFish": {
+        "aura_radius_metres": null,
+        "stats": {
+          "all_damage_can_poison": 1,
+          "base_chance_to_poison_on_hit_%": 100,
+          "melee_physical_damage_taken_%_to_deal_to_attacker": 100,
+          "base_unaffected_by_poison": 1,
+          "deepwater_jeweller_to_chromatic_%": 4
+        },
+        "stat_text": [
+          "Весь урон от ударов может наложить отравление",
+          "Всегда отравляет при нанесении удара",
+          "100% полученного физического урона в ближнем бою отражается атакующему",
+          "Невосприимчивость к яду",
+          "Сферы златокузнеца могут выпасть в виде цветных сфер"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_crab": {
+    "description": "Вы принесли жёсткую раковину в жертву Морскому царю.\r\nВаш шанс блока урона от атак и чар увеличен\r\nШанс выпадения сфер хаоса в виде божественных сфер",
+    "invisible": false,
+    "name": "Жёсткая раковина",
+    "removable": true,
+    "stats": [
+      "base_spell_block_%",
+      "monster_base_block_%",
+      "deepwater_chaos_to_divine_%"
+    ],
+    "visuals": "deepwater_altar_crab",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarCrab": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_spell_block_%": 20,
+          "monster_base_block_%": 20,
+          "deepwater_chaos_to_divine_%": 4
+        },
+        "stat_text": [
+          "20% шанс блокировать урон от чар",
+          "20% шанс блокировать урон от атак",
+          "Сферы хаоса могут выпасть в виде божественных сфер"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_coral": {
+    "description": "Вы принесли прочный коралл в жертву Морскому царю.\r\nВас нельзя оглушить и накладываете на врагов оглушение с увеличенной длительностью\r\nШанс выпадения сфер очищения в виде сфер отмены",
+    "invisible": false,
+    "name": "Прочный коралл",
+    "removable": true,
+    "stats": [
+      "base_cannot_be_stunned",
+      "base_stun_duration_+%",
+      "deepwater_scour_to_annulment_%"
+    ],
+    "visuals": "deepwater_altar_coral",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarCoral": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_cannot_be_stunned": 1,
+          "base_stun_duration_+%": 50,
+          "deepwater_scour_to_annulment_%": 4
+        },
+        "stat_text": [
+          "Не может быть оглушен",
+          "50% увеличение длительности оглушения на врагах",
+          "Сферы очищения могут выпасть в виде сфер отмены"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_fish_buffed": {
+    "description": "Морской царь дарует вам морские плавники.\r\nВы наносите увеличенный урон, имеете повышенную скорость передвижения, сопротивление холоду и максимум сопротивления холоду\r\nШанс выпадения сфер превращения в виде сфер хаоса",
+    "invisible": false,
+    "name": "Морские плавники",
+    "removable": true,
+    "stats": [
+      "base_cold_damage_resistance_%",
+      "damage_+%",
+      "base_movement_velocity_+%",
+      "base_maximum_cold_damage_resistance_%",
+      "deepwater_transmute_to_chaos_%"
+    ],
+    "visuals": "deepwater_altar_fish_buffed",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarFishEmpowered": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_cold_damage_resistance_%": 15,
+          "damage_+%": 30,
+          "base_movement_velocity_+%": 15,
+          "base_maximum_cold_damage_resistance_%": 5,
+          "deepwater_transmute_to_chaos_%": 8
+        },
+        "stat_text": [
+          "+15% к сопротивлению холоду",
+          "30% увеличение урона",
+          "15% повышение скорости передвижения",
+          "+5% к максимальному сопротивлению холоду",
+          "Сферы превращения могут выпасть в виде сфер хаосп"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_octopus_buffed": {
+    "description": "Морской царь дарует вам хваткие щупальца.\r\nВаши умения выпускают дополнительные снаряды, имеют увеличенную дальность ударов ближнего боя и область действия\r\nВы также получаете Неуловимость при убийстве и имеете усиление эффекта Неуловимости\r\nШанс выпадения сфер удачи в виде древних сфер",
+    "invisible": false,
+    "name": "Хваткие щупальца",
+    "removable": true,
+    "stats": [
+      "number_of_additional_projectiles",
+      "melee_range_+",
+      "base_skill_area_of_effect_+%",
+      "gain_elusive_on_kill_chance_%",
+      "elusive_effect_+%",
+      "deepwater_chance_to_ancient_%"
+    ],
+    "visuals": "deepwater_altar_octopus_buffed",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarOctopusEmpowered": {
+        "aura_radius_metres": null,
+        "stats": {
+          "number_of_additional_projectiles": 2,
+          "melee_range_+": 10,
+          "base_skill_area_of_effect_+%": 20,
+          "gain_elusive_on_kill_chance_%": 100,
+          "elusive_effect_+%": 30,
+          "deepwater_chance_to_ancient_%": 8
+        },
+        "stat_text": [
+          "Умения выпускают дополнительных снарядов: 2",
+          "+1 м к дальности ударов ближнего боя",
+          "20% увеличение области действия",
+          "Дарует Неуловимость при убийстве",
+          "30% усиление эффекта Неуловимости",
+          "Сферы удачи могут выпасть в виде древних сфер"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_pufferfish_buffed": {
+    "description": "Морской царь дарует вам смертоносные шипы.\r\nВы отражаете часть получаемого урона в ближнем бою. Весь наносимый вами урон может отравить, вы всегда отравляете при нанесении удара и невосприимчивы к яду\r\nВраги, которых вы отравили, не могут регенерировать здоровье и у вас есть шанс, когда вы накладываете яд, наложить дополнительный яд на ту же цель\r\nШанс выпадения сфер златокузнеца в виде цветных сфер",
+    "invisible": false,
+    "name": "Смертоносные шипы",
+    "removable": true,
+    "stats": [
+      "all_damage_can_poison",
+      "base_chance_to_poison_on_hit_%",
+      "melee_physical_damage_taken_%_to_deal_to_attacker",
+      "enemies_poisoned_by_you_cannot_regen_life",
+      "additional_poison_chance_%_when_inflicting_poison",
+      "deepwater_jeweller_to_chromatic_%"
+    ],
+    "visuals": "deepwater_altar_pufferfish_buffed",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarPufferFishEmpowered": {
+        "aura_radius_metres": null,
+        "stats": {
+          "all_damage_can_poison": 1,
+          "base_chance_to_poison_on_hit_%": 100,
+          "melee_physical_damage_taken_%_to_deal_to_attacker": 100,
+          "enemies_poisoned_by_you_cannot_regen_life": 1,
+          "additional_poison_chance_%_when_inflicting_poison": 30,
+          "deepwater_jeweller_to_chromatic_%": 8
+        },
+        "stat_text": [
+          "Весь урон от ударов может наложить отравление",
+          "Всегда отравляет при нанесении удара",
+          "100% полученного физического урона в ближнем бою отражается атакующему",
+          "Отравленные вами враги не могут регенерировать здоровье",
+          "30% шанс при наложении вами отравления наложить еще один заряд отравления на ту же цель",
+          "Сферы златокузнеца могут выпасть в виде цветных сфер"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_crab_buffed": {
+    "description": "Морской царь дарует вам непроницаемую раковину.\r\nВаш шанс блока урона от атак и чар увеличен\r\nВы также получаете дополнительный максимум сопротивления стихиям и уменьшение получаемого физического урона\r\nШанс выпадения сфер хаоса в виде божественных сфер",
+    "invisible": false,
+    "name": "Непроницаемая раковина",
+    "removable": true,
+    "stats": [
+      "base_spell_block_%",
+      "monster_base_block_%",
+      "additional_maximum_all_elemental_resistances_%",
+      "base_additional_physical_damage_reduction_%",
+      "deepwater_chaos_to_divine_%"
+    ],
+    "visuals": "deepwater_altar_crab_buffed",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarCrabEmpowered": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_spell_block_%": 20,
+          "monster_base_block_%": 20,
+          "additional_maximum_all_elemental_resistances_%": 3,
+          "base_additional_physical_damage_reduction_%": 10,
+          "deepwater_chaos_to_divine_%": 8
+        },
+        "stat_text": [
+          "20% шанс блокировать урон от чар",
+          "20% шанс блокировать урон от атак",
+          "+3% к максимуму сопротивлений всем стихиям",
+          "10% дополнительного уменьшения получаемого физического урона",
+          "Сферы хаоса могут выпасть в виде божественных сфер"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_coral_buffed": {
+    "description": "Морской царь дарует вам боевой коралл.\r\nВас нельзя оглушить и накладываете на врагов оглушение с увеличенной длительностью\r\nВы также имеете уменьшение порога оглушение врага и шанс нанести двойной урон, если недавно вы оглушали врага\r\nШанс выпадения сфер очищения в виде сфер отмены",
+    "invisible": false,
+    "name": "Боевой коралл",
+    "removable": true,
+    "stats": [
+      "base_cannot_be_stunned",
+      "base_stun_duration_+%",
+      "chance_to_deal_double_damage_%_if_have_stunned_an_enemy_recently",
+      "base_stun_threshold_reduction_+%",
+      "deepwater_scour_to_annulment_%"
+    ],
+    "visuals": "deepwater_altar_coral_buffed",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarCoralEmpowered": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_cannot_be_stunned": 1,
+          "base_stun_duration_+%": 50,
+          "chance_to_deal_double_damage_%_if_have_stunned_an_enemy_recently": 30,
+          "base_stun_threshold_reduction_+%": 30,
+          "deepwater_scour_to_annulment_%": 8
+        },
+        "stat_text": [
+          "Не может быть оглушен",
+          "50% увеличение длительности оглушения на врагах",
+          "30% шанс нанести двойной урон, если недавно вы оглушали врага",
+          "30% снижение порога оглушения врагов",
+          "Сферы очищения могут выпасть в виде сфер отмены"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_fish_hardmode": {
     "description": "Вы принесли корм для Тсоаты в жертву Морскому царю.\r\nВы наносите увеличенный урон и имеете увеличение сопротивления холоду.",
     "invisible": false,
     "name": "Корм для Тсоаты",
@@ -78818,7 +79189,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarFish": {
+      "DeepwaterAltarFishHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "base_cold_damage_resistance_%": 15,
@@ -78833,7 +79204,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_octopus": {
+  "deepwater_altar_octopus_hardmode": {
     "description": "Вы принесли тянущиеся щупальца в жертву Морскому царю.\r\nВаши умения выпускают дополнительные снаряды, имеют увеличенную дальность ударов ближнего боя и область действия.",
     "invisible": false,
     "name": "Тянущиеся щупальца",
@@ -78847,7 +79218,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarOctopus": {
+      "DeepwaterAltarOctopusHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "number_of_additional_projectiles": 2,
@@ -78864,7 +79235,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_pufferfish": {
+  "deepwater_altar_pufferfish_hardmode": {
     "description": "Вы принесли токсичные шипы в жертву Морскому царю.\r\nВы отражаете часть получаемого урона в ближнем бою. Весь наносимый вами урон может отравить, вы всегда отравляете при нанесении удара и невосприимчивы к яду.",
     "invisible": false,
     "name": "Токсичные шипы",
@@ -78879,7 +79250,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarPufferFish": {
+      "DeepwaterAltarPufferFishHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "all_damage_can_poison": 1,
@@ -78898,7 +79269,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_crab": {
+  "deepwater_altar_crab_hardmode": {
     "description": "Вы принесли жёсткую раковину в жертву Морскому царю.\r\nВаш шанс блока урона от атак и чар увеличен.",
     "invisible": false,
     "name": "Жёсткая раковина",
@@ -78911,7 +79282,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarCrab": {
+      "DeepwaterAltarCrabHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "base_spell_block_%": 20,
@@ -78926,7 +79297,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_coral": {
+  "deepwater_altar_coral_hardmode": {
     "description": "Вы принесли прочный коралл в жертву Морскому царю.\r\nВас нельзя оглушить и накладываете на врагов оглушение с увеличенной длительностью.",
     "invisible": false,
     "name": "Прочный коралл",
@@ -78939,7 +79310,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarCoral": {
+      "DeepwaterAltarCoralHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "base_cannot_be_stunned": 1,
@@ -78954,7 +79325,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_fish_buffed": {
+  "deepwater_altar_fish_buffed_hardmode": {
     "description": "Морской царь дарует вам морские плавники.\r\nВы наносите увеличенный урон, имеете повышенную скорость передвижения, сопротивление холоду и максимум сопротивления холоду.",
     "invisible": false,
     "name": "Морские плавники",
@@ -78969,7 +79340,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarFishEmpowered": {
+      "DeepwaterAltarFishEmpoweredHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "base_cold_damage_resistance_%": 15,
@@ -78988,7 +79359,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_octopus_buffed": {
+  "deepwater_altar_octopus_buffed_hardmode": {
     "description": "Морской царь дарует вам хваткие щупальца.\r\nВаши умения выпускают дополнительные снаряды, имеют увеличенную дальность ударов ближнего боя и область действия.\r\nВы также получаете Неуловимость при убийстве и имеете усиление эффекта Неуловимости.",
     "invisible": false,
     "name": "Хваткие щупальца",
@@ -79004,7 +79375,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarOctopusEmpowered": {
+      "DeepwaterAltarOctopusEmpoweredHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "number_of_additional_projectiles": 2,
@@ -79025,7 +79396,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_pufferfish_buffed": {
+  "deepwater_altar_pufferfish_buffed_hardmode": {
     "description": "Морской царь дарует вам смертоносные шипы.\r\nВы отражаете часть получаемого урона в ближнем бою. Весь наносимый вами урон может отравить, вы всегда отравляете при нанесении удара и невосприимчивы к яду.\r\nВраги, которых вы отравили, не могут регенерировать здоровье и у вас есть шанс, когда вы накладываете яд, наложить дополнительный яд на ту же цель.",
     "invisible": false,
     "name": "Смертоносные шипы",
@@ -79041,7 +79412,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarPufferFishEmpowered": {
+      "DeepwaterAltarPufferFishEmpoweredHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "all_damage_can_poison": 1,
@@ -79062,7 +79433,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_crab_buffed": {
+  "deepwater_altar_crab_buffed_hardmode": {
     "description": "Морской царь дарует вам непроницаемую раковину.\r\nВаш шанс блока урона от атак и чар увеличен.\r\nВы также получаете дополнительный максимум сопротивления стихиям и уменьшение получаемого физического урона.",
     "invisible": false,
     "name": "Непроницаемая раковина",
@@ -79077,7 +79448,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarCrabEmpowered": {
+      "DeepwaterAltarCrabEmpoweredHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "base_spell_block_%": 20,
@@ -79096,7 +79467,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_coral_buffed": {
+  "deepwater_altar_coral_buffed_hardmode": {
     "description": "Морской царь дарует вам боевой коралл.\r\nВас нельзя оглушить и накладываете на врагов оглушение с увеличенной длительностью.\r\nВы также имеете уменьшение порога оглушение врага и шанс нанести двойной урон, если недавно вы оглушали врага.",
     "invisible": false,
     "name": "Боевой коралл",
@@ -79111,7 +79482,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarCoralEmpowered": {
+      "DeepwaterAltarCoralEmpoweredHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "base_cannot_be_stunned": 1,
@@ -79974,7 +80345,7 @@
     "stack_limit": 10
   },
   "deepwater_golden_lantern": {
-    "description": "У вас значительно увеличена редкость находимых предметов",
+    "description": "У вас значительно повышены редкость и количество найденных предметов.",
     "invisible": false,
     "name": "Свет золотого фонаря",
     "removable": false,
@@ -80013,6 +80384,30 @@
     "stack_limit": null
   },
   "chill_cold_damage_taken_modifier": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "abyssal_wasting": {
+    "description": "Ваш урон от ударов неудачлив",
+    "invisible": false,
+    "name": "Истощение Бездны",
+    "removable": false,
+    "stats": [],
+    "visuals": "abyssal_wasting",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "bonefeeders_active_corpse_aura_buff": {
     "description": "",
     "invisible": true,
     "name": "",

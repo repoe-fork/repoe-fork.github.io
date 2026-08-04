@@ -35152,6 +35152,21 @@
     "templates": null,
     "stack_limit": null
   },
+  "intimidated_enemy_temp_child_buff": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "damage_+%_final_from_intimitate",
+      "attack_damage_taken_+%"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "unnerved_enemy_self_spell_crit_chance": {
     "description": "",
     "invisible": true,
@@ -73371,13 +73386,13 @@
       "AbyssEnragingCrystalsDestroyedEnhancedMonsterBuff": {
         "aura_radius_metres": null,
         "stats": {
-          "monster_difficulty_tankiness_+%": 50,
-          "damage_+%": 12,
-          "from_league_item_rarity_+%_permyriad": 750,
-          "from_league_item_quantity_+%_permyriad": 750
+          "monster_difficulty_tankiness_+%": 75,
+          "damage_+%": 15,
+          "from_league_item_rarity_+%_permyriad": 1500,
+          "from_league_item_quantity_+%_permyriad": 1000
         },
         "stat_text": [
-          "12% erhöhter Schaden"
+          "15% erhöhter Schaden"
         ],
         "visuals": null
       },
@@ -78465,12 +78480,11 @@
     "stack_limit": null
   },
   "ghost_furnace_soul_buff": {
-    "description": "[DNT] Ghostflame Furnace has increased Area of Effect and you have increased Fire Damage over Time Multiplier per Ghostflame Soul",
+    "description": "[DNT] You have increased Fire Damage over Time Multiplier per Ghostflame Soul",
     "invisible": false,
     "name": "[DNT] Ghostflame Soul",
     "removable": false,
     "stats": [
-      "ghost_furnace_area_of_effect_+%",
       "fire_dot_multiplier_+",
       "ghostflame_lantern_souls"
     ],
@@ -78481,14 +78495,14 @@
     "stack_limit": null
   },
   "ghost_furnace_aura": {
-    "description": "[DNT] You are taking burning damage from being near an enemy using Ghost Furnace",
+    "description": "Ihr erleidet Feuerschaden über Zeit.",
     "invisible": false,
-    "name": "[DNT] Ghost Furnace Aura",
+    "name": "Verbrennende Draugr-Flamme",
     "removable": false,
     "stats": [
       "base_fire_damage_taken_per_minute"
     ],
-    "visuals": "ghost_furnace_buff_visual",
+    "visuals": "ghost_furnace_aura_visual",
     "category": "Debuff",
     "sources": null,
     "templates": null,
@@ -78687,9 +78701,9 @@
     "stack_limit": null
   },
   "brine_rot": {
-    "description": "Ihr befindet Euch im Ertrinkungsbereich, und ein Teil des Schadens über Zeit, den Ihr im Ertrinkungsbereich erleidet, wird beim Verlassen des Bereichs als Leben verloren.",
+    "description": "Ihr befindet Euch im Reich des Ertrinkens, und ein Teil des Schadens über Zeit, den Ihr im Reich des Ertrinkens erleidet, wird beim Verlassen des Reichs als Leben verloren.",
     "invisible": false,
-    "name": "Ertrinkungsbereich",
+    "name": "Reich des Ertrinkens",
     "removable": false,
     "stats": [],
     "visuals": "brinerot_debuff",
@@ -78793,19 +78807,376 @@
     },
     "stack_limit": null
   },
-  "ghost_furnace_display": {
-    "description": "",
+  "ghost_furnace_buff": {
+    "description": "Ihr verursacht Feuerschaden über Zeit\r\nbei Gegnern innerhalb von 3 Metern",
     "invisible": false,
-    "name": "[DNT] Ghost Furnace",
+    "name": "Draugr-Flamme",
     "removable": false,
-    "stats": [],
-    "visuals": "ghost_furnace_display",
+    "stats": [
+      "ghost_furnace_fire_damage_to_deal_per_minute"
+    ],
+    "visuals": "ghost_furnace_buff",
     "category": null,
     "sources": null,
     "templates": null,
     "stack_limit": null
   },
   "deepwater_altar_fish": {
+    "description": "Ihr habt dem Gischtkönig Tsoathas Futter dargebracht\r\nIhr habt erhöhten Schaden und Kältewiderstand\r\nChance, dass Umwandlungssphären stattdessen als Chaossphären fallen gelassen werden",
+    "invisible": false,
+    "name": "Tsoathas Futter",
+    "removable": true,
+    "stats": [
+      "base_cold_damage_resistance_%",
+      "damage_+%",
+      "deepwater_transmute_to_chaos_%"
+    ],
+    "visuals": "deepwater_altar_fish",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarFish": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_cold_damage_resistance_%": 15,
+          "damage_+%": 30,
+          "deepwater_transmute_to_chaos_%": 4
+        },
+        "stat_text": [
+          "+15% zu Kältewiderstand",
+          "30% erhöhter Schaden",
+          "Chance, dass Umwandlungssphären stattdessen als Chaossphären fallen gelassen werden"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_octopus": {
+    "description": "Ihr habt dem Gischtkönig Ausstreckende Tentakel dargebracht\r\nEure Fertigkeiten feuern zusätzliche Projektile, haben vergrößerte Nahkampfschlagreichweite und vergrößerten Wirkungsbereich\r\nChance, dass Sphären der Möglichkeiten stattdessen als Uralte Sphären fallen gelassen werden",
+    "invisible": false,
+    "name": "Ausstreckende Tentakel",
+    "removable": true,
+    "stats": [
+      "number_of_additional_projectiles",
+      "melee_range_+",
+      "base_skill_area_of_effect_+%",
+      "deepwater_chance_to_ancient_%"
+    ],
+    "visuals": "deepwater_altar_octopus",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarOctopus": {
+        "aura_radius_metres": null,
+        "stats": {
+          "number_of_additional_projectiles": 2,
+          "melee_range_+": 10,
+          "base_skill_area_of_effect_+%": 20,
+          "deepwater_chance_to_ancient_%": 4
+        },
+        "stat_text": [
+          "Fertigkeiten feuern 2 zusätzliche Projektile",
+          "+1 Meter zur Nahkampfschlagreichweite",
+          "20% vergrößerter Wirkungsbereich",
+          "Chance, dass Sphären der Möglichkeiten stattdessen als Uralte Sphären fallen gelassen werden"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_pufferfish": {
+    "description": "Ihr habt dem Gischtkönig Giftige Stacheln dargebracht\r\nIhr reflektiert einen Teil des erlittenen physischen Nahkampfschadens, sämtlicher Schaden von Euch kann vergiften, Ihr vergiftet immer bei Treffer und seid unbeeinträchtigt von Gift\r\nChance, dass Sphären des Goldschmieds stattdessen als Färbungssphären fallen gelassen werden",
+    "invisible": false,
+    "name": "Giftige Stacheln",
+    "removable": true,
+    "stats": [
+      "all_damage_can_poison",
+      "base_chance_to_poison_on_hit_%",
+      "melee_physical_damage_taken_%_to_deal_to_attacker",
+      "base_unaffected_by_poison",
+      "deepwater_jeweller_to_chromatic_%"
+    ],
+    "visuals": "deepwater_altar_pufferfish",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarPufferFish": {
+        "aura_radius_metres": null,
+        "stats": {
+          "all_damage_can_poison": 1,
+          "base_chance_to_poison_on_hit_%": 100,
+          "melee_physical_damage_taken_%_to_deal_to_attacker": 100,
+          "base_unaffected_by_poison": 1,
+          "deepwater_jeweller_to_chromatic_%": 4
+        },
+        "stat_text": [
+          "Sämtlicher Schaden von Treffern kann vergiften",
+          "Vergiftet immer bei Treffer",
+          "Reflektiert 100% des erlittenen physischen Nahkampfschadens auf Angreifer",
+          "Unbeeinträchtigt von Gift",
+          "Chance, dass Sphären des Goldschmieds stattdessen als Färbungssphären fallen gelassen werden"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_crab": {
+    "description": "Ihr habt dem Gischtkönig Harte Schale dargebracht\r\nIhr habt zusätzliche Chance, Angriffs- und Zauberschaden zu blocken\r\nChance, dass Chaossphären stattdessen als Göttliche Sphären fallen gelassen werden",
+    "invisible": false,
+    "name": "Harte Schale",
+    "removable": true,
+    "stats": [
+      "base_spell_block_%",
+      "monster_base_block_%",
+      "deepwater_chaos_to_divine_%"
+    ],
+    "visuals": "deepwater_altar_crab",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarCrab": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_spell_block_%": 20,
+          "monster_base_block_%": 20,
+          "deepwater_chaos_to_divine_%": 4
+        },
+        "stat_text": [
+          "20% Chance, Zauberschaden zu blocken",
+          "20% Chance, Angriffsschaden zu blocken",
+          "Chance, dass Chaossphären stattdessen als Göttliche Sphären fallen gelassen werden"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_coral": {
+    "description": "Ihr habt dem Gischtkönig Robuste Koralle dargebracht\r\nIhr könnt nicht betäubt werden und habt verlängerte Betäubungsdauer bei Gegnern\r\nChance, dass Sphären der Läuterung stattdessen als Sphären der Annullierung fallen gelassen werden",
+    "invisible": false,
+    "name": "Robuste Koralle",
+    "removable": true,
+    "stats": [
+      "base_cannot_be_stunned",
+      "base_stun_duration_+%",
+      "deepwater_scour_to_annulment_%"
+    ],
+    "visuals": "deepwater_altar_coral",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarCoral": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_cannot_be_stunned": 1,
+          "base_stun_duration_+%": 50,
+          "deepwater_scour_to_annulment_%": 4
+        },
+        "stat_text": [
+          "Kann nicht betäubt werden",
+          "50% verlängerte Betäubungsdauer bei Gegnern",
+          "Chance, dass Sphären der Läuterung stattdessen als Sphären der Annullierung fallen gelassen werden"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_fish_buffed": {
+    "description": "Der Gischtkönig verleiht Euch Gischtflossen\r\nIhr habt erhöhten Schaden, Bewegungsgeschwindigkeit, Kältewiderstand und maximalen Kältewiderstand\r\nChance, dass Umwandlungssphären stattdessen als Chaossphären fallen gelassen werden",
+    "invisible": false,
+    "name": "Gischtflossen",
+    "removable": true,
+    "stats": [
+      "base_cold_damage_resistance_%",
+      "damage_+%",
+      "base_movement_velocity_+%",
+      "base_maximum_cold_damage_resistance_%",
+      "deepwater_transmute_to_chaos_%"
+    ],
+    "visuals": "deepwater_altar_fish_buffed",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarFishEmpowered": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_cold_damage_resistance_%": 15,
+          "damage_+%": 30,
+          "base_movement_velocity_+%": 15,
+          "base_maximum_cold_damage_resistance_%": 5,
+          "deepwater_transmute_to_chaos_%": 8
+        },
+        "stat_text": [
+          "+15% zu Kältewiderstand",
+          "30% erhöhter Schaden",
+          "15% erhöhte Bewegungsgeschwindigkeit",
+          "+5% zu maximalem Kältewiderstand",
+          "Chance, dass Umwandlungssphären stattdessen als Chaossphären fallen gelassen werden"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_octopus_buffed": {
+    "description": "Der Gischtkönig verleiht Euch Umgreifende Tentakel\r\nEure Fertigkeiten feuern zusätzliche Projektile, haben vergrößerte Nahkampfschlagreichweite und vergrößerten Wirkungsbereich\r\nIhr erhaltet Schattenhaft bei Tötung und habt erhöhte Wirkung von Schattenhaft\r\nChance, dass Sphären der Möglichkeiten stattdessen als Uralte Sphären fallen gelassen werden",
+    "invisible": false,
+    "name": "Umgreifende Tentakel",
+    "removable": true,
+    "stats": [
+      "number_of_additional_projectiles",
+      "melee_range_+",
+      "base_skill_area_of_effect_+%",
+      "gain_elusive_on_kill_chance_%",
+      "elusive_effect_+%",
+      "deepwater_chance_to_ancient_%"
+    ],
+    "visuals": "deepwater_altar_octopus_buffed",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarOctopusEmpowered": {
+        "aura_radius_metres": null,
+        "stats": {
+          "number_of_additional_projectiles": 2,
+          "melee_range_+": 10,
+          "base_skill_area_of_effect_+%": 20,
+          "gain_elusive_on_kill_chance_%": 100,
+          "elusive_effect_+%": 30,
+          "deepwater_chance_to_ancient_%": 8
+        },
+        "stat_text": [
+          "Fertigkeiten feuern 2 zusätzliche Projektile",
+          "+1 Meter zur Nahkampfschlagreichweite",
+          "20% vergrößerter Wirkungsbereich",
+          "Erhaltet Schattenhaft bei Tötung",
+          "30% erhöhte Wirkung von Schattenhaft",
+          "Chance, dass Sphären der Möglichkeiten stattdessen als Uralte Sphären fallen gelassen werden"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_pufferfish_buffed": {
+    "description": "Der Gischtkönig verleiht Euch Tödliche Stacheln\r\nIhr reflektiert einen Teil des erlittenen physischen Nahkampfschadens, sämtlicher Schaden von Euch kann vergiften, Ihr vergiftet immer bei Treffer und seid unbeeinträchtigt von Gift\r\nDurch Euch vergiftete Gegner können kein Leben regenerieren und Ihr habt eine Chance, beim selben Ziel ein zusätzliches Gift anzuwenden, wenn Ihr einen Gegner vergiftet\r\nChance, dass Sphären des Goldschmieds stattdessen als Färbungssphären fallen gelassen werden",
+    "invisible": false,
+    "name": "Tödliche Stacheln",
+    "removable": true,
+    "stats": [
+      "all_damage_can_poison",
+      "base_chance_to_poison_on_hit_%",
+      "melee_physical_damage_taken_%_to_deal_to_attacker",
+      "enemies_poisoned_by_you_cannot_regen_life",
+      "additional_poison_chance_%_when_inflicting_poison",
+      "deepwater_jeweller_to_chromatic_%"
+    ],
+    "visuals": "deepwater_altar_pufferfish_buffed",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarPufferFishEmpowered": {
+        "aura_radius_metres": null,
+        "stats": {
+          "all_damage_can_poison": 1,
+          "base_chance_to_poison_on_hit_%": 100,
+          "melee_physical_damage_taken_%_to_deal_to_attacker": 100,
+          "enemies_poisoned_by_you_cannot_regen_life": 1,
+          "additional_poison_chance_%_when_inflicting_poison": 30,
+          "deepwater_jeweller_to_chromatic_%": 8
+        },
+        "stat_text": [
+          "Sämtlicher Schaden von Treffern kann vergiften",
+          "Vergiftet immer bei Treffer",
+          "Reflektiert 100% des erlittenen physischen Nahkampfschadens auf Angreifer",
+          "Durch Euch vergiftete Gegner können können kein Leben regenerieren",
+          "30% Chance, beim selben Ziel ein zusätzliches Gift anzuwenden, wenn Ihr einen Gegner vergiftet",
+          "Chance, dass Sphären des Goldschmieds stattdessen als Färbungssphären fallen gelassen werden"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_crab_buffed": {
+    "description": "Der Gischtkönig verleiht Euch Undurchdringliche Schale\r\nIhr habt zusätzliche Chance, Angriffs- und Zauberschaden zu blocken\r\nIhr habt zusätzliche maximale Elementarwiderstände und physische Schadensminderung\r\nChance, dass Chaossphären stattdessen als Göttliche Sphären fallen gelassen werden",
+    "invisible": false,
+    "name": "Undurchdringliche Schale",
+    "removable": true,
+    "stats": [
+      "base_spell_block_%",
+      "monster_base_block_%",
+      "additional_maximum_all_elemental_resistances_%",
+      "base_additional_physical_damage_reduction_%",
+      "deepwater_chaos_to_divine_%"
+    ],
+    "visuals": "deepwater_altar_crab_buffed",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarCrabEmpowered": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_spell_block_%": 20,
+          "monster_base_block_%": 20,
+          "additional_maximum_all_elemental_resistances_%": 3,
+          "base_additional_physical_damage_reduction_%": 10,
+          "deepwater_chaos_to_divine_%": 8
+        },
+        "stat_text": [
+          "20% Chance, Zauberschaden zu blocken",
+          "20% Chance, Angriffsschaden zu blocken",
+          "+3% zu allen maximalen Elementarwiderständen",
+          "10% zusätzliche physische Schadensminderung",
+          "Chance, dass Chaossphären stattdessen als Göttliche Sphären fallen gelassen werden"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_coral_buffed": {
+    "description": "Der Gischtkönig verleiht Euch Wehrhafte Koralle\r\nIhr könnt nicht betäubt werden und habt verlängerte Betäubungsdauer bei Gegnern\r\nIhr habt eine Chance, doppelten Schaden zu verursachen, wenn Ihr kürzlich einen Gegner betäubt habt, und Ihr habt verringerte gegnerische Betäubungsschwelle\r\nChance, dass Sphären der Läuterung stattdessen als Sphären der Annullierung fallen gelassen werden",
+    "invisible": false,
+    "name": "Wehrhafte Koralle",
+    "removable": true,
+    "stats": [
+      "base_cannot_be_stunned",
+      "base_stun_duration_+%",
+      "chance_to_deal_double_damage_%_if_have_stunned_an_enemy_recently",
+      "base_stun_threshold_reduction_+%",
+      "deepwater_scour_to_annulment_%"
+    ],
+    "visuals": "deepwater_altar_coral_buffed",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarCoralEmpowered": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_cannot_be_stunned": 1,
+          "base_stun_duration_+%": 50,
+          "chance_to_deal_double_damage_%_if_have_stunned_an_enemy_recently": 30,
+          "base_stun_threshold_reduction_+%": 30,
+          "deepwater_scour_to_annulment_%": 8
+        },
+        "stat_text": [
+          "Kann nicht betäubt werden",
+          "50% verlängerte Betäubungsdauer bei Gegnern",
+          "30% Chance, doppelten Schaden zu verursachen, wenn Ihr kürzlich einen Gegner betäubt habt",
+          "30% verringerte gegnerische Betäubungsschwelle",
+          "Chance, dass Sphären der Läuterung stattdessen als Sphären der Annullierung fallen gelassen werden"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_fish_hardmode": {
     "description": "Ihr habt dem Gischtkönig Tsoathas Futter dargebracht\r\nIhr habt erhöhten Schaden und Kältewiderstand",
     "invisible": false,
     "name": "Tsoathas Futter",
@@ -78818,7 +79189,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarFish": {
+      "DeepwaterAltarFishHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "base_cold_damage_resistance_%": 15,
@@ -78833,7 +79204,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_octopus": {
+  "deepwater_altar_octopus_hardmode": {
     "description": "Ihr habt dem Gischtkönig Ausstreckende Tentakel dargebracht\r\nEure Fertigkeiten feuern zusätzliche Projektile, haben vergrößerte Nahkampfschlagreichweite und vergrößerten Wirkungsbereich",
     "invisible": false,
     "name": "Ausstreckende Tentakel",
@@ -78847,7 +79218,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarOctopus": {
+      "DeepwaterAltarOctopusHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "number_of_additional_projectiles": 2,
@@ -78864,7 +79235,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_pufferfish": {
+  "deepwater_altar_pufferfish_hardmode": {
     "description": "Ihr habt dem Gischtkönig Giftige Stacheln dargebracht\r\nIhr reflektiert einen Teil des erlittenen physischen Nahkampfschadens, sämtlicher Schaden von Euch kann vergiften, Ihr vergiftet immer bei Treffer und seid unbeeinträchtigt von Gift",
     "invisible": false,
     "name": "Giftige Stacheln",
@@ -78879,7 +79250,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarPufferFish": {
+      "DeepwaterAltarPufferFishHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "all_damage_can_poison": 1,
@@ -78898,7 +79269,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_crab": {
+  "deepwater_altar_crab_hardmode": {
     "description": "Ihr habt dem Gischtkönig Harte Schale dargebracht\r\nIhr habt zusätzliche Chance, Angriffs- und Zauberschaden zu blocken",
     "invisible": false,
     "name": "Harte Schale",
@@ -78911,7 +79282,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarCrab": {
+      "DeepwaterAltarCrabHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "base_spell_block_%": 20,
@@ -78926,7 +79297,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_coral": {
+  "deepwater_altar_coral_hardmode": {
     "description": "Ihr habt dem Gischtkönig Robuste Koralle dargebracht\r\nIhr könnt nicht betäubt werden und habt verlängerte Betäubungsdauer bei Gegnern",
     "invisible": false,
     "name": "Robuste Koralle",
@@ -78939,7 +79310,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarCoral": {
+      "DeepwaterAltarCoralHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "base_cannot_be_stunned": 1,
@@ -78954,7 +79325,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_fish_buffed": {
+  "deepwater_altar_fish_buffed_hardmode": {
     "description": "Der Gischtkönig verleiht Euch Gischtflossen\r\nIhr habt erhöhten Schaden, Bewegungsgeschwindigkeit, Kältewiderstand und maximalen Kältewiderstand",
     "invisible": false,
     "name": "Gischtflossen",
@@ -78969,7 +79340,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarFishEmpowered": {
+      "DeepwaterAltarFishEmpoweredHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "base_cold_damage_resistance_%": 15,
@@ -78988,7 +79359,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_octopus_buffed": {
+  "deepwater_altar_octopus_buffed_hardmode": {
     "description": "Der Gischtkönig verleiht Euch Umgreifende Tentakel\r\nEure Fertigkeiten feuern zusätzliche Projektile, haben vergrößerte Nahkampfschlagreichweite und vergrößerten Wirkungsbereich\r\nIhr erhaltet Schattenhaft bei Tötung und habt erhöhte Wirkung von Schattenhaft",
     "invisible": false,
     "name": "Umgreifende Tentakel",
@@ -79004,7 +79375,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarOctopusEmpowered": {
+      "DeepwaterAltarOctopusEmpoweredHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "number_of_additional_projectiles": 2,
@@ -79025,7 +79396,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_pufferfish_buffed": {
+  "deepwater_altar_pufferfish_buffed_hardmode": {
     "description": "Der Gischtkönig verleiht Euch Tödliche Stacheln\r\nIhr reflektiert einen Teil des erlittenen physischen Nahkampfschadens, sämtlicher Schaden von Euch kann vergiften, Ihr vergiftet immer bei Treffer und seid unbeeinträchtigt von Gift\r\nDurch Euch vergiftete Gegner können kein Leben regenerieren und Ihr habt eine Chance, beim selben Ziel ein zusätzliches Gift anzuwenden, wenn Ihr einen Gegner vergiftet",
     "invisible": false,
     "name": "Tödliche Stacheln",
@@ -79041,7 +79412,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarPufferFishEmpowered": {
+      "DeepwaterAltarPufferFishEmpoweredHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "all_damage_can_poison": 1,
@@ -79062,7 +79433,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_crab_buffed": {
+  "deepwater_altar_crab_buffed_hardmode": {
     "description": "Der Gischtkönig verleiht Euch Undurchdringliche Schale\r\nIhr habt zusätzliche Chance, Angriffs- und Zauberschaden zu blocken\r\nIhr habt zusätzliche maximale Elementarwiderstände und physische Schadensminderung",
     "invisible": false,
     "name": "Undurchdringliche Schale",
@@ -79077,7 +79448,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarCrabEmpowered": {
+      "DeepwaterAltarCrabEmpoweredHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "base_spell_block_%": 20,
@@ -79096,7 +79467,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_coral_buffed": {
+  "deepwater_altar_coral_buffed_hardmode": {
     "description": "Der Gischtkönig verleiht Euch Wehrhafte Koralle\r\nIhr könnt nicht betäubt werden und habt verlängerte Betäubungsdauer bei Gegnern\r\nIhr habt eine Chance, doppelten Schaden zu verursachen, wenn Ihr kürzlich einen Gegner betäubt habt, und Ihr habt verringerte gegnerische Betäubungsschwelle",
     "invisible": false,
     "name": "Wehrhafte Koralle",
@@ -79111,7 +79482,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarCoralEmpowered": {
+      "DeepwaterAltarCoralEmpoweredHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "base_cannot_be_stunned": 1,
@@ -79974,7 +80345,7 @@
     "stack_limit": 10
   },
   "deepwater_golden_lantern": {
-    "description": "Ihr habt eine bedeutend höhere Seltenheit gefundener Gegenstände.",
+    "description": "Ihr habt eine bedeutend erhöhte Seltenheit und Menge gefundener Gegenstände.",
     "invisible": false,
     "name": "Leuchten der Goldenen Laterne",
     "removable": false,
@@ -80013,6 +80384,30 @@
     "stack_limit": null
   },
   "chill_cold_damage_taken_modifier": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "abyssal_wasting": {
+    "description": "Euer Schaden mit Treffern ist ungünstig.",
+    "invisible": false,
+    "name": "Abgründige Verwüstung",
+    "removable": false,
+    "stats": [],
+    "visuals": "abyssal_wasting",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "bonefeeders_active_corpse_aura_buff": {
     "description": "",
     "invisible": true,
     "name": "",

@@ -34382,7 +34382,7 @@
     "stack_limit": null
   },
   "ancestral_cry": {
-    "description": "Vous avez des résistances élémentaires et résistances éléménetaires maximales supplémentaires.",
+    "description": "Vous avez des résistances élémentaires et résistances élémentaires maximales supplémentaires.",
     "invisible": false,
     "name": "Cri ancestral ",
     "removable": false,
@@ -35145,6 +35145,21 @@
     "removable": false,
     "stats": [
       "stun_duration_on_self_+%"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "intimidated_enemy_temp_child_buff": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "damage_+%_final_from_intimitate",
+      "attack_damage_taken_+%"
     ],
     "visuals": "invisible",
     "category": null,
@@ -73371,13 +73386,13 @@
       "AbyssEnragingCrystalsDestroyedEnhancedMonsterBuff": {
         "aura_radius_metres": null,
         "stats": {
-          "monster_difficulty_tankiness_+%": 50,
-          "damage_+%": 12,
-          "from_league_item_rarity_+%_permyriad": 750,
-          "from_league_item_quantity_+%_permyriad": 750
+          "monster_difficulty_tankiness_+%": 75,
+          "damage_+%": 15,
+          "from_league_item_rarity_+%_permyriad": 1500,
+          "from_league_item_quantity_+%_permyriad": 1000
         },
         "stat_text": [
-          "12% d'Augmentation de Dégâts"
+          "15% d'Augmentation de Dégâts"
         ],
         "visuals": null
       },
@@ -78465,12 +78480,11 @@
     "stack_limit": null
   },
   "ghost_furnace_soul_buff": {
-    "description": "[DNT] Ghostflame Furnace has increased Area of Effect and you have increased Fire Damage over Time Multiplier per Ghostflame Soul",
+    "description": "[DNT] You have increased Fire Damage over Time Multiplier per Ghostflame Soul",
     "invisible": false,
     "name": "[DNT] Ghostflame Soul",
     "removable": false,
     "stats": [
-      "ghost_furnace_area_of_effect_+%",
       "fire_dot_multiplier_+",
       "ghostflame_lantern_souls"
     ],
@@ -78481,14 +78495,14 @@
     "stack_limit": null
   },
   "ghost_furnace_aura": {
-    "description": "[DNT] You are taking burning damage from being near an enemy using Ghost Furnace",
+    "description": "Vous subissez des Dégâts de feu sur la durée",
     "invisible": false,
-    "name": "[DNT] Ghost Furnace Aura",
+    "name": "Brûlure de la Flamme du Draugr",
     "removable": false,
     "stats": [
       "base_fire_damage_taken_per_minute"
     ],
-    "visuals": "ghost_furnace_buff_visual",
+    "visuals": "ghost_furnace_aura_visual",
     "category": "Debuff",
     "sources": null,
     "templates": null,
@@ -78793,19 +78807,376 @@
     },
     "stack_limit": null
   },
-  "ghost_furnace_display": {
-    "description": "",
+  "ghost_furnace_buff": {
+    "description": "Vous infligez des Dégâts de feu sur la durée\r\naux ennemis dans un rayon de 3 mètres",
     "invisible": false,
-    "name": "[DNT] Ghost Furnace",
+    "name": "Flamme du Draugr",
     "removable": false,
-    "stats": [],
-    "visuals": "ghost_furnace_display",
+    "stats": [
+      "ghost_furnace_fire_damage_to_deal_per_minute"
+    ],
+    "visuals": "ghost_furnace_buff",
     "category": null,
     "sources": null,
     "templates": null,
     "stack_limit": null
   },
   "deepwater_altar_fish": {
+    "description": "Vous avez offert la Pâture de Tsoatha au Roi des Embruns\r\nVous avez une Augmentation de Dégâts et de Résistance au froid\r\nLes Orbes de transmutation ont des chances d'être cédés sous forme d'Orbes du chaos à la place",
+    "invisible": false,
+    "name": "Pâture de Tsoatha",
+    "removable": true,
+    "stats": [
+      "base_cold_damage_resistance_%",
+      "damage_+%",
+      "deepwater_transmute_to_chaos_%"
+    ],
+    "visuals": "deepwater_altar_fish",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarFish": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_cold_damage_resistance_%": 15,
+          "damage_+%": 30,
+          "deepwater_transmute_to_chaos_%": 4
+        },
+        "stat_text": [
+          "+15% à la Résistance au froid",
+          "30% d'Augmentation de Dégâts",
+          "Les Orbes de transmutation ont des chances d'être cédés sous forme d'Orbes du chaos à la place"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_octopus": {
+    "description": "Vous avez offert des Tentacules étirés au Roi des Embruns\r\nVos Aptitudes tirent des Projectiles supplémentaires et vous avez une Augmentation d'Allonge et de Zone d'effet\r\nLes Orbes de chance ont des chances d'être cédés sous forme d'Orbes antiques à la place",
+    "invisible": false,
+    "name": "Tentacules étirés",
+    "removable": true,
+    "stats": [
+      "number_of_additional_projectiles",
+      "melee_range_+",
+      "base_skill_area_of_effect_+%",
+      "deepwater_chance_to_ancient_%"
+    ],
+    "visuals": "deepwater_altar_octopus",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarOctopus": {
+        "aura_radius_metres": null,
+        "stats": {
+          "number_of_additional_projectiles": 2,
+          "melee_range_+": 10,
+          "base_skill_area_of_effect_+%": 20,
+          "deepwater_chance_to_ancient_%": 4
+        },
+        "stat_text": [
+          "Les Aptitudes tirent 2 Projectiles supplémentaires",
+          "+1 mètres d'Allonge",
+          "20% d'Augmentation de Zone d'effet",
+          "Les Orbes de chance ont des chances d'être cédés sous forme d'Orbes antiques à la place"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_pufferfish": {
+    "description": "Vous avez offert des Piquants toxiques au Roi des Embruns\r\nVous Renvoyez un pourcentage des Dégâts physiques de mêlée subis, tous les Dégâts que vous infligez peuvent Empoisonner, vous Empoisonnez toujours au Toucher et êtes insensible au Poison\r\nLes Orbes de joaillier ont des chances d'être cédés sous forme d'Orbes chromatiques à la place",
+    "invisible": false,
+    "name": "Piquants toxiques",
+    "removable": true,
+    "stats": [
+      "all_damage_can_poison",
+      "base_chance_to_poison_on_hit_%",
+      "melee_physical_damage_taken_%_to_deal_to_attacker",
+      "base_unaffected_by_poison",
+      "deepwater_jeweller_to_chromatic_%"
+    ],
+    "visuals": "deepwater_altar_pufferfish",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarPufferFish": {
+        "aura_radius_metres": null,
+        "stats": {
+          "all_damage_can_poison": 1,
+          "base_chance_to_poison_on_hit_%": 100,
+          "melee_physical_damage_taken_%_to_deal_to_attacker": 100,
+          "base_unaffected_by_poison": 1,
+          "deepwater_jeweller_to_chromatic_%": 4
+        },
+        "stat_text": [
+          "Tous les types de Dégâts peuvent Empoisonner au Toucher",
+          "Empoisonne toujours au Toucher",
+          "100% des Dégâts physiques de mêlée subis sont Renvoyés à l'attaquant",
+          "Insensibilité au Poison",
+          "Les Orbes de joaillier ont des chances d'être cédés sous forme d'Orbes chromatiques à la place"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_crab": {
+    "description": "Vous avez offert une Carapace rigide au Roi des Embruns\r\nVous avez des chances supplémentaires de Bloquer les Dégâts d'Attaque et les Dégâts des Sorts\r\nLes Orbes du chaos ont des chances d'être cédés sous forme d'Orbes divins à la place",
+    "invisible": false,
+    "name": "Carapace rigide",
+    "removable": true,
+    "stats": [
+      "base_spell_block_%",
+      "monster_base_block_%",
+      "deepwater_chaos_to_divine_%"
+    ],
+    "visuals": "deepwater_altar_crab",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarCrab": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_spell_block_%": 20,
+          "monster_base_block_%": 20,
+          "deepwater_chaos_to_divine_%": 4
+        },
+        "stat_text": [
+          "20% de Chances de Bloquer les Dégâts des Sorts",
+          "20% de Chances de Bloquer les Dégâts d'Attaque",
+          "Les Orbes du chaos ont des chances d'être cédés sous forme d'Orbes divins à la place"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_coral": {
+    "description": "Vous avez offert du Corail robuste au Roi des Embruns\r\nVous avez des chances supplémentaires de Bloquer les Dégâts d'Attaque et les Dégâts des Sorts\r\nLes Orbes de suppression ont des chances d'être cédés sous forme d'Orbes d'annulation à la place",
+    "invisible": false,
+    "name": "Corail robuste",
+    "removable": true,
+    "stats": [
+      "base_cannot_be_stunned",
+      "base_stun_duration_+%",
+      "deepwater_scour_to_annulment_%"
+    ],
+    "visuals": "deepwater_altar_coral",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarCoral": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_cannot_be_stunned": 1,
+          "base_stun_duration_+%": 50,
+          "deepwater_scour_to_annulment_%": 4
+        },
+        "stat_text": [
+          "Vous ne pouvez pas être Étourdi",
+          "50% d'Augmentation de la Durée de l'Étourdissement sur les Ennemis",
+          "Les Orbes de suppression ont des chances d'être cédés sous forme d'Orbes d'annulation à la place"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_fish_buffed": {
+    "description": "Le Roi des Embruns vous fait don de Nageoires d'embruns\r\nVous avez une Augmentation de Dégâts, de Vitesse de déplacement, de Résistance au froid et de Résistance au froid maximale\r\nLes Orbes de transmutation ont des chances d'être cédés sous forme d'Orbes du chaos à la place",
+    "invisible": false,
+    "name": "Nageoires d'embruns",
+    "removable": true,
+    "stats": [
+      "base_cold_damage_resistance_%",
+      "damage_+%",
+      "base_movement_velocity_+%",
+      "base_maximum_cold_damage_resistance_%",
+      "deepwater_transmute_to_chaos_%"
+    ],
+    "visuals": "deepwater_altar_fish_buffed",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarFishEmpowered": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_cold_damage_resistance_%": 15,
+          "damage_+%": 30,
+          "base_movement_velocity_+%": 15,
+          "base_maximum_cold_damage_resistance_%": 5,
+          "deepwater_transmute_to_chaos_%": 8
+        },
+        "stat_text": [
+          "+15% à la Résistance au froid",
+          "30% d'Augmentation de Dégâts",
+          "15% d'Augmentation de la Vitesse de déplacement",
+          "+5% à la Résistance au froid maximale",
+          "Les Orbes de transmutation ont des chances d'être cédés sous forme d'Orbes du chaos à la place"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_octopus_buffed": {
+    "description": "Le Roi des Embruns vous fait don de Tentacules enveloppants\r\nVos Aptitudes tirent des Projectiles supplémentaires et vous avez une Augmentation d'Allonge et de Zone d'effet\r\nVous gagnez également Insaisissable en Tuant et avez une Augmentation de l'Effet d'Insaisissable\r\nLes Orbes de chance ont des chances d'être cédés sous forme d'Orbes antiques à la place",
+    "invisible": false,
+    "name": "Tentacules enveloppants",
+    "removable": true,
+    "stats": [
+      "number_of_additional_projectiles",
+      "melee_range_+",
+      "base_skill_area_of_effect_+%",
+      "gain_elusive_on_kill_chance_%",
+      "elusive_effect_+%",
+      "deepwater_chance_to_ancient_%"
+    ],
+    "visuals": "deepwater_altar_octopus_buffed",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarOctopusEmpowered": {
+        "aura_radius_metres": null,
+        "stats": {
+          "number_of_additional_projectiles": 2,
+          "melee_range_+": 10,
+          "base_skill_area_of_effect_+%": 20,
+          "gain_elusive_on_kill_chance_%": 100,
+          "elusive_effect_+%": 30,
+          "deepwater_chance_to_ancient_%": 8
+        },
+        "stat_text": [
+          "Les Aptitudes tirent 2 Projectiles supplémentaires",
+          "+1 mètres d'Allonge",
+          "20% d'Augmentation de Zone d'effet",
+          "Vous devenez Insaisissable en Tuant",
+          "30% d'Augmentation de l'Effet d'Insaisissable",
+          "Les Orbes de chance ont des chances d'être cédés sous forme d'Orbes antiques à la place"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_pufferfish_buffed": {
+    "description": "Le Roi des Embruns vous fait don de Piquants mortels\r\nVous Renvoyez un pourcentage des Dégâts physiques de mêlée subis, tous les Dégâts que vous infligez peuvent Empoisonner, vous Empoisonnez toujours au Toucher et êtes insensible au Poison\r\nLes ennemis que vous Empoisonnez ne peuvent pas régénérer de Vie et vous avez une chance d'infliger un Poison supplémentaire sur la même cible lorsque vous infligez un Poison\r\nLes Orbes de joaillier ont des chances d'être cédés sous forme d'Orbes chromatiques à la place",
+    "invisible": false,
+    "name": "Piquants mortels",
+    "removable": true,
+    "stats": [
+      "all_damage_can_poison",
+      "base_chance_to_poison_on_hit_%",
+      "melee_physical_damage_taken_%_to_deal_to_attacker",
+      "enemies_poisoned_by_you_cannot_regen_life",
+      "additional_poison_chance_%_when_inflicting_poison",
+      "deepwater_jeweller_to_chromatic_%"
+    ],
+    "visuals": "deepwater_altar_pufferfish_buffed",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarPufferFishEmpowered": {
+        "aura_radius_metres": null,
+        "stats": {
+          "all_damage_can_poison": 1,
+          "base_chance_to_poison_on_hit_%": 100,
+          "melee_physical_damage_taken_%_to_deal_to_attacker": 100,
+          "enemies_poisoned_by_you_cannot_regen_life": 1,
+          "additional_poison_chance_%_when_inflicting_poison": 30,
+          "deepwater_jeweller_to_chromatic_%": 8
+        },
+        "stat_text": [
+          "Tous les types de Dégâts peuvent Empoisonner au Toucher",
+          "Empoisonne toujours au Toucher",
+          "100% des Dégâts physiques de mêlée subis sont Renvoyés à l'attaquant",
+          "Les Ennemis que vous Empoisonnez ne peuvent pas Régénérer de Vie",
+          "Lorsque vous infligez du Poison, vous avez 30% de chance d'infliger un Poison supplémentaire à la même cible",
+          "Les Orbes de joaillier ont des chances d'être cédés sous forme d'Orbes chromatiques à la place"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_crab_buffed": {
+    "description": "Le Roi des Embruns vous fait don de Carapace impénétrable\r\nVous avez des chances supplémentaires de Bloquer les Dégâts d'Attaque et les Dégâts des Sorts\r\nVous avez également des Résistances élémentaires maximales et une Réduction des Dégâts physiques supplémentaires\r\nLes Orbes du chaos ont des chances d'être cédés sous forme d'Orbes divins à la place",
+    "invisible": false,
+    "name": "Carapace impénétrable",
+    "removable": true,
+    "stats": [
+      "base_spell_block_%",
+      "monster_base_block_%",
+      "additional_maximum_all_elemental_resistances_%",
+      "base_additional_physical_damage_reduction_%",
+      "deepwater_chaos_to_divine_%"
+    ],
+    "visuals": "deepwater_altar_crab_buffed",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarCrabEmpowered": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_spell_block_%": 20,
+          "monster_base_block_%": 20,
+          "additional_maximum_all_elemental_resistances_%": 3,
+          "base_additional_physical_damage_reduction_%": 10,
+          "deepwater_chaos_to_divine_%": 8
+        },
+        "stat_text": [
+          "20% de Chances de Bloquer les Dégâts des Sorts",
+          "20% de Chances de Bloquer les Dégâts d'Attaque",
+          "+3% à toutes les Résistances élémentaires maximales",
+          "Vous gagnez une Réduction supplémentaire des Dégâts physiques de 10%",
+          "Les Orbes du chaos ont des chances d'être cédés sous forme d'Orbes divins à la place"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_coral_buffed": {
+    "description": "Le Roi des Embruns vous fait don de Corail militarisé\r\nVous ne pouvez pas être étourdi et bénéficiez d'une Augmentation de la durée des Étourdissement sur les Ennemis\r\nVous avez également une chance d'infliger des Dégâts doublés si vous avez étourdi un ennemi récemment, et une Réduction du Seuil d'Étourdissement de l'ennemi\r\nLes Orbes de suppression ont des chances d'être cédés sous forme d'Orbes d'annulation à la place",
+    "invisible": false,
+    "name": "Corail militarisé",
+    "removable": true,
+    "stats": [
+      "base_cannot_be_stunned",
+      "base_stun_duration_+%",
+      "chance_to_deal_double_damage_%_if_have_stunned_an_enemy_recently",
+      "base_stun_threshold_reduction_+%",
+      "deepwater_scour_to_annulment_%"
+    ],
+    "visuals": "deepwater_altar_coral_buffed",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarCoralEmpowered": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_cannot_be_stunned": 1,
+          "base_stun_duration_+%": 50,
+          "chance_to_deal_double_damage_%_if_have_stunned_an_enemy_recently": 30,
+          "base_stun_threshold_reduction_+%": 30,
+          "deepwater_scour_to_annulment_%": 8
+        },
+        "stat_text": [
+          "Vous ne pouvez pas être Étourdi",
+          "50% d'Augmentation de la Durée de l'Étourdissement sur les Ennemis",
+          "30% de chances d'infliger des Dégâts doublés si vous avez Étourdi un Ennemi Récemment",
+          "30% de Réduction du Seuil d'Étourdissement de l'Ennemi",
+          "Les Orbes de suppression ont des chances d'être cédés sous forme d'Orbes d'annulation à la place"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_fish_hardmode": {
     "description": "Vous avez offert la Pâture de Tsoatha au Roi des Embruns\r\nVous avez une Augmentation de Dégâts et de Résistance au froid",
     "invisible": false,
     "name": "Pâture de Tsoatha",
@@ -78818,7 +79189,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarFish": {
+      "DeepwaterAltarFishHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "base_cold_damage_resistance_%": 15,
@@ -78833,7 +79204,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_octopus": {
+  "deepwater_altar_octopus_hardmode": {
     "description": "Vous avez offert des Tentacules étirés au Roi des Embruns\r\nVos Aptitudes tirent des Projectiles supplémentaires et vous avez une Augmentation d'Allonge et de Zone d'effet",
     "invisible": false,
     "name": "Tentacules étirés",
@@ -78847,7 +79218,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarOctopus": {
+      "DeepwaterAltarOctopusHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "number_of_additional_projectiles": 2,
@@ -78864,7 +79235,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_pufferfish": {
+  "deepwater_altar_pufferfish_hardmode": {
     "description": "Vous avez offert des Piquants toxiques au Roi des Embruns\r\nVous Renvoyez un pourcentage des Dégâts physiques de mêlée subis, tous les Dégâts que vous infligez peuvent Empoisonner, vous Empoisonnez toujours au Toucher et êtes insensible au Poison",
     "invisible": false,
     "name": "Piquants toxiques",
@@ -78879,7 +79250,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarPufferFish": {
+      "DeepwaterAltarPufferFishHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "all_damage_can_poison": 1,
@@ -78898,7 +79269,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_crab": {
+  "deepwater_altar_crab_hardmode": {
     "description": "Vous avez offert une Carapace rigide au Roi des Embruns\r\nVous avez des chances supplémentaires de Bloquer les Dégâts d'Attaque et les Dégâts des Sorts",
     "invisible": false,
     "name": "Carapace rigide",
@@ -78911,7 +79282,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarCrab": {
+      "DeepwaterAltarCrabHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "base_spell_block_%": 20,
@@ -78926,7 +79297,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_coral": {
+  "deepwater_altar_coral_hardmode": {
     "description": "Vous avez offert du Corail robuste au Roi des Embruns\r\nVous avez des chances supplémentaires de Bloquer les Dégâts d'Attaque et les Dégâts des Sorts",
     "invisible": false,
     "name": "Corail robuste",
@@ -78939,7 +79310,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarCoral": {
+      "DeepwaterAltarCoralHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "base_cannot_be_stunned": 1,
@@ -78954,7 +79325,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_fish_buffed": {
+  "deepwater_altar_fish_buffed_hardmode": {
     "description": "Le Roi des Embruns vous fait don de Nageoires d'embruns\r\nVous avez une Augmentation de Dégâts, de Vitesse de déplacement, de Résistance au froid et de Résistance au froid maximale",
     "invisible": false,
     "name": "Nageoires d'embruns",
@@ -78969,7 +79340,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarFishEmpowered": {
+      "DeepwaterAltarFishEmpoweredHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "base_cold_damage_resistance_%": 15,
@@ -78988,7 +79359,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_octopus_buffed": {
+  "deepwater_altar_octopus_buffed_hardmode": {
     "description": "Le Roi des Embruns vous fait don de Tentacules enveloppants\r\nVos Aptitudes tirent des Projectiles supplémentaires et vous avez une Augmentation d'Allonge et de Zone d'effet\r\nVous gagnez également Insaisissable en Tuant et avez une Augmentation de l'Effet d'Insaisissable",
     "invisible": false,
     "name": "Tentacules enveloppants",
@@ -79004,7 +79375,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarOctopusEmpowered": {
+      "DeepwaterAltarOctopusEmpoweredHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "number_of_additional_projectiles": 2,
@@ -79025,7 +79396,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_pufferfish_buffed": {
+  "deepwater_altar_pufferfish_buffed_hardmode": {
     "description": "Le Roi des Embruns vous fait don de Piquants mortels\r\nVous Renvoyez un pourcentage des Dégâts physiques de mêlée subis, tous les Dégâts que vous infligez peuvent Empoisonner, vous Empoisonnez toujours au Toucher et êtes insensible au Poison\r\nLes ennemis que vous Empoisonnez ne peuvent pas régénérer de Vie et vous avez une chance d'infliger un Poison supplémentaire sur la même cible lorsque vous infligez un Poison",
     "invisible": false,
     "name": "Piquants mortels",
@@ -79041,7 +79412,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarPufferFishEmpowered": {
+      "DeepwaterAltarPufferFishEmpoweredHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "all_damage_can_poison": 1,
@@ -79062,7 +79433,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_crab_buffed": {
+  "deepwater_altar_crab_buffed_hardmode": {
     "description": "Le Roi des Embruns vous fait don de Carapace impénétrable\r\nVous avez des chances supplémentaires de Bloquer les Dégâts d'Attaque et les Dégâts des Sorts\r\nVous avez également des Résistances élémentaires maximales et une Réduction des Dégâts physiques supplémentaires",
     "invisible": false,
     "name": "Carapace impénétrable",
@@ -79077,7 +79448,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarCrabEmpowered": {
+      "DeepwaterAltarCrabEmpoweredHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "base_spell_block_%": 20,
@@ -79096,7 +79467,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_coral_buffed": {
+  "deepwater_altar_coral_buffed_hardmode": {
     "description": "Le Roi des Embruns vous fait don de Corail militarisé\r\nVous ne pouvez pas être étourdi et bénéficiez d'une Augmentation de la durée des Étourdissement sur les Ennemis\r\nVous avez également une chance d'infliger des Dégâts doublés si vous avez étourdi un ennemi récemment, et une Réduction du Seuil d'Étourdissement de l'ennemi",
     "invisible": false,
     "name": "Corail militarisé",
@@ -79111,7 +79482,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarCoralEmpowered": {
+      "DeepwaterAltarCoralEmpoweredHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "base_cannot_be_stunned": 1,
@@ -79974,7 +80345,7 @@
     "stack_limit": 10
   },
   "deepwater_golden_lantern": {
-    "description": "Vous avez une Augmentation considérable de Rareté des Objets trouvés.",
+    "description": "Vous avez une Augmentation considérable de Rareté et de Quantité d'Objets trouvés.",
     "invisible": false,
     "name": "Lueur de la Lanterne dorée",
     "removable": false,
@@ -80013,6 +80384,30 @@
     "stack_limit": null
   },
   "chill_cold_damage_taken_modifier": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "abyssal_wasting": {
+    "description": "Vos Dégâts au Toucher sont Défavorables",
+    "invisible": false,
+    "name": "Dégénérescence abyssale",
+    "removable": false,
+    "stats": [],
+    "visuals": "abyssal_wasting",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "bonefeeders_active_corpse_aura_buff": {
     "description": "",
     "invisible": true,
     "name": "",

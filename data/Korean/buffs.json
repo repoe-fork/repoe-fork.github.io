@@ -35152,6 +35152,21 @@
     "templates": null,
     "stack_limit": null
   },
+  "intimidated_enemy_temp_child_buff": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "damage_+%_final_from_intimitate",
+      "attack_damage_taken_+%"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "unnerved_enemy_self_spell_crit_chance": {
     "description": "",
     "invisible": true,
@@ -73371,13 +73386,13 @@
       "AbyssEnragingCrystalsDestroyedEnhancedMonsterBuff": {
         "aura_radius_metres": null,
         "stats": {
-          "monster_difficulty_tankiness_+%": 50,
-          "damage_+%": 12,
-          "from_league_item_rarity_+%_permyriad": 750,
-          "from_league_item_quantity_+%_permyriad": 750
+          "monster_difficulty_tankiness_+%": 75,
+          "damage_+%": 15,
+          "from_league_item_rarity_+%_permyriad": 1500,
+          "from_league_item_quantity_+%_permyriad": 1000
         },
         "stat_text": [
-          "피해 12% 증가"
+          "피해 15% 증가"
         ],
         "visuals": null
       },
@@ -78465,12 +78480,11 @@
     "stack_limit": null
   },
   "ghost_furnace_soul_buff": {
-    "description": "[DNT] Ghostflame Furnace has increased Area of Effect and you have increased Fire Damage over Time Multiplier per Ghostflame Soul",
+    "description": "[DNT] You have increased Fire Damage over Time Multiplier per Ghostflame Soul",
     "invisible": false,
     "name": "[DNT] Ghostflame Soul",
     "removable": false,
     "stats": [
-      "ghost_furnace_area_of_effect_+%",
       "fire_dot_multiplier_+",
       "ghostflame_lantern_souls"
     ],
@@ -78481,14 +78495,14 @@
     "stack_limit": null
   },
   "ghost_furnace_aura": {
-    "description": "[DNT] You are taking burning damage from being near an enemy using Ghost Furnace",
+    "description": "지속 화염 피해를 받고 있습니다.",
     "invisible": false,
-    "name": "[DNT] Ghost Furnace Aura",
+    "name": "드라우구르 불길 화상",
     "removable": false,
     "stats": [
       "base_fire_damage_taken_per_minute"
     ],
-    "visuals": "ghost_furnace_buff_visual",
+    "visuals": "ghost_furnace_aura_visual",
     "category": "Debuff",
     "sources": null,
     "templates": null,
@@ -78793,19 +78807,376 @@
     },
     "stack_limit": null
   },
-  "ghost_furnace_display": {
-    "description": "",
+  "ghost_furnace_buff": {
+    "description": "3미터 내의 적들에게\r\n지속 화염 피해를 줍니다.",
     "invisible": false,
-    "name": "[DNT] Ghost Furnace",
+    "name": "드라우구르 불길",
     "removable": false,
-    "stats": [],
-    "visuals": "ghost_furnace_display",
+    "stats": [
+      "ghost_furnace_fire_damage_to_deal_per_minute"
+    ],
+    "visuals": "ghost_furnace_buff",
     "category": null,
     "sources": null,
     "templates": null,
     "stack_limit": null
   },
   "deepwater_altar_fish": {
+    "description": "염수왕에게 소아사의 공물을 바쳤습니다.\r\n피해 및 냉기 저항이 증가합니다.\r\n진화의 오브가 일정 확률로 카오스 오브로 떨어집니다.",
+    "invisible": false,
+    "name": "소아사의 공물",
+    "removable": true,
+    "stats": [
+      "base_cold_damage_resistance_%",
+      "damage_+%",
+      "deepwater_transmute_to_chaos_%"
+    ],
+    "visuals": "deepwater_altar_fish",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarFish": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_cold_damage_resistance_%": 15,
+          "damage_+%": 30,
+          "deepwater_transmute_to_chaos_%": 4
+        },
+        "stat_text": [
+          "냉기 저항 +15%",
+          "피해 30% 증가",
+          "일정 확률로 진화의 오브가 카오스 오브로 떨어짐"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_octopus": {
+    "description": "염수왕에게 늘어나는 촉수를 바쳤습니다.\r\n스킬이 추가 투사체를 발사하고, 스킬의 근접 타격 범위와 효과 범위가 증가합니다.\r\n기회의 오브가 일정 확률로 고대의 오브로 떨어집니다.",
+    "invisible": false,
+    "name": "늘어나는 촉수",
+    "removable": true,
+    "stats": [
+      "number_of_additional_projectiles",
+      "melee_range_+",
+      "base_skill_area_of_effect_+%",
+      "deepwater_chance_to_ancient_%"
+    ],
+    "visuals": "deepwater_altar_octopus",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarOctopus": {
+        "aura_radius_metres": null,
+        "stats": {
+          "number_of_additional_projectiles": 2,
+          "melee_range_+": 10,
+          "base_skill_area_of_effect_+%": 20,
+          "deepwater_chance_to_ancient_%": 4
+        },
+        "stat_text": [
+          "스킬이 투사체 2개 추가 발사",
+          "근접 타격 범위 +1미터",
+          "효과 범위 20% 증가",
+          "일정 확률로 기회의 오브가 고대의 오브로 떨어짐"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_pufferfish": {
+    "description": "염수왕에게 맹독성 가시를 바쳤습니다.\r\n받는 근접 물리 피해의 일부를 반사하고, 주는 모든 피해가 중독을 유발할 수 있고, 명중 시 항상 중독을 유발하고, 중독의 영향을 받지 않습니다.\r\n쥬얼러 오브가 일정 확률로 색채의 오브로 떨어집니다.",
+    "invisible": false,
+    "name": "맹독성 가시",
+    "removable": true,
+    "stats": [
+      "all_damage_can_poison",
+      "base_chance_to_poison_on_hit_%",
+      "melee_physical_damage_taken_%_to_deal_to_attacker",
+      "base_unaffected_by_poison",
+      "deepwater_jeweller_to_chromatic_%"
+    ],
+    "visuals": "deepwater_altar_pufferfish",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarPufferFish": {
+        "aura_radius_metres": null,
+        "stats": {
+          "all_damage_can_poison": 1,
+          "base_chance_to_poison_on_hit_%": 100,
+          "melee_physical_damage_taken_%_to_deal_to_attacker": 100,
+          "base_unaffected_by_poison": 1,
+          "deepwater_jeweller_to_chromatic_%": 4
+        },
+        "stat_text": [
+          "모든 명중 피해가 중독 유발 가능",
+          "명중 시 항상 중독 유발",
+          "받은 근접 물리 피해의 100%를 공격자에게 반사",
+          "중독의 영향을 받지 않음",
+          "일정 확률로 쥬얼러 오브가 색채의 오브로 떨어짐"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_crab": {
+    "description": "염수왕에게 딱딱한 껍데기를 바쳤습니다.\r\n공격 및 주문 피해 막기 확률이 추가됩니다.\r\n카오스 오브가 일정 확률로 신성한 오브로 떨어집니다.",
+    "invisible": false,
+    "name": "딱딱한 껍데기",
+    "removable": true,
+    "stats": [
+      "base_spell_block_%",
+      "monster_base_block_%",
+      "deepwater_chaos_to_divine_%"
+    ],
+    "visuals": "deepwater_altar_crab",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarCrab": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_spell_block_%": 20,
+          "monster_base_block_%": 20,
+          "deepwater_chaos_to_divine_%": 4
+        },
+        "stat_text": [
+          "20%의 확률로 주문 피해를 막아냄",
+          "20%의 확률로 공격 피해를 막아냄",
+          "일정 확률로 카오스 오브가 신성한 오브로 떨어짐"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_coral": {
+    "description": "염수왕에게 튼튼한 산호를 바쳤습니다.\r\n플레이어가 기절하지 않으며, 적에게 적용되는 기절의 지속시간이 증가합니다.\r\n정제의 오브가 일정 확률로 소멸의 오브로 떨어집니다.",
+    "invisible": false,
+    "name": "튼튼한 산호",
+    "removable": true,
+    "stats": [
+      "base_cannot_be_stunned",
+      "base_stun_duration_+%",
+      "deepwater_scour_to_annulment_%"
+    ],
+    "visuals": "deepwater_altar_coral",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarCoral": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_cannot_be_stunned": 1,
+          "base_stun_duration_+%": 50,
+          "deepwater_scour_to_annulment_%": 4
+        },
+        "stat_text": [
+          "기절할 수 없음",
+          "적에게 적용되는 기절 지속시간 50% 증가",
+          "일정 확률로 정제의 오브가 소멸의 오브로 떨어짐"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_fish_buffed": {
+    "description": "염수왕이 염수의 지느러미를 하사했습니다.\r\n피해, 이동 속도, 냉기 저항, 냉기 저항 최대치가 증가합니다.\r\n진화의 오브가 일정 확률로 카오스 오브로 떨어집니다.",
+    "invisible": false,
+    "name": "염수의 지느러미",
+    "removable": true,
+    "stats": [
+      "base_cold_damage_resistance_%",
+      "damage_+%",
+      "base_movement_velocity_+%",
+      "base_maximum_cold_damage_resistance_%",
+      "deepwater_transmute_to_chaos_%"
+    ],
+    "visuals": "deepwater_altar_fish_buffed",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarFishEmpowered": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_cold_damage_resistance_%": 15,
+          "damage_+%": 30,
+          "base_movement_velocity_+%": 15,
+          "base_maximum_cold_damage_resistance_%": 5,
+          "deepwater_transmute_to_chaos_%": 8
+        },
+        "stat_text": [
+          "냉기 저항 +15%",
+          "피해 30% 증가",
+          "이동 속도 15% 증가",
+          "냉기 저항 최대치 +5%",
+          "일정 확률로 진화의 오브가 카오스 오브로 떨어짐"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_octopus_buffed": {
+    "description": "염수왕이 감싸는 촉수를 하사했습니다.\r\n스킬이 추가 투사체를 발사하고, 스킬의 근접 타격 범위와 효과 범위가 증가합니다.\r\n또한 처치 시 도피를 획득하고, 도피 효과가 증가합니다.\r\n기회의 오브가 일정 확률로 고대의 오브로 떨어집니다.",
+    "invisible": false,
+    "name": "감싸는 촉수",
+    "removable": true,
+    "stats": [
+      "number_of_additional_projectiles",
+      "melee_range_+",
+      "base_skill_area_of_effect_+%",
+      "gain_elusive_on_kill_chance_%",
+      "elusive_effect_+%",
+      "deepwater_chance_to_ancient_%"
+    ],
+    "visuals": "deepwater_altar_octopus_buffed",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarOctopusEmpowered": {
+        "aura_radius_metres": null,
+        "stats": {
+          "number_of_additional_projectiles": 2,
+          "melee_range_+": 10,
+          "base_skill_area_of_effect_+%": 20,
+          "gain_elusive_on_kill_chance_%": 100,
+          "elusive_effect_+%": 30,
+          "deepwater_chance_to_ancient_%": 8
+        },
+        "stat_text": [
+          "스킬이 투사체 2개 추가 발사",
+          "근접 타격 범위 +1미터",
+          "효과 범위 20% 증가",
+          "처치 시 도피 획득",
+          "도피 효과 30% 증가",
+          "일정 확률로 기회의 오브가 고대의 오브로 떨어짐"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_pufferfish_buffed": {
+    "description": "염수왕이 치명적인 가시를 하사했습니다.\r\n받는 근접 물리 피해의 일부를 반사하고, 주는 모든 피해가 중독을 유발할 수 있고, 명중 시 항상 중독을 유발하고, 중독의 영향을 받지 않습니다.\r\n플레이어가 중독시키는 적이 생명력을 재생할 수 없으며, 중독 유발 시 일정 확률로 동일한 대상에게 추가 중독을 유발합니다.\r\n쥬얼러 오브가 일정 확률로 색채의 오브로 떨어집니다.",
+    "invisible": false,
+    "name": "치명적인 가시",
+    "removable": true,
+    "stats": [
+      "all_damage_can_poison",
+      "base_chance_to_poison_on_hit_%",
+      "melee_physical_damage_taken_%_to_deal_to_attacker",
+      "enemies_poisoned_by_you_cannot_regen_life",
+      "additional_poison_chance_%_when_inflicting_poison",
+      "deepwater_jeweller_to_chromatic_%"
+    ],
+    "visuals": "deepwater_altar_pufferfish_buffed",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarPufferFishEmpowered": {
+        "aura_radius_metres": null,
+        "stats": {
+          "all_damage_can_poison": 1,
+          "base_chance_to_poison_on_hit_%": 100,
+          "melee_physical_damage_taken_%_to_deal_to_attacker": 100,
+          "enemies_poisoned_by_you_cannot_regen_life": 1,
+          "additional_poison_chance_%_when_inflicting_poison": 30,
+          "deepwater_jeweller_to_chromatic_%": 8
+        },
+        "stat_text": [
+          "모든 명중 피해가 중독 유발 가능",
+          "명중 시 항상 중독 유발",
+          "받은 근접 물리 피해의 100%를 공격자에게 반사",
+          "플레이어가 중독시킨 적은 생명력 재생 불가",
+          "중독 유발 시 30% 확률로 동일한 대상에게 추가 중독 유발",
+          "일정 확률로 쥬얼러 오브가 색채의 오브로 떨어짐"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_crab_buffed": {
+    "description": "염수왕이 뚫리지 않는 껍데기를 하사했습니다.\r\n공격 및 주문 피해 막기 확률이 추가됩니다.\r\n또한 원소 저항 최대치와 물리 피해 감소가 추가됩니다.\r\n카오스 오브가 일정 확률로 신성한 오브로 떨어집니다.",
+    "invisible": false,
+    "name": "뚫리지 않는 껍질",
+    "removable": true,
+    "stats": [
+      "base_spell_block_%",
+      "monster_base_block_%",
+      "additional_maximum_all_elemental_resistances_%",
+      "base_additional_physical_damage_reduction_%",
+      "deepwater_chaos_to_divine_%"
+    ],
+    "visuals": "deepwater_altar_crab_buffed",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarCrabEmpowered": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_spell_block_%": 20,
+          "monster_base_block_%": 20,
+          "additional_maximum_all_elemental_resistances_%": 3,
+          "base_additional_physical_damage_reduction_%": 10,
+          "deepwater_chaos_to_divine_%": 8
+        },
+        "stat_text": [
+          "20%의 확률로 주문 피해를 막아냄",
+          "20%의 확률로 공격 피해를 막아냄",
+          "모든 원소 저항 최대치 +3%",
+          "받는 물리 피해 10% 추가 감소",
+          "일정 확률로 카오스 오브가 신성한 오브로 떨어짐"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_coral_buffed": {
+    "description": "염수왕이 무장 산호를 하사했습니다.\r\n플레이어가 기절하지 않으며, 적에게 적용되는 기절의 지속시간이 증가합니다.\r\n또한 최근 4초 이내에 적을 기절시킨 경우 일정 확률로 2배의 피해를 주고, 적 기절 한계치가 감소합니다.\r\n정제의 오브가 일정 확률로 소멸의 오브로 떨어집니다.",
+    "invisible": false,
+    "name": "무장 산호",
+    "removable": true,
+    "stats": [
+      "base_cannot_be_stunned",
+      "base_stun_duration_+%",
+      "chance_to_deal_double_damage_%_if_have_stunned_an_enemy_recently",
+      "base_stun_threshold_reduction_+%",
+      "deepwater_scour_to_annulment_%"
+    ],
+    "visuals": "deepwater_altar_coral_buffed",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarCoralEmpowered": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_cannot_be_stunned": 1,
+          "base_stun_duration_+%": 50,
+          "chance_to_deal_double_damage_%_if_have_stunned_an_enemy_recently": 30,
+          "base_stun_threshold_reduction_+%": 30,
+          "deepwater_scour_to_annulment_%": 8
+        },
+        "stat_text": [
+          "기절할 수 없음",
+          "적에게 적용되는 기절 지속시간 50% 증가",
+          "최근 4초 이내 적을 기절시킨 경우 30%의 확률로 2배의 피해를 줌",
+          "적 기절 한계치 30% 감소",
+          "일정 확률로 정제의 오브가 소멸의 오브로 떨어짐"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_fish_hardmode": {
     "description": "염수왕에게 소아사의 공물을 바쳤습니다.\r\n피해 및 냉기 저항이 증가합니다.",
     "invisible": false,
     "name": "소아사의 공물",
@@ -78818,7 +79189,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarFish": {
+      "DeepwaterAltarFishHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "base_cold_damage_resistance_%": 15,
@@ -78833,7 +79204,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_octopus": {
+  "deepwater_altar_octopus_hardmode": {
     "description": "염수왕에게 늘어나는 촉수를 바쳤습니다.\r\n스킬이 추가 투사체를 발사하고, 스킬의 근접 타격 범위와 효과 범위가 증가합니다.",
     "invisible": false,
     "name": "늘어나는 촉수",
@@ -78847,7 +79218,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarOctopus": {
+      "DeepwaterAltarOctopusHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "number_of_additional_projectiles": 2,
@@ -78864,7 +79235,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_pufferfish": {
+  "deepwater_altar_pufferfish_hardmode": {
     "description": "염수왕에게 맹독성 가시를 바쳤습니다.\r\n받는 근접 물리 피해의 일부를 반사하고, 주는 모든 피해가 중독을 유발할 수 있고, 명중 시 항상 중독을 유발하고, 중독의 영향을 받지 않습니다.",
     "invisible": false,
     "name": "맹독성 가시",
@@ -78879,7 +79250,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarPufferFish": {
+      "DeepwaterAltarPufferFishHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "all_damage_can_poison": 1,
@@ -78898,7 +79269,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_crab": {
+  "deepwater_altar_crab_hardmode": {
     "description": "염수왕에게 딱딱한 껍데기를 바쳤습니다.\r\n공격 및 주문 피해 막기 확률이 추가됩니다.",
     "invisible": false,
     "name": "딱딱한 껍데기",
@@ -78911,7 +79282,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarCrab": {
+      "DeepwaterAltarCrabHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "base_spell_block_%": 20,
@@ -78926,8 +79297,8 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_coral": {
-    "description": "염수왕에게 튼튼한 산호를 바쳤습니다.\r\n플레이어가 기절하지 않으며, 적에게 유발하는 기절의 지속시간이 증가합니다.",
+  "deepwater_altar_coral_hardmode": {
+    "description": "염수왕에게 튼튼한 산호를 바쳤습니다.\r\n플레이어가 기절하지 않으며, 적에게 적용되는 기절의 지속시간이 증가합니다.",
     "invisible": false,
     "name": "튼튼한 산호",
     "removable": true,
@@ -78939,7 +79310,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarCoral": {
+      "DeepwaterAltarCoralHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "base_cannot_be_stunned": 1,
@@ -78954,7 +79325,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_fish_buffed": {
+  "deepwater_altar_fish_buffed_hardmode": {
     "description": "염수왕이 염수의 지느러미를 하사했습니다.\r\n피해, 이동 속도, 냉기 저항, 냉기 저항 최대치가 증가합니다.",
     "invisible": false,
     "name": "염수의 지느러미",
@@ -78969,7 +79340,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarFishEmpowered": {
+      "DeepwaterAltarFishEmpoweredHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "base_cold_damage_resistance_%": 15,
@@ -78988,7 +79359,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_octopus_buffed": {
+  "deepwater_altar_octopus_buffed_hardmode": {
     "description": "염수왕이 감싸는 촉수를 하사했습니다.\r\n스킬이 추가 투사체를 발사하고, 스킬의 근접 타격 범위와 효과 범위가 증가합니다.\r\n또한 처치 시 도피를 획득하고, 도피 효과가 증가합니다.",
     "invisible": false,
     "name": "감싸는 촉수",
@@ -79004,7 +79375,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarOctopusEmpowered": {
+      "DeepwaterAltarOctopusEmpoweredHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "number_of_additional_projectiles": 2,
@@ -79025,7 +79396,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_pufferfish_buffed": {
+  "deepwater_altar_pufferfish_buffed_hardmode": {
     "description": "염수왕이 치명적인 가시를 하사했습니다.\r\n받는 근접 물리 피해의 일부를 반사하고, 주는 모든 피해가 중독을 유발할 수 있고, 명중 시 항상 중독을 유발하고, 중독의 영향을 받지 않습니다.\r\n플레이어가 중독시키는 적이 생명력을 재생할 수 없으며, 중독 유발 시 일정 확률로 동일한 대상에게 추가 중독을 유발합니다.",
     "invisible": false,
     "name": "치명적인 가시",
@@ -79041,7 +79412,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarPufferFishEmpowered": {
+      "DeepwaterAltarPufferFishEmpoweredHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "all_damage_can_poison": 1,
@@ -79062,7 +79433,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_crab_buffed": {
+  "deepwater_altar_crab_buffed_hardmode": {
     "description": "염수왕이 뚫리지 않는 껍데기를 하사했습니다.\r\n공격 및 주문 피해 막기 확률이 추가됩니다.\r\n또한 원소 저항 최대치와 물리 피해 감소가 추가됩니다.",
     "invisible": false,
     "name": "뚫리지 않는 껍질",
@@ -79077,7 +79448,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarCrabEmpowered": {
+      "DeepwaterAltarCrabEmpoweredHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "base_spell_block_%": 20,
@@ -79096,8 +79467,8 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_coral_buffed": {
-    "description": "염수왕이 무장 산호를 하사했습니다.\r\n플레이어가 기절하지 않으며, 적에게 유발하는 기절의 지속시간이 증가합니다.\r\n또한 최근 4초 이내에 적을 기절시킨 경우 일정 확률로 2배의 피해를 주고, 적 기절 한계치가 감소합니다.",
+  "deepwater_altar_coral_buffed_hardmode": {
+    "description": "염수왕이 무장 산호를 하사했습니다.\r\n플레이어가 기절하지 않으며, 적에게 적용되는 기절의 지속시간이 증가합니다.\r\n또한 최근 4초 이내에 적을 기절시킨 경우 일정 확률로 2배의 피해를 주고, 적 기절 한계치가 감소합니다.",
     "invisible": false,
     "name": "무장 산호",
     "removable": true,
@@ -79111,7 +79482,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarCoralEmpowered": {
+      "DeepwaterAltarCoralEmpoweredHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "base_cannot_be_stunned": 1,
@@ -80013,6 +80384,30 @@
     "stack_limit": null
   },
   "chill_cold_damage_taken_modifier": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "abyssal_wasting": {
+    "description": "명중 시 피해에 불운 적용",
+    "invisible": false,
+    "name": "심연의 소진",
+    "removable": false,
+    "stats": [],
+    "visuals": "abyssal_wasting",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "bonefeeders_active_corpse_aura_buff": {
     "description": "",
     "invisible": true,
     "name": "",

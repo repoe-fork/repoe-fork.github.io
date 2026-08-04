@@ -35152,6 +35152,21 @@
     "templates": null,
     "stack_limit": null
   },
+  "intimidated_enemy_temp_child_buff": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "damage_+%_final_from_intimitate",
+      "attack_damage_taken_+%"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "unnerved_enemy_self_spell_crit_chance": {
     "description": "",
     "invisible": true,
@@ -73371,13 +73386,13 @@
       "AbyssEnragingCrystalsDestroyedEnhancedMonsterBuff": {
         "aura_radius_metres": null,
         "stats": {
-          "monster_difficulty_tankiness_+%": 50,
-          "damage_+%": 12,
-          "from_league_item_rarity_+%_permyriad": 750,
-          "from_league_item_quantity_+%_permyriad": 750
+          "monster_difficulty_tankiness_+%": 75,
+          "damage_+%": 15,
+          "from_league_item_rarity_+%_permyriad": 1500,
+          "from_league_item_quantity_+%_permyriad": 1000
         },
         "stat_text": [
-          "ダメージが12%増加する"
+          "ダメージが15%増加する"
         ],
         "visuals": null
       },
@@ -78465,12 +78480,11 @@
     "stack_limit": null
   },
   "ghost_furnace_soul_buff": {
-    "description": "[DNT] Ghostflame Furnace has increased Area of Effect and you have increased Fire Damage over Time Multiplier per Ghostflame Soul",
+    "description": "[DNT] You have increased Fire Damage over Time Multiplier per Ghostflame Soul",
     "invisible": false,
     "name": "[DNT] Ghostflame Soul",
     "removable": false,
     "stats": [
-      "ghost_furnace_area_of_effect_+%",
       "fire_dot_multiplier_+",
       "ghostflame_lantern_souls"
     ],
@@ -78481,14 +78495,14 @@
     "stack_limit": null
   },
   "ghost_furnace_aura": {
-    "description": "[DNT] You are taking burning damage from being near an enemy using Ghost Furnace",
+    "description": "火継続ダメージを受けている",
     "invisible": false,
-    "name": "[DNT] Ghost Furnace Aura",
+    "name": "ドラウグルの炎の燃焼",
     "removable": false,
     "stats": [
       "base_fire_damage_taken_per_minute"
     ],
-    "visuals": "ghost_furnace_buff_visual",
+    "visuals": "ghost_furnace_aura_visual",
     "category": "Debuff",
     "sources": null,
     "templates": null,
@@ -78793,19 +78807,376 @@
     },
     "stack_limit": null
   },
-  "ghost_furnace_display": {
-    "description": "",
+  "ghost_furnace_buff": {
+    "description": "3m以内の敵に火継続ダメージを与えている",
     "invisible": false,
-    "name": "[DNT] Ghost Furnace",
+    "name": "ドラウグルの炎",
     "removable": false,
-    "stats": [],
-    "visuals": "ghost_furnace_display",
+    "stats": [
+      "ghost_furnace_fire_damage_to_deal_per_minute"
+    ],
+    "visuals": "ghost_furnace_buff",
     "category": null,
     "sources": null,
     "templates": null,
     "stack_limit": null
   },
   "deepwater_altar_fish": {
+    "description": "ブラインキングにツォアサの餌を捧げた\r\nダメージと冷気耐性が増加する\r\n確率で変性のオーブは代わりにカオスオーブとしてドロップする",
+    "invisible": false,
+    "name": "ツォアサの餌を捧げる",
+    "removable": true,
+    "stats": [
+      "base_cold_damage_resistance_%",
+      "damage_+%",
+      "deepwater_transmute_to_chaos_%"
+    ],
+    "visuals": "deepwater_altar_fish",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarFish": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_cold_damage_resistance_%": 15,
+          "damage_+%": 30,
+          "deepwater_transmute_to_chaos_%": 4
+        },
+        "stat_text": [
+          "冷気耐性 +15%",
+          "ダメージが30%増加する",
+          "確率で変性のオーブは代わりにカオスオーブとしてドロップする"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_octopus": {
+    "description": "ブラインキング伸びた触手を捧げた\r\n放つ投射物の数が追加され、近接ストライク距離が増加し、効果範囲が増加する\r\n確率で可能性のオーブは代わりに古代のオーブとしてドロップする",
+    "invisible": false,
+    "name": "伸びた触手を捧げる",
+    "removable": true,
+    "stats": [
+      "number_of_additional_projectiles",
+      "melee_range_+",
+      "base_skill_area_of_effect_+%",
+      "deepwater_chance_to_ancient_%"
+    ],
+    "visuals": "deepwater_altar_octopus",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarOctopus": {
+        "aura_radius_metres": null,
+        "stats": {
+          "number_of_additional_projectiles": 2,
+          "melee_range_+": 10,
+          "base_skill_area_of_effect_+%": 20,
+          "deepwater_chance_to_ancient_%": 4
+        },
+        "stat_text": [
+          "スキルは投射物を追加で2個放つ",
+          "近接ストライク距離 +1m",
+          "効果範囲が20%増加する",
+          "確率で可能性のオーブは代わりに古代のオーブとしてドロップする"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_pufferfish": {
+    "description": "ブラインキングに有毒な棘を捧げた\r\n受けた近接物理ダメージの一定割合を反射し、与えた全てのダメージで毒を付与できるようになり、ヒット時に常に毒を付与するようになり、毒の影響を受けなくなる\r\n確率で宝飾職人のオーブは代わりに色彩のオーブとしてドロップする",
+    "invisible": false,
+    "name": "有毒な棘を捧げる",
+    "removable": true,
+    "stats": [
+      "all_damage_can_poison",
+      "base_chance_to_poison_on_hit_%",
+      "melee_physical_damage_taken_%_to_deal_to_attacker",
+      "base_unaffected_by_poison",
+      "deepwater_jeweller_to_chromatic_%"
+    ],
+    "visuals": "deepwater_altar_pufferfish",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarPufferFish": {
+        "aura_radius_metres": null,
+        "stats": {
+          "all_damage_can_poison": 1,
+          "base_chance_to_poison_on_hit_%": 100,
+          "melee_physical_damage_taken_%_to_deal_to_attacker": 100,
+          "base_unaffected_by_poison": 1,
+          "deepwater_jeweller_to_chromatic_%": 4
+        },
+        "stat_text": [
+          "全てのダメージで毒を付与できる",
+          "ヒット時に常に敵に毒を付与する",
+          "受けた近接物理ダメージの100%がアタックをしてきた敵に反射される",
+          "毒の影響を受けない",
+          "確率で宝飾職人のオーブは代わりに色彩のオーブとしてドロップする"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_crab": {
+    "description": "ブラインキングに硬い殻を捧げる\r\nアタックおよびスペルブロック率が追加される\r\n確率でカオスオーブは代わりに神のオーブとしてドロップする",
+    "invisible": false,
+    "name": "硬い甲殻を捧げる",
+    "removable": true,
+    "stats": [
+      "base_spell_block_%",
+      "monster_base_block_%",
+      "deepwater_chaos_to_divine_%"
+    ],
+    "visuals": "deepwater_altar_crab",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarCrab": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_spell_block_%": 20,
+          "monster_base_block_%": 20,
+          "deepwater_chaos_to_divine_%": 4
+        },
+        "stat_text": [
+          "スペルブロック率が20%",
+          "アタックブロック率が20%",
+          "確率でカオスオーブは代わりに神のオーブとしてドロップする"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_coral": {
+    "description": "ブラインキングに海水のヒレを捧げた\r\nスタンを受けなくなり、敵に付与したスタンの持続時間が増加する\r\n確率で洗浄のオーブは代わりに消去のオーブとしてドロップする",
+    "invisible": false,
+    "name": "丈夫な珊瑚を捧げる",
+    "removable": true,
+    "stats": [
+      "base_cannot_be_stunned",
+      "base_stun_duration_+%",
+      "deepwater_scour_to_annulment_%"
+    ],
+    "visuals": "deepwater_altar_coral",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarCoral": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_cannot_be_stunned": 1,
+          "base_stun_duration_+%": 50,
+          "deepwater_scour_to_annulment_%": 4
+        },
+        "stat_text": [
+          "スタンを受けることがない",
+          "敵に対するスタンの持続時間が50%増加する",
+          "確率で洗浄のオーブは代わりに消去のオーブとしてドロップする"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_fish_buffed": {
+    "description": "ブラインキングはあなたに海水のヒレを与えた\r\nダメージ、移動スピード、冷気耐性、冷気耐性の最大値が増加する\r\n確率で変性のオーブは代わりにカオスオーブとしてドロップする",
+    "invisible": false,
+    "name": "海水のヒレ",
+    "removable": true,
+    "stats": [
+      "base_cold_damage_resistance_%",
+      "damage_+%",
+      "base_movement_velocity_+%",
+      "base_maximum_cold_damage_resistance_%",
+      "deepwater_transmute_to_chaos_%"
+    ],
+    "visuals": "deepwater_altar_fish_buffed",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarFishEmpowered": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_cold_damage_resistance_%": 15,
+          "damage_+%": 30,
+          "base_movement_velocity_+%": 15,
+          "base_maximum_cold_damage_resistance_%": 5,
+          "deepwater_transmute_to_chaos_%": 8
+        },
+        "stat_text": [
+          "冷気耐性 +15%",
+          "ダメージが30%増加する",
+          "移動スピードが15%増加する",
+          "冷気耐性の最大値 +5%",
+          "確率で変性のオーブは代わりにカオスオーブとしてドロップする"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_octopus_buffed": {
+    "description": "ブラインキングは包囲する触手を与えた\r\n放つ投射物の数が追加され、近接ストライク距離が増加し、効果範囲が増加する\r\nキル時に身躱しを獲得し、身躱しの効果が増加する\r\n確率で可能性のオーブは代わりに古代のオーブとしてドロップする",
+    "invisible": false,
+    "name": "包囲する触手",
+    "removable": true,
+    "stats": [
+      "number_of_additional_projectiles",
+      "melee_range_+",
+      "base_skill_area_of_effect_+%",
+      "gain_elusive_on_kill_chance_%",
+      "elusive_effect_+%",
+      "deepwater_chance_to_ancient_%"
+    ],
+    "visuals": "deepwater_altar_octopus_buffed",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarOctopusEmpowered": {
+        "aura_radius_metres": null,
+        "stats": {
+          "number_of_additional_projectiles": 2,
+          "melee_range_+": 10,
+          "base_skill_area_of_effect_+%": 20,
+          "gain_elusive_on_kill_chance_%": 100,
+          "elusive_effect_+%": 30,
+          "deepwater_chance_to_ancient_%": 8
+        },
+        "stat_text": [
+          "スキルは投射物を追加で2個放つ",
+          "近接ストライク距離 +1m",
+          "効果範囲が20%増加する",
+          "敵を倒した時に身躱しを獲得する",
+          "身躱しの効果が30%増加する",
+          "確率で可能性のオーブは代わりに古代のオーブとしてドロップする"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_pufferfish_buffed": {
+    "description": "ブラインキングはあなたに致命の棘を与えた\r\n受けた近接物理ダメージの一定割合を反射し、与えた全てのダメージで毒を付与できるようになり、ヒット時に常に毒を付与するようになり、毒の影響を受けなくなる\r\nプレイヤーが毒を付与した敵はライフを自動回復できなくなり、プレイヤーが毒を付与した時に一定確率で同じ対象に追加の毒を付与する\r\n確率で宝飾職人のオーブは代わりに色彩のオーブとしてドロップする",
+    "invisible": false,
+    "name": "致命の棘",
+    "removable": true,
+    "stats": [
+      "all_damage_can_poison",
+      "base_chance_to_poison_on_hit_%",
+      "melee_physical_damage_taken_%_to_deal_to_attacker",
+      "enemies_poisoned_by_you_cannot_regen_life",
+      "additional_poison_chance_%_when_inflicting_poison",
+      "deepwater_jeweller_to_chromatic_%"
+    ],
+    "visuals": "deepwater_altar_pufferfish_buffed",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarPufferFishEmpowered": {
+        "aura_radius_metres": null,
+        "stats": {
+          "all_damage_can_poison": 1,
+          "base_chance_to_poison_on_hit_%": 100,
+          "melee_physical_damage_taken_%_to_deal_to_attacker": 100,
+          "enemies_poisoned_by_you_cannot_regen_life": 1,
+          "additional_poison_chance_%_when_inflicting_poison": 30,
+          "deepwater_jeweller_to_chromatic_%": 8
+        },
+        "stat_text": [
+          "全てのダメージで毒を付与できる",
+          "ヒット時に常に敵に毒を付与する",
+          "受けた近接物理ダメージの100%がアタックをしてきた敵に反射される",
+          "プレイヤーにより毒を付与された敵はライフを自動回復することができない",
+          "プレイヤーが毒を付与した時に30%の確率で同じ対象に追加の毒を1スタック付与する",
+          "確率で宝飾職人のオーブは代わりに色彩のオーブとしてドロップする"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_crab_buffed": {
+    "description": "ブラインキングは難攻不落の殻を与えた\r\nアタックおよびスペルブロック率が追加される\r\n元素耐性の最大値が追加され、物理ダメージ軽減率が追加される\r\n確率でカオスオーブは代わりに神のオーブとしてドロップする",
+    "invisible": false,
+    "name": "難攻不落の殻",
+    "removable": true,
+    "stats": [
+      "base_spell_block_%",
+      "monster_base_block_%",
+      "additional_maximum_all_elemental_resistances_%",
+      "base_additional_physical_damage_reduction_%",
+      "deepwater_chaos_to_divine_%"
+    ],
+    "visuals": "deepwater_altar_crab_buffed",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarCrabEmpowered": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_spell_block_%": 20,
+          "monster_base_block_%": 20,
+          "additional_maximum_all_elemental_resistances_%": 3,
+          "base_additional_physical_damage_reduction_%": 10,
+          "deepwater_chaos_to_divine_%": 8
+        },
+        "stat_text": [
+          "スペルブロック率が20%",
+          "アタックブロック率が20%",
+          "全ての元素耐性の最大値 +3%",
+          "物理ダメージ軽減率が10%される",
+          "確率でカオスオーブは代わりに神のオーブとしてドロップする"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_coral_buffed": {
+    "description": "ブラインキングはあなたに武装したサンゴを与えた\r\nスタンを受けなくなり、敵に付与したスタンの持続時間が増加する\r\n直近敵をスタンさせていれば一定確率でダブルダメージを与える。敵のスタン閾値が減少する\r\n確率で洗浄のオーブは代わりに消去のオーブとしてドロップする",
+    "invisible": false,
+    "name": "武装したサンゴ",
+    "removable": true,
+    "stats": [
+      "base_cannot_be_stunned",
+      "base_stun_duration_+%",
+      "chance_to_deal_double_damage_%_if_have_stunned_an_enemy_recently",
+      "base_stun_threshold_reduction_+%",
+      "deepwater_scour_to_annulment_%"
+    ],
+    "visuals": "deepwater_altar_coral_buffed",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarCoralEmpowered": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_cannot_be_stunned": 1,
+          "base_stun_duration_+%": 50,
+          "chance_to_deal_double_damage_%_if_have_stunned_an_enemy_recently": 30,
+          "base_stun_threshold_reduction_+%": 30,
+          "deepwater_scour_to_annulment_%": 8
+        },
+        "stat_text": [
+          "スタンを受けることがない",
+          "敵に対するスタンの持続時間が50%増加する",
+          "直近プレイヤーが敵をスタンさせていれば30%の確率でダブルダメージを与える",
+          "敵スタン閾値が30%減少する",
+          "確率で洗浄のオーブは代わりに消去のオーブとしてドロップする"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_fish_hardmode": {
     "description": "ブラインキングにツォアサの餌を捧げた\r\nダメージと冷気耐性が増加する",
     "invisible": false,
     "name": "ツォアサの餌を捧げる",
@@ -78818,7 +79189,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarFish": {
+      "DeepwaterAltarFishHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "base_cold_damage_resistance_%": 15,
@@ -78833,7 +79204,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_octopus": {
+  "deepwater_altar_octopus_hardmode": {
     "description": "ブラインキング伸びた触手を捧げた\r\n放つ投射物の数が追加され、近接ストライク距離が増加し、効果範囲が増加する",
     "invisible": false,
     "name": "伸びた触手を捧げる",
@@ -78847,7 +79218,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarOctopus": {
+      "DeepwaterAltarOctopusHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "number_of_additional_projectiles": 2,
@@ -78864,7 +79235,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_pufferfish": {
+  "deepwater_altar_pufferfish_hardmode": {
     "description": "ブラインキングに有毒な棘を捧げた\r\n受けた近接物理ダメージの一定割合を反射し、与えた全てのダメージで毒を付与できるようになり、ヒット時に常に毒を付与するようになり、毒の影響を受けなくなる",
     "invisible": false,
     "name": "有毒な棘を捧げる",
@@ -78879,7 +79250,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarPufferFish": {
+      "DeepwaterAltarPufferFishHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "all_damage_can_poison": 1,
@@ -78898,7 +79269,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_crab": {
+  "deepwater_altar_crab_hardmode": {
     "description": "ブラインキングに硬い殻を捧げる\r\nアタックおよびスペルブロック率が追加される",
     "invisible": false,
     "name": "硬い甲殻を捧げる",
@@ -78911,7 +79282,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarCrab": {
+      "DeepwaterAltarCrabHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "base_spell_block_%": 20,
@@ -78926,7 +79297,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_coral": {
+  "deepwater_altar_coral_hardmode": {
     "description": "ブラインキングに海水のヒレを捧げた\r\nスタンを受けなくなり、敵に付与したスタンの持続時間が増加する",
     "invisible": false,
     "name": "丈夫な珊瑚を捧げる",
@@ -78939,7 +79310,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarCoral": {
+      "DeepwaterAltarCoralHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "base_cannot_be_stunned": 1,
@@ -78954,7 +79325,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_fish_buffed": {
+  "deepwater_altar_fish_buffed_hardmode": {
     "description": "ブラインキングはあなたに海水のヒレを与えた\r\nダメージ、移動スピード、冷気耐性、冷気耐性の最大値が増加する",
     "invisible": false,
     "name": "海水のヒレ",
@@ -78969,7 +79340,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarFishEmpowered": {
+      "DeepwaterAltarFishEmpoweredHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "base_cold_damage_resistance_%": 15,
@@ -78988,7 +79359,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_octopus_buffed": {
+  "deepwater_altar_octopus_buffed_hardmode": {
     "description": "ブラインキングは包囲する触手を与えた\r\n放つ投射物の数が追加され、近接ストライク距離が増加し、効果範囲が増加する\r\nキル時に身躱しを獲得し、身躱しの効果が増加する",
     "invisible": false,
     "name": "包囲する触手",
@@ -79004,7 +79375,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarOctopusEmpowered": {
+      "DeepwaterAltarOctopusEmpoweredHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "number_of_additional_projectiles": 2,
@@ -79025,7 +79396,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_pufferfish_buffed": {
+  "deepwater_altar_pufferfish_buffed_hardmode": {
     "description": "ブラインキングはあなたに致命の棘を与えた\r\n受けた近接物理ダメージの一定割合を反射し、与えた全てのダメージで毒を付与できるようになり、ヒット時に常に毒を付与するようになり、毒の影響を受けなくなる\r\nプレイヤーが毒を付与した敵はライフを自動回復できなくなり、プレイヤーが毒を付与した時に一定確率で同じ対象に追加の毒を付与する",
     "invisible": false,
     "name": "致命の棘",
@@ -79041,7 +79412,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarPufferFishEmpowered": {
+      "DeepwaterAltarPufferFishEmpoweredHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "all_damage_can_poison": 1,
@@ -79062,7 +79433,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_crab_buffed": {
+  "deepwater_altar_crab_buffed_hardmode": {
     "description": "ブラインキングは難攻不落の殻を与えた\r\nアタックおよびスペルブロック率が追加される\r\n元素耐性の最大値が追加され、物理ダメージ軽減率が追加される",
     "invisible": false,
     "name": "難攻不落の殻",
@@ -79077,7 +79448,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarCrabEmpowered": {
+      "DeepwaterAltarCrabEmpoweredHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "base_spell_block_%": 20,
@@ -79096,7 +79467,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_coral_buffed": {
+  "deepwater_altar_coral_buffed_hardmode": {
     "description": "ブラインキングはあなたに武装したサンゴを与えた\r\nスタンを受けなくなり、敵に付与したスタンの持続時間が増加する\r\n直近敵をスタンさせていれば一定確率でダブルダメージを与える。敵のスタン閾値が減少する",
     "invisible": false,
     "name": "武装したサンゴ",
@@ -79111,7 +79482,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarCoralEmpowered": {
+      "DeepwaterAltarCoralEmpoweredHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "base_cannot_be_stunned": 1,
@@ -79974,7 +80345,7 @@
     "stack_limit": 10
   },
   "deepwater_golden_lantern": {
-    "description": "見つかるアイテムのレアリティが増加している",
+    "description": "見つかるアイテムのレアリティと数量が大幅に増加している",
     "invisible": false,
     "name": "黄金のランタンの輝き",
     "removable": false,
@@ -80013,6 +80384,30 @@
     "stack_limit": null
   },
   "chill_cold_damage_taken_modifier": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "abyssal_wasting": {
+    "description": "ヒットダメージが不運になる",
+    "invisible": false,
+    "name": "アビサルの消耗",
+    "removable": false,
+    "stats": [],
+    "visuals": "abyssal_wasting",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "bonefeeders_active_corpse_aura_buff": {
     "description": "",
     "invisible": true,
     "name": "",

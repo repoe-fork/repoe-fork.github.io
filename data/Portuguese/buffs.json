@@ -35152,6 +35152,21 @@
     "templates": null,
     "stack_limit": null
   },
+  "intimidated_enemy_temp_child_buff": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "damage_+%_final_from_intimitate",
+      "attack_damage_taken_+%"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "unnerved_enemy_self_spell_crit_chance": {
     "description": "",
     "invisible": true,
@@ -73371,13 +73386,13 @@
       "AbyssEnragingCrystalsDestroyedEnhancedMonsterBuff": {
         "aura_radius_metres": null,
         "stats": {
-          "monster_difficulty_tankiness_+%": 50,
-          "damage_+%": 12,
-          "from_league_item_rarity_+%_permyriad": 750,
-          "from_league_item_quantity_+%_permyriad": 750
+          "monster_difficulty_tankiness_+%": 75,
+          "damage_+%": 15,
+          "from_league_item_rarity_+%_permyriad": 1500,
+          "from_league_item_quantity_+%_permyriad": 1000
         },
         "stat_text": [
-          "Dano aumentado em 12%"
+          "Dano aumentado em 15%"
         ],
         "visuals": null
       },
@@ -78465,12 +78480,11 @@
     "stack_limit": null
   },
   "ghost_furnace_soul_buff": {
-    "description": "[DNT] Ghostflame Furnace has increased Area of Effect and you have increased Fire Damage over Time Multiplier per Ghostflame Soul",
+    "description": "[DNT] You have increased Fire Damage over Time Multiplier per Ghostflame Soul",
     "invisible": false,
     "name": "[DNT] Ghostflame Soul",
     "removable": false,
     "stats": [
-      "ghost_furnace_area_of_effect_+%",
       "fire_dot_multiplier_+",
       "ghostflame_lantern_souls"
     ],
@@ -78481,14 +78495,14 @@
     "stack_limit": null
   },
   "ghost_furnace_aura": {
-    "description": "[DNT] You are taking burning damage from being near an enemy using Ghost Furnace",
+    "description": "Você sofre dano de fogo degenerativo.",
     "invisible": false,
-    "name": "[DNT] Ghost Furnace Aura",
+    "name": "Draugur em Chamas",
     "removable": false,
     "stats": [
       "base_fire_damage_taken_per_minute"
     ],
-    "visuals": "ghost_furnace_buff_visual",
+    "visuals": "ghost_furnace_aura_visual",
     "category": "Debuff",
     "sources": null,
     "templates": null,
@@ -78793,13 +78807,15 @@
     },
     "stack_limit": null
   },
-  "ghost_furnace_display": {
-    "description": "",
+  "ghost_furnace_buff": {
+    "description": "Você causa dano de fogo degenerativo\r\naos inimigos em até 3 metros",
     "invisible": false,
-    "name": "[DNT] Ghost Furnace",
+    "name": "Chama Draugur",
     "removable": false,
-    "stats": [],
-    "visuals": "ghost_furnace_display",
+    "stats": [
+      "ghost_furnace_fire_damage_to_deal_per_minute"
+    ],
+    "visuals": "ghost_furnace_buff",
     "category": null,
     "sources": null,
     "templates": null,
@@ -78812,7 +78828,8 @@
     "removable": true,
     "stats": [
       "base_cold_damage_resistance_%",
-      "damage_+%"
+      "damage_+%",
+      "deepwater_transmute_to_chaos_%"
     ],
     "visuals": "deepwater_altar_fish",
     "category": "Buff",
@@ -78822,11 +78839,13 @@
         "aura_radius_metres": null,
         "stats": {
           "base_cold_damage_resistance_%": 15,
-          "damage_+%": 30
+          "damage_+%": 30,
+          "deepwater_transmute_to_chaos_%": 4
         },
         "stat_text": [
           "+15% de Resistência a Gelo",
-          "Dano aumentado em 30%"
+          "Dano aumentado em 30%",
+          "Chance de os Orbes da Transmutação surgirem como Orbes do Caos"
         ],
         "visuals": null
       }
@@ -78841,13 +78860,365 @@
     "stats": [
       "number_of_additional_projectiles",
       "melee_range_+",
-      "base_skill_area_of_effect_+%"
+      "base_skill_area_of_effect_+%",
+      "deepwater_chance_to_ancient_%"
     ],
     "visuals": "deepwater_altar_octopus",
     "category": "Buff",
     "sources": null,
     "templates": {
       "DeepwaterAltarOctopus": {
+        "aura_radius_metres": null,
+        "stats": {
+          "number_of_additional_projectiles": 2,
+          "melee_range_+": 10,
+          "base_skill_area_of_effect_+%": 20,
+          "deepwater_chance_to_ancient_%": 4
+        },
+        "stat_text": [
+          "Habilidades disparam 2 Projéteis adicionais",
+          "+1 metros ao Alcance de Golpes Corpo a Corpo",
+          "Área de Efeito aumentada em 20%",
+          "Chance de os Orbes da Chance surgirem como Orbes Ancestrais"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_pufferfish": {
+    "description": "Você ofereceu Espinhos Tóxicos ao Rei da Salmoura\r\nVocê reflete uma porcentagem do dano físico corpo a corpo sofrido, todo dano que você causa pode envenenar, você sempre envenena ao atingir e não pode sofrer envenenamento",
+    "invisible": false,
+    "name": "Espinhos Tóxicos",
+    "removable": true,
+    "stats": [
+      "all_damage_can_poison",
+      "base_chance_to_poison_on_hit_%",
+      "melee_physical_damage_taken_%_to_deal_to_attacker",
+      "base_unaffected_by_poison",
+      "deepwater_jeweller_to_chromatic_%"
+    ],
+    "visuals": "deepwater_altar_pufferfish",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarPufferFish": {
+        "aura_radius_metres": null,
+        "stats": {
+          "all_damage_can_poison": 1,
+          "base_chance_to_poison_on_hit_%": 100,
+          "melee_physical_damage_taken_%_to_deal_to_attacker": 100,
+          "base_unaffected_by_poison": 1,
+          "deepwater_jeweller_to_chromatic_%": 4
+        },
+        "stat_text": [
+          "Todo o Dano dos Acertos pode Envenenar",
+          "Sempre Envenena ao Acertar",
+          "100% do Dano Físico Corpo a Corpo recebido é refletido aos Agressores",
+          "Imune a Veneno",
+          "Chance de os Orbes do Joalheiro surgirem como Orbes Cromáticos"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_crab": {
+    "description": "Você ofereceu Carapaça Rígida ao Rei da Salmoura\r\nVocê tem chance de bloquear ataques e dano mágico adicional",
+    "invisible": false,
+    "name": "Carapaça Rígida",
+    "removable": true,
+    "stats": [
+      "base_spell_block_%",
+      "monster_base_block_%",
+      "deepwater_chaos_to_divine_%"
+    ],
+    "visuals": "deepwater_altar_crab",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarCrab": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_spell_block_%": 20,
+          "monster_base_block_%": 20,
+          "deepwater_chaos_to_divine_%": 4
+        },
+        "stat_text": [
+          "20% de Chance de Bloquear o Dano Mágico",
+          "20% de Chance de Bloquear o Dano de Ataques",
+          "Chance de os Orbes do Caos surgirem como Orbes Divinos"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_coral": {
+    "description": "Você ofereceu Coral Resistente ao Rei da Salmoura\r\nVocê não pode sofrer atordoamento e tem a duração de atordoamentos em inimigos aumentada",
+    "invisible": false,
+    "name": "Coral Resistente",
+    "removable": true,
+    "stats": [
+      "base_cannot_be_stunned",
+      "base_stun_duration_+%",
+      "deepwater_scour_to_annulment_%"
+    ],
+    "visuals": "deepwater_altar_coral",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarCoral": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_cannot_be_stunned": 1,
+          "base_stun_duration_+%": 50,
+          "deepwater_scour_to_annulment_%": 4
+        },
+        "stat_text": [
+          "Não Pode ser Atordoado",
+          "Duração de Atordoamentos em Inimigos aumentada em 50%",
+          "Chance de os Orbes do Expurgo surgirem como Orbes da Anulação"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_fish_buffed": {
+    "description": "O Rei da Salmoura lhe concede Barbatanas de Salmoura\r\nVocê tem dano, velocidade de movimento, resistência a dano de frio e resistência a dano de frio máxima aumentados",
+    "invisible": false,
+    "name": "Barbatanas de Salmoura",
+    "removable": true,
+    "stats": [
+      "base_cold_damage_resistance_%",
+      "damage_+%",
+      "base_movement_velocity_+%",
+      "base_maximum_cold_damage_resistance_%",
+      "deepwater_transmute_to_chaos_%"
+    ],
+    "visuals": "deepwater_altar_fish_buffed",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarFishEmpowered": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_cold_damage_resistance_%": 15,
+          "damage_+%": 30,
+          "base_movement_velocity_+%": 15,
+          "base_maximum_cold_damage_resistance_%": 5,
+          "deepwater_transmute_to_chaos_%": 8
+        },
+        "stat_text": [
+          "+15% de Resistência a Gelo",
+          "Dano aumentado em 30%",
+          "Velocidade de Movimento aumentada em 15%",
+          "+5% de Resistência a Gelo máxima",
+          "Chance de os Orbes da Transmutação surgirem como Orbes do Caos"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_octopus_buffed": {
+    "description": "O Rei da Salmoura lhe concede Tentáculos Envolventes\r\nSuas habilidades disparam projéteis adicionais, têm alcance de golpe corpo aumentado e área de efeito aumentada\r\nVocê também ganha a condição Elusivo ao matar e tem o efeito de elusividade aumentado",
+    "invisible": false,
+    "name": "Tentáculos Envolventes",
+    "removable": true,
+    "stats": [
+      "number_of_additional_projectiles",
+      "melee_range_+",
+      "base_skill_area_of_effect_+%",
+      "gain_elusive_on_kill_chance_%",
+      "elusive_effect_+%",
+      "deepwater_chance_to_ancient_%"
+    ],
+    "visuals": "deepwater_altar_octopus_buffed",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarOctopusEmpowered": {
+        "aura_radius_metres": null,
+        "stats": {
+          "number_of_additional_projectiles": 2,
+          "melee_range_+": 10,
+          "base_skill_area_of_effect_+%": 20,
+          "gain_elusive_on_kill_chance_%": 100,
+          "elusive_effect_+%": 30,
+          "deepwater_chance_to_ancient_%": 8
+        },
+        "stat_text": [
+          "Habilidades disparam 2 Projéteis adicionais",
+          "+1 metros ao Alcance de Golpes Corpo a Corpo",
+          "Área de Efeito aumentada em 20%",
+          "Ganha Elusivo ao Matar",
+          "Efeito de Elusivo aumentado em 30%",
+          "Chance de os Orbes da Chance surgirem como Orbes Ancestrais"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_pufferfish_buffed": {
+    "description": "O Rei da Salmoura lhe concede Espinhos Letais\r\nVocê reflete uma porcentagem do dano físico corpo a corpo sofrido, todo dano que você causa pode envenenar, você sempre envenena ao atingir e não pode sofrer envenenamento\r\nInimigos envenenados por você não podem regenerar vida e você tem uma chance de infligir um envenenamento adicional no mesmo alvo ao infligir veneno",
+    "invisible": false,
+    "name": "Espinhos Letais",
+    "removable": true,
+    "stats": [
+      "all_damage_can_poison",
+      "base_chance_to_poison_on_hit_%",
+      "melee_physical_damage_taken_%_to_deal_to_attacker",
+      "enemies_poisoned_by_you_cannot_regen_life",
+      "additional_poison_chance_%_when_inflicting_poison",
+      "deepwater_jeweller_to_chromatic_%"
+    ],
+    "visuals": "deepwater_altar_pufferfish_buffed",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarPufferFishEmpowered": {
+        "aura_radius_metres": null,
+        "stats": {
+          "all_damage_can_poison": 1,
+          "base_chance_to_poison_on_hit_%": 100,
+          "melee_physical_damage_taken_%_to_deal_to_attacker": 100,
+          "enemies_poisoned_by_you_cannot_regen_life": 1,
+          "additional_poison_chance_%_when_inflicting_poison": 30,
+          "deepwater_jeweller_to_chromatic_%": 8
+        },
+        "stat_text": [
+          "Todo o Dano dos Acertos pode Envenenar",
+          "Sempre Envenena ao Acertar",
+          "100% do Dano Físico Corpo a Corpo recebido é refletido aos Agressores",
+          "Inimigos Envenenados por você não podem Regenerar Vida",
+          "30% de chance de infligir um envenenamento adicional no mesmo alvo ao envenenar",
+          "Chance de os Orbes do Joalheiro surgirem como Orbes Cromáticos"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_crab_buffed": {
+    "description": "O Rei da Salmoura lhe concede Carapaça Impenetrável\r\nVocê tem chance de bloquear ataques e dano mágico adicional\r\nVocê também tem resistências elementais máximas adicionais e redução de dano físico",
+    "invisible": false,
+    "name": "Carapaça Impenetrável",
+    "removable": true,
+    "stats": [
+      "base_spell_block_%",
+      "monster_base_block_%",
+      "additional_maximum_all_elemental_resistances_%",
+      "base_additional_physical_damage_reduction_%",
+      "deepwater_chaos_to_divine_%"
+    ],
+    "visuals": "deepwater_altar_crab_buffed",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarCrabEmpowered": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_spell_block_%": 20,
+          "monster_base_block_%": 20,
+          "additional_maximum_all_elemental_resistances_%": 3,
+          "base_additional_physical_damage_reduction_%": 10,
+          "deepwater_chaos_to_divine_%": 8
+        },
+        "stat_text": [
+          "20% de Chance de Bloquear o Dano Mágico",
+          "20% de Chance de Bloquear o Dano de Ataques",
+          "+3% de todas Resistências Elementais máximas",
+          "Redução de Dano Físico aumentada em 10%",
+          "Chance de os Orbes do Caos surgirem como Orbes Divinos"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_coral_buffed": {
+    "description": "O Rei da Salmoura lhe concede Coral Militarizado\r\nVocê não pode sofrer atordoamento e tem a duração de atordoamentos em inimigos aumentada\r\nVocê também tem uma chance de causar dano dobrado se atordoou um inimigo recentemente e tem resistência-limite a atordoamento do inimigo reduzida",
+    "invisible": false,
+    "name": "Coral Militarizado",
+    "removable": true,
+    "stats": [
+      "base_cannot_be_stunned",
+      "base_stun_duration_+%",
+      "chance_to_deal_double_damage_%_if_have_stunned_an_enemy_recently",
+      "base_stun_threshold_reduction_+%",
+      "deepwater_scour_to_annulment_%"
+    ],
+    "visuals": "deepwater_altar_coral_buffed",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarCoralEmpowered": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_cannot_be_stunned": 1,
+          "base_stun_duration_+%": 50,
+          "chance_to_deal_double_damage_%_if_have_stunned_an_enemy_recently": 30,
+          "base_stun_threshold_reduction_+%": 30,
+          "deepwater_scour_to_annulment_%": 8
+        },
+        "stat_text": [
+          "Não Pode ser Atordoado",
+          "Duração de Atordoamentos em Inimigos aumentada em 50%",
+          "30% de chance de causar Dano Dobrado se você Atordoou um Inimigo Recentemente",
+          "Ponto de Atordoamento Inimigo reduzido em 30%",
+          "Chance de os Orbes do Expurgo surgirem como Orbes da Anulação"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_fish_hardmode": {
+    "description": "Você ofereceu Refugo de Tsoatha ao Rei da Salmoura\r\nVocê tem dano aumentado e resistência a dano de frio",
+    "invisible": false,
+    "name": "Refugo de Tsoatha",
+    "removable": true,
+    "stats": [
+      "base_cold_damage_resistance_%",
+      "damage_+%"
+    ],
+    "visuals": "deepwater_altar_fish",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarFishHardmode": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_cold_damage_resistance_%": 15,
+          "damage_+%": 30
+        },
+        "stat_text": [
+          "+15% de Resistência a Gelo",
+          "Dano aumentado em 30%"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "deepwater_altar_octopus_hardmode": {
+    "description": "Você ofereceu Tentáculos Alongados ao Rei da Salmoura\r\nSuas habilidades disparam projéteis adicionais, têm alcance de golpe corpo aumentado e área de efeito aumentada",
+    "invisible": false,
+    "name": "Tentáculos Alongados",
+    "removable": true,
+    "stats": [
+      "number_of_additional_projectiles",
+      "melee_range_+",
+      "base_skill_area_of_effect_+%"
+    ],
+    "visuals": "deepwater_altar_octopus",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "DeepwaterAltarOctopusHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "number_of_additional_projectiles": 2,
@@ -78864,7 +79235,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_pufferfish": {
+  "deepwater_altar_pufferfish_hardmode": {
     "description": "Você ofereceu Espinhos Tóxicos ao Rei da Salmoura\r\nVocê reflete uma porcentagem do dano físico corpo a corpo sofrido, todo dano que você causa pode envenenar, você sempre envenena ao atingir e não pode sofrer envenenamento",
     "invisible": false,
     "name": "Espinhos Tóxicos",
@@ -78879,7 +79250,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarPufferFish": {
+      "DeepwaterAltarPufferFishHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "all_damage_can_poison": 1,
@@ -78898,7 +79269,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_crab": {
+  "deepwater_altar_crab_hardmode": {
     "description": "Você ofereceu Carapaça Rígida ao Rei da Salmoura\r\nVocê tem chance de bloquear ataques e dano mágico adicional",
     "invisible": false,
     "name": "Carapaça Rígida",
@@ -78911,7 +79282,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarCrab": {
+      "DeepwaterAltarCrabHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "base_spell_block_%": 20,
@@ -78926,7 +79297,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_coral": {
+  "deepwater_altar_coral_hardmode": {
     "description": "Você ofereceu Coral Resistente ao Rei da Salmoura\r\nVocê não pode sofrer atordoamento e tem a duração de atordoamentos em inimigos aumentada",
     "invisible": false,
     "name": "Coral Resistente",
@@ -78939,7 +79310,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarCoral": {
+      "DeepwaterAltarCoralHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "base_cannot_be_stunned": 1,
@@ -78954,7 +79325,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_fish_buffed": {
+  "deepwater_altar_fish_buffed_hardmode": {
     "description": "O Rei da Salmoura lhe concede Barbatanas de Salmoura\r\nVocê tem dano, velocidade de movimento, resistência a dano de frio e resistência a dano de frio máxima aumentados",
     "invisible": false,
     "name": "Barbatanas de Salmoura",
@@ -78969,7 +79340,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarFishEmpowered": {
+      "DeepwaterAltarFishEmpoweredHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "base_cold_damage_resistance_%": 15,
@@ -78988,7 +79359,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_octopus_buffed": {
+  "deepwater_altar_octopus_buffed_hardmode": {
     "description": "O Rei da Salmoura lhe concede Tentáculos Envolventes\r\nSuas habilidades disparam projéteis adicionais, têm alcance de golpe corpo aumentado e área de efeito aumentada\r\nVocê também ganha a condição Elusivo ao matar e tem o efeito de elusividade aumentado",
     "invisible": false,
     "name": "Tentáculos Envolventes",
@@ -79004,7 +79375,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarOctopusEmpowered": {
+      "DeepwaterAltarOctopusEmpoweredHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "number_of_additional_projectiles": 2,
@@ -79025,7 +79396,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_pufferfish_buffed": {
+  "deepwater_altar_pufferfish_buffed_hardmode": {
     "description": "O Rei da Salmoura lhe concede Espinhos Letais\r\nVocê reflete uma porcentagem do dano físico corpo a corpo sofrido, todo dano que você causa pode envenenar, você sempre envenena ao atingir e não pode sofrer envenenamento\r\nInimigos envenenados por você não podem regenerar vida e você tem uma chance de infligir um envenenamento adicional no mesmo alvo ao infligir veneno",
     "invisible": false,
     "name": "Espinhos Letais",
@@ -79041,7 +79412,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarPufferFishEmpowered": {
+      "DeepwaterAltarPufferFishEmpoweredHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "all_damage_can_poison": 1,
@@ -79062,7 +79433,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_crab_buffed": {
+  "deepwater_altar_crab_buffed_hardmode": {
     "description": "O Rei da Salmoura lhe concede Carapaça Impenetrável\r\nVocê tem chance de bloquear ataques e dano mágico adicional\r\nVocê também tem resistências elementais máximas adicionais e redução de dano físico",
     "invisible": false,
     "name": "Carapaça Impenetrável",
@@ -79077,7 +79448,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarCrabEmpowered": {
+      "DeepwaterAltarCrabEmpoweredHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "base_spell_block_%": 20,
@@ -79096,7 +79467,7 @@
     },
     "stack_limit": null
   },
-  "deepwater_altar_coral_buffed": {
+  "deepwater_altar_coral_buffed_hardmode": {
     "description": "O Rei da Salmoura lhe concede Coral Militarizado\r\nVocê não pode sofrer atordoamento e tem a duração de atordoamentos em inimigos aumentada\r\nVocê também tem uma chance de causar dano dobrado se atordoou um inimigo recentemente e tem resistência-limite a atordoamento do inimigo reduzida",
     "invisible": false,
     "name": "Coral Militarizado",
@@ -79111,7 +79482,7 @@
     "category": "Buff",
     "sources": null,
     "templates": {
-      "DeepwaterAltarCoralEmpowered": {
+      "DeepwaterAltarCoralEmpoweredHardmode": {
         "aura_radius_metres": null,
         "stats": {
           "base_cannot_be_stunned": 1,
@@ -80013,6 +80384,30 @@
     "stack_limit": null
   },
   "chill_cold_damage_taken_modifier": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "abyssal_wasting": {
+    "description": "Seu dano com ataques é Azarado",
+    "invisible": false,
+    "name": "Devastação Abissal",
+    "removable": false,
+    "stats": [],
+    "visuals": "abyssal_wasting",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "bonefeeders_active_corpse_aura_buff": {
     "description": "",
     "invisible": true,
     "name": "",
