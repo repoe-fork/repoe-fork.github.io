@@ -16,6 +16,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7.0.1
+        with:
+          sparse-checkout: '*.txt'
       - run: curl --fail 'https://ggpk.exposed/version?poe=1' | sed -r 's|.*/([0-9](\.[0-9]+)+)/$|\1|' > version.txt
       - run: git ls-remote https://github.com/poe-tool-dev/dat-schema.git refs/heads/main > schema.txt
       - name: copy version.txt to old location
