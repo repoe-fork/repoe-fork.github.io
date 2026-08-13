@@ -41392,6 +41392,11 @@
           "id": "is_area_damage",
           "type": "implicit",
           "value": 1
+        },
+        {
+          "id": "pact_of_ghorr_can_modify_damage_over_time_of_skill",
+          "type": "implicit",
+          "value": 1
         }
       ],
       "vaal": null,
@@ -102929,6 +102934,11 @@
           "id": "is_area_damage",
           "type": "implicit",
           "value": 1
+        },
+        {
+          "id": "pact_of_ghorr_can_modify_damage_over_time_of_skill",
+          "type": "implicit",
+          "value": 1
         }
       ],
       "vaal": null,
@@ -125007,9 +125017,111 @@
         "napalm_arrow_maximum_number_of_unprimed_arrows_allowed": "20 Flèches plantées au maximum",
         "skill_physical_damage_%_to_convert_to_fire": "100% des Dégâts physiques sont Convertis en Dégâts de feu",
         "base_secondary_skill_effect_duration": "La Durée de Base de l'Effet néfaste est de 4.00 secondes",
+        "base_number_of_projectiles": "Tire 3 Projectiles",
         "projectile_damage_modifiers_apply_to_skill_dot": "Les Modificateurs aux Dégâts des Projectiles s'appliquent aux Dégâts sur la durée de cette Aptitude"
       },
-      "stats": null,
+      "stats": [
+        {
+          "id": "base_fire_damage_to_deal_per_minute",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "base_skill_effect_duration",
+          "type": "constant",
+          "value": 6000
+        },
+        {
+          "id": "active_skill_area_of_effect_description_mode",
+          "type": "constant",
+          "value": 7
+        },
+        {
+          "id": "active_skill_base_area_of_effect_radius",
+          "type": "constant",
+          "value": 30
+        },
+        {
+          "id": "active_skill_secondary_area_of_effect_description_mode",
+          "type": "constant",
+          "value": 7
+        },
+        {
+          "id": "active_skill_base_secondary_area_of_effect_radius",
+          "type": "constant",
+          "value": 10
+        },
+        {
+          "id": "active_skill_tertiary_area_of_effect_description_mode",
+          "type": "constant",
+          "value": 1
+        },
+        {
+          "id": "napalm_arrow_detonation_hit_damage_+%_final",
+          "type": "constant",
+          "value": 50
+        },
+        {
+          "id": "napalm_arrow_maximum_number_of_unprimed_arrows_allowed",
+          "type": "constant",
+          "value": 20
+        },
+        {
+          "id": "skill_physical_damage_%_to_convert_to_fire",
+          "type": "constant",
+          "value": 100
+        },
+        {
+          "id": "base_secondary_skill_effect_duration",
+          "type": "constant",
+          "value": 4000
+        },
+        {
+          "id": "blast_rain_arrow_delay_ms",
+          "type": "constant",
+          "value": 90
+        },
+        {
+          "id": "base_number_of_projectiles",
+          "type": "constant",
+          "value": 3
+        },
+        {
+          "id": "active_skill_base_tertiary_area_of_effect_radius",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "base_is_projectile",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "is_area_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "skill_can_fire_arrows",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "base_skill_show_average_damage_instead_of_dps",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "quality_display_base_number_of_projectiles_is_gem",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "projectile_damage_modifiers_apply_to_skill_dot",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
       "vaal": null,
       "costs": null,
       "attack_speed_multiplier": null,
@@ -125030,7 +125142,6 @@
       "skill_physical_damage_%_to_convert_to_fire",
       "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius",
       "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius",
-      "active_skill_tertiary_area_of_effect_description_mode",
       "active_skill_tertiary_area_of_effect_description_mode\nactive_skill_base_tertiary_area_of_effect_radius",
       "base_secondary_skill_effect_duration",
       "napalm_arrow_detonation_hit_damage_+%_final",

@@ -41392,6 +41392,11 @@
           "id": "is_area_damage",
           "type": "implicit",
           "value": 1
+        },
+        {
+          "id": "pact_of_ghorr_can_modify_damage_over_time_of_skill",
+          "type": "implicit",
+          "value": 1
         }
       ],
       "vaal": null,
@@ -103113,6 +103118,11 @@
           "id": "is_area_damage",
           "type": "implicit",
           "value": 1
+        },
+        {
+          "id": "pact_of_ghorr_can_modify_damage_over_time_of_skill",
+          "type": "implicit",
+          "value": 1
         }
       ],
       "vaal": null,
@@ -125191,9 +125201,111 @@
         "napalm_arrow_maximum_number_of_unprimed_arrows_allowed": "最大20汽油箭",
         "skill_physical_damage_%_to_convert_to_fire": "100% 物理傷害轉化至火焰傷害",
         "base_secondary_skill_effect_duration": "基礎減益效果持續時間為 4.00 秒",
+        "base_number_of_projectiles": "發射3個投射物",
         "projectile_damage_modifiers_apply_to_skill_dot": "投射物傷害同時影響此技能的持續傷害效果"
       },
-      "stats": null,
+      "stats": [
+        {
+          "id": "base_fire_damage_to_deal_per_minute",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "base_skill_effect_duration",
+          "type": "constant",
+          "value": 6000
+        },
+        {
+          "id": "active_skill_area_of_effect_description_mode",
+          "type": "constant",
+          "value": 7
+        },
+        {
+          "id": "active_skill_base_area_of_effect_radius",
+          "type": "constant",
+          "value": 30
+        },
+        {
+          "id": "active_skill_secondary_area_of_effect_description_mode",
+          "type": "constant",
+          "value": 7
+        },
+        {
+          "id": "active_skill_base_secondary_area_of_effect_radius",
+          "type": "constant",
+          "value": 10
+        },
+        {
+          "id": "active_skill_tertiary_area_of_effect_description_mode",
+          "type": "constant",
+          "value": 1
+        },
+        {
+          "id": "napalm_arrow_detonation_hit_damage_+%_final",
+          "type": "constant",
+          "value": 50
+        },
+        {
+          "id": "napalm_arrow_maximum_number_of_unprimed_arrows_allowed",
+          "type": "constant",
+          "value": 20
+        },
+        {
+          "id": "skill_physical_damage_%_to_convert_to_fire",
+          "type": "constant",
+          "value": 100
+        },
+        {
+          "id": "base_secondary_skill_effect_duration",
+          "type": "constant",
+          "value": 4000
+        },
+        {
+          "id": "blast_rain_arrow_delay_ms",
+          "type": "constant",
+          "value": 90
+        },
+        {
+          "id": "base_number_of_projectiles",
+          "type": "constant",
+          "value": 3
+        },
+        {
+          "id": "active_skill_base_tertiary_area_of_effect_radius",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "base_is_projectile",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "is_area_damage",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "skill_can_fire_arrows",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "base_skill_show_average_damage_instead_of_dps",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "quality_display_base_number_of_projectiles_is_gem",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "projectile_damage_modifiers_apply_to_skill_dot",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
       "vaal": null,
       "costs": null,
       "attack_speed_multiplier": null,
@@ -125214,7 +125326,6 @@
       "skill_physical_damage_%_to_convert_to_fire",
       "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius",
       "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius",
-      "active_skill_tertiary_area_of_effect_description_mode",
       "active_skill_tertiary_area_of_effect_description_mode\nactive_skill_base_tertiary_area_of_effect_radius",
       "base_secondary_skill_effect_duration",
       "napalm_arrow_detonation_hit_damage_+%_final",
@@ -137480,7 +137591,7 @@
         "dex": 0
       },
       "stat_text": {
-        "skill_empowers_next_x_spells_cast\npact_empower_limitation_specifier_for_stat_description": "[EmpoweredSpell|強化]下 3 個你施放的傷害型瓦爾法術",
+        "skill_empowers_next_x_spells_cast\npact_empower_limitation_specifier_for_stat_description": "[EmpoweredSpell|強化]下 3 個你施放的引導法術",
         "pact_skill_grant_damage_+%_final_to_exerted_skills": "被強化的技能造成 40% 更多傷害"
       },
       "stats": [
