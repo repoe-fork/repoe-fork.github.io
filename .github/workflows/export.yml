@@ -51,8 +51,8 @@ jobs:
         with:
           path: poe1
           ref: ${{ github.ref }}
-      - if: ${{ needs.version.outputs.changes_detected == 'true' }}
-        run: '[ $(git rev-parse ${{ needs.version.outputs.commit_hash }} ) = "$(git rev-parse HEAD)" ] || exit 1'
+      - if: needs.version.outputs.commit_hash != ''
+        run: '[ $(git rev-parse ${{ needs.version.outputs.commit_hash }}) = "$(git rev-parse HEAD)" ] || exit 1'
         working-directory: poe1
       - name: checkout repoe
         uses: actions/checkout@v7.0.1
