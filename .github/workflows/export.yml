@@ -24,13 +24,20 @@ jobs:
       - name: copy version.txt to old location
         run: cp version.txt RePoE/data/version.txt
       - id: version
-        run: echo "version=$(cat version.txt)" >> "$GITHUB_OUTPUT"
+        run: |
+          VERSION=$(cat version.txt)
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          if [ "$VERSION" != "$(cat exported-version.txt)" ]; then
+            echo "version_changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "version_changed=false" >> "$GITHUB_OUTPUT"
+          fi
       - id: autocommit
         uses: stefanzweifel/git-auto-commit-action@v7.2.0
         with:
           commit_message: "[skip ci] Version ${{ steps.version.outputs.version }}"
     outputs:
-      changes_detected: ${{ steps.autocommit.outputs.changes_detected }}
+      changes_detected: ${{ steps.version.outputs.version_changed }}
       commit_hash: ${{ steps.autocommit.outputs.commit_hash }}
       version: ${{ steps.version.outputs.version }}
 
@@ -77,6 +84,9 @@ jobs:
       - name: run export
         run: poetry run repoe all -l all -o ../poe1/data
         working-directory: RePoE
+      - name: update exported-version.txt
+        run: echo "${{ needs.version.outputs.version }}" > exported-version.txt
+        working-directory: poe1
       - name: commit changes
         id: autocommit
         uses: stefanzweifel/git-auto-commit-action@v7.2.0
