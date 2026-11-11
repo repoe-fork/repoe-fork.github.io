@@ -97,13 +97,13 @@ jobs:
           commit_message: "[skip ci] Export ${{ needs.version.outputs.version }}"
       - name: generate index.html
         run: |
-          tree data -Jo index.json
-          find data -type d -exec tree {} -H '-' --dirsfirst -F -L 1 -T "RePoE - PoE version ${{ needs.version.outputs.version }}" -I 'index.html|schema_doc*' --noreport --charset utf-8 -o {}/index.html \;
-          find data -name index.html -exec sed -i 's|<h1>RePoE|<h1><a href="https://github.com/repoe-fork/repoe-fork">RePoE</a>|' {} \;
-          mv data/index.html data/poe1.html
-          npx -y markdown-to-html-cli --output data/index.html
-          cp *.txt data
-        working-directory: poe1
+          tree . -Jo index.json
+          find . -type d -execdir tree . --dirsfirst -F -L 1 -T "RePoE - PoE version ${{ needs.version.outputs.version }}" -I 'index.html|schema_doc*' --noreport --charset utf-8 -o {}/index.html \;
+          find . -name index.html -exec sed -i 's|<h1>RePoE|<h1><a href="https://github.com/repoe-fork/repoe-fork">RePoE</a>|' {} \;
+          mv index.html poe1.html
+          npx -y markdown-to-html-cli --input ../README.md --output index.html
+          cp ../*.txt .
+        working-directory: poe1/data
       - uses: actions/upload-pages-artifact@v5.0.0
         with:
           path: poe1/data
