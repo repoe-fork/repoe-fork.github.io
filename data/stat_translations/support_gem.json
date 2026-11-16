@@ -3920,8 +3920,8 @@
         "index_handlers": [
           []
         ],
-        "string": "Supported Skills have {0}% chance to Blind enemies on hit",
-        "reminder_text": "(Being Blinded causes 20% less Accuracy Rating and Evasion Rating, for 4 seconds)",
+        "string": "Supported Skills have {0}% chance to [Blind] enemies on hit",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -3956,7 +3956,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Supported Skills have {0}% increased Blinding duration",
+        "string": "Supported Skills have {0}% increased [Blind|Blinding] duration",
         "reminder_text": null,
         "is_markup": null
       },
@@ -3976,7 +3976,7 @@
             "negate"
           ]
         ],
-        "string": "Supported Skills have {0}% reduced Blinding duration",
+        "string": "Supported Skills have {0}% reduced [Blind|Blinding] duration",
         "reminder_text": null,
         "is_markup": null
       }
@@ -8822,6 +8822,42 @@
         "condition": [
           {
             "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Supported Skills never deal Critical Strikes",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "global_cannot_crit"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": null,
             "max": -1,
             "negated": null
           }
@@ -12398,7 +12434,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Supported Skills have {0}% increased Attack and Cast Speed during Onslaught",
+        "string": "Supported Skills have {0}% increased Attack and Cast Speed during [Onslaught]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -12418,7 +12454,7 @@
             "negate"
           ]
         ],
-        "string": "Supported Skills have {0}% reduced Attack and Cast Speed during Onslaught",
+        "string": "Supported Skills have {0}% reduced Attack and Cast Speed during [Onslaught]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -14303,38 +14339,18 @@
       {
         "condition": [
           {
-            "min": 1,
+            "min": null,
             "max": null,
             "negated": null
           }
         ],
         "format": [
-          "#"
+          "+#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "{0}% increased Rarity of Items Dropped by Enemies Slain from Supported Skills",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "{0}% reduced Rarity of Items Dropped by Enemies Slain from Supported Skills",
+        "string": "{0}% to [PlayerItemRarity|Rarity] of Items Dropped by Enemies Slain from Supported Skills",
         "reminder_text": null,
         "is_markup": null
       }
@@ -17258,7 +17274,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Supported Skills have {0}% increased Critical Strike Chance against Blinded Enemies",
+        "string": "Supported Skills have {0}% increased Critical Strike Chance against [Blind|Blinded] Enemies",
         "reminder_text": null,
         "is_markup": null
       },
@@ -17278,7 +17294,7 @@
             "negate"
           ]
         ],
-        "string": "Supported Skills have {0}% reduced Critical Strike Chance against Blinded Enemies",
+        "string": "Supported Skills have {0}% reduced Critical Strike Chance against [Blind|Blinded] Enemies",
         "reminder_text": null,
         "is_markup": null
       }
@@ -18708,8 +18724,8 @@
         "index_handlers": [
           []
         ],
-        "string": "Damaging Ailments inflicted with Supported Skills deal damage {0}% faster",
-        "reminder_text": "(They will deal the same total damage over a shorter duration)",
+        "string": "Damaging Ailments inflicted with Supported Skills deal damage {0}% [DamageFaster|Faster]",
+        "reminder_text": "(Ailments that deal Damage are Bleeding, Ignited, and Poisoned)",
         "is_markup": null
       }
     ],
@@ -18917,6 +18933,42 @@
     ],
     "ids": [
       "display_base_intensity_loss"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Supported Skills cannot be Supported by other Supports",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "display_constriction_other_supports_do_not_apply"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -19538,8 +19590,8 @@
         "index_handlers": [
           []
         ],
-        "string": "Bleeding inflicted by Supported Skills deals Damage {0}% faster",
-        "reminder_text": "(They will deal the same total damage over a shorter duration)",
+        "string": "Bleeding inflicted by Supported Skills deals Damage {0}% [DamageFaster|Faster]",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -19574,8 +19626,8 @@
         "index_handlers": [
           []
         ],
-        "string": "Ignites from Supported Skills deal Damage {0}% faster",
-        "reminder_text": "(They will deal the same total damage over a shorter duration)",
+        "string": "Ignites from Supported Skills deal Damage {0}% [DamageFaster|Faster]",
+        "reminder_text": null,
         "is_markup": null
       },
       {
@@ -19594,7 +19646,7 @@
             "negate"
           ]
         ],
-        "string": "Ignites from Supported Skills deal Damage {0}% slower",
+        "string": "Ignites from Supported Skills deal Damage {0}% [DamageSlower|Slower]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -19630,8 +19682,8 @@
         "index_handlers": [
           []
         ],
-        "string": "Poisons from Supported Skills deal Damage {0}% faster",
-        "reminder_text": "(They will deal the same total damage over a shorter duration)",
+        "string": "Poisons from Supported Skills deal Damage {0}% [DamageFaster|Faster]",
+        "reminder_text": "(Poison deals Chaos Damage over time, based on the base Physical and Chaos Damage of the Skill. Multiple instances of Poison stack)",
         "is_markup": null
       }
     ],
@@ -19951,6 +20003,62 @@
     ],
     "ids": [
       "from_quality_brand_activation_rate_+%_final_if_75%_attached_duration_expired"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Supported Skills have {0}% more Attribute Requirements",
+        "reminder_text": "(Attributes are Strength, Dexterity, and Intelligence)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Supported Skills have {0}% less Attribute Requirements",
+        "reminder_text": "(Attributes are Strength, Dexterity, and Intelligence)",
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "from_support_skill_gem_attribute_requirements_+%_final"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -20368,6 +20476,42 @@
     ],
     "ids": [
       "gain_frenzy_charge_on_killing_blow_vs_enemies_with_5+_poisons_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Supported Skills apply Malignant Madness to you on use",
+        "reminder_text": "(Malignant Madness reduces Damage and Action Speed by 10%, for 8 seconds)",
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "gain_malignant_madness_on_skill_use"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -25583,8 +25727,8 @@
             "milliseconds_to_seconds"
           ]
         ],
-        "string": "Supported Skills gain Onslaught for {0} seconds on Killing a Shocked Enemy",
-        "reminder_text": "(Onslaught grants 20% increased Attack, Cast, and Movement Speed)",
+        "string": "Supported Skills gain [Onslaught] for {0} seconds on Killing a Shocked Enemy",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -26577,13 +26721,13 @@
         "index_handlers": [
           []
         ],
-        "string": "A nearby Minion gains a Soul for every {0} Life you spend on Upfront\nCosts with Supported Spells",
-        "reminder_text": "(Transfusion prioritises your closest Minion that isn't already at maximum Souls)",
+        "string": "A Minion within 6 metres gains a Power, Frenzy or Endurance Charge for every {0} Life you spend on Upfront Costs with Supported Spells",
+        "reminder_text": "(Upfront Costs are all Costs that are not paid per-second)",
         "is_markup": null
       }
     ],
     "ids": [
-      "random_nearby_minion_gain_a_soul_eater_soul_on_X_life_spent"
+      "random_nearby_minion_gain_a_charge_on_X_life_spent"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -27851,7 +27995,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Supported Skills Sacrifice all but 1 of your Life and Energy Shield on Use",
+        "string": "Supported Skills Sacrifice all but 20% of your maximum Life and Energy Shield on Use",
         "reminder_text": null,
         "is_markup": null
       }
@@ -31981,6 +32125,62 @@
         "condition": [
           {
             "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Supported Skills deal {0}% more Damage",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Supported Skills deal {0}% less Damage",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "support_impotence_damage_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
             "max": 99,
             "negated": null
           }
@@ -35981,8 +36181,8 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% increased Onslaught duration",
-        "reminder_text": "(Onslaught grants 20% increased Attack, Cast, and Movement Speed)",
+        "string": "{0}% increased [Onslaught] duration",
+        "reminder_text": null,
         "is_markup": null
       },
       {
@@ -36001,8 +36201,8 @@
             "negate"
           ]
         ],
-        "string": "{0}% reduced Onslaught duration",
-        "reminder_text": "(Onslaught grants 20% increased Attack, Cast, and Movement Speed)",
+        "string": "{0}% reduced [Onslaught] duration",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -36044,8 +36244,8 @@
           [],
           []
         ],
-        "string": "Supported Skills have {0}% chance to grant Onslaught for 3 seconds when\nyou Hit a Unique Enemy",
-        "reminder_text": "(Onslaught grants 20% increased Attack, Cast, and Movement Speed)",
+        "string": "Supported Skills have {0}% chance to grant [Onslaught] for 3 seconds when\nyou Hit a Unique Enemy",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -36097,8 +36297,8 @@
           ],
           []
         ],
-        "string": "Supported Skills have {0}% chance to grant Onslaught for {1} seconds on\ndealing a Killing Blow",
-        "reminder_text": "(Onslaught grants 20% increased Attack, Cast, and Movement Speed)",
+        "string": "Supported Skills have {0}% chance to grant [Onslaught] for {1} seconds on\ndealing a Killing Blow",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -45214,6 +45414,18 @@
         "id": "explicit.stat_2783958145",
         "text": "#% more Maximum Life",
         "type": "explicit",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_1214601201",
+        "text": "#% more Maximum Life",
+        "type": "implicit",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_137377270",
+        "text": "#% more Maximum Life",
+        "type": "implicit",
         "option": null
       }
     ],

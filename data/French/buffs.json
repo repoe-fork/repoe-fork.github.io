@@ -3520,7 +3520,7 @@
     "stack_limit": null
   },
   "flask_utility_rarity": {
-    "description": "La Rareté des objets que vous trouvez est augmentée",
+    "description": "Vous avez un bonus de [PlayerItemRarity|Rareté des Objets].",
     "invisible": false,
     "name": "Flacon d'or ",
     "removable": false,
@@ -3537,7 +3537,7 @@
           "name": "Gold Flask",
           "template": null,
           "stat_text": [
-            "30% d'Augmentation de la Rareté des Objets cédés"
+            "+30% à la [PlayerItemRarity|Rareté des Objets]"
           ],
           "stats": {
             "base_item_found_rarity_+%": 30
@@ -5991,7 +5991,8 @@
       "self_damaging_ailment_duration_+%",
       "base_maximum_chaos_damage_resistance_%",
       "mana_regeneration_rate_+%",
-      "accuracy_rating_+%"
+      "accuracy_rating_+%",
+      "damage_taken_+%_final_from_consecrated_ground"
     ],
     "visuals": "ground_consecration",
     "category": "Buff",
@@ -6071,7 +6072,7 @@
     "stack_limit": null
   },
   "unique_flask_divination_distillate": {
-    "description": "Augmente la Rareté des objets trouvés, vos Résistances élémentaires et votre Rayonnement lumineux",
+    "description": "Octroie de la [PlayerItemRarity|Rareté des Objets], des Résistances élémentaires et du Rayonnement lumineux",
     "invisible": false,
     "name": "Distillat de divination ",
     "removable": false,
@@ -6100,7 +6101,18 @@
     ],
     "visuals": "onslaught",
     "category": "Buff",
-    "sources": null,
+    "sources": {
+      "UltimatumModifiers": [
+        {
+          "id": "PlayerBuffOnslaught",
+          "item": null,
+          "name": null,
+          "template": "MapModPlayerOnslaught",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
     "templates": {
       "AncestralJadeHornOnslaught": {
         "aura_radius_metres": null,
@@ -9123,7 +9135,7 @@
     "stack_limit": null
   },
   "cagan_darkness": {
-    "description": "Votre Quantité des objets trouvés, votre Rareté des objets trouvés et votre Rayonnement lumineux diminuent au fil du temps. Tuez des ennemis pour les augmenter de nouveau.",
+    "description": "Votre Quantité d'Objets, votre [PlayerItemRarity|Rareté des Objets] et votre Rayonnement lumineux diminuent au fil du temps, et augmentent en tuant des ennemis.",
     "invisible": false,
     "name": "Ténèbres insidieuses ",
     "removable": false,
@@ -11018,7 +11030,7 @@
     "stack_limit": null
   },
   "unique_flask_taste_of_hate": {
-    "description": "Vous infligez des Dégâts de froid supplémentaires. Une partie des Dégâts physiques que vous subissez est convertie en froid, et vous bénéficiez de plus de chances de ne pas subir la Frigorification et le Gel.",
+    "description": "Vous infligez des Dégâts de froid supplémentaires. Une partie des Dégâts de feu et de foudre que vous subissez sont convertis en froid, et vous bénéficiez de plus de chances de ne pas subir la Frigorification et le Gel.",
     "invisible": false,
     "name": "Goût de la Haine ",
     "removable": false,
@@ -11499,7 +11511,7 @@
     "stack_limit": null
   },
   "increased_item_rarity_aura": {
-    "description": "Tant que vous êtes à proximité d'un allié portant le Faiseur de Rois, vous bénéficiez de Coup de grâce, de Renforcement, d'un bonus au Multiplicateur de Coups critiques et d'une Augmentation de la Rareté des objets trouvés.",
+    "description": "Tant que vous êtes à proximité d'un allié portant le Faiseur de Rois, vous bénéficiez de Coup de grâce, de Renforcement, d'un bonus au Multiplicateur de Coups critiques et d'un bonus de [PlayerItemRarity|Rareté des Objets].",
     "invisible": false,
     "name": "Présence du Faiseur de Rois ",
     "removable": false,
@@ -12030,7 +12042,7 @@
     "stack_limit": null
   },
   "rarity_storm": {
-    "description": "Vous bénéficiez d'une Augmentation de la Rareté et de la Quantité des objets trouvés.",
+    "description": "Vous bénéficiez d'un bonus de [PlayerItemRarity|Rareté des Objets] et d'une Augmentation de Quantité d'Objets.",
     "invisible": false,
     "name": "Tempête brillante ",
     "removable": false,
@@ -12051,14 +12063,13 @@
           "name": null,
           "template": null,
           "stat_text": [
-            "25% d'Augmentation de la Rareté des Objets",
-            "12.5% d'Augmentation de la Quantité d'Objets",
-            "120% d'Augmentation de la Rareté des Objets cédés",
+            "37.5% d'Augmentation de la Rareté des Objets",
+            "+120% à la [PlayerItemRarity|Rareté des Objets]",
             "30% d'Augmentation de la Quantité d'Objets cédés"
           ],
           "stats": {
-            "from_league_item_rarity_+%_permyriad": 2500,
-            "from_league_item_quantity_+%_permyriad": 1250,
+            "from_league_item_rarity_+%_permyriad": 3750,
+            "from_league_item_quantity_+%_permyriad": 0,
             "base_item_found_rarity_+%": 120,
             "base_item_found_quantity_+%": 30,
             "is_affected_by_tempest": 1
@@ -12070,7 +12081,7 @@
     "stack_limit": null
   },
   "uber_rarity_storm": {
-    "description": "Vous bénéficiez d'une Augmentation de la Rareté et de la Quantité des objets trouvés.",
+    "description": "Vous bénéficiez d'un bonus de [PlayerItemRarity|Rareté des Objets] et d'une Augmentation de Quantité d'Objets.",
     "invisible": false,
     "name": "Tempête radieuse ",
     "removable": false,
@@ -12091,14 +12102,13 @@
           "name": null,
           "template": null,
           "stat_text": [
-            "50% d'Augmentation de la Rareté des Objets",
-            "25% d'Augmentation de la Quantité d'Objets",
-            "420% d'Augmentation de la Rareté des Objets cédés",
+            "75% d'Augmentation de la Rareté des Objets",
+            "+420% à la [PlayerItemRarity|Rareté des Objets]",
             "70% d'Augmentation de la Quantité d'Objets cédés"
           ],
           "stats": {
-            "from_league_item_rarity_+%_permyriad": 5000,
-            "from_league_item_quantity_+%_permyriad": 2500,
+            "from_league_item_rarity_+%_permyriad": 7500,
+            "from_league_item_quantity_+%_permyriad": 0,
             "base_item_found_rarity_+%": 420,
             "base_item_found_quantity_+%": 70,
             "is_affected_by_tempest": 1
@@ -12112,7 +12122,7 @@
           "name": null,
           "template": null,
           "stat_text": [
-            "x% d'Augmentation de la Rareté des Objets cédés",
+            "+x% à la [PlayerItemRarity|Rareté des Objets]",
             "x% d'Augmentation de la Quantité d'Objets cédés"
           ],
           "stats": {
@@ -12129,7 +12139,7 @@
     "stack_limit": null
   },
   "uber_uber_rarity_storm": {
-    "description": "Vous bénéficiez d'une Augmentation de la Réduction des Dégâts physiques et de Rareté des objets trouvés, diminiuant avec le temps.",
+    "description": "Vous bénéficiez d'un bonus de Réduction des Dégâts physiques et de [PlayerItemRarity|Rareté des Objets], diminiuant avec le temps.",
     "invisible": false,
     "name": "Tempête resplendissante",
     "removable": false,
@@ -12151,7 +12161,7 @@
           "name": null,
           "template": null,
           "stat_text": [
-            "x% d'Augmentation de la Rareté des Objets cédés",
+            "+x% à la [PlayerItemRarity|Rareté des Objets]",
             "x% d'Augmentation de la Quantité d'Objets cédés"
           ],
           "stats": {
@@ -12177,15 +12187,15 @@
           "is_affected_by_tempest": 1
         },
         "stat_text": [
-          "100% d'Augmentation de la Rareté des Objets cédés"
+          "+100% à la [PlayerItemRarity|Rareté des Objets]"
         ],
         "visuals": null
       },
       "uber_uber_rarity_storm_monster": {
         "aura_radius_metres": null,
         "stats": {
-          "from_league_item_rarity_+%_permyriad": 10000,
-          "from_league_item_quantity_+%_permyriad": 10000,
+          "from_league_item_rarity_+%_permyriad": 15000,
+          "from_league_item_quantity_+%_permyriad": 0,
           "base_item_found_rarity_+%": 0,
           "base_item_found_quantity_+%": 0,
           "monster_difficulty_tankiness_+%": 1000,
@@ -13016,9 +13026,9 @@
     "stack_limit": null
   },
   "flask_bonus_item_rarity": {
-    "description": "Vous bénéficiez d'une Augmentation à la Rareté des objets trouvés tant que ce Flacon fait effet.",
+    "description": "Vous bénéficiez d'un bonus de [PlayerItemRarity|Rareté des Objets] tant que ce Flacon fait effet.",
     "invisible": true,
-    "name": "Rareté des objets ",
+    "name": "Rareté des Objets ",
     "removable": false,
     "stats": [
       "base_item_found_rarity_+%"
@@ -13599,7 +13609,8 @@
     "stats": [
       "base_damage_taken_+%",
       "chance_to_be_stunned_%",
-      "damage_+%_final_vs_non_taunt_target_from_passive"
+      "damage_+%_final_vs_non_taunt_target_from_passive",
+      "action_speed_+%_from_taunt"
     ],
     "visuals": "invisible",
     "category": null,
@@ -13703,7 +13714,7 @@
   "withered": {
     "description": "Vous subissez des Dégâts de chaos supplémentaires.",
     "invisible": false,
-    "name": "Flétrissure ",
+    "name": "Flétrissement",
     "removable": false,
     "stats": [
       "chaos_damage_taken_+%"
@@ -16416,14 +16427,14 @@
       "OccultistNearbyEnemiesColdChaosResistLifeRegenHardMode": {
         "aura_radius_metres": 6.0,
         "stats": {
-          "base_chaos_damage_resistance_%": -8,
+          "base_chaos_damage_resistance_%": -15,
           "life_regeneration_rate_+%": -100,
-          "base_cold_damage_resistance_%": -8
+          "base_cold_damage_resistance_%": -15
         },
         "stat_text": [
-          "-8% à la Résistance au chaos",
+          "-15% à la Résistance au chaos",
           "100% de Réduction de la Vitesse de Régénération de Vie",
-          "-8% à la Résistance au froid"
+          "-15% à la Résistance au froid"
         ],
         "visuals": null
       }
@@ -20765,7 +20776,7 @@
     "stack_limit": null
   },
   "player_tencent_asset_lock_bonus": {
-    "description": "Vous bénéficiez d'une Augmentation de la Rareté des objets trouvés.",
+    "description": "Vous bénéficiez d'un bonus de [PlayerItemRarity|Rareté des Objets].",
     "invisible": false,
     "name": "Buff du Verrou des biens ",
     "removable": false,
@@ -24381,6 +24392,14 @@
           "template": "MaximumVoidArrowsUnique__1",
           "stat_text": null,
           "stats": null
+        },
+        {
+          "id": "DivergentVoidShotOnSkillUseUnique__1_",
+          "item": null,
+          "name": null,
+          "template": "MaximumVoidArrowsUnique__1",
+          "stat_text": null,
+          "stats": null
         }
       ]
     },
@@ -24761,7 +24780,7 @@
     "stack_limit": null
   },
   "master_buff_treasure_hunter": {
-    "description": "La Quantité et la Rareté des objets que vous trouvez est augmentée.",
+    "description": "Vous bénéficiez d'une Augmentation de Quantité d'Objets trouvés.",
     "invisible": false,
     "name": "Don de Balek ",
     "removable": true,
@@ -25501,6 +25520,25 @@
         "visuals": null
       },
       "NecropolisAdrenaline": {
+        "aura_radius_metres": null,
+        "stats": {
+          "has_adrenaline": 1,
+          "damage_+%": 100,
+          "attack_speed_+%": 25,
+          "base_cast_speed_+%": 25,
+          "base_movement_velocity_+%": 25,
+          "base_additional_physical_damage_reduction_%": 10
+        },
+        "stat_text": [
+          "100% d'Augmentation de Dégâts",
+          "25% d'Augmentation de la Vitesse d'attaque",
+          "25% d'Augmentation de la Vitesse d'incantation",
+          "25% d'Augmentation de la Vitesse de déplacement",
+          "Vous gagnez une Réduction supplémentaire des Dégâts physiques de 10%"
+        ],
+        "visuals": null
+      },
+      "AdrenalineHeart": {
         "aura_radius_metres": null,
         "stats": {
           "has_adrenaline": 1,
@@ -26692,7 +26730,7 @@
     "stack_limit": null
   },
   "master_buff_alva": {
-    "description": "La Quantité et la Rareté des objets que vous trouvez est augmentée.",
+    "description": "Vous bénéficiez d'un bonus de [PlayerItemRarity|Rareté des Objets] et d'une Augmentation de Quantité d'Objets.",
     "invisible": false,
     "name": "Don d'Alva ",
     "removable": true,
@@ -28217,7 +28255,9 @@
       "damage_+%",
       "attack_and_cast_speed_+%",
       "life_regeneration_rate_per_minute_%",
-      "base_life_mana_es_recovery_rate_+%"
+      "base_life_mana_es_recovery_rate_+%",
+      "physical_damage_%_to_add_as_cold",
+      "physical_damage_%_to_add_as_fire"
     ],
     "visuals": "bloodstained_banner",
     "category": "Buff",
@@ -28239,7 +28279,9 @@
       "damage_+%",
       "attack_and_cast_speed_+%",
       "life_regeneration_rate_per_minute_%",
-      "base_life_mana_es_recovery_rate_+%"
+      "base_life_mana_es_recovery_rate_+%",
+      "physical_damage_%_to_add_as_cold",
+      "physical_damage_%_to_add_as_fire"
     ],
     "visuals": "puresteel_banner",
     "category": "Buff",
@@ -28676,7 +28718,7 @@
           "every_1_second_nearby_enemies_withered_for_X_ms": 15000
         },
         "stat_text": [
-          "Chaque seconde, vous infligez Flétrissement aux Ennemis à proximité pendant 15 secondes"
+          "Chaque seconde, vous infligez [Withered|Flétrissement] aux Ennemis dans un rayon de 6 mètres pendant 15 secondes"
         ],
         "visuals": null
       },
@@ -28686,8 +28728,16 @@
           "every_1_second_nearby_enemies_withered_for_X_ms": 5000
         },
         "stat_text": [
-          "Chaque seconde, vous infligez Flétrissement aux Ennemis à proximité pendant 5 secondes"
+          "Chaque seconde, vous infligez [Withered|Flétrissement] aux Ennemis dans un rayon de 6 mètres pendant 5 secondes"
         ],
+        "visuals": null
+      },
+      "WitherNearbyEnemiesViscera": {
+        "aura_radius_metres": null,
+        "stats": {
+          "every_1_second_nearby_enemies_withered_for_X_ms": 0
+        },
+        "stat_text": null,
         "visuals": null
       }
     },
@@ -28722,7 +28772,7 @@
           "every_4_seconds_%_chance_freeze_non_frozen_enemies_for_300ms": 50
         },
         "stat_text": [
-          "Toutes les 4 secondes, 50% de chances de Geler pendant 0.4 seconde les Ennemis non Gelés à proximité"
+          "Toutes les 4 secondes, 50% de chances de Geler pendant 0.4 seconde les Ennemis non Gelés présents dans un rayon de 6 mètres"
         ],
         "visuals": null
       }
@@ -28923,7 +28973,8 @@
       "self_damaging_ailment_duration_+%",
       "base_maximum_chaos_damage_resistance_%",
       "mana_regeneration_rate_+%",
-      "accuracy_rating_+%"
+      "accuracy_rating_+%",
+      "damage_taken_+%_final_from_consecrated_ground"
     ],
     "visuals": "ground_consecration_elreon",
     "category": "Buff",
@@ -29870,7 +29921,7 @@
     "stack_limit": null
   },
   "berserk": {
-    "description": "Vous infligez Davantage de Dégâts, vous avez Davantage de Vitesse d'attaque et de déplacement et vous subissez moins de Dégâts.",
+    "description": "Vous bénéficiez d'une augmentation des effets de la Rage et vous perdez de la Rage à une vitesse qui s'accélère.",
     "invisible": false,
     "name": "Berserk ",
     "removable": false,
@@ -30197,7 +30248,8 @@
     "name": "Autel de l'Évolution (Monstre)",
     "removable": true,
     "stats": [
-      "base_convert_%_physical_damage_to_random_element"
+      "monster_difficulty_tankiness_+%",
+      "damage_+%"
     ],
     "visuals": "invisible",
     "category": "Buff shrine",
@@ -30206,10 +30258,11 @@
       "shrine_evolution_monster": {
         "aura_radius_metres": null,
         "stats": {
-          "base_convert_%_physical_damage_to_random_element": 50
+          "monster_difficulty_tankiness_+%": 200,
+          "damage_+%": 50
         },
         "stat_text": [
-          "50% des Dégâts physiques sont convertis en Dégâts d'un élément choisi au hasard"
+          "50% d'Augmentation de Dégâts"
         ],
         "visuals": null
       }
@@ -32249,7 +32302,7 @@
   "atlas_orion_death_zone": {
     "description": "Votre propre structure anatomique se déchiquette jusqu'à votre mort.",
     "invisible": false,
-    "name": "Tempête désatomisante (extérieure) ",
+    "name": "Tempête désatomisante (extérieur) ",
     "removable": false,
     "stats": [
       "base_physical_damage_taken_per_minute",
@@ -32267,7 +32320,7 @@
   "atlas_orion_death_zone_core": {
     "description": "Votre propre structure anatomique se déchiquette jusqu'à votre mort.",
     "invisible": false,
-    "name": "Tempête désatomisante (intérieure) ",
+    "name": "Tempête désatomisante (intérieur) ",
     "removable": false,
     "stats": [
       "base_physical_damage_taken_per_minute",
@@ -32277,6 +32330,42 @@
       "action_speed_-%"
     ],
     "visuals": "atlas_orion_death_zone_core",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "atlas_orion_crow_zone": {
+    "description": "La magie cruelle de la Reine des Sabbats déchire jusqu'à votre être même.",
+    "invisible": false,
+    "name": "Tempête de corbeaux (extérieur)",
+    "removable": false,
+    "stats": [
+      "base_physical_damage_taken_per_minute",
+      "base_fire_damage_taken_per_minute",
+      "base_lightning_damage_taken_per_minute",
+      "base_chaos_damage_taken_per_minute",
+      "action_speed_-%"
+    ],
+    "visuals": "atlas_orion_crow_zone_visual",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "atlas_orion_crow_zone_core": {
+    "description": "La magie cruelle de la Reine des Sabbats déchire jusqu'à votre être même.",
+    "invisible": false,
+    "name": "Tempête de corbeaux (intérieur)",
+    "removable": false,
+    "stats": [
+      "base_physical_damage_taken_per_minute",
+      "base_fire_damage_taken_per_minute",
+      "base_lightning_damage_taken_per_minute",
+      "base_chaos_damage_taken_per_minute",
+      "action_speed_-%"
+    ],
+    "visuals": "atlas_orion_crow_zone_core_visual",
     "category": "Debuff",
     "sources": null,
     "templates": null,
@@ -33296,7 +33385,8 @@
       "attack_and_cast_speed_+%",
       "base_movement_velocity_+%",
       "base_cannot_be_damaged",
-      "critical_strike_chance_+%"
+      "critical_strike_chance_+%",
+      "base_should_have_onslaught_from_stat"
     ],
     "visuals": "invisible",
     "category": "Buff",
@@ -33743,6 +33833,14 @@
           "stats": null
         },
         {
+          "id": "VisceraModMaven",
+          "item": null,
+          "name": null,
+          "template": "NearbyEnemiesAreScorchedUnique__1",
+          "stat_text": null,
+          "stats": null
+        },
+        {
           "id": "MonsterEnemiesTaunted1",
           "item": null,
           "name": null,
@@ -33800,7 +33898,7 @@
         "visuals": null
       },
       "UniqueSpecialCorruptionNearbyEnemiesBlinded": {
-        "aura_radius_metres": 3.0,
+        "aura_radius_metres": 3.5,
         "stats": null,
         "stat_text": null,
         "visuals": null
@@ -33818,7 +33916,7 @@
         "visuals": null
       },
       "BlindAuraUnique__1": {
-        "aura_radius_metres": 2.5,
+        "aura_radius_metres": 3.5,
         "stats": null,
         "stat_text": null,
         "visuals": "blinded_uniquewand13"
@@ -35138,6 +35236,20 @@
     "templates": null,
     "stack_limit": null
   },
+  "blinded_enemy_damage_taken_pluspercent": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "base_damage_taken_+%"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "intimidated_enemy_self_stun_duration": {
     "description": "",
     "invisible": true,
@@ -35414,9 +35526,9 @@
     "stack_limit": null
   },
   "abyssal_well_blackhole_damage_over_time": {
-    "description": "[DNT] You are taking Chaos Damage over time",
+    "description": "[DNT - UNUSED]",
     "invisible": false,
-    "name": "[DNT] Abyssal Well",
+    "name": "[DNT - UNUSED]",
     "removable": false,
     "stats": [
       "base_chaos_damage_taken_per_minute"
@@ -38182,8 +38294,8 @@
           "template": null,
           "stat_text": null,
           "stats": {
-            "from_league_item_rarity_+%_permyriad": 4000,
-            "from_league_item_quantity_+%_permyriad": 4000
+            "from_league_item_rarity_+%_permyriad": 8000,
+            "from_league_item_quantity_+%_permyriad": 0
           }
         },
         {
@@ -38193,8 +38305,8 @@
           "template": null,
           "stat_text": null,
           "stats": {
-            "from_league_item_rarity_+%_permyriad": 5000,
-            "from_league_item_quantity_+%_permyriad": 5000
+            "from_league_item_rarity_+%_permyriad": 10000,
+            "from_league_item_quantity_+%_permyriad": 0
           }
         },
         {
@@ -38204,8 +38316,8 @@
           "template": null,
           "stat_text": null,
           "stats": {
-            "from_league_item_rarity_+%_permyriad": 6000,
-            "from_league_item_quantity_+%_permyriad": 6000
+            "from_league_item_rarity_+%_permyriad": 12000,
+            "from_league_item_quantity_+%_permyriad": 0
           }
         }
       ]
@@ -38564,6 +38676,20 @@
             "curse_effect_on_self_+%": -50,
             "random_curse_on_hit_%_against_uncursed_enemies": 30
           }
+        },
+        {
+          "id": "Bodach1",
+          "item": null,
+          "name": null,
+          "template": null,
+          "stat_text": [
+            "50% de Réduction de l'Effet des Malédictions vous affectant",
+            "30% de chances de Maudire au Toucher les Ennemis qui ne sont pas Maudits avec une Calamité au hasard"
+          ],
+          "stats": {
+            "curse_effect_on_self_+%": -50,
+            "random_curse_on_hit_%_against_uncursed_enemies": 30
+          }
         }
       ]
     },
@@ -38597,7 +38723,7 @@
     "stack_limit": null
   },
   "ritual_golden_coin_buff": {
-    "description": "La Quantité et la Rareté des objets cédés par les ennemis sont bien plus importantes, mais vous subissez plus de Dégâts en contrepartie.",
+    "description": "Vous bénéficiez d'un bonus de [PlayerItemRarity|Rareté des Objets] et d'une Augmentation de Quantité d'Objets, mais vous avez une Augmentation des Dégâts subis.",
     "invisible": false,
     "name": "Avidité du Parieur ",
     "removable": false,
@@ -38682,7 +38808,7 @@
     "stack_limit": null
   },
   "demigods_increased_item_rarity_aura": {
-    "description": "Vous bénéficiez d'une Augmentation de la Rareté des objets trouvés.",
+    "description": "Vous bénéficiez d'un bonus de [PlayerItemRarity|Rareté des Objets].",
     "invisible": false,
     "name": "Autorité de Demi-dieu ",
     "removable": false,
@@ -40297,6 +40423,148 @@
     },
     "stack_limit": null
   },
+  "ultimatum_additional_projectile_upside": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "number_of_additional_projectiles"
+    ],
+    "visuals": "invisible",
+    "category": "Buff",
+    "sources": {
+      "UltimatumModifiers": [
+        {
+          "id": "PlayerBuffExtraProjectiles",
+          "item": null,
+          "name": null,
+          "template": "UltimatumAdditionalProjectileUpside",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
+    "templates": {
+      "UltimatumAdditionalProjectileUpside": {
+        "aura_radius_metres": null,
+        "stats": {
+          "number_of_additional_projectiles": 2
+        },
+        "stat_text": [
+          "Les Aptitudes tirent 2 Projectiles supplémentaires"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "ultimatum_area_of_effect_upside": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "base_skill_area_of_effect_+%"
+    ],
+    "visuals": "invisible",
+    "category": "Buff",
+    "sources": {
+      "UltimatumModifiers": [
+        {
+          "id": "PlayerBuffIncreasedAoE",
+          "item": null,
+          "name": null,
+          "template": "UltimatumIncreasedAoEUpside",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
+    "templates": {
+      "UltimatumIncreasedAoEUpside": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_skill_area_of_effect_+%": 80
+        },
+        "stat_text": [
+          "80% d'Augmentation de Zone d'effet"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "ultimatum_gain_as_elemental_upside": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "physical_damage_%_to_add_as_random_element"
+    ],
+    "visuals": "invisible",
+    "category": "Buff",
+    "sources": {
+      "UltimatumModifiers": [
+        {
+          "id": "PlayerBuffGainAsElemental",
+          "item": null,
+          "name": null,
+          "template": "UltimatumGainAsElementalUpside",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
+    "templates": {
+      "UltimatumGainAsElementalUpside": {
+        "aura_radius_metres": null,
+        "stats": {
+          "physical_damage_%_to_add_as_random_element": 50
+        },
+        "stat_text": [
+          "Rajoute 50% des Dégâts physiques sous forme de Dégâts d'un élément aléatoire"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "ultimatum_steal_monster_mods_ms": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "gain_1_random_rare_monster_mod_on_kill_ms"
+    ],
+    "visuals": "invisible",
+    "category": "Buff",
+    "sources": {
+      "UltimatumModifiers": [
+        {
+          "id": "PlayerBuffStealMods",
+          "item": null,
+          "name": null,
+          "template": "UltimatumStealMonsterMods",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
+    "templates": {
+      "UltimatumStealMonsterMods": {
+        "aura_radius_metres": null,
+        "stats": {
+          "gain_1_random_rare_monster_mod_on_kill_ms": 20000
+        },
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
   "projectile_bull_thorns": {
     "description": "",
     "invisible": false,
@@ -40770,7 +41038,9 @@
       "damage_+%",
       "attack_and_cast_speed_+%",
       "life_regeneration_rate_per_minute_%",
-      "base_life_mana_es_recovery_rate_+%"
+      "base_life_mana_es_recovery_rate_+%",
+      "physical_damage_%_to_add_as_cold",
+      "physical_damage_%_to_add_as_fire"
     ],
     "visuals": "armourevasion_banner",
     "category": "Buff",
@@ -40903,7 +41173,7 @@
     "stack_limit": null
   },
   "burninate_debuff": {
-    "description": "[DNT]",
+    "description": "[DNT - UNUSED]",
     "invisible": false,
     "name": "[DNT] UNUSED",
     "removable": false,
@@ -41544,9 +41814,9 @@
     "stack_limit": null
   },
   "call_of_the_wild": {
-    "description": "[DNT]",
+    "description": "[DNT - UNUSED]",
     "invisible": false,
-    "name": "[DNT] Call of the Wild",
+    "name": "[DNT - UNUSED] Call of the Wild",
     "removable": true,
     "stats": [],
     "visuals": "call_of_the_wild",
@@ -41684,6 +41954,16 @@
         },
         {
           "id": "MutatedUniqueBelt43MagicUtilityFlasksAlwaysApplyRightmost",
+          "item": null,
+          "name": null,
+          "template": "InjectedLiquid",
+          "stat_text": null,
+          "stats": null
+        }
+      ],
+      "PassiveSkills": [
+        {
+          "id": "AscendancyReliquarian14",
           "item": null,
           "name": null,
           "template": "InjectedLiquid",
@@ -42146,6 +42426,33 @@
       "base_chance_to_ignite_%"
     ],
     "visuals": "flame_link_target",
+    "category": "Link",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "arcane_link_source": {
+    "description": "La cible de votre Lien reçoit des Dégâts de foudre supplémentaires.",
+    "invisible": false,
+    "name": "Lien arcanique",
+    "removable": false,
+    "stats": [],
+    "visuals": "arcane_link_source",
+    "category": "Link",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "arcane_link_target": {
+    "description": "Vous infligez des Dégâts de foudre supplémentaires.",
+    "invisible": false,
+    "name": "Lien arcanique",
+    "removable": true,
+    "stats": [
+      "global_minimum_added_lightning_damage",
+      "global_maximum_added_lightning_damage"
+    ],
+    "visuals": "arcane_link_target",
     "category": "Link",
     "sources": null,
     "templates": null,
@@ -43215,6 +43522,34 @@
     "templates": null,
     "stack_limit": null
   },
+  "augury_blood_donut": {
+    "description": "Vous subissez des Dégâts physiques sur la durée.",
+    "invisible": false,
+    "name": "Ponction veineuse",
+    "removable": false,
+    "stats": [
+      "base_physical_damage_taken_per_minute"
+    ],
+    "visuals": "augury_blood_donut",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "abyssal_donut": {
+    "description": "Vous subissez des Dégâts physiques sur la durée.",
+    "invisible": false,
+    "name": "Puits siphonnant",
+    "removable": false,
+    "stats": [
+      "base_physical_damage_taken_per_minute"
+    ],
+    "visuals": "abyssal_donut_visual",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "archnemesis_time_bubble": {
     "description": "Votre Vitesse d'action est considérablement réduite et vos Temps de recharge sont plus longs. Les effets néfastes qui vous affectent mettent plus de temps à expirer.",
     "invisible": false,
@@ -43375,9 +43710,9 @@
     "stack_limit": 10
   },
   "shrine_greed": {
-    "description": "Vous bénéficiez d'un bonus de Quantité et de Rareté des Objets, mais les dégâts que vous subissez sont augmentés.",
+    "description": "Vous bénéficiez d'un bonus de [PlayerItemRarity|Rareté des Objets] et d'une Augmentation de Quantité d'Objets, mais vous avez une Augmentation des Dégâts subis.",
     "invisible": false,
-    "name": "Autel de Cupidité ",
+    "name": "Autel de la Cupidité ",
     "removable": true,
     "stats": [
       "from_league_item_rarity_+%_permyriad",
@@ -43397,7 +43732,7 @@
           "name": null,
           "template": null,
           "stat_text": [
-            "x% d'Augmentation de la Rareté des Objets cédés",
+            "+x% à la [PlayerItemRarity|Rareté des Objets]",
             "x% d'Augmentation de la Quantité d'Objets cédés",
             "x% d'Augmentation des Dégâts subis"
           ],
@@ -43416,8 +43751,8 @@
       "shrine_greed_monster": {
         "aura_radius_metres": null,
         "stats": {
-          "from_league_item_rarity_+%_permyriad": 2500,
-          "from_league_item_quantity_+%_permyriad": 1000,
+          "from_league_item_rarity_+%_permyriad": 3500,
+          "from_league_item_quantity_+%_permyriad": 0,
           "base_item_found_rarity_+%": 0,
           "base_item_found_quantity_+%": 0,
           "base_damage_taken_+%": -70,
@@ -43435,13 +43770,12 @@
           "from_league_item_quantity_+%_permyriad": 0,
           "base_item_found_rarity_+%": 50,
           "base_item_found_quantity_+%": 15,
-          "base_damage_taken_+%": 20,
+          "base_damage_taken_+%": 0,
           "has_shrine_effect": 1
         },
         "stat_text": [
-          "50% d'Augmentation de la Rareté des Objets cédés",
-          "15% d'Augmentation de la Quantité d'Objets cédés",
-          "20% d'Augmentation des Dégâts subis"
+          "+50% à la [PlayerItemRarity|Rareté des Objets]",
+          "15% d'Augmentation de la Quantité d'Objets cédés"
         ],
         "visuals": null
       }
@@ -43746,7 +44080,7 @@
     "category": "Debuff",
     "sources": null,
     "templates": null,
-    "stack_limit": null
+    "stack_limit": 10
   },
   "harvest_cat_grasping_vines_buff": {
     "description": "Des Lianes agrippantes vous ralentissent. Déplacez-vous pour vous en défaire.",
@@ -65965,7 +66299,7 @@
     "stack_limit": null
   },
   "cleansing_fire_snake_debuff": {
-    "description": "Vous subissez des Dégâts de feu, et ne pouvez pas récupérer de Vie ni de Bouclier d'énergie.",
+    "description": "Vous subissez des Dégâts de feu et ne pouvez pas récupérer de Vie ni de Bouclier d'énergie.",
     "invisible": false,
     "name": "Rune ardente ",
     "removable": false,
@@ -65994,6 +66328,22 @@
         }
       ]
     },
+    "templates": null,
+    "stack_limit": null
+  },
+  "cleansing_fire_snake_debuff_augury": {
+    "description": "Vous subissez des Dégâts physiques et ne pouvez pas récupérer de Vie ni de Bouclier d'énergie.",
+    "invisible": false,
+    "name": "Rune ricanante",
+    "removable": false,
+    "stats": [
+      "base_physical_damage_taken_per_minute",
+      "cannot_recover_life",
+      "no_energy_shield_recovery"
+    ],
+    "visuals": "cleansing_fire_snake_debuff_augury",
+    "category": "Debuff",
+    "sources": null,
     "templates": null,
     "stack_limit": null
   },
@@ -66221,6 +66571,20 @@
       "base_damage_taken_+%"
     ],
     "visuals": "eater_of_worlds_laser",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "eater_of_worlds_laser_augury": {
+    "description": "Vous avez 1% de Réduction de Taux de Récupération de Vie et de Bouclier d'énergie par cumul de Fatalité ricanante.",
+    "invisible": false,
+    "name": "Fatalité ricanante",
+    "removable": false,
+    "stats": [
+      "life_and_energy_shield_recovery_rate_+%"
+    ],
+    "visuals": "eater_of_worlds_laser_augury",
     "category": "Debuff",
     "sources": null,
     "templates": null,
@@ -66783,7 +67147,7 @@
         "aura_radius_metres": null,
         "stats": {
           "trickster_damage_over_time_taken_+%_final": -50,
-          "trickster_hit_damage_taken_+%_final": -50
+          "trickster_hit_damage_taken_+%_final": -75
         },
         "stat_text": null,
         "visuals": null
@@ -66806,7 +67170,7 @@
     "stack_limit": null
   },
   "trickster_alternating_less_dot_damage": {
-    "description": "Vous avez 50% de Perte de Dégâts subis sur la durée.",
+    "description": "Vous avez 75% de Perte de Dégâts subis sur la durée.",
     "invisible": false,
     "name": "Pouls irrégulier ",
     "removable": false,
@@ -68453,7 +68817,7 @@
     "stack_limit": null
   },
   "sand_triggered": {
-    "description": "Vous êtes en Posture du sable. Vous avez des chances d'Aveugler en touchant avec vos attaques.",
+    "description": "Vous êtes en Posture du sable. Vous avez des chances d'[Blind|Aveugler] en touchant avec vos attaques.",
     "invisible": false,
     "name": "Posture du sable",
     "removable": true,
@@ -69410,7 +69774,7 @@
           "nearby_enemies_no_fire_dot_resistance_while_you_are_stationary": 0
         },
         "stat_text": [
-          "La Résistance au feu contre les Dégâts sur la durée des Monstres à proximité est de -20% tant que vous êtes stationnaire"
+          "La Résistance au feu contre les Dégâts sur la durée des Monstres présents dans un rayon de 6 mètres est de -20% tant que vous êtes stationnaire"
         ],
         "visuals": null
       },
@@ -69421,7 +69785,7 @@
           "nearby_enemies_no_fire_dot_resistance_while_you_are_stationary": 1
         },
         "stat_text": [
-          "Les Monstres Ennemis à proximité n'ont pas de Résistance au feu contre les Dégâts sur la Durée tant que vous êtes stationnaire"
+          "Les Monstres Ennemis présents dans un rayon de 6 mètres n'ont pas de Résistance au feu contre les Dégâts sur la Durée tant que vous êtes stationnaire"
         ],
         "visuals": null
       }
@@ -69533,7 +69897,7 @@
           "can_trigger_summon_elemental_relic_on_nearby_ally_kill_or_on_hit_rare_or_unique": 25
         },
         "stat_text": [
-          "25% de chances de Déclencher Invocation de Relique élémentaire (Niveau 20) lorsque vous ou un Allié à proximité Tuez un Ennemi ou Touchez un Ennemi Rare ou Unique"
+          "25% de chances de Déclencher Invocation de Relique élémentaire (Niveau 20) lorsque vous ou un Allié dans un rayon de 6 mètres Tuez un Ennemi ou Touchez un Ennemi Rare ou Unique"
         ],
         "visuals": null
       }
@@ -70256,18 +70620,7 @@
     ],
     "visuals": "invisible",
     "category": null,
-    "sources": {
-      "PassiveSkills": [
-        {
-          "id": "AscendancyReliquarian30",
-          "item": null,
-          "name": null,
-          "template": "AscedancyEnemyPhysicalDamageConvertedToFire",
-          "stat_text": null,
-          "stats": null
-        }
-      ]
-    },
+    "sources": null,
     "templates": {
       "AscedancyEnemyPhysicalDamageConvertedToFire": {
         "aura_radius_metres": 6.0,
@@ -71587,7 +71940,7 @@
     "stack_limit": null
   },
   "azmeri_effigy_buff_magic_find": {
-    "description": "200% d'Augmentation de la Rareté et Quantité des Objets",
+    "description": "Vous bénéficiez d'un bonus de [PlayerItemRarity|Rareté des Objets] et d'une Augmentation de Quantité d'Objets.",
     "invisible": false,
     "name": "Sombre présent",
     "removable": true,
@@ -71606,7 +71959,7 @@
           "base_item_found_quantity_+%": 200
         },
         "stat_text": [
-          "200% d'Augmentation de la Rareté des Objets cédés",
+          "+200% à la [PlayerItemRarity|Rareté des Objets]",
           "200% d'Augmentation de la Quantité d'Objets cédés"
         ],
         "visuals": null
@@ -71992,7 +72345,7 @@
         },
         "stat_text": [
           "Lorsque vous êtes Touché, il s'agit toujours d'un Coup critique",
-          "40% d'Augmentation de la Rareté des Objets cédés"
+          "+40% à la [PlayerItemRarity|Rareté des Objets]"
         ],
         "visuals": null
       }
@@ -72153,7 +72506,7 @@
     "stack_limit": null
   },
   "azmeri_altar_buff_rabbit": {
-    "description": "Vous avez 100% d'Augmentation de la Rareté des objets trouvés et 50% d'Augmentation de la quantité des objets trouvés. Vous ne gagnez pas d'Expérience.",
+    "description": "Vous bénéficiez d'un bonus de [PlayerItemRarity|Rareté des Objets] et d'une Augmentation de Quantité d'Objets. Vous ne gagnez pas d'Expérience.",
     "invisible": false,
     "name": "Procession léporide",
     "removable": false,
@@ -72174,7 +72527,7 @@
           "no_experience_gain": 1
         },
         "stat_text": [
-          "100% d'Augmentation de la Rareté des Objets cédés",
+          "+100% à la [PlayerItemRarity|Rareté des Objets]",
           "50% d'Augmentation de la Quantité d'Objets cédés",
           "Vous ne gagnez plus d'Expérience"
         ],
@@ -72219,7 +72572,7 @@
         },
         "stat_text": [
           "-20% à toutes les Résistances maximales",
-          "40% d'Augmentation de la Rareté des Objets cédés"
+          "+40% à la [PlayerItemRarity|Rareté des Objets]"
         ],
         "visuals": null
       }
@@ -72413,7 +72766,7 @@
     "stack_limit": null
   },
   "impale_chance_animated_sword": {
-    "description": "[DNT] Your attacks have a chance to impale enemies.",
+    "description": "Vos attaques ont des chances supplémentaires d'empaler les ennemis.",
     "invisible": false,
     "name": "Chances d'Empaler en attaquant",
     "removable": false,
@@ -72655,7 +73008,7 @@
     "name": "Folie de Sulfite",
     "removable": false,
     "stats": [
-      "from_league_item_quantity_+%_permyriad",
+      "from_league_item_rarity_+%_permyriad",
       "attack_speed_+%",
       "base_movement_velocity_+%",
       "base_cast_speed_+%",
@@ -72687,10 +73040,10 @@
     "stack_limit": null
   },
   "beyond_boss_buff_1": {
-    "description": "Le pouvoir volé de K'Tash coule dans vos veines. Vous rajoutez une partie de vos Dégâts physiques sous forme de Dégâts de feu et les Ennemis que vous tuez ont une chance d'Exploser, infligeant 10% de leur Vie maximale sous forme de Dégâts de feu.",
+    "description": "Le pouvoir volé de K'Tash coule dans vos veines. Vous rajoutez une partie de vos Dégâts physiques sous forme de Dégâts de feu et les Ennemis que vous tuez ont une chance d'Exploser, infligeant 10% de leur Vie maximale sous forme de Dégâts de feu. ",
     "invisible": false,
     "name": "Magnificence de K'Tash",
-    "removable": false,
+    "removable": true,
     "stats": [
       "base_actor_scale_+%",
       "physical_damage_%_to_add_as_fire",
@@ -72703,14 +73056,14 @@
       "BeyondBossBuff1": {
         "aura_radius_metres": null,
         "stats": {
-          "base_actor_scale_+%": 20,
-          "physical_damage_%_to_add_as_fire": 100,
-          "explode_enemies_for_10%_life_as_fire_on_kill_chance_%": 40
+          "base_actor_scale_+%": 15,
+          "physical_damage_%_to_add_as_fire": 50,
+          "explode_enemies_for_10%_life_as_fire_on_kill_chance_%": 20
         },
         "stat_text": [
-          "20% d'Augmentation de la taille du personnage",
-          "Rajoutez 100% des Dégâts physiques sous forme de Dégâts de feu",
-          "Les Ennemis que vous Tuez ont 40% de chances d'exploser, infligeant un dixième de leur Vie maximale sous forme de Dégâts de feu"
+          "15% d'Augmentation de la taille du personnage",
+          "Rajoutez 50% des Dégâts physiques sous forme de Dégâts de feu",
+          "Les Ennemis que vous Tuez ont 20% de chances d'exploser, infligeant un dixième de leur Vie maximale sous forme de Dégâts de feu"
         ],
         "visuals": null
       }
@@ -72718,10 +73071,10 @@
     "stack_limit": null
   },
   "beyond_boss_buff_2": {
-    "description": "Le pouvoir volé de Ghorr coule dans vos veines. Vous avez une chance d'Abasourdir les Ennemis au Toucher et avez une Perte des Dégâts subis.",
+    "description": "Le pouvoir volé de Ghorr coule dans vos veines. Vous avez une chance d'Abasourdir les Ennemis au Toucher et avez une Perte des Dégâts subis. ",
     "invisible": false,
     "name": "Magnificence de Ghorr",
-    "removable": false,
+    "removable": true,
     "stats": [
       "base_actor_scale_+%",
       "extra_gore",
@@ -72735,13 +73088,13 @@
       "BeyondBossBuff2": {
         "aura_radius_metres": null,
         "stats": {
-          "base_actor_scale_+%": 30,
+          "base_actor_scale_+%": 20,
           "extra_gore": 1,
           "debilitate_enemies_for_1_second_on_hit_%_chance": 10,
-          "damage_taken_+%_final_from_beyond_boss_buff": 10
+          "damage_taken_+%_final_from_beyond_boss_buff": -10
         },
         "stat_text": [
-          "30% d'Augmentation de la taille du personnage",
+          "20% d'Augmentation de la taille du personnage",
           "Extra gore",
           "10% de chances d'Abasourdir les Ennemis pendant 1 seconde au Toucher"
         ],
@@ -72751,10 +73104,10 @@
     "stack_limit": null
   },
   "beyond_boss_buff_3": {
-    "description": "Le pouvoir volé de Beidat coule dans vos veines. Vos Vitesse d'action est augmentée et vous rajoutez une partie de vos Dégâts physiques sous forme de Dégâts de foudre.",
+    "description": "Le pouvoir volé de Beidat coule dans vos veines. Vos Vitesse d'action est augmentée et vous rajoutez une partie de vos Dégâts physiques sous forme de Dégâts de foudre. ",
     "invisible": false,
     "name": "Magnificence de Beidat",
-    "removable": false,
+    "removable": true,
     "stats": [
       "base_actor_scale_+%",
       "action_speed_-%",
@@ -72767,14 +73120,14 @@
       "BeyondBossBuff3": {
         "aura_radius_metres": null,
         "stats": {
-          "base_actor_scale_+%": 20,
-          "action_speed_-%": -15,
-          "physical_damage_%_to_add_as_lightning": 100
+          "base_actor_scale_+%": 15,
+          "action_speed_-%": -10,
+          "physical_damage_%_to_add_as_lightning": 50
         },
         "stat_text": [
-          "20% d'Augmentation de la taille du personnage",
-          "15% d'Augmentation de Vitesse d'action",
-          "Rajoutez 100% des Dégâts physiques sous forme de Dégâts de foudre"
+          "15% d'Augmentation de la taille du personnage",
+          "10% d'Augmentation de Vitesse d'action",
+          "Rajoutez 50% des Dégâts physiques sous forme de Dégâts de foudre"
         ],
         "visuals": null
       }
@@ -72854,7 +73207,9 @@
           "damage_dealt_+%_to_beasts": 10,
           "can_see_monster_type_beasts": 1
         },
-        "stat_text": null,
+        "stat_text": [
+          "10% d'Augmentation de Dégâts contre les Bêtes"
+        ],
         "visuals": null
       }
     },
@@ -73311,15 +73666,26 @@
     ],
     "visuals": "invisible",
     "category": null,
-    "sources": null,
+    "sources": {
+      "Mods": [
+        {
+          "id": "UberIncursionTempleMonsterBonus",
+          "item": null,
+          "name": null,
+          "template": "UberIncursionTempleMonsterBonus",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
     "templates": {
       "BreachUnstableEnhancedMonsterBuff": {
         "aura_radius_metres": null,
         "stats": {
           "monster_difficulty_tankiness_+%": 75,
           "damage_+%": 15,
-          "from_league_item_rarity_+%_permyriad": 1500,
-          "from_league_item_quantity_+%_permyriad": 1000
+          "from_league_item_rarity_+%_permyriad": 2500,
+          "from_league_item_quantity_+%_permyriad": 0
         },
         "stat_text": [
           "15% d'Augmentation de Dégâts"
@@ -73331,11 +73697,24 @@
         "stats": {
           "monster_difficulty_tankiness_+%": 60,
           "damage_+%": 12,
-          "from_league_item_rarity_+%_permyriad": 1200,
-          "from_league_item_quantity_+%_permyriad": 800
+          "from_league_item_rarity_+%_permyriad": 2000,
+          "from_league_item_quantity_+%_permyriad": 0
         },
         "stat_text": [
           "12% d'Augmentation de Dégâts"
+        ],
+        "visuals": null
+      },
+      "BreachHiveEnhancedMonsterBuffEmpowered": {
+        "aura_radius_metres": null,
+        "stats": {
+          "monster_difficulty_tankiness_+%": 70,
+          "damage_+%": 14,
+          "from_league_item_rarity_+%_permyriad": 2667,
+          "from_league_item_quantity_+%_permyriad": 0
+        },
+        "stat_text": [
+          "14% d'Augmentation de Dégâts"
         ],
         "visuals": null
       },
@@ -73344,8 +73723,8 @@
         "stats": {
           "monster_difficulty_tankiness_+%": 15,
           "damage_+%": 10,
-          "from_league_item_rarity_+%_permyriad": 1000,
-          "from_league_item_quantity_+%_permyriad": 500
+          "from_league_item_rarity_+%_permyriad": 1500,
+          "from_league_item_quantity_+%_permyriad": 0
         },
         "stat_text": [
           "10% d'Augmentation de Dégâts"
@@ -73357,8 +73736,8 @@
         "stats": {
           "monster_difficulty_tankiness_+%": 15,
           "damage_+%": 15,
-          "from_league_item_rarity_+%_permyriad": 500,
-          "from_league_item_quantity_+%_permyriad": 500
+          "from_league_item_rarity_+%_permyriad": 1000,
+          "from_league_item_quantity_+%_permyriad": 0
         },
         "stat_text": [
           "15% d'Augmentation de Dégâts"
@@ -73370,7 +73749,7 @@
         "stats": {
           "monster_difficulty_tankiness_+%": 30,
           "damage_+%": 5,
-          "from_league_item_rarity_+%_permyriad": 0,
+          "from_league_item_rarity_+%_permyriad": 1000,
           "from_league_item_quantity_+%_permyriad": 0
         },
         "stat_text": [
@@ -73383,8 +73762,8 @@
         "stats": {
           "monster_difficulty_tankiness_+%": 30,
           "damage_+%": 8,
-          "from_league_item_rarity_+%_permyriad": 750,
-          "from_league_item_quantity_+%_permyriad": 750
+          "from_league_item_rarity_+%_permyriad": 1500,
+          "from_league_item_quantity_+%_permyriad": 0
         },
         "stat_text": [
           "8% d'Augmentation de Dégâts"
@@ -73396,11 +73775,37 @@
         "stats": {
           "monster_difficulty_tankiness_+%": 50,
           "damage_+%": 10,
-          "from_league_item_rarity_+%_permyriad": 2000,
-          "from_league_item_quantity_+%_permyriad": 1000
+          "from_league_item_rarity_+%_permyriad": 3000,
+          "from_league_item_quantity_+%_permyriad": 0
         },
         "stat_text": [
           "10% d'Augmentation de Dégâts"
+        ],
+        "visuals": null
+      },
+      "BlightMinibossEnhancedMonsterBuff": {
+        "aura_radius_metres": null,
+        "stats": {
+          "monster_difficulty_tankiness_+%": 30,
+          "damage_+%": 5,
+          "from_league_item_rarity_+%_permyriad": 1000,
+          "from_league_item_quantity_+%_permyriad": 0
+        },
+        "stat_text": [
+          "5% d'Augmentation de Dégâts"
+        ],
+        "visuals": null
+      },
+      "RitualMinibossEnhancedMonsterBuff": {
+        "aura_radius_metres": null,
+        "stats": {
+          "monster_difficulty_tankiness_+%": 40,
+          "damage_+%": 5,
+          "from_league_item_rarity_+%_permyriad": 1200,
+          "from_league_item_quantity_+%_permyriad": 0
+        },
+        "stat_text": [
+          "5% d'Augmentation de Dégâts"
         ],
         "visuals": null
       },
@@ -73409,8 +73814,8 @@
         "stats": {
           "monster_difficulty_tankiness_+%": 30,
           "damage_+%": 5,
-          "from_league_item_rarity_+%_permyriad": 900,
-          "from_league_item_quantity_+%_permyriad": 450
+          "from_league_item_rarity_+%_permyriad": 1500,
+          "from_league_item_quantity_+%_permyriad": 0
         },
         "stat_text": [
           "5% d'Augmentation de Dégâts"
@@ -73422,8 +73827,8 @@
         "stats": {
           "monster_difficulty_tankiness_+%": 30,
           "damage_+%": 5,
-          "from_league_item_rarity_+%_permyriad": 1500,
-          "from_league_item_quantity_+%_permyriad": 750
+          "from_league_item_rarity_+%_permyriad": 2500,
+          "from_league_item_quantity_+%_permyriad": 0
         },
         "stat_text": [
           "5% d'Augmentation de Dégâts"
@@ -73435,8 +73840,8 @@
         "stats": {
           "monster_difficulty_tankiness_+%": 30,
           "damage_+%": 5,
-          "from_league_item_rarity_+%_permyriad": 900,
-          "from_league_item_quantity_+%_permyriad": 450
+          "from_league_item_rarity_+%_permyriad": 1500,
+          "from_league_item_quantity_+%_permyriad": 0
         },
         "stat_text": [
           "5% d'Augmentation de Dégâts"
@@ -73448,8 +73853,8 @@
         "stats": {
           "monster_difficulty_tankiness_+%": 30,
           "damage_+%": 5,
-          "from_league_item_rarity_+%_permyriad": 900,
-          "from_league_item_quantity_+%_permyriad": 450
+          "from_league_item_rarity_+%_permyriad": 1500,
+          "from_league_item_quantity_+%_permyriad": 0
         },
         "stat_text": [
           "5% d'Augmentation de Dégâts"
@@ -73461,8 +73866,8 @@
         "stats": {
           "monster_difficulty_tankiness_+%": 30,
           "damage_+%": 5,
-          "from_league_item_rarity_+%_permyriad": 1200,
-          "from_league_item_quantity_+%_permyriad": 600
+          "from_league_item_rarity_+%_permyriad": 2000,
+          "from_league_item_quantity_+%_permyriad": 0
         },
         "stat_text": [
           "5% d'Augmentation de Dégâts"
@@ -73474,8 +73879,8 @@
         "stats": {
           "monster_difficulty_tankiness_+%": 30,
           "damage_+%": 5,
-          "from_league_item_rarity_+%_permyriad": 900,
-          "from_league_item_quantity_+%_permyriad": 450
+          "from_league_item_rarity_+%_permyriad": 1500,
+          "from_league_item_quantity_+%_permyriad": 0
         },
         "stat_text": [
           "5% d'Augmentation de Dégâts"
@@ -73487,8 +73892,8 @@
         "stats": {
           "monster_difficulty_tankiness_+%": 30,
           "damage_+%": 5,
-          "from_league_item_rarity_+%_permyriad": 1200,
-          "from_league_item_quantity_+%_permyriad": 600
+          "from_league_item_rarity_+%_permyriad": 2000,
+          "from_league_item_quantity_+%_permyriad": 0
         },
         "stat_text": [
           "5% d'Augmentation de Dégâts"
@@ -73500,8 +73905,8 @@
         "stats": {
           "monster_difficulty_tankiness_+%": 30,
           "damage_+%": 5,
-          "from_league_item_rarity_+%_permyriad": 1500,
-          "from_league_item_quantity_+%_permyriad": 750
+          "from_league_item_rarity_+%_permyriad": 2500,
+          "from_league_item_quantity_+%_permyriad": 0
         },
         "stat_text": [
           "5% d'Augmentation de Dégâts"
@@ -73513,8 +73918,8 @@
         "stats": {
           "monster_difficulty_tankiness_+%": 30,
           "damage_+%": 5,
-          "from_league_item_rarity_+%_permyriad": 900,
-          "from_league_item_quantity_+%_permyriad": 450
+          "from_league_item_rarity_+%_permyriad": 1500,
+          "from_league_item_quantity_+%_permyriad": 0
         },
         "stat_text": [
           "5% d'Augmentation de Dégâts"
@@ -73526,12 +73931,23 @@
         "stats": {
           "monster_difficulty_tankiness_+%": 30,
           "damage_+%": 5,
-          "from_league_item_rarity_+%_permyriad": 1500,
-          "from_league_item_quantity_+%_permyriad": 750
+          "from_league_item_rarity_+%_permyriad": 2500,
+          "from_league_item_quantity_+%_permyriad": 0
         },
         "stat_text": [
           "5% d'Augmentation de Dégâts"
         ],
+        "visuals": null
+      },
+      "UberIncursionTempleMonsterBonus": {
+        "aura_radius_metres": null,
+        "stats": {
+          "monster_difficulty_tankiness_+%": 150,
+          "damage_+%": 25,
+          "from_league_item_rarity_+%_permyriad": 10000,
+          "from_league_item_quantity_+%_permyriad": 0
+        },
+        "stat_text": null,
         "visuals": null
       }
     },
@@ -73557,8 +73973,8 @@
         "stats": {
           "monster_difficulty_tankiness_+%": 100,
           "damage_+%": 15,
-          "from_league_item_rarity_+%_permyriad": 2100,
-          "from_league_item_quantity_+%_permyriad": 1000
+          "from_league_item_rarity_+%_permyriad": 3000,
+          "from_league_item_quantity_+%_permyriad": 0
         },
         "stat_text": [
           "15% d'Augmentation de Dégâts"
@@ -73604,8 +74020,7 @@
     "stats": [
       "monster_difficulty_tankiness_+%",
       "damage_+%",
-      "from_league_item_rarity_+%_permyriad",
-      "from_league_item_quantity_+%_permyriad"
+      "from_league_item_rarity_+%_permyriad"
     ],
     "visuals": "invisible",
     "category": null,
@@ -73896,7 +74311,9 @@
     "removable": false,
     "stats": [
       "base_damage_taken_+%",
-      "explode_for_10%_life_as_physical_on_kill_chance_%"
+      "explode_for_10%_life_as_physical_on_kill_chance_%",
+      "cold_damage_taken_+%",
+      "fire_damage_taken_+%"
     ],
     "visuals": "invisible",
     "category": null,
@@ -74284,7 +74701,7 @@
     "stack_limit": null
   },
   "ritual_wisp_buff": {
-    "description": "Vous avez une augmentation du Tribut gagné.",
+    "description": "Vous bénéficiez d'une augmentation considérable du Tribut gagné.",
     "invisible": false,
     "name": "Bénédiction des Flammeroles",
     "removable": false,
@@ -74869,7 +75286,7 @@
     "stack_limit": null
   },
   "tincture_sporebloom": {
-    "description": "Vos armes de mêlée ont de l'effet de l'aveuglement et des chances d'aveugler et supplémentaires.",
+    "description": "Vos armes de mêlée ont de l'effet de l'aveuglement et des chances d'[Blind|Aveugler] supplémentaires.",
     "invisible": false,
     "name": "Teinture de Sporaison",
     "removable": false,
@@ -74928,7 +75345,7 @@
     "stack_limit": null
   },
   "tincture_unique4": {
-    "description": "Vous avez Coup de grâce et une augmentation de la rareté des objets trouvés par cumul de Brûlure de Mana.",
+    "description": "Vous avez Coup de grâce et un bonus de [PlayerItemRarity|Rareté des Objets] par cumul de Brûlure de Mana.",
     "invisible": false,
     "name": "La Bataille intérieure",
     "removable": false,
@@ -74944,7 +75361,7 @@
     "stack_limit": null
   },
   "tincture_unique5": {
-    "description": "Vos armes de mêlée infligent lianes agrippantes et la flétrissure.",
+    "description": "Vos armes de mêlée infligent lianes agrippantes et le flétrissement.",
     "invisible": false,
     "name": "Étreinte de la Belladone",
     "removable": false,
@@ -75283,6 +75700,20 @@
     "templates": null,
     "stack_limit": null
   },
+  "benevolenceboss_physical_aura": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "base_physical_damage_taken_per_minute"
+    ],
+    "visuals": "invisible",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "zangerboss_orb_degen": {
     "description": "Vous subissez des Dégâts de feu sur la durée, vos Résistances élémentaires maximales sont réduites et vous ne pouvez pas récupérer de Vie ni de Bouclier d'énergie",
     "invisible": false,
@@ -75300,6 +75731,22 @@
     "templates": null,
     "stack_limit": null
   },
+  "zangerboss_orb_degen_augury": {
+    "description": "Vous subissez des Dégâts physiques sur la durée et vous ne pouvez pas récupérer de Vie ni de Bouclier d'énergie",
+    "invisible": false,
+    "name": "Orbe putride",
+    "removable": false,
+    "stats": [
+      "base_physical_damage_taken_per_minute",
+      "cannot_recover_life",
+      "no_energy_shield_recovery"
+    ],
+    "visuals": "zangerboss_orb_degen_augury",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "zangerboss_orb_beam": {
     "description": "Vous ne pouvez pas récupérer de Vie ni de Bouclier d'énergie",
     "invisible": false,
@@ -75310,6 +75757,22 @@
       "no_energy_shield_recovery"
     ],
     "visuals": "zangerboss_orb_beam",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "zangerboss_orb_beam_augury": {
+    "description": "Vous ne pouvez pas récupérer de Vie ni de Bouclier d'énergie et votre Réduction des Dégâts physiques est diminuée",
+    "invisible": false,
+    "name": "Flamme du Sabbat",
+    "removable": false,
+    "stats": [
+      "cannot_recover_life",
+      "no_energy_shield_recovery",
+      "base_additional_physical_damage_reduction_%"
+    ],
+    "visuals": "zangerboss_orb_beam_augury",
     "category": "Debuff",
     "sources": null,
     "templates": null,
@@ -75372,7 +75835,7 @@
     "stack_limit": null
   },
   "divination_buff_abandoned_wealth": {
-    "description": "50% d'augmentation de la Rareté des objets cédés",
+    "description": "+50% à la [PlayerItemRarity|Rareté des Objets].",
     "invisible": false,
     "name": "La Richesse abandonnée",
     "removable": false,
@@ -75389,7 +75852,7 @@
           "base_item_found_rarity_+%": 50
         },
         "stat_text": [
-          "50% d'Augmentation de la Rareté des Objets cédés"
+          "+50% à la [PlayerItemRarity|Rareté des Objets]"
         ],
         "visuals": null
       }
@@ -75860,8 +76323,8 @@
           "damage_+%_for_you_and_allies_affected_by_your_auras": 50
         },
         "stat_text": [
-          "Vous et vos Alliés à proximité avez 30% d'Augmentation de Vitesse d'attaque et d'incantation",
-          "Vous et vos Alliés à proximité avez 50% d'Augmentation de Dégâts"
+          "Vous et vos Alliés dans un rayon de 6 mètres avez 30% d'Augmentation de Vitesse d'attaque et d'incantation",
+          "Vous et vos Alliés dans un rayon de 6 mètres avez 50% d'Augmentation de Dégâts"
         ],
         "visuals": null
       }
@@ -75922,7 +76385,7 @@
     "stack_limit": null
   },
   "divination_buff_rats": {
-    "description": "15% d'augmentation de la Vitesse d'attaque\r\n75% d'augmentation des Chances de coup critique globales\r\n150% d'augmentation du Score d'Évasion\r\n25% d'augmentation de la Rareté des objets cédés\r\n10% d'augmentation de la Vitesse de déplacement\r\n10% de réduction de la Taille du personnage",
+    "description": "15% d'Augmentation de la Vitesse d'attaque\r\n75% d'Augmentation des Chances de coup critique globales\r\n150% d'Augmentation du Score d'Évasion\r\n+25% à la [PlayerItemRarity|Rareté des Objets]\r\n10% d'Augmentation de la Vitesse de déplacement\r\n10% de Réduction de la Taille du personnage",
     "invisible": false,
     "name": "Les Rats",
     "removable": false,
@@ -75951,7 +76414,7 @@
         "stat_text": [
           "150% d'Augmentation du Score d'Évasion",
           "10% d'Augmentation de la Vitesse de déplacement",
-          "25% d'Augmentation de la Rareté des Objets cédés",
+          "+25% à la [PlayerItemRarity|Rareté des Objets]",
           "15% d'Augmentation de la Vitesse d'attaque",
           "75% d'Augmentation des Chances de Coup critique Globales",
           "10% de Réduction de la taille du personnage"
@@ -76070,7 +76533,7 @@
     "stack_limit": null
   },
   "divination_buff_the_darkest_dream": {
-    "description": "Vous infligez Flétrissure au Toucher pendant 2 secondes\r\nLes ennemis ont 4% d'augmentation des Dégâts élémentaires subis au Toucher de votre part pour chaque cumul de Flétrissure que vous leur avez infligé",
+    "description": "Vous infligez Flétrissement au Toucher pendant 2 secondes\r\nLes ennemis ont 4% d'augmentation des Dégâts élémentaires subis au Toucher de votre part pour chaque cumul de Flétrissement que vous leur avez infligé",
     "invisible": false,
     "name": "Le Rêve le plus sombre",
     "removable": false,
@@ -76444,6 +76907,14 @@
           "template": "TriggerSummonVoidSpawnSkillUnique__1",
           "stat_text": null,
           "stats": null
+        },
+        {
+          "id": "VisceraModIncarnationofFear",
+          "item": null,
+          "name": null,
+          "template": "TriggerSummonVoidSpawnSkillUnique__1",
+          "stat_text": null,
+          "stats": null
         }
       ]
     },
@@ -76652,7 +77123,7 @@
   "ignorance_beam_debuff": {
     "description": "Chaque cumul augmente de 8% les dégâts que vous subissez et vous rend 4% plus lent.",
     "invisible": false,
-    "name": "[DNT]",
+    "name": "[DNT - UNUSED]",
     "removable": false,
     "stats": [
       "base_damage_taken_+%",
@@ -76667,7 +77138,7 @@
   "unleash_power_channelled_stage": {
     "description": "[DNT] You have stages from channelling Unleash Power. These stages will be lost when reaching maximum to trigger spells.",
     "invisible": false,
-    "name": "[DNT] Unleash Power",
+    "name": "[DNT - UNUSED] Unleash Power",
     "removable": false,
     "stats": [],
     "visuals": "cyclone_channelled_stage",
@@ -76715,7 +77186,7 @@
     "stack_limit": null
   },
   "allflame_decay_quant_rarity": {
-    "description": "La Rareté objets trouvés diminuent sur la durée et augmentent en tuant des monstres Resplendissants.",
+    "description": "La [PlayerItemRarity|Rareté des Objets] diminuent sur la durée et augmentent en tuant des monstres Resplendissants.",
     "invisible": false,
     "name": "Resplendissement",
     "removable": false,
@@ -78183,7 +78654,7 @@
           "all_damage_can_chill": 1
         },
         "stat_text": [
-          "Les Altérations élémentaires que vous causez affectent également les autres Ennemis à proximité",
+          "Les Altérations élémentaires que vous infligez affectent également les autres Ennemis dans un rayon de 2 mètres",
           "Tous les Dégâts peuvent Embraser",
           "Vous infligez toujours l'Embrasement en Touchant",
           "Vous infligez toujours l'Électrocution en Touchant",
@@ -78199,7 +78670,7 @@
     "description": "Vous rajoutez une partie de vos Dégâts élémentaires sous forme de Dégâts de chaos.\r\nTant que vous disposez de cet effet bénéfique, il fait périodiquement apparaître une tornade de Rats qui inflige des Dégâts physiques sur la durée et réduit le Taux de récupération de Vie et de Bouclier d'énergie.",
     "invisible": false,
     "name": "Autel de Sang des Rats",
-    "removable": false,
+    "removable": true,
     "stats": [
       "elemental_damage_%_to_add_as_chaos"
     ],
@@ -78224,7 +78695,7 @@
     "description": "Vos obtenez une Augmentation de votre Multiplicateur de Dégâts sur la durée.\r\nTant que vous disposez de cet effet bénéfique, vous faites périodiquement apparaître une nuée de Sauterelles qui Entrave les ennemis.",
     "invisible": false,
     "name": "Autel de Sang des Sauterelles",
-    "removable": false,
+    "removable": true,
     "stats": [
       "dot_multiplier_+"
     ],
@@ -78249,7 +78720,7 @@
     "description": "Crapaud explosif a des chances supplémentaires d'être Déclenché lorsque vous tuez un Ennemi.",
     "invisible": false,
     "name": "Autel de Sang des Crapauds",
-    "removable": false,
+    "removable": true,
     "stats": [
       "exploding_toad_trigger_%_chance_from_unique"
     ],
@@ -78270,11 +78741,36 @@
     },
     "stack_limit": null
   },
+  "blood_shrine_toads_alt": {
+    "description": "Grâce à bénédiction du Crapaud, les ennemis que vous tuez explosent, infligeant un quart de leur vie maximale sous forme de Dégâts de chaos.",
+    "invisible": false,
+    "name": "Autel de Sang de la Bénédiction des Crapauds",
+    "removable": true,
+    "stats": [
+      "explode_enemies_for_25%_life_as_chaos_on_kill_chance_%"
+    ],
+    "visuals": "blood_shrine_toads_visual",
+    "category": "Buff shrine",
+    "sources": null,
+    "templates": {
+      "blood_shrine_toads_alt": {
+        "aura_radius_metres": null,
+        "stats": {
+          "explode_enemies_for_25%_life_as_chaos_on_kill_chance_%": 100
+        },
+        "stat_text": [
+          "Les Ennemis que vous Tuez ont 100% de chances d'exploser, infligeant un quart de leur Vie maximale sous forme de Dégâts de chaos"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
   "blood_shrine_chaos_resistance": {
     "description": "Vous subissez une partie des Dégâts physiques et des Dégâts élémentaires sous forme de Dégâts de chaos et vous obtenez une Augmentaion de Résistance au chaos.",
     "invisible": false,
     "name": "Autel de Sang des Corbeaux",
-    "removable": false,
+    "removable": true,
     "stats": [
       "base_chaos_damage_resistance_%",
       "physical_damage_taken_%_as_chaos",
@@ -78287,12 +78783,12 @@
       "blood_shrine_chaos_resistance": {
         "aura_radius_metres": null,
         "stats": {
-          "base_chaos_damage_resistance_%": 50,
+          "base_chaos_damage_resistance_%": 135,
           "physical_damage_taken_%_as_chaos": 10,
           "elemental_damage_taken_%_as_chaos": 10
         },
         "stat_text": [
-          "+50% à la Résistance au chaos",
+          "+135% à la Résistance au chaos",
           "10% des Dégâts physiques au Toucher sont subis sous forme de Dégâts de chaos",
           "10% des Dégâts élémentaires au Toucher sont subis sous forme de Dégâts de chaos"
         ],
@@ -78305,7 +78801,7 @@
     "description": "Vous Maudissez les ennemis avec Affaiblissement au Toucher et vous pouvez appliquer une Malédiction supplémentaire aux ennemis.",
     "invisible": false,
     "name": "Autel de Sang des Chauves-souris",
-    "removable": false,
+    "removable": true,
     "stats": [
       "curse_on_hit_%_enfeeble",
       "number_of_additional_curses_allowed"
@@ -78488,9 +78984,9 @@
     "stack_limit": null
   },
   "ghost_furnace_soul_buff": {
-    "description": "[DNT] You have increased Fire Damage over Time Multiplier per Ghostflame Soul",
+    "description": "[DNT - UNUSED] You have increased Fire Damage over Time Multiplier per Ghostflame Soul",
     "invisible": false,
-    "name": "[DNT] Ghostflame Soul",
+    "name": "[DNT - UNUSED] Ghostflame Soul",
     "removable": false,
     "stats": [
       "fire_dot_multiplier_+",
@@ -78853,7 +79349,7 @@
         "stat_text": [
           "+15% à la Résistance au froid",
           "30% d'Augmentation de Dégâts",
-          "Les Orbes de transmutation sont cédés sous forme d'Orbes du chaos à la place"
+          "Les Orbes de transmutation ont 10% de chances d'être cédés sous forme d'Orbes du chaos à la place"
         ],
         "visuals": null
       }
@@ -79023,7 +79519,7 @@
           "30% d'Augmentation de Dégâts",
           "15% d'Augmentation de la Vitesse de déplacement",
           "+5% à la Résistance au froid maximale",
-          "Les Orbes de transmutation sont cédés sous forme d'Orbes du chaos à la place"
+          "Les Orbes de transmutation ont 20% de chances d'être cédés sous forme d'Orbes du chaos à la place"
         ],
         "visuals": null
       }
@@ -80353,7 +80849,7 @@
     "stack_limit": 10
   },
   "deepwater_golden_lantern": {
-    "description": "Vous avez une Augmentation considérable de Rareté et de Quantité d'Objets trouvés.",
+    "description": "Vous bénéficiez d'un bonus de [PlayerItemRarity|Rareté des Objets] et d'une Augmentation de Quantité d'Objets.",
     "invisible": false,
     "name": "Lueur de la Lanterne dorée",
     "removable": false,
@@ -80445,7 +80941,7 @@
           "deepwater_transmute_to_chaos_%": 10
         },
         "stat_text": [
-          "Les Orbes de transmutation sont cédés sous forme d'Orbes du chaos à la place"
+          "Les Orbes de transmutation ont 10% de chances d'être cédés sous forme d'Orbes du chaos à la place"
         ],
         "visuals": null
       }
@@ -80570,7 +81066,7 @@
           "deepwater_transmute_to_chaos_%": 20
         },
         "stat_text": [
-          "Les Orbes de transmutation sont cédés sous forme d'Orbes du chaos à la place"
+          "Les Orbes de transmutation ont 20% de chances d'être cédés sous forme d'Orbes du chaos à la place"
         ],
         "visuals": null
       }
@@ -80675,6 +81171,716 @@
         "visuals": null
       }
     },
+    "stack_limit": null
+  },
+  "augury_boss_pre_immunity": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "base_cannot_be_damaged",
+      "base_cannot_be_stunned",
+      "hidden_monster_disallow_daemon_ai"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "augury_boss_frozen": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "base_cannot_be_damaged",
+      "base_cannot_be_stunned",
+      "is_hidden_monster",
+      "hidden_monster_disallow_daemon_ai",
+      "zero_action_speed"
+    ],
+    "visuals": "augury_boss_frozen",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "saresh_stacking_rot": {
+    "description": "Chaque cumul augmente les Dégâts que vous subissez de 5%",
+    "invisible": false,
+    "name": "Chair pourrissante",
+    "removable": false,
+    "stats": [
+      "base_damage_taken_+%"
+    ],
+    "visuals": "saresh_stacking_rot",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": 100
+  },
+  "grim_bonfire_damage_overtime": {
+    "description": "Vous subissez des dégâts de feu sur la durée.",
+    "invisible": false,
+    "name": "Flammes du bûcher",
+    "removable": false,
+    "stats": [
+      "base_fire_damage_taken_per_minute"
+    ],
+    "visuals": "ground_fire_burn",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "grim_bonfire_aura_visual": {
+    "description": "",
+    "invisible": true,
+    "name": "[DNT] Grim Bonfire",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "blood_flower_life_spent": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "blood_flower_allied_buff": {
+    "description": "Vous bénéficiez d'un bonus au multiplicateur de dégâts physiques sur la durée tant que vous vous trouvez à proximité d'une Fleur de sang alliée.",
+    "invisible": false,
+    "name": "Fleur de sang",
+    "removable": false,
+    "stats": [
+      "physical_dot_multiplier_+"
+    ],
+    "visuals": "blood_flower_allied_buff_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "blood_flower_damage_over_time": {
+    "description": "Vous subissez des dégâts physiques sur la durée car vous vous trouvez à proximité d'une Fleur de sang.",
+    "invisible": false,
+    "name": "Fleur de sang",
+    "removable": false,
+    "stats": [
+      "base_physical_damage_taken_per_minute"
+    ],
+    "visuals": "blood_flower_damage_over_time_visual",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "savage_giant_blackfire_buff": {
+    "description": "[DNT] How do you have this",
+    "invisible": true,
+    "name": "Feu noir (Effet bénéfique de géant)",
+    "removable": false,
+    "stats": [
+      "base_physical_damage_%_to_convert_to_fire"
+    ],
+    "visuals": "savage_giant_blackfire_buff_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "blackfire_wall_daemon_burn": {
+    "description": "Vous subissez des Dégâts de feu sur la durée.",
+    "invisible": false,
+    "name": "Feu noir",
+    "removable": false,
+    "stats": [
+      "base_fire_damage_taken_per_minute"
+    ],
+    "visuals": "blackfire_wall_daemon_burn_visual",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "backfire_wall_daemon_buff": {
+    "description": "[DNT] Blackfire Wall Buff",
+    "invisible": false,
+    "name": "[DNT] Blackfire Wall Buff",
+    "removable": false,
+    "stats": [],
+    "visuals": "backfire_wall_daemon_buff_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "fireball_alt_aura": {
+    "description": "Vous subissez des Dégâts de feu sur la durée.",
+    "invisible": false,
+    "name": "Boule de feu de la Radiation",
+    "removable": false,
+    "stats": [
+      "base_fire_damage_taken_per_minute"
+    ],
+    "visuals": "ignited",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "blight_parasite_miniboss_lightning_buff": {
+    "description": "",
+    "invisible": false,
+    "name": "Effet bénéfique du Parasite infesté",
+    "removable": false,
+    "stats": [
+      "base_chance_to_shock_%",
+      "physical_damage_%_to_add_as_lightning"
+    ],
+    "visuals": "blight_parasite_miniboss_lightning_buff_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "terrified_debuff": {
+    "description": "Vous êtes Terrifié. Les touches des ennemis bénéficient d'un bonus de Chances de coup critique et d'un bonus au Multiplicateur de coup critique contre vous.",
+    "invisible": false,
+    "name": "Terrifié",
+    "removable": false,
+    "stats": [
+      "enemy_additional_critical_strike_multiplier_against_self",
+      "enemy_additional_critical_strike_chance_against_self"
+    ],
+    "visuals": "terrified",
+    "category": "Debuff",
+    "sources": null,
+    "templates": {
+      "VisceraTerrifiedDebuff": {
+        "aura_radius_metres": null,
+        "stats": {
+          "enemy_additional_critical_strike_multiplier_against_self": 25,
+          "enemy_additional_critical_strike_chance_against_self": 50
+        },
+        "stat_text": [
+          "+0.5% de Chances de Coup critique supplémentaires au Toucher contre vous"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "icicle_dart_target_debuff": {
+    "description": "Vous avez été frappé par un morceau de glace enchantée. D'autres dards de glace cilberont votre position.",
+    "invisible": false,
+    "name": "Dard de glace",
+    "removable": false,
+    "stats": [],
+    "visuals": "icicle_dart_target_debuff_visual",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "screecher_cold_buff": {
+    "description": "",
+    "invisible": true,
+    "name": "Hurleur (froid)",
+    "removable": false,
+    "stats": [
+      "physical_damage_%_to_add_as_cold"
+    ],
+    "visuals": "invisible",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "screecher_lightning_buff": {
+    "description": "",
+    "invisible": true,
+    "name": "Hurleur (foudre)",
+    "removable": false,
+    "stats": [
+      "physical_damage_%_to_add_as_lightning"
+    ],
+    "visuals": "invisible",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "petrified_amber_buff": {
+    "description": "L'Or cédé par les ennemis tués a une chance d'être dupliqué.",
+    "invisible": false,
+    "name": "Sang d'ambre",
+    "removable": false,
+    "stats": [
+      "%_chance_to_duplicate_dropped_gold"
+    ],
+    "visuals": "petrified_amber_buff",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "verisium_experience_buff": {
+    "description": "Vous bénéficiez d'une augmentation de l'expérience gagnée et les monstres ont une chance de céder de la Poussière thaumaturgique. Ces effets augmentent avec le nombre de cumuls de l'Effet bénéfique.",
+    "invisible": false,
+    "name": "Infusion de Vérisium",
+    "removable": false,
+    "stats": [
+      "experience_gain_+%",
+      "slain_monster_equipment_drops_grant_dust_chance_permyriad"
+    ],
+    "visuals": "verisium_buff",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "gigacrow_crownado_debuff": {
+    "description": "Vous subissez des dégâts de feu sur la durée.",
+    "invisible": false,
+    "name": "Tornade de feu noir",
+    "removable": false,
+    "stats": [
+      "base_fire_damage_taken_per_minute"
+    ],
+    "visuals": "gigacrow_crownado_debuff_visual",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "viscera_added_cold_damage_aura": {
+    "description": "Vous et vos alliés à proximité infligez des dégâts de froid supplémentaire.",
+    "invisible": false,
+    "name": "Aura de Dégâts de froid",
+    "removable": false,
+    "stats": [
+      "global_minimum_added_cold_damage",
+      "global_maximum_added_cold_damage"
+    ],
+    "visuals": "viscera_aura_cold_damage",
+    "category": "Buff",
+    "sources": {
+      "Mods": [
+        {
+          "id": "VisceraModChattersLow",
+          "item": null,
+          "name": null,
+          "template": "VisceraColdDamageAuraLow",
+          "stat_text": null,
+          "stats": null
+        },
+        {
+          "id": "VisceraModChattersMed",
+          "item": null,
+          "name": null,
+          "template": "VisceraColdDamageAuraMed",
+          "stat_text": null,
+          "stats": null
+        },
+        {
+          "id": "VisceraModChattersHigh",
+          "item": null,
+          "name": null,
+          "template": "VisceraColdDamageAuraHigh",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
+    "templates": {
+      "VisceraColdDamageAuraLow": {
+        "aura_radius_metres": 5.0,
+        "stats": {
+          "global_minimum_added_cold_damage": 8,
+          "global_maximum_added_cold_damage": 12
+        },
+        "stat_text": [
+          "Ajoute 8 à 12 Dégâts de froid"
+        ],
+        "visuals": null
+      },
+      "VisceraColdDamageAuraMed": {
+        "aura_radius_metres": 5.0,
+        "stats": {
+          "global_minimum_added_cold_damage": 25,
+          "global_maximum_added_cold_damage": 40
+        },
+        "stat_text": [
+          "Ajoute 25 à 40 Dégâts de froid"
+        ],
+        "visuals": null
+      },
+      "VisceraColdDamageAuraHigh": {
+        "aura_radius_metres": 5.0,
+        "stats": {
+          "global_minimum_added_cold_damage": 50,
+          "global_maximum_added_cold_damage": 75
+        },
+        "stat_text": [
+          "Ajoute 50 à 75 Dégâts de froid"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "monster_mod_kurgals_gasp_revived": {
+    "description": "Le Monstre est ressuscité et amélioré pendant une certaine durée.",
+    "invisible": false,
+    "name": "Souffle de Kurgal",
+    "removable": false,
+    "stats": [],
+    "visuals": "monster_mod_kurgals_gasp_revived_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "augury_debuff_life_and_es_recovery_rate": {
+    "description": "Vous avez une Réduction de Taux de Récupération de Vie et de Bouclier d'énergie.",
+    "invisible": false,
+    "name": "Pourriture cadavérique",
+    "removable": false,
+    "stats": [
+      "life_recovery_rate_+%",
+      "energy_shield_recovery_rate_+%"
+    ],
+    "visuals": "augury_debuff_life_and_es_recovery_rate_visual",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": 5
+  },
+  "ultimatum_soul_core_held": {
+    "description": "Vous tenez un Noyau d'âme.\nLes Monstres d'Ultimatum gagnent des Âmes en vous Touchant.\nLa durée des rencontres d'Ultimatum de Survie est réduite, les Ultimatums nécessitent de tuer moins d'ennemis pour progresser, et les Cercles de pierre se remplissent plus rapidement.",
+    "invisible": false,
+    "name": "Noyau d'âme",
+    "removable": false,
+    "stats": [
+      "ultimatum_monsters_gain_x_souls_on_hit_vs_self"
+    ],
+    "visuals": "ultimatum_soul_core_held_visual",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "savage_witch_burning_debuff": {
+    "description": "Vous subissez des dégâts de feu sur la durée tant que vous vous trouvez à proximité d'une Effigie des Luminosiers.",
+    "invisible": false,
+    "name": "Noireflamme des Luminosiers",
+    "removable": false,
+    "stats": [
+      "base_fire_damage_taken_per_minute"
+    ],
+    "visuals": "savage_witch_burning_debuff_visual",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "neglect_guardian_crow_debuff": {
+    "description": "Vous subissez des dégâts physiques sur la durée tant que vous vous trouvez dans une Tempête de corbeaux.",
+    "invisible": false,
+    "name": "Tempête de corbeaux",
+    "removable": false,
+    "stats": [
+      "base_physical_damage_taken_per_minute"
+    ],
+    "visuals": "Neglect_Statue_AoE_Visual",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "offerings_grant_damage": {
+    "description": "[DNT] You have increased Damage",
+    "invisible": true,
+    "name": "[DNT] Offering",
+    "removable": false,
+    "stats": [
+      "damage_+%"
+    ],
+    "visuals": "invisible",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "have_used_attack_movement_skill_recently": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "have_used_attack_movement_skill_recently"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "betrayal_free_syndicate_buff": {
+    "description": "Vous ne pouvez pas être étourdi ni gelé et bénéficiez d'une augmentation de vitesse de déplacement.",
+    "invisible": false,
+    "name": "Liberté de mouvement",
+    "removable": false,
+    "stats": [
+      "base_cannot_be_stunned",
+      "base_cannot_be_frozen",
+      "base_movement_velocity_+%"
+    ],
+    "visuals": "betrayal_free_syndicate_buff_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "BetrayalFreedBuff": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_cannot_be_stunned": 1,
+          "base_cannot_be_frozen": 1,
+          "base_movement_velocity_+%": 20
+        },
+        "stat_text": [
+          "Vous ne pouvez pas être Étourdi",
+          "Immunité au Gel",
+          "20% d'Augmentation de la Vitesse de déplacement"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "betrayal_interrogate_syndicate_buff": {
+    "description": "Vous bénéficiez d'une augmentation de l'expérience gagnée.",
+    "invisible": false,
+    "name": "Renseignement opérationnel",
+    "removable": false,
+    "stats": [
+      "experience_gain_+%"
+    ],
+    "visuals": "betrayal_interrogate_syndicate_buff_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "BetrayalInterrogateBuff": {
+        "aura_radius_metres": null,
+        "stats": {
+          "experience_gain_+%": 10
+        },
+        "stat_text": [
+          "10% d'Augmentation du gain d'Expérience"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "flesh_barrier": {
+    "description": "Les Dégâts au Toucher sont subis par cette barrière avant d'affecter votre Vie ou votre Bouclier d'énergie",
+    "invisible": false,
+    "name": "Sang amer",
+    "removable": true,
+    "stats": [],
+    "visuals": "flesh_barrier_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "flesh_barrier_triggered_buff": {
+    "description": "Vos sorts bénéficient d'une Augmentation de Zone d'effet, de Chances de Coup critique et d'un bonus au Multiplicateur de Coup critique",
+    "invisible": false,
+    "name": "Lamentation",
+    "removable": true,
+    "stats": [
+      "base_spell_critical_strike_multiplier_+",
+      "spell_area_of_effect_+%",
+      "spell_critical_strike_chance_+%",
+      "has_flesh_barrier_triggered_buff"
+    ],
+    "visuals": "flesh_barrier_triggered_buff_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "FleshBarrierTriggeredBuff": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_spell_critical_strike_multiplier_+": 50,
+          "spell_area_of_effect_+%": 100,
+          "spell_critical_strike_chance_+%": 200,
+          "has_flesh_barrier_triggered_buff": 1
+        },
+        "stat_text": [
+          "+50% au Multiplicateur de Coup critique pour les Dégâts des Sorts",
+          "Les Aptitudes de Sort ont 100% d'Augmentation de Zone d'effet",
+          "200% d'Augmentation des Chances de Coup critique pour les Sorts"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "breach_threads_wombgift_drop_visuals": {
+    "description": "",
+    "invisible": false,
+    "name": "Fertilité de Chayula",
+    "removable": false,
+    "stats": [],
+    "visuals": "breach_thread_fruit_visuals",
+    "category": "Buff shrine",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "torment_touched_procurator": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "torment_touched_procurator",
+    "category": null,
+    "sources": {
+      "Mods": [
+        {
+          "id": "TormentTouchedEffectProcurator",
+          "item": null,
+          "name": null,
+          "template": "TormentTouchedEffectProcurator",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
+    "templates": {
+      "TormentTouchedEffectProcurator": {
+        "aura_radius_metres": null,
+        "stats": null,
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "torment_possessed_procurator": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "torment_procurator",
+    "category": null,
+    "sources": {
+      "Mods": [
+        {
+          "id": "TormentPossessedEffectProcurator",
+          "item": null,
+          "name": null,
+          "template": "TormentPossessedEffectProcurator",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
+    "templates": {
+      "TormentPossessedEffectProcurator": {
+        "aura_radius_metres": null,
+        "stats": null,
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "spellcast_fourth_use_counter": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "spellcast_sixth_use_counter": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "track_gain_spell_cost_every_second_cast": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "einhar_blood_explode_buff": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "explode_on_death_for_%_life_as_physical_damage_blood"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": {
+      "BestiaryEinharBloodExplosionAura": {
+        "aura_radius_metres": 6.5,
+        "stats": {
+          "explode_on_death_for_%_life_as_physical_damage_blood": 25
+        },
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "player_is_delirious": {
+    "description": "Vous octroie une Réduction des Dégâts subis, des Dégâts, et de la Vitesse d'attaque, d'incantation et de déplacement en fonction de votre position actuelle au sein des Brumes du Délire.",
+    "invisible": false,
+    "name": "Délirant",
+    "removable": false,
+    "stats": [],
+    "visuals": "player_affliction_buff",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
     "stack_limit": null
   }
 }

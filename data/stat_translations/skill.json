@@ -9833,38 +9833,18 @@
       {
         "condition": [
           {
-            "min": 1,
+            "min": null,
             "max": null,
             "negated": null
           }
         ],
         "format": [
-          "#"
+          "+#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "{0}% increased Rarity of Items Dropped by Slain enemies",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "{0}% reduced Rarity of Items Dropped by Slain enemies",
+        "string": "{0}% to [PlayerItemRarity|Rarity] of Items Dropped by Slain enemies",
         "reminder_text": null,
         "is_markup": null
       }
@@ -10509,7 +10489,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Gain 1 Bark each second if you haven't been Hit by an Enemy Attack Recently\nLose 1 Bark when Hit by an Enemy Attack\nMaximum {0} Bark",
+        "string": "Gain 2 Bark each second if you haven't been Hit by an Enemy Attack Recently\nLose 1 Bark when Hit by an Enemy Attack\nMaximum {0} Bark",
         "reminder_text": "(Recently refers to the past 4 seconds)",
         "is_markup": null
       }
@@ -14898,6 +14878,55 @@
         "index_handlers": [
           []
         ],
+        "string": "Never deal Critical Strikes",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "global_cannot_crit"
+    ],
+    "trade_stats": [
+      {
+        "id": "explicit.stat_3638599682",
+        "text": "Never deal Critical Strikes",
+        "type": "explicit",
+        "option": null
+      },
+      {
+        "id": "scourge.stat_3638599682",
+        "text": "Never deal Critical Strikes",
+        "type": "scourge",
+        "option": null
+      }
+    ],
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
         "string": "Cannot inflict Ailments",
         "reminder_text": null,
         "is_markup": null
@@ -16446,8 +16475,8 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% chance to Blind enemies on hit",
-        "reminder_text": "(Being Blinded causes 20% less Accuracy Rating and Evasion Rating, for 4 seconds)",
+        "string": "{0}% chance to [Blind] enemies on hit",
+        "reminder_text": null,
         "is_markup": null
       },
       {
@@ -16464,8 +16493,8 @@
         "index_handlers": [
           []
         ],
-        "string": "Blind enemies on hit",
-        "reminder_text": "(Being Blinded causes 20% less Accuracy Rating and Evasion Rating, for 4 seconds)",
+        "string": "[Blind] enemies on hit",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -16536,7 +16565,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% increased Blinding duration",
+        "string": "{0}% increased [Blind|Blinding] duration",
         "reminder_text": null,
         "is_markup": null
       },
@@ -16556,7 +16585,7 @@
             "negate"
           ]
         ],
-        "string": "{0}% reduced Blinding duration",
+        "string": "{0}% reduced [Blind|Blinding] duration",
         "reminder_text": null,
         "is_markup": null
       }
@@ -25429,7 +25458,14 @@
     "ids": [
       "additional_base_critical_strike_chance"
     ],
-    "trade_stats": null,
+    "trade_stats": [
+      {
+        "id": "explicit.stat_1909401378",
+        "text": "+#% to Critical Strike Chance",
+        "type": "explicit",
+        "option": null
+      }
+    ],
     "hidden": null,
     "French": null,
     "German": null,
@@ -27803,7 +27839,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Totems Reflect {0}% of their maximum Life as Fire Damage to nearby Enemies when Hit",
+        "string": "Totems Reflect {0}% of their maximum Life as Fire Damage to Enemies within a base radius of 1.8 metres when Hit",
         "reminder_text": null,
         "is_markup": null
       }
@@ -27811,20 +27847,7 @@
     "ids": [
       "totem_%_maximum_life_inflicted_as_aoe_fire_damage_when_hit"
     ],
-    "trade_stats": [
-      {
-        "id": "explicit.stat_1723061251",
-        "text": "Totems Reflect #% of their maximum Life as Fire Damage to nearby Enemies when Hit",
-        "type": "explicit",
-        "option": null
-      },
-      {
-        "id": "implicit.stat_1723061251",
-        "text": "Totems Reflect #% of their maximum Life as Fire Damage to nearby Enemies when Hit",
-        "type": "implicit",
-        "option": null
-      }
-    ],
+    "trade_stats": null,
     "hidden": null,
     "French": null,
     "German": null,
@@ -30288,6 +30311,142 @@
         "string": "Barnacle Snap radius is {2} metres",
         "reminder_text": null,
         "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 11,
+            "max": 11,
+            "negated": null
+          },
+          {
+            "min": 10,
+            "max": 10,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [
+            "locations_to_metres"
+          ],
+          []
+        ],
+        "string": "Base targeting radius is {1} metre",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 11,
+            "max": 11,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [
+            "locations_to_metres"
+          ],
+          []
+        ],
+        "string": "Base targeting radius is {1} metres",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 11,
+            "max": 11,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 10,
+            "max": 10,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "ignore",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          [
+            "locations_to_metres"
+          ]
+        ],
+        "string": "Targeting radius is {2} metre",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 11,
+            "max": 11,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "ignore",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          [
+            "locations_to_metres"
+          ]
+        ],
+        "string": "Targeting radius is {2} metres",
+        "reminder_text": null,
+        "is_markup": null
       }
     ],
     "ids": [
@@ -30621,8 +30780,8 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% chance to inflict Withered for 2 seconds on Hit",
-        "reminder_text": "(Withered applies 6% increased Chaos Damage Taken, and can be inflicted up to 15 times)",
+        "string": "{0}% chance to inflict [Withered] for 2 seconds on Hit",
+        "reminder_text": null,
         "is_markup": null
       },
       {
@@ -30639,28 +30798,15 @@
         "index_handlers": [
           []
         ],
-        "string": "Always inflict Withered for 2 seconds on Hit",
-        "reminder_text": "(Withered applies 6% increased Chaos Damage Taken, and can be inflicted up to 15 times)",
+        "string": "Always inflict [Withered] for 2 seconds on Hit",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
     "ids": [
       "active_skill_buff_wither_on_hit_%_chance_to_grant"
     ],
-    "trade_stats": [
-      {
-        "id": "explicit.stat_1957711555",
-        "text": "#% chance to inflict Withered for 2 seconds on Hit",
-        "type": "explicit",
-        "option": null
-      },
-      {
-        "id": "implicit.stat_1957711555",
-        "text": "#% chance to inflict Withered for 2 seconds on Hit",
-        "type": "implicit",
-        "option": null
-      }
-    ],
+    "trade_stats": null,
     "hidden": null,
     "French": null,
     "German": null,
@@ -37385,7 +37531,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Nearby Enemies are Blinded while in Sand Stance\nYou take {0}% more Damage from Attacks from Enemies that aren't nearby while in Sand Stance\nNearby Enemies are Maimed while in Blood Stance",
+        "string": "Nearby Enemies are [Blind|Blinded] while in Sand Stance\nYou take {0}% more Damage from Attacks from Enemies that aren't nearby while in Sand Stance\nNearby Enemies are Maimed while in Blood Stance",
         "reminder_text": "(Maimed enemies have 30% reduced Movement Speed)",
         "is_markup": null
       },
@@ -37405,7 +37551,7 @@
             "negate"
           ]
         ],
-        "string": "Nearby Enemies are Blinded while in Sand Stance\nYou take {0}% less Damage from Attacks from Enemies that aren't nearby while in Sand Stance\nNearby Enemies are Maimed while in Blood Stance",
+        "string": "Nearby Enemies are [Blind|Blinded] while in Sand Stance\nYou take {0}% less Damage from Attacks from Enemies that aren't nearby while in Sand Stance\nNearby Enemies are Maimed while in Blood Stance",
         "reminder_text": "(Maimed enemies have 30% reduced Movement Speed)",
         "is_markup": null
       }
@@ -41118,8 +41264,8 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% increased Blind Effect",
-        "reminder_text": "(Being Blinded causes 20% less Accuracy Rating and Evasion Rating, for 4 seconds)",
+        "string": "{0}% increased [Blind] Effect",
+        "reminder_text": null,
         "is_markup": null
       },
       {
@@ -41138,28 +41284,105 @@
             "negate"
           ]
         ],
-        "string": "{0}% reduced Blind Effect",
-        "reminder_text": "(Being Blinded causes 20% less Accuracy Rating and Evasion Rating, for 4 seconds)",
+        "string": "{0}% reduced [Blind] Effect",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
     "ids": [
       "blind_effect_+%"
     ],
-    "trade_stats": [
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": [
       {
-        "id": "explicit.stat_1585769763",
-        "text": "#% increased Blind Effect",
-        "type": "explicit",
-        "option": null
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Maximum {0} Bloom",
+        "reminder_text": null,
+        "is_markup": null
       },
       {
-        "id": "implicit.stat_1585769763",
-        "text": "#% increased Blind Effect",
-        "type": "implicit",
-        "option": null
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Maximum {0} Blooms",
+        "reminder_text": null,
+        "is_markup": null
       }
     ],
+    "ids": [
+      "virtual_blood_flower_maximum_flowers"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Blooms grant {0}% to Physical Damage over Time Multiplier",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "blood_flower_physical_dot_multiplier_+_to_grant"
+    ],
+    "trade_stats": null,
     "hidden": null,
     "French": null,
     "German": null,
@@ -41375,8 +41598,8 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% chance to Blind Enemies on Hit with Attacks while in Sand Stance",
-        "reminder_text": "(Being Blinded causes 20% less Accuracy Rating and Evasion Rating, for 4 seconds)",
+        "string": "{0}% chance to [Blind] Enemies on Hit with Attacks while in Sand Stance",
+        "reminder_text": null,
         "is_markup": null
       },
       {
@@ -41393,8 +41616,8 @@
         "index_handlers": [
           []
         ],
-        "string": "Blind Enemies on Hit with Attacks while in Sand Stance",
-        "reminder_text": "(Being Blinded causes 20% less Accuracy Rating and Evasion Rating, for 4 seconds)",
+        "string": "[Blind] Enemies on Hit with Attacks while in Sand Stance",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -47387,7 +47610,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% increased Critical Strike Chance against Blinded Enemies",
+        "string": "{0}% increased Critical Strike Chance against [Blind|Blinded] Enemies",
         "reminder_text": null,
         "is_markup": null
       },
@@ -47407,7 +47630,7 @@
             "negate"
           ]
         ],
-        "string": "{0}% reduced Critical Strike Chance against Blinded Enemies",
+        "string": "{0}% reduced Critical Strike Chance against [Blind|Blinded] Enemies",
         "reminder_text": null,
         "is_markup": null
       }
@@ -47415,20 +47638,7 @@
     "ids": [
       "critical_strike_chance_+%_vs_blinded_enemies"
     ],
-    "trade_stats": [
-      {
-        "id": "explicit.stat_1939202111",
-        "text": "#% increased Critical Strike Chance against Blinded Enemies",
-        "type": "explicit",
-        "option": null
-      },
-      {
-        "id": "fractured.stat_1939202111",
-        "text": "#% increased Critical Strike Chance against Blinded Enemies",
-        "type": "fractured",
-        "option": null
-      }
-    ],
+    "trade_stats": null,
     "hidden": null,
     "French": null,
     "German": null,
@@ -48033,6 +48243,12 @@
         "text": "#% increased Damage if you have Consumed a corpse Recently",
         "type": "explicit",
         "option": null
+      },
+      {
+        "id": "implicit.stat_2118708619",
+        "text": "#% increased Damage if you have Consumed a corpse Recently",
+        "type": "implicit",
+        "option": null
       }
     ],
     "hidden": null,
@@ -48250,6 +48466,12 @@
         "text": "#% increased Damage with Hits against Chilled Enemies",
         "type": "fractured",
         "option": null
+      },
+      {
+        "id": "implicit.stat_2805714016",
+        "text": "#% increased Damage with Hits against Chilled Enemies",
+        "type": "implicit",
+        "option": null
       }
     ],
     "hidden": null,
@@ -48307,7 +48529,14 @@
     "ids": [
       "damage_+%_vs_enemies_on_full_life"
     ],
-    "trade_stats": null,
+    "trade_stats": [
+      {
+        "id": "implicit.stat_3537775677",
+        "text": "#% increased Damage with Hits and Ailments against Enemies that are on Full Life",
+        "type": "implicit",
+        "option": null
+      }
+    ],
     "hidden": null,
     "French": null,
     "German": null,
@@ -48728,6 +48957,12 @@
         "text": "#% increased Damage with Hits and Ailments per Curse on Enemy",
         "type": "fractured",
         "option": null
+      },
+      {
+        "id": "implicit.stat_1818773442",
+        "text": "#% increased Damage with Hits and Ailments per Curse on Enemy",
+        "type": "implicit",
+        "option": null
       }
     ],
     "hidden": null,
@@ -48793,28 +49028,15 @@
         "index_handlers": [
           []
         ],
-        "string": "Damaging Ailments deal damage {0}% faster",
-        "reminder_text": "(They will deal the same total damage over a shorter duration)",
+        "string": "Damaging Ailments deal damage {0}% [DamageFaster|Faster]",
+        "reminder_text": "(Ailments that deal Damage are Bleeding, Ignited, and Poisoned)",
         "is_markup": null
       }
     ],
     "ids": [
       "damaging_ailments_deal_damage_+%_faster"
     ],
-    "trade_stats": [
-      {
-        "id": "explicit.stat_538241406",
-        "text": "Damaging Ailments deal damage #% faster",
-        "type": "explicit",
-        "option": null
-      },
-      {
-        "id": "fractured.stat_538241406",
-        "text": "Damaging Ailments deal damage #% faster",
-        "type": "fractured",
-        "option": null
-      }
-    ],
+    "trade_stats": null,
     "hidden": null,
     "French": null,
     "German": null,
@@ -53712,6 +53934,44 @@
       {
         "condition": [
           {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds"
+          ]
+        ],
+        "string": "Every second, inflict [Withered] on nearby Enemies for {0} seconds",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "every_1_second_nearby_enemies_withered_for_X_ms_to_grant"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
             "min": 1000,
             "max": 1000,
             "negated": null
@@ -54487,8 +54747,8 @@
         "index_handlers": [
           []
         ],
-        "string": "Bleeding inflicted by this Skill deals Damage {0}% faster",
-        "reminder_text": "(They will deal the same total damage over a shorter duration)",
+        "string": "Bleeding inflicted by this Skill deals Damage {0}% [DamageFaster|Faster]",
+        "reminder_text": "(Bleeding deals Physical Damage over time, based on the base Physical Damage of the Skill. Damage is 200% higher while moving)",
         "is_markup": null
       }
     ],
@@ -54523,8 +54783,8 @@
         "index_handlers": [
           []
         ],
-        "string": "Ignites deal Damage {0}% faster",
-        "reminder_text": "(They will deal the same total damage over a shorter duration)",
+        "string": "Ignites deal Damage {0}% [DamageFaster|Faster]",
+        "reminder_text": null,
         "is_markup": null
       },
       {
@@ -54543,7 +54803,7 @@
             "negate"
           ]
         ],
-        "string": "Ignites deal Damage {0}% slower",
+        "string": "Ignites deal Damage {0}% [DamageSlower|Slower]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -57874,8 +58134,8 @@
             "milliseconds_to_seconds_0dp"
           ]
         ],
-        "string": "Consume all Frenzy Charges when you Hit an enemy while at maximum Frenzy Charges to gain Onslaught for {0} second per Charge consumed",
-        "reminder_text": "(Onslaught grants 20% increased Attack, Cast, and Movement Speed)",
+        "string": "Consume all Frenzy Charges when you Hit an enemy while at maximum Frenzy Charges to gain [Onslaught] for {0} second per Charge consumed",
+        "reminder_text": null,
         "is_markup": null
       },
       {
@@ -57894,8 +58154,8 @@
             "milliseconds_to_seconds_2dp"
           ]
         ],
-        "string": "Consume all Frenzy Charges when you Hit an enemy while at maximum Frenzy Charges to gain Onslaught for {0} seconds per Charge consumed",
-        "reminder_text": "(Onslaught grants 20% increased Attack, Cast, and Movement Speed)",
+        "string": "Consume all Frenzy Charges when you Hit an enemy while at maximum Frenzy Charges to gain [Onslaught] for {0} seconds per Charge consumed",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -59340,6 +59600,42 @@
           }
         ],
         "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Gain Malignant Madness on use",
+        "reminder_text": "(Malignant Madness reduces Damage and Action Speed by 10%, for 8 seconds)",
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "gain_malignant_madness_on_skill_use"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
           "#"
         ],
         "index_handlers": [
@@ -60018,8 +60314,8 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% chance to Blind enemies on hit",
-        "reminder_text": "(Being Blinded causes 20% less Accuracy Rating and Evasion Rating, for 4 seconds)",
+        "string": "{0}% chance to [Blind] enemies on hit",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -60810,6 +61106,60 @@
     ],
     "ids": [
       "greater_projectile_intensity_projectile_damage_+%_final_per_intensity"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0} maximum Witchhunter's Pyre",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0} to maximum Witchhunter's Pyres",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "grim_bonfire_maximum_bonfires"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -63679,6 +64029,12 @@
         "option": null
       },
       {
+        "id": "implicit.stat_298173317",
+        "text": "#% increased Impale Effect",
+        "type": "implicit",
+        "option": null
+      },
+      {
         "id": "scourge.stat_298173317",
         "text": "#% increased Impale Effect",
         "type": "scourge",
@@ -64714,7 +65070,14 @@
       "killing_blow_consumes_corpse_restore_x_life",
       "killing_blow_consumes_corpse_restore_x_mana"
     ],
-    "trade_stats": null,
+    "trade_stats": [
+      {
+        "id": "implicit.stat_1218107074",
+        "text": "Killing Blows Consume corpses to Recover # Life and # Mana",
+        "type": "implicit",
+        "option": null
+      }
+    ],
     "hidden": null,
     "French": null,
     "German": null,
@@ -67318,6 +67681,24 @@
       {
         "condition": [
           {
+            "min": 2000000000,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "This Skill will Trigger once a total of infinte Mana has been Spent on Bow Attacks not Supported by Manaforged Arrows",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
             "min": null,
             "max": null,
             "negated": null
@@ -69442,6 +69823,12 @@
         "text": "Minions have #% chance to deal Double Damage",
         "type": "fractured",
         "option": null
+      },
+      {
+        "id": "implicit.stat_755922799",
+        "text": "Minions have #% chance to deal Double Damage",
+        "type": "implicit",
+        "option": null
       }
     ],
     "hidden": null,
@@ -69651,6 +70038,12 @@
         "id": "fractured.stat_491450213",
         "text": "Minions have #% increased Critical Strike Chance",
         "type": "fractured",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_491450213",
+        "text": "Minions have #% increased Critical Strike Chance",
+        "type": "implicit",
         "option": null
       }
     ],
@@ -76881,13 +77274,13 @@
         "index_handlers": [
           []
         ],
-        "string": "A nearby Minion gains a Soul for every {0} Life spent on Upfront Costs with this Spell",
-        "reminder_text": "(Each soul grants 5% increased Attack and Cast speed. You lose 1 soul every 0.5 seconds if you have not eaten any souls Recently. Maximum of 45 souls consumed)",
+        "string": "A Minion within 6 metres gains a Power, Frenzy or Endurance Charge for every {0} Life spent on Upfront Costs with this Spell",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
     "ids": [
-      "random_nearby_minion_gain_a_soul_eater_soul_on_X_life_spent"
+      "random_nearby_minion_gain_a_charge_on_X_life_spent"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -77961,12 +78354,19 @@
             "min": 1,
             "max": null,
             "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
           }
         ],
         "format": [
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
+          [],
           []
         ],
         "string": "Skills used by Suspended Mirages deal {0}% more Damage",
@@ -77979,23 +78379,83 @@
             "min": null,
             "max": -1,
             "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
           }
         ],
         "format": [
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
           [
             "negate"
-          ]
+          ],
+          []
         ],
         "string": "Skills used by Suspended Mirages deal {0}% less Damage",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "Skills used by Temporal Mirages deal {0}% more Damage",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ],
+          []
+        ],
+        "string": "Skills used by Temporal Mirages deal {0}% less Damage",
         "reminder_text": null,
         "is_markup": null
       }
     ],
     "ids": [
-      "sand_mirage_triggered_skill_damage_+%_final"
+      "sand_mirage_triggered_skill_damage_+%_final",
+      "sand_mirage_description_mode"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -79655,6 +80115,42 @@
       {
         "condition": [
           {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "This Skill can only be used by a Temporal Mirage",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "skill_can_be_used_by_temporal_mirage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
             "min": 1,
             "max": null,
             "negated": null
@@ -80438,7 +80934,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Sacrifices all but 1 of your Life and Energy Shield on Use",
+        "string": "Sacrifices all but 20% of your maximum Life and Energy Shield on Use",
         "reminder_text": null,
         "is_markup": null
       }
@@ -89232,8 +89728,8 @@
             "milliseconds_to_seconds"
           ]
         ],
-        "string": "{0}% chance to gain Onslaught for {1} seconds when you Hit a Unique Enemy",
-        "reminder_text": "(Onslaught grants 20% increased Attack, Cast, and Movement Speed)",
+        "string": "{0}% chance to gain [Onslaught] for {1} seconds when you Hit a Unique Enemy",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -89285,8 +89781,8 @@
             "milliseconds_to_seconds"
           ]
         ],
-        "string": "{0}% chance to grant Onslaught for {2} seconds on\ndealing a Killing Blow",
-        "reminder_text": "(Onslaught grants 20% increased Attack, Cast, and Movement Speed)",
+        "string": "{0}% chance to grant [Onslaught] for {2} seconds on\ndealing a Killing Blow",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -95800,8 +96296,8 @@
         "index_handlers": [
           []
         ],
-        "string": "gain Onslaught for 4 seconds on Hit",
-        "reminder_text": "(Onslaught grants 20% increased Attack, Cast, and Movement Speed)",
+        "string": "gain [Onslaught] for 4 seconds on Hit",
+        "reminder_text": null,
         "is_markup": null
       },
       {
@@ -95818,8 +96314,8 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% chance to gain Onslaught for 4 seconds on Hit",
-        "reminder_text": "(Onslaught grants 20% increased Attack, Cast, and Movement Speed)",
+        "string": "{0}% chance to gain [Onslaught] for 4 seconds on Hit",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -105276,6 +105772,18 @@
         "id": "explicit.stat_2783958145",
         "text": "#% more Maximum Life",
         "type": "explicit",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_1214601201",
+        "text": "#% more Maximum Life",
+        "type": "implicit",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_137377270",
+        "text": "#% more Maximum Life",
+        "type": "implicit",
         "option": null
       }
     ],

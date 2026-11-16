@@ -3520,7 +3520,7 @@
     "stack_limit": null
   },
   "flask_utility_rarity": {
-    "description": "你增加發現物品的稀有度",
+    "description": "你增加發現的[PlayerItemRarity|物品稀有度]",
     "invisible": false,
     "name": "黃金藥劑",
     "removable": false,
@@ -3537,7 +3537,7 @@
           "name": "Gold Flask",
           "template": null,
           "stat_text": [
-            "增加 30% 物品稀有度"
+            "+30%[PlayerItemRarity|物品稀有度]"
           ],
           "stats": {
             "base_item_found_rarity_+%": 30
@@ -5991,7 +5991,8 @@
       "self_damaging_ailment_duration_+%",
       "base_maximum_chaos_damage_resistance_%",
       "mana_regeneration_rate_+%",
-      "accuracy_rating_+%"
+      "accuracy_rating_+%",
+      "damage_taken_+%_final_from_consecrated_ground"
     ],
     "visuals": "ground_consecration",
     "category": "Buff",
@@ -6071,7 +6072,7 @@
     "stack_limit": null
   },
   "unique_flask_divination_distillate": {
-    "description": "獲得增加物品稀有度、元素抗性和照亮範圍。",
+    "description": "獲得增加[PlayerItemRarity|物品稀有度]、元素抗性和照亮範圍。",
     "invisible": false,
     "name": "淬鍊占卜",
     "removable": false,
@@ -6100,7 +6101,18 @@
     ],
     "visuals": "onslaught",
     "category": "Buff",
-    "sources": null,
+    "sources": {
+      "UltimatumModifiers": [
+        {
+          "id": "PlayerBuffOnslaught",
+          "item": null,
+          "name": null,
+          "template": "MapModPlayerOnslaught",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
     "templates": {
       "AncestralJadeHornOnslaught": {
         "aura_radius_metres": null,
@@ -9123,7 +9135,7 @@
     "stack_limit": null
   },
   "cagan_darkness": {
-    "description": "能見度、物品稀有度、物品數量隨著時間遞減，並在擊殺時增加。",
+    "description": "能見度、[PlayerItemRarity|物品稀有度]、物品數量隨著時間遞減，並在擊殺時增加。",
     "invisible": false,
     "name": "黑暗潛伏",
     "removable": false,
@@ -11018,7 +11030,7 @@
     "stack_limit": null
   },
   "unique_flask_taste_of_hate": {
-    "description": "造成額外冰冷傷害，同時自身受到依據物理傷害比例的冰冷傷害。有機率不被冰凍及冰緩",
+    "description": "你造成額外冰冷傷害、承受擊中時的部分火焰與閃電傷害轉化為冰冷傷害，並獲得機率避免冰凍與冰緩狀態。",
     "invisible": false,
     "name": "酷寒憎恨",
     "removable": false,
@@ -11035,7 +11047,7 @@
     "stack_limit": null
   },
   "torment_embezzler": {
-    "description": "降低生命、魔力與能量護盾回復速度",
+    "description": "降低生命、魔力與能量護盾恢復率",
     "invisible": false,
     "name": "凝滯之息",
     "removable": false,
@@ -11404,7 +11416,7 @@
     "stack_limit": null
   },
   "fire_elemental_buff": {
-    "description": "你的烈焰魔像增加你的傷害和效果範圍",
+    "description": "你的烈焰魔像增加你的傷害和範圍效果",
     "invisible": false,
     "name": "烈焰魔像",
     "removable": false,
@@ -11499,7 +11511,7 @@
     "stack_limit": null
   },
   "increased_item_rarity_aura": {
-    "description": "附近有友方使用王者之刃時，你獲得撲殺效果、增加物品稀有度、額外暴擊加成和護體。",
+    "description": "附近有友方使用王者之刃時，你獲得撲殺效果、額外[PlayerItemRarity|物品稀有度]、額外暴擊加成和護體。",
     "invisible": false,
     "name": "王者之刃光環",
     "removable": false,
@@ -12030,7 +12042,7 @@
     "stack_limit": null
   },
   "rarity_storm": {
-    "description": "物品稀有度及數量提升。受此增益效果的怪物所掉落物品的稀有度與數量提升。",
+    "description": "物品稀有度及數量提升。受此增益效果的怪物會增加所掉落的[PlayerItemRarity|物品稀有度]與數量。",
     "invisible": false,
     "name": "閃亮風暴",
     "removable": false,
@@ -12051,14 +12063,13 @@
           "name": null,
           "template": null,
           "stat_text": [
-            "增加 25% 物品稀有度",
-            "增加 12.5% 物品數量",
-            "增加 120% 物品稀有度",
+            "增加 37.5% 物品稀有度",
+            "+120%[PlayerItemRarity|物品稀有度]",
             "增加 30% 物品數量"
           ],
           "stats": {
-            "from_league_item_rarity_+%_permyriad": 2500,
-            "from_league_item_quantity_+%_permyriad": 1250,
+            "from_league_item_rarity_+%_permyriad": 3750,
+            "from_league_item_quantity_+%_permyriad": 0,
             "base_item_found_rarity_+%": 120,
             "base_item_found_quantity_+%": 30,
             "is_affected_by_tempest": 1
@@ -12070,7 +12081,7 @@
     "stack_limit": null
   },
   "uber_rarity_storm": {
-    "description": "物品稀有度及數量提升。受此增益效果的怪物所掉落物品的稀有度與數量提升。",
+    "description": "物品稀有度及數量提升。受此增益效果的怪物會增加所掉落的[PlayerItemRarity|物品稀有度]與數量。",
     "invisible": false,
     "name": "輻射風暴",
     "removable": false,
@@ -12091,14 +12102,13 @@
           "name": null,
           "template": null,
           "stat_text": [
-            "增加 50% 物品稀有度",
-            "增加 25% 物品數量",
-            "增加 420% 物品稀有度",
+            "增加 75% 物品稀有度",
+            "+420%[PlayerItemRarity|物品稀有度]",
             "增加 70% 物品數量"
           ],
           "stats": {
-            "from_league_item_rarity_+%_permyriad": 5000,
-            "from_league_item_quantity_+%_permyriad": 2500,
+            "from_league_item_rarity_+%_permyriad": 7500,
+            "from_league_item_quantity_+%_permyriad": 0,
             "base_item_found_rarity_+%": 420,
             "base_item_found_quantity_+%": 70,
             "is_affected_by_tempest": 1
@@ -12112,7 +12122,7 @@
           "name": null,
           "template": null,
           "stat_text": [
-            "增加 x% 物品稀有度",
+            "+x%[PlayerItemRarity|物品稀有度]",
             "增加 x% 物品數量"
           ],
           "stats": {
@@ -12129,7 +12139,7 @@
     "stack_limit": null
   },
   "uber_uber_rarity_storm": {
-    "description": "你增加傷害減免和物品稀有度，數值隨時間遞減",
+    "description": "你增加傷害減免和[PlayerItemRarity|物品稀有度]，數值隨時間遞減",
     "invisible": false,
     "name": "燦爛風暴",
     "removable": false,
@@ -12151,7 +12161,7 @@
           "name": null,
           "template": null,
           "stat_text": [
-            "增加 x% 物品稀有度",
+            "+x%[PlayerItemRarity|物品稀有度]",
             "增加 x% 物品數量"
           ],
           "stats": {
@@ -12177,15 +12187,15 @@
           "is_affected_by_tempest": 1
         },
         "stat_text": [
-          "增加 100% 物品稀有度"
+          "+100%[PlayerItemRarity|物品稀有度]"
         ],
         "visuals": null
       },
       "uber_uber_rarity_storm_monster": {
         "aura_radius_metres": null,
         "stats": {
-          "from_league_item_rarity_+%_permyriad": 10000,
-          "from_league_item_quantity_+%_permyriad": 10000,
+          "from_league_item_rarity_+%_permyriad": 15000,
+          "from_league_item_quantity_+%_permyriad": 0,
           "base_item_found_rarity_+%": 0,
           "base_item_found_quantity_+%": 0,
           "monster_difficulty_tankiness_+%": 1000,
@@ -13016,7 +13026,7 @@
     "stack_limit": null
   },
   "flask_bonus_item_rarity": {
-    "description": "此藥劑效果持續時間內，增加物品掉落稀有度。",
+    "description": "此藥劑效果持續時間內，增加掉落的[PlayerItemRarity|物品稀有度]。",
     "invisible": true,
     "name": "物品稀有度",
     "removable": false,
@@ -13177,7 +13187,7 @@
     "stack_limit": null
   },
   "lightning_bomb": {
-    "description": "你的閃電抗性和生命回復速度降低了。",
+    "description": "你的閃電抗性和生命回復率降低了。",
     "invisible": false,
     "name": "雷禍",
     "removable": false,
@@ -13599,7 +13609,8 @@
     "stats": [
       "base_damage_taken_+%",
       "chance_to_be_stunned_%",
-      "damage_+%_final_vs_non_taunt_target_from_passive"
+      "damage_+%_final_vs_non_taunt_target_from_passive",
+      "action_speed_+%_from_taunt"
     ],
     "visuals": "invisible",
     "category": null,
@@ -16416,14 +16427,14 @@
       "OccultistNearbyEnemiesColdChaosResistLifeRegenHardMode": {
         "aura_radius_metres": 6.0,
         "stats": {
-          "base_chaos_damage_resistance_%": -8,
+          "base_chaos_damage_resistance_%": -15,
           "life_regeneration_rate_+%": -100,
-          "base_cold_damage_resistance_%": -8
+          "base_cold_damage_resistance_%": -15
         },
         "stat_text": [
-          "-8% 混沌抗性",
-          "減少 100% 生命恢復率",
-          "-8% 冰冷抗性"
+          "-15% 混沌抗性",
+          "減少 100% 生命回復率",
+          "-15% 冰冷抗性"
         ],
         "visuals": null
       }
@@ -20765,7 +20776,7 @@
     "stack_limit": null
   },
   "player_tencent_asset_lock_bonus": {
-    "description": "騰訊",
+    "description": "你擁有額外[PlayerItemRarity|物品稀有度]。",
     "invisible": false,
     "name": "遊戲保護開啟獎勵",
     "removable": false,
@@ -24381,6 +24392,14 @@
           "template": "MaximumVoidArrowsUnique__1",
           "stat_text": null,
           "stats": null
+        },
+        {
+          "id": "DivergentVoidShotOnSkillUseUnique__1_",
+          "item": null,
+          "name": null,
+          "template": "MaximumVoidArrowsUnique__1",
+          "stat_text": null,
+          "stats": null
         }
       ]
     },
@@ -24761,7 +24780,7 @@
     "stack_limit": null
   },
   "master_buff_treasure_hunter": {
-    "description": "你增加物品掉落數量和稀有度",
+    "description": "你增加找到的物品數量",
     "invisible": false,
     "name": "巴勒克的恩賜",
     "removable": true,
@@ -25518,6 +25537,25 @@
           "10% 額外物理傷害減免"
         ],
         "visuals": null
+      },
+      "AdrenalineHeart": {
+        "aura_radius_metres": null,
+        "stats": {
+          "has_adrenaline": 1,
+          "damage_+%": 100,
+          "attack_speed_+%": 25,
+          "base_cast_speed_+%": 25,
+          "base_movement_velocity_+%": 25,
+          "base_additional_physical_damage_reduction_%": 10
+        },
+        "stat_text": [
+          "增加 100% 傷害",
+          "增加 25% 攻擊速度",
+          "增加 25% 施放速度",
+          "增加 25% 移動速度",
+          "10% 額外物理傷害減免"
+        ],
+        "visuals": null
       }
     },
     "stack_limit": null
@@ -25988,7 +26026,7 @@
     "stack_limit": null
   },
   "bestiary_cold_squid_aura": {
-    "description": "友方擊中時造成額外冰冷傷害並有機率致盲敵人。",
+    "description": "友方造成額外冰冷傷害，且擊中時有機率造成[Blind|致盲]。",
     "invisible": false,
     "name": "深潭光環",
     "removable": false,
@@ -26692,7 +26730,7 @@
     "stack_limit": null
   },
   "master_buff_alva": {
-    "description": "你增加物品掉落數量和稀有度",
+    "description": "你擁有額外[PlayerItemRarity|物品稀有度]和增加物品數量。",
     "invisible": false,
     "name": "艾瓦的禮讚",
     "removable": true,
@@ -28217,7 +28255,9 @@
       "damage_+%",
       "attack_and_cast_speed_+%",
       "life_regeneration_rate_per_minute_%",
-      "base_life_mana_es_recovery_rate_+%"
+      "base_life_mana_es_recovery_rate_+%",
+      "physical_damage_%_to_add_as_cold",
+      "physical_damage_%_to_add_as_fire"
     ],
     "visuals": "bloodstained_banner",
     "category": "Buff",
@@ -28239,7 +28279,9 @@
       "damage_+%",
       "attack_and_cast_speed_+%",
       "life_regeneration_rate_per_minute_%",
-      "base_life_mana_es_recovery_rate_+%"
+      "base_life_mana_es_recovery_rate_+%",
+      "physical_damage_%_to_add_as_cold",
+      "physical_damage_%_to_add_as_fire"
     ],
     "visuals": "puresteel_banner",
     "category": "Buff",
@@ -28676,7 +28718,7 @@
           "every_1_second_nearby_enemies_withered_for_X_ms": 15000
         },
         "stat_text": [
-          "每秒對附近敵人造成 15 秒凋零"
+          "每秒對6公尺範圍內的敵人施加[Withered|凋零]，持續15秒"
         ],
         "visuals": null
       },
@@ -28686,8 +28728,16 @@
           "every_1_second_nearby_enemies_withered_for_X_ms": 5000
         },
         "stat_text": [
-          "每秒對附近敵人造成 5 秒凋零"
+          "每秒對6公尺範圍內的敵人施加[Withered|凋零]，持續5秒"
         ],
+        "visuals": null
+      },
+      "WitherNearbyEnemiesViscera": {
+        "aura_radius_metres": null,
+        "stats": {
+          "every_1_second_nearby_enemies_withered_for_X_ms": 0
+        },
+        "stat_text": null,
         "visuals": null
       }
     },
@@ -28722,7 +28772,7 @@
           "every_4_seconds_%_chance_freeze_non_frozen_enemies_for_300ms": 50
         },
         "stat_text": [
-          "每 4 秒，有 50% 機率冰凍附近未被冰凍的敵人 0.4 秒"
+          "每 4 秒，有 50% 機率冰凍 6 公尺內的未被冰凍的敵人 0.4 秒"
         ],
         "visuals": null
       }
@@ -28923,7 +28973,8 @@
       "self_damaging_ailment_duration_+%",
       "base_maximum_chaos_damage_resistance_%",
       "mana_regeneration_rate_+%",
-      "accuracy_rating_+%"
+      "accuracy_rating_+%",
+      "damage_taken_+%_final_from_consecrated_ground"
     ],
     "visuals": "ground_consecration_elreon",
     "category": "Buff",
@@ -28963,7 +29014,7 @@
   "catarina_blackflame_ignite": {
     "description": "移動至啟動墓地，來完成中止卡塔莉娜之力的儀式。",
     "invisible": false,
-    "name": "暗焰點燃",
+    "name": "黑焰點燃",
     "removable": false,
     "stats": [
       "base_fire_damage_taken_per_minute"
@@ -28977,7 +29028,7 @@
   "catarina_blackflame_aura": {
     "description": "你正在承受火焰傷害",
     "invisible": false,
-    "name": "暗焰點燃",
+    "name": "黑焰點燃",
     "removable": false,
     "stats": [
       "base_fire_damage_taken_per_minute"
@@ -29870,7 +29921,7 @@
     "stack_limit": null
   },
   "berserk": {
-    "description": "你造成更多傷害、更多攻擊速度、更多移動速度和承受較少傷害。",
+    "description": "增加你的盛怒效果，但盛怒流失的速度會越來越快。",
     "invisible": false,
     "name": "狂戰",
     "removable": false,
@@ -30197,7 +30248,8 @@
     "name": "神殿怪物：進化",
     "removable": true,
     "stats": [
-      "base_convert_%_physical_damage_to_random_element"
+      "monster_difficulty_tankiness_+%",
+      "damage_+%"
     ],
     "visuals": "invisible",
     "category": "Buff shrine",
@@ -30206,10 +30258,11 @@
       "shrine_evolution_monster": {
         "aura_radius_metres": null,
         "stats": {
-          "base_convert_%_physical_damage_to_random_element": 50
+          "monster_difficulty_tankiness_+%": 200,
+          "damage_+%": 50
         },
         "stat_text": [
-          "50% 的物理傷害轉化至 1 個隨機元素"
+          "增加 50% 傷害"
         ],
         "visuals": null
       }
@@ -32282,6 +32335,42 @@
     "templates": null,
     "stack_limit": null
   },
+  "atlas_orion_crow_zone": {
+    "description": "巫會之后的殘酷魔法正在撕裂你的靈魂與肉身。",
+    "invisible": false,
+    "name": "群鴉風暴．外圈",
+    "removable": false,
+    "stats": [
+      "base_physical_damage_taken_per_minute",
+      "base_fire_damage_taken_per_minute",
+      "base_lightning_damage_taken_per_minute",
+      "base_chaos_damage_taken_per_minute",
+      "action_speed_-%"
+    ],
+    "visuals": "atlas_orion_crow_zone_visual",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "atlas_orion_crow_zone_core": {
+    "description": "巫會之后的殘酷魔法正在撕裂你的靈魂與肉身。",
+    "invisible": false,
+    "name": "群鴉風暴．內圈",
+    "removable": false,
+    "stats": [
+      "base_physical_damage_taken_per_minute",
+      "base_fire_damage_taken_per_minute",
+      "base_lightning_damage_taken_per_minute",
+      "base_chaos_damage_taken_per_minute",
+      "action_speed_-%"
+    ],
+    "visuals": "atlas_orion_crow_zone_core_visual",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "master_buff_kirac": {
     "description": "你有額外護甲和閃避，並增加傷害。",
     "invisible": false,
@@ -33165,7 +33254,7 @@
     "stack_limit": null
   },
   "affliction_debuff_life_and_es_recovery_rate": {
-    "description": "你減少生命和能量護盾回復速度。當你沒有瘋癲時移除此減益效果。",
+    "description": "你減少生命和能量護盾恢復率。當你沒有瘋癲時移除此減益效果。",
     "invisible": false,
     "name": "糜爛之觸",
     "removable": false,
@@ -33271,7 +33360,7 @@
     "stack_limit": 10
   },
   "maina": {
-    "description": "你承受的傷害增加，受到緩速，且減少生命和能量護盾回復速度。",
+    "description": "你承受的傷害增加，受到緩速，且減少生命和能量護盾恢復率。",
     "invisible": false,
     "name": "幻想",
     "removable": false,
@@ -33296,7 +33385,8 @@
       "attack_and_cast_speed_+%",
       "base_movement_velocity_+%",
       "base_cannot_be_damaged",
-      "critical_strike_chance_+%"
+      "critical_strike_chance_+%",
+      "base_should_have_onslaught_from_stat"
     ],
     "visuals": "invisible",
     "category": "Buff",
@@ -33743,6 +33833,14 @@
           "stats": null
         },
         {
+          "id": "VisceraModMaven",
+          "item": null,
+          "name": null,
+          "template": "NearbyEnemiesAreScorchedUnique__1",
+          "stat_text": null,
+          "stats": null
+        },
+        {
           "id": "MonsterEnemiesTaunted1",
           "item": null,
           "name": null,
@@ -33800,7 +33898,7 @@
         "visuals": null
       },
       "UniqueSpecialCorruptionNearbyEnemiesBlinded": {
-        "aura_radius_metres": 3.0,
+        "aura_radius_metres": 3.5,
         "stats": null,
         "stat_text": null,
         "visuals": null
@@ -33818,7 +33916,7 @@
         "visuals": null
       },
       "BlindAuraUnique__1": {
-        "aura_radius_metres": 2.5,
+        "aura_radius_metres": 3.5,
         "stats": null,
         "stat_text": null,
         "visuals": "blinded_uniquewand13"
@@ -35138,6 +35236,20 @@
     "templates": null,
     "stack_limit": null
   },
+  "blinded_enemy_damage_taken_pluspercent": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "base_damage_taken_+%"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "intimidated_enemy_self_stun_duration": {
     "description": "",
     "invisible": true,
@@ -35414,9 +35526,9 @@
     "stack_limit": null
   },
   "abyssal_well_blackhole_damage_over_time": {
-    "description": "[DNT] You are taking Chaos Damage over time",
+    "description": "[DNT - UNUSED]",
     "invisible": false,
-    "name": "[DNT] Abyssal Well",
+    "name": "[DNT - UNUSED]",
     "removable": false,
     "stats": [
       "base_chaos_damage_taken_per_minute"
@@ -38182,8 +38294,8 @@
           "template": null,
           "stat_text": null,
           "stats": {
-            "from_league_item_rarity_+%_permyriad": 4000,
-            "from_league_item_quantity_+%_permyriad": 4000
+            "from_league_item_rarity_+%_permyriad": 8000,
+            "from_league_item_quantity_+%_permyriad": 0
           }
         },
         {
@@ -38193,8 +38305,8 @@
           "template": null,
           "stat_text": null,
           "stats": {
-            "from_league_item_rarity_+%_permyriad": 5000,
-            "from_league_item_quantity_+%_permyriad": 5000
+            "from_league_item_rarity_+%_permyriad": 10000,
+            "from_league_item_quantity_+%_permyriad": 0
           }
         },
         {
@@ -38204,8 +38316,8 @@
           "template": null,
           "stat_text": null,
           "stats": {
-            "from_league_item_rarity_+%_permyriad": 6000,
-            "from_league_item_quantity_+%_permyriad": 6000
+            "from_league_item_rarity_+%_permyriad": 12000,
+            "from_league_item_quantity_+%_permyriad": 0
           }
         }
       ]
@@ -38564,6 +38676,20 @@
             "curse_effect_on_self_+%": -50,
             "random_curse_on_hit_%_against_uncursed_enemies": 30
           }
+        },
+        {
+          "id": "Bodach1",
+          "item": null,
+          "name": null,
+          "template": null,
+          "stat_text": [
+            "減少在你身上的詛咒效果 50%",
+            "擊中時有 30% 機率使用 1 個隨機咒術詛咒未被詛咒的敵人"
+          ],
+          "stats": {
+            "curse_effect_on_self_+%": -50,
+            "random_curse_on_hit_%_against_uncursed_enemies": 30
+          }
         }
       ]
     },
@@ -38597,7 +38723,7 @@
     "stack_limit": null
   },
   "ritual_golden_coin_buff": {
-    "description": "擊殺敵人掉落的物品數量和稀有度大幅增加。同時你增加承受傷害。",
+    "description": "你擁有額外[PlayerItemRarity|物品稀有度]和增加物品數量。同時你增加承受傷害。",
     "invisible": false,
     "name": "賭徒的貪婪",
     "removable": false,
@@ -38682,7 +38808,7 @@
     "stack_limit": null
   },
   "demigods_increased_item_rarity_aura": {
-    "description": "你增加物品稀有度",
+    "description": "你擁有額外[PlayerItemRarity|物品稀有度]。",
     "invisible": false,
     "name": "半神權威",
     "removable": false,
@@ -40297,6 +40423,148 @@
     },
     "stack_limit": null
   },
+  "ultimatum_additional_projectile_upside": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "number_of_additional_projectiles"
+    ],
+    "visuals": "invisible",
+    "category": "Buff",
+    "sources": {
+      "UltimatumModifiers": [
+        {
+          "id": "PlayerBuffExtraProjectiles",
+          "item": null,
+          "name": null,
+          "template": "UltimatumAdditionalProjectileUpside",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
+    "templates": {
+      "UltimatumAdditionalProjectileUpside": {
+        "aura_radius_metres": null,
+        "stats": {
+          "number_of_additional_projectiles": 2
+        },
+        "stat_text": [
+          "技能發射 2 個額外投射物"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "ultimatum_area_of_effect_upside": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "base_skill_area_of_effect_+%"
+    ],
+    "visuals": "invisible",
+    "category": "Buff",
+    "sources": {
+      "UltimatumModifiers": [
+        {
+          "id": "PlayerBuffIncreasedAoE",
+          "item": null,
+          "name": null,
+          "template": "UltimatumIncreasedAoEUpside",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
+    "templates": {
+      "UltimatumIncreasedAoEUpside": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_skill_area_of_effect_+%": 80
+        },
+        "stat_text": [
+          "增加 80% 範圍效果"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "ultimatum_gain_as_elemental_upside": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "physical_damage_%_to_add_as_random_element"
+    ],
+    "visuals": "invisible",
+    "category": "Buff",
+    "sources": {
+      "UltimatumModifiers": [
+        {
+          "id": "PlayerBuffGainAsElemental",
+          "item": null,
+          "name": null,
+          "template": "UltimatumGainAsElementalUpside",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
+    "templates": {
+      "UltimatumGainAsElementalUpside": {
+        "aura_radius_metres": null,
+        "stats": {
+          "physical_damage_%_to_add_as_random_element": 50
+        },
+        "stat_text": [
+          "獲得等同 50% 物理傷害的一個隨機元素傷害"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "ultimatum_steal_monster_mods_ms": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "gain_1_random_rare_monster_mod_on_kill_ms"
+    ],
+    "visuals": "invisible",
+    "category": "Buff",
+    "sources": {
+      "UltimatumModifiers": [
+        {
+          "id": "PlayerBuffStealMods",
+          "item": null,
+          "name": null,
+          "template": "UltimatumStealMonsterMods",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
+    "templates": {
+      "UltimatumStealMonsterMods": {
+        "aura_radius_metres": null,
+        "stats": {
+          "gain_1_random_rare_monster_mod_on_kill_ms": 20000
+        },
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
   "projectile_bull_thorns": {
     "description": "",
     "invisible": false,
@@ -40770,7 +41038,9 @@
       "damage_+%",
       "attack_and_cast_speed_+%",
       "life_regeneration_rate_per_minute_%",
-      "base_life_mana_es_recovery_rate_+%"
+      "base_life_mana_es_recovery_rate_+%",
+      "physical_damage_%_to_add_as_cold",
+      "physical_damage_%_to_add_as_fire"
     ],
     "visuals": "armourevasion_banner",
     "category": "Buff",
@@ -40903,7 +41173,7 @@
     "stack_limit": null
   },
   "burninate_debuff": {
-    "description": "你被燃燒",
+    "description": "[DNT - UNUSED]",
     "invisible": false,
     "name": "燃燒",
     "removable": false,
@@ -41544,9 +41814,9 @@
     "stack_limit": null
   },
   "call_of_the_wild": {
-    "description": "[DNT]",
+    "description": "[DNT - UNUSED]",
     "invisible": false,
-    "name": "[DNT] Call of the Wild",
+    "name": "[DNT - UNUSED] 荒野之喚",
     "removable": true,
     "stats": [],
     "visuals": "call_of_the_wild",
@@ -41684,6 +41954,16 @@
         },
         {
           "id": "MutatedUniqueBelt43MagicUtilityFlasksAlwaysApplyRightmost",
+          "item": null,
+          "name": null,
+          "template": "InjectedLiquid",
+          "stat_text": null,
+          "stats": null
+        }
+      ],
+      "PassiveSkills": [
+        {
+          "id": "AscendancyReliquarian14",
           "item": null,
           "name": null,
           "template": "InjectedLiquid",
@@ -42146,6 +42426,33 @@
       "base_chance_to_ignite_%"
     ],
     "visuals": "flame_link_target",
+    "category": "Link",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "arcane_link_source": {
+    "description": "你賦予此連結的目標額外閃電傷害。",
+    "invisible": false,
+    "name": "連結：秘能",
+    "removable": false,
+    "stats": [],
+    "visuals": "arcane_link_source",
+    "category": "Link",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "arcane_link_target": {
+    "description": "你獲得額外閃電傷害。",
+    "invisible": false,
+    "name": "連結：秘能",
+    "removable": true,
+    "stats": [
+      "global_minimum_added_lightning_damage",
+      "global_maximum_added_lightning_damage"
+    ],
+    "visuals": "arcane_link_target",
     "category": "Link",
     "sources": null,
     "templates": null,
@@ -43215,6 +43522,34 @@
     "templates": null,
     "stack_limit": null
   },
+  "augury_blood_donut": {
+    "description": "你正在承受物理持續傷害。",
+    "invisible": false,
+    "name": "靜脈穿刺",
+    "removable": false,
+    "stats": [
+      "base_physical_damage_taken_per_minute"
+    ],
+    "visuals": "augury_blood_donut",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "abyssal_donut": {
+    "description": "你正在承受物理持續傷害。",
+    "invisible": false,
+    "name": "虹吸之井",
+    "removable": false,
+    "stats": [
+      "base_physical_damage_taken_per_minute"
+    ],
+    "visuals": "abyssal_donut_visual",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "archnemesis_time_bubble": {
     "description": "你大幅降低行動速度和你的冷卻時間更長。你身上的負面效果要更久才會消逝",
     "invisible": false,
@@ -43375,7 +43710,7 @@
     "stack_limit": 10
   },
   "shrine_greed": {
-    "description": "你增加物品數量和稀有度，但增加承受傷害。",
+    "description": "你擁有額外[PlayerItemRarity|物品稀有度]和增加物品數量。同時你增加承受傷害。",
     "invisible": false,
     "name": "貪婪神殿",
     "removable": true,
@@ -43397,7 +43732,7 @@
           "name": null,
           "template": null,
           "stat_text": [
-            "增加 x% 物品稀有度",
+            "+x%[PlayerItemRarity|物品稀有度]",
             "增加 x% 物品數量",
             "增加 x% 承受傷害"
           ],
@@ -43416,8 +43751,8 @@
       "shrine_greed_monster": {
         "aura_radius_metres": null,
         "stats": {
-          "from_league_item_rarity_+%_permyriad": 2500,
-          "from_league_item_quantity_+%_permyriad": 1000,
+          "from_league_item_rarity_+%_permyriad": 3500,
+          "from_league_item_quantity_+%_permyriad": 0,
           "base_item_found_rarity_+%": 0,
           "base_item_found_quantity_+%": 0,
           "base_damage_taken_+%": -70,
@@ -43435,13 +43770,12 @@
           "from_league_item_quantity_+%_permyriad": 0,
           "base_item_found_rarity_+%": 50,
           "base_item_found_quantity_+%": 15,
-          "base_damage_taken_+%": 20,
+          "base_damage_taken_+%": 0,
           "has_shrine_effect": 1
         },
         "stat_text": [
-          "增加 50% 物品稀有度",
-          "增加 15% 物品數量",
-          "增加 20% 承受傷害"
+          "+50%[PlayerItemRarity|物品稀有度]",
+          "增加 15% 物品數量"
         ],
         "visuals": null
       }
@@ -43746,7 +44080,7 @@
     "category": "Debuff",
     "sources": null,
     "templates": null,
-    "stack_limit": null
+    "stack_limit": 10
   },
   "harvest_cat_grasping_vines_buff": {
     "description": "你正被緩速藤蔓緩速。移動以掙脫藤蔓",
@@ -65997,6 +66331,22 @@
     "templates": null,
     "stack_limit": null
   },
+  "cleansing_fire_snake_debuff_augury": {
+    "description": "你正在承受物理傷害，且無法恢復生命或能量護盾。",
+    "invisible": false,
+    "name": "無休符文",
+    "removable": false,
+    "stats": [
+      "base_physical_damage_taken_per_minute",
+      "cannot_recover_life",
+      "no_energy_shield_recovery"
+    ],
+    "visuals": "cleansing_fire_snake_debuff_augury",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "player_tainted_frenzy": {
     "description": "你的狂怒球被玷污",
     "invisible": false,
@@ -66130,7 +66480,7 @@
     "stack_limit": null
   },
   "cleansing_fire_snake_secondary_debuff": {
-    "description": "你降低最大火焰抗性和你的快行技能更少冷卻時間恢復速度",
+    "description": "你降低最大火焰抗性和你的快行技能更少冷卻時間恢復率",
     "invisible": false,
     "name": "燒焦血肉",
     "removable": false,
@@ -66221,6 +66571,20 @@
       "base_damage_taken_+%"
     ],
     "visuals": "eater_of_worlds_laser",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "eater_of_worlds_laser_augury": {
+    "description": "每層「無休厄運」都會減少1%你的生命與能量護盾恢復率。",
+    "invisible": false,
+    "name": "無休厄運",
+    "removable": false,
+    "stats": [
+      "life_and_energy_shield_recovery_rate_+%"
+    ],
+    "visuals": "eater_of_worlds_laser_augury",
     "category": "Debuff",
     "sources": null,
     "templates": null,
@@ -66783,7 +67147,7 @@
         "aura_radius_metres": null,
         "stats": {
           "trickster_damage_over_time_taken_+%_final": -50,
-          "trickster_hit_damage_taken_+%_final": -50
+          "trickster_hit_damage_taken_+%_final": -75
         },
         "stat_text": null,
         "visuals": null
@@ -66806,7 +67170,7 @@
     "stack_limit": null
   },
   "trickster_alternating_less_dot_damage": {
-    "description": "你承受 50% 更少持續傷害。",
+    "description": "你承受 75% 更少持續傷害。",
     "invisible": false,
     "name": "心靈永止",
     "removable": false,
@@ -68453,7 +68817,7 @@
     "stack_limit": null
   },
   "sand_triggered": {
-    "description": "你現在為沙戮姿態。你的攻擊擊中有機會造成致盲。",
+    "description": "你現在為沙戮姿態。你的攻擊擊中有機會造成[Blind|致盲]。",
     "invisible": false,
     "name": "沙戮姿態",
     "removable": true,
@@ -69410,7 +69774,7 @@
           "nearby_enemies_no_fire_dot_resistance_while_you_are_stationary": 0
         },
         "stat_text": [
-          "你站立時，附近敵人怪物的火焰抗性對持續傷害為 -20%"
+          "你站立時，6 公尺內的敵人怪物的火焰抗性對持續傷害為 -20%"
         ],
         "visuals": null
       },
@@ -69421,7 +69785,7 @@
           "nearby_enemies_no_fire_dot_resistance_while_you_are_stationary": 1
         },
         "stat_text": [
-          "你站立時，附近敵人對持續傷害沒有火焰抗性"
+          "你站立時，6 公尺內的敵人對持續傷害沒有火焰抗性"
         ],
         "visuals": null
       }
@@ -69533,7 +69897,7 @@
           "can_trigger_summon_elemental_relic_on_nearby_ally_kill_or_on_hit_rare_or_unique": 25
         },
         "stat_text": [
-          "當你或附近友方擊殺敵人或擊中稀有或傳奇敵人時，有 25% 機率觸發等級 20 的召喚元素聖物"
+          "當你或 6 公尺內的友方擊殺敵人或擊中稀有或傳奇敵人時，有 25% 機率觸發等級 20 的召喚元素聖物"
         ],
         "visuals": null
       }
@@ -69815,7 +70179,7 @@
     "stack_limit": null
   },
   "arohonguis_embrace": {
-    "description": "你的快行技能增加冷卻恢復速度",
+    "description": "你的快行技能增加冷卻恢復率",
     "invisible": false,
     "name": "伊基亞呼的領導力",
     "removable": false,
@@ -70256,18 +70620,7 @@
     ],
     "visuals": "invisible",
     "category": null,
-    "sources": {
-      "PassiveSkills": [
-        {
-          "id": "AscendancyReliquarian30",
-          "item": null,
-          "name": null,
-          "template": "AscedancyEnemyPhysicalDamageConvertedToFire",
-          "stat_text": null,
-          "stats": null
-        }
-      ]
-    },
+    "sources": null,
     "templates": {
       "AscedancyEnemyPhysicalDamageConvertedToFire": {
         "aura_radius_metres": 6.0,
@@ -71587,7 +71940,7 @@
     "stack_limit": null
   },
   "azmeri_effigy_buff_magic_find": {
-    "description": "增加 200% 物品稀有度和數量",
+    "description": "增加 200% 掉落[PlayerItemRarity|物品稀有度]和數量。",
     "invisible": false,
     "name": "黑暗之禮",
     "removable": true,
@@ -71606,7 +71959,7 @@
           "base_item_found_quantity_+%": 200
         },
         "stat_text": [
-          "增加 200% 物品稀有度",
+          "+200%[PlayerItemRarity|物品稀有度]",
           "增加 200% 物品數量"
         ],
         "visuals": null
@@ -71957,7 +72310,7 @@
     "stack_limit": null
   },
   "azmeri_altar_buff_bear": {
-    "description": "掉落的傳奇物品有 30% 機率被複製。你必定暴擊。",
+    "description": "掉落的傳奇物品有 30% 機率被複製。你必定承受暴擊。",
     "invisible": false,
     "name": "熊族儀式",
     "removable": false,
@@ -71992,7 +72345,7 @@
         },
         "stat_text": [
           "對你的擊中必定暴擊",
-          "增加 40% 物品稀有度"
+          "+40%[PlayerItemRarity|物品稀有度]"
         ],
         "visuals": null
       }
@@ -72153,7 +72506,7 @@
     "stack_limit": null
   },
   "azmeri_altar_buff_rabbit": {
-    "description": "你增加 100% 物品掉落稀有度和增加 50% 物品掉落數量。你不會獲得經驗。",
+    "description": "你增加 100% 掉落[PlayerItemRarity|物品稀有度]和增加 50% 物品數量。你不會獲得經驗。",
     "invisible": false,
     "name": "兔族儀式",
     "removable": false,
@@ -72174,7 +72527,7 @@
           "no_experience_gain": 1
         },
         "stat_text": [
-          "增加 100% 物品稀有度",
+          "+100%[PlayerItemRarity|物品稀有度]",
           "增加 50% 物品數量",
           "你不會獲得經驗"
         ],
@@ -72219,7 +72572,7 @@
         },
         "stat_text": [
           "-20% 最大全部抗性",
-          "增加 40% 物品稀有度"
+          "+40%[PlayerItemRarity|物品稀有度]"
         ],
         "visuals": null
       }
@@ -72413,7 +72766,7 @@
     "stack_limit": null
   },
   "impale_chance_animated_sword": {
-    "description": "[DNT] Your attacks have a chance to impale enemies.",
+    "description": "你的攻擊有額外機率穿刺敵人。",
     "invisible": false,
     "name": "攻擊穿刺機率",
     "removable": false,
@@ -72655,7 +73008,7 @@
     "name": "硫酸狂亂",
     "removable": false,
     "stats": [
-      "from_league_item_quantity_+%_permyriad",
+      "from_league_item_rarity_+%_permyriad",
       "attack_speed_+%",
       "base_movement_velocity_+%",
       "base_cast_speed_+%",
@@ -72690,7 +73043,7 @@
     "description": "克塔什的盜竊之力在你體內流竄；你獲得部分物理傷害的額外火焰傷害，並且你擊殺的敵人有可能會爆炸，造成相當於其生命上限 10% 的火焰傷害",
     "invisible": false,
     "name": "克塔什的洗禮",
-    "removable": false,
+    "removable": true,
     "stats": [
       "base_actor_scale_+%",
       "physical_damage_%_to_add_as_fire",
@@ -72703,14 +73056,14 @@
       "BeyondBossBuff1": {
         "aura_radius_metres": null,
         "stats": {
-          "base_actor_scale_+%": 20,
-          "physical_damage_%_to_add_as_fire": 100,
-          "explode_enemies_for_10%_life_as_fire_on_kill_chance_%": 40
+          "base_actor_scale_+%": 15,
+          "physical_damage_%_to_add_as_fire": 50,
+          "explode_enemies_for_10%_life_as_fire_on_kill_chance_%": 20
         },
         "stat_text": [
-          "增加 20% 角色體型",
-          "獲得 100% 物理傷害的火焰傷害",
-          "你擊殺的敵人有 40% 機率爆炸，造成十分之一它們最大生命的火焰傷害"
+          "增加 15% 角色體型",
+          "獲得 50% 物理傷害的火焰傷害",
+          "你擊殺的敵人有 20% 機率爆炸，造成十分之一它們最大生命的火焰傷害"
         ],
         "visuals": null
       }
@@ -72721,7 +73074,7 @@
     "description": "戈沃的盜竊之力在你體內流竄；你有機會在命中後使敵人虛弱，並且降低自身受到的傷害",
     "invisible": false,
     "name": "戈沃的洗禮",
-    "removable": false,
+    "removable": true,
     "stats": [
       "base_actor_scale_+%",
       "extra_gore",
@@ -72735,13 +73088,13 @@
       "BeyondBossBuff2": {
         "aura_radius_metres": null,
         "stats": {
-          "base_actor_scale_+%": 30,
+          "base_actor_scale_+%": 20,
           "extra_gore": 1,
           "debilitate_enemies_for_1_second_on_hit_%_chance": 10,
-          "damage_taken_+%_final_from_beyond_boss_buff": 10
+          "damage_taken_+%_final_from_beyond_boss_buff": -10
         },
         "stat_text": [
-          "增加 30% 角色體型",
+          "增加 20% 角色體型",
           "更多鮮血",
           "擊中時有 10% 機率虛弱敵人 1 秒"
         ],
@@ -72754,7 +73107,7 @@
     "description": "貝達特的盜竊之力在你體內流竄；你的行動速度增加，並且獲得部分物理傷害的額外閃電傷害",
     "invisible": false,
     "name": "貝達特的洗禮",
-    "removable": false,
+    "removable": true,
     "stats": [
       "base_actor_scale_+%",
       "action_speed_-%",
@@ -72767,14 +73120,14 @@
       "BeyondBossBuff3": {
         "aura_radius_metres": null,
         "stats": {
-          "base_actor_scale_+%": 20,
-          "action_speed_-%": -15,
-          "physical_damage_%_to_add_as_lightning": 100
+          "base_actor_scale_+%": 15,
+          "action_speed_-%": -10,
+          "physical_damage_%_to_add_as_lightning": 50
         },
         "stat_text": [
-          "增加 20% 角色體型",
-          "增加 15% 行動速度",
-          "獲得 100% 物理傷害的閃電傷害"
+          "增加 15% 角色體型",
+          "增加 10% 行動速度",
+          "獲得 50% 物理傷害的閃電傷害"
         ],
         "visuals": null
       }
@@ -72854,7 +73207,9 @@
           "damage_dealt_+%_to_beasts": 10,
           "can_see_monster_type_beasts": 1
         },
-        "stat_text": null,
+        "stat_text": [
+          "增加10%對野獸造成的傷害"
+        ],
         "visuals": null
       }
     },
@@ -73311,15 +73666,26 @@
     ],
     "visuals": "invisible",
     "category": null,
-    "sources": null,
+    "sources": {
+      "Mods": [
+        {
+          "id": "UberIncursionTempleMonsterBonus",
+          "item": null,
+          "name": null,
+          "template": "UberIncursionTempleMonsterBonus",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
     "templates": {
       "BreachUnstableEnhancedMonsterBuff": {
         "aura_radius_metres": null,
         "stats": {
           "monster_difficulty_tankiness_+%": 75,
           "damage_+%": 15,
-          "from_league_item_rarity_+%_permyriad": 1500,
-          "from_league_item_quantity_+%_permyriad": 1000
+          "from_league_item_rarity_+%_permyriad": 2500,
+          "from_league_item_quantity_+%_permyriad": 0
         },
         "stat_text": [
           "增加 15% 傷害"
@@ -73331,11 +73697,24 @@
         "stats": {
           "monster_difficulty_tankiness_+%": 60,
           "damage_+%": 12,
-          "from_league_item_rarity_+%_permyriad": 1200,
-          "from_league_item_quantity_+%_permyriad": 800
+          "from_league_item_rarity_+%_permyriad": 2000,
+          "from_league_item_quantity_+%_permyriad": 0
         },
         "stat_text": [
           "增加 12% 傷害"
+        ],
+        "visuals": null
+      },
+      "BreachHiveEnhancedMonsterBuffEmpowered": {
+        "aura_radius_metres": null,
+        "stats": {
+          "monster_difficulty_tankiness_+%": 70,
+          "damage_+%": 14,
+          "from_league_item_rarity_+%_permyriad": 2667,
+          "from_league_item_quantity_+%_permyriad": 0
+        },
+        "stat_text": [
+          "增加 14% 傷害"
         ],
         "visuals": null
       },
@@ -73344,8 +73723,8 @@
         "stats": {
           "monster_difficulty_tankiness_+%": 15,
           "damage_+%": 10,
-          "from_league_item_rarity_+%_permyriad": 1000,
-          "from_league_item_quantity_+%_permyriad": 500
+          "from_league_item_rarity_+%_permyriad": 1500,
+          "from_league_item_quantity_+%_permyriad": 0
         },
         "stat_text": [
           "增加 10% 傷害"
@@ -73357,8 +73736,8 @@
         "stats": {
           "monster_difficulty_tankiness_+%": 15,
           "damage_+%": 15,
-          "from_league_item_rarity_+%_permyriad": 500,
-          "from_league_item_quantity_+%_permyriad": 500
+          "from_league_item_rarity_+%_permyriad": 1000,
+          "from_league_item_quantity_+%_permyriad": 0
         },
         "stat_text": [
           "增加 15% 傷害"
@@ -73370,7 +73749,7 @@
         "stats": {
           "monster_difficulty_tankiness_+%": 30,
           "damage_+%": 5,
-          "from_league_item_rarity_+%_permyriad": 0,
+          "from_league_item_rarity_+%_permyriad": 1000,
           "from_league_item_quantity_+%_permyriad": 0
         },
         "stat_text": [
@@ -73383,8 +73762,8 @@
         "stats": {
           "monster_difficulty_tankiness_+%": 30,
           "damage_+%": 8,
-          "from_league_item_rarity_+%_permyriad": 750,
-          "from_league_item_quantity_+%_permyriad": 750
+          "from_league_item_rarity_+%_permyriad": 1500,
+          "from_league_item_quantity_+%_permyriad": 0
         },
         "stat_text": [
           "增加 8% 傷害"
@@ -73396,11 +73775,37 @@
         "stats": {
           "monster_difficulty_tankiness_+%": 50,
           "damage_+%": 10,
-          "from_league_item_rarity_+%_permyriad": 2000,
-          "from_league_item_quantity_+%_permyriad": 1000
+          "from_league_item_rarity_+%_permyriad": 3000,
+          "from_league_item_quantity_+%_permyriad": 0
         },
         "stat_text": [
           "增加 10% 傷害"
+        ],
+        "visuals": null
+      },
+      "BlightMinibossEnhancedMonsterBuff": {
+        "aura_radius_metres": null,
+        "stats": {
+          "monster_difficulty_tankiness_+%": 30,
+          "damage_+%": 5,
+          "from_league_item_rarity_+%_permyriad": 1000,
+          "from_league_item_quantity_+%_permyriad": 0
+        },
+        "stat_text": [
+          "增加 5% 傷害"
+        ],
+        "visuals": null
+      },
+      "RitualMinibossEnhancedMonsterBuff": {
+        "aura_radius_metres": null,
+        "stats": {
+          "monster_difficulty_tankiness_+%": 40,
+          "damage_+%": 5,
+          "from_league_item_rarity_+%_permyriad": 1200,
+          "from_league_item_quantity_+%_permyriad": 0
+        },
+        "stat_text": [
+          "增加 5% 傷害"
         ],
         "visuals": null
       },
@@ -73409,8 +73814,8 @@
         "stats": {
           "monster_difficulty_tankiness_+%": 30,
           "damage_+%": 5,
-          "from_league_item_rarity_+%_permyriad": 900,
-          "from_league_item_quantity_+%_permyriad": 450
+          "from_league_item_rarity_+%_permyriad": 1500,
+          "from_league_item_quantity_+%_permyriad": 0
         },
         "stat_text": [
           "增加 5% 傷害"
@@ -73422,8 +73827,8 @@
         "stats": {
           "monster_difficulty_tankiness_+%": 30,
           "damage_+%": 5,
-          "from_league_item_rarity_+%_permyriad": 1500,
-          "from_league_item_quantity_+%_permyriad": 750
+          "from_league_item_rarity_+%_permyriad": 2500,
+          "from_league_item_quantity_+%_permyriad": 0
         },
         "stat_text": [
           "增加 5% 傷害"
@@ -73435,8 +73840,8 @@
         "stats": {
           "monster_difficulty_tankiness_+%": 30,
           "damage_+%": 5,
-          "from_league_item_rarity_+%_permyriad": 900,
-          "from_league_item_quantity_+%_permyriad": 450
+          "from_league_item_rarity_+%_permyriad": 1500,
+          "from_league_item_quantity_+%_permyriad": 0
         },
         "stat_text": [
           "增加 5% 傷害"
@@ -73448,8 +73853,8 @@
         "stats": {
           "monster_difficulty_tankiness_+%": 30,
           "damage_+%": 5,
-          "from_league_item_rarity_+%_permyriad": 900,
-          "from_league_item_quantity_+%_permyriad": 450
+          "from_league_item_rarity_+%_permyriad": 1500,
+          "from_league_item_quantity_+%_permyriad": 0
         },
         "stat_text": [
           "增加 5% 傷害"
@@ -73461,8 +73866,8 @@
         "stats": {
           "monster_difficulty_tankiness_+%": 30,
           "damage_+%": 5,
-          "from_league_item_rarity_+%_permyriad": 1200,
-          "from_league_item_quantity_+%_permyriad": 600
+          "from_league_item_rarity_+%_permyriad": 2000,
+          "from_league_item_quantity_+%_permyriad": 0
         },
         "stat_text": [
           "增加 5% 傷害"
@@ -73474,8 +73879,8 @@
         "stats": {
           "monster_difficulty_tankiness_+%": 30,
           "damage_+%": 5,
-          "from_league_item_rarity_+%_permyriad": 900,
-          "from_league_item_quantity_+%_permyriad": 450
+          "from_league_item_rarity_+%_permyriad": 1500,
+          "from_league_item_quantity_+%_permyriad": 0
         },
         "stat_text": [
           "增加 5% 傷害"
@@ -73487,8 +73892,8 @@
         "stats": {
           "monster_difficulty_tankiness_+%": 30,
           "damage_+%": 5,
-          "from_league_item_rarity_+%_permyriad": 1200,
-          "from_league_item_quantity_+%_permyriad": 600
+          "from_league_item_rarity_+%_permyriad": 2000,
+          "from_league_item_quantity_+%_permyriad": 0
         },
         "stat_text": [
           "增加 5% 傷害"
@@ -73500,8 +73905,8 @@
         "stats": {
           "monster_difficulty_tankiness_+%": 30,
           "damage_+%": 5,
-          "from_league_item_rarity_+%_permyriad": 1500,
-          "from_league_item_quantity_+%_permyriad": 750
+          "from_league_item_rarity_+%_permyriad": 2500,
+          "from_league_item_quantity_+%_permyriad": 0
         },
         "stat_text": [
           "增加 5% 傷害"
@@ -73513,8 +73918,8 @@
         "stats": {
           "monster_difficulty_tankiness_+%": 30,
           "damage_+%": 5,
-          "from_league_item_rarity_+%_permyriad": 900,
-          "from_league_item_quantity_+%_permyriad": 450
+          "from_league_item_rarity_+%_permyriad": 1500,
+          "from_league_item_quantity_+%_permyriad": 0
         },
         "stat_text": [
           "增加 5% 傷害"
@@ -73526,12 +73931,23 @@
         "stats": {
           "monster_difficulty_tankiness_+%": 30,
           "damage_+%": 5,
-          "from_league_item_rarity_+%_permyriad": 1500,
-          "from_league_item_quantity_+%_permyriad": 750
+          "from_league_item_rarity_+%_permyriad": 2500,
+          "from_league_item_quantity_+%_permyriad": 0
         },
         "stat_text": [
           "增加 5% 傷害"
         ],
+        "visuals": null
+      },
+      "UberIncursionTempleMonsterBonus": {
+        "aura_radius_metres": null,
+        "stats": {
+          "monster_difficulty_tankiness_+%": 150,
+          "damage_+%": 25,
+          "from_league_item_rarity_+%_permyriad": 10000,
+          "from_league_item_quantity_+%_permyriad": 0
+        },
+        "stat_text": null,
         "visuals": null
       }
     },
@@ -73557,8 +73973,8 @@
         "stats": {
           "monster_difficulty_tankiness_+%": 100,
           "damage_+%": 15,
-          "from_league_item_rarity_+%_permyriad": 2100,
-          "from_league_item_quantity_+%_permyriad": 1000
+          "from_league_item_rarity_+%_permyriad": 3000,
+          "from_league_item_quantity_+%_permyriad": 0
         },
         "stat_text": [
           "增加 15% 傷害"
@@ -73604,8 +74020,7 @@
     "stats": [
       "monster_difficulty_tankiness_+%",
       "damage_+%",
-      "from_league_item_rarity_+%_permyriad",
-      "from_league_item_quantity_+%_permyriad"
+      "from_league_item_rarity_+%_permyriad"
     ],
     "visuals": "invisible",
     "category": null,
@@ -73896,7 +74311,9 @@
     "removable": false,
     "stats": [
       "base_damage_taken_+%",
-      "explode_for_10%_life_as_physical_on_kill_chance_%"
+      "explode_for_10%_life_as_physical_on_kill_chance_%",
+      "cold_damage_taken_+%",
+      "fire_damage_taken_+%"
     ],
     "visuals": "invisible",
     "category": null,
@@ -74284,7 +74701,7 @@
     "stack_limit": null
   },
   "ritual_wisp_buff": {
-    "description": "你獲得的貢禮增加",
+    "description": "你獲得的貢禮大幅增加",
     "invisible": false,
     "name": "妖精的祝福",
     "removable": false,
@@ -74869,7 +75286,7 @@
     "stack_limit": null
   },
   "tincture_sporebloom": {
-    "description": "你的近戰武器有額外的致盲機率與效果",
+    "description": "你的近戰武器有額外的[Blind|致盲]機率與效果",
     "invisible": false,
     "name": "孢子花萃取物",
     "removable": false,
@@ -74928,7 +75345,7 @@
     "stack_limit": null
   },
   "tincture_unique4": {
-    "description": "你獲得撲殺效果，且每層魔力灼燒增加掉落物品的稀有度",
+    "description": "你獲得撲殺效果，且每層魔力灼燒增加掉落的[PlayerItemRarity|物品稀有度]",
     "invisible": false,
     "name": "不可見之戰",
     "removable": false,
@@ -75283,6 +75700,20 @@
     "templates": null,
     "stack_limit": null
   },
+  "benevolenceboss_physical_aura": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "base_physical_damage_taken_per_minute"
+    ],
+    "visuals": "invisible",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "zangerboss_orb_degen": {
     "description": "你承受火焰持續傷害。你的最大元素抗性降低，且你無法恢復生命或能量護盾",
     "invisible": false,
@@ -75300,6 +75731,22 @@
     "templates": null,
     "stack_limit": null
   },
+  "zangerboss_orb_degen_augury": {
+    "description": "你正在承受物理持續傷害，且無法恢復生命與能量護盾。",
+    "invisible": false,
+    "name": "球形腐壞",
+    "removable": false,
+    "stats": [
+      "base_physical_damage_taken_per_minute",
+      "cannot_recover_life",
+      "no_energy_shield_recovery"
+    ],
+    "visuals": "zangerboss_orb_degen_augury",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "zangerboss_orb_beam": {
     "description": "你無法恢復生命或能量護盾",
     "invisible": false,
@@ -75310,6 +75757,22 @@
       "no_energy_shield_recovery"
     ],
     "visuals": "zangerboss_orb_beam",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "zangerboss_orb_beam_augury": {
+    "description": "你無法恢復生命或能量護盾，且降低物理傷害減免。",
+    "invisible": false,
+    "name": "巫會之炎",
+    "removable": false,
+    "stats": [
+      "cannot_recover_life",
+      "no_energy_shield_recovery",
+      "base_additional_physical_damage_reduction_%"
+    ],
+    "visuals": "zangerboss_orb_beam_augury",
     "category": "Debuff",
     "sources": null,
     "templates": null,
@@ -75372,7 +75835,7 @@
     "stack_limit": null
   },
   "divination_buff_abandoned_wealth": {
-    "description": "增加 50% 掉落物品稀有度",
+    "description": "增加 50% 掉落[PlayerItemRarity|物品稀有度]",
     "invisible": false,
     "name": "棄財求生",
     "removable": false,
@@ -75389,7 +75852,7 @@
           "base_item_found_rarity_+%": 50
         },
         "stat_text": [
-          "增加 50% 物品稀有度"
+          "+50%[PlayerItemRarity|物品稀有度]"
         ],
         "visuals": null
       }
@@ -75860,8 +76323,8 @@
           "damage_+%_for_you_and_allies_affected_by_your_auras": 50
         },
         "stat_text": [
-          "你和附近友方增加 30% 攻擊和施放速度",
-          "你和附近友方增加 50% 傷害"
+          "你和 6 公尺內的友方增加 30% 攻擊和施放速度",
+          "你和 6 公尺內的友方增加 50% 傷害"
         ],
         "visuals": null
       }
@@ -75922,7 +76385,7 @@
     "stack_limit": null
   },
   "divination_buff_rats": {
-    "description": "增加 15% 攻擊速度\r\n增加 75% 全域暴擊率\r\n增加 150% 閃避率\r\n增加 25% 物品稀有度\r\n增加 10% 移動速度\r\n減少 10% 角色大小",
+    "description": "增加 15% 攻擊速度\r\n增加 75% 全域暴擊率\r\n增加 150% 閃避率\r\n增加 25% [PlayerItemRarity|物品稀有度]\r\n增加 10% 移動速度\r\n減少 10% 角色大小",
     "invisible": false,
     "name": "鼠輩",
     "removable": false,
@@ -75951,7 +76414,7 @@
         "stat_text": [
           "增加 150% 閃避值",
           "增加 10% 移動速度",
-          "增加 25% 物品稀有度",
+          "+25%[PlayerItemRarity|物品稀有度]",
           "增加 15% 攻擊速度",
           "增加 75% 全域暴擊率",
           "減少 10% 角色體型"
@@ -76230,7 +76693,7 @@
     "stack_limit": null
   },
   "divination_buff_the_enthusiasts": {
-    "description": "增加 50% 光環技能效果範圍\r\n增加 50% 來自你技能的非詛咒光環效果",
+    "description": "增加 50% 光環技能範圍效果\r\n增加 50% 來自你技能的非詛咒光環效果",
     "invisible": false,
     "name": "熱心民眾",
     "removable": false,
@@ -76359,7 +76822,7 @@
     "stack_limit": null
   },
   "divination_buff_the_scavenger": {
-    "description": "增加 50% 效果範圍\r\n增加 100% 範圍傷害",
+    "description": "增加 50% 範圍效果\r\n增加 100% 範圍傷害",
     "invisible": false,
     "name": "拾荒者",
     "removable": false,
@@ -76439,6 +76902,14 @@
         },
         {
           "id": "DivergentGrantsSummonVoidSpawnUnique__1",
+          "item": null,
+          "name": null,
+          "template": "TriggerSummonVoidSpawnSkillUnique__1",
+          "stat_text": null,
+          "stats": null
+        },
+        {
+          "id": "VisceraModIncarnationofFear",
           "item": null,
           "name": null,
           "template": "TriggerSummonVoidSpawnSkillUnique__1",
@@ -76652,7 +77123,7 @@
   "ignorance_beam_debuff": {
     "description": "每層使你增加 8% 承受傷害和被緩速 4%。",
     "invisible": false,
-    "name": "[DNT]",
+    "name": "[DNT - UNUSED]",
     "removable": false,
     "stats": [
       "base_damage_taken_+%",
@@ -76667,7 +77138,7 @@
   "unleash_power_channelled_stage": {
     "description": "[DNT] You have stages from channelling Unleash Power. These stages will be lost when reaching maximum to trigger spells.",
     "invisible": false,
-    "name": "[DNT] Unleash Power",
+    "name": "[DNT - UNUSED] Unleash Power",
     "removable": false,
     "stats": [],
     "visuals": "cyclone_channelled_stage",
@@ -76715,7 +77186,7 @@
     "stack_limit": null
   },
   "allflame_decay_quant_rarity": {
-    "description": "物品稀有度隨著時間遞減，並在擊殺燦爛怪物時增加。",
+    "description": "[PlayerItemRarity|物品稀有度]隨著時間遞減，並在擊殺燦爛怪物時增加。",
     "invisible": false,
     "name": "燦爛",
     "removable": false,
@@ -77550,7 +78021,7 @@
   "generic_monster_chaos_flame_wall_dot": {
     "description": "你在黯焰之牆內時會持續承受混沌傷害。",
     "invisible": false,
-    "name": "黯焰之牆",
+    "name": "黑焰之牆",
     "removable": false,
     "stats": [
       "base_chaos_damage_taken_per_minute"
@@ -77595,7 +78066,7 @@
   "generic_monster_chaos_flame_aura_dot": {
     "description": "你在黯焰光環內時會持續承受混沌傷害。",
     "invisible": false,
-    "name": "黯焰光環",
+    "name": "黑焰光環",
     "removable": false,
     "stats": [
       "base_chaos_damage_taken_per_minute"
@@ -77739,7 +78210,7 @@
     "stack_limit": null
   },
   "divine_sentinel_aura_mana_regeneration": {
-    "description": "你增加魔力回復速度",
+    "description": "你增加魔力回復率",
     "invisible": false,
     "name": "守望魔力回復",
     "removable": false,
@@ -78183,7 +78654,7 @@
           "all_damage_can_chill": 1
         },
         "stat_text": [
-          "你造成元素異常狀態時也會影響敵人附近",
+          "你造成元素異常狀態時也會影響 2 公尺內的敵人",
           "所有傷害可以造成點燃",
           "你的擊中必定點燃",
           "你的擊中必定感電",
@@ -78199,7 +78670,7 @@
     "description": "你獲得等同於一部分元素傷害的額外混沌傷害。\r\n當你擁有此增益時，週期性地召喚一道鼠捲風，造成持續物理傷害，並降低生命與能量護盾的恢復率。",
     "invisible": false,
     "name": "鼠之鮮血神殿",
-    "removable": false,
+    "removable": true,
     "stats": [
       "elemental_damage_%_to_add_as_chaos"
     ],
@@ -78224,7 +78695,7 @@
     "description": "你增加持續傷害加成。\r\n當你擁有此增益時，週期性地召喚一群蝗蟲來阻礙敵人。",
     "invisible": false,
     "name": "蝗之鮮血神殿",
-    "removable": false,
+    "removable": true,
     "stats": [
       "dot_multiplier_+"
     ],
@@ -78249,7 +78720,7 @@
     "description": "當你擊殺敵人時，有額外機率觸發爆炸蟾蜍。",
     "invisible": false,
     "name": "蟾之鮮血神殿",
-    "removable": false,
+    "removable": true,
     "stats": [
       "exploding_toad_trigger_%_chance_from_unique"
     ],
@@ -78263,7 +78734,32 @@
           "exploding_toad_trigger_%_chance_from_unique": 25
         },
         "stat_text": [
-          "你擊殺一名敵人時有 25% 機率觸發爆炸蟾蜍"
+          "當你擊殺一名敵人時有 25% 機率觸發[BloodShrineUniqueTriggeredExplodingToad::1|爆炸蟾蜍]"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "blood_shrine_toads_alt": {
+    "description": "蟾蜍的祝福使你擊殺的敵人發生爆炸，造成等同於其最大生命四分之一的混沌傷害。",
+    "invisible": false,
+    "name": "蟾祝鮮血神殿",
+    "removable": true,
+    "stats": [
+      "explode_enemies_for_25%_life_as_chaos_on_kill_chance_%"
+    ],
+    "visuals": "blood_shrine_toads_visual",
+    "category": "Buff shrine",
+    "sources": null,
+    "templates": {
+      "blood_shrine_toads_alt": {
+        "aura_radius_metres": null,
+        "stats": {
+          "explode_enemies_for_25%_life_as_chaos_on_kill_chance_%": 100
+        },
+        "stat_text": [
+          "你擊殺的敵人有 100% 機率爆炸，造成等同四分之一其最大生命的混沌傷害"
         ],
         "visuals": null
       }
@@ -78274,7 +78770,7 @@
     "description": "你承受的部分物理與元素傷害將轉換為混沌傷害，且你增加混沌抗性。",
     "invisible": false,
     "name": "鴉之鮮血神殿",
-    "removable": false,
+    "removable": true,
     "stats": [
       "base_chaos_damage_resistance_%",
       "physical_damage_taken_%_as_chaos",
@@ -78287,12 +78783,12 @@
       "blood_shrine_chaos_resistance": {
         "aura_radius_metres": null,
         "stats": {
-          "base_chaos_damage_resistance_%": 50,
+          "base_chaos_damage_resistance_%": 135,
           "physical_damage_taken_%_as_chaos": 10,
           "elemental_damage_taken_%_as_chaos": 10
         },
         "stat_text": [
-          "+50% 混沌抗性",
+          "+135% 混沌抗性",
           "承受 10% 的擊中物理傷害視為混沌傷害",
           "承受 10% 的擊中元素傷害視為混沌傷害"
         ],
@@ -78305,7 +78801,7 @@
     "description": "擊中時對敵人施加衰弱詛咒，且你可對敵人額外施加一個詛咒。",
     "invisible": false,
     "name": "蝠之鮮血神殿",
-    "removable": false,
+    "removable": true,
     "stats": [
       "curse_on_hit_%_enfeeble",
       "number_of_additional_curses_allowed"
@@ -78402,7 +78898,7 @@
   "discus_slam_alternate_orb_counter": {
     "description": "你擁有神聖爆破球",
     "invisible": false,
-    "name": "神聖爆破．耀閃",
+    "name": "神聖爆破．輝耀",
     "removable": false,
     "stats": [],
     "visuals": "divine_blast_alt_x_buff_visual",
@@ -78488,9 +78984,9 @@
     "stack_limit": null
   },
   "ghost_furnace_soul_buff": {
-    "description": "[DNT] You have increased Fire Damage over Time Multiplier per Ghostflame Soul",
+    "description": "[DNT - UNUSED] You have increased Fire Damage over Time Multiplier per Ghostflame Soul",
     "invisible": false,
-    "name": "[DNT] Ghostflame Soul",
+    "name": "[DNT - UNUSED] 鬼炎之魂",
     "removable": false,
     "stats": [
       "fire_dot_multiplier_+",
@@ -78853,7 +79349,7 @@
         "stat_text": [
           "+15% 冰冷抗性",
           "增加 30% 傷害",
-          "蛻變石改為掉落混沌石"
+          "蛻變石有10%機率改為掉落混沌石"
         ],
         "visuals": null
       }
@@ -78887,7 +79383,7 @@
           "技能發射 2 個額外投射物",
           "+1 米近戰打擊距離",
           "增加 20% 範圍效果",
-          "機會石改為掉落古變石"
+          "機會石有10%機率改為掉落古變石"
         ],
         "visuals": null
       }
@@ -78924,7 +79420,7 @@
           "擊中時使敵人中毒",
           "承受的近戰物理 100% 傷害反射給攻擊者",
           "不被中毒影響",
-          "工匠石改為掉落幻色石"
+          "工匠石有10%機率改為掉落幻色石"
         ],
         "visuals": null
       }
@@ -78955,7 +79451,7 @@
         "stat_text": [
           "20% 法術傷害格擋率",
           "20% 攻擊傷害格擋率",
-          "混沌石改為掉落神聖石"
+          "混沌石有10%機率改為掉落神聖石"
         ],
         "visuals": null
       }
@@ -78986,7 +79482,7 @@
         "stat_text": [
           "不會被暈眩",
           "增加 50% 敵人暈眩時間",
-          "重鑄石改為掉落無效石"
+          "重鑄石有10%機率改為掉落無效石"
         ],
         "visuals": null
       }
@@ -79023,7 +79519,7 @@
           "增加 30% 傷害",
           "增加 15% 移動速度",
           "+5% 最大冰冷抗性",
-          "蛻變石改為掉落混沌石"
+          "蛻變石有20%機率改為掉落混沌石"
         ],
         "visuals": null
       }
@@ -79063,7 +79559,7 @@
           "增加 20% 範圍效果",
           "擊殺時獲得靈巧",
           "增加 30% 靈巧效果",
-          "機會石改為掉落古變石"
+          "機會石有20%機率改為掉落古變石"
         ],
         "visuals": null
       }
@@ -79103,7 +79599,7 @@
           "承受的近戰物理 100% 傷害反射給攻擊者",
           "被你中毒的敵人不能回復生命",
           "你造成中毒時，有 30% 機率對同一目標造成額外一次中毒",
-          "工匠石改為掉落幻色石"
+          "工匠石有20%機率改為掉落幻色石"
         ],
         "visuals": null
       }
@@ -79140,7 +79636,7 @@
           "20% 攻擊傷害格擋率",
           "+3% 全部最大元素抗性",
           "10% 額外物理傷害減免",
-          "混沌石改為掉落神聖石"
+          "混沌石有20%機率改為掉落神聖石"
         ],
         "visuals": null
       }
@@ -79177,7 +79673,7 @@
           "增加 50% 敵人暈眩時間",
           "若你近期有暈眩敵人，有 30% 機率造成兩倍傷害",
           "減少 30% 敵人暈眩門檻",
-          "重鑄石改為掉落無效石"
+          "重鑄石有20%機率改為掉落無效石"
         ],
         "visuals": null
       }
@@ -80353,7 +80849,7 @@
     "stack_limit": 10
   },
   "deepwater_golden_lantern": {
-    "description": "你大幅增加找到的物品數量和稀有度。",
+    "description": "增加 200% 掉落[PlayerItemRarity|物品稀有度]和數量。",
     "invisible": false,
     "name": "黃金燈籠之輝",
     "removable": false,
@@ -80445,7 +80941,7 @@
           "deepwater_transmute_to_chaos_%": 10
         },
         "stat_text": [
-          "蛻變石改為掉落混沌石"
+          "蛻變石有10%機率改為掉落混沌石"
         ],
         "visuals": null
       }
@@ -80470,7 +80966,7 @@
           "deepwater_chance_to_ancient_%": 10
         },
         "stat_text": [
-          "機會石改為掉落古變石"
+          "機會石有10%機率改為掉落古變石"
         ],
         "visuals": null
       }
@@ -80495,7 +80991,7 @@
           "deepwater_jeweller_to_chromatic_%": 10
         },
         "stat_text": [
-          "工匠石改為掉落幻色石"
+          "工匠石有10%機率改為掉落幻色石"
         ],
         "visuals": null
       }
@@ -80520,7 +81016,7 @@
           "deepwater_chaos_to_divine_%": 10
         },
         "stat_text": [
-          "混沌石改為掉落神聖石"
+          "混沌石有10%機率改為掉落神聖石"
         ],
         "visuals": null
       }
@@ -80545,7 +81041,7 @@
           "deepwater_scour_to_annulment_%": 10
         },
         "stat_text": [
-          "重鑄石改為掉落無效石"
+          "重鑄石有10%機率改為掉落無效石"
         ],
         "visuals": null
       }
@@ -80570,7 +81066,7 @@
           "deepwater_transmute_to_chaos_%": 20
         },
         "stat_text": [
-          "蛻變石改為掉落混沌石"
+          "蛻變石有20%機率改為掉落混沌石"
         ],
         "visuals": null
       }
@@ -80595,7 +81091,7 @@
           "deepwater_chance_to_ancient_%": 20
         },
         "stat_text": [
-          "機會石改為掉落古變石"
+          "機會石有20%機率改為掉落古變石"
         ],
         "visuals": null
       }
@@ -80620,7 +81116,7 @@
           "deepwater_jeweller_to_chromatic_%": 20
         },
         "stat_text": [
-          "工匠石改為掉落幻色石"
+          "工匠石有20%機率改為掉落幻色石"
         ],
         "visuals": null
       }
@@ -80645,7 +81141,7 @@
           "deepwater_chaos_to_divine_%": 20
         },
         "stat_text": [
-          "混沌石改為掉落神聖石"
+          "混沌石有20%機率改為掉落神聖石"
         ],
         "visuals": null
       }
@@ -80670,11 +81166,721 @@
           "deepwater_scour_to_annulment_%": 20
         },
         "stat_text": [
-          "重鑄石改為掉落無效石"
+          "重鑄石有20%機率改為掉落無效石"
         ],
         "visuals": null
       }
     },
+    "stack_limit": null
+  },
+  "augury_boss_pre_immunity": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "base_cannot_be_damaged",
+      "base_cannot_be_stunned",
+      "hidden_monster_disallow_daemon_ai"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "augury_boss_frozen": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "base_cannot_be_damaged",
+      "base_cannot_be_stunned",
+      "is_hidden_monster",
+      "hidden_monster_disallow_daemon_ai",
+      "zero_action_speed"
+    ],
+    "visuals": "augury_boss_frozen",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "saresh_stacking_rot": {
+    "description": "每一層都會增加5%你所承受的傷害",
+    "invisible": false,
+    "name": "腐爛血肉",
+    "removable": false,
+    "stats": [
+      "base_damage_taken_+%"
+    ],
+    "visuals": "saresh_stacking_rot",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": 100
+  },
+  "grim_bonfire_damage_overtime": {
+    "description": "你正受到火焰持續傷害。",
+    "invisible": false,
+    "name": "葬焰之火",
+    "removable": false,
+    "stats": [
+      "base_fire_damage_taken_per_minute"
+    ],
+    "visuals": "ground_fire_burn",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "grim_bonfire_aura_visual": {
+    "description": "",
+    "invisible": true,
+    "name": "[DNT] Grim Bonfire",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "blood_flower_life_spent": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "blood_flower_allied_buff": {
+    "description": "身處友方的綻血盛放附近時，獲得額外物理持續傷害加成。",
+    "invisible": false,
+    "name": "綻血盛放",
+    "removable": false,
+    "stats": [
+      "physical_dot_multiplier_+"
+    ],
+    "visuals": "blood_flower_allied_buff_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "blood_flower_damage_over_time": {
+    "description": "附近的綻血盛放正對你造成物理持續傷害。",
+    "invisible": false,
+    "name": "綻血盛放",
+    "removable": false,
+    "stats": [
+      "base_physical_damage_taken_per_minute"
+    ],
+    "visuals": "blood_flower_damage_over_time_visual",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "savage_giant_blackfire_buff": {
+    "description": "[DNT] How do you have this",
+    "invisible": true,
+    "name": "黑焰巨人增益",
+    "removable": false,
+    "stats": [
+      "base_physical_damage_%_to_convert_to_fire"
+    ],
+    "visuals": "savage_giant_blackfire_buff_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "blackfire_wall_daemon_burn": {
+    "description": "你正在承受火焰持續傷害。",
+    "invisible": false,
+    "name": "黑焰",
+    "removable": false,
+    "stats": [
+      "base_fire_damage_taken_per_minute"
+    ],
+    "visuals": "blackfire_wall_daemon_burn_visual",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "backfire_wall_daemon_buff": {
+    "description": "[DNT] Blackfire Wall Buff",
+    "invisible": false,
+    "name": "[DNT] Blackfire Wall Buff",
+    "removable": false,
+    "stats": [],
+    "visuals": "backfire_wall_daemon_buff_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "fireball_alt_aura": {
+    "description": "你正在承受火焰持續傷害。",
+    "invisible": false,
+    "name": "火球．輻射",
+    "removable": false,
+    "stats": [
+      "base_fire_damage_taken_per_minute"
+    ],
+    "visuals": "ignited",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "blight_parasite_miniboss_lightning_buff": {
+    "description": "",
+    "invisible": false,
+    "name": "凋落寄生蟲增益",
+    "removable": false,
+    "stats": [
+      "base_chance_to_shock_%",
+      "physical_damage_%_to_add_as_lightning"
+    ],
+    "visuals": "blight_parasite_miniboss_lightning_buff_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "terrified_debuff": {
+    "description": "你十分驚恐。增加敵人擊中對你的暴擊率和暴擊傷害加成。",
+    "invisible": false,
+    "name": "驚恐",
+    "removable": false,
+    "stats": [
+      "enemy_additional_critical_strike_multiplier_against_self",
+      "enemy_additional_critical_strike_chance_against_self"
+    ],
+    "visuals": "terrified",
+    "category": "Debuff",
+    "sources": null,
+    "templates": {
+      "VisceraTerrifiedDebuff": {
+        "aura_radius_metres": null,
+        "stats": {
+          "enemy_additional_critical_strike_multiplier_against_self": 25,
+          "enemy_additional_critical_strike_chance_against_self": 50
+        },
+        "stat_text": [
+          "對你的擊中有 +0.5% 額外暴擊率"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "icicle_dart_target_debuff": {
+    "description": "你身上刺入了一塊附魔冰晶，後續的冰錐將會瞄準你當前的所在地。",
+    "invisible": false,
+    "name": "冰錐尖鏢",
+    "removable": false,
+    "stats": [],
+    "visuals": "icicle_dart_target_debuff_visual",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "screecher_cold_buff": {
+    "description": "",
+    "invisible": true,
+    "name": "尖嘯者之寒",
+    "removable": false,
+    "stats": [
+      "physical_damage_%_to_add_as_cold"
+    ],
+    "visuals": "invisible",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "screecher_lightning_buff": {
+    "description": "",
+    "invisible": true,
+    "name": "尖嘯者之雷",
+    "removable": false,
+    "stats": [
+      "physical_damage_%_to_add_as_lightning"
+    ],
+    "visuals": "invisible",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "petrified_amber_buff": {
+    "description": "擊殺敵人掉落的金幣有機率被複製。",
+    "invisible": false,
+    "name": "琥珀之血",
+    "removable": false,
+    "stats": [
+      "%_chance_to_duplicate_dropped_gold"
+    ],
+    "visuals": "petrified_amber_buff",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "verisium_experience_buff": {
+    "description": "你獲得的經驗值提高，且怪物有機率掉落奇術魔塵，根據增益層數成長。",
+    "invisible": false,
+    "name": "維里西姆灌注",
+    "removable": false,
+    "stats": [
+      "experience_gain_+%",
+      "slain_monster_equipment_drops_grant_dust_chance_permyriad"
+    ],
+    "visuals": "verisium_buff",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "gigacrow_crownado_debuff": {
+    "description": "你正在持續承受火焰傷害。",
+    "invisible": false,
+    "name": "黑焰龍捲風",
+    "removable": false,
+    "stats": [
+      "base_fire_damage_taken_per_minute"
+    ],
+    "visuals": "gigacrow_crownado_debuff_visual",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "viscera_added_cold_damage_aura": {
+    "description": "你與附近的友芳造成額外冰冷傷害。",
+    "invisible": false,
+    "name": "冰冷傷害光環",
+    "removable": false,
+    "stats": [
+      "global_minimum_added_cold_damage",
+      "global_maximum_added_cold_damage"
+    ],
+    "visuals": "viscera_aura_cold_damage",
+    "category": "Buff",
+    "sources": {
+      "Mods": [
+        {
+          "id": "VisceraModChattersLow",
+          "item": null,
+          "name": null,
+          "template": "VisceraColdDamageAuraLow",
+          "stat_text": null,
+          "stats": null
+        },
+        {
+          "id": "VisceraModChattersMed",
+          "item": null,
+          "name": null,
+          "template": "VisceraColdDamageAuraMed",
+          "stat_text": null,
+          "stats": null
+        },
+        {
+          "id": "VisceraModChattersHigh",
+          "item": null,
+          "name": null,
+          "template": "VisceraColdDamageAuraHigh",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
+    "templates": {
+      "VisceraColdDamageAuraLow": {
+        "aura_radius_metres": 5.0,
+        "stats": {
+          "global_minimum_added_cold_damage": 8,
+          "global_maximum_added_cold_damage": 12
+        },
+        "stat_text": [
+          "附加 8 至 12 冰冷傷害"
+        ],
+        "visuals": null
+      },
+      "VisceraColdDamageAuraMed": {
+        "aura_radius_metres": 5.0,
+        "stats": {
+          "global_minimum_added_cold_damage": 25,
+          "global_maximum_added_cold_damage": 40
+        },
+        "stat_text": [
+          "附加 25 至 40 冰冷傷害"
+        ],
+        "visuals": null
+      },
+      "VisceraColdDamageAuraHigh": {
+        "aura_radius_metres": 5.0,
+        "stats": {
+          "global_minimum_added_cold_damage": 50,
+          "global_maximum_added_cold_damage": 75
+        },
+        "stat_text": [
+          "附加 50 至 75 冰冷傷害"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "monster_mod_kurgals_gasp_revived": {
+    "description": "怪物獲得復活並在持續時間內受到強化。",
+    "invisible": false,
+    "name": "柯戈的嘆息",
+    "removable": false,
+    "stats": [],
+    "visuals": "monster_mod_kurgals_gasp_revived_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "augury_debuff_life_and_es_recovery_rate": {
+    "description": "減少你的生命與能量護盾]恢復率。",
+    "invisible": false,
+    "name": "屍腐感染",
+    "removable": false,
+    "stats": [
+      "life_recovery_rate_+%",
+      "energy_shield_recovery_rate_+%"
+    ],
+    "visuals": "augury_debuff_life_and_es_recovery_rate_visual",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": 5
+  },
+  "ultimatum_soul_core_held": {
+    "description": "你正攜帶靈魂核心。\n最後通牒怪物擊中你時會獲得靈魂。\n最後通牒的「生存」遭遇持續時間縮短，且需要擊殺更少的敵人即可推進進度，石環充能速度也會加快。",
+    "invisible": false,
+    "name": "靈魂核心",
+    "removable": false,
+    "stats": [
+      "ultimatum_monsters_gain_x_souls_on_hit_vs_self"
+    ],
+    "visuals": "ultimatum_soul_core_held_visual",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "savage_witch_burning_debuff": {
+    "description": "當你站在異光雕偶附近時，你會承受持續火焰傷害。",
+    "invisible": false,
+    "name": "異光黑焰",
+    "removable": false,
+    "stats": [
+      "base_fire_damage_taken_per_minute"
+    ],
+    "visuals": "savage_witch_burning_debuff_visual",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "neglect_guardian_crow_debuff": {
+    "description": "站在群鴉風暴中會使你承受物理持續傷害。",
+    "invisible": false,
+    "name": "群鴉風暴",
+    "removable": false,
+    "stats": [
+      "base_physical_damage_taken_per_minute"
+    ],
+    "visuals": "Neglect_Statue_AoE_Visual",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "offerings_grant_damage": {
+    "description": "[DNT] You have increased Damage",
+    "invisible": true,
+    "name": "[DNT] Offering",
+    "removable": false,
+    "stats": [
+      "damage_+%"
+    ],
+    "visuals": "invisible",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "have_used_attack_movement_skill_recently": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "have_used_attack_movement_skill_recently"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "betrayal_free_syndicate_buff": {
+    "description": "你無法被眩暈或冰凍，且增加移動速度。",
+    "invisible": false,
+    "name": "自由移動",
+    "removable": false,
+    "stats": [
+      "base_cannot_be_stunned",
+      "base_cannot_be_frozen",
+      "base_movement_velocity_+%"
+    ],
+    "visuals": "betrayal_free_syndicate_buff_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "BetrayalFreedBuff": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_cannot_be_stunned": 1,
+          "base_cannot_be_frozen": 1,
+          "base_movement_velocity_+%": 20
+        },
+        "stat_text": [
+          "不會被暈眩",
+          "不能被冰凍",
+          "增加 20% 移動速度"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "betrayal_interrogate_syndicate_buff": {
+    "description": "你增加獲得的經驗值。",
+    "invisible": false,
+    "name": "運營情報",
+    "removable": false,
+    "stats": [
+      "experience_gain_+%"
+    ],
+    "visuals": "betrayal_interrogate_syndicate_buff_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "BetrayalInterrogateBuff": {
+        "aura_radius_metres": null,
+        "stats": {
+          "experience_gain_+%": 10
+        },
+        "stat_text": [
+          "增加 10% 經驗獲得"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "flesh_barrier": {
+    "description": "受到的擊中傷害會優先從此屏障中承受，而非你的生命或能量護盾。",
+    "invisible": false,
+    "name": "苦澀之血",
+    "removable": true,
+    "stats": [],
+    "visuals": "flesh_barrier_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "flesh_barrier_triggered_buff": {
+    "description": "你的法術增加範圍效果、暴擊率和額外暴擊加成",
+    "invisible": false,
+    "name": "哀歌",
+    "removable": true,
+    "stats": [
+      "base_spell_critical_strike_multiplier_+",
+      "spell_area_of_effect_+%",
+      "spell_critical_strike_chance_+%",
+      "has_flesh_barrier_triggered_buff"
+    ],
+    "visuals": "flesh_barrier_triggered_buff_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "FleshBarrierTriggeredBuff": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_spell_critical_strike_multiplier_+": 50,
+          "spell_area_of_effect_+%": 100,
+          "spell_critical_strike_chance_+%": 200,
+          "has_flesh_barrier_triggered_buff": 1
+        },
+        "stat_text": [
+          "+50% 法術傷害的暴擊加成",
+          "法術技能增加 100% 範圍效果",
+          "增加 200% 法術暴擊率"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "breach_threads_wombgift_drop_visuals": {
+    "description": "",
+    "invisible": false,
+    "name": "夏烏拉的多產",
+    "removable": false,
+    "stats": [],
+    "visuals": "breach_thread_fruit_visuals",
+    "category": "Buff shrine",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "torment_touched_procurator": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "torment_touched_procurator",
+    "category": null,
+    "sources": {
+      "Mods": [
+        {
+          "id": "TormentTouchedEffectProcurator",
+          "item": null,
+          "name": null,
+          "template": "TormentTouchedEffectProcurator",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
+    "templates": {
+      "TormentTouchedEffectProcurator": {
+        "aura_radius_metres": null,
+        "stats": null,
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "torment_possessed_procurator": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "torment_procurator",
+    "category": null,
+    "sources": {
+      "Mods": [
+        {
+          "id": "TormentPossessedEffectProcurator",
+          "item": null,
+          "name": null,
+          "template": "TormentPossessedEffectProcurator",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
+    "templates": {
+      "TormentPossessedEffectProcurator": {
+        "aura_radius_metres": null,
+        "stats": null,
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "spellcast_fourth_use_counter": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "spellcast_sixth_use_counter": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "track_gain_spell_cost_every_second_cast": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "einhar_blood_explode_buff": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "explode_on_death_for_%_life_as_physical_damage_blood"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": {
+      "BestiaryEinharBloodExplosionAura": {
+        "aura_radius_metres": 6.5,
+        "stats": {
+          "explode_on_death_for_%_life_as_physical_damage_blood": 25
+        },
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "player_is_delirious": {
+    "description": "根據你在譫妄迷霧中的當前位置，賦予你傷害減免、傷害、攻擊和施放速度、以及移動速度。",
+    "invisible": false,
+    "name": "譫妄",
+    "removable": false,
+    "stats": [],
+    "visuals": "player_affliction_buff",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
     "stack_limit": null
   }
 }

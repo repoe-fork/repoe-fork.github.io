@@ -50,6 +50,62 @@
   {
     "English": null,
     "ids": [
+      "map_drop_scaling_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "增加{0}%此區域的[AtlasDropScaling|輿圖掉落加成]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "減少{0}%此區域的[AtlasDropScaling|輿圖掉落加成]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "map_item_drop_quantity_+%",
       "chart_quantity_voyage_display_stat"
     ],
@@ -290,7 +346,7 @@
         "index_handlers": [
           []
         ],
-        "string": "此區域的物品數量加成同時套用在物品稀有度上",
+        "string": "此區域影響[AtlasDropScaling|輿圖掉落加成]的詞綴會同時套用至物品稀有度",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2155,7 +2211,7 @@
         "index_handlers": [
           []
         ],
-        "string": "區域內的稀有怪物掉落額外一個聖甲蟲",
+        "string": "區域內的稀有怪物會額外掉落一個[Thread|綢帶]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -2173,7 +2229,7 @@
         "index_handlers": [
           []
         ],
-        "string": "區域內的稀有怪物掉落額外 {0} 個聖甲蟲",
+        "string": "區域內的稀有怪物會額外掉落{0}個[Thread|綢帶]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3055,6 +3111,42 @@
           []
         ],
         "string": "區域含有無名先知",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_area_is_tormented"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "區域會是[TormentedArea|魂纏區域]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5710,7 +5802,7 @@
         "index_handlers": [
           []
         ],
-        "string": "區域內擊殺的最終穿越設計師會掉落物品化神殿\n區域內掉落的物品化神殿房間階級隨機",
+        "string": "區域內擊殺的最終穿越建師會掉落物品化的神廟\n區域內掉落的物品化神廟房間階級隨機",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5929,42 +6021,6 @@
           []
         ],
         "string": "神諭掉落的通貨碎片被複製",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ]
-  },
-  {
-    "English": null,
-    "ids": [
-      "map_harbinger_scarab_empower"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional Chinese": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "區域內的神諭會生成強化石碑",
         "reminder_text": null,
         "is_markup": null
       }
@@ -6324,7 +6380,7 @@
         "index_handlers": [
           []
         ],
-        "string": "區域內的軍團寶箱在從凝滯狀態被釋放時\n有{0}%機率會擴散其獎勵至周遭的軍團怪物上\n以此方式獲得獎勵的軍團怪物會增加難度",
+        "string": "區域內的戰亂寶箱在從凝滯狀態被釋放時\n有{0}%機率會擴散其獎勵至周遭的戰亂怪物上\n以此方式獲得獎勵的戰亂怪物會增加難度",
         "reminder_text": null,
         "is_markup": null
       },
@@ -6342,7 +6398,7 @@
         "index_handlers": [
           []
         ],
-        "string": "區域內的軍團寶箱在從凝滯狀態被釋放時\n會擴散其獎勵至周遭的軍團怪物上\n以此方式獲得獎勵的軍團怪物會增加難度",
+        "string": "區域內的戰亂寶箱在從凝滯狀態被釋放時\n會擴散其獎勵至周遭的戰亂怪物上\n以此方式獲得獎勵的戰亂怪物會增加難度",
         "reminder_text": null,
         "is_markup": null
       }
@@ -6468,7 +6524,7 @@
         "index_handlers": [
           []
         ],
-        "string": "軍團怪物可以多次脫離靜止狀態\n軍團怪物每次脫離都會增加難度和獎勵",
+        "string": "戰亂怪物可以多次脫離靜止狀態\n戰亂怪物每次脫離都會增加難度和獎勵",
         "reminder_text": null,
         "is_markup": null
       }
@@ -7464,7 +7520,7 @@
         "index_handlers": [
           []
         ],
-        "string": "原生的稀有怪物被精髓禁錮",
+        "string": "原生的稀有怪物會被[Calcified|鈣化]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -7626,7 +7682,7 @@
         "index_handlers": [
           []
         ],
-        "string": "祭祀神壇重骰恩賜之物前 {0} 次免費",
+        "string": "在祭祀神壇重骰恩賜之物時，擁有額外 {0} 次免費",
         "reminder_text": null,
         "is_markup": null
       },
@@ -7644,7 +7700,7 @@
         "index_handlers": [
           []
         ],
-        "string": "祭祀神壇重骰恩賜之物前 {0} 次免費",
+        "string": "在祭祀神壇重骰恩賜之物時，擁有額外 {0} 次免費",
         "reminder_text": null,
         "is_markup": null
       }
@@ -7898,7 +7954,7 @@
         "index_handlers": [
           []
         ],
-        "string": "增加{0}%區域內找到的聖甲蟲",
+        "string": "區域內可找到{0}%更多[Thread|綢帶]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -7918,7 +7974,7 @@
             "negate"
           ]
         ],
-        "string": "減少{0}%區域內找到的聖甲蟲",
+        "string": "區域內可找到{0}%更少[Thread|綢帶]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -7954,7 +8010,7 @@
         "index_handlers": [
           []
         ],
-        "string": "區域內掉落的聖甲蟲增加 {0}%",
+        "string": "區域內可以找到{0}%更多[Thread|綢帶]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -7974,7 +8030,7 @@
             "negate"
           ]
         ],
-        "string": "區域內掉落的聖甲蟲減少 {0}%",
+        "string": "區域內可以找到{0}%更少[Thread|綢帶]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -8400,7 +8456,7 @@
             "divide_by_one_hundred_2dp_if_required"
           ]
         ],
-        "string": "{0}% 機率把地圖轉化至聖甲蟲",
+        "string": "有{0}%機率將地圖轉換為[Thread|綢帶]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -8512,7 +8568,7 @@
         "index_handlers": [
           []
         ],
-        "string": "擊敗永生密教成員時有 {0}% 機率掉落 1 個額外聖甲蟲",
+        "string": "永生密教成員被擊敗時有{0}%機率會額外掉落一個[Thread|綢帶]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -8530,7 +8586,43 @@
         "index_handlers": [
           []
         ],
-        "string": "擊敗永生密教成員時掉落 1 個額外聖甲蟲",
+        "string": "永生密教成員被擊敗時會額外掉落一個[Thread|綢帶]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_terror_shrines"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "區域內含有[TerrorShrines|恐懼神殿]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -14312,6 +14404,18 @@
         "id": "explicit.stat_2783958145",
         "text": "#% more Maximum Life",
         "type": "explicit",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_1214601201",
+        "text": "#% more Maximum Life",
+        "type": "implicit",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_137377270",
+        "text": "#% more Maximum Life",
+        "type": "implicit",
         "option": null
       }
     ],

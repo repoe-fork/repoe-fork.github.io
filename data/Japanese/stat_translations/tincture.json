@@ -115,8 +115,8 @@
         "index_handlers": [
           []
         ],
-        "string": "近接武器によりヒット時に{0}%の確率で盲目を付与する",
-        "reminder_text": "(Blind: 盲目は、命中率と回避力を20%低下させる。持続時間は4秒)",
+        "string": "近接武器によりヒット時に{0}%の確率で[Blind|盲目]を付与する",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -230,18 +230,18 @@
       {
         "condition": [
           {
-            "min": 1,
+            "min": null,
             "max": null,
             "negated": null
           }
         ],
         "format": [
-          "#"
+          "+#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "マナ燃焼のスタックごとに見つかるアイテムのレアリティが{0}%、最大100%増加する",
+        "string": "マナ燃焼ごとの[PlayerItemRarity|アイテムレアリティ] {0}%、最大100%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -482,38 +482,18 @@
       {
         "condition": [
           {
-            "min": 1,
+            "min": null,
             "max": null,
             "negated": null
           }
         ],
         "format": [
-          "#"
+          "+#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "近接武器のアタックにより殺された敵がドロップするアイテムのレアリティが{0}%増加する",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "近接武器のアタックにより殺された敵がドロップするアイテムのレアリティが{0}%減少する",
+        "string": "近接武器アタックで倒した敵のドロップしたアイテムの[PlayerItemRarity|レアリティ] {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -605,8 +585,8 @@
         "index_handlers": [
           []
         ],
-        "string": "近接武器による盲目の効果が{0}%増加する",
-        "reminder_text": "(Blind: 盲目は、命中力と回避力を20%低下させる)",
+        "string": "近接武器による[Blind|盲目]の効果が{0}%増加する",
+        "reminder_text": null,
         "is_markup": null
       },
       {
@@ -625,8 +605,8 @@
             "negate"
           ]
         ],
-        "string": "近接武器による盲目の効果が{0}%減少する",
-        "reminder_text": "(Blind: 盲目は、命中力と回避力を20%低下させる)",
+        "string": "近接武器による[Blind|盲目]の効果が{0}%減少する",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -3779,8 +3759,8 @@
         "index_handlers": [
           []
         ],
-        "string": "近接武器によるキリングブロー時に{0}%の確率で猛攻を10秒間獲得する",
-        "reminder_text": "(Onslaught: 猛攻はアタックスピード、キャストスピード、移動スピードを20%増加させる)",
+        "string": "近接武器によるキリングブロー時に{0}%の確率で[Onslaught|猛攻]を10秒間獲得する",
+        "reminder_text": null,
         "is_markup": null
       },
       {
@@ -3797,8 +3777,8 @@
         "index_handlers": [
           []
         ],
-        "string": "近接武器によるキリングブロー時に猛攻を10秒間獲得する",
-        "reminder_text": "(Onslaught: 猛攻はアタックスピード、キャストスピード、移動スピードを20%増加させる)",
+        "string": "近接武器によるキリングブロー時に[Onslaught|猛攻]を10秒間獲得する",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -8620,6 +8600,18 @@
         "id": "explicit.stat_2783958145",
         "text": "#% more Maximum Life",
         "type": "explicit",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_1214601201",
+        "text": "#% more Maximum Life",
+        "type": "implicit",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_137377270",
+        "text": "#% more Maximum Life",
+        "type": "implicit",
         "option": null
       }
     ],

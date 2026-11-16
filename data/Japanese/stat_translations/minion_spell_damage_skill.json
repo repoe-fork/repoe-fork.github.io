@@ -440,38 +440,18 @@
       {
         "condition": [
           {
-            "min": 1,
+            "min": null,
             "max": null,
             "negated": null
           }
         ],
         "format": [
-          "#"
+          "+#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "このスペルまたはミニオンにより倒された敵がドロップするアイテムのレアリティが{0}%増加する",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "このスペルまたはミニオンにより倒された敵がドロップするアイテムのレアリティが{0}%減少する",
+        "string": "このスペルまたはミニオンが倒した敵のドロップしたアイテムの[PlayerItemRarity|レアリティ] {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -1487,8 +1467,8 @@
         "index_handlers": [
           []
         ],
-        "string": "このスペルおよびミニオンはヒット時に{0}%の確率で敵を盲目にする",
-        "reminder_text": "(Blind: 盲目は、命中率と回避力を20%低下させる。持続時間は4秒)",
+        "string": "このスペルおよびミニオンはヒット時に{0}%の確率で敵を[Blind|盲目]にする",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -1523,7 +1503,7 @@
         "index_handlers": [
           []
         ],
-        "string": "このスペルおよびミニオンによる盲目の持続時間が{0}%増加する",
+        "string": "このスペルおよびミニオンによる[Blind|盲目]の持続時間が{0}%増加する",
         "reminder_text": null,
         "is_markup": null
       },
@@ -1543,7 +1523,7 @@
             "negate"
           ]
         ],
-        "string": "このスペルおよびミニオンによる盲目の持続時間が{0}%減少する",
+        "string": "このスペルおよびミニオンによる[Blind|盲目]の持続時間が{0}%減少する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -1882,7 +1862,7 @@
           }
         ],
         "format": [
-          "+#"
+          "#"
         ],
         "index_handlers": [
           []
@@ -1981,6 +1961,42 @@
         ],
         "string": "このスペルおよびミニオンは元素系状態異常を付与できない",
         "reminder_text": "(Elemental Ailments: 元素系状態異常には発火、焦げ、冷却、凍結、脆弱、感電、消耗がある)",
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "global_cannot_crit"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "このスペルとミニオンはクリティカルストライクを与えられなくなる",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -2511,7 +2527,7 @@
         "index_handlers": [
           []
         ],
-        "string": "このスペルおよびミニオンは盲目状態の敵に対するクリティカル率が{0}%増加する",
+        "string": "このスペルおよびミニオンは[Blind|盲目]状態の敵に対するクリティカル率が{0}%増加する",
         "reminder_text": null,
         "is_markup": null
       },
@@ -2531,7 +2547,7 @@
             "negate"
           ]
         ],
-        "string": "このスペルおよびミニオンは盲目状態の敵に対するクリティカル率が{0}%減少する",
+        "string": "このスペルおよびミニオンは[Blind|盲目]状態の敵に対するクリティカル率が{0}%減少する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4081,6 +4097,62 @@
         ],
         "string": "このスペルまたはミニオンにより付与された状態異常の持続時間が{0}%低下する",
         "reminder_text": "(Ailments: 状態異常には、出血、発火、焦げ、冷却、凍結、脆弱、感電、消耗、毒がある)",
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_impotence_damage_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "このスペルおよびミニオンのダメージが{0}%上昇する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "このスペルおよびミニオンのダメージが{0}%低下する",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -9226,6 +9298,18 @@
         "id": "explicit.stat_2783958145",
         "text": "#% more Maximum Life",
         "type": "explicit",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_1214601201",
+        "text": "#% more Maximum Life",
+        "type": "implicit",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_137377270",
+        "text": "#% more Maximum Life",
+        "type": "implicit",
         "option": null
       }
     ],

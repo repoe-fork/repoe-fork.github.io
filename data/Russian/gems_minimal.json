@@ -132,6 +132,146 @@
   },
   {
     "active_skill": {
+      "description": "Герой бросает вперёд огненный шар, который накладывает кратковременный, но мощный отрицательный эффект постепенного урона от огня на каждого врага в области вокруг.",
+      "display_name": "Огненный шар облучения",
+      "id": "fireball_alt_x",
+      "is_manually_casted": true,
+      "is_skill_totem": false,
+      "stat_conversions": {
+        "fireball_cast_speed_+%": "base_cast_speed_+%",
+        "fireball_damage_+%": "damage_+%",
+        "fireball_and_rolling_magma_modifiers_to_projectile_count_do_not_apply": "modifiers_to_projectile_count_do_not_apply",
+        "fireball_and_rolling_magma_active_skill_area_of_effect_+%_final": "active_skill_area_of_effect_+%_final"
+      },
+      "types": [
+        "Projectile",
+        "ProjectilesFromUser",
+        "Spell",
+        "Damage",
+        "Area",
+        "Trappable",
+        "Totemable",
+        "Mineable",
+        "Multicastable",
+        "Triggerable",
+        "CanRapidFire",
+        "AreaSpell",
+        "DamageOverTime",
+        "Duration",
+        "Fire"
+      ],
+      "weapon_restrictions": [],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "Огненный шар",
+      "experience_type": "GemProgression1",
+      "id": "Metadata/Items/Gems/SkillGemFireball",
+      "max_level": 20,
+      "release_state": "released"
+    },
+    "cast_time": 750,
+    "color": "b",
+    "display_name": "Огненный шар облучения",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [
+        {
+          "stat": "Базовый радиус - {active_skill_base_area_of_effect_radius/locations_to_metres} м",
+          "stats": {
+            "active_skill_base_area_of_effect_radius": 100
+          }
+        }
+      ],
+      "stat_requirements": {
+        "int": null,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "active_skill_projectile_speed_+%_final": "На 70% меньше скорости снаряда",
+        "base_skill_effect_duration": "Базовая длительность - 1.00 секунда",
+        "quality_display_active_skill_ignite_damage_is_gem": "",
+        "spell_damage_modifiers_apply_to_skill_dot": "Модификаторы урона от чар применяются на постепенный урон этого умения"
+      },
+      "stats": [
+        {
+          "id": "base_fire_damage_to_deal_per_minute",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "active_skill_projectile_speed_+%_final",
+          "type": "constant",
+          "value": -70
+        },
+        {
+          "id": "base_skill_effect_duration",
+          "type": "constant",
+          "value": 1000
+        },
+        {
+          "id": "active_skill_base_area_of_effect_radius",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "base_is_projectile",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "quality_display_active_skill_ignite_damage_is_gem",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "spell_damage_modifiers_apply_to_skill_dot",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "base_fire_damage_to_deal_per_minute",
+      "base_skill_effect_duration",
+      "spell_damage_modifiers_apply_to_skill_dot",
+      "active_skill_base_area_of_effect_radius",
+      "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius\nactive_skill_area_of_effect_radius",
+      "quality_display_active_skill_ignite_damage_is_gem",
+      "active_skill_projectile_speed_+%_final"
+    ],
+    "tags": [
+      "intelligence",
+      "grants_active_skill",
+      "projectile",
+      "spell",
+      "area",
+      "duration",
+      "fire"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": "alt_x",
+    "support_gem": null
+  },
+  {
+    "active_skill": {
       "description": "Герой выпускает огненные шары, которые летят вокруг него по спирали.",
       "display_name": "Огненный шар ваал",
       "id": "vaal_fireball",
@@ -6325,8 +6465,8 @@
     },
     "tooltip_order": [
       "spell_minimum_base_fire_damage\nspell_maximum_base_fire_damage",
-      "corpse_explosion_monster_life_permillage_fire",
       "volatile_dead_base_number_of_corpses_to_consume",
+      "corpse_explosion_monster_life_permillage_fire",
       "active_skill_base_area_of_effect_radius",
       "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius",
       "volatile_dead_core_movement_speed_+%",
@@ -6489,8 +6629,8 @@
     "tooltip_order": [
       "base_skill_effect_duration",
       "spell_minimum_base_fire_damage\nspell_maximum_base_fire_damage",
-      "corpse_explosion_monster_life_permillage_fire",
       "volatile_dead_base_number_of_corpses_to_consume",
+      "corpse_explosion_monster_life_permillage_fire",
       "active_skill_base_area_of_effect_radius",
       "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius\nactive_skill_area_of_effect_radius",
       "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius",
@@ -6646,8 +6786,8 @@
     },
     "tooltip_order": [
       "spell_minimum_base_fire_damage\nspell_maximum_base_fire_damage",
-      "corpse_explosion_monster_life_permillage_fire",
       "volatile_dead_base_number_of_corpses_to_consume",
+      "corpse_explosion_monster_life_permillage_fire",
       "active_skill_base_area_of_effect_radius",
       "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius",
       "volatile_dead_core_movement_speed_+%",
@@ -8947,9 +9087,9 @@
     "tooltip_order": [
       "base_chaos_damage_to_deal_per_minute",
       "base_skill_effect_duration",
+      "skill_physical_damage_%_to_convert_to_chaos",
       "projectile_damage_modifiers_apply_to_skill_dot",
-      "active_skill_base_radius_+",
-      "skill_physical_damage_%_to_convert_to_chaos"
+      "active_skill_base_radius_+"
     ],
     "tags": [
       "dexterity",
@@ -9086,8 +9226,8 @@
       "damage_multiplier": null
     },
     "tooltip_order": [
-      "active_skill_base_radius_+",
       "skill_physical_damage_%_to_convert_to_chaos",
+      "active_skill_base_radius_+",
       "base_chance_to_poison_on_hit_%"
     ],
     "tags": [
@@ -13139,8 +13279,8 @@
     },
     "tooltip_order": [
       "base_skill_effect_duration",
-      "corpse_explosion_monster_life_%",
       "skill_physical_damage_%_to_convert_to_fire",
+      "corpse_explosion_monster_life_%",
       "active_skill_base_area_of_effect_radius",
       "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius",
       "infernal_blow_explosion_damage_%_of_total_per_stack\nquality_display_infernal_blow_is_gem"
@@ -13432,8 +13572,8 @@
       "damage_multiplier": null
     },
     "tooltip_order": [
-      "base_chance_to_freeze_%",
       "skill_physical_damage_%_to_convert_to_cold",
+      "base_chance_to_freeze_%",
       "glacial_hammer_third_hit_freeze_as_though_dealt_damage_+%",
       "cold_ailment_duration_+%",
       "cold_ailment_effect_+%"
@@ -13558,8 +13698,8 @@
       "damage_multiplier": null
     },
     "tooltip_order": [
-      "base_critical_strike_multiplier_+",
       "skill_physical_damage_%_to_convert_to_cold",
+      "base_critical_strike_multiplier_+",
       "glacial_hammer_third_hit_always_crits"
     ],
     "tags": [
@@ -13720,9 +13860,9 @@
     },
     "tooltip_order": [
       "base_skill_effect_duration",
+      "skill_physical_damage_%_to_convert_to_cold",
       "modifiers_to_skill_effect_duration_also_affect_soul_prevention_duration",
       "base_chance_to_freeze_%",
-      "skill_physical_damage_%_to_convert_to_cold",
       "freeze_as_though_dealt_damage_+%",
       "global_always_hit",
       "cold_ailment_duration_+%",
@@ -15429,7 +15569,7 @@
       "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "{base_killed_monster_dropped_item_rarity_+%}% повышение редкости предметов, выпадающих из врагов, убитых усиленными умениями",
+          "stat": "{base_killed_monster_dropped_item_rarity_+%}% к [PlayerItemRarity|редкости предметов], выпадающих из врагов, убитых усиленными умениями",
           "stats": {
             "base_killed_monster_dropped_item_rarity_+%": 500
           }
@@ -15563,7 +15703,7 @@
       "letter": "f",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "Усиливает не мгновенные чары.",
+      "support_text": "Усиливает не мгновенные умения чар.",
       "excluded_types": [
         "Instant",
         "FixedCastTime"
@@ -17010,8 +17150,8 @@
     "tooltip_order": [
       "spell_minimum_base_lightning_damage\nspell_maximum_base_lightning_damage",
       "base_cast_speed_+%",
-      "skill_effect_duration_+%",
-      "max_number_of_lightning_warp_markers"
+      "max_number_of_lightning_warp_markers",
+      "skill_effect_duration_+%"
     ],
     "tags": [
       "intelligence",
@@ -17299,7 +17439,7 @@
   {
     "active_skill": {
       "description": "Герой создаёт скелетов-лучников в указанном месте. Скелеты сражаются на стороне героя, выпуская стрелы, и со временем рассыпаются.",
-      "display_name": "Сотворение скелетов лучников",
+      "display_name": "Сотворение скелетов-лучников",
       "id": "summon_skeletons_alt_x",
       "is_manually_casted": true,
       "is_skill_totem": false,
@@ -17430,7 +17570,7 @@
   {
     "active_skill": {
       "description": "Герой создаёт скелетов-магов, каждый из которых относится к случайной стихии, в указанном месте. Скелеты сражаются на стороне героя, сотворяя чары снарядов своей стихии, и со временем рассыпаются.",
-      "display_name": "Сотворение скелетов магов",
+      "display_name": "Сотворение скелетов-магов",
       "id": "summon_skeletons_alt_y",
       "is_manually_casted": true,
       "is_skill_totem": false,
@@ -20864,8 +21004,8 @@
     },
     "tooltip_order": [
       "spell_minimum_base_lightning_damage\nspell_maximum_base_lightning_damage",
-      "base_chance_to_shock_%",
       "number_of_chains",
+      "base_chance_to_shock_%",
       "shield_spell_block_%",
       "skill_display_buff_grants_shock_immunity"
     ],
@@ -21004,9 +21144,9 @@
       "base_skill_effect_duration",
       "active_skill_always_reserves_unmodifiable_X%_of_mana",
       "skill_has_added_lightning_damage_equal_to_%_of_maximum_mana",
+      "mana_infused_staff_base_trigger_interval_ms",
       "active_skill_buff_mana_cost_+%_final_to_grant",
-      "active_skill_buff_block_chance_+%_final_to_grant",
-      "mana_infused_staff_base_trigger_interval_ms"
+      "active_skill_buff_block_chance_+%_final_to_grant"
     ],
     "tags": [
       "intelligence",
@@ -21165,9 +21305,9 @@
       "base_skill_effect_duration",
       "skill_effect_duration_+%",
       "display_this_skill_cooldown_does_not_recover_during_buff",
-      "base_physical_damage_reduction_rating",
       "molten_shell_damage_absorbed_%\nmolten_shell_damage_absorb_limit_%_of_armour\nmolten_shell_max_damage_absorbed",
-      "molten_shell_%_of_absorbed_damage_dealt_as_reflected_fire"
+      "molten_shell_%_of_absorbed_damage_dealt_as_reflected_fire",
+      "base_physical_damage_reduction_rating"
     ],
     "tags": [
       "strength",
@@ -21335,9 +21475,9 @@
       "base_skill_effect_duration",
       "skill_effect_duration_+%",
       "modifiers_to_skill_effect_duration_also_affect_soul_prevention_duration",
-      "base_physical_damage_reduction_rating",
       "molten_shell_damage_absorbed_%\nmolten_shell_damage_absorb_limit_%_of_armour\nmolten_shell_max_damage_absorbed",
-      "molten_shell_%_of_absorbed_damage_dealt_as_reflected_fire\ndisplay_vaal_molten_shell_alternate_description"
+      "molten_shell_%_of_absorbed_damage_dealt_as_reflected_fire\ndisplay_vaal_molten_shell_alternate_description",
+      "base_physical_damage_reduction_rating"
     ],
     "tags": [
       "strength",
@@ -23966,8 +24106,8 @@
       "damage_multiplier": null
     },
     "tooltip_order": [
-      "base_chance_to_ignite_%",
       "skill_physical_damage_%_to_convert_to_fire",
+      "base_chance_to_ignite_%",
       "active_skill_ignite_damage_+%_final\nquality_display_active_skill_ignite_damage_is_gem"
     ],
     "tags": [
@@ -24084,8 +24224,8 @@
     },
     "tooltip_order": [
       "added_fire_damage_to_attacks_equal_to_%_maximum_life",
-      "base_chance_to_ignite_%",
       "skill_physical_damage_%_to_convert_to_fire",
+      "base_chance_to_ignite_%",
       "active_skill_ignite_damage_+%_final\nquality_display_active_skill_ignite_damage_is_gem"
     ],
     "tags": [
@@ -24226,9 +24366,9 @@
       "damage_multiplier": null
     },
     "tooltip_order": [
-      "base_chance_to_ignite_%",
       "projectile_base_number_of_targets_to_pierce",
       "skill_physical_damage_%_to_convert_to_fire",
+      "base_chance_to_ignite_%",
       "global_always_hit",
       "active_skill_ignite_damage_+%_final\nquality_display_active_skill_ignite_damage_is_gem"
     ],
@@ -25020,7 +25160,7 @@
       "letter": "w",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "Усиливает чары. Бонус к физическому урону в ближнем бою от силы начинает увеличивать урон чарами этого умения.",
+      "support_text": "Усиливает умения чар. Бонус к физическому урону в ближнем бою от силы начинает увеличивать урон чарами этого умения.",
       "excluded_types": null,
       "added_types": null,
       "added_minion_types": null
@@ -25169,6 +25309,11 @@
         },
         {
           "id": "is_totem",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "skill_is_spell_totemified",
           "type": "implicit",
           "value": 1
         }
@@ -27508,10 +27653,10 @@
       "base_fire_damage_to_deal_per_minute",
       "base_skill_effect_duration",
       "spell_minimum_base_fire_damage\nspell_maximum_base_fire_damage",
-      "is_trap",
-      "throw_traps_in_circle_radius",
       "number_of_additional_traps_allowed",
-      "number_of_additional_traps_to_throw"
+      "number_of_additional_traps_to_throw",
+      "is_trap",
+      "throw_traps_in_circle_radius"
     ],
     "tags": [
       "trap",
@@ -28912,8 +29057,8 @@
       "spell_minimum_base_cold_damage\nspell_maximum_base_cold_damage",
       "base_skill_effect_duration",
       "base_cold_damage_to_deal_per_minute",
-      "spell_damage_modifiers_apply_to_skill_dot",
       "modifiers_to_projectile_count_do_not_apply",
+      "spell_damage_modifiers_apply_to_skill_dot",
       "active_skill_base_area_of_effect_radius",
       "active_skill_base_secondary_area_of_effect_radius",
       "arctic_breath_maximum_number_of_skulls_allowed",
@@ -29489,8 +29634,8 @@
       "spell_minimum_base_lightning_damage\nspell_maximum_base_lightning_damage",
       "lightning_ailment_duration_+%",
       "base_skill_effect_duration",
-      "base_chance_to_shock_%",
       "number_of_chains",
+      "base_chance_to_shock_%",
       "arc_damage_+%_final_for_each_remaining_chain",
       "lightning_ailment_effect_+%"
     ],
@@ -29896,10 +30041,10 @@
       "base_skill_effect_duration",
       "skill_effect_duration_+%",
       "modifiers_to_skill_effect_duration_also_affect_soul_prevention_duration",
-      "base_mana_regeneration_rate_per_minute",
-      "base_energy_shield_regeneration_rate_per_minute",
       "vaal_arctic_armour_damage_taken_+%_final_from_hits",
-      "vaal_arctic_armour_number_of_hits_absorbed"
+      "vaal_arctic_armour_number_of_hits_absorbed",
+      "base_mana_regeneration_rate_per_minute",
+      "base_energy_shield_regeneration_rate_per_minute"
     ],
     "tags": [
       "dexterity",
@@ -30073,9 +30218,9 @@
       "always_pierce",
       "base_totem_duration",
       "base_number_of_projectiles",
+      "skill_physical_damage_%_to_convert_to_fire",
       "is_totem",
       "base_projectile_speed_+%",
-      "skill_physical_damage_%_to_convert_to_fire",
       "consecrated_ground_immune_to_curses"
     ],
     "tags": [
@@ -30260,10 +30405,10 @@
       "spell_minimum_base_physical_damage\nspell_maximum_base_physical_damage",
       "always_pierce",
       "base_totem_duration",
-      "is_totem",
       "holy_flame_totem_consecrated_ground_area_+%",
       "modifiers_to_projectile_count_do_not_apply",
       "skill_physical_damage_%_to_convert_to_fire",
+      "is_totem",
       "active_skill_projectile_speed_+%_final",
       "consecrated_ground_immune_to_curses"
     ],
@@ -34937,9 +35082,9 @@
       "always_pierce",
       "base_trap_duration\nquality_display_trap_duration_is_gem",
       "base_number_of_projectiles",
+      "number_of_chains",
       "is_trap",
       "base_chance_to_shock_%",
-      "number_of_chains",
       "projectile_chain_from_terrain_chance_%",
       "trap_%_chance_to_trigger_twice",
       "critical_strike_chance_+%_vs_shocked_enemies"
@@ -35173,7 +35318,7 @@
   },
   {
     "active_skill": {
-      "description": "Герой бросает мину, которая при подрыве переносит его к себе. В местах исчезновения и появления героя появляется облако дыма, которое ослепляет врагов и временно ускоряет передвижение героя. Имеет общее время перезарядки с другими умениями Скачка.",
+      "description": "Герой бросает мину, которая при подрыве переносит его к себе. В местах исчезновения и появления героя появляется облако дыма, которое [Blind|ослепляет] врагов и временно ускоряет передвижение героя. Имеет общее время перезарядки с другими умениями Скачка.",
       "display_name": "Дымовая мина",
       "id": "smoke_mine",
       "is_manually_casted": true,
@@ -35316,9 +35461,9 @@
       "additive_mine_duration_modifiers_apply_to_buff_effect_duration",
       "is_remote_mine",
       "disable_mine_detonation_cascade",
-      "base_movement_velocity_+%",
       "mine_cannot_rearm",
-      "mine_detonates_instantly"
+      "mine_detonates_instantly",
+      "base_movement_velocity_+%"
     ],
     "tags": [
       "mine",
@@ -35798,9 +35943,9 @@
     "tooltip_order": [
       "thrown_shield_secondary_projectile_damage_+%_final",
       "off_hand_local_minimum_added_physical_damage\noff_hand_local_maximum_added_physical_damage",
-      "off_hand_minimum_added_physical_damage_per_15_shield_armour_and_evasion_rating\noff_hand_maximum_added_physical_damage_per_15_shield_armour_and_evasion_rating",
       "number_of_additional_projectiles",
-      "primary_projectile_chains_+"
+      "primary_projectile_chains_+",
+      "off_hand_minimum_added_physical_damage_per_15_shield_armour_and_evasion_rating\noff_hand_maximum_added_physical_damage_per_15_shield_armour_and_evasion_rating"
     ],
     "tags": [
       "dexterity",
@@ -36108,8 +36253,8 @@
     "tooltip_order": [
       "thrown_shield_secondary_projectile_damage_+%_final",
       "off_hand_local_minimum_added_physical_damage\noff_hand_local_maximum_added_physical_damage",
-      "off_hand_minimum_added_physical_damage_per_15_shield_armour_and_evasion_rating\noff_hand_maximum_added_physical_damage_per_15_shield_armour_and_evasion_rating",
       "number_of_additional_projectiles",
+      "off_hand_minimum_added_physical_damage_per_15_shield_armour_and_evasion_rating\noff_hand_maximum_added_physical_damage_per_15_shield_armour_and_evasion_rating",
       "active_skill_projectile_speed_+%_final",
       "stationary_shield_throw_projectiles_per_interval"
     ],
@@ -37043,7 +37188,7 @@
       "letter": "!",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "Усиленные чары будут учитывать полученный урон и срабатывать при достижении определённых порогов полученного урона. Нельзя усилить умения, используемые тотемами, ловушками и минами. Невозможно вызвать срабатывание умений ваал, поддерживаемых умений и умений с удержанием.",
+      "support_text": "Все усиленные чары будут учитывать полученный урон и срабатывать при достижении определённых порогов полученного урона. Нельзя усилить умения, используемые тотемами, ловушками и минами. Невозможно вызвать срабатывание умений ваал, поддерживаемых умений и умений с удержанием.",
       "excluded_types": [
         "Trapped",
         "RemoteMined",
@@ -37140,7 +37285,7 @@
       "letter": "!",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "Усиленные чары будут иметь шанс срабатывания при получении вами оглушения. Нельзя усилить умения, используемые тотемами, ловушками и минами. Невозможно вызвать срабатывание умений ваал, поддерживаемых умений и умений с удержанием.",
+      "support_text": "Все усиленные чары будут иметь шанс срабатывания при получении вами оглушения. Нельзя усилить умения, используемые тотемами, ловушками и минами. Невозможно вызвать срабатывание умений ваал, поддерживаемых умений и умений с удержанием.",
       "excluded_types": [
         "Trapped",
         "RemoteMined",
@@ -38938,8 +39083,8 @@
     "tooltip_order": [
       "spell_minimum_base_lightning_damage\nspell_maximum_base_lightning_damage",
       "base_skill_effect_duration",
-      "modifiers_to_skill_effect_duration_also_affect_soul_prevention_duration",
-      "vaal_storm_call_base_delay_ms"
+      "vaal_storm_call_base_delay_ms",
+      "modifiers_to_skill_effect_duration_also_affect_soul_prevention_duration"
     ],
     "tags": [
       "intelligence",
@@ -40428,9 +40573,9 @@
     },
     "tooltip_order": [
       "spell_minimum_base_fire_damage\nspell_maximum_base_fire_damage",
+      "number_of_chains",
       "base_chance_to_ignite_%",
-      "burn_damage_+%",
-      "number_of_chains"
+      "burn_damage_+%"
     ],
     "tags": [
       "intelligence",
@@ -40662,8 +40807,8 @@
     "tooltip_order": [
       "base_number_of_raging_spirits_allowed",
       "base_skill_effect_duration",
-      "minions_cannot_taunt_enemies",
-      "summoned_raging_spirit_chance_to_spawn_additional_minion_%"
+      "summoned_raging_spirit_chance_to_spawn_additional_minion_%",
+      "minions_cannot_taunt_enemies"
     ],
     "tags": [
       "intelligence",
@@ -41689,9 +41834,9 @@
     "tooltip_order": [
       "base_skill_effect_duration",
       "offering_skill_effect_duration_per_corpse",
-      "offering_spells_effect_+%",
       "spirit_offering_critical_strike_chance_+%",
-      "spirit_offering_critical_strike_multiplier_+"
+      "spirit_offering_critical_strike_multiplier_+",
+      "offering_spells_effect_+%"
     ],
     "tags": [
       "minion",
@@ -43149,8 +43294,8 @@
       "damage_multiplier": null
     },
     "tooltip_order": [
-      "base_projectile_speed_+%",
-      "tornado_shot_num_of_secondary_projectiles\nquality_display_tornado_shot_is_gem"
+      "tornado_shot_num_of_secondary_projectiles\nquality_display_tornado_shot_is_gem",
+      "base_projectile_speed_+%"
     ],
     "tags": [
       "dexterity",
@@ -43286,8 +43431,8 @@
     "tooltip_order": [
       "base_number_of_arrows\nquality_display_base_additional_arrows_is_gem",
       "base_number_of_arrows\nquality_display_base_additional_arrows_is_gem\nartillery_ballista_number_of_arrows_is_equal_to_number_of_nearby_targets",
-      "projectiles_nova",
       "quality_display_tornado_shot_is_gem",
+      "projectiles_nova",
       "projectiles_rain"
     ],
     "tags": [
@@ -44069,10 +44214,10 @@
       "herald_of_agony_add_stack_on_poison",
       "herald_of_agony_poison_damage_+%_final",
       "maximum_virulence_stacks\nquality_display_herald_of_agony_is_gem",
-      "minions_cannot_taunt_enemies",
       "scorpion_minion_attack_speed_+%",
       "scorpion_minion_physical_damage_+%",
-      "scorpion_minion_minimum_added_physical_damage\nscorpion_minion_maximum_added_physical_damage"
+      "scorpion_minion_minimum_added_physical_damage\nscorpion_minion_maximum_added_physical_damage",
+      "minions_cannot_taunt_enemies"
     ],
     "tags": [
       "dexterity",
@@ -46646,10 +46791,10 @@
     },
     "tooltip_order": [
       "off_hand_local_minimum_added_physical_damage\noff_hand_local_maximum_added_physical_damage",
+      "skill_physical_damage_%_to_convert_to_cold",
       "retaliation_base_use_window_duration_ms",
       "off_hand_minimum_added_physical_damage_per_15_shield_armour_and_evasion_rating\noff_hand_maximum_added_physical_damage_per_15_shield_armour_and_evasion_rating",
       "always_freeze",
-      "skill_physical_damage_%_to_convert_to_cold",
       "global_always_hit",
       "active_skill_ailment_damage_+%_final",
       "active_skill_base_area_of_effect_radius",
@@ -47124,10 +47269,10 @@
       "damage_multiplier": null
     },
     "tooltip_order": [
-      "skill_physical_damage_%_to_convert_to_lightning",
-      "base_skill_effect_duration",
       "static_strike_base_zap_frequency_ms",
       "static_strike_zap_speed_+%",
+      "skill_physical_damage_%_to_convert_to_lightning",
+      "base_skill_effect_duration",
       "number_of_chains",
       "static_strike_beam_damage_+%_final",
       "static_strike_number_of_beam_targets"
@@ -48834,7 +48979,7 @@
       },
       "stat_text": {
         "base_number_of_golems_allowed": "Максимум 1 призванный голем",
-        "fire_golem_grants_area_of_effect_+%": "Големы даруют 20% увеличение области действия"
+        "fire_golem_grants_area_of_effect_+%": "Големы даруют 15% увеличение области действия"
       },
       "stats": [
         {
@@ -48865,7 +49010,7 @@
         {
           "id": "fire_golem_grants_area_of_effect_+%",
           "type": "additional",
-          "value": 20
+          "value": 15
         },
         {
           "id": "infinite_minion_duration",
@@ -49276,7 +49421,7 @@
       },
       "stat_text": {
         "base_number_of_golems_allowed": "Максимум 1 призванный голем",
-        "lightning_golem_grants_attack_and_cast_speed_+%": "Големы даруют 10% повышение скорости атаки и сотворения чар"
+        "lightning_golem_grants_attack_and_cast_speed_+%": "Големы даруют 8% повышение скорости атаки и сотворения чар"
       },
       "stats": [
         {
@@ -49297,7 +49442,7 @@
         {
           "id": "lightning_golem_grants_attack_and_cast_speed_+%",
           "type": "additional",
-          "value": 10
+          "value": 8
         },
         {
           "id": "base_display_minion_actor_level",
@@ -50265,12 +50410,12 @@
       "base_skill_effect_duration",
       "damage_cannot_be_reflected",
       "base_cooldown_speed_+%",
-      "base_secondary_skill_effect_duration",
       "warcry_count_power_from_enemies",
       "infernal_cry_%_max_life_as_fire_on_death",
       "infernal_cry_physical_damage_%_to_add_as_fire_per_5_power_up_to_cap",
       "skill_empowers_next_x_melee_attacks",
-      "infernal_cry_empowered_attacks_trigger_combust_display"
+      "infernal_cry_empowered_attacks_trigger_combust_display",
+      "base_secondary_skill_effect_duration"
     ],
     "tags": [
       "warcry",
@@ -52684,9 +52829,9 @@
       "base_fire_damage_to_deal_per_minute",
       "base_skill_effect_duration",
       "base_number_of_arrows\nquality_display_base_additional_arrows_is_gem",
-      "projectile_damage_modifiers_apply_to_skill_dot",
       "modifiers_to_projectile_count_do_not_apply",
       "skill_physical_damage_%_to_convert_to_fire",
+      "projectile_damage_modifiers_apply_to_skill_dot",
       "active_skill_base_area_of_effect_radius",
       "active_skill_base_secondary_area_of_effect_radius",
       "fire_dot_multiplier_+"
@@ -55574,8 +55719,8 @@
       "orb_of_storms_base_channelling_bolt_frequency_ms",
       "active_skill_base_area_of_effect_radius",
       "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius",
-      "projectile_number_to_split",
-      "orb_of_storms_maximum_number_of_hits"
+      "orb_of_storms_maximum_number_of_hits",
+      "projectile_number_to_split"
     ],
     "tags": [
       "lightning",
@@ -55823,7 +55968,7 @@
       },
       "stat_text": {
         "base_number_of_golems_allowed": "Максимум 1 призванный голем",
-        "stone_golem_grants_defences_+%": "Големы даруют 20% увеличение защиты"
+        "stone_golem_grants_defences_+%": "Големы даруют 16% увеличение защиты"
       },
       "stats": [
         {
@@ -55854,7 +55999,7 @@
         {
           "id": "stone_golem_grants_defences_+%",
           "type": "additional",
-          "value": 20
+          "value": 16
         },
         {
           "id": "infinite_minion_duration",
@@ -60239,7 +60384,7 @@
       "letter": "R",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "Усиливает умения ловушек.",
+      "support_text": "Усиливает умения, бросающие ловушки.",
       "excluded_types": null,
       "added_types": null,
       "added_minion_types": null
@@ -60353,7 +60498,7 @@
   },
   {
     "active_skill": {
-      "description": "Эти чары отнимают часть здоровья приспешников-скелетов вашего героя, чтобы нанести урон хаосом по области вокруг них. Эффект умения переходит по цепи между ближайшими скелетами героя. Если поблизости нет скелетов, умение выберет целью героя и отнимет часть его здоровья, чтобы нанести урон.",
+      "description": "Эти чары отнимают часть здоровья приспешников-скелетов героя, чтобы нанести урон хаосом по области вокруг них. Эффект умения переходит по цепи между ближайшими скелетами героя. Если поблизости нет скелетов, умение выберет целью самого героя и отнимет часть его здоровья, чтобы нанести урон.",
       "display_name": "Тёмная сделка",
       "id": "dark_pact",
       "is_manually_casted": true,
@@ -60473,8 +60618,8 @@
     },
     "tooltip_order": [
       "spell_minimum_base_chaos_damage\nspell_maximum_base_chaos_damage",
-      "skeletal_chains_aoe_%_health_dealt_as_chaos_damage\nquality_display_dark_pact_is_gem",
       "number_of_chains",
+      "skeletal_chains_aoe_%_health_dealt_as_chaos_damage\nquality_display_dark_pact_is_gem",
       "skeletal_chains_no_minions_targets_self",
       "skeletal_chains_no_minions_damage_+%_final"
     ],
@@ -62571,7 +62716,7 @@
       "letter": "N",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "Усиленные чары будут учитывать затраченную ману и накладывать положительный эффект при достижении определённых порогов затраченной маны. Не может усиливать умения, используемые тотемами, ловушками и минами, а также умения с удержанием.",
+      "support_text": "Все усиленные чары будут учитывать затраченную ману и накладывать положительный эффект при достижении определённых порогов затраченной маны. Не может усиливать умения, используемые тотемами, ловушками и минами, а также умения с удержанием.",
       "excluded_types": [
         "Trapped",
         "RemoteMined",
@@ -62673,8 +62818,8 @@
       "damage_multiplier": null
     },
     "tooltip_order": [
-      "corpse_explosion_monster_life_%",
       "skill_physical_damage_%_to_convert_to_fire",
+      "corpse_explosion_monster_life_%",
       "active_skill_attack_speed_+%_final"
     ],
     "tags": [
@@ -64932,8 +65077,8 @@
     "tooltip_order": [
       "spell_minimum_base_physical_damage\nspell_maximum_base_physical_damage",
       "base_trap_duration\nquality_display_trap_duration_is_gem",
-      "is_trap",
       "skill_physical_damage_%_to_convert_to_fire",
+      "is_trap",
       "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius",
       "active_skill_base_secondary_area_of_effect_radius",
       "active_skill_tertiary_area_of_effect_description_mode\nactive_skill_base_tertiary_area_of_effect_radius",
@@ -65131,8 +65276,8 @@
     "tooltip_order": [
       "spell_minimum_base_physical_damage\nspell_maximum_base_physical_damage",
       "base_trap_duration\nquality_display_trap_duration_is_gem",
-      "is_trap",
       "skill_physical_damage_%_to_convert_to_fire",
+      "is_trap",
       "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius",
       "active_skill_base_secondary_area_of_effect_radius",
       "active_skill_tertiary_area_of_effect_description_mode\nactive_skill_base_tertiary_area_of_effect_radius",
@@ -66148,9 +66293,9 @@
       "spell_minimum_base_lightning_damage\nspell_maximum_base_lightning_damage",
       "base_trap_duration\nquality_display_trap_duration_is_gem",
       "base_skill_effect_duration",
-      "is_trap",
       "lightning_tower_trap_base_interval_duration_ms",
       "modifiers_to_trap_throw_speed_apply_to_lightning_spire_trap_frequency",
+      "is_trap",
       "critical_strike_chance_+%_vs_shocked_enemies",
       "lightning_tower_trap_number_of_beams\nquality_display_lightning_tower_trap_is_gem",
       "lightning_tower_trap_number_of_beams\nlightning_tower_trap_interval_duration_ms\nquality_display_lightning_tower_trap_is_gem"
@@ -66320,8 +66465,8 @@
       "spell_minimum_base_lightning_damage\nspell_maximum_base_lightning_damage",
       "base_trap_duration\nquality_display_trap_duration_is_gem",
       "base_skill_effect_duration",
-      "is_trap",
       "lightning_tower_trap_base_interval_duration_ms",
+      "is_trap",
       "trap_%_chance_to_trigger_twice",
       "lightning_tower_trap_number_of_beams\nquality_display_lightning_tower_trap_is_gem"
     ],
@@ -66490,8 +66635,8 @@
       "spell_minimum_base_lightning_damage\nspell_maximum_base_lightning_damage",
       "base_trap_duration\nquality_display_trap_duration_is_gem",
       "base_skill_effect_duration",
-      "is_trap",
       "lightning_tower_trap_base_interval_duration_ms",
+      "is_trap",
       "lightning_tower_trap_number_of_beams\nquality_display_lightning_tower_trap_is_gem",
       "lightning_tower_trap_number_of_beams\nlightning_tower_trap_interval_duration_ms\nquality_display_lightning_tower_trap_is_gem"
     ],
@@ -66664,9 +66809,9 @@
       "spell_minimum_base_physical_damage\nspell_maximum_base_physical_damage",
       "base_trap_duration\nquality_display_trap_duration_is_gem",
       "base_skill_effect_duration",
-      "is_trap",
       "modifiers_to_trap_throw_speed_apply_to_seismic_trap_frequency",
       "phys_cascade_trap_base_interval_duration_ms",
+      "is_trap",
       "phys_cascade_trap_number_of_cascades\nquality_display_phys_cascade_trap_is_gem",
       "phys_cascade_trap_number_of_cascades\nphys_cascade_trap_interval_duration_ms\nquality_display_phys_cascade_trap_is_gem"
     ],
@@ -67386,7 +67531,7 @@
       "letter": "F",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "Усиливает умения ловушек.",
+      "support_text": "Усиливает умения, бросающие ловушки.",
       "excluded_types": null,
       "added_types": null,
       "added_minion_types": null
@@ -68804,8 +68949,8 @@
       "base_chaos_damage_to_deal_per_minute",
       "base_skill_effect_duration",
       "base_number_of_arrows\nquality_display_base_additional_arrows_is_gem",
-      "projectile_damage_modifiers_apply_to_skill_dot",
       "skill_physical_damage_%_to_convert_to_chaos",
+      "projectile_damage_modifiers_apply_to_skill_dot",
       "rain_of_spores_vines_movement_speed_+%_final\nminimum_rain_of_spores_movement_speed_+%_final_cap"
     ],
     "tags": [
@@ -69152,8 +69297,8 @@
       "base_chaos_damage_to_deal_per_minute",
       "base_skill_effect_duration",
       "base_number_of_arrows\nquality_display_base_additional_arrows_is_gem",
-      "projectile_damage_modifiers_apply_to_skill_dot",
       "skill_physical_damage_%_to_convert_to_chaos",
+      "projectile_damage_modifiers_apply_to_skill_dot",
       "toxic_rain_spores_apply_withered"
     ],
     "tags": [
@@ -69710,7 +69855,7 @@
     "stat_translation_file": "stat_translations/skill",
     "static": {
       "crit_chance": 750,
-      "damage_effectiveness": -20,
+      "damage_effectiveness": -30,
       "quality_stats": [
         {
           "stat": "{frost_fury_max_number_of_stages} к максимуму стадий",
@@ -69732,6 +69877,7 @@
         "frost_fury_fire_speed_+%_final_while_channelling": "На 80% большая частота снарядов при поддержании",
         "base_skill_effect_duration": "Базовая длительность - 1.60 секунд(-ы)",
         "base_chance_to_freeze_%": "25% шанс заморозить врагов",
+        "base_number_of_projectiles": "Выпускает снарядов: 2",
         "display_frost_fury_additive_cast_speed_modifiers_apply_to_fire_speed": "Повышение и снижение скорости сотворения чар также влияют на частоту снарядов"
       },
       "stats": [
@@ -69793,7 +69939,7 @@
         {
           "id": "base_number_of_projectiles",
           "type": "additional",
-          "value": null
+          "value": 2
         },
         {
           "id": "base_is_projectile",
@@ -70466,7 +70612,7 @@
     },
     "cast_time": 750,
     "color": "b",
-    "display_name": "Клеймо бури неопределенности",
+    "display_name": "Клеймо бури неопределённости",
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
@@ -72077,9 +72223,9 @@
     "tooltip_order": [
       "spell_minimum_base_physical_damage\nspell_maximum_base_physical_damage",
       "base_skill_effect_duration",
+      "skill_physical_damage_%_to_convert_to_fire",
       "active_skill_base_radius_+",
       "active_skill_ground_consecration_radius_+",
-      "skill_physical_damage_%_to_convert_to_fire",
       "sanctify_wave_damage_+%_final\nquality_display_sanctify_is_gem"
     ],
     "tags": [
@@ -72234,8 +72380,8 @@
     "tooltip_order": [
       "spell_minimum_base_physical_damage\nspell_maximum_base_physical_damage",
       "base_skill_effect_duration",
-      "active_skill_ground_consecration_radius_+",
       "skill_physical_damage_%_to_convert_to_fire",
+      "active_skill_ground_consecration_radius_+",
       "sanctify_wave_damage_+%_final\nquality_display_sanctify_is_gem"
     ],
     "tags": [
@@ -74515,8 +74661,8 @@
       "base_skill_effect_duration",
       "base_cooldown_speed_+%",
       "display_this_skill_cooldown_does_not_recover_during_buff",
-      "display_skill_buff_grants_bleeding_immunity",
-      "quick_guard_damage_absorbed_%\nquick_guard_damage_absorb_limit"
+      "quick_guard_damage_absorbed_%\nquick_guard_damage_absorb_limit",
+      "display_skill_buff_grants_bleeding_immunity"
     ],
     "tags": [
       "strength",
@@ -74635,8 +74781,8 @@
     "tooltip_order": [
       "base_skill_effect_duration",
       "display_this_skill_cooldown_does_not_recover_during_buff",
-      "display_skill_buff_grants_bleeding_immunity",
-      "quick_guard_damage_absorbed_%\nquick_guard_damage_absorb_limit"
+      "quick_guard_damage_absorbed_%\nquick_guard_damage_absorb_limit",
+      "display_skill_buff_grants_bleeding_immunity"
     ],
     "tags": [
       "intelligence",
@@ -77719,7 +77865,7 @@
       "letter": "g",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "Усиливает умения атак ближнего боя. Приспешники не могут накапливать заряды свирепости.",
+      "support_text": "Усиливает умения атак ближнего боя. Приспешники не могут накапливать свирепость.",
       "excluded_types": null,
       "added_types": null,
       "added_minion_types": null
@@ -78435,8 +78581,8 @@
       "active_skill_withered_base_duration_ms",
       "display_removes_and_grants_elusive_when_used",
       "display_this_skill_cooldown_does_not_recover_during_buff",
-      "phase_through_objects",
-      "slither_wither_stacks\nquality_display_withering_step_is_gem"
+      "slither_wither_stacks\nquality_display_withering_step_is_gem",
+      "phase_through_objects"
     ],
     "tags": [
       "dexterity",
@@ -80970,12 +81116,12 @@
       "damage_multiplier": null
     },
     "tooltip_order": [
-      "skill_buff_effect_+%",
       "tethered_enemies_take_attack_projectile_damage_taken_+%",
       "tethered_movement_speed_+%_final_per_rope",
       "tethered_movement_speed_+%_final_per_rope_vs_rare",
       "tethered_movement_speed_+%_final_per_rope_vs_unique",
-      "tethering_arrow_display_rope_limit"
+      "tethering_arrow_display_rope_limit",
+      "skill_buff_effect_+%"
     ],
     "tags": [
       "dexterity",
@@ -81146,8 +81292,8 @@
       "attack_skills_additional_ballista_totems_allowed",
       "base_number_of_arrows\nquality_display_base_additional_arrows_is_gem",
       "base_number_of_arrows\nquality_display_base_additional_arrows_is_gem\nartillery_ballista_number_of_arrows_is_equal_to_number_of_nearby_targets",
-      "is_totem\nis_ranged_attack_totem",
-      "skill_physical_damage_%_to_convert_to_fire"
+      "skill_physical_damage_%_to_convert_to_fire",
+      "is_totem\nis_ranged_attack_totem"
     ],
     "tags": [
       "dexterity",
@@ -81326,8 +81472,8 @@
       "attack_skills_additional_ballista_totems_allowed",
       "base_number_of_arrows\nquality_display_base_additional_arrows_is_gem",
       "base_number_of_arrows\nquality_display_base_additional_arrows_is_gem\nartillery_ballista_number_of_arrows_is_equal_to_number_of_nearby_targets",
-      "is_totem\nis_ranged_attack_totem",
       "skill_physical_damage_%_to_convert_to_fire",
+      "is_totem\nis_ranged_attack_totem",
       "artillery_ballista_cross_strafe_pattern"
     ],
     "tags": [
@@ -81505,8 +81651,8 @@
       "base_totem_duration",
       "attack_skills_additional_ballista_totems_allowed",
       "base_number_of_arrows\nquality_display_base_additional_arrows_is_gem\nartillery_ballista_number_of_arrows_is_equal_to_number_of_nearby_targets",
-      "is_totem\nis_ranged_attack_totem",
-      "skill_physical_damage_%_to_convert_to_fire"
+      "skill_physical_damage_%_to_convert_to_fire",
+      "is_totem\nis_ranged_attack_totem"
     ],
     "tags": [
       "dexterity",
@@ -88076,11 +88222,11 @@
       "base_cold_damage_to_deal_per_minute",
       "active_skill_brands_allowed_on_enemy_+",
       "spell_damage_modifiers_apply_to_skill_dot",
+      "immolation_brand_burn_damage_+%_final_per_stage\nquality_display_wintertide_brand_is_gem",
+      "winter_brand_max_number_of_stages",
       "base_secondary_skill_effect_duration",
       "base_skill_effect_duration",
-      "base_tertiary_skill_effect_duration",
-      "immolation_brand_burn_damage_+%_final_per_stage\nquality_display_wintertide_brand_is_gem",
-      "winter_brand_max_number_of_stages"
+      "base_tertiary_skill_effect_duration"
     ],
     "tags": [
       "intelligence",
@@ -90636,8 +90782,8 @@
       "base_secondary_skill_effect_duration",
       "spell_damage_modifiers_apply_to_skill_dot",
       "wall_maximum_length\nquality_display_wall_length_is_gem",
-      "flame_wall_minimum_added_fire_damage\nflame_wall_maximum_added_fire_damage",
-      "number_of_allowed_firewalls\nquality_display_firewall_is_gem"
+      "number_of_allowed_firewalls\nquality_display_firewall_is_gem",
+      "flame_wall_minimum_added_fire_damage\nflame_wall_maximum_added_fire_damage"
     ],
     "tags": [
       "intelligence",
@@ -92480,8 +92626,8 @@
       "spell_minimum_base_physical_damage\nspell_maximum_base_physical_damage",
       "base_physical_damage_to_deal_per_minute",
       "base_skill_effect_duration",
-      "spell_damage_modifiers_apply_to_skill_dot",
       "number_of_chains",
+      "spell_damage_modifiers_apply_to_skill_dot",
       "blood_tendrils_beam_count\nquality_display_exsanguinate_beam_targets_is_gem"
     ],
     "tags": [
@@ -95297,8 +95443,8 @@
       "damage_multiplier": null
     },
     "tooltip_order": [
-      "base_chance_to_freeze_%",
       "skill_physical_damage_%_to_convert_to_cold",
+      "base_chance_to_freeze_%",
       "glacial_hammer_third_hit_freeze_as_though_dealt_damage_+%",
       "melee_range_+",
       "cold_ailment_duration_+%",
@@ -95903,9 +96049,9 @@
     "tooltip_order": [
       "thrown_shield_secondary_projectile_damage_+%_final",
       "off_hand_local_minimum_added_physical_damage\noff_hand_local_maximum_added_physical_damage",
-      "off_hand_minimum_added_physical_damage_per_15_shield_armour_and_evasion_rating\noff_hand_maximum_added_physical_damage_per_15_shield_armour_and_evasion_rating",
       "number_of_additional_projectiles",
-      "number_of_chains"
+      "number_of_chains",
+      "off_hand_minimum_added_physical_damage_per_15_shield_armour_and_evasion_rating\noff_hand_maximum_added_physical_damage_per_15_shield_armour_and_evasion_rating"
     ],
     "tags": [
       "dexterity",
@@ -96840,8 +96986,8 @@
       "base_chaos_damage_to_deal_per_minute",
       "base_skill_effect_duration",
       "base_number_of_arrows",
-      "projectile_damage_modifiers_apply_to_skill_dot",
       "skill_physical_damage_%_to_convert_to_chaos",
+      "projectile_damage_modifiers_apply_to_skill_dot",
       "rain_of_spores_vines_movement_speed_+%_final\nminimum_rain_of_spores_movement_speed_+%_final_cap"
     ],
     "tags": [
@@ -99405,8 +99551,8 @@
       "base_skill_effect_duration",
       "spell_minimum_base_fire_damage\nspell_maximum_base_fire_damage",
       "corpse_erruption_base_maximum_number_of_geyers",
-      "corpse_explosion_monster_life_%",
-      "number_of_additional_projectiles"
+      "number_of_additional_projectiles",
+      "corpse_explosion_monster_life_%"
     ],
     "tags": [
       "dexterity",
@@ -100637,8 +100783,8 @@
       "always_pierce",
       "base_totem_duration",
       "base_number_of_projectiles",
-      "is_totem",
       "skill_physical_damage_%_to_convert_to_fire",
+      "is_totem",
       "consecrated_ground_immune_to_curses"
     ],
     "tags": [
@@ -100794,8 +100940,8 @@
       "base_totem_duration",
       "attack_skills_additional_ballista_totems_allowed",
       "base_number_of_arrows",
-      "is_totem\nis_ranged_attack_totem",
-      "skill_physical_damage_%_to_convert_to_fire"
+      "skill_physical_damage_%_to_convert_to_fire",
+      "is_totem\nis_ranged_attack_totem"
     ],
     "tags": [
       "dexterity",
@@ -101871,10 +102017,10 @@
       "spell_minimum_base_lightning_damage\nspell_maximum_base_lightning_damage",
       "base_trap_duration",
       "base_skill_effect_duration",
-      "is_trap",
-      "trap_trigger_radius_+%",
       "lightning_tower_trap_base_interval_duration_ms",
       "modifiers_to_trap_throw_speed_apply_to_lightning_spire_trap_frequency",
+      "is_trap",
+      "trap_trigger_radius_+%",
       "critical_strike_chance_+%_vs_shocked_enemies",
       "lightning_tower_trap_number_of_beams"
     ],
@@ -103497,10 +103643,10 @@
     "tooltip_order": [
       "base_skill_effect_duration",
       "warcry_speed_+%",
-      "physical_damage_reduction_%_per_endurance_charge",
-      "resist_all_elements_%_per_endurance_charge",
       "warcry_count_power_from_enemies",
-      "endurance_charge_granted_per_X_monster_power_during_endurance_warcry"
+      "endurance_charge_granted_per_X_monster_power_during_endurance_warcry",
+      "physical_damage_reduction_%_per_endurance_charge",
+      "resist_all_elements_%_per_endurance_charge"
     ],
     "tags": [
       "warcry",
@@ -103735,8 +103881,8 @@
     },
     "tooltip_order": [
       "spell_minimum_base_lightning_damage\nspell_maximum_base_lightning_damage",
-      "skill_effect_duration_+%",
-      "max_number_of_lightning_warp_markers"
+      "max_number_of_lightning_warp_markers",
+      "skill_effect_duration_+%"
     ],
     "tags": [
       "intelligence",
@@ -103993,7 +104139,7 @@
   },
   {
     "active_skill": {
-      "description": "Герой бросает мину, которая при подрыве переносит его к себе. В местах исчезновения и появления героя появляется облако дыма, которое ослепляет врагов и временно ускоряет передвижение героя. Имеет общее время перезарядки с другими умениями Скачка.",
+      "description": "Герой бросает мину, которая при подрыве переносит его к себе. В местах исчезновения и появления героя появляется облако дыма, которое [Blind|ослепляет] врагов и временно ускоряет передвижение героя. Имеет общее время перезарядки с другими умениями Скачка.",
       "display_name": "Дымовая мина",
       "id": "smoke_mine",
       "is_manually_casted": true,
@@ -104130,9 +104276,9 @@
       "additive_mine_duration_modifiers_apply_to_buff_effect_duration",
       "is_remote_mine",
       "disable_mine_detonation_cascade",
-      "base_movement_velocity_+%",
       "mine_cannot_rearm",
-      "mine_detonates_instantly"
+      "mine_detonates_instantly",
+      "base_movement_velocity_+%"
     ],
     "tags": [
       "mine",
@@ -104750,7 +104896,7 @@
       "letter": "g",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "Усиливает умения атак ближнего боя. Приспешники не могут накапливать заряды свирепости.",
+      "support_text": "Усиливает умения атак ближнего боя. Приспешники не могут накапливать свирепость.",
       "excluded_types": null,
       "added_types": null,
       "added_minion_types": null
@@ -104885,7 +105031,7 @@
       "letter": "f",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "Усиливает не мгновенные чары.",
+      "support_text": "Усиливает не мгновенные умения чар.",
       "excluded_types": [
         "Instant",
         "FixedCastTime"
@@ -105095,6 +105241,11 @@
         },
         {
           "id": "is_totem",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "skill_is_spell_totemified",
           "type": "implicit",
           "value": 1
         }
@@ -106429,8 +106580,8 @@
     "tooltip_order": [
       "spell_minimum_base_lightning_damage\nspell_maximum_base_lightning_damage",
       "base_skill_effect_duration",
-      "corpse_explosion_monster_life_%_lightning",
       "skill_lightning_damage_%_to_convert_to_chaos",
+      "corpse_explosion_monster_life_%_lightning",
       "voltaxic_burst_hit_and_ailment_damage_+%_final_per_stack\nquality_display_voltaxic_burst_is_gem"
     ],
     "tags": [
@@ -106883,8 +107034,8 @@
       "damage_multiplier": null
     },
     "tooltip_order": [
-      "projectiles_nova\nskill_display_single_base_projectile",
       "spectral_spiral_weapon_base_number_of_bounces",
+      "projectiles_nova\nskill_display_single_base_projectile",
       "projectile_damage_+%_final_if_pierced_enemy",
       "spectral_helix_rotations_%"
     ],
@@ -107062,9 +107213,9 @@
     "tooltip_order": [
       "throw_X_additional_traps_if_dual_wielding",
       "base_trap_duration\nquality_display_trap_duration_is_gem",
+      "spectral_spiral_weapon_base_number_of_bounces",
       "is_trap",
       "projectiles_nova\nskill_display_single_base_projectile",
-      "spectral_spiral_weapon_base_number_of_bounces",
       "projectile_damage_+%_final_if_pierced_enemy",
       "spectral_helix_rotations_%",
       "trap_throwing_speed_+%_while_wielding_2hand"
@@ -107541,8 +107692,8 @@
       "base_secondary_skill_effect_duration",
       "base_max_number_of_absolution_sentinels",
       "absolution_blast_chance_to_summon_on_hitting_rare_or_unique_%",
-      "skill_physical_damage_%_to_convert_to_lightning",
-      "minion_cooldown_recovery_+%"
+      "minion_cooldown_recovery_+%",
+      "skill_physical_damage_%_to_convert_to_lightning"
     ],
     "tags": [
       "strength",
@@ -108894,8 +109045,8 @@
     },
     "tooltip_order": [
       "minimum_added_fire_damage_vs_ignited_enemies\nmaximum_added_fire_damage_vs_ignited_enemies",
-      "base_chance_to_ignite_%",
-      "skill_physical_damage_%_to_convert_to_fire"
+      "skill_physical_damage_%_to_convert_to_fire",
+      "base_chance_to_ignite_%"
     ],
     "tags": [
       "dexterity",
@@ -109032,8 +109183,8 @@
     "tooltip_order": [
       "base_chaos_damage_to_deal_per_minute",
       "base_skill_effect_duration",
-      "projectile_damage_modifiers_apply_to_skill_dot",
-      "skill_physical_damage_%_to_convert_to_chaos"
+      "skill_physical_damage_%_to_convert_to_chaos",
+      "projectile_damage_modifiers_apply_to_skill_dot"
     ],
     "tags": [
       "dexterity",
@@ -110214,7 +110365,7 @@
   },
   {
     "active_skill": {
-      "description": "Эти чары отнимают часть здоровья приспешников-скелетов вашего героя, чтобы нанести урон хаосом по области вокруг них. Эффект умения переходит по цепи между ближайшими скелетами героя. Если поблизости нет скелетов, умение выберет целью героя и отнимет часть его здоровья, чтобы нанести урон.",
+      "description": "Эти чары отнимают часть здоровья приспешников-скелетов героя, чтобы нанести урон хаосом по области вокруг них. Эффект умения переходит по цепи между ближайшими скелетами героя. Если поблизости нет скелетов, умение выберет целью самого героя и отнимет часть его здоровья, чтобы нанести урон.",
       "display_name": "Тёмная сделка",
       "id": "dark_pact",
       "is_manually_casted": true,
@@ -110322,8 +110473,8 @@
     },
     "tooltip_order": [
       "spell_minimum_base_chaos_damage\nspell_maximum_base_chaos_damage",
-      "skeletal_chains_aoe_%_health_dealt_as_chaos_damage",
       "number_of_chains",
+      "skeletal_chains_aoe_%_health_dealt_as_chaos_damage",
       "skeletal_chains_no_minions_targets_self"
     ],
     "tags": [
@@ -111509,8 +111660,8 @@
     "tooltip_order": [
       "base_skill_effect_duration",
       "attack_minimum_added_fire_damage\nattack_maximum_added_fire_damage",
-      "corpse_explosion_monster_life_%",
       "skill_physical_damage_%_to_convert_to_fire",
+      "corpse_explosion_monster_life_%",
       "active_skill_base_area_of_effect_radius",
       "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius",
       "infernal_blow_explosion_damage_%_of_total_per_stack"
@@ -114541,10 +114692,10 @@
     },
     "tooltip_order": [
       "base_skill_effect_duration",
-      "base_secondary_skill_effect_duration",
       "skill_empowers_next_x_melee_attacks\nskill_empower_limitation_specifier_for_stat_description",
       "ambush_additional_critical_strike_chance_permyriad",
-      "vanishing_ambush_critical_strike_multiplier_+"
+      "vanishing_ambush_critical_strike_multiplier_+",
+      "base_secondary_skill_effect_duration"
     ],
     "tags": [
       "critical",
@@ -114866,9 +115017,9 @@
     "tooltip_order": [
       "base_trap_duration\nquality_display_trap_duration_is_gem",
       "base_weapon_trap_total_rotation_%\nquality_display_blade_trap_is_gem",
-      "is_trap",
       "weapon_trap_rotation_speed_+%_if_dual_wielding",
       "weapon_trap_total_rotation_%_if_dual_wielding",
+      "is_trap",
       "active_skill_base_area_of_effect_radius"
     ],
     "tags": [
@@ -115636,9 +115787,9 @@
     },
     "tooltip_order": [
       "skill_physical_damage_%_to_convert_to_lightning",
-      "base_stun_threshold_reduction_+%",
       "modifiers_to_projectile_count_do_not_apply",
       "prismatic_rain_beam_base_frequency_ms",
+      "base_stun_threshold_reduction_+%",
       "number_of_allowed_storm_arrows",
       "storm_rain_pulse_count\nquality_display_storm_rain_is_gem"
     ],
@@ -118349,7 +118500,7 @@
       "skill_totem_life_multiplier": null
     },
     "base_item": {
-      "display_name": "[DNT] Call of the Wild",
+      "display_name": "[DNT - UNUSED] Call of the Wild",
       "experience_type": "GemProgression28",
       "id": "Metadata/Items/Gems/SkillGemCallOfTheWild",
       "max_level": 20,
@@ -118357,7 +118508,7 @@
     },
     "cast_time": 850,
     "color": "g",
-    "display_name": "[DNT] Call of the Wild",
+    "display_name": "[DNT - UNUSED] Call of the Wild",
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
@@ -118501,8 +118652,8 @@
     },
     "tooltip_order": [
       "debuff_time_passed_+%",
-      "unaffected_by_temporal_chains",
-      "spell_cast_time_cannot_be_modified"
+      "spell_cast_time_cannot_be_modified",
+      "unaffected_by_temporal_chains"
     ],
     "tags": [
       "dexterity",
@@ -118671,9 +118822,9 @@
     },
     "tooltip_order": [
       "spell_minimum_base_physical_damage\nspell_maximum_base_physical_damage",
+      "tornado_base_damage_interval_ms",
       "base_skill_effect_duration",
       "base_secondary_skill_effect_duration",
-      "tornado_base_damage_interval_ms",
       "tornado_maximum_number_of_hits",
       "tornado_damage_absorbed_%",
       "tornado_hinder",
@@ -118846,8 +118997,8 @@
     },
     "tooltip_order": [
       "spell_minimum_base_physical_damage\nspell_maximum_base_physical_damage",
-      "base_skill_effect_duration",
       "tornado_base_damage_interval_ms",
+      "base_skill_effect_duration",
       "elemental_strike_physical_damage_%_to_convert",
       "tornado_hinder",
       "tornado_movement_speed_+%",
@@ -119163,7 +119314,7 @@
         "dex": 0
       },
       "stat_text": {
-        "flame_link_added_fire_damage_from_life_%": "Дарует связанной цели дополнительный урон от огня, равный 5% от вашего максимума здоровья",
+        "flame_link_added_fire_damage_from_life_%": "Дарует связанной цели дополнительный урон от огня, равный 3% от вашего максимума здоровья",
         "display_link_stuff": "Связь рвётся, если цель покидает радиус или поле зрения на 4 секунды\nМаксимум 1 связь на цели из любого источника\nВы умираете при смерти связанной цели"
       },
       "stats": [
@@ -119180,7 +119331,7 @@
         {
           "id": "flame_link_added_fire_damage_from_life_%",
           "type": "constant",
-          "value": 5
+          "value": 3
         },
         {
           "id": "base_skill_effect_duration",
@@ -119223,6 +119374,128 @@
       "duration",
       "link",
       "fire"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": {
+      "act": 4,
+      "classes": [
+        "Дворянка"
+      ],
+      "quest": "Снятие печати"
+    },
+    "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "Временно связывает вашего героя и союзного игрока положительным эффектом. Пока связь действует, союзник наносит дополнительный урон от молнии, основанный на количестве маны вашего героя. Если союзник погибнет, ваш герой также умрёт. Это умение нельзя использовать с тотемами, ловушками и минами, и нельзя вызвать его срабатывание.",
+      "display_name": "Колдовская связь",
+      "id": "arcane_link",
+      "is_manually_casted": true,
+      "is_skill_totem": false,
+      "stat_conversions": {},
+      "types": [
+        "Spell",
+        "Buff",
+        "Duration",
+        "Link",
+        "Lightning",
+        "Arcane"
+      ],
+      "weapon_restrictions": [],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "Колдовская связь",
+      "experience_type": "GemProgression34",
+      "id": "Metadata/Items/Gems/SkillGemArcaneLink",
+      "max_level": 20,
+      "release_state": "released"
+    },
+    "cast_time": 500,
+    "color": "b",
+    "display_name": "Колдовская связь",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/buff_skill",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [
+        {
+          "stat": "Базовая длительность - {base_skill_effect_duration/milliseconds_to_seconds_2dp} секунд(-ы)",
+          "stats": {
+            "base_skill_effect_duration": 75000
+          }
+        }
+      ],
+      "stat_requirements": {
+        "int": null,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "arcane_link_added_lightning_damage_from_mana_%": "Дарует связанной цели дополнительный урон от молнии, равный 3% от вашего максимума маны",
+        "display_link_stuff": "Связь рвётся, если цель покидает радиус или поле зрения на 4 секунды\nМаксимум 1 связь на цели из любого источника\nВы умираете при смерти связанной цели"
+      },
+      "stats": [
+        {
+          "id": "arcane_link_minimum_lightning_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "arcane_link_maximum_lightning_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "arcane_link_added_lightning_damage_from_mana_%",
+          "type": "constant",
+          "value": 3
+        },
+        {
+          "id": "base_skill_effect_duration",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "skill_cost_over_time_is_not_removed_with_skill",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "display_link_stuff",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "base_skill_effect_duration",
+      "arcane_link_added_lightning_damage_from_mana_%",
+      "arcane_link_minimum_lightning_damage\narcane_link_maximum_lightning_damage",
+      "display_link_stuff"
+    ],
+    "tags": [
+      "intelligence",
+      "grants_active_skill",
+      "spell",
+      "duration",
+      "link",
+      "lightning",
+      "arcane"
     ],
     "secondary_granted_effect": null,
     "quest_reward": {
@@ -120504,8 +120777,8 @@
       "galvanic_field_retargeting_delay_ms",
       "galvanic_field_damage_+%_final_per_5%_increased_damage_taken_from_shock",
       "galvanic_field_radius_+_per_10%_increased_damage_taken_from_shock",
-      "base_chance_to_shock_%_from_skill\nquality_display_shock_chance_from_skill_is_gem",
-      "galvanic_field_maximum_number_of_spheres"
+      "galvanic_field_maximum_number_of_spheres",
+      "base_chance_to_shock_%_from_skill\nquality_display_shock_chance_from_skill_is_gem"
     ],
     "tags": [
       "intelligence",
@@ -121228,8 +121501,8 @@
     },
     "tooltip_order": [
       "base_number_of_projectiles",
-      "active_skill_area_of_effect_+%_final",
       "skill_physical_damage_%_to_convert_to_fire",
+      "active_skill_area_of_effect_+%_final",
       "vaal_volcanic_fissure_crack_repeat_count"
     ],
     "tags": [
@@ -121819,10 +122092,10 @@
       "always_pierce",
       "base_chaos_damage_to_deal_per_minute",
       "base_skill_effect_duration",
+      "skill_physical_damage_%_to_convert_to_chaos",
       "projectile_damage_modifiers_apply_to_skill_dot",
       "modifiers_to_skill_effect_duration_also_affect_soul_prevention_duration",
       "active_skill_base_radius_+",
-      "skill_physical_damage_%_to_convert_to_chaos",
       "global_always_hit"
     ],
     "tags": [
@@ -121997,9 +122270,9 @@
     },
     "tooltip_order": [
       "base_number_of_projectiles",
-      "active_skill_base_radius_+",
       "number_of_chains",
       "skill_physical_damage_%_to_convert_to_fire",
+      "active_skill_base_radius_+",
       "global_always_hit",
       "active_skill_hit_ailment_damage_with_projectile_+%_final",
       "molten_strike_projectiles_chain_when_impacting_ground"
@@ -122365,8 +122638,8 @@
     "tooltip_order": [
       "base_skill_effect_duration",
       "base_secondary_skill_effect_duration",
-      "modifiers_to_skill_effect_duration_also_affect_soul_prevention_duration",
       "skill_physical_damage_%_to_convert_to_chaos",
+      "modifiers_to_skill_effect_duration_also_affect_soul_prevention_duration",
       "base_chance_to_poison_on_hit_%",
       "base_poison_duration_+%",
       "maximum_number_of_snapping_adder_projectiles\nvaal_venom_gyre_instantly_capture_maximum_projectiles\nvaal_venom_gyre_capture_x_projectiles_per_second",
@@ -122388,7 +122661,7 @@
   },
   {
     "active_skill": {
-      "description": "Герой усиливает своё оружие ударом молнии и совершает атаку ближнего боя, вызывая удар молнии в ближайших врагов, наносящий урон по области вокруг каждого из них. Если умение нанесёт удар по врагу, герой на некоторое время получит ауру. Можно использовать с мечами, топорами, булавами, скипетрами, посохами или без оружия.",
+      "description": "Герой усиливает своё оружие ударом молнии и совершает атаку ближнего боя, вызывая удар молнии в ближайших врагов, наносящий урон по области. Если умение нанесёт удар по врагу, герой на некоторое время получит ауру. Можно использовать с мечами, топорами, булавами, скипетрами, посохами или без оружия.",
       "display_name": "Кара ваал",
       "id": "vaal_smite",
       "is_manually_casted": true,
@@ -123092,11 +123365,11 @@
     },
     "tooltip_order": [
       "base_skill_effect_duration",
-      "modifiers_to_skill_effect_duration_also_affect_soul_prevention_duration",
       "base_number_of_animated_weapons_allowed\nquality_display_animate_weapon_is_gem",
+      "modifiers_to_skill_effect_duration_also_affect_soul_prevention_duration",
       "vaal_animate_weapon_minimum_level_requirement\nanimate_item_maximum_level_requirement",
-      "active_skill_minion_damage_+%_final",
-      "vaal_animate_weapon_raise_up_to_X_weapons_as_uniques"
+      "vaal_animate_weapon_raise_up_to_X_weapons_as_uniques",
+      "active_skill_minion_damage_+%_final"
     ],
     "tags": [
       "dexterity",
@@ -123277,9 +123550,9 @@
       "always_pierce",
       "skill_physical_damage_%_to_convert_to_lightning",
       "base_number_of_arrows\nquality_display_base_additional_arrows_is_gem",
-      "projectiles_barrage",
       "vaal_lightning_arrow_number_of_redirects",
       "vaal_lightning_arrow_fork_and_chain_modifiers_apply_to_number_of_redirects",
+      "projectiles_barrage",
       "lightning_arrow_maximum_number_of_extra_targets",
       "projectiles_cannot_split"
     ],
@@ -123701,8 +123974,8 @@
     },
     "tooltip_order": [
       "base_skill_effect_duration",
-      "modifiers_to_skill_effect_duration_also_affect_soul_prevention_duration",
       "skill_physical_damage_%_to_convert_to_cold",
+      "modifiers_to_skill_effect_duration_also_affect_soul_prevention_duration",
       "maximum_number_of_vaal_ice_shot_mirages",
       "skill_area_angle_+%",
       "vaal_ice_shot_modifiers_to_projectile_count_do_not_apply_to_mirages"
@@ -124722,14 +124995,14 @@
       "base_fire_damage_to_deal_per_minute",
       "base_skill_effect_duration",
       "base_number_of_projectiles",
-      "projectile_damage_modifiers_apply_to_skill_dot",
       "skill_physical_damage_%_to_convert_to_fire",
+      "projectile_damage_modifiers_apply_to_skill_dot",
       "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius",
       "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius",
       "active_skill_tertiary_area_of_effect_description_mode\nactive_skill_base_tertiary_area_of_effect_radius",
-      "base_secondary_skill_effect_duration",
       "napalm_arrow_detonation_hit_damage_+%_final",
-      "napalm_arrow_maximum_number_of_unprimed_arrows_allowed"
+      "napalm_arrow_maximum_number_of_unprimed_arrows_allowed",
+      "base_secondary_skill_effect_duration"
     ],
     "tags": [
       "dexterity",
@@ -125492,7 +125765,7 @@
     },
     "base_item": {
       "display_name": "Кинетический шквал",
-      "experience_type": "GemProgression10",
+      "experience_type": "GemProgression12",
       "id": "Metadata/Items/Gems/SkillGemKineticFusillade",
       "max_level": 20,
       "release_state": "released"
@@ -125652,7 +125925,7 @@
     },
     "base_item": {
       "display_name": "Кинетический шквал",
-      "experience_type": "GemProgression10",
+      "experience_type": "GemProgression12",
       "id": "Metadata/Items/Gems/SkillGemKineticFusillade",
       "max_level": 20,
       "release_state": "released"
@@ -126440,9 +126713,9 @@
     "tooltip_order": [
       "base_skill_effect_duration",
       "base_holy_strike_maximum_number_of_animated_weapons",
+      "minion_melee_range_+",
       "active_skill_minion_damage_+%_final",
-      "skill_physical_damage_%_to_convert_to_lightning",
-      "minion_melee_range_+"
+      "skill_physical_damage_%_to_convert_to_lightning"
     ],
     "tags": [
       "strength",
@@ -126620,8 +126893,8 @@
       "off_hand_local_minimum_added_physical_damage\noff_hand_local_maximum_added_physical_damage",
       "off_hand_minimum_added_physical_damage_per_15_shield_armour\noff_hand_maximum_added_physical_damage_per_15_shield_armour",
       "base_skill_effect_duration",
-      "active_skill_base_radius_+",
       "skill_physical_damage_%_to_convert_to_fire",
+      "active_skill_base_radius_+",
       "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius",
       "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius",
       "discus_slam_damage_+%_final_for_shockwave"
@@ -126819,8 +127092,8 @@
       "off_hand_local_minimum_added_physical_damage\noff_hand_local_maximum_added_physical_damage",
       "off_hand_minimum_added_physical_damage_per_15_shield_armour\noff_hand_maximum_added_physical_damage_per_15_shield_armour",
       "base_skill_effect_duration",
-      "active_skill_base_radius_+",
       "skill_physical_damage_%_to_convert_to_fire",
+      "active_skill_base_radius_+",
       "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius",
       "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius",
       "discus_slam_maximum_orb_count_allowed",
@@ -129484,7 +129757,7 @@
       },
       "stat_text": {
         "base_spell_repeat_count": "Усиленные умения повторяются ещё раз",
-        "skills_sacrifice_all_but_one_life_and_energy_shield_on_use": "Усиленные умения при использовании приносят в жертву все здоровье и энергетический щит кроме 1"
+        "skills_sacrifice_all_but_one_life_and_energy_shield_on_use": "Усиленные умения при использовании приносят в жертву все здоровье и энергетический щит кроме 20%"
       },
       "stats": [
         {
@@ -133205,14 +133478,14 @@
         "dex": 0
       },
       "stat_text": {
-        "random_nearby_minion_gain_a_soul_eater_soul_on_X_life_spent": "Ближайший приспешник получает душу за каждые 200 здоровья, затраченные вами на усиленные чары",
+        "random_nearby_minion_gain_a_charge_on_X_life_spent": "Приспешник в радиусе 6 м получает заряд энергии, ярости или выносливости за каждые 400 здоровья, затраченного на усиленные чары",
         "base_skill_cost_life_instead_of_mana": "Усиленные умения расходуют здоровье вместо маны"
       },
       "stats": [
         {
-          "id": "random_nearby_minion_gain_a_soul_eater_soul_on_X_life_spent",
+          "id": "random_nearby_minion_gain_a_charge_on_X_life_spent",
           "type": "additional",
-          "value": 200
+          "value": 400
         },
         {
           "id": "base_skill_cost_life_instead_of_mana",
@@ -133235,7 +133508,7 @@
     "tooltip_order": [
       "base_life_cost_+%",
       "base_skill_cost_life_instead_of_mana",
-      "random_nearby_minion_gain_a_soul_eater_soul_on_X_life_spent"
+      "random_nearby_minion_gain_a_charge_on_X_life_spent"
     ],
     "tags": [
       "low_max_level",
@@ -133255,9 +133528,10 @@
       "letter": ">",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "Усиливает чары не-благословения.",
+      "support_text": "Усиливает чары. Не усиливает мгновенные чары и чары-благословения.",
       "excluded_types": [
-        "Blessing"
+        "Blessing",
+        "Instant"
       ],
       "added_types": null,
       "added_minion_types": null
@@ -133448,6 +133722,819 @@
         "SummonsTotem",
         "CreatesMinion"
       ],
+      "added_types": null,
+      "added_minion_types": null
+    }
+  },
+  {
+    "active_skill": null,
+    "base_item": {
+      "display_name": "Поддержка: Отягчение",
+      "experience_type": "GemProgressionSingleLevel",
+      "id": "Metadata/Items/Gems/SupportGemEncumbrance",
+      "max_level": 1,
+      "release_state": "released"
+    },
+    "cast_time": null,
+    "color": "w",
+    "display_name": "Поддержка: Отягчение",
+    "is_support": true,
+    "stat_translation_file": "stat_translations/support_gem",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": 0,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": null,
+      "stats": [],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": 200,
+      "cooldown_bypass_type": null,
+      "required_level": 1,
+      "experience": 0,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [],
+    "tags": [
+      "low_max_level",
+      "support"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": {
+      "allowed_types": null,
+      "letter": "!",
+      "supports_gems_only": false,
+      "support_name": "",
+      "support_text": "Усиливает любой камень умения.\r\nНе может усиливать умения, полученные не от камней.",
+      "excluded_types": [
+        "SkillGrantedBySupport"
+      ],
+      "added_types": null,
+      "added_minion_types": null
+    }
+  },
+  {
+    "active_skill": null,
+    "base_item": {
+      "display_name": "Поддержка: Угнетение",
+      "experience_type": "GemProgressionSingleLevel",
+      "id": "Metadata/Items/Gems/SupportGemConstriction",
+      "max_level": 1,
+      "release_state": "released"
+    },
+    "cast_time": null,
+    "color": "w",
+    "display_name": "Поддержка: Угнетение",
+    "is_support": true,
+    "stat_translation_file": "stat_translations/support_gem",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": 0,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "display_constriction_other_supports_do_not_apply": "Усиленные умения не могут быть усилены другими камнями поддержки"
+      },
+      "stats": [
+        {
+          "id": "display_constriction_other_supports_do_not_apply",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": 100,
+      "cooldown_bypass_type": null,
+      "required_level": 1,
+      "experience": 0,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "display_constriction_other_supports_do_not_apply"
+    ],
+    "tags": [
+      "low_max_level",
+      "support"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": {
+      "allowed_types": null,
+      "letter": "!",
+      "supports_gems_only": false,
+      "support_name": "",
+      "support_text": "Усиливает любой камень умения.\r\nНе может усиливать умения, полученные не от камней.",
+      "excluded_types": [
+        "SkillGrantedBySupport"
+      ],
+      "added_types": null,
+      "added_minion_types": null
+    }
+  },
+  {
+    "active_skill": null,
+    "base_item": {
+      "display_name": "Поддержка: Бремя",
+      "experience_type": "GemProgressionSingleLevel",
+      "id": "Metadata/Items/Gems/SupportGemTaxation",
+      "max_level": 1,
+      "release_state": "released"
+    },
+    "cast_time": null,
+    "color": "w",
+    "display_name": "Поддержка: Бремя",
+    "is_support": true,
+    "stat_translation_file": "stat_translations/support_gem",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": 0,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "from_support_skill_gem_attribute_requirements_+%_final": "Усиленные умения обладают на 100% большими требованиями к характеристикам"
+      },
+      "stats": [
+        {
+          "id": "from_support_skill_gem_attribute_requirements_+%_final",
+          "type": "constant",
+          "value": 100
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": 100,
+      "cooldown_bypass_type": null,
+      "required_level": 1,
+      "experience": 0,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "from_support_skill_gem_attribute_requirements_+%_final"
+    ],
+    "tags": [
+      "low_max_level",
+      "support"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": {
+      "allowed_types": null,
+      "letter": "!",
+      "supports_gems_only": false,
+      "support_name": "",
+      "support_text": "Усиливает любой камень умения.\r\nНе может усиливать умения, полученные не от камней.",
+      "excluded_types": [
+        "SkillGrantedBySupport"
+      ],
+      "added_types": null,
+      "added_minion_types": null
+    }
+  },
+  {
+    "active_skill": null,
+    "base_item": {
+      "display_name": "Поддержка: Умаление",
+      "experience_type": "GemProgressionSingleLevel",
+      "id": "Metadata/Items/Gems/SupportGemDiminishment",
+      "max_level": 1,
+      "release_state": "released"
+    },
+    "cast_time": null,
+    "color": "w",
+    "display_name": "Поддержка: Умаление",
+    "is_support": true,
+    "stat_translation_file": "stat_translations/support_gem",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": 0,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "supported_active_skill_gem_quality_%": "-20% к качеству усиленных камней умений"
+      },
+      "stats": [
+        {
+          "id": "supported_active_skill_gem_quality_%",
+          "type": "constant",
+          "value": -20
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": 100,
+      "cooldown_bypass_type": null,
+      "required_level": 1,
+      "experience": 0,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "supported_active_skill_gem_quality_%"
+    ],
+    "tags": [
+      "low_max_level",
+      "support"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": {
+      "allowed_types": null,
+      "letter": "!",
+      "supports_gems_only": false,
+      "support_name": "",
+      "support_text": "Усиливает любой камень умения.\r\nНе может усиливать умения, полученные не от камней.",
+      "excluded_types": [
+        "SkillGrantedBySupport"
+      ],
+      "added_types": null,
+      "added_minion_types": null
+    }
+  },
+  {
+    "active_skill": null,
+    "base_item": {
+      "display_name": "Поддержка: Ослабление",
+      "experience_type": "GemProgressionSingleLevel",
+      "id": "Metadata/Items/Gems/SupportGemDisempower",
+      "max_level": 1,
+      "release_state": "released"
+    },
+    "cast_time": null,
+    "color": "w",
+    "display_name": "Поддержка: Ослабление",
+    "is_support": true,
+    "stat_translation_file": "stat_translations/support_gem",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": 0,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "supported_active_skill_gem_level_+": "-1 к уровню усиленных камней умений"
+      },
+      "stats": [
+        {
+          "id": "supported_active_skill_gem_level_+",
+          "type": "constant",
+          "value": -1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": 100,
+      "cooldown_bypass_type": null,
+      "required_level": 1,
+      "experience": 0,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "supported_active_skill_gem_level_+"
+    ],
+    "tags": [
+      "low_max_level",
+      "support"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": {
+      "allowed_types": null,
+      "letter": "!",
+      "supports_gems_only": false,
+      "support_name": "",
+      "support_text": "Усиливает любой камень умения.\r\nНе может усиливать умения, полученные не от камней.",
+      "excluded_types": [
+        "SkillGrantedBySupport"
+      ],
+      "added_types": null,
+      "added_minion_types": null
+    }
+  },
+  {
+    "active_skill": null,
+    "base_item": {
+      "display_name": "Поддержка: Летаргия",
+      "experience_type": "GemProgressionSingleLevel",
+      "id": "Metadata/Items/Gems/SupportGemLethargy",
+      "max_level": 1,
+      "release_state": "released"
+    },
+    "cast_time": null,
+    "color": "w",
+    "display_name": "Поддержка: Летаргия",
+    "is_support": true,
+    "stat_translation_file": "stat_translations/support_gem",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": 0,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "gain_malignant_madness_on_skill_use": "Усиленные умения накладывают Пагубное сумашествие на вас при использовании"
+      },
+      "stats": [
+        {
+          "id": "gain_malignant_madness_on_skill_use",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": 100,
+      "cooldown_bypass_type": null,
+      "required_level": 1,
+      "experience": 0,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "gain_malignant_madness_on_skill_use"
+    ],
+    "tags": [
+      "low_max_level",
+      "support"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": {
+      "allowed_types": null,
+      "letter": "!",
+      "supports_gems_only": false,
+      "support_name": "",
+      "support_text": "Усиливает любое умение.",
+      "excluded_types": null,
+      "added_types": null,
+      "added_minion_types": null
+    }
+  },
+  {
+    "active_skill": null,
+    "base_item": {
+      "display_name": "Поддержка: Покаяние",
+      "experience_type": "GemProgressionSingleLevel",
+      "id": "Metadata/Items/Gems/SupportGemPenance",
+      "max_level": 1,
+      "release_state": "released"
+    },
+    "cast_time": null,
+    "color": "w",
+    "display_name": "Поддержка: Покаяние",
+    "is_support": true,
+    "stat_translation_file": "stat_translations/support_gem",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": 0,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "skills_sacrifice_all_but_one_life_and_energy_shield_on_use": "Усиленные умения при использовании приносят в жертву все здоровье и энергетический щит кроме 20%"
+      },
+      "stats": [
+        {
+          "id": "skills_sacrifice_all_but_one_life_and_energy_shield_on_use",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": 100,
+      "cooldown_bypass_type": null,
+      "required_level": 1,
+      "experience": 0,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "skills_sacrifice_all_but_one_life_and_energy_shield_on_use"
+    ],
+    "tags": [
+      "low_max_level",
+      "support"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": {
+      "allowed_types": null,
+      "letter": "!",
+      "supports_gems_only": false,
+      "support_name": "",
+      "support_text": "Усиливает любое умение.",
+      "excluded_types": null,
+      "added_types": null,
+      "added_minion_types": null
+    }
+  },
+  {
+    "active_skill": null,
+    "base_item": {
+      "display_name": "Поддержка: Аннулирование",
+      "experience_type": "GemProgressionSingleLevel",
+      "id": "Metadata/Items/Gems/SupportGemNullification",
+      "max_level": 1,
+      "release_state": "released"
+    },
+    "cast_time": null,
+    "color": "w",
+    "display_name": "Поддержка: Аннулирование",
+    "is_support": true,
+    "stat_translation_file": "stat_translations/support_gem",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": 0,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "cannot_inflict_status_ailments": "Усиленные умения не могут накладывать стихийные состояния"
+      },
+      "stats": [
+        {
+          "id": "cannot_inflict_status_ailments",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": 100,
+      "cooldown_bypass_type": null,
+      "required_level": 1,
+      "experience": 0,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "cannot_inflict_status_ailments"
+    ],
+    "tags": [
+      "low_max_level",
+      "support"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": {
+      "allowed_types": [
+        "Damage",
+        "Attack",
+        "NonHitChill"
+      ],
+      "letter": "!",
+      "supports_gems_only": false,
+      "support_name": "",
+      "support_text": "Усиливает любое умение, наносящее удары по врагам или накладывающее стихийные состояния.",
+      "excluded_types": null,
+      "added_types": null,
+      "added_minion_types": null
+    }
+  },
+  {
+    "active_skill": null,
+    "base_item": {
+      "display_name": "Поддержка: Посредственность",
+      "experience_type": "GemProgressionSingleLevel",
+      "id": "Metadata/Items/Gems/SupportGemMediocrity",
+      "max_level": 1,
+      "release_state": "released"
+    },
+    "cast_time": null,
+    "color": "w",
+    "display_name": "Поддержка: Посредственность",
+    "is_support": true,
+    "stat_translation_file": "stat_translations/support_gem",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": 0,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "global_cannot_crit": "Усиленные умения никогда не наносят критические удары"
+      },
+      "stats": [
+        {
+          "id": "global_cannot_crit",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": 100,
+      "cooldown_bypass_type": null,
+      "required_level": 1,
+      "experience": 0,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "global_cannot_crit"
+    ],
+    "tags": [
+      "low_max_level",
+      "support"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": {
+      "allowed_types": [
+        "Damage",
+        "Attack"
+      ],
+      "letter": "!",
+      "supports_gems_only": false,
+      "support_name": "",
+      "support_text": "Усиливает любое умение, наносящее удары по врагам.",
+      "excluded_types": null,
+      "added_types": null,
+      "added_minion_types": null
+    }
+  },
+  {
+    "active_skill": null,
+    "base_item": {
+      "display_name": "Поддержка: Бессилие",
+      "experience_type": "GemProgressionSingleLevel",
+      "id": "Metadata/Items/Gems/SupportGemImpotence",
+      "max_level": 1,
+      "release_state": "released"
+    },
+    "cast_time": null,
+    "color": "w",
+    "display_name": "Поддержка: Бессилие",
+    "is_support": true,
+    "stat_translation_file": "stat_translations/support_gem",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": 0,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "support_impotence_damage_+%_final": "Усиленные умения наносят на 50% меньше урона"
+      },
+      "stats": [
+        {
+          "id": "support_impotence_damage_+%_final",
+          "type": "constant",
+          "value": -50
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": 100,
+      "cooldown_bypass_type": null,
+      "required_level": 1,
+      "experience": 0,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "support_impotence_damage_+%_final"
+    ],
+    "tags": [
+      "low_max_level",
+      "support"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": {
+      "allowed_types": [
+        "Damage",
+        "Attack",
+        "DamageOverTime"
+      ],
+      "letter": "!",
+      "supports_gems_only": false,
+      "support_name": "",
+      "support_text": "Усиливает любое умение, которое может наносить урон врагам.",
+      "excluded_types": null,
+      "added_types": null,
+      "added_minion_types": null
+    }
+  },
+  {
+    "active_skill": null,
+    "base_item": {
+      "display_name": "Поддержка: Обнищание",
+      "experience_type": "GemProgressionSingleLevel",
+      "id": "Metadata/Items/Gems/SupportGemDestitution",
+      "max_level": 1,
+      "release_state": "released"
+    },
+    "cast_time": null,
+    "color": "w",
+    "display_name": "Поддержка: Обнищание",
+    "is_support": true,
+    "stat_translation_file": "stat_translations/support_gem",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": 0,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "base_killed_monster_dropped_item_rarity_+%": "-50% к [PlayerItemRarity|редкости предметов], выпадающих из врагов, убитых усиленными умениями"
+      },
+      "stats": [
+        {
+          "id": "base_killed_monster_dropped_item_rarity_+%",
+          "type": "constant",
+          "value": -50
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": 100,
+      "cooldown_bypass_type": null,
+      "required_level": 1,
+      "experience": 0,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "base_killed_monster_dropped_item_rarity_+%"
+    ],
+    "tags": [
+      "low_max_level",
+      "support"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": {
+      "allowed_types": [
+        "Damage",
+        "Attack",
+        "DamageOverTime",
+        "KillNoDamageModifiers"
+      ],
+      "letter": "!",
+      "supports_gems_only": false,
+      "support_name": "",
+      "support_text": "Усиливает любое умение, которое может убить врагов.",
+      "excluded_types": null,
+      "added_types": null,
+      "added_minion_types": null
+    }
+  },
+  {
+    "active_skill": null,
+    "base_item": {
+      "display_name": "Поддержка: Бедность",
+      "experience_type": "GemProgressionSingleLevel",
+      "id": "Metadata/Items/Gems/SupportGemPoverty",
+      "max_level": 1,
+      "release_state": "released"
+    },
+    "cast_time": null,
+    "color": "w",
+    "display_name": "Поддержка: Бедность",
+    "is_support": true,
+    "stat_translation_file": "stat_translations/support_gem",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": 0,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "base_killed_monster_dropped_item_quantity_+%": "50% уменьшение количества предметов, выпадающих из врагов, убитых усиленными умениями"
+      },
+      "stats": [
+        {
+          "id": "base_killed_monster_dropped_item_quantity_+%",
+          "type": "constant",
+          "value": -50
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": 100,
+      "cooldown_bypass_type": null,
+      "required_level": 1,
+      "experience": 0,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "base_killed_monster_dropped_item_quantity_+%"
+    ],
+    "tags": [
+      "low_max_level",
+      "support"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": {
+      "allowed_types": [
+        "Damage",
+        "Attack",
+        "DamageOverTime",
+        "KillNoDamageModifiers"
+      ],
+      "letter": "!",
+      "supports_gems_only": false,
+      "support_name": "",
+      "support_text": "Усиливает любое умение, которое может убить врагов.",
+      "excluded_types": null,
       "added_types": null,
       "added_minion_types": null
     }
@@ -135097,9 +136184,9 @@
     },
     "tooltip_order": [
       "spell_minimum_base_cold_damage\nspell_maximum_base_cold_damage",
+      "tornado_base_damage_interval_ms",
       "base_skill_effect_duration",
       "base_secondary_skill_effect_duration",
-      "tornado_base_damage_interval_ms",
       "active_skill_base_area_of_effect_radius",
       "active_skill_base_secondary_area_of_effect_radius",
       "number_of_tornados_allowed"
@@ -136593,7 +137680,9 @@
         "dex": 0
       },
       "stat_text": {
-        "skill_empowers_next_x_spells_cast": "[EmpoweredSpell|Улучшает] следующие 6 сотворяемых вами чар"
+        "skill_empowers_next_x_spells_cast": "[EmpoweredSpell|Улучшает] следующие 6 сотворяемых вами чар",
+        "pact_skill_additional_beam_only_chains": "Лучи от улучшенных умений наносят удар по цепи дополнительно 4 раз(-а)",
+        "pact_skill_grant_x_additional_projectiles_fired_in_nova": "Улучшенные умения выпускают дополнительных снарядов: 4\nУлучшенные умения выпускают снаряды кольцом"
       },
       "stats": [
         {
@@ -136609,12 +137698,12 @@
         {
           "id": "pact_skill_additional_beam_only_chains",
           "type": "additional",
-          "value": null
+          "value": 4
         },
         {
           "id": "pact_skill_grant_x_additional_projectiles_fired_in_nova",
           "type": "additional",
-          "value": null
+          "value": 4
         },
         {
           "id": "pact_skill_grant_x_cascades_to_do_in_spiral",

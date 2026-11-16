@@ -990,38 +990,18 @@
       {
         "condition": [
           {
-            "min": 1,
+            "min": null,
             "max": null,
             "negated": null
           }
         ],
         "format": [
-          "#"
+          "+#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "ミニオンにより倒された敵がドロップするアイテムのレアリティが{0}%増加する",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "ミニオンにより倒された敵がドロップするアイテムのレアリティが{0}%減少する",
+        "string": "倒した敵のドロップしたアイテムの[PlayerItemRarity|レアリティ] {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3139,7 +3119,7 @@
           [],
           []
         ],
-        "string": "ミニオンのアタックは{0}から{1}の追加冷気ダメージを与える",
+        "string": "ミニオンは{0}から{1}の追加冷気ダメージを与える",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3183,7 +3163,7 @@
           [],
           []
         ],
-        "string": "ミニオンのアタックは{0}から{1}の追加雷ダメージを与える",
+        "string": "ミニオンは{0}から{1}の追加雷ダメージを与える",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3227,7 +3207,7 @@
           [],
           []
         ],
-        "string": "ミニオンのアタックは{0}から{1}の追加混沌ダメージを与える",
+        "string": "ミニオンは{0}から{1}の追加混沌ダメージを与える",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3391,7 +3371,7 @@
         "index_handlers": [
           []
         ],
-        "string": "ミニオンは毒ダメージが{0}%上昇する",
+        "string": "ミニオンの毒ダメージが{0}%上昇する",
         "reminder_text": "(Poison: 毒は、スキルの基礎物理ダメージと基礎混沌ダメージに基づいて混沌継続ダメージを与える。複数インスタンスの毒がスタックできる)",
         "is_markup": null
       },
@@ -3411,7 +3391,7 @@
             "negate"
           ]
         ],
-        "string": "ミニオンは毒ダメージが{0}%低下する",
+        "string": "ミニオンの毒ダメージが{0}%低下する",
         "reminder_text": "(Poison: 毒は、スキルの基礎物理ダメージと基礎混沌ダメージに基づいて混沌継続ダメージを与える。複数インスタンスの毒がスタックできる)",
         "is_markup": null
       }
@@ -5024,7 +5004,7 @@
         "index_handlers": [
           []
         ],
-        "string": "スペクター最大蘇生数 {0}",
+        "string": "スペクター最大数 {0}",
         "reminder_text": null,
         "is_markup": null
       },
@@ -5042,7 +5022,7 @@
         "index_handlers": [
           []
         ],
-        "string": "スペクター最大蘇生数 {0}",
+        "string": "スペクター最大数 {0}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5078,7 +5058,7 @@
         "index_handlers": [
           []
         ],
-        "string": "レイジングスピリット最大召喚数{0}",
+        "string": "レイジングスピリット最大召喚数 {0}",
         "reminder_text": null,
         "is_markup": null
       },
@@ -5096,7 +5076,7 @@
         "index_handlers": [
           []
         ],
-        "string": "レイジングスピリット最大召喚数{0}",
+        "string": "レイジングスピリット最大召喚数 {0}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5132,7 +5112,7 @@
         "index_handlers": [
           []
         ],
-        "string": "アニメイトウェポンの最大召喚数が{0}体増える",
+        "string": "アニメイトウェポン最大数 {0}",
         "reminder_text": null,
         "is_markup": null
       },
@@ -5150,7 +5130,7 @@
         "index_handlers": [
           []
         ],
-        "string": "アニメイトウェポンの最大召喚数 {0}体",
+        "string": "アニメイトウェポンの最大数 {0}体",
         "reminder_text": null,
         "is_markup": null
       },
@@ -5168,7 +5148,7 @@
         "index_handlers": [
           []
         ],
-        "string": "アニメイトウェポンの最大召喚数 {0}体",
+        "string": "アニメイトウェポンの最大数 {0}体",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5253,12 +5233,12 @@
           }
         ],
         "format": [
-          "#"
+          "ignore"
         ],
         "index_handlers": [
           []
         ],
-        "string": "ハービンジャー最大召喚数 {0}",
+        "string": "ハービンジャー最大召喚数 1",
         "reminder_text": null,
         "is_markup": null
       }
@@ -6056,8 +6036,8 @@
         "index_handlers": [
           []
         ],
-        "string": "ミニオンはヒット時に{0}%の確率で敵を盲目にする",
-        "reminder_text": "(Blind: 盲目は、命中率と回避力を20%低下させる。持続時間は4秒)",
+        "string": "ミニオンはヒット時に{0}%の確率で敵を[Blind|盲目]にする",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -6092,7 +6072,7 @@
         "index_handlers": [
           []
         ],
-        "string": "ミニオンが付与する盲目の持続時間が{0}%増加する",
+        "string": "ミニオンが付与する[Blind|盲目]の持続時間が{0}%増加する",
         "reminder_text": null,
         "is_markup": null
       },
@@ -6112,7 +6092,7 @@
             "negate"
           ]
         ],
-        "string": "ミニオンが付与する盲目の持続時間が{0}%減少する",
+        "string": "ミニオンが付与する[Blind|盲目]の持続時間が{0}%減少する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -7850,7 +7830,7 @@
             "negate"
           ]
         ],
-        "string": "ミニオンのアタックによる投射物のヒットにより付与した出血および毒のダメージが{0}%低下する",
+        "string": "ミニオンのアタックによる投射物のヒットにより付与した出血および毒のダメージが{0}%上昇する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -8323,7 +8303,7 @@
           }
         ],
         "format": [
-          "+#"
+          "#"
         ],
         "index_handlers": [
           []
@@ -8827,6 +8807,42 @@
   {
     "English": null,
     "ids": [
+      "global_cannot_crit"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ミニオンはクリティカルストライクを与えられなくなる",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "global_poison_on_hit"
     ],
     "trade_stats": null,
@@ -9054,7 +9070,7 @@
             "divide_by_one_hundred"
           ]
         ],
-        "string": "ミニオンはクリティカル率が{0}%される",
+        "string": "ミニオンのクリティカル率 {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -10468,7 +10484,7 @@
         "index_handlers": [
           []
         ],
-        "string": "盲目状態の敵に対するミニオンのクリティカル率が{0}%増加する",
+        "string": "[Blind|盲目]状態の敵に対するミニオンのクリティカル率が{0}%増加する",
         "reminder_text": null,
         "is_markup": null
       },
@@ -10488,7 +10504,7 @@
             "negate"
           ]
         ],
-        "string": "盲目状態の敵に対するミニオンのクリティカル率が{0}%減少する",
+        "string": "[Blind|盲目]状態の敵に対するミニオンのクリティカル率が{0}%減少する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -10580,7 +10596,7 @@
         "index_handlers": [
           []
         ],
-        "string": "ミニオンはヒット時に{0}%の確率で破砕を2秒間する",
+        "string": "ミニオンはヒット時に{0}%の確率でクラッシュを2秒間付与する",
         "reminder_text": "(Crushed: 破砕は物理ダメージ軽減を15%減少させる)",
         "is_markup": null
       },
@@ -10598,7 +10614,7 @@
         "index_handlers": [
           []
         ],
-        "string": "ミニオンはヒット時に破砕を2秒間する",
+        "string": "ミニオンはヒット時にクラッシュを2秒間付与する",
         "reminder_text": "(Crushed: 破砕は物理ダメージ軽減を15%減少させる)",
         "is_markup": null
       }
@@ -12718,7 +12734,7 @@
         "index_handlers": [
           []
         ],
-        "string": "ミニオンのヒットが回避されることはない",
+        "string": "ミニオンのヒットが回避されなくなる",
         "reminder_text": null,
         "is_markup": null
       }
@@ -14688,7 +14704,7 @@
         "index_handlers": [
           []
         ],
-        "string": "バフはアタックスピードとキャストスピードの{0}%増加を付与する",
+        "string": "バフはアタックスピードおよびキャストスピード{0}%増加を付与する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -14724,7 +14740,7 @@
         "index_handlers": [
           []
         ],
-        "string": "バフはクリティカル率の{0}%増加を付与する",
+        "string": "バフはクリティカル率{0}%増加を付与する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -15531,6 +15547,62 @@
           ]
         ],
         "string": "ミニオンの冷気継続ダメージが{0}%低下する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_impotence_damage_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ミニオンのダメージが{0}%上昇する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "ミニオンのダメージが{0}%低下する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -17142,8 +17214,8 @@
             "milliseconds_to_seconds"
           ]
         ],
-        "string": "ミニオンがユニークの敵にヒットを与えた時に{0}%の確率で{1}秒間猛攻を獲得する",
-        "reminder_text": "(Onslaught: 猛攻はアタックスピード、キャストスピード、移動スピードを20%増加させる)",
+        "string": "ミニオンがユニークの敵にヒットを与えた時に{0}%の確率で{1}秒間[Onslaught|猛攻]を獲得する",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -17196,8 +17268,8 @@
             "milliseconds_to_seconds"
           ]
         ],
-        "string": "ミニオンはキリングブロー時に{0}%の確率で{2}秒間猛攻を獲得する",
-        "reminder_text": "(Onslaught: 猛攻はアタックスピード、キャストスピード、移動スピードを20%増加させる)",
+        "string": "ミニオンはキリングブロー時に\n{0}%の確率で{2}秒間[Onslaught|猛攻]を獲得する",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -22481,6 +22553,18 @@
         "id": "explicit.stat_2783958145",
         "text": "#% more Maximum Life",
         "type": "explicit",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_1214601201",
+        "text": "#% more Maximum Life",
+        "type": "implicit",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_137377270",
+        "text": "#% more Maximum Life",
+        "type": "implicit",
         "option": null
       }
     ],

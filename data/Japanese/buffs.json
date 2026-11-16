@@ -3508,7 +3508,7 @@
           "name": "Silver Flask",
           "template": null,
           "stat_text": [
-            "猛攻"
+            "[Onslaught|猛攻]"
           ],
           "stats": {
             "silver_flask_display_onslaught": 1
@@ -3520,7 +3520,7 @@
     "stack_limit": null
   },
   "flask_utility_rarity": {
-    "description": "見つかるアイテムのレアリティが増加",
+    "description": "[PlayerItemRarity|アイテムレアリティ]が追加される",
     "invisible": false,
     "name": "ゴールドフラスコ",
     "removable": false,
@@ -3537,7 +3537,7 @@
           "name": "Gold Flask",
           "template": null,
           "stat_text": [
-            "見つかるアイテムのレアリティが30%増加する"
+            "[PlayerItemRarity|アイテムレアリティ] +30%"
           ],
           "stats": {
             "base_item_found_rarity_+%": 30
@@ -4792,7 +4792,7 @@
           "template": null,
           "stat_text": [
             "アタックヒット回避率 +25%",
-            "プレイヤーが受ける抑制したスペルダメージが不運となる"
+            "プレイヤーが抑制したスペルダメージは不運となる"
           ],
           "stats": {
             "affected_by_grace": 0,
@@ -5991,7 +5991,8 @@
       "self_damaging_ailment_duration_+%",
       "base_maximum_chaos_damage_resistance_%",
       "mana_regeneration_rate_+%",
-      "accuracy_rating_+%"
+      "accuracy_rating_+%",
+      "damage_taken_+%_final_from_consecrated_ground"
     ],
     "visuals": "ground_consecration",
     "category": "Buff",
@@ -6071,7 +6072,7 @@
     "stack_limit": null
   },
   "unique_flask_divination_distillate": {
-    "description": "アイテムのレアリティ、元素耐性および光半径が増加する",
+    "description": "[PlayerItemRarity|アイテムレアリティ]、元素耐性および光半径を付与する",
     "invisible": false,
     "name": "易断の蒸留物",
     "removable": false,
@@ -6100,7 +6101,18 @@
     ],
     "visuals": "onslaught",
     "category": "Buff",
-    "sources": null,
+    "sources": {
+      "UltimatumModifiers": [
+        {
+          "id": "PlayerBuffOnslaught",
+          "item": null,
+          "name": null,
+          "template": "MapModPlayerOnslaught",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
     "templates": {
       "AncestralJadeHornOnslaught": {
         "aura_radius_metres": null,
@@ -6713,7 +6725,7 @@
         "stat_text": [
           "ダメージが50%増加する",
           "ヒット時に敵をノックバックする",
-          "敵に対するスタンの持続時間が30%増加する",
+          "敵に対するスタン持続時間が30%増加する",
           "追加ゴア表現"
         ],
         "visuals": null
@@ -6730,7 +6742,7 @@
         "stat_text": [
           "ダメージが50%増加する",
           "ヒット時に敵をノックバックする",
-          "敵に対するスタンの持続時間が30%増加する",
+          "敵に対するスタン持続時間が30%増加する",
           "追加ゴア表現"
         ],
         "visuals": "shrine_monster_affected"
@@ -6747,7 +6759,7 @@
         "stat_text": [
           "ダメージが40%増加する",
           "ヒット時に敵をノックバックする",
-          "敵に対するスタンの持続時間が30%増加する",
+          "敵に対するスタン持続時間が30%増加する",
           "追加ゴア表現"
         ],
         "visuals": null
@@ -6783,7 +6795,7 @@
         "stat_text": [
           "ダメージが20%増加する",
           "ヒット時に敵をノックバックする",
-          "敵に対するスタンの持続時間が20%増加する"
+          "敵に対するスタン持続時間が20%増加する"
         ],
         "visuals": null
       }
@@ -9123,7 +9135,7 @@
     "stack_limit": null
   },
   "cagan_darkness": {
-    "description": "光半径、アイテムのレアリティ、数量が継続的に減少、敵を倒すことで増加する",
+    "description": "光半径、[PlayerItemRarity|アイテムレアリティ]、数量が継続的に減少、敵を倒すことで増加する",
     "invisible": false,
     "name": "クリーピングダークネス",
     "removable": false,
@@ -11018,7 +11030,7 @@
     "stack_limit": null
   },
   "unique_flask_taste_of_hate": {
-    "description": "追加の冷気ダメージを与え、物理ダメージの一部を冷気ダメージとして受ける凍結および冷却の無効化確率を獲得",
+    "description": "追加の冷気ダメージを与え、火と雷ダメージの一部を冷気ダメージとして受ける。一定確率で凍結と冷却を無効化する。",
     "invisible": false,
     "name": "憎しみの味",
     "removable": false,
@@ -11499,7 +11511,7 @@
     "stack_limit": null
   },
   "increased_item_rarity_aura": {
-    "description": "キングメーカーを使用している味方が周囲にいる間、カリングストライク、アイテムのレアリティ増加、追加のクリティカルダメージ倍率および堅牢化を獲得",
+    "description": "キングメーカーを使用している味方が周囲にいる間、カリングストライク、[PlayerItemRarity|アイテムレアリティ]追加、追加のクリティカルダメージ倍率および堅牢化を獲得",
     "invisible": false,
     "name": "キングメーカーの存在感",
     "removable": false,
@@ -12030,7 +12042,7 @@
     "stack_limit": null
   },
   "rarity_storm": {
-    "description": "アイテムのレアリティおよび数量が増加",
+    "description": "[PlayerItemRarity|アイテムレアリティ]が追加され、数量が増加する",
     "invisible": false,
     "name": "輝きのテンペスト",
     "removable": false,
@@ -12051,14 +12063,13 @@
           "name": null,
           "template": null,
           "stat_text": [
-            "アイテムレアリティが25%増加する",
-            "アイテム数量が12.5%増加する",
-            "見つかるアイテムのレアリティが120%増加する",
+            "アイテムレアリティが37.5%増加する",
+            "[PlayerItemRarity|アイテムレアリティ] +120%",
             "見つかるアイテムの数量が30%増加する"
           ],
           "stats": {
-            "from_league_item_rarity_+%_permyriad": 2500,
-            "from_league_item_quantity_+%_permyriad": 1250,
+            "from_league_item_rarity_+%_permyriad": 3750,
+            "from_league_item_quantity_+%_permyriad": 0,
             "base_item_found_rarity_+%": 120,
             "base_item_found_quantity_+%": 30,
             "is_affected_by_tempest": 1
@@ -12070,7 +12081,7 @@
     "stack_limit": null
   },
   "uber_rarity_storm": {
-    "description": "アイテムのレアリティおよび数量が増加",
+    "description": "[PlayerItemRarity|アイテムレアリティ]が追加され、数量が増加する",
     "invisible": false,
     "name": "放射のテンペスト",
     "removable": false,
@@ -12091,14 +12102,13 @@
           "name": null,
           "template": null,
           "stat_text": [
-            "アイテムレアリティが50%増加する",
-            "アイテム数量が25%増加する",
-            "見つかるアイテムのレアリティが420%増加する",
+            "アイテムレアリティが75%増加する",
+            "[PlayerItemRarity|アイテムレアリティ] +420%",
             "見つかるアイテムの数量が70%増加する"
           ],
           "stats": {
-            "from_league_item_rarity_+%_permyriad": 5000,
-            "from_league_item_quantity_+%_permyriad": 2500,
+            "from_league_item_rarity_+%_permyriad": 7500,
+            "from_league_item_quantity_+%_permyriad": 0,
             "base_item_found_rarity_+%": 420,
             "base_item_found_quantity_+%": 70,
             "is_affected_by_tempest": 1
@@ -12112,7 +12122,7 @@
           "name": null,
           "template": null,
           "stat_text": [
-            "見つかるアイテムのレアリティがx%増加する",
+            "[PlayerItemRarity|アイテムレアリティ] +x%",
             "見つかるアイテムの数量がx%増加する"
           ],
           "stats": {
@@ -12129,7 +12139,7 @@
     "stack_limit": null
   },
   "uber_uber_rarity_storm": {
-    "description": "ダメージ軽減およびアイテムレアリティが増加する時間経過で減少する",
+    "description": "ダメージ軽減および[PlayerItemRarity|アイテムレアリティ]追加され、時間経過で減少する",
     "invisible": false,
     "name": "燦爛のテンペスト",
     "removable": false,
@@ -12151,7 +12161,7 @@
           "name": null,
           "template": null,
           "stat_text": [
-            "見つかるアイテムのレアリティがx%増加する",
+            "[PlayerItemRarity|アイテムレアリティ] +x%",
             "見つかるアイテムの数量がx%増加する"
           ],
           "stats": {
@@ -12177,15 +12187,15 @@
           "is_affected_by_tempest": 1
         },
         "stat_text": [
-          "見つかるアイテムのレアリティが100%増加する"
+          "[PlayerItemRarity|アイテムレアリティ] +100%"
         ],
         "visuals": null
       },
       "uber_uber_rarity_storm_monster": {
         "aura_radius_metres": null,
         "stats": {
-          "from_league_item_rarity_+%_permyriad": 10000,
-          "from_league_item_quantity_+%_permyriad": 10000,
+          "from_league_item_rarity_+%_permyriad": 15000,
+          "from_league_item_quantity_+%_permyriad": 0,
           "base_item_found_rarity_+%": 0,
           "base_item_found_quantity_+%": 0,
           "monster_difficulty_tankiness_+%": 1000,
@@ -13016,7 +13026,7 @@
     "stack_limit": null
   },
   "flask_bonus_item_rarity": {
-    "description": "フラスコ効果中は見つかるアイテムのレアリティが増加",
+    "description": "フラスコ効果中は[PlayerItemRarity|アイテムレアリティ]が追加される",
     "invisible": true,
     "name": "アイテムレアリティ",
     "removable": false,
@@ -13599,7 +13609,8 @@
     "stats": [
       "base_damage_taken_+%",
       "chance_to_be_stunned_%",
-      "damage_+%_final_vs_non_taunt_target_from_passive"
+      "damage_+%_final_vs_non_taunt_target_from_passive",
+      "action_speed_+%_from_taunt"
     ],
     "visuals": "invisible",
     "category": null,
@@ -16416,14 +16427,14 @@
       "OccultistNearbyEnemiesColdChaosResistLifeRegenHardMode": {
         "aura_radius_metres": 6.0,
         "stats": {
-          "base_chaos_damage_resistance_%": -8,
+          "base_chaos_damage_resistance_%": -15,
           "life_regeneration_rate_+%": -100,
-          "base_cold_damage_resistance_%": -8
+          "base_cold_damage_resistance_%": -15
         },
         "stat_text": [
-          "混沌耐性 -8%",
+          "混沌耐性 -15%",
           "ライフ自動回復レートが100%減少する",
-          "冷気耐性 -8%"
+          "冷気耐性 -15%"
         ],
         "visuals": null
       }
@@ -20765,7 +20776,7 @@
     "stack_limit": null
   },
   "player_tencent_asset_lock_bonus": {
-    "description": "アイテムのレアリティが増加する",
+    "description": "[PlayerItemRarity|アイテムレアリティ]が追加される",
     "invisible": false,
     "name": "資産ロックバフ",
     "removable": false,
@@ -24381,6 +24392,14 @@
           "template": "MaximumVoidArrowsUnique__1",
           "stat_text": null,
           "stats": null
+        },
+        {
+          "id": "DivergentVoidShotOnSkillUseUnique__1_",
+          "item": null,
+          "name": null,
+          "template": "MaximumVoidArrowsUnique__1",
+          "stat_text": null,
+          "stats": null
         }
       ]
     },
@@ -24761,7 +24780,7 @@
     "stack_limit": null
   },
   "master_buff_treasure_hunter": {
-    "description": "得られるアイテムのレアリティと数量が増加する",
+    "description": "[PlayerItemRarity|アイテムレアリティ]が追加される",
     "invisible": false,
     "name": "バレックの贈り物",
     "removable": true,
@@ -25518,6 +25537,25 @@
           "物理ダメージ軽減率が10%される"
         ],
         "visuals": null
+      },
+      "AdrenalineHeart": {
+        "aura_radius_metres": null,
+        "stats": {
+          "has_adrenaline": 1,
+          "damage_+%": 100,
+          "attack_speed_+%": 25,
+          "base_cast_speed_+%": 25,
+          "base_movement_velocity_+%": 25,
+          "base_additional_physical_damage_reduction_%": 10
+        },
+        "stat_text": [
+          "ダメージが100%増加する",
+          "アタックスピードが25%増加する",
+          "キャストスピードが25%増加する",
+          "移動スピードが25%増加する",
+          "物理ダメージ軽減率が10%される"
+        ],
+        "visuals": null
       }
     },
     "stack_limit": null
@@ -25988,7 +26026,7 @@
     "stack_limit": null
   },
   "bestiary_cold_squid_aura": {
-    "description": "味方は追加の冷気ダメージを与え、ヒット時盲目を付与する確率を獲得",
+    "description": "味方は追加の冷気ダメージを与え、ヒット時に一定確率で[Blind|盲目]を付与する",
     "invisible": false,
     "name": "深き者の存在感",
     "removable": false,
@@ -26692,7 +26730,7 @@
     "stack_limit": null
   },
   "master_buff_alva": {
-    "description": "獲得するアイテムの数量およびレアリティが増加する",
+    "description": "[PlayerItemRarity|アイテムレアリティ]が追加され、アイテム品質が増加する",
     "invisible": false,
     "name": "アルヴァの贈り物",
     "removable": true,
@@ -28217,7 +28255,9 @@
       "damage_+%",
       "attack_and_cast_speed_+%",
       "life_regeneration_rate_per_minute_%",
-      "base_life_mana_es_recovery_rate_+%"
+      "base_life_mana_es_recovery_rate_+%",
+      "physical_damage_%_to_add_as_cold",
+      "physical_damage_%_to_add_as_fire"
     ],
     "visuals": "bloodstained_banner",
     "category": "Buff",
@@ -28239,7 +28279,9 @@
       "damage_+%",
       "attack_and_cast_speed_+%",
       "life_regeneration_rate_per_minute_%",
-      "base_life_mana_es_recovery_rate_+%"
+      "base_life_mana_es_recovery_rate_+%",
+      "physical_damage_%_to_add_as_cold",
+      "physical_damage_%_to_add_as_fire"
     ],
     "visuals": "puresteel_banner",
     "category": "Buff",
@@ -28676,7 +28718,7 @@
           "every_1_second_nearby_enemies_withered_for_X_ms": 15000
         },
         "stat_text": [
-          "1秒ごとに近くの敵に15秒間持続する衰弱を付与する"
+          "1秒ごとに6m以内の敵に[Withered|衰弱]を15秒間付与する"
         ],
         "visuals": null
       },
@@ -28686,8 +28728,16 @@
           "every_1_second_nearby_enemies_withered_for_X_ms": 5000
         },
         "stat_text": [
-          "1秒ごとに近くの敵に5秒間持続する衰弱を付与する"
+          "1秒ごとに6m以内の敵に[Withered|衰弱]を5秒間付与する"
         ],
+        "visuals": null
+      },
+      "WitherNearbyEnemiesViscera": {
+        "aura_radius_metres": null,
+        "stats": {
+          "every_1_second_nearby_enemies_withered_for_X_ms": 0
+        },
+        "stat_text": null,
         "visuals": null
       }
     },
@@ -28722,7 +28772,7 @@
           "every_4_seconds_%_chance_freeze_non_frozen_enemies_for_300ms": 50
         },
         "stat_text": [
-          "4秒ごとに50%の確率で近くの凍結状態でない敵を0.4秒間凍結させる"
+          "4秒ごとに50%の確率で6m以内の凍結状態でない敵を0.4秒間凍結状態にする"
         ],
         "visuals": null
       }
@@ -28923,7 +28973,8 @@
       "self_damaging_ailment_duration_+%",
       "base_maximum_chaos_damage_resistance_%",
       "mana_regeneration_rate_+%",
-      "accuracy_rating_+%"
+      "accuracy_rating_+%",
+      "damage_taken_+%_final_from_consecrated_ground"
     ],
     "visuals": "ground_consecration_elreon",
     "category": "Buff",
@@ -29870,7 +29921,7 @@
     "stack_limit": null
   },
   "berserk": {
-    "description": "与えるダメージ、アタックおよび移動スピードが上昇、受けるダメージが低下",
+    "description": "憤怒の効果が増加し、憤怒を失うスピードが加速する",
     "invisible": false,
     "name": "バーサーク",
     "removable": false,
@@ -30197,7 +30248,8 @@
     "name": "進化のシュライン - モンスター",
     "removable": true,
     "stats": [
-      "base_convert_%_physical_damage_to_random_element"
+      "monster_difficulty_tankiness_+%",
+      "damage_+%"
     ],
     "visuals": "invisible",
     "category": "Buff shrine",
@@ -30206,10 +30258,11 @@
       "shrine_evolution_monster": {
         "aura_radius_metres": null,
         "stats": {
-          "base_convert_%_physical_damage_to_random_element": 50
+          "monster_difficulty_tankiness_+%": 200,
+          "damage_+%": 50
         },
         "stat_text": [
-          "物理ダメージの50%がランダムな元素属性に変換される"
+          "ダメージが50%増加する"
         ],
         "visuals": null
       }
@@ -31311,7 +31364,7 @@
             "移動スピードがx%増加する",
             "グローバルクリティカル率がx%増加する",
             "ダメージがx%増加する",
-            "猛攻"
+            "[Onslaught|猛攻]"
           ],
           "stats": {
             "attack_and_cast_speed_+%": 1,
@@ -31352,7 +31405,7 @@
             "移動スピードがx%増加する",
             "グローバルクリティカル率がx%増加する",
             "ダメージがx%増加する",
-            "猛攻"
+            "[Onslaught|猛攻]"
           ],
           "stats": {
             "attack_and_cast_speed_+%": 1,
@@ -31393,7 +31446,7 @@
             "移動スピードがx%増加する",
             "グローバルクリティカル率がx%増加する",
             "ダメージがx%増加する",
-            "猛攻"
+            "[Onslaught|猛攻]"
           ],
           "stats": {
             "attack_and_cast_speed_+%": 1,
@@ -31436,7 +31489,7 @@
             "グローバルクリティカル率がx%増加する",
             "ダメージがx%増加する",
             "毎秒ライフのx%を自動回復する",
-            "猛攻"
+            "[Onslaught|猛攻]"
           ],
           "stats": {
             "attack_and_cast_speed_+%": 1,
@@ -32277,6 +32330,42 @@
       "action_speed_-%"
     ],
     "visuals": "atlas_orion_death_zone_core",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "atlas_orion_crow_zone": {
+    "description": "カヴン・クィーンの無慈悲な魔法により存在そのものが切り裂かれている",
+    "invisible": false,
+    "name": "クロウストームの外側",
+    "removable": false,
+    "stats": [
+      "base_physical_damage_taken_per_minute",
+      "base_fire_damage_taken_per_minute",
+      "base_lightning_damage_taken_per_minute",
+      "base_chaos_damage_taken_per_minute",
+      "action_speed_-%"
+    ],
+    "visuals": "atlas_orion_crow_zone_visual",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "atlas_orion_crow_zone_core": {
+    "description": "カヴン・クィーンの無慈悲な魔法により存在そのものが切り裂かれている",
+    "invisible": false,
+    "name": "クロウストームの内側",
+    "removable": false,
+    "stats": [
+      "base_physical_damage_taken_per_minute",
+      "base_fire_damage_taken_per_minute",
+      "base_lightning_damage_taken_per_minute",
+      "base_chaos_damage_taken_per_minute",
+      "action_speed_-%"
+    ],
+    "visuals": "atlas_orion_crow_zone_core_visual",
     "category": "Debuff",
     "sources": null,
     "templates": null,
@@ -33296,7 +33385,8 @@
       "attack_and_cast_speed_+%",
       "base_movement_velocity_+%",
       "base_cannot_be_damaged",
-      "critical_strike_chance_+%"
+      "critical_strike_chance_+%",
+      "base_should_have_onslaught_from_stat"
     ],
     "visuals": "invisible",
     "category": "Buff",
@@ -33743,6 +33833,14 @@
           "stats": null
         },
         {
+          "id": "VisceraModMaven",
+          "item": null,
+          "name": null,
+          "template": "NearbyEnemiesAreScorchedUnique__1",
+          "stat_text": null,
+          "stats": null
+        },
+        {
           "id": "MonsterEnemiesTaunted1",
           "item": null,
           "name": null,
@@ -33800,7 +33898,7 @@
         "visuals": null
       },
       "UniqueSpecialCorruptionNearbyEnemiesBlinded": {
-        "aura_radius_metres": 3.0,
+        "aura_radius_metres": 3.5,
         "stats": null,
         "stat_text": null,
         "visuals": null
@@ -33818,7 +33916,7 @@
         "visuals": null
       },
       "BlindAuraUnique__1": {
-        "aura_radius_metres": 2.5,
+        "aura_radius_metres": 3.5,
         "stats": null,
         "stat_text": null,
         "visuals": "blinded_uniquewand13"
@@ -35138,6 +35236,20 @@
     "templates": null,
     "stack_limit": null
   },
+  "blinded_enemy_damage_taken_pluspercent": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "base_damage_taken_+%"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "intimidated_enemy_self_stun_duration": {
     "description": "",
     "invisible": true,
@@ -35414,9 +35526,9 @@
     "stack_limit": null
   },
   "abyssal_well_blackhole_damage_over_time": {
-    "description": "[DNT] You are taking Chaos Damage over time",
+    "description": "[DNT - UNUSED]",
     "invisible": false,
-    "name": "[DNT] Abyssal Well",
+    "name": "[DNT - UNUSED]",
     "removable": false,
     "stats": [
       "base_chaos_damage_taken_per_minute"
@@ -37579,7 +37691,7 @@
           "name": null,
           "template": null,
           "stat_text": [
-            "ヒット時に30%の確率で敵に毒を付与する",
+            "ヒット時に30%の確率で毒を付与する",
             "物理ダメージの8%を追加混沌ダメージとして獲得する"
           ],
           "stats": {
@@ -37593,7 +37705,7 @@
           "name": null,
           "template": null,
           "stat_text": [
-            "ヒット時に35%の確率で敵に毒を付与する",
+            "ヒット時に35%の確率で毒を付与する",
             "物理ダメージの10%を追加混沌ダメージとして獲得する"
           ],
           "stats": {
@@ -37607,7 +37719,7 @@
           "name": null,
           "template": null,
           "stat_text": [
-            "ヒット時に40%の確率で敵に毒を付与する",
+            "ヒット時に40%の確率で毒を付与する",
             "物理ダメージの12%を追加混沌ダメージとして獲得する"
           ],
           "stats": {
@@ -37621,7 +37733,7 @@
           "name": null,
           "template": null,
           "stat_text": [
-            "ヒット時に50%の確率で敵に毒を付与する",
+            "ヒット時に50%の確率で毒を付与する",
             "物理ダメージの14%を追加混沌ダメージとして獲得する"
           ],
           "stats": {
@@ -38182,8 +38294,8 @@
           "template": null,
           "stat_text": null,
           "stats": {
-            "from_league_item_rarity_+%_permyriad": 4000,
-            "from_league_item_quantity_+%_permyriad": 4000
+            "from_league_item_rarity_+%_permyriad": 8000,
+            "from_league_item_quantity_+%_permyriad": 0
           }
         },
         {
@@ -38193,8 +38305,8 @@
           "template": null,
           "stat_text": null,
           "stats": {
-            "from_league_item_rarity_+%_permyriad": 5000,
-            "from_league_item_quantity_+%_permyriad": 5000
+            "from_league_item_rarity_+%_permyriad": 10000,
+            "from_league_item_quantity_+%_permyriad": 0
           }
         },
         {
@@ -38204,8 +38316,8 @@
           "template": null,
           "stat_text": null,
           "stats": {
-            "from_league_item_rarity_+%_permyriad": 6000,
-            "from_league_item_quantity_+%_permyriad": 6000
+            "from_league_item_rarity_+%_permyriad": 12000,
+            "from_league_item_quantity_+%_permyriad": 0
           }
         }
       ]
@@ -38564,6 +38676,20 @@
             "curse_effect_on_self_+%": -50,
             "random_curse_on_hit_%_against_uncursed_enemies": 30
           }
+        },
+        {
+          "id": "Bodach1",
+          "item": null,
+          "name": null,
+          "template": null,
+          "stat_text": [
+            "プレイヤーに対する呪いの効果が50%減少する",
+            "ヒット時に30%の確率で呪い状態でない敵にランダムな呪術で呪う"
+          ],
+          "stats": {
+            "curse_effect_on_self_+%": -50,
+            "random_curse_on_hit_%_against_uncursed_enemies": 30
+          }
         }
       ]
     },
@@ -38597,7 +38723,7 @@
     "stack_limit": null
   },
   "ritual_golden_coin_buff": {
-    "description": "倒した敵が落とすアイテムの量とレアリティが大幅に増加するまた、受けるダメージも増加する",
+    "description": "[PlayerItemRarity|アイテムレアリティ]が追加されアイテム数量が増加する\r\n受けるダメージも増加する",
     "invisible": false,
     "name": "賭博師の欲望",
     "removable": false,
@@ -38682,7 +38808,7 @@
     "stack_limit": null
   },
   "demigods_increased_item_rarity_aura": {
-    "description": "アイテムのレアリティが増加",
+    "description": "[PlayerItemRarity|アイテムレアリティ]が追加される",
     "invisible": false,
     "name": "半神の権威",
     "removable": false,
@@ -40297,6 +40423,148 @@
     },
     "stack_limit": null
   },
+  "ultimatum_additional_projectile_upside": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "number_of_additional_projectiles"
+    ],
+    "visuals": "invisible",
+    "category": "Buff",
+    "sources": {
+      "UltimatumModifiers": [
+        {
+          "id": "PlayerBuffExtraProjectiles",
+          "item": null,
+          "name": null,
+          "template": "UltimatumAdditionalProjectileUpside",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
+    "templates": {
+      "UltimatumAdditionalProjectileUpside": {
+        "aura_radius_metres": null,
+        "stats": {
+          "number_of_additional_projectiles": 2
+        },
+        "stat_text": [
+          "スキルは投射物を追加で2個放つ"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "ultimatum_area_of_effect_upside": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "base_skill_area_of_effect_+%"
+    ],
+    "visuals": "invisible",
+    "category": "Buff",
+    "sources": {
+      "UltimatumModifiers": [
+        {
+          "id": "PlayerBuffIncreasedAoE",
+          "item": null,
+          "name": null,
+          "template": "UltimatumIncreasedAoEUpside",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
+    "templates": {
+      "UltimatumIncreasedAoEUpside": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_skill_area_of_effect_+%": 80
+        },
+        "stat_text": [
+          "効果範囲が80%増加する"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "ultimatum_gain_as_elemental_upside": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "physical_damage_%_to_add_as_random_element"
+    ],
+    "visuals": "invisible",
+    "category": "Buff",
+    "sources": {
+      "UltimatumModifiers": [
+        {
+          "id": "PlayerBuffGainAsElemental",
+          "item": null,
+          "name": null,
+          "template": "UltimatumGainAsElementalUpside",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
+    "templates": {
+      "UltimatumGainAsElementalUpside": {
+        "aura_radius_metres": null,
+        "stats": {
+          "physical_damage_%_to_add_as_random_element": 50
+        },
+        "stat_text": [
+          "物理ダメージの50%をランダムな元素属性の追加ダメージとして獲得する"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "ultimatum_steal_monster_mods_ms": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "gain_1_random_rare_monster_mod_on_kill_ms"
+    ],
+    "visuals": "invisible",
+    "category": "Buff",
+    "sources": {
+      "UltimatumModifiers": [
+        {
+          "id": "PlayerBuffStealMods",
+          "item": null,
+          "name": null,
+          "template": "UltimatumStealMonsterMods",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
+    "templates": {
+      "UltimatumStealMonsterMods": {
+        "aura_radius_metres": null,
+        "stats": {
+          "gain_1_random_rare_monster_mod_on_kill_ms": 20000
+        },
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
   "projectile_bull_thorns": {
     "description": "",
     "invisible": false,
@@ -40770,7 +41038,9 @@
       "damage_+%",
       "attack_and_cast_speed_+%",
       "life_regeneration_rate_per_minute_%",
-      "base_life_mana_es_recovery_rate_+%"
+      "base_life_mana_es_recovery_rate_+%",
+      "physical_damage_%_to_add_as_cold",
+      "physical_damage_%_to_add_as_fire"
     ],
     "visuals": "armourevasion_banner",
     "category": "Buff",
@@ -40903,7 +41173,7 @@
     "stack_limit": null
   },
   "burninate_debuff": {
-    "description": "[DNT]",
+    "description": "[DNT - UNUSED]",
     "invisible": false,
     "name": "[DNT] UNUSED",
     "removable": false,
@@ -41544,9 +41814,9 @@
     "stack_limit": null
   },
   "call_of_the_wild": {
-    "description": "[DNT]",
+    "description": "[DNT - UNUSED]",
     "invisible": false,
-    "name": "[DNT] Call of the Wild",
+    "name": "[DNT - UNUSED] Call of the Wild",
     "removable": true,
     "stats": [],
     "visuals": "call_of_the_wild",
@@ -41684,6 +41954,16 @@
         },
         {
           "id": "MutatedUniqueBelt43MagicUtilityFlasksAlwaysApplyRightmost",
+          "item": null,
+          "name": null,
+          "template": "InjectedLiquid",
+          "stat_text": null,
+          "stats": null
+        }
+      ],
+      "PassiveSkills": [
+        {
+          "id": "AscendancyReliquarian14",
           "item": null,
           "name": null,
           "template": "InjectedLiquid",
@@ -42146,6 +42426,33 @@
       "base_chance_to_ignite_%"
     ],
     "visuals": "flame_link_target",
+    "category": "Link",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "arcane_link_source": {
+    "description": "対象にこのリンクによる追加雷ダメージを付与している",
+    "invisible": false,
+    "name": "アーケインリンク",
+    "removable": false,
+    "stats": [],
+    "visuals": "arcane_link_source",
+    "category": "Link",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "arcane_link_target": {
+    "description": "雷ダメージが追加される",
+    "invisible": false,
+    "name": "アーケインリンク",
+    "removable": true,
+    "stats": [
+      "global_minimum_added_lightning_damage",
+      "global_maximum_added_lightning_damage"
+    ],
+    "visuals": "arcane_link_target",
     "category": "Link",
     "sources": null,
     "templates": null,
@@ -43215,6 +43522,34 @@
     "templates": null,
     "stack_limit": null
   },
+  "augury_blood_donut": {
+    "description": "物理継続ダメージを受けている",
+    "invisible": false,
+    "name": "ヴェニパンクチャー",
+    "removable": false,
+    "stats": [
+      "base_physical_damage_taken_per_minute"
+    ],
+    "visuals": "augury_blood_donut",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "abyssal_donut": {
+    "description": "物理継続ダメージを受けている",
+    "invisible": false,
+    "name": "吸い取る井戸",
+    "removable": false,
+    "stats": [
+      "base_physical_damage_taken_per_minute"
+    ],
+    "visuals": "abyssal_donut_visual",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "archnemesis_time_bubble": {
     "description": "アクションスピードが極端に下がり、クールダウンが解消により時間がかるネガティブなエフェクトの消失により時間がかかる",
     "invisible": false,
@@ -43375,7 +43710,7 @@
     "stack_limit": 10
   },
   "shrine_greed": {
-    "description": "アイテムの数量とレアリティが増加、受けるダメージが増加する",
+    "description": "[PlayerItemRarity|アイテムレアリティ]が追加されアイテム数量が増加する\r\n受けるダメージも増加する",
     "invisible": false,
     "name": "強欲なシュライン",
     "removable": true,
@@ -43397,7 +43732,7 @@
           "name": null,
           "template": null,
           "stat_text": [
-            "見つかるアイテムのレアリティがx%増加する",
+            "[PlayerItemRarity|アイテムレアリティ] +x%",
             "見つかるアイテムの数量がx%増加する",
             "受けるダメージがx%増加する"
           ],
@@ -43416,8 +43751,8 @@
       "shrine_greed_monster": {
         "aura_radius_metres": null,
         "stats": {
-          "from_league_item_rarity_+%_permyriad": 2500,
-          "from_league_item_quantity_+%_permyriad": 1000,
+          "from_league_item_rarity_+%_permyriad": 3500,
+          "from_league_item_quantity_+%_permyriad": 0,
           "base_item_found_rarity_+%": 0,
           "base_item_found_quantity_+%": 0,
           "base_damage_taken_+%": -70,
@@ -43435,13 +43770,12 @@
           "from_league_item_quantity_+%_permyriad": 0,
           "base_item_found_rarity_+%": 50,
           "base_item_found_quantity_+%": 15,
-          "base_damage_taken_+%": 20,
+          "base_damage_taken_+%": 0,
           "has_shrine_effect": 1
         },
         "stat_text": [
-          "見つかるアイテムのレアリティが50%増加する",
-          "見つかるアイテムの数量が15%増加する",
-          "受けるダメージが20%増加する"
+          "[PlayerItemRarity|アイテムレアリティ] +50%",
+          "見つかるアイテムの数量が15%増加する"
         ],
         "visuals": null
       }
@@ -43746,7 +44080,7 @@
     "category": "Debuff",
     "sources": null,
     "templates": null,
-    "stack_limit": null
+    "stack_limit": 10
   },
   "harvest_cat_grasping_vines_buff": {
     "description": "束縛する蔓により減速している移動することで蔓を破壊できる",
@@ -65997,6 +66331,22 @@
     "templates": null,
     "stack_limit": null
   },
+  "cleansing_fire_snake_debuff_augury": {
+    "description": "物理ダメージを受け、ライフおよびエナジーシールドを回復できなくなる",
+    "invisible": false,
+    "name": "嘲笑のルーン",
+    "removable": false,
+    "stats": [
+      "base_physical_damage_taken_per_minute",
+      "cannot_recover_life",
+      "no_energy_shield_recovery"
+    ],
+    "visuals": "cleansing_fire_snake_debuff_augury",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "player_tainted_frenzy": {
     "description": "フレンジーチャージが汚染されている",
     "invisible": false,
@@ -66221,6 +66571,20 @@
       "base_damage_taken_+%"
     ],
     "visuals": "eater_of_worlds_laser",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "eater_of_worlds_laser_augury": {
+    "description": "嘲笑の破滅のスタック数ごとにライフおよびエナジーシールド回復レートが1%減少する",
+    "invisible": false,
+    "name": "嘲笑の破滅",
+    "removable": false,
+    "stats": [
+      "life_and_energy_shield_recovery_rate_+%"
+    ],
+    "visuals": "eater_of_worlds_laser_augury",
     "category": "Debuff",
     "sources": null,
     "templates": null,
@@ -66783,7 +67147,7 @@
         "aura_radius_metres": null,
         "stats": {
           "trickster_damage_over_time_taken_+%_final": -50,
-          "trickster_hit_damage_taken_+%_final": -50
+          "trickster_hit_damage_taken_+%_final": -75
         },
         "stat_text": null,
         "visuals": null
@@ -68438,7 +68802,7 @@
     "stack_limit": null
   },
   "blood_triggered": {
-    "description": "ブラッドスタンスであるアタックによるヒット時に確率で出血付与",
+    "description": "ブラッドスタンスである。アタックによるヒット時に確率で出血付与",
     "invisible": false,
     "name": "ブラッドスタンス",
     "removable": true,
@@ -68453,7 +68817,7 @@
     "stack_limit": null
   },
   "sand_triggered": {
-    "description": "サンドスタンスであるアタックによるヒット時に確率で盲目付与",
+    "description": "サンドスタンスである。アタックによるヒット時に一定確率で[Blind|盲目]付与",
     "invisible": false,
     "name": "サンドスタンス",
     "removable": true,
@@ -69410,7 +69774,7 @@
           "nearby_enemies_no_fire_dot_resistance_while_you_are_stationary": 0
         },
         "stat_text": [
-          "プレイヤーが静止中に近くの敵モンスターの継続ダメージに対する火耐性は-20%になる"
+          "プレイヤーが静止状態の間6m以内の敵モンスターの継続ダメージに対する火耐性は-20%になる"
         ],
         "visuals": null
       },
@@ -69421,7 +69785,7 @@
           "nearby_enemies_no_fire_dot_resistance_while_you_are_stationary": 1
         },
         "stat_text": [
-          "プレイヤーが静止中に近くの敵モンスターの継続ダメージに対する火耐性はなくなる"
+          "プレイヤーが静止状態の間6m以内の敵モンスターの継続ダメージに対する火耐性はゼロになる"
         ],
         "visuals": null
       }
@@ -69533,7 +69897,7 @@
           "can_trigger_summon_elemental_relic_on_nearby_ally_kill_or_on_hit_rare_or_unique": 25
         },
         "stat_text": [
-          "プレイヤーまたは近くの味方が敵を倒すか、もしくはレアまたはユニークの敵にヒットを与えた時に25%の確率でレベル20 エレメンタルレリック召喚をトリガーする"
+          "プレイヤーまたは6m以内味方が敵を倒すか、レアまたはユニークの敵を倒した時に25%の確率で[SummonElementalRelic::20|エレメンタルレリック召喚]をトリガーする"
         ],
         "visuals": null
       }
@@ -70256,18 +70620,7 @@
     ],
     "visuals": "invisible",
     "category": null,
-    "sources": {
-      "PassiveSkills": [
-        {
-          "id": "AscendancyReliquarian30",
-          "item": null,
-          "name": null,
-          "template": "AscedancyEnemyPhysicalDamageConvertedToFire",
-          "stat_text": null,
-          "stats": null
-        }
-      ]
-    },
+    "sources": null,
     "templates": {
       "AscedancyEnemyPhysicalDamageConvertedToFire": {
         "aura_radius_metres": 6.0,
@@ -71587,7 +71940,7 @@
     "stack_limit": null
   },
   "azmeri_effigy_buff_magic_find": {
-    "description": "アイテムのレアリティおよび数量200％増加",
+    "description": "[PlayerItemRarity|アイテムレアリティ]が追加されアイテム数量が増加する",
     "invisible": false,
     "name": "闇の贈り物",
     "removable": true,
@@ -71606,7 +71959,7 @@
           "base_item_found_quantity_+%": 200
         },
         "stat_text": [
-          "見つかるアイテムのレアリティが200%増加する",
+          "[PlayerItemRarity|アイテムレアリティ] +200%",
           "見つかるアイテムの数量が200%増加する"
         ],
         "visuals": null
@@ -71992,7 +72345,7 @@
         },
         "stat_text": [
           "プレイヤーに対するヒットは常にクリティカルストライクになる",
-          "見つかるアイテムのレアリティが40%増加する"
+          "[PlayerItemRarity|アイテムレアリティ] +40%"
         ],
         "visuals": null
       }
@@ -72153,7 +72506,7 @@
     "stack_limit": null
   },
   "azmeri_altar_buff_rabbit": {
-    "description": "アイテムレアリティが100%増加し、アイテム数量が50%増加する経験値を獲得できない",
+    "description": "[PlayerItemRarity|アイテムレアリティ]が追加されアイテム数量が増加する\r\n経験値を獲得できなくなる",
     "invisible": false,
     "name": "兎の行進",
     "removable": false,
@@ -72174,7 +72527,7 @@
           "no_experience_gain": 1
         },
         "stat_text": [
-          "見つかるアイテムのレアリティが100%増加する",
+          "[PlayerItemRarity|アイテムレアリティ] +100%",
           "見つかるアイテムの数量が50%増加する",
           "経験値を獲得できない"
         ],
@@ -72219,7 +72572,7 @@
         },
         "stat_text": [
           "全ての耐性の最大値 -20%",
-          "見つかるアイテムのレアリティが40%増加する"
+          "[PlayerItemRarity|アイテムレアリティ] +40%"
         ],
         "visuals": null
       }
@@ -72413,7 +72766,7 @@
     "stack_limit": null
   },
   "impale_chance_animated_sword": {
-    "description": "[DNT] Your attacks have a chance to impale enemies.",
+    "description": "アタックに串刺し確率が追加される",
     "invisible": false,
     "name": "アタック串刺し確率",
     "removable": false,
@@ -72655,7 +73008,7 @@
     "name": "サルファイトの狂気",
     "removable": false,
     "stats": [
-      "from_league_item_quantity_+%_permyriad",
+      "from_league_item_rarity_+%_permyriad",
       "attack_speed_+%",
       "base_movement_velocity_+%",
       "base_cast_speed_+%",
@@ -72687,10 +73040,10 @@
     "stack_limit": null
   },
   "beyond_boss_buff_1": {
-    "description": "カタッシュから盗んだ力が体を巡っている。物理ダメージの一部を火ダメージとして獲得し、一定確率で倒した敵は爆発しその最大ライフの10%を火ダメージとして与える",
+    "description": "カタッシュから盗んだ力が体を巡っている。物理ダメージの一部を火ダメージとして獲得し、倒した敵は一定確率で爆発しその最大ライフの10%を火ダメージとして与える",
     "invisible": false,
     "name": "カタッシュの荘厳",
-    "removable": false,
+    "removable": true,
     "stats": [
       "base_actor_scale_+%",
       "physical_damage_%_to_add_as_fire",
@@ -72703,14 +73056,14 @@
       "BeyondBossBuff1": {
         "aura_radius_metres": null,
         "stats": {
-          "base_actor_scale_+%": 20,
-          "physical_damage_%_to_add_as_fire": 100,
-          "explode_enemies_for_10%_life_as_fire_on_kill_chance_%": 40
+          "base_actor_scale_+%": 15,
+          "physical_damage_%_to_add_as_fire": 50,
+          "explode_enemies_for_10%_life_as_fire_on_kill_chance_%": 20
         },
         "stat_text": [
-          "キャラクターサイズが20%増加する",
-          "物理ダメージの100%を追加火ダメージとして獲得する",
-          "プレイヤーが倒した敵は40%の確率で爆発し、その最大ライフの10分の1を火ダメージとして与える"
+          "キャラクターサイズが15%増加する",
+          "物理ダメージの50%を追加火ダメージとして獲得する",
+          "プレイヤーが倒した敵は20%の確率で爆発し、その最大ライフの10分の1を火ダメージとして与える"
         ],
         "visuals": null
       }
@@ -72721,7 +73074,7 @@
     "description": "ゴールから盗んだ力が体を巡っている。ヒット時に一定確率で弱体化を付与し、受けるダメージが低下する",
     "invisible": false,
     "name": "ゴールの荘厳",
-    "removable": false,
+    "removable": true,
     "stats": [
       "base_actor_scale_+%",
       "extra_gore",
@@ -72735,15 +73088,15 @@
       "BeyondBossBuff2": {
         "aura_radius_metres": null,
         "stats": {
-          "base_actor_scale_+%": 30,
+          "base_actor_scale_+%": 20,
           "extra_gore": 1,
           "debilitate_enemies_for_1_second_on_hit_%_chance": 10,
-          "damage_taken_+%_final_from_beyond_boss_buff": 10
+          "damage_taken_+%_final_from_beyond_boss_buff": -10
         },
         "stat_text": [
-          "キャラクターサイズが30%増加する",
+          "キャラクターサイズが20%増加する",
           "追加ゴア表現",
-          "ヒット時に10%の確率で敵を1秒間弱体化する"
+          "ヒット時に10%の確率で1秒間敵を弱体化する"
         ],
         "visuals": null
       }
@@ -72754,7 +73107,7 @@
     "description": "ベイダットから盗んだ力が体を巡っている。アクションスピードが増加し、物理ダメージの一部を雷ダメージとして獲得する",
     "invisible": false,
     "name": "ベイダットの荘厳",
-    "removable": false,
+    "removable": true,
     "stats": [
       "base_actor_scale_+%",
       "action_speed_-%",
@@ -72767,14 +73120,14 @@
       "BeyondBossBuff3": {
         "aura_radius_metres": null,
         "stats": {
-          "base_actor_scale_+%": 20,
-          "action_speed_-%": -15,
-          "physical_damage_%_to_add_as_lightning": 100
+          "base_actor_scale_+%": 15,
+          "action_speed_-%": -10,
+          "physical_damage_%_to_add_as_lightning": 50
         },
         "stat_text": [
-          "キャラクターサイズが20%増加する",
-          "アクションスピードが15%増加する",
-          "物理ダメージの100%を追加雷ダメージとして獲得する"
+          "キャラクターサイズが15%増加する",
+          "アクションスピードが10%増加する",
+          "物理ダメージの50%を追加雷ダメージとして獲得する"
         ],
         "visuals": null
       }
@@ -72854,7 +73207,9 @@
           "damage_dealt_+%_to_beasts": 10,
           "can_see_monster_type_beasts": 1
         },
-        "stat_text": null,
+        "stat_text": [
+          "ビーストに対するダメージが10%増加する"
+        ],
         "visuals": null
       }
     },
@@ -73311,15 +73666,26 @@
     ],
     "visuals": "invisible",
     "category": null,
-    "sources": null,
+    "sources": {
+      "Mods": [
+        {
+          "id": "UberIncursionTempleMonsterBonus",
+          "item": null,
+          "name": null,
+          "template": "UberIncursionTempleMonsterBonus",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
     "templates": {
       "BreachUnstableEnhancedMonsterBuff": {
         "aura_radius_metres": null,
         "stats": {
           "monster_difficulty_tankiness_+%": 75,
           "damage_+%": 15,
-          "from_league_item_rarity_+%_permyriad": 1500,
-          "from_league_item_quantity_+%_permyriad": 1000
+          "from_league_item_rarity_+%_permyriad": 2500,
+          "from_league_item_quantity_+%_permyriad": 0
         },
         "stat_text": [
           "ダメージが15%増加する"
@@ -73331,11 +73697,24 @@
         "stats": {
           "monster_difficulty_tankiness_+%": 60,
           "damage_+%": 12,
-          "from_league_item_rarity_+%_permyriad": 1200,
-          "from_league_item_quantity_+%_permyriad": 800
+          "from_league_item_rarity_+%_permyriad": 2000,
+          "from_league_item_quantity_+%_permyriad": 0
         },
         "stat_text": [
           "ダメージが12%増加する"
+        ],
+        "visuals": null
+      },
+      "BreachHiveEnhancedMonsterBuffEmpowered": {
+        "aura_radius_metres": null,
+        "stats": {
+          "monster_difficulty_tankiness_+%": 70,
+          "damage_+%": 14,
+          "from_league_item_rarity_+%_permyriad": 2667,
+          "from_league_item_quantity_+%_permyriad": 0
+        },
+        "stat_text": [
+          "ダメージが14%増加する"
         ],
         "visuals": null
       },
@@ -73344,8 +73723,8 @@
         "stats": {
           "monster_difficulty_tankiness_+%": 15,
           "damage_+%": 10,
-          "from_league_item_rarity_+%_permyriad": 1000,
-          "from_league_item_quantity_+%_permyriad": 500
+          "from_league_item_rarity_+%_permyriad": 1500,
+          "from_league_item_quantity_+%_permyriad": 0
         },
         "stat_text": [
           "ダメージが10%増加する"
@@ -73357,8 +73736,8 @@
         "stats": {
           "monster_difficulty_tankiness_+%": 15,
           "damage_+%": 15,
-          "from_league_item_rarity_+%_permyriad": 500,
-          "from_league_item_quantity_+%_permyriad": 500
+          "from_league_item_rarity_+%_permyriad": 1000,
+          "from_league_item_quantity_+%_permyriad": 0
         },
         "stat_text": [
           "ダメージが15%増加する"
@@ -73370,7 +73749,7 @@
         "stats": {
           "monster_difficulty_tankiness_+%": 30,
           "damage_+%": 5,
-          "from_league_item_rarity_+%_permyriad": 0,
+          "from_league_item_rarity_+%_permyriad": 1000,
           "from_league_item_quantity_+%_permyriad": 0
         },
         "stat_text": [
@@ -73383,8 +73762,8 @@
         "stats": {
           "monster_difficulty_tankiness_+%": 30,
           "damage_+%": 8,
-          "from_league_item_rarity_+%_permyriad": 750,
-          "from_league_item_quantity_+%_permyriad": 750
+          "from_league_item_rarity_+%_permyriad": 1500,
+          "from_league_item_quantity_+%_permyriad": 0
         },
         "stat_text": [
           "ダメージが8%増加する"
@@ -73396,11 +73775,37 @@
         "stats": {
           "monster_difficulty_tankiness_+%": 50,
           "damage_+%": 10,
-          "from_league_item_rarity_+%_permyriad": 2000,
-          "from_league_item_quantity_+%_permyriad": 1000
+          "from_league_item_rarity_+%_permyriad": 3000,
+          "from_league_item_quantity_+%_permyriad": 0
         },
         "stat_text": [
           "ダメージが10%増加する"
+        ],
+        "visuals": null
+      },
+      "BlightMinibossEnhancedMonsterBuff": {
+        "aura_radius_metres": null,
+        "stats": {
+          "monster_difficulty_tankiness_+%": 30,
+          "damage_+%": 5,
+          "from_league_item_rarity_+%_permyriad": 1000,
+          "from_league_item_quantity_+%_permyriad": 0
+        },
+        "stat_text": [
+          "ダメージが5%増加する"
+        ],
+        "visuals": null
+      },
+      "RitualMinibossEnhancedMonsterBuff": {
+        "aura_radius_metres": null,
+        "stats": {
+          "monster_difficulty_tankiness_+%": 40,
+          "damage_+%": 5,
+          "from_league_item_rarity_+%_permyriad": 1200,
+          "from_league_item_quantity_+%_permyriad": 0
+        },
+        "stat_text": [
+          "ダメージが5%増加する"
         ],
         "visuals": null
       },
@@ -73409,8 +73814,8 @@
         "stats": {
           "monster_difficulty_tankiness_+%": 30,
           "damage_+%": 5,
-          "from_league_item_rarity_+%_permyriad": 900,
-          "from_league_item_quantity_+%_permyriad": 450
+          "from_league_item_rarity_+%_permyriad": 1500,
+          "from_league_item_quantity_+%_permyriad": 0
         },
         "stat_text": [
           "ダメージが5%増加する"
@@ -73422,8 +73827,8 @@
         "stats": {
           "monster_difficulty_tankiness_+%": 30,
           "damage_+%": 5,
-          "from_league_item_rarity_+%_permyriad": 1500,
-          "from_league_item_quantity_+%_permyriad": 750
+          "from_league_item_rarity_+%_permyriad": 2500,
+          "from_league_item_quantity_+%_permyriad": 0
         },
         "stat_text": [
           "ダメージが5%増加する"
@@ -73435,8 +73840,8 @@
         "stats": {
           "monster_difficulty_tankiness_+%": 30,
           "damage_+%": 5,
-          "from_league_item_rarity_+%_permyriad": 900,
-          "from_league_item_quantity_+%_permyriad": 450
+          "from_league_item_rarity_+%_permyriad": 1500,
+          "from_league_item_quantity_+%_permyriad": 0
         },
         "stat_text": [
           "ダメージが5%増加する"
@@ -73448,8 +73853,8 @@
         "stats": {
           "monster_difficulty_tankiness_+%": 30,
           "damage_+%": 5,
-          "from_league_item_rarity_+%_permyriad": 900,
-          "from_league_item_quantity_+%_permyriad": 450
+          "from_league_item_rarity_+%_permyriad": 1500,
+          "from_league_item_quantity_+%_permyriad": 0
         },
         "stat_text": [
           "ダメージが5%増加する"
@@ -73461,8 +73866,8 @@
         "stats": {
           "monster_difficulty_tankiness_+%": 30,
           "damage_+%": 5,
-          "from_league_item_rarity_+%_permyriad": 1200,
-          "from_league_item_quantity_+%_permyriad": 600
+          "from_league_item_rarity_+%_permyriad": 2000,
+          "from_league_item_quantity_+%_permyriad": 0
         },
         "stat_text": [
           "ダメージが5%増加する"
@@ -73474,8 +73879,8 @@
         "stats": {
           "monster_difficulty_tankiness_+%": 30,
           "damage_+%": 5,
-          "from_league_item_rarity_+%_permyriad": 900,
-          "from_league_item_quantity_+%_permyriad": 450
+          "from_league_item_rarity_+%_permyriad": 1500,
+          "from_league_item_quantity_+%_permyriad": 0
         },
         "stat_text": [
           "ダメージが5%増加する"
@@ -73487,8 +73892,8 @@
         "stats": {
           "monster_difficulty_tankiness_+%": 30,
           "damage_+%": 5,
-          "from_league_item_rarity_+%_permyriad": 1200,
-          "from_league_item_quantity_+%_permyriad": 600
+          "from_league_item_rarity_+%_permyriad": 2000,
+          "from_league_item_quantity_+%_permyriad": 0
         },
         "stat_text": [
           "ダメージが5%増加する"
@@ -73500,8 +73905,8 @@
         "stats": {
           "monster_difficulty_tankiness_+%": 30,
           "damage_+%": 5,
-          "from_league_item_rarity_+%_permyriad": 1500,
-          "from_league_item_quantity_+%_permyriad": 750
+          "from_league_item_rarity_+%_permyriad": 2500,
+          "from_league_item_quantity_+%_permyriad": 0
         },
         "stat_text": [
           "ダメージが5%増加する"
@@ -73513,8 +73918,8 @@
         "stats": {
           "monster_difficulty_tankiness_+%": 30,
           "damage_+%": 5,
-          "from_league_item_rarity_+%_permyriad": 900,
-          "from_league_item_quantity_+%_permyriad": 450
+          "from_league_item_rarity_+%_permyriad": 1500,
+          "from_league_item_quantity_+%_permyriad": 0
         },
         "stat_text": [
           "ダメージが5%増加する"
@@ -73526,12 +73931,23 @@
         "stats": {
           "monster_difficulty_tankiness_+%": 30,
           "damage_+%": 5,
-          "from_league_item_rarity_+%_permyriad": 1500,
-          "from_league_item_quantity_+%_permyriad": 750
+          "from_league_item_rarity_+%_permyriad": 2500,
+          "from_league_item_quantity_+%_permyriad": 0
         },
         "stat_text": [
           "ダメージが5%増加する"
         ],
+        "visuals": null
+      },
+      "UberIncursionTempleMonsterBonus": {
+        "aura_radius_metres": null,
+        "stats": {
+          "monster_difficulty_tankiness_+%": 150,
+          "damage_+%": 25,
+          "from_league_item_rarity_+%_permyriad": 10000,
+          "from_league_item_quantity_+%_permyriad": 0
+        },
+        "stat_text": null,
         "visuals": null
       }
     },
@@ -73557,8 +73973,8 @@
         "stats": {
           "monster_difficulty_tankiness_+%": 100,
           "damage_+%": 15,
-          "from_league_item_rarity_+%_permyriad": 2100,
-          "from_league_item_quantity_+%_permyriad": 1000
+          "from_league_item_rarity_+%_permyriad": 3000,
+          "from_league_item_quantity_+%_permyriad": 0
         },
         "stat_text": [
           "ダメージが15%増加する"
@@ -73604,8 +74020,7 @@
     "stats": [
       "monster_difficulty_tankiness_+%",
       "damage_+%",
-      "from_league_item_rarity_+%_permyriad",
-      "from_league_item_quantity_+%_permyriad"
+      "from_league_item_rarity_+%_permyriad"
     ],
     "visuals": "invisible",
     "category": null,
@@ -73896,7 +74311,9 @@
     "removable": false,
     "stats": [
       "base_damage_taken_+%",
-      "explode_for_10%_life_as_physical_on_kill_chance_%"
+      "explode_for_10%_life_as_physical_on_kill_chance_%",
+      "cold_damage_taken_+%",
+      "fire_damage_taken_+%"
     ],
     "visuals": "invisible",
     "category": null,
@@ -74284,7 +74701,7 @@
     "stack_limit": null
   },
   "ritual_wisp_buff": {
-    "description": "得られるトリビュートが増加",
+    "description": "獲得トリビュートが大幅に増加する",
     "invisible": false,
     "name": "ウィスプの祝福",
     "removable": false,
@@ -74869,7 +75286,7 @@
     "stack_limit": null
   },
   "tincture_sporebloom": {
-    "description": "近接武器は追加の盲目確立および盲目効果を持つ",
+    "description": "近接武器は[Blind|盲目]確率および効果が追加される",
     "invisible": false,
     "name": "胞子花のチンキ",
     "removable": false,
@@ -74928,7 +75345,7 @@
     "stack_limit": null
   },
   "tincture_unique4": {
-    "description": "カリングストライクを持ちマナ燃焼ごとに見つかるアイテムのレアリティが増加する",
+    "description": "カリングストライクを持ちマナ燃焼ごとに見つかる[PlayerItemRarity|アイテムレアリティ]が追加される",
     "invisible": false,
     "name": "内なる戦い",
     "removable": false,
@@ -75283,6 +75700,20 @@
     "templates": null,
     "stack_limit": null
   },
+  "benevolenceboss_physical_aura": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "base_physical_damage_taken_per_minute"
+    ],
+    "visuals": "invisible",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "zangerboss_orb_degen": {
     "description": "火継続のダメージを受けている最大元素耐性は低下しており、ライフおよびエネルギーシールドを回復することができない",
     "invisible": false,
@@ -75300,6 +75731,22 @@
     "templates": null,
     "stack_limit": null
   },
+  "zangerboss_orb_degen_augury": {
+    "description": "物理継続ダメージを受け、ライフまたはエナジーシールドを回復できなくなる",
+    "invisible": false,
+    "name": "オーブ・ロット",
+    "removable": false,
+    "stats": [
+      "base_physical_damage_taken_per_minute",
+      "cannot_recover_life",
+      "no_energy_shield_recovery"
+    ],
+    "visuals": "zangerboss_orb_degen_augury",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
   "zangerboss_orb_beam": {
     "description": "ライフおよびエナジーシールドを回復できない",
     "invisible": false,
@@ -75310,6 +75757,22 @@
       "no_energy_shield_recovery"
     ],
     "visuals": "zangerboss_orb_beam",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "zangerboss_orb_beam_augury": {
+    "description": "ライフおよびエナジーシールドを回復できなくなり、物理ダメージ軽減率が下がる",
+    "invisible": false,
+    "name": "カヴンの炎",
+    "removable": false,
+    "stats": [
+      "cannot_recover_life",
+      "no_energy_shield_recovery",
+      "base_additional_physical_damage_reduction_%"
+    ],
+    "visuals": "zangerboss_orb_beam_augury",
     "category": "Debuff",
     "sources": null,
     "templates": null,
@@ -75372,7 +75835,7 @@
     "stack_limit": null
   },
   "divination_buff_abandoned_wealth": {
-    "description": "見つかるアイテムのレアリティが50%増加する",
+    "description": "[PlayerItemRarity|アイテムレアリティ] +50%",
     "invisible": false,
     "name": "放棄された富",
     "removable": false,
@@ -75389,7 +75852,7 @@
           "base_item_found_rarity_+%": 50
         },
         "stat_text": [
-          "見つかるアイテムのレアリティが50%増加する"
+          "[PlayerItemRarity|アイテムレアリティ] +50%"
         ],
         "visuals": null
       }
@@ -75587,7 +76050,7 @@
         },
         "stat_text": [
           "プレイヤーに対する敵のヒットダメージが不運になる",
-          "ヒットによるダメージが幸運になる"
+          "ヒットダメージが幸運になる"
         ],
         "visuals": null
       }
@@ -75860,8 +76323,8 @@
           "damage_+%_for_you_and_allies_affected_by_your_auras": 50
         },
         "stat_text": [
-          "プレイヤーおよび近くの味方はアタックスピードおよびキャストスピードが30%増加する",
-          "プレイヤーおよび近くの味方はダメージが50%増加する"
+          "プレイヤーと6m以内の味方はアタックスピードおよびキャストスピードが30%増加する",
+          "プレイヤーと6m以内の味方はダメージが50%増加する"
         ],
         "visuals": null
       }
@@ -75922,7 +76385,7 @@
     "stack_limit": null
   },
   "divination_buff_rats": {
-    "description": "アタックスピードが15%増加する\r\nグローバルクリティカル率が75%増加する\r\n回避力が150%増加する\r\n見つかるアイテムのレアリティが25%増加する\r\n移動スピードが10%増加する\r\nキャラクターサイズが10%減少する",
+    "description": "アタックスピードが15%増加する\r\nグローバルクリティカル率が75%増加する\r\n回避力が150%増加する\r\n[PlayerItemRarity|アイテムレアリティ] +25%\r\n移動スピードが10%増加する\r\nキャラクターサイズが10%減少する",
     "invisible": false,
     "name": "ネズミ",
     "removable": false,
@@ -75951,7 +76414,7 @@
         "stat_text": [
           "回避力が150%増加する",
           "移動スピードが10%増加する",
-          "見つかるアイテムのレアリティが25%増加する",
+          "[PlayerItemRarity|アイテムレアリティ] +25%",
           "アタックスピードが15%増加する",
           "グローバルクリティカル率が75%増加する",
           "キャラクターサイズが10%減少する"
@@ -76444,6 +76907,14 @@
           "template": "TriggerSummonVoidSpawnSkillUnique__1",
           "stat_text": null,
           "stats": null
+        },
+        {
+          "id": "VisceraModIncarnationofFear",
+          "item": null,
+          "name": null,
+          "template": "TriggerSummonVoidSpawnSkillUnique__1",
+          "stat_text": null,
+          "stats": null
         }
       ]
     },
@@ -76652,7 +77123,7 @@
   "ignorance_beam_debuff": {
     "description": "スタックごとに受けるダメージが8%増加し、4%遅くなる",
     "invisible": false,
-    "name": "[DNT]",
+    "name": "[DNT - UNUSED]",
     "removable": false,
     "stats": [
       "base_damage_taken_+%",
@@ -76667,7 +77138,7 @@
   "unleash_power_channelled_stage": {
     "description": "[DNT] You have stages from channelling Unleash Power. These stages will be lost when reaching maximum to trigger spells.",
     "invisible": false,
-    "name": "[DNT] Unleash Power",
+    "name": "[DNT - UNUSED] Unleash Power",
     "removable": false,
     "stats": [],
     "visuals": "cyclone_channelled_stage",
@@ -76715,7 +77186,7 @@
     "stack_limit": null
   },
   "allflame_decay_quant_rarity": {
-    "description": "アイテムレアリティは時間の経過とともに減少し、光輝モンスターを倒すことで増加する",
+    "description": "[PlayerItemRarity|アイテムレアリティ]は時間の経過とともに減少し、光輝モンスターを倒すことで増加する",
     "invisible": false,
     "name": "光輝",
     "removable": false,
@@ -78183,7 +78654,7 @@
           "all_damage_can_chill": 1
         },
         "stat_text": [
-          "プレイヤーが付与した元素系状態異常は近くの他の敵にも伝染する",
+          "プレイヤーが付与した元素系状態異常は2m以内の他の敵にも影響する",
           "全てのダメージで発火を付与できる",
           "ヒットは常に敵を発火させる",
           "ヒットは常に敵を感電させる",
@@ -78199,7 +78670,7 @@
     "description": "元素ダメージの一部を混沌ダメージとして獲得している。\r\nこのバフを持っている間、物理ダメージを与え、ライフおよびエナジーシールドの回復レートを減少させるネズミのトルネードをスポーンさせる\r\n",
     "invisible": false,
     "name": "ネズミの血のシュライン",
-    "removable": false,
+    "removable": true,
     "stats": [
       "elemental_damage_%_to_add_as_chaos"
     ],
@@ -78224,7 +78695,7 @@
     "description": "継続ダメージ倍率が増加している。\r\nこのバフを持っている間、周期的に敵に阻害を与えるイナゴの群れをスポーンさせる",
     "invisible": false,
     "name": "イナゴの血のシュライン",
-    "removable": false,
+    "removable": true,
     "stats": [
       "dot_multiplier_+"
     ],
@@ -78249,7 +78720,7 @@
     "description": "敵を倒した時にエクスプローシブトードが一定確率でトリガーされる",
     "invisible": false,
     "name": "カエルの血のシュライン",
-    "removable": false,
+    "removable": true,
     "stats": [
       "exploding_toad_trigger_%_chance_from_unique"
     ],
@@ -78263,7 +78734,32 @@
           "exploding_toad_trigger_%_chance_from_unique": 25
         },
         "stat_text": [
-          "プレイヤーが敵を倒した時に25%の確率でエクスプローシブトードをトリガーする"
+          "プレイヤーが敵を倒した時に25%の確率で[BloodShrineUniqueTriggeredExplodingToad::1|エクスプローシブトード]をトリガーする"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "blood_shrine_toads_alt": {
+    "description": "カエルの祝福により倒した敵が爆発し、その4分の1を混沌ダメージとして与える",
+    "invisible": false,
+    "name": "カエルの祝福の血のシュライン",
+    "removable": true,
+    "stats": [
+      "explode_enemies_for_25%_life_as_chaos_on_kill_chance_%"
+    ],
+    "visuals": "blood_shrine_toads_visual",
+    "category": "Buff shrine",
+    "sources": null,
+    "templates": {
+      "blood_shrine_toads_alt": {
+        "aura_radius_metres": null,
+        "stats": {
+          "explode_enemies_for_25%_life_as_chaos_on_kill_chance_%": 100
+        },
+        "stat_text": [
+          "プレイヤーが倒した敵は100%の確率で爆発し、その最大ライフの4分の1を混沌ダメージとして与える"
         ],
         "visuals": null
       }
@@ -78274,7 +78770,7 @@
     "description": "物理ダメージおよび元素ダメージの一部を混沌ダメージとして受け、混沌耐性が増加している",
     "invisible": false,
     "name": "カラスの血のシュライン",
-    "removable": false,
+    "removable": true,
     "stats": [
       "base_chaos_damage_resistance_%",
       "physical_damage_taken_%_as_chaos",
@@ -78287,12 +78783,12 @@
       "blood_shrine_chaos_resistance": {
         "aura_radius_metres": null,
         "stats": {
-          "base_chaos_damage_resistance_%": 50,
+          "base_chaos_damage_resistance_%": 135,
           "physical_damage_taken_%_as_chaos": 10,
           "elemental_damage_taken_%_as_chaos": 10
         },
         "stat_text": [
-          "混沌耐性 +50%",
+          "混沌耐性 +135%",
           "ヒットによる物理ダメージの10%を混沌ダメージとして受ける",
           "ヒットによる元素ダメージの10%を混沌ダメージとして受ける"
         ],
@@ -78305,7 +78801,7 @@
     "description": "ヒット時に敵をエンフィーブルで呪い、敵に呪いを追加で1個付与できる",
     "invisible": false,
     "name": "コウモリの血のシュライン",
-    "removable": false,
+    "removable": true,
     "stats": [
       "curse_on_hit_%_enfeeble",
       "number_of_additional_curses_allowed"
@@ -78488,9 +78984,9 @@
     "stack_limit": null
   },
   "ghost_furnace_soul_buff": {
-    "description": "[DNT] You have increased Fire Damage over Time Multiplier per Ghostflame Soul",
+    "description": "[DNT - UNUSED] You have increased Fire Damage over Time Multiplier per Ghostflame Soul",
     "invisible": false,
-    "name": "[DNT] Ghostflame Soul",
+    "name": "[DNT - UNUSED] Ghostflame Soul",
     "removable": false,
     "stats": [
       "fire_dot_multiplier_+",
@@ -78853,7 +79349,7 @@
         "stat_text": [
           "冷気耐性 +15%",
           "ダメージが30%増加する",
-          "変性のオーブは代わりにカオスオーブとしてドロップする"
+          "10%の確率で変性のオーブは代わりにカオスオーブとしてドロップする"
         ],
         "visuals": null
       }
@@ -78887,7 +79383,7 @@
           "スキルは投射物を追加で2個放つ",
           "近接ストライク距離 +1m",
           "効果範囲が20%増加する",
-          "可能性のオーブは代わりに古代のオーブとしてドロップする"
+          "10%の確率で可能性のオーブは代わりに古代のオーブとしてドロップする"
         ],
         "visuals": null
       }
@@ -78921,10 +79417,10 @@
         },
         "stat_text": [
           "全てのダメージで毒を付与できる",
-          "ヒット時に常に敵に毒を付与する",
+          "ヒット時に常に毒を付与する",
           "受けた近接物理ダメージの100%がアタックをしてきた敵に反射される",
           "毒の影響を受けない",
-          "宝飾職人のオーブは代わりに色彩のオーブとしてドロップする"
+          "10%の確率で宝飾職人のオーブは代わりに色彩のオーブとしてドロップする"
         ],
         "visuals": null
       }
@@ -78955,7 +79451,7 @@
         "stat_text": [
           "スペルブロック率が20%",
           "アタックブロック率が20%",
-          "カオスオーブは代わりに神のオーブとしてドロップする"
+          "10%の確率でカオスオーブは代わりに神のオーブとしてドロップする"
         ],
         "visuals": null
       }
@@ -78985,8 +79481,8 @@
         },
         "stat_text": [
           "スタンを受けることがない",
-          "敵に対するスタンの持続時間が50%増加する",
-          "洗浄のオーブは代わりに消去のオーブとしてドロップする"
+          "敵に対するスタン持続時間が50%増加する",
+          "10%の確率で洗浄のオーブは代わりに消去のオーブとしてドロップする"
         ],
         "visuals": null
       }
@@ -79023,7 +79519,7 @@
           "ダメージが30%増加する",
           "移動スピードが15%増加する",
           "冷気耐性の最大値 +5%",
-          "変性のオーブは代わりにカオスオーブとしてドロップする"
+          "20%の確率で変性のオーブは代わりにカオスオーブとしてドロップする"
         ],
         "visuals": null
       }
@@ -79063,7 +79559,7 @@
           "効果範囲が20%増加する",
           "敵を倒した時に身躱しを獲得する",
           "身躱しの効果が30%増加する",
-          "可能性のオーブは代わりに古代のオーブとしてドロップする"
+          "20%の確率で可能性のオーブは代わりに古代のオーブとしてドロップする"
         ],
         "visuals": null
       }
@@ -79099,11 +79595,11 @@
         },
         "stat_text": [
           "全てのダメージで毒を付与できる",
-          "ヒット時に常に敵に毒を付与する",
+          "ヒット時に常に毒を付与する",
           "受けた近接物理ダメージの100%がアタックをしてきた敵に反射される",
           "プレイヤーにより毒を付与された敵はライフを自動回復することができない",
           "プレイヤーが毒を付与した時に30%の確率で同じ対象に追加の毒を1スタック付与する",
-          "宝飾職人のオーブは代わりに色彩のオーブとしてドロップする"
+          "20%の確率で宝飾職人のオーブは代わりに色彩のオーブとしてドロップする"
         ],
         "visuals": null
       }
@@ -79140,7 +79636,7 @@
           "アタックブロック率が20%",
           "全ての元素耐性の最大値 +3%",
           "物理ダメージ軽減率が10%される",
-          "カオスオーブは代わりに神のオーブとしてドロップする"
+          "20%の確率でカオスオーブは代わりに神のオーブとしてドロップする"
         ],
         "visuals": null
       }
@@ -79174,10 +79670,10 @@
         },
         "stat_text": [
           "スタンを受けることがない",
-          "敵に対するスタンの持続時間が50%増加する",
+          "敵に対するスタン持続時間が50%増加する",
           "直近プレイヤーが敵をスタンさせていれば30%の確率でダブルダメージを与える",
           "敵スタン閾値が30%減少する",
-          "洗浄のオーブは代わりに消去のオーブとしてドロップする"
+          "20%の確率で洗浄のオーブは代わりに消去のオーブとしてドロップする"
         ],
         "visuals": null
       }
@@ -79268,7 +79764,7 @@
         },
         "stat_text": [
           "全てのダメージで毒を付与できる",
-          "ヒット時に常に敵に毒を付与する",
+          "ヒット時に常に毒を付与する",
           "受けた近接物理ダメージの100%がアタックをしてきた敵に反射される",
           "毒の影響を受けない"
         ],
@@ -79326,7 +79822,7 @@
         },
         "stat_text": [
           "スタンを受けることがない",
-          "敵に対するスタンの持続時間が50%増加する"
+          "敵に対するスタン持続時間が50%増加する"
         ],
         "visuals": null
       }
@@ -79431,7 +79927,7 @@
         },
         "stat_text": [
           "全てのダメージで毒を付与できる",
-          "ヒット時に常に敵に毒を付与する",
+          "ヒット時に常に毒を付与する",
           "受けた近接物理ダメージの100%がアタックをしてきた敵に反射される",
           "プレイヤーにより毒を付与された敵はライフを自動回復することができない",
           "プレイヤーが毒を付与した時に30%の確率で同じ対象に追加の毒を1スタック付与する"
@@ -79500,7 +79996,7 @@
         },
         "stat_text": [
           "スタンを受けることがない",
-          "敵に対するスタンの持続時間が50%増加する",
+          "敵に対するスタン持続時間が50%増加する",
           "直近プレイヤーが敵をスタンさせていれば30%の確率でダブルダメージを与える",
           "敵スタン閾値が30%減少する"
         ],
@@ -80353,7 +80849,7 @@
     "stack_limit": 10
   },
   "deepwater_golden_lantern": {
-    "description": "見つかるアイテムのレアリティと数量が大幅に増加している",
+    "description": "[PlayerItemRarity|アイテムレアリティ]が追加され、数量が増加する",
     "invisible": false,
     "name": "黄金のランタンの輝き",
     "removable": false,
@@ -80445,7 +80941,7 @@
           "deepwater_transmute_to_chaos_%": 10
         },
         "stat_text": [
-          "変性のオーブは代わりにカオスオーブとしてドロップする"
+          "10%の確率で変性のオーブは代わりにカオスオーブとしてドロップする"
         ],
         "visuals": null
       }
@@ -80470,7 +80966,7 @@
           "deepwater_chance_to_ancient_%": 10
         },
         "stat_text": [
-          "可能性のオーブは代わりに古代のオーブとしてドロップする"
+          "10%の確率で可能性のオーブは代わりに古代のオーブとしてドロップする"
         ],
         "visuals": null
       }
@@ -80495,7 +80991,7 @@
           "deepwater_jeweller_to_chromatic_%": 10
         },
         "stat_text": [
-          "宝飾職人のオーブは代わりに色彩のオーブとしてドロップする"
+          "10%の確率で宝飾職人のオーブは代わりに色彩のオーブとしてドロップする"
         ],
         "visuals": null
       }
@@ -80520,7 +81016,7 @@
           "deepwater_chaos_to_divine_%": 10
         },
         "stat_text": [
-          "カオスオーブは代わりに神のオーブとしてドロップする"
+          "10%の確率でカオスオーブは代わりに神のオーブとしてドロップする"
         ],
         "visuals": null
       }
@@ -80545,7 +81041,7 @@
           "deepwater_scour_to_annulment_%": 10
         },
         "stat_text": [
-          "洗浄のオーブは代わりに消去のオーブとしてドロップする"
+          "10%の確率で洗浄のオーブは代わりに消去のオーブとしてドロップする"
         ],
         "visuals": null
       }
@@ -80570,7 +81066,7 @@
           "deepwater_transmute_to_chaos_%": 20
         },
         "stat_text": [
-          "変性のオーブは代わりにカオスオーブとしてドロップする"
+          "20%の確率で変性のオーブは代わりにカオスオーブとしてドロップする"
         ],
         "visuals": null
       }
@@ -80595,7 +81091,7 @@
           "deepwater_chance_to_ancient_%": 20
         },
         "stat_text": [
-          "可能性のオーブは代わりに古代のオーブとしてドロップする"
+          "20%の確率で可能性のオーブは代わりに古代のオーブとしてドロップする"
         ],
         "visuals": null
       }
@@ -80620,7 +81116,7 @@
           "deepwater_jeweller_to_chromatic_%": 20
         },
         "stat_text": [
-          "宝飾職人のオーブは代わりに色彩のオーブとしてドロップする"
+          "20%の確率で宝飾職人のオーブは代わりに色彩のオーブとしてドロップする"
         ],
         "visuals": null
       }
@@ -80645,7 +81141,7 @@
           "deepwater_chaos_to_divine_%": 20
         },
         "stat_text": [
-          "カオスオーブは代わりに神のオーブとしてドロップする"
+          "20%の確率でカオスオーブは代わりに神のオーブとしてドロップする"
         ],
         "visuals": null
       }
@@ -80670,11 +81166,721 @@
           "deepwater_scour_to_annulment_%": 20
         },
         "stat_text": [
-          "洗浄のオーブは代わりに消去のオーブとしてドロップする"
+          "20%の確率で洗浄のオーブは代わりに消去のオーブとしてドロップする"
         ],
         "visuals": null
       }
     },
+    "stack_limit": null
+  },
+  "augury_boss_pre_immunity": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "base_cannot_be_damaged",
+      "base_cannot_be_stunned",
+      "hidden_monster_disallow_daemon_ai"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "augury_boss_frozen": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "base_cannot_be_damaged",
+      "base_cannot_be_stunned",
+      "is_hidden_monster",
+      "hidden_monster_disallow_daemon_ai",
+      "zero_action_speed"
+    ],
+    "visuals": "augury_boss_frozen",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "saresh_stacking_rot": {
+    "description": "それぞれのスタックは受けるダメージを5%増加させる",
+    "invisible": false,
+    "name": "腐敗する肉体",
+    "removable": false,
+    "stats": [
+      "base_damage_taken_+%"
+    ],
+    "visuals": "saresh_stacking_rot",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": 100
+  },
+  "grim_bonfire_damage_overtime": {
+    "description": "火継続ダメージを受けている",
+    "invisible": false,
+    "name": "火葬の炎",
+    "removable": false,
+    "stats": [
+      "base_fire_damage_taken_per_minute"
+    ],
+    "visuals": "ground_fire_burn",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "grim_bonfire_aura_visual": {
+    "description": "",
+    "invisible": true,
+    "name": "[DNT] Grim Bonfire",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "blood_flower_life_spent": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "blood_flower_allied_buff": {
+    "description": "味方のゴアブロッサムの花の近くにいる間、物理継続ダメージ倍率追加を獲得している",
+    "invisible": false,
+    "name": "ゴアブロッサム",
+    "removable": false,
+    "stats": [
+      "physical_dot_multiplier_+"
+    ],
+    "visuals": "blood_flower_allied_buff_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "blood_flower_damage_over_time": {
+    "description": "近くのゴアブロッサムの花から物理継続ダメージを受けている",
+    "invisible": false,
+    "name": "ゴアブロッサム",
+    "removable": false,
+    "stats": [
+      "base_physical_damage_taken_per_minute"
+    ],
+    "visuals": "blood_flower_damage_over_time_visual",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "savage_giant_blackfire_buff": {
+    "description": "[DNT] How do you have this",
+    "invisible": true,
+    "name": "ブラックファイヤージャイアントバフ",
+    "removable": false,
+    "stats": [
+      "base_physical_damage_%_to_convert_to_fire"
+    ],
+    "visuals": "savage_giant_blackfire_buff_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "blackfire_wall_daemon_burn": {
+    "description": "火継続ダメージを受けている",
+    "invisible": false,
+    "name": "ブラックファイヤー",
+    "removable": false,
+    "stats": [
+      "base_fire_damage_taken_per_minute"
+    ],
+    "visuals": "blackfire_wall_daemon_burn_visual",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "backfire_wall_daemon_buff": {
+    "description": "[DNT] Blackfire Wall Buff",
+    "invisible": false,
+    "name": "[DNT] Blackfire Wall Buff",
+    "removable": false,
+    "stats": [],
+    "visuals": "backfire_wall_daemon_buff_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "fireball_alt_aura": {
+    "description": "火継続ダメージを受けている",
+    "invisible": false,
+    "name": "光輝のファイヤーボール",
+    "removable": false,
+    "stats": [
+      "base_fire_damage_taken_per_minute"
+    ],
+    "visuals": "ignited",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "blight_parasite_miniboss_lightning_buff": {
+    "description": "",
+    "invisible": false,
+    "name": "ブライトの寄生虫バフ",
+    "removable": false,
+    "stats": [
+      "base_chance_to_shock_%",
+      "physical_damage_%_to_add_as_lightning"
+    ],
+    "visuals": "blight_parasite_miniboss_lightning_buff_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "terrified_debuff": {
+    "description": "恐怖状態になっている。プレイヤーに対する敵のヒットはクリティカル率およびクリティカルダメージ倍率が追加される",
+    "invisible": false,
+    "name": "恐怖状態",
+    "removable": false,
+    "stats": [
+      "enemy_additional_critical_strike_multiplier_against_self",
+      "enemy_additional_critical_strike_chance_against_self"
+    ],
+    "visuals": "terrified",
+    "category": "Debuff",
+    "sources": null,
+    "templates": {
+      "VisceraTerrifiedDebuff": {
+        "aura_radius_metres": null,
+        "stats": {
+          "enemy_additional_critical_strike_multiplier_against_self": 25,
+          "enemy_additional_critical_strike_chance_against_self": 50
+        },
+        "stat_text": [
+          "受けるヒットのクリティカル率が+0.5%される"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "icicle_dart_target_debuff": {
+    "description": "魔法を帯びた氷の塊が付着している。以降のアイシクルダーツはあなたの位置を狙う",
+    "invisible": false,
+    "name": "アイシクルダーツ",
+    "removable": false,
+    "stats": [],
+    "visuals": "icicle_dart_target_debuff_visual",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "screecher_cold_buff": {
+    "description": "",
+    "invisible": true,
+    "name": "スクリーチャー（冷気）",
+    "removable": false,
+    "stats": [
+      "physical_damage_%_to_add_as_cold"
+    ],
+    "visuals": "invisible",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "screecher_lightning_buff": {
+    "description": "",
+    "invisible": true,
+    "name": "スクリーチャー（雷）",
+    "removable": false,
+    "stats": [
+      "physical_damage_%_to_add_as_lightning"
+    ],
+    "visuals": "invisible",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "petrified_amber_buff": {
+    "description": "倒した敵がドロップするゴールドは一定確率で複製される",
+    "invisible": false,
+    "name": "アンバーブラッド",
+    "removable": false,
+    "stats": [
+      "%_chance_to_duplicate_dropped_gold"
+    ],
+    "visuals": "petrified_amber_buff",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "verisium_experience_buff": {
+    "description": "獲得経験値が増加し、モンスターは一定確率でソーマタジーダストをドロップする。バフのスタック数でスケールする",
+    "invisible": false,
+    "name": "ヴェリシウム・インフュージョン",
+    "removable": false,
+    "stats": [
+      "experience_gain_+%",
+      "slain_monster_equipment_drops_grant_dust_chance_permyriad"
+    ],
+    "visuals": "verisium_buff",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "gigacrow_crownado_debuff": {
+    "description": "火継続ダメージを受けている",
+    "invisible": false,
+    "name": "ブラックファイヤートルネード",
+    "removable": false,
+    "stats": [
+      "base_fire_damage_taken_per_minute"
+    ],
+    "visuals": "gigacrow_crownado_debuff_visual",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "viscera_added_cold_damage_aura": {
+    "description": "プレイヤーと近くの味方は追加冷気ダメージを与える",
+    "invisible": false,
+    "name": "冷気ダメージオーラ",
+    "removable": false,
+    "stats": [
+      "global_minimum_added_cold_damage",
+      "global_maximum_added_cold_damage"
+    ],
+    "visuals": "viscera_aura_cold_damage",
+    "category": "Buff",
+    "sources": {
+      "Mods": [
+        {
+          "id": "VisceraModChattersLow",
+          "item": null,
+          "name": null,
+          "template": "VisceraColdDamageAuraLow",
+          "stat_text": null,
+          "stats": null
+        },
+        {
+          "id": "VisceraModChattersMed",
+          "item": null,
+          "name": null,
+          "template": "VisceraColdDamageAuraMed",
+          "stat_text": null,
+          "stats": null
+        },
+        {
+          "id": "VisceraModChattersHigh",
+          "item": null,
+          "name": null,
+          "template": "VisceraColdDamageAuraHigh",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
+    "templates": {
+      "VisceraColdDamageAuraLow": {
+        "aura_radius_metres": 5.0,
+        "stats": {
+          "global_minimum_added_cold_damage": 8,
+          "global_maximum_added_cold_damage": 12
+        },
+        "stat_text": [
+          "8から12の冷気ダメージを追加する"
+        ],
+        "visuals": null
+      },
+      "VisceraColdDamageAuraMed": {
+        "aura_radius_metres": 5.0,
+        "stats": {
+          "global_minimum_added_cold_damage": 25,
+          "global_maximum_added_cold_damage": 40
+        },
+        "stat_text": [
+          "25から40の冷気ダメージを追加する"
+        ],
+        "visuals": null
+      },
+      "VisceraColdDamageAuraHigh": {
+        "aura_radius_metres": 5.0,
+        "stats": {
+          "global_minimum_added_cold_damage": 50,
+          "global_maximum_added_cold_damage": 75
+        },
+        "stat_text": [
+          "50から75の冷気ダメージを追加する"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "monster_mod_kurgals_gasp_revived": {
+    "description": "モンスターは復活し、短時間強化される",
+    "invisible": false,
+    "name": "クルガルの掌握",
+    "removable": false,
+    "stats": [],
+    "visuals": "monster_mod_kurgals_gasp_revived_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "augury_debuff_life_and_es_recovery_rate": {
+    "description": "ライフおよびエナジーシールド回復レートが減少する",
+    "invisible": false,
+    "name": "コープスロット",
+    "removable": false,
+    "stats": [
+      "life_recovery_rate_+%",
+      "energy_shield_recovery_rate_+%"
+    ],
+    "visuals": "augury_debuff_life_and_es_recovery_rate_visual",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": 5
+  },
+  "ultimatum_soul_core_held": {
+    "description": "ソウルコアを持っている。\nアルティメイタムモンスターはプレイヤーに対するヒット時にソウルを獲得する\nアルティメイタムの生存のエンカウンターは持続時間が減少し、アルティメイタムを進行するために倒す必要があるモンスター数が減り、ストーンサークルの進行が速くなる",
+    "invisible": false,
+    "name": "ソウルコア",
+    "removable": false,
+    "stats": [
+      "ultimatum_monsters_gain_x_souls_on_hit_vs_self"
+    ],
+    "visuals": "ultimatum_soul_core_held_visual",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "savage_witch_burning_debuff": {
+    "description": "ウィッカーライトのエフィジーの周囲に立っている間、火継続ダメージを受ける",
+    "invisible": false,
+    "name": "ウィッカーライトブラックフレイム",
+    "removable": false,
+    "stats": [
+      "base_fire_damage_taken_per_minute"
+    ],
+    "visuals": "savage_witch_burning_debuff_visual",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "neglect_guardian_crow_debuff": {
+    "description": "クロウストームの内側に立っている間物理継続ダメージを受ける",
+    "invisible": false,
+    "name": "クロウストーム",
+    "removable": false,
+    "stats": [
+      "base_physical_damage_taken_per_minute"
+    ],
+    "visuals": "Neglect_Statue_AoE_Visual",
+    "category": "Debuff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "offerings_grant_damage": {
+    "description": "[DNT] You have increased Damage",
+    "invisible": true,
+    "name": "[DNT] Offering",
+    "removable": false,
+    "stats": [
+      "damage_+%"
+    ],
+    "visuals": "invisible",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "have_used_attack_movement_skill_recently": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "have_used_attack_movement_skill_recently"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "betrayal_free_syndicate_buff": {
+    "description": "スタンおよび凍結を受けなくなり、移動スピードが増加する",
+    "invisible": false,
+    "name": "移動の自由",
+    "removable": false,
+    "stats": [
+      "base_cannot_be_stunned",
+      "base_cannot_be_frozen",
+      "base_movement_velocity_+%"
+    ],
+    "visuals": "betrayal_free_syndicate_buff_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "BetrayalFreedBuff": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_cannot_be_stunned": 1,
+          "base_cannot_be_frozen": 1,
+          "base_movement_velocity_+%": 20
+        },
+        "stat_text": [
+          "スタンを受けることがない",
+          "凍結状態にならない",
+          "移動スピードが20%増加する"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "betrayal_interrogate_syndicate_buff": {
+    "description": "獲得経験値が増加する",
+    "invisible": false,
+    "name": "作戦情報",
+    "removable": false,
+    "stats": [
+      "experience_gain_+%"
+    ],
+    "visuals": "betrayal_interrogate_syndicate_buff_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "BetrayalInterrogateBuff": {
+        "aura_radius_metres": null,
+        "stats": {
+          "experience_gain_+%": 10
+        },
+        "stat_text": [
+          "獲得経験値が10%増加する"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "flesh_barrier": {
+    "description": "ヒットから受けるダメージをライフまたはエナジーシールドの前にこのバリアから受ける",
+    "invisible": false,
+    "name": "ビターブラッド",
+    "removable": true,
+    "stats": [],
+    "visuals": "flesh_barrier_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "flesh_barrier_triggered_buff": {
+    "description": "スペルの効果範囲、クリティカル率が増加し、クリティカルダメージ倍率が追加される",
+    "invisible": false,
+    "name": "悲嘆",
+    "removable": true,
+    "stats": [
+      "base_spell_critical_strike_multiplier_+",
+      "spell_area_of_effect_+%",
+      "spell_critical_strike_chance_+%",
+      "has_flesh_barrier_triggered_buff"
+    ],
+    "visuals": "flesh_barrier_triggered_buff_visual",
+    "category": "Buff",
+    "sources": null,
+    "templates": {
+      "FleshBarrierTriggeredBuff": {
+        "aura_radius_metres": null,
+        "stats": {
+          "base_spell_critical_strike_multiplier_+": 50,
+          "spell_area_of_effect_+%": 100,
+          "spell_critical_strike_chance_+%": 200,
+          "has_flesh_barrier_triggered_buff": 1
+        },
+        "stat_text": [
+          "スペルダメージのクリティカルダメージ倍率 +50%",
+          "スペルスキルの効果範囲が100%増加する",
+          "スペルのクリティカル率が200%増加する"
+        ],
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "breach_threads_wombgift_drop_visuals": {
+    "description": "",
+    "invisible": false,
+    "name": "チャユラの実り豊かな者",
+    "removable": false,
+    "stats": [],
+    "visuals": "breach_thread_fruit_visuals",
+    "category": "Buff shrine",
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "torment_touched_procurator": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "torment_touched_procurator",
+    "category": null,
+    "sources": {
+      "Mods": [
+        {
+          "id": "TormentTouchedEffectProcurator",
+          "item": null,
+          "name": null,
+          "template": "TormentTouchedEffectProcurator",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
+    "templates": {
+      "TormentTouchedEffectProcurator": {
+        "aura_radius_metres": null,
+        "stats": null,
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "torment_possessed_procurator": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "torment_procurator",
+    "category": null,
+    "sources": {
+      "Mods": [
+        {
+          "id": "TormentPossessedEffectProcurator",
+          "item": null,
+          "name": null,
+          "template": "TormentPossessedEffectProcurator",
+          "stat_text": null,
+          "stats": null
+        }
+      ]
+    },
+    "templates": {
+      "TormentPossessedEffectProcurator": {
+        "aura_radius_metres": null,
+        "stats": null,
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "spellcast_fourth_use_counter": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "spellcast_sixth_use_counter": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "track_gain_spell_cost_every_second_cast": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": null,
+    "stack_limit": null
+  },
+  "einhar_blood_explode_buff": {
+    "description": "",
+    "invisible": true,
+    "name": "",
+    "removable": false,
+    "stats": [
+      "explode_on_death_for_%_life_as_physical_damage_blood"
+    ],
+    "visuals": "invisible",
+    "category": null,
+    "sources": null,
+    "templates": {
+      "BestiaryEinharBloodExplosionAura": {
+        "aura_radius_metres": 6.5,
+        "stats": {
+          "explode_on_death_for_%_life_as_physical_damage_blood": 25
+        },
+        "stat_text": null,
+        "visuals": null
+      }
+    },
+    "stack_limit": null
+  },
+  "player_is_delirious": {
+    "description": "デリリウムの霧の中の現在の位置に応じてダメージ軽減、ダメージ、アタックスピード、キャストスピードおよび移動スピードを付与する",
+    "invisible": false,
+    "name": "せん妄",
+    "removable": false,
+    "stats": [],
+    "visuals": "player_affliction_buff",
+    "category": "Buff",
+    "sources": null,
+    "templates": null,
     "stack_limit": null
   }
 }

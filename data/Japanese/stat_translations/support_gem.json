@@ -3488,7 +3488,7 @@
           ],
           []
         ],
-        "string": "トラップの持続時間 {0}秒",
+        "string": "トラップは{0}秒持続する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3928,8 +3928,8 @@
         "index_handlers": [
           []
         ],
-        "string": "サポートされたスキルは{0}%の確率でヒット時に敵を盲目にする",
-        "reminder_text": "(Blind: 盲目は、命中率と回避力を20%低下させる。持続時間は4秒)",
+        "string": "サポートされたスキルは{0}%の確率でヒット時に敵を[Blind|盲目]にする",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -3964,7 +3964,7 @@
         "index_handlers": [
           []
         ],
-        "string": "サポートされたスキルの盲目持続時間が{0}%増加する",
+        "string": "サポートされたスキルの[Blind|盲目]持続時間が{0}%増加する",
         "reminder_text": null,
         "is_markup": null
       },
@@ -3984,7 +3984,7 @@
             "negate"
           ]
         ],
-        "string": "サポートされたスキルの盲目持続時間が{0}%減少する",
+        "string": "サポートされたスキルの[Blind|盲目]持続時間が{0}%減少する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -8819,6 +8819,42 @@
   {
     "English": null,
     "ids": [
+      "global_cannot_crit"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルはクリティカルストライクを与えられなくなる",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "freeze_mine_cold_resistance_+_while_frozen"
     ],
     "trade_stats": null,
@@ -8983,7 +9019,7 @@
           [],
           []
         ],
-        "string": "アーケインサージはキャストスピードの{0}%増加を付与する\nアーケインサージはマナ自動回復レートの{1}%増加を付与する",
+        "string": "アーケインサージはキャストスピード{0}%増加を付与する\nアーケインサージはマナ自動回復レート{1}%増加を付与する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -12110,7 +12146,7 @@
             "negate"
           ]
         ],
-        "string": "トーテムがアクティブな時近接スキルの効果範囲が{0}%減少する",
+        "string": "トーテムがアクティブな時近接スキルの効果範囲が{0}%増加する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -12406,7 +12442,7 @@
         "index_handlers": [
           []
         ],
-        "string": "猛攻中はサポートされたスキルのアタックスピードおよびキャストスピードが{0}%増加する",
+        "string": "[Onslaught|猛攻]中はサポートされたスキルのアタックスピードおよびキャストスピードが{0}%増加する",
         "reminder_text": null,
         "is_markup": null
       },
@@ -12426,7 +12462,7 @@
             "negate"
           ]
         ],
-        "string": "猛攻中はサポートされたスキルのアタックスピードおよびキャストスピードが{0}%減少する",
+        "string": "[Onslaught|猛攻]中はサポートされたスキルのアタックスピードおよびキャストスピードが{0}%減少する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -14311,38 +14347,18 @@
       {
         "condition": [
           {
-            "min": 1,
+            "min": null,
             "max": null,
             "negated": null
           }
         ],
         "format": [
-          "#"
+          "+#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "サポートされたスキルにより撃破された敵がドロップするアイテムのレアリティが{0}%増加する",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "サポートされたスキルにより撃破された敵がドロップするアイテムのレアリティが{0}%減少する",
+        "string": "サポートされたスキルで倒した敵のドロップしたアイテムの[PlayerItemRarity|レアリティ] {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -15030,7 +15046,7 @@
         "index_handlers": [
           []
         ],
-        "string": "サポートされたスキルはマナコストの{0}％の代わりにライフをコストとする",
+        "string": "サポートされたスキルはマナコストの{0}%の代わりにライフをコストとする",
         "reminder_text": null,
         "is_markup": null
       }
@@ -16604,7 +16620,7 @@
             "locations_to_metres"
           ]
         ],
-        "string": "近くの敵1体ごとに半径+1m、最大+1m",
+        "string": "近くの敵1体ごとに半径 +1m、最大+1m",
         "reminder_text": null,
         "is_markup": null
       },
@@ -16624,7 +16640,7 @@
             "locations_to_metres"
           ]
         ],
-        "string": "近くの敵1体ごとに半径+{0}m、最大+1m",
+        "string": "近くの敵1体ごとに半径 {0}m、最大+1m",
         "reminder_text": null,
         "is_markup": null
       }
@@ -17266,7 +17282,7 @@
         "index_handlers": [
           []
         ],
-        "string": "盲目状態の敵に対するサポートされたスキルのクリティカル率が{0}%増加する",
+        "string": "[Blind|盲目]状態の敵に対するサポートされたスキルのクリティカル率が{0}%増加する",
         "reminder_text": null,
         "is_markup": null
       },
@@ -17286,7 +17302,7 @@
             "negate"
           ]
         ],
-        "string": "盲目状態の敵に対するサポートされたスキルのクリティカル率が{0}%減少する",
+        "string": "[Blind|盲目]状態の敵に対するサポートされたスキルのクリティカル率が{0}%減少する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -17414,7 +17430,7 @@
         "index_handlers": [
           []
         ],
-        "string": "サポートされたスキルはヒット時に{0}%の確率で敵を2秒間破砕する",
+        "string": "サポートされたスキルはヒット時に{0}%の確率で敵を2秒間クラッシュ状態にする",
         "reminder_text": "(Crushed: 破砕は物理ダメージ軽減を15%減少させる)",
         "is_markup": null
       },
@@ -17432,7 +17448,7 @@
         "index_handlers": [
           []
         ],
-        "string": "サポートされたスキルはヒット時に敵を2秒間破砕する",
+        "string": "サポートされたスキルはヒット時に敵を2秒間クラッシュ状態にする",
         "reminder_text": "(Crushed: 破砕は物理ダメージ軽減を15%減少させる)",
         "is_markup": null
       }
@@ -18364,7 +18380,7 @@
         "index_handlers": [
           []
         ],
-        "string": "プレイヤーが状態異常を受けている時にサポートされたスキルのダメージが{0}%増加する",
+        "string": "サポートされたスキルはプレイヤーが状態異常を受けている間ダメージが{0}%増加する",
         "reminder_text": "(Ailments: 状態異常には、出血、発火、焦げ、冷却、凍結、脆弱、感電、消耗、毒がある)",
         "is_markup": null
       },
@@ -18384,7 +18400,7 @@
             "negate"
           ]
         ],
-        "string": "プレイヤーが状態異常を受けている時にサポートされたスキルのダメージが{0}%減少する",
+        "string": "サポートされたスキルはプレイヤーが状態異常を受けている間ダメージが{0}%減少する",
         "reminder_text": "(Ailments: 状態異常には、出血、発火、焦げ、冷却、凍結、脆弱、感電、消耗、毒がある)",
         "is_markup": null
       }
@@ -18716,8 +18732,8 @@
         "index_handlers": [
           []
         ],
-        "string": "サポートされたスキルにより付与されたダメージ性状態異常は{0}%速くダメージ与える",
-        "reminder_text": "(Faster: 同じ総量の継続ダメージをより短い時間で与えるようになる)",
+        "string": "サポートされたスキルにより付与されたダメージ性状態異常がダメージを与える速度が{0}%[DamageFaster|速くなる]",
+        "reminder_text": "(Damaging Ailments: ダメージを与える状態異常には、出血、発火、毒がある)",
         "is_markup": null
       }
     ],
@@ -18919,6 +18935,42 @@
           ]
         ],
         "string": "サポートされたスキルは移動中に0.5秒ごとにインテンシティを1失い、テレポートすると全て失う",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "display_constriction_other_supports_do_not_apply"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルは他のサポートでサポートできなくなる",
         "reminder_text": null,
         "is_markup": null
       }
@@ -19546,8 +19598,8 @@
         "index_handlers": [
           []
         ],
-        "string": "サポートされたスキルによる出血は{0}%速くダメージを与える",
-        "reminder_text": "(Faster: 同じ総量の継続ダメージをより短い時間で与えるようになる)",
+        "string": "サポートされたスキルによる出血がダメージを与える速度が{0}%[DamageFaster|速くなる]",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -19582,8 +19634,8 @@
         "index_handlers": [
           []
         ],
-        "string": "サポートされたスキルによる発火は{0}%速くダメージを与える",
-        "reminder_text": "(Faster: 同じ総量の継続ダメージをより短い時間で与えるようになる)",
+        "string": "サポートされたスキルによる発火がダメージを与える速度が{0}%[DamageFaster|速くなる]",
+        "reminder_text": null,
         "is_markup": null
       },
       {
@@ -19602,7 +19654,7 @@
             "negate"
           ]
         ],
-        "string": "サポートされたスキルによる発火は{0}%遅くダメージを与える",
+        "string": "サポートされたスキルによる発火がダメージを与える速度が{0}%[DamageSlower|遅くなる]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -19638,8 +19690,8 @@
         "index_handlers": [
           []
         ],
-        "string": "サポートされたスキルによる毒は{0}%速くダメージを与える",
-        "reminder_text": "(Faster: 同じ総量の継続ダメージをより短い時間で与えるようになる)",
+        "string": "サポートされたスキルによる毒がダメージを与える速度が{0}%[DamageFaster|速くなる]",
+        "reminder_text": "(Poison: 毒は、スキルの基礎物理ダメージと基礎混沌ダメージに基づいて混沌継続ダメージを与える。複数インスタンスの毒がスタックできる)",
         "is_markup": null
       }
     ],
@@ -19954,6 +20006,62 @@
         ],
         "string": "サポートされたスキルは付着持続時間の75%が経過するとアクティベート頻度が{0}%上昇する",
         "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "from_support_skill_gem_attribute_requirements_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルの能力値要求が{0}%上昇する",
+        "reminder_text": "(Attribute: 能力値は筋力、器用さ、知性)",
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "サポートされたスキルの能力値要求が{0}%低下する",
+        "reminder_text": "(Attribute: 能力値は筋力、器用さ、知性)",
         "is_markup": null
       }
     ],
@@ -20371,6 +20479,42 @@
         ],
         "string": "サポートされたスキルは5スタック以上の毒を持つ敵に対するキリングブロー時に{0}%の確率でフレンジーチャージを1個獲得する",
         "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "gain_malignant_madness_on_skill_use"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルは使用時にプレイヤーに悪意の狂気を付与する",
+        "reminder_text": "(Malignant Madness: 悪意ある狂気は、ダメージとアクションスピードを10%減少させる。持続時間は8秒。)",
         "is_markup": null
       }
     ],
@@ -21657,7 +21801,7 @@
         "index_handlers": [
           []
         ],
-        "string": "サポートされたスキルは物理ダメージが{0}%上昇する",
+        "string": "サポートされたスキルの物理ダメージが{0}%上昇する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -25577,8 +25721,8 @@
             "milliseconds_to_seconds"
           ]
         ],
-        "string": "サポートされたスキルで感電状態の敵を倒すと猛攻を{0}秒間獲得する",
-        "reminder_text": "(Onslaught: 猛攻はアタックスピード、キャストスピード、移動スピードを20%増加させる)",
+        "string": "サポートされたスキルで感電状態の敵を倒すと[Onslaught|猛攻]を{0}秒間獲得する",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -26550,7 +26694,7 @@
   {
     "English": null,
     "ids": [
-      "random_nearby_minion_gain_a_soul_eater_soul_on_X_life_spent"
+      "random_nearby_minion_gain_a_charge_on_X_life_spent"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -26571,8 +26715,8 @@
         "index_handlers": [
           []
         ],
-        "string": "サポートされたスペルの起動時コストとしてプレイヤーが\nライフを{0}使用するごとに近くのミニオン1体はソウルを1獲得する",
-        "reminder_text": "(輸血サポートはすでにソウルが最大数でない、最もプレイヤーに近いミニオンを優先して対象にする)",
+        "string": "サポートされたスペルで{0}のライフを起動時コストとして使用するごとに6m以内のミニオンはパワーチャージ、フレンジーチャージまたはエンデュランスチャージを獲得する",
+        "reminder_text": "(Upfront Cost: 起動時コストとは秒単位で支払われない全てのコストのことです)",
         "is_markup": null
       }
     ],
@@ -27845,7 +27989,7 @@
         "index_handlers": [
           []
         ],
-        "string": "サポートされたスキルは使用時にライフとエナジシールドを1以外捧げる",
+        "string": "サポートされたスキルは使用時にライフとエナジシールドを最大値の20%以外すべて捧げる",
         "reminder_text": null,
         "is_markup": null
       }
@@ -27938,14 +28082,14 @@
           }
         ],
         "format": [
-          "#",
-          "ignore"
+          "ignore",
+          "#"
         ],
         "index_handlers": [
           [],
           []
         ],
-        "string": "スナイプのステージごとにサポートされたスキルのヒットダメージが{0}%上昇する",
+        "string": "スナイプのステージごとにサポートされたスキルのヒットダメージが{1}%上昇する",
         "reminder_text": null,
         "is_markup": null
       },
@@ -27963,8 +28107,8 @@
           }
         ],
         "format": [
-          "#",
-          "ignore"
+          "ignore",
+          "#"
         ],
         "index_handlers": [
           [
@@ -27972,7 +28116,7 @@
           ],
           []
         ],
-        "string": "スナイプのステージごとにサポートされたスキルのヒットダメージが{0}%低下する",
+        "string": "スナイプのステージごとにサポートされたスキルのヒットダメージが{1}%低下する",
         "reminder_text": null,
         "is_markup": null
       },
@@ -28377,7 +28521,7 @@
             "milliseconds_to_seconds"
           ]
         ],
-        "string": "{0}秒ごとにビームが敵にヒットを与える",
+        "string": "ビームは{0}秒ごとに敵にヒットする",
         "reminder_text": null,
         "is_markup": null
       },
@@ -28397,7 +28541,7 @@
             "milliseconds_to_seconds_2dp"
           ]
         ],
-        "string": "{0}秒ごとにビームが敵にヒットを与える",
+        "string": "ビームは{0}秒ごとに敵にヒットする",
         "reminder_text": null,
         "is_markup": null
       }
@@ -31202,12 +31346,12 @@
           }
         ],
         "format": [
-          "ignore"
+          "#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "サポートされたスキルはチャネリングするごとに毎秒ダメージが上昇し、最大60%上昇する",
+        "string": "サポートされたスキルはチャネリングするごとに毎秒ダメージが{0}%上昇する、最大60%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -31238,12 +31382,12 @@
           }
         ],
         "format": [
-          "ignore"
+          "#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "サポートされたスキルはチャネリングするごとに毎秒コストが上昇し、最大100%上昇する",
+        "string": "サポートされたスキルはチャネリングするごとに毎秒コストが{0}%上昇する、最大100%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -31505,7 +31649,7 @@
             "milliseconds_to_seconds"
           ]
         ],
-        "string": "ファンタズムは{0}秒持続する",
+        "string": "ファンタズムは{0}秒間持続する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -31964,6 +32108,62 @@
   {
     "English": null,
     "ids": [
+      "support_impotence_damage_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "サポートされたスキルのダメージが{0}%上昇する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "サポートされたスキルのダメージが{0}%低下する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "support_innervate_chance_to_gain_buff_on_shock_vs_unique_%"
     ],
     "trade_stats": null,
@@ -32303,7 +32503,7 @@
           }
         ],
         "format": [
-          "+#",
+          "#",
           "ignore"
         ],
         "index_handlers": [
@@ -32330,7 +32530,7 @@
           }
         ],
         "format": [
-          "+#",
+          "#",
           "ignore"
         ],
         "index_handlers": [
@@ -34079,14 +34279,14 @@
           }
         ],
         "format": [
-          "ignore"
+          "#"
         ],
         "index_handlers": [
           [
             "milliseconds_to_seconds"
           ]
         ],
-        "string": "サポートされたスキルがブロックされた時に敵に怯みを付与する",
+        "string": "サポートされたスキルがブロックされた時に敵に怯みを{0}秒間付与する",
         "reminder_text": "(Overpowered: オーバーパワーは何回でも付与できる)",
         "is_markup": null
       }
@@ -34420,7 +34620,7 @@
             "negate"
           ]
         ],
-        "string": "サポートされたアタックスキルの投射物のヒットにより付与した出血と毒のダメージが{0}%低下する",
+        "string": "サポートされたアタックスキルの投射物のヒットにより付与した出血と毒のダメージが{0}%上昇する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -35975,8 +36175,8 @@
         "index_handlers": [
           []
         ],
-        "string": "猛攻持続時間が{0}%増加する",
-        "reminder_text": "(Onslaught: 猛攻はアタックスピード、キャストスピード、移動スピードを20%増加させる)",
+        "string": "[Onslaught|猛攻]持続時間が{0}%増加する",
+        "reminder_text": null,
         "is_markup": null
       },
       {
@@ -35995,8 +36195,8 @@
             "negate"
           ]
         ],
-        "string": "猛攻持続時間が{0}%減少する",
-        "reminder_text": "(Onslaught: 猛攻はアタックスピード、キャストスピード、移動スピードを20%増加させる)",
+        "string": "[Onslaught|猛攻]持続時間が{0}%減少する",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -36039,8 +36239,8 @@
           [],
           []
         ],
-        "string": "サポートされたスキルはユニークの敵にヒットをした時に\n{0}%の確率で猛攻を3秒間付与する",
-        "reminder_text": "(Onslaught: 猛攻はアタックスピード、キャストスピード、移動スピードを20%増加させる)",
+        "string": "サポートされたスキルはユニークの敵にヒットをした時に\n{0}%の確率で[Onslaught|猛攻]を3秒間付与する",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -36093,8 +36293,8 @@
           ],
           []
         ],
-        "string": "サポートされたスキルはキリングブローを与えた時に\n{0}%の確率で{1}秒間猛攻を付与する",
-        "reminder_text": "(Onslaught: 猛攻はアタックスピード、キャストスピード、移動スピードを20%増加させる)",
+        "string": "サポートされたスキルはキリングブローを与えた時に\n{0}%の確率で{1}秒間[Onslaught|猛攻]を付与する",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -39397,7 +39597,7 @@
         "index_handlers": [
           []
         ],
-        "string": "サポートされたスキルはヒット時に{0}%の確率でプリズマティックバーストをトリガーする",
+        "string": "サポートされたスキルは{0}%の確率でヒット時にプリズマティックバーストをトリガーする",
         "reminder_text": null,
         "is_markup": null
       },
@@ -45161,6 +45361,18 @@
         "id": "explicit.stat_2783958145",
         "text": "#% more Maximum Life",
         "type": "explicit",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_1214601201",
+        "text": "#% more Maximum Life",
+        "type": "implicit",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_137377270",
+        "text": "#% more Maximum Life",
+        "type": "implicit",
         "option": null
       }
     ],

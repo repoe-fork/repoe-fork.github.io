@@ -662,38 +662,18 @@
       {
         "condition": [
           {
-            "min": 1,
+            "min": null,
             "max": null,
             "negated": null
           }
         ],
         "format": [
-          "#"
+          "+#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "このアタックまたはミニオンにより倒された敵がドロップするアイテムのレアリティが{0}%増加する",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "このアタックまたはミニオンにより倒された敵がドロップするアイテムのレアリティが{0}%減少する",
+        "string": "ミニオンまたはこのアタックが倒した敵のドロップしたアイテムの[PlayerItemRarity|レアリティ] {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -1667,8 +1647,8 @@
         "index_handlers": [
           []
         ],
-        "string": "このアタックおよびミニオンはヒット時に{0}%の確率で敵を盲目にする",
-        "reminder_text": "(Blind: 盲目は、命中率と回避力を20%低下させる。持続時間は4秒)",
+        "string": "このアタックおよびミニオンはヒット時に{0}%の確率で敵を[Blind|盲目]にする",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -1703,7 +1683,7 @@
         "index_handlers": [
           []
         ],
-        "string": "このアタックおよびミニオンの盲目持続時間が{0}%増加する",
+        "string": "このアタックおよびミニオンの[Blind|盲目]持続時間が{0}%増加する",
         "reminder_text": null,
         "is_markup": null
       },
@@ -1723,7 +1703,7 @@
             "negate"
           ]
         ],
-        "string": "このアタックおよびミニオンの盲目持続時間が{0}%減少する",
+        "string": "このアタックおよびミニオンの[Blind|盲目]持続時間が{0}%減少する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2131,7 +2111,7 @@
           [],
           []
         ],
-        "string": "このアタックおよびミニオンは近接ダメージで敵をスタンさせた時にエンデュランスチャージを1個獲得する",
+        "string": "このアタックおよびミニオンは近接ダメージで敵をスタンさせた時にエンデュランスチャージを獲得する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3755,6 +3735,42 @@
   {
     "English": null,
     "ids": [
+      "global_cannot_crit"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "このアタックとミニオンはクリティカルストライクを与えられなくなる",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "additional_base_critical_strike_chance"
     ],
     "trade_stats": null,
@@ -4546,7 +4562,7 @@
         "index_handlers": [
           []
         ],
-        "string": "ミニオンにより放たれた投射物は{0}の確率で分岐する時に追加の投射物を放つ",
+        "string": "ミニオンにより放たれた投射物は{0}%の確率で分岐する時に追加の投射物を放つ",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4638,7 +4654,7 @@
         "index_handlers": [
           []
         ],
-        "string": "このアタックおよびミニオンは盲目状態の敵に対するクリティカル率が{0}%増加する",
+        "string": "このアタックおよびミニオンは[Blind|盲目]状態の敵に対するクリティカル率が{0}%増加する",
         "reminder_text": null,
         "is_markup": null
       },
@@ -4658,7 +4674,7 @@
             "negate"
           ]
         ],
-        "string": "このアタックおよびミニオンは盲目状態の敵に対するクリティカル率が{0}%増加する",
+        "string": "このアタックおよびミニオンは[Blind|盲目]状態の敵に対するクリティカル率が{0}%増加する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5122,7 +5138,7 @@
         "index_handlers": [
           []
         ],
-        "string": "このアタックまたはミニオンにより付与されたダメージ性状態異常のダメージを与える速度が{0}%速くなる",
+        "string": "このアタックまたはミニオンにより付与されたダメージ性状態異常がダメージを与える速度が{0}%[DamageFaster|速くなる]",
         "reminder_text": "(Damaging Ailments: ダメージを与える状態異常には、出血、発火、毒がある)",
         "is_markup": null
       }
@@ -5499,12 +5515,12 @@
           }
         ],
         "format": [
-          "#"
+          "ignore"
         ],
         "index_handlers": [
           []
         ],
-        "string": "5スタック以上の毒状態の敵にこのアタックまたはミニオンでキリングブローを与えた時に{0}%の確率でフレンジーチャージを1個獲得する",
+        "string": "5スタック以上の毒状態の敵にこのアタックまたはミニオンでキリングブローを与えた時にフレンジーチャージを1個獲得する",
         "reminder_text": null,
         "is_markup": null
       }
@@ -6973,6 +6989,62 @@
   {
     "English": null,
     "ids": [
+      "support_impotence_damage_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "このアタックおよびミニオンのダメージが{0}%上昇する",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "このアタックおよびミニオンのダメージが{0}%低下する",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "support_maimed_enemies_physical_damage_taken_+%"
     ],
     "trade_stats": null,
@@ -8007,8 +8079,8 @@
             "milliseconds_to_seconds"
           ]
         ],
-        "string": "プレイヤーがユニークの敵にヒットを与えた時に{0}%の確率でこのアタックおよびミニオンは{1}秒間猛攻を獲得する",
-        "reminder_text": "(Onslaught: 猛攻はアタックスピード、キャストスピード、移動スピードを20%増加させる)",
+        "string": "プレイヤーがユニークの敵にヒットを与えた時に{0}%の確率でこのアタックおよびミニオンは{1}秒間[Onslaught|猛攻]を獲得する",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -8061,8 +8133,8 @@
             "milliseconds_to_seconds"
           ]
         ],
-        "string": "このアタックおよびミニオンはキリングブロー時に{0}%の確率で{2}秒間猛攻を獲得する",
-        "reminder_text": "(Onslaught: 猛攻はアタックスピード、キャストスピード、移動スピードを20%増加させる)",
+        "string": "このアタックおよびミニオンはキリングブロー時に\n{0}%の確率で{2}秒間[Onslaught|猛攻]を獲得する",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -12918,6 +12990,18 @@
         "id": "explicit.stat_2783958145",
         "text": "#% more Maximum Life",
         "type": "explicit",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_1214601201",
+        "text": "#% more Maximum Life",
+        "type": "implicit",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_137377270",
+        "text": "#% more Maximum Life",
+        "type": "implicit",
         "option": null
       }
     ],

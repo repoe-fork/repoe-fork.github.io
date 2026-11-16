@@ -3687,6 +3687,86 @@
   {
     "English": null,
     "ids": [
+      "arcane_link_added_lightning_damage_from_mana_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "被連結的目標會獲得等同於你{0}%最大魔力的附加閃電傷害",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "arcane_link_minimum_lightning_damage",
+      "arcane_link_maximum_lightning_damage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "被連結的目標會獲得{0}至{1}附加閃電傷害",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "area_damage_+%"
     ],
     "trade_stats": null,
@@ -5425,38 +5505,18 @@
       {
         "condition": [
           {
-            "min": 1,
+            "min": null,
             "max": null,
             "negated": null
           }
         ],
         "format": [
-          "#"
+          "+#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "增加 {0}% 殺死敵人時物品稀有度",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "減少 {0}% 殺死敵人時物品稀有度",
+        "string": "{0}%被擊殺敵人的掉落物品[PlayerItemRarity|稀有度]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -7527,6 +7587,60 @@
           ]
         ],
         "string": "減少 {0}% 致盲持續時間",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "blood_flower_maximum_flowers"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "最多{0}個盛放",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "最多{0}個盛放",
         "reminder_text": null,
         "is_markup": null
       }
@@ -9977,7 +10091,7 @@
             "milliseconds_to_seconds_2dp"
           ]
         ],
-        "string": "移動或你立即傳送時，此法術每 0.5 秒失去 1 強化",
+        "string": "此法術在移動時每 0.5 秒、或是你傳送時立即失去 1 強化",
         "reminder_text": null,
         "is_markup": null
       }
@@ -10438,7 +10552,7 @@
       {
         "condition": [
           {
-            "min": null,
+            "min": 1,
             "max": null,
             "negated": null
           }
@@ -10449,8 +10563,28 @@
         "index_handlers": [
           []
         ],
-        "string": "你造成的中毒傷害加速 {0}%",
-        "reminder_text": "（在一小段時間後，他們會造成相同總傷害）",
+        "string": "你造成的[Poison|中毒]傷害[DamageFaster|加快]{0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "你造成的[Poison|中毒]傷害[DamageSlower|減緩]{0}%",
+        "reminder_text": null,
         "is_markup": null
       }
     ]
@@ -15808,14 +15942,14 @@
           }
         ],
         "format": [
-          "#",
-          "ignore"
+          "ignore",
+          "#"
         ],
         "index_handlers": [
           [],
           []
         ],
-        "string": "投射物有 {0}% 機率返回你",
+        "string": "投射物有 {1}% 機率返回你",
         "reminder_text": null,
         "is_markup": null
       },
@@ -22823,6 +22957,18 @@
         "id": "explicit.stat_2783958145",
         "text": "#% more Maximum Life",
         "type": "explicit",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_1214601201",
+        "text": "#% more Maximum Life",
+        "type": "implicit",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_137377270",
+        "text": "#% more Maximum Life",
+        "type": "implicit",
         "option": null
       }
     ],

@@ -9525,38 +9525,18 @@
       {
         "condition": [
           {
-            "min": 1,
+            "min": null,
             "max": null,
             "negated": null
           }
         ],
         "format": [
-          "#"
+          "+#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "增加 {0}% 殺死敵人時物品稀有度",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "減少 {0}% 殺死敵人時物品稀有度",
+        "string": "{0}%擊殺敵人時的掉落物品[PlayerItemRarity|稀有度]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -14218,6 +14198,42 @@
   {
     "English": null,
     "ids": [
+      "global_cannot_crit"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "不會造成暴擊",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "never_any_ailment"
     ],
     "trade_stats": null,
@@ -14463,7 +14479,7 @@
         ],
         "format": [
           "#",
-          "ignore"
+          "#"
         ],
         "index_handlers": [
           [
@@ -14471,7 +14487,7 @@
           ],
           []
         ],
-        "string": "移動或你立即傳送時，\n每 {0} 秒失去 1 強化",
+        "string": "每移動 {0} 會失去 1 強化，\n當你傳送時會立即失去 {1}",
         "reminder_text": null,
         "is_markup": null
       }
@@ -15269,7 +15285,7 @@
         "index_handlers": [
           []
         ],
-        "string": "增加 {0}% 生命恢復率",
+        "string": "增加 {0}% 生命回復率",
         "reminder_text": null,
         "is_markup": null
       },
@@ -15289,7 +15305,7 @@
             "negate"
           ]
         ],
-        "string": "減少 {0}% 生命恢復率",
+        "string": "減少 {0}% 生命回復率",
         "reminder_text": null,
         "is_markup": null
       }
@@ -25003,13 +25019,13 @@
         ],
         "format": [
           "#",
-          "ignore"
+          "#"
         ],
         "index_handlers": [
           [],
           []
         ],
-        "string": "秘能波動增加 {0}% 施放速度\n秘能波動增加 {0}% 魔力恢復率",
+        "string": "秘能波動賦予增加 {0}% 施放速度\n秘能波動賦予增加 {1}% 魔力恢復率",
         "reminder_text": null,
         "is_markup": null
       }
@@ -26219,7 +26235,7 @@
         "index_handlers": [
           []
         ],
-        "string": "圖騰被擊中時對附近敵人造成等同圖騰 {0}% 最大生命的火焰傷害",
+        "string": "圖騰被擊中時對基礎範圍1.8公尺內的敵人造成等同於圖騰 {0}% 最大生命的火焰傷害",
         "reminder_text": null,
         "is_markup": null
       }
@@ -28691,6 +28707,142 @@
           ]
         ],
         "string": "藤壺猛夾的半徑為 {2} 公尺",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 11,
+            "max": 11,
+            "negated": null
+          },
+          {
+            "min": 10,
+            "max": 10,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [
+            "locations_to_metres"
+          ],
+          []
+        ],
+        "string": "基礎鎖敵範圍為{1}公尺",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 11,
+            "max": 11,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [
+            "locations_to_metres"
+          ],
+          []
+        ],
+        "string": "基礎鎖敵範圍為{1}公尺",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 11,
+            "max": 11,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 10,
+            "max": 10,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "ignore",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          [
+            "locations_to_metres"
+          ]
+        ],
+        "string": "基礎鎖敵範圍為{2}公尺",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 11,
+            "max": 11,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "ignore",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          [
+            "locations_to_metres"
+          ]
+        ],
+        "string": "基礎鎖敵範圍為{2}公尺",
         "reminder_text": null,
         "is_markup": null
       }
@@ -39199,6 +39351,96 @@
         ],
         "string": "減少 {0}% 致盲效果",
         "reminder_text": "（ 被致盲有20%更少命中率和閃避值，持續4秒 ）",
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "virtual_blood_flower_maximum_flowers"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "最多{0}個盛放",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "最多{0}個盛放",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "blood_flower_physical_dot_multiplier_+_to_grant"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "盛放賦予{0}%物理持續傷害加成",
+        "reminder_text": null,
         "is_markup": null
       }
     ]
@@ -50866,7 +51108,7 @@
         "index_handlers": [
           []
         ],
-        "string": "增加 {0}% 生命恢復率",
+        "string": "增加 {0}% 生命回復率",
         "reminder_text": null,
         "is_markup": null
       },
@@ -50886,7 +51128,7 @@
             "negate"
           ]
         ],
-        "string": "減少 {0}% 生命恢復率",
+        "string": "減少 {0}% 生命回復率",
         "reminder_text": null,
         "is_markup": null
       }
@@ -51391,6 +51633,44 @@
           ]
         ],
         "string": "增益效果減少 {0}% 閃避值和護甲",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "every_1_second_nearby_enemies_withered_for_X_ms_to_grant"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds"
+          ]
+        ],
+        "string": "每秒對周遭的敵人施加[Withered|凋零]，持續 {0} 秒",
         "reminder_text": null,
         "is_markup": null
       }
@@ -56926,6 +57206,42 @@
   {
     "English": null,
     "ids": [
+      "gain_malignant_madness_on_skill_use"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "使用時獲得惡之狂亂",
+        "reminder_text": "（ 惡之狂亂減少 10% 傷害和行動速度，持續 8 秒 ）",
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "gain_overloaded_intensity_for_x_ms_after_losing_6_intensity"
     ],
     "trade_stats": null,
@@ -58398,6 +58714,60 @@
           ]
         ],
         "string": "投射物根據強化造成 {0}% 更少擊中傷害",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
+      "grim_bonfire_maximum_bonfires"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}獵巫者的薪柴上限",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}獵巫者的薪柴上限",
         "reminder_text": null,
         "is_markup": null
       }
@@ -64834,6 +65204,24 @@
       {
         "condition": [
           {
+            "min": 2000000000,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "當花費總計無限魔力在未被魔改箭矢輔助的弓攻擊上時，觸發此技能",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
             "min": null,
             "max": null,
             "negated": null
@@ -64845,7 +65233,7 @@
         "index_handlers": [
           []
         ],
-        "string": "當花費總 {0} 魔力在未被魔改箭矢輔助的弓攻擊上時，觸發此技能",
+        "string": "當花費總計{0}魔力在未被魔改箭矢輔助的弓攻擊上時，觸發此技能",
         "reminder_text": null,
         "is_markup": null
       }
@@ -73734,14 +74122,14 @@
           }
         ],
         "format": [
-          "ignore",
+          "#",
           "#"
         ],
         "index_handlers": [
           [],
           []
         ],
-        "string": "每 {1} 犧牲的盛怒，使盛怒風暴造成 5% 更多傷害",
+        "string": "每 {1} 犧牲的盛怒，使盛怒風暴造成 {0}% 更多傷害",
         "reminder_text": null,
         "is_markup": null
       },
@@ -73759,7 +74147,7 @@
           }
         ],
         "format": [
-          "ignore",
+          "#",
           "#"
         ],
         "index_handlers": [
@@ -73768,7 +74156,7 @@
           ],
           []
         ],
-        "string": "每 {1} 犧牲的盛怒，使盛怒風暴造成 5% 更少傷害",
+        "string": "每 {1} 犧牲的盛怒，使盛怒風暴造成 {0}% 更少傷害",
         "reminder_text": null,
         "is_markup": null
       }
@@ -74162,7 +74550,7 @@
   {
     "English": null,
     "ids": [
-      "random_nearby_minion_gain_a_soul_eater_soul_on_X_life_spent"
+      "random_nearby_minion_gain_a_charge_on_X_life_spent"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -74189,8 +74577,8 @@
         "index_handlers": [
           []
         ],
-        "string": "在此法術的前期消耗每消耗{0}生命時\n賦予周遭的一名召喚物一層靈魂",
-        "reminder_text": "（每個靈魂會賦予 5% 攻擊和施放速度。若你近期沒有吞噬靈魂，每 0.5 秒便會失去 1 個靈魂。最多可吞噬 45 個靈魂）",
+        "string": "此法術的前期消耗每消耗{0}生命，6公尺範圍內的一名召喚物即獲得一顆暴擊、狂怒、或耐力球",
+        "reminder_text": null,
         "is_markup": null
       }
     ]
@@ -75250,7 +75638,8 @@
   {
     "English": null,
     "ids": [
-      "sand_mirage_triggered_skill_damage_+%_final"
+      "sand_mirage_triggered_skill_damage_+%_final",
+      "sand_mirage_description_mode"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -75269,12 +75658,19 @@
             "min": 1,
             "max": null,
             "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
           }
         ],
         "format": [
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
+          [],
           []
         ],
         "string": "由時禁幻影使用的技能造成{0}%更多傷害",
@@ -75287,15 +75683,74 @@
             "min": null,
             "max": -1,
             "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
           }
         ],
         "format": [
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
           [
             "negate"
-          ]
+          ],
+          []
+        ],
+        "string": "由時禁幻影使用的技能造成{0}%更少傷害",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "由時禁幻影使用的技能造成{0}%更多傷害",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ],
+          []
         ],
         "string": "由時禁幻影使用的技能造成{0}%更少傷害",
         "reminder_text": null,
@@ -76921,6 +77376,42 @@
   {
     "English": null,
     "ids": [
+      "skill_can_be_used_by_temporal_mirage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "此技能僅可透過瞬時幻影使用",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ]
+  },
+  {
+    "English": null,
+    "ids": [
       "skill_code_movement_speed_+%_final"
     ],
     "trade_stats": null,
@@ -77720,7 +78211,7 @@
         "index_handlers": [
           []
         ],
-        "string": "使用時犧牲你所有的生命和能量護盾，僅留下1生命",
+        "string": "使用時犧牲你20%的最大生命和最大能量護盾",
         "reminder_text": null,
         "is_markup": null
       }
@@ -78562,14 +79053,14 @@
           }
         ],
         "format": [
-          "ignore"
+          "#"
         ],
         "index_handlers": [
           [
             "divide_by_two_0dp"
           ]
         ],
-        "string": "每個投射物有介在 10% 更多至 10% 更少投射物速度",
+        "string": "每個投射物有介在 {0}% 更多至 {0}% 更少投射物速度",
         "reminder_text": null,
         "is_markup": null
       }
@@ -102349,6 +102840,18 @@
         "id": "explicit.stat_2783958145",
         "text": "#% more Maximum Life",
         "type": "explicit",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_1214601201",
+        "text": "#% more Maximum Life",
+        "type": "implicit",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_137377270",
+        "text": "#% more Maximum Life",
+        "type": "implicit",
         "option": null
       }
     ],

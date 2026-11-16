@@ -3645,7 +3645,14 @@
     "ids": [
       "additional_base_critical_strike_chance"
     ],
-    "trade_stats": null,
+    "trade_stats": [
+      {
+        "id": "explicit.stat_1909401378",
+        "text": "+#% to Critical Strike Chance",
+        "type": "explicit",
+        "option": null
+      }
+    ],
     "hidden": null,
     "French": null,
     "German": null,
@@ -3830,6 +3837,86 @@
     ],
     "ids": [
       "ancestor_totem_parent_activation_range_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Linked target gains Added Lightning Damage equal to {0}% of your Maximum Mana",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "arcane_link_added_lightning_damage_from_mana_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "Linked target gains {0} to {1} Added Lightning Damage",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "arcane_link_minimum_lightning_damage",
+      "arcane_link_maximum_lightning_damage"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -4173,7 +4260,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% increased Attack and Cast Speed during Onslaught",
+        "string": "{0}% increased Attack and Cast Speed during [Onslaught]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -4193,7 +4280,7 @@
             "negate"
           ]
         ],
-        "string": "{0}% reduced Attack and Cast Speed during Onslaught",
+        "string": "{0}% reduced Attack and Cast Speed during [Onslaught]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4201,14 +4288,7 @@
     "ids": [
       "attack_and_cast_speed_+%_during_onslaught"
     ],
-    "trade_stats": [
-      {
-        "id": "implicit.stat_2320884914",
-        "text": "#% increased Attack and Cast Speed during Onslaught",
-        "type": "implicit",
-        "option": null
-      }
-    ],
+    "trade_stats": null,
     "hidden": null,
     "French": null,
     "German": null,
@@ -5925,38 +6005,18 @@
       {
         "condition": [
           {
-            "min": 1,
+            "min": null,
             "max": null,
             "negated": null
           }
         ],
         "format": [
-          "#"
+          "+#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "{0}% increased Rarity of Items Dropped by Slain Enemies",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "{0}% reduced Rarity of Items Dropped by Slain Enemies",
+        "string": "{0}% to [PlayerItemRarity|Rarity] of Items Dropped by Slain Enemies",
         "reminder_text": null,
         "is_markup": null
       }
@@ -8205,7 +8265,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% increased Blinding duration",
+        "string": "{0}% increased [Blind|Blinding] duration",
         "reminder_text": null,
         "is_markup": null
       },
@@ -8225,13 +8285,67 @@
             "negate"
           ]
         ],
-        "string": "{0}% reduced Blinding duration",
+        "string": "{0}% reduced [Blind|Blinding] duration",
         "reminder_text": null,
         "is_markup": null
       }
     ],
     "ids": [
       "blind_duration_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Maximum {0} Bloom",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Maximum {0} Blooms",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "blood_flower_maximum_flowers"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -10532,7 +10646,14 @@
     "ids": [
       "damage_+%_vs_enemies_on_full_life"
     ],
-    "trade_stats": null,
+    "trade_stats": [
+      {
+        "id": "implicit.stat_3537775677",
+        "text": "#% increased Damage with Hits and Ailments against Enemies that are on Full Life",
+        "type": "implicit",
+        "option": null
+      }
+    ],
     "hidden": null,
     "French": null,
     "German": null,
@@ -10969,6 +11090,12 @@
         "id": "fractured.stat_1818773442",
         "text": "#% increased Damage with Hits and Ailments per Curse on Enemy",
         "type": "fractured",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_1818773442",
+        "text": "#% increased Damage with Hits and Ailments per Curse on Enemy",
+        "type": "implicit",
         "option": null
       }
     ],
@@ -11536,40 +11663,15 @@
         "index_handlers": [
           []
         ],
-        "string": "Bleeding you inflict deals Damage {0}% faster",
-        "reminder_text": "(They will deal the same total damage over a shorter duration)",
+        "string": "Bleeding you inflict deals Damage {0}% [DamageFaster|Faster]",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
     "ids": [
       "faster_bleed_%"
     ],
-    "trade_stats": [
-      {
-        "id": "explicit.stat_3828375170",
-        "text": "Bleeding you inflict deals Damage #% faster",
-        "type": "explicit",
-        "option": null
-      },
-      {
-        "id": "fractured.stat_3828375170",
-        "text": "Bleeding you inflict deals Damage #% faster",
-        "type": "fractured",
-        "option": null
-      },
-      {
-        "id": "implicit.stat_3828375170",
-        "text": "Bleeding you inflict deals Damage #% faster",
-        "type": "implicit",
-        "option": null
-      },
-      {
-        "id": "scourge.stat_3828375170",
-        "text": "Bleeding you inflict deals Damage #% faster",
-        "type": "scourge",
-        "option": null
-      }
-    ],
+    "trade_stats": null,
     "hidden": null,
     "French": null,
     "German": null,
@@ -11597,8 +11699,8 @@
         "index_handlers": [
           []
         ],
-        "string": "Ignites deal Damage {0}% faster",
-        "reminder_text": "(They will deal the same total damage over a shorter duration)",
+        "string": "Ignites deal Damage {0}% [DamageFaster|Faster]",
+        "reminder_text": null,
         "is_markup": null
       },
       {
@@ -11617,7 +11719,7 @@
             "negate"
           ]
         ],
-        "string": "Ignites deal Damage {0}% slower",
+        "string": "Ignites deal Damage {0}% [DamageSlower|Slower]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -11642,7 +11744,7 @@
       {
         "condition": [
           {
-            "min": null,
+            "min": 1,
             "max": null,
             "negated": null
           }
@@ -11653,40 +11755,35 @@
         "index_handlers": [
           []
         ],
-        "string": "Poisons you inflict deal Damage {0}% faster",
-        "reminder_text": "(They will deal the same total damage over a shorter duration)",
+        "string": "[Poison|Poisons] you inflict deal Damage {0}% [DamageFaster|Faster]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "[Poison|Poisons] you inflict deal Damage {0}% [DamageSlower|Slower]",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
     "ids": [
       "faster_poison_%"
     ],
-    "trade_stats": [
-      {
-        "id": "explicit.stat_2907156609",
-        "text": "Poisons you inflict deal Damage #% faster",
-        "type": "explicit",
-        "option": null
-      },
-      {
-        "id": "fractured.stat_2907156609",
-        "text": "Poisons you inflict deal Damage #% faster",
-        "type": "fractured",
-        "option": null
-      },
-      {
-        "id": "implicit.stat_2907156609",
-        "text": "Poisons you inflict deal Damage #% faster",
-        "type": "implicit",
-        "option": null
-      },
-      {
-        "id": "scourge.stat_2907156609",
-        "text": "Poisons you inflict deal Damage #% faster",
-        "type": "scourge",
-        "option": null
-      }
-    ],
+    "trade_stats": null,
     "hidden": null,
     "French": null,
     "German": null,
@@ -12183,8 +12280,8 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% chance to Blind enemies on hit",
-        "reminder_text": "(Being Blinded causes 20% less Accuracy Rating and Evasion Rating, for 4 seconds)",
+        "string": "{0}% chance to [Blind] enemies on hit",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -15184,6 +15281,12 @@
         "text": "#% increased Maximum Recovery per Life Leech",
         "type": "explicit",
         "option": null
+      },
+      {
+        "id": "implicit.stat_3101897388",
+        "text": "#% increased Maximum Recovery per Life Leech",
+        "type": "implicit",
+        "option": null
       }
     ],
     "hidden": null,
@@ -15924,6 +16027,12 @@
         "id": "fractured.stat_755922799",
         "text": "Minions have #% chance to deal Double Damage",
         "type": "fractured",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_755922799",
+        "text": "Minions have #% chance to deal Double Damage",
+        "type": "implicit",
         "option": null
       }
     ],
@@ -25079,6 +25188,18 @@
         "id": "explicit.stat_2783958145",
         "text": "#% more Maximum Life",
         "type": "explicit",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_1214601201",
+        "text": "#% more Maximum Life",
+        "type": "implicit",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_137377270",
+        "text": "#% more Maximum Life",
+        "type": "implicit",
         "option": null
       }
     ],

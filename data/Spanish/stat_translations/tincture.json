@@ -234,18 +234,18 @@
       {
         "condition": [
           {
-            "min": 1,
+            "min": null,
             "max": null,
             "negated": null
           }
         ],
         "format": [
-          "#"
+          "+#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "Rareza de los objetos encontrados aumentada un {0}% por cada quema de maná, hasta un máximo de 100%",
+        "string": "{0}% a la [PlayerItemRarity|rareza de los objetos] por cada Quema de maná, hasta un máximo de 100%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -486,38 +486,18 @@
       {
         "condition": [
           {
-            "min": 1,
+            "min": null,
             "max": null,
             "negated": null
           }
         ],
         "format": [
-          "#"
+          "+#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "La rareza de los objetos que arrojan los enemigos que matas con ataques de armas cuerpo a cuerpo está aumentada un {0}%",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "La rareza de los objetos que arrojan los enemigos que matas con ataques de armas cuerpo a cuerpo está reducida un {0}%",
+        "string": "{0}% a la [PlayerItemRarity|rareza] de los objetos que arrojan los enemigos derrotados por ataques con armas cuerpo a cuerpo",
         "reminder_text": null,
         "is_markup": null
       }
@@ -1583,7 +1563,7 @@
           [],
           []
         ],
-        "string": "Los golpes cuerpo a cuerpo infligen daño colateral a los objetivos circundantes",
+        "string": "Las habilidades de golpe cuerpo a cuerpo infligen daño colateral a los objetivos circundantes",
         "reminder_text": null,
         "is_markup": null
       },
@@ -1608,7 +1588,7 @@
           [],
           []
         ],
-        "string": "Los golpes cuerpo a cuerpo infligen daño colateral a los objetivos circundantes, con su área de efecto aumentada un {1}%",
+        "string": "Las habilidades de golpe cuerpo a cuerpo infligen daño colateral a los objetivos circundantes, con su área de efecto aumentada un {1}%",
         "reminder_text": null,
         "is_markup": null
       },
@@ -1635,7 +1615,7 @@
             "negate"
           ]
         ],
-        "string": "Los golpes cuerpo a cuerpo infligen daño colateral a los objetivos circundantes, con su área de efecto reducida un {1}%",
+        "string": "Las habilidades de golpe cuerpo a cuerpo infligen daño colateral a los objetivos circundantes, con su área de efecto reducida un {1}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -8620,6 +8600,18 @@
         "id": "explicit.stat_2783958145",
         "text": "#% more Maximum Life",
         "type": "explicit",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_1214601201",
+        "text": "#% more Maximum Life",
+        "type": "implicit",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_137377270",
+        "text": "#% more Maximum Life",
+        "type": "implicit",
         "option": null
       }
     ],

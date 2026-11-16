@@ -1578,22 +1578,15 @@
         "index_handlers": [
           []
         ],
-        "string": "Damaging Ailments inflicted by Skills used by this Graft deal damage {0}% faster",
-        "reminder_text": "(They will deal the same total damage over a shorter duration)",
+        "string": "Damaging Ailments inflicted by Skills used by this Graft deal Damage {0}% [DamageFaster|Faster]",
+        "reminder_text": "(Ailments that deal Damage are Bleeding, Ignited, and Poisoned)",
         "is_markup": null
       }
     ],
     "ids": [
       "graft_skill_damaging_ailments_deal_damage_+%_faster"
     ],
-    "trade_stats": [
-      {
-        "id": "explicit.stat_4230320163",
-        "text": "Damaging Ailments inflicted by Skills used by this Graft deal damage #% faster",
-        "type": "explicit",
-        "option": null
-      }
-    ],
+    "trade_stats": null,
     "hidden": null,
     "French": null,
     "German": null,
@@ -2934,8 +2927,8 @@
         "index_handlers": [
           []
         ],
-        "string": "Minions summoned by this Graft have {0}% chance to Blind on Hit",
-        "reminder_text": "(Being Blinded causes 20% less Accuracy Rating and Evasion Rating, for 4 seconds)",
+        "string": "Minions summoned by this Graft have {0}% chance to [Blind] on Hit",
+        "reminder_text": null,
         "is_markup": null
       },
       {
@@ -2952,22 +2945,15 @@
         "index_handlers": [
           []
         ],
-        "string": "Minions summoned by this Graft Blind on Hit",
-        "reminder_text": "(Being Blinded causes 20% less Accuracy Rating and Evasion Rating, for 4 seconds)",
+        "string": "Minions summoned by this Graft [Blind] on Hit",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
     "ids": [
       "graft_skill_minions_%_chance_to_blind_on_hit"
     ],
-    "trade_stats": [
-      {
-        "id": "explicit.stat_2313228671",
-        "text": "Minions summoned by this Graft have #% chance to Blind on Hit",
-        "type": "explicit",
-        "option": null
-      }
-    ],
+    "trade_stats": null,
     "hidden": null,
     "French": null,
     "German": null,
@@ -5334,38 +5320,18 @@
       {
         "condition": [
           {
-            "min": 1,
+            "min": null,
             "max": null,
             "negated": null
           }
         ],
         "format": [
-          "#"
+          "+#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "{0}% increased Rarity of Items found from Hiveborn Monsters",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "{0}% reduced Rarity of Items found from Hiveborn Monsters",
+        "string": "{0}% to [PlayerItemRarity|Item Rarity] from Hiveborn Monsters",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5373,14 +5339,7 @@
     "ids": [
       "item_found_rarity_+%_from_brequel_monsters"
     ],
-    "trade_stats": [
-      {
-        "id": "explicit.stat_3967804254",
-        "text": "#% increased Rarity of Items found from Hiveborn Monsters",
-        "type": "explicit",
-        "option": null
-      }
-    ],
+    "trade_stats": null,
     "hidden": null,
     "French": null,
     "German": null,
@@ -10244,6 +10203,18 @@
         "id": "explicit.stat_2783958145",
         "text": "#% more Maximum Life",
         "type": "explicit",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_1214601201",
+        "text": "#% more Maximum Life",
+        "type": "implicit",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_137377270",
+        "text": "#% more Maximum Life",
+        "type": "implicit",
         "option": null
       }
     ],

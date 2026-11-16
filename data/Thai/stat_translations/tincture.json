@@ -235,18 +235,18 @@
       {
         "condition": [
           {
-            "min": 1,
+            "min": null,
             "max": null,
             "negated": null
           }
         ],
         "format": [
-          "#"
+          "+#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "เพิ่มระดับความหายากของ ไอเทม ที่พบ {0}% ต่อจำนวนสถานะ เผามานา สูงสุด 100%",
+        "string": "[PlayerItemRarity|ระดับความหายากของไอเทม] {0}% ต่อจำนวนสถานะ เผามานา สูงสุด +100%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -487,38 +487,18 @@
       {
         "condition": [
           {
-            "min": 1,
+            "min": null,
             "max": null,
             "negated": null
           }
         ],
         "format": [
-          "#"
+          "+#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "เพิ่มระดับความหายากของ ไอเทม ที่ดรอปจากศัตรูที่ถูกสังหารจากการโจมตีด้วย อาวุธประชิด {0}%",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "ลดระดับความหายากของ ไอเทม ที่ดรอปจากศัตรูที่ถูกสังหารจากการโจมตีด้วย อาวุธประชิด {0}%",
+        "string": "[PlayerItemRarity|ระดับความหายาก]ของไอเทม ที่ดรอปจากศัตรูที่ถูกสังหารด้วย การโจมตีด้วยอาวุธประชิด {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3784,8 +3764,8 @@
         "index_handlers": [
           []
         ],
-        "string": "มีโอกาสได้รับสถานะ เร่งราวี 10 วินาที {0}% เมื่อลงมือสังหารด้วย อาวุธประชิด",
-        "reminder_text": "(เร่งราวี เพิ่มความเร็วในการโจมตี, ร่าย, เคลื่อนที่ 20%)",
+        "string": "มีโอกาสได้รับสถานะ [Onslaught|เร่งราวี] 10 วินาที {0}% เมื่อลงมือสังหารด้วย อาวุธประชิด",
+        "reminder_text": null,
         "is_markup": null
       },
       {
@@ -3802,8 +3782,8 @@
         "index_handlers": [
           []
         ],
-        "string": "ได้รับสถานะ เร่งราวี 10 วินาที เมื่อลงมือสังหารด้วย อาวุธประชิด",
-        "reminder_text": "(เร่งราวี เพิ่มความเร็วในการโจมตี, ร่าย, เคลื่อนที่ 20%)",
+        "string": "ได้รับสถานะ [Onslaught|เร่งราวี] 10 วินาที เมื่อลงมือสังหารด้วย อาวุธประชิด",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -8620,6 +8600,18 @@
         "id": "explicit.stat_2783958145",
         "text": "#% more Maximum Life",
         "type": "explicit",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_1214601201",
+        "text": "#% more Maximum Life",
+        "type": "implicit",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_137377270",
+        "text": "#% more Maximum Life",
+        "type": "implicit",
         "option": null
       }
     ],

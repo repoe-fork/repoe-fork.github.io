@@ -50,6 +50,62 @@
   {
     "English": null,
     "ids": [
+      "map_drop_scaling_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "El [AtlasDropScaling|botín del Atlas] de esta área está aumentado un {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "El [AtlasDropScaling|botín del Atlas] de esta área está reducido un {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "map_item_drop_quantity_+%",
       "chart_quantity_voyage_display_stat"
     ],
@@ -288,7 +344,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Los modificadores a la cantidad de objetos encontrados en esta área también se aplican a la rareza",
+        "string": "Los modificadores de [AtlasDropScaling|botín del Atlas] de esta área también se aplican a la rareza de los objetos",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2153,7 +2209,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Los monstruos raros del área arrojan un escarabajo adicional",
+        "string": "Los monstruos raros del área arrojan un [Thread|hilo] adicional",
         "reminder_text": null,
         "is_markup": null
       },
@@ -2171,7 +2227,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Los monstruos raros del área arrojan {0} escarabajos adicionales",
+        "string": "Los monstruos raros del área arrojan {0} [Thread|hilos] adicionales",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3053,6 +3109,42 @@
           []
         ],
         "string": "El área contiene al Vidente sin nombre",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_area_is_tormented"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "El área está [TormentedArea|atormentada]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4888,7 +4980,7 @@
         "index_handlers": [
           []
         ],
-        "string": "En el área caen un {0}% menos de objetos monetarios",
+        "string": "En el área caen un {0}% más de objetos monetarios",
         "reminder_text": null,
         "is_markup": null
       },
@@ -4908,7 +5000,7 @@
             "negate"
           ]
         ],
-        "string": "En el área caen un {0}% más de objetos monetarios",
+        "string": "En el área caen un {0}% menos de objetos monetarios",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5937,42 +6029,6 @@
   {
     "English": null,
     "ids": [
-      "map_harbinger_scarab_empower"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Los heraldos del área generan obeliscos potenciados",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Thai": null,
-    "Traditional Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "map_harbinger_single_currency_type"
     ],
     "trade_stats": null,
@@ -6466,7 +6522,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Los monstruos de Legion se pueden liberar de su inmovilización varias veces\nLos monstruos de Legion ganan dificultad y recompensas por cada vez que sean liberados",
+        "string": "Los monstruos de Legion se pueden liberar de su inmovilización varias veces\nLos monstruos de Legion ganan dificultad y recompensas aumentadas por cada vez que sean liberados",
         "reminder_text": null,
         "is_markup": null
       }
@@ -7462,7 +7518,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Los monstruos raros que sean habitantes naturales están aprisionados por esencias",
+        "string": "Los monstruos raros que sean habitantes naturales están [Calcified|calcificados]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -7619,12 +7675,12 @@
           }
         ],
         "format": [
-          "ignore"
+          "#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "Aleatorizar los favores en los altares de Ritual no tiene costo la primera vez",
+        "string": "Aleatorizar favores en los altares de ritual de tus mapas no tiene costo {0} vez adicional",
         "reminder_text": null,
         "is_markup": null
       },
@@ -7642,7 +7698,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Aleatorizar los favores en los altares de Ritual no tiene costo las primeras {0} veces",
+        "string": "Aleatorizar favores en los altares de ritual de tus mapas no tiene costo {0} veces adicionales",
         "reminder_text": null,
         "is_markup": null
       }
@@ -7896,7 +7952,7 @@
         "index_handlers": [
           []
         ],
-        "string": "En esta área caen un {0}% más de escarabajos",
+        "string": "En el área, caen un {0}% más de [Thread|hilos]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -7916,7 +7972,7 @@
             "negate"
           ]
         ],
-        "string": "En esta área caen un {0}% menos de escarabajos",
+        "string": "En el área, caen un {0}% menos de [Thread|hilos]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -7952,7 +8008,7 @@
         "index_handlers": [
           []
         ],
-        "string": "En el área caen un {0}% más de escarabajos",
+        "string": "En el área, caen un {0}% más de [Thread|hilos]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -7972,7 +8028,7 @@
             "negate"
           ]
         ],
-        "string": "En el área caen un {0}% menos de escarabajos",
+        "string": "En el área, caen un {0}% menos de [Thread|hilos]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -8398,7 +8454,7 @@
             "divide_by_one_hundred_2dp_if_required"
           ]
         ],
-        "string": "{0}% de probabilidad de convertir mapas en escarabajos",
+        "string": "{0}% de probabilidad de que los mapas se conviertan en [Thread|hilos]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -8510,7 +8566,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Los miembros del sindicato inmortal tienen un {0}% de probabilidad de arrojar un escarabajo adicional cuando mueren",
+        "string": "Los miembros del Sindicato inmortal tienen un {0}% de probabilidad de arrojar un [Thread|hilo] adicional al ser derrotados",
         "reminder_text": null,
         "is_markup": null
       },
@@ -8528,7 +8584,43 @@
         "index_handlers": [
           []
         ],
-        "string": "Los miembros del sindicato inmortal arrojan un escarabajo adicional cuando mueren",
+        "string": "Los miembros del Sindicato inmortal arrojan un [Thread|hilo] adicional al ser derrotados",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_terror_shrines"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "El área está dominada por [TerrorShrines|santuarios de terror]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -14312,6 +14404,18 @@
         "id": "explicit.stat_2783958145",
         "text": "#% more Maximum Life",
         "type": "explicit",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_1214601201",
+        "text": "#% more Maximum Life",
+        "type": "implicit",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_137377270",
+        "text": "#% more Maximum Life",
+        "type": "implicit",
         "option": null
       }
     ],

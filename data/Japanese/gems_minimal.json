@@ -132,6 +132,146 @@
   },
   {
     "active_skill": {
+      "description": "周囲のエリアに敵に短いが強力な火継続ダメージのデバフを付与する火球を前方に放つ。",
+      "display_name": "光輝のファイヤーボール",
+      "id": "fireball_alt_x",
+      "is_manually_casted": true,
+      "is_skill_totem": false,
+      "stat_conversions": {
+        "fireball_cast_speed_+%": "base_cast_speed_+%",
+        "fireball_damage_+%": "damage_+%",
+        "fireball_and_rolling_magma_modifiers_to_projectile_count_do_not_apply": "modifiers_to_projectile_count_do_not_apply",
+        "fireball_and_rolling_magma_active_skill_area_of_effect_+%_final": "active_skill_area_of_effect_+%_final"
+      },
+      "types": [
+        "Projectile",
+        "ProjectilesFromUser",
+        "Spell",
+        "Damage",
+        "Area",
+        "Trappable",
+        "Totemable",
+        "Mineable",
+        "Multicastable",
+        "Triggerable",
+        "CanRapidFire",
+        "AreaSpell",
+        "DamageOverTime",
+        "Duration",
+        "Fire"
+      ],
+      "weapon_restrictions": [],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "ファイヤーボール",
+      "experience_type": "GemProgression1",
+      "id": "Metadata/Items/Gems/SkillGemFireball",
+      "max_level": 20,
+      "release_state": "released"
+    },
+    "cast_time": 750,
+    "color": "b",
+    "display_name": "光輝のファイヤーボール",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [
+        {
+          "stat": "基礎半径は{active_skill_base_area_of_effect_radius/locations_to_metres}m",
+          "stats": {
+            "active_skill_base_area_of_effect_radius": 100
+          }
+        }
+      ],
+      "stat_requirements": {
+        "int": null,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "active_skill_projectile_speed_+%_final": "投射物スピードが70%低下する",
+        "base_skill_effect_duration": "基礎持続時間は1.00秒",
+        "quality_display_active_skill_ignite_damage_is_gem": "",
+        "spell_damage_modifiers_apply_to_skill_dot": "スペルダメージのモッドはこのスキルの継続ダメージ効果にも適用される"
+      },
+      "stats": [
+        {
+          "id": "base_fire_damage_to_deal_per_minute",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "active_skill_projectile_speed_+%_final",
+          "type": "constant",
+          "value": -70
+        },
+        {
+          "id": "base_skill_effect_duration",
+          "type": "constant",
+          "value": 1000
+        },
+        {
+          "id": "active_skill_base_area_of_effect_radius",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "base_is_projectile",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "quality_display_active_skill_ignite_damage_is_gem",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "spell_damage_modifiers_apply_to_skill_dot",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "base_fire_damage_to_deal_per_minute",
+      "base_skill_effect_duration",
+      "spell_damage_modifiers_apply_to_skill_dot",
+      "active_skill_base_area_of_effect_radius",
+      "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius\nactive_skill_area_of_effect_radius",
+      "quality_display_active_skill_ignite_damage_is_gem",
+      "active_skill_projectile_speed_+%_final"
+    ],
+    "tags": [
+      "intelligence",
+      "grants_active_skill",
+      "projectile",
+      "spell",
+      "area",
+      "duration",
+      "fire"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": "alt_x",
+    "support_gem": null
+  },
+  {
+    "active_skill": {
       "description": "使用者の周囲に立て続けにファイヤーボールを螺旋状に打ち出す。",
       "display_name": "ヴァールファイヤーボール",
       "id": "vaal_fireball",
@@ -3020,7 +3160,7 @@
       "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "近くの敵1体ごとに半径 +{cleave_+1_base_radius_per_nearby_enemy_up_to_10/locations_to_metres}m、最大+1m",
+          "stat": "近くの敵1体ごとに半径 {cleave_+1_base_radius_per_nearby_enemy_up_to_10/locations_to_metres}m、最大+1m",
           "stats": {
             "cleave_+1_base_radius_per_nearby_enemy_up_to_10": 50
           }
@@ -3146,7 +3286,7 @@
       "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "アタックのヒット時に憤怒を{gain_x_rage_on_attack_hit}獲得する",
+          "stat": "アタックヒット時に憤怒を{gain_x_rage_on_attack_hit}獲得する",
           "stats": {
             "gain_x_rage_on_attack_hit": 50
           }
@@ -3160,7 +3300,7 @@
       "stat_text": {
         "active_skill_merged_damage_+%_final_while_dual_wielding": "二刀流中にそれぞれの武器の60%のダメージを与える",
         "chain_strike_cone_radius_+_per_x_rage": "憤怒5ごとに効果半径 0.1m",
-        "gain_x_rage_on_attack_hit": "アタックのヒット時に憤怒を2獲得する"
+        "gain_x_rage_on_attack_hit": "アタックヒット時に憤怒を2獲得する"
       },
       "stats": [
         {
@@ -5624,7 +5764,7 @@
       "stat_text": {
         "frenzy_skill_attack_damage_+%_final_per_frenzy_charge\nquality_display_frenzy_is_gem": "フレンジーチャージ1個ごとにアタックダメージが5%上昇する",
         "frenzy_skill_attack_speed_+%_final_per_frenzy_charge\nquality_display_active_skill_attack_speed_per_frenzy_is_gem": "フレンジーチャージ1個ごとにアタックスピードが5%上昇する",
-        "frenzy_consume_charges_to_onslaught_for_ms_per_charge": "フレンジーチャージが最大数の時にヒット時に全てのフレンジーチャージを消費し、消費したチャージ1個ごとに1秒間猛攻を獲得する"
+        "frenzy_consume_charges_to_onslaught_for_ms_per_charge": "フレンジーチャージが最大数の時にヒット時に全てのフレンジーチャージを消費し、消費したチャージ1個ごとに1秒間[Onslaught|猛攻]を獲得する"
       },
       "stats": [
         {
@@ -6325,8 +6465,8 @@
     },
     "tooltip_order": [
       "spell_minimum_base_fire_damage\nspell_maximum_base_fire_damage",
-      "corpse_explosion_monster_life_permillage_fire",
       "volatile_dead_base_number_of_corpses_to_consume",
+      "corpse_explosion_monster_life_permillage_fire",
       "active_skill_base_area_of_effect_radius",
       "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius",
       "volatile_dead_core_movement_speed_+%",
@@ -6489,8 +6629,8 @@
     "tooltip_order": [
       "base_skill_effect_duration",
       "spell_minimum_base_fire_damage\nspell_maximum_base_fire_damage",
-      "corpse_explosion_monster_life_permillage_fire",
       "volatile_dead_base_number_of_corpses_to_consume",
+      "corpse_explosion_monster_life_permillage_fire",
       "active_skill_base_area_of_effect_radius",
       "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius\nactive_skill_area_of_effect_radius",
       "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius",
@@ -6646,8 +6786,8 @@
     },
     "tooltip_order": [
       "spell_minimum_base_fire_damage\nspell_maximum_base_fire_damage",
-      "corpse_explosion_monster_life_permillage_fire",
       "volatile_dead_base_number_of_corpses_to_consume",
+      "corpse_explosion_monster_life_permillage_fire",
       "active_skill_base_area_of_effect_radius",
       "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius",
       "volatile_dead_core_movement_speed_+%",
@@ -8947,9 +9087,9 @@
     "tooltip_order": [
       "base_chaos_damage_to_deal_per_minute",
       "base_skill_effect_duration",
+      "skill_physical_damage_%_to_convert_to_chaos",
       "projectile_damage_modifiers_apply_to_skill_dot",
-      "active_skill_base_radius_+",
-      "skill_physical_damage_%_to_convert_to_chaos"
+      "active_skill_base_radius_+"
     ],
     "tags": [
       "dexterity",
@@ -9086,8 +9226,8 @@
       "damage_multiplier": null
     },
     "tooltip_order": [
-      "active_skill_base_radius_+",
       "skill_physical_damage_%_to_convert_to_chaos",
+      "active_skill_base_radius_+",
       "base_chance_to_poison_on_hit_%"
     ],
     "tags": [
@@ -9229,7 +9369,7 @@
       "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "アタックスピード{attack_speed_+%_granted_from_skill}％増加を付与する",
+          "stat": "アタックスピード{attack_speed_+%_granted_from_skill}%増加を付与する",
           "stats": {
             "attack_speed_+%_granted_from_skill": 250
           }
@@ -11113,7 +11253,7 @@
       "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "ヒット時に{add_frenzy_charge_on_skill_hit_%}%の確率でフレンジーチャージを1個付与する",
+          "stat": "ヒット時に{add_frenzy_charge_on_skill_hit_%}%の確率でフレンジーチャージを1個獲得する",
           "stats": {
             "add_frenzy_charge_on_skill_hit_%": 500
           }
@@ -11126,7 +11266,7 @@
       },
       "stat_text": {
         "base_attack_speed_+%_per_frenzy_charge": "フレンジーチャージ1個ごとにアタックスピードが10%増加する",
-        "add_frenzy_charge_on_skill_hit_%": "ヒット時に15%の確率でフレンジーチャージを1個付与する",
+        "add_frenzy_charge_on_skill_hit_%": "ヒット時に15%の確率でフレンジーチャージを1個獲得する",
         "flicker_strike_buff_movement_speed_+%": "バフは移動スピード20%増加を付与する",
         "base_skill_effect_duration": "基礎持続時間は3.00秒"
       },
@@ -11405,7 +11545,7 @@
       "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "ヒット時に{add_frenzy_charge_on_skill_hit_%}%の確率でフレンジーチャージを1個付与する",
+          "stat": "ヒット時に{add_frenzy_charge_on_skill_hit_%}%の確率でフレンジーチャージを1個獲得する",
           "stats": {
             "add_frenzy_charge_on_skill_hit_%": 500
           }
@@ -11418,7 +11558,7 @@
       },
       "stat_text": {
         "base_attack_speed_+%_per_frenzy_charge": "フレンジーチャージ1個ごとにアタックスピードが10%増加する",
-        "add_frenzy_charge_on_skill_hit_%": "ヒット時に30%の確率でフレンジーチャージを1個付与する",
+        "add_frenzy_charge_on_skill_hit_%": "ヒット時に30%の確率でフレンジーチャージを1個獲得する",
         "base_melee_attack_repeat_count": "このアタックは25回繰り返す",
         "active_skill_ailment_damage_+%_final": "状態異常のダメージが70%低下する"
       },
@@ -12598,7 +12738,7 @@
         "dex": null
       },
       "stat_text": {
-        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップの持続時間 4秒",
+        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップは4秒持続する",
         "disable_skill_if_melee_attack": "サポートされたアタックスキルは近接武器で使用することができない"
       },
       "stats": [
@@ -13139,8 +13279,8 @@
     },
     "tooltip_order": [
       "base_skill_effect_duration",
-      "corpse_explosion_monster_life_%",
       "skill_physical_damage_%_to_convert_to_fire",
+      "corpse_explosion_monster_life_%",
       "active_skill_base_area_of_effect_radius",
       "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius",
       "infernal_blow_explosion_damage_%_of_total_per_stack\nquality_display_infernal_blow_is_gem"
@@ -13432,8 +13572,8 @@
       "damage_multiplier": null
     },
     "tooltip_order": [
-      "base_chance_to_freeze_%",
       "skill_physical_damage_%_to_convert_to_cold",
+      "base_chance_to_freeze_%",
       "glacial_hammer_third_hit_freeze_as_though_dealt_damage_+%",
       "cold_ailment_duration_+%",
       "cold_ailment_effect_+%"
@@ -13508,7 +13648,7 @@
       "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "クリティカルダメージ倍率が{base_critical_strike_multiplier_+}%される",
+          "stat": "クリティカルダメージ倍率 {base_critical_strike_multiplier_+}%",
           "stats": {
             "base_critical_strike_multiplier_+": 2000
           }
@@ -13558,8 +13698,8 @@
       "damage_multiplier": null
     },
     "tooltip_order": [
-      "base_critical_strike_multiplier_+",
       "skill_physical_damage_%_to_convert_to_cold",
+      "base_critical_strike_multiplier_+",
       "glacial_hammer_third_hit_always_crits"
     ],
     "tags": [
@@ -13720,9 +13860,9 @@
     },
     "tooltip_order": [
       "base_skill_effect_duration",
+      "skill_physical_damage_%_to_convert_to_cold",
       "modifiers_to_skill_effect_duration_also_affect_soul_prevention_duration",
       "base_chance_to_freeze_%",
-      "skill_physical_damage_%_to_convert_to_cold",
       "freeze_as_though_dealt_damage_+%",
       "global_always_hit",
       "cold_ailment_duration_+%",
@@ -15429,7 +15569,7 @@
       "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "サポートされたスキルにより撃破された敵がドロップするアイテムのレアリティが{base_killed_monster_dropped_item_rarity_+%}%増加する",
+          "stat": "サポートされたスキルで倒した敵のドロップしたアイテムの[PlayerItemRarity|レアリティ] {base_killed_monster_dropped_item_rarity_+%}%",
           "stats": {
             "base_killed_monster_dropped_item_rarity_+%": 500
           }
@@ -15563,7 +15703,7 @@
       "letter": "f",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "即座に発動しないスペルをサポートする。",
+      "support_text": "即座発動以外のスペルをサポートする。",
       "excluded_types": [
         "Instant",
         "FixedCastTime"
@@ -17010,8 +17150,8 @@
     "tooltip_order": [
       "spell_minimum_base_lightning_damage\nspell_maximum_base_lightning_damage",
       "base_cast_speed_+%",
-      "skill_effect_duration_+%",
-      "max_number_of_lightning_warp_markers"
+      "max_number_of_lightning_warp_markers",
+      "skill_effect_duration_+%"
     ],
     "tags": [
       "intelligence",
@@ -18239,9 +18379,9 @@
       },
       "stat_text": {
         "base_skill_effect_duration": "基礎持続時間は3.00秒",
-        "base_max_number_of_dominated_normal_monsters": "ノーマルの支配のセンチネルの最大召喚数 9",
-        "base_max_number_of_dominated_magic_monsters": "マジックの支配のセンチネルの最大召喚数 3",
-        "base_max_number_of_dominated_rare_monsters": "レアの支配のセンチネルの最大召喚数 1",
+        "base_max_number_of_dominated_normal_monsters": "ノーマルの支配のセンチネル最大召喚数 9",
+        "base_max_number_of_dominated_magic_monsters": "マジックの支配のセンチネル最大召喚数 3",
+        "base_max_number_of_dominated_rare_monsters": "レアの支配のセンチネル最大召喚数 1",
         "base_secondary_skill_effect_duration": "サブの基礎持続時間は30.00秒",
         "dominating_blow_chance_to_summon_on_hitting_unqiue_%": "レアまたはユニークのモンスターへのヒット時に25%の確率でノーマルの支配のセンチネルを召喚する"
       },
@@ -18409,9 +18549,9 @@
       },
       "stat_text": {
         "base_skill_effect_duration": "基礎持続時間は3.00秒",
-        "base_max_number_of_dominated_normal_monsters": "ノーマルの支配のセンチネルの最大召喚数 6",
-        "base_max_number_of_dominated_magic_monsters": "マジックの支配のセンチネルの最大召喚数 3",
-        "base_max_number_of_dominated_rare_monsters": "レアの支配のセンチネルの最大召喚数 1",
+        "base_max_number_of_dominated_normal_monsters": "ノーマルの支配のセンチネル最大召喚数 6",
+        "base_max_number_of_dominated_magic_monsters": "マジックの支配のセンチネル最大召喚数 3",
+        "base_max_number_of_dominated_rare_monsters": "レアの支配のセンチネル最大召喚数 1",
         "base_secondary_skill_effect_duration": "サブの基礎持続時間は30.00秒",
         "active_skill_additive_minion_damage_modifiers_apply_to_all_damage_at_%_value": "ミニオンダメージの増減はその数値の250%がこのスキルのダメージにも適用される"
       },
@@ -18959,7 +19099,7 @@
       "stat_text": {
         "rain_of_arrows_additional_sequences": "矢の雨を追加で4回放つ",
         "maim_effect_+%": "重傷の効果が150%増加する",
-        "global_maim_on_hit": "ヒット時に重傷を与える",
+        "global_maim_on_hit": "ヒット時に重傷を付与する",
         "global_always_hit": "回避されない"
       },
       "stats": [
@@ -19846,7 +19986,7 @@
       "letter": "L",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "近接アタックスキルをサポートする。敵を出血状態にすることはできないが、すでに出血状態の敵にはより大きなダメージを与えることができる。",
+      "support_text": "近接アタックスキルをサポートする。すでに出血状態の敵に与えるダメージが上昇するが、そのスキルでどのような方法でも出血を付与できなくなる。",
       "excluded_types": null,
       "added_types": null,
       "added_minion_types": null
@@ -20970,8 +21110,8 @@
     },
     "tooltip_order": [
       "spell_minimum_base_lightning_damage\nspell_maximum_base_lightning_damage",
-      "base_chance_to_shock_%",
       "number_of_chains",
+      "base_chance_to_shock_%",
       "shield_spell_block_%",
       "skill_display_buff_grants_shock_immunity"
     ],
@@ -21110,9 +21250,9 @@
       "base_skill_effect_duration",
       "active_skill_always_reserves_unmodifiable_X%_of_mana",
       "skill_has_added_lightning_damage_equal_to_%_of_maximum_mana",
+      "mana_infused_staff_base_trigger_interval_ms",
       "active_skill_buff_mana_cost_+%_final_to_grant",
-      "active_skill_buff_block_chance_+%_final_to_grant",
-      "mana_infused_staff_base_trigger_interval_ms"
+      "active_skill_buff_block_chance_+%_final_to_grant"
     ],
     "tags": [
       "intelligence",
@@ -21271,9 +21411,9 @@
       "base_skill_effect_duration",
       "skill_effect_duration_+%",
       "display_this_skill_cooldown_does_not_recover_during_buff",
-      "base_physical_damage_reduction_rating",
       "molten_shell_damage_absorbed_%\nmolten_shell_damage_absorb_limit_%_of_armour\nmolten_shell_max_damage_absorbed",
-      "molten_shell_%_of_absorbed_damage_dealt_as_reflected_fire"
+      "molten_shell_%_of_absorbed_damage_dealt_as_reflected_fire",
+      "base_physical_damage_reduction_rating"
     ],
     "tags": [
       "strength",
@@ -21441,9 +21581,9 @@
       "base_skill_effect_duration",
       "skill_effect_duration_+%",
       "modifiers_to_skill_effect_duration_also_affect_soul_prevention_duration",
-      "base_physical_damage_reduction_rating",
       "molten_shell_damage_absorbed_%\nmolten_shell_damage_absorb_limit_%_of_armour\nmolten_shell_max_damage_absorbed",
-      "molten_shell_%_of_absorbed_damage_dealt_as_reflected_fire\ndisplay_vaal_molten_shell_alternate_description"
+      "molten_shell_%_of_absorbed_damage_dealt_as_reflected_fire\ndisplay_vaal_molten_shell_alternate_description",
+      "base_physical_damage_reduction_rating"
     ],
     "tags": [
       "strength",
@@ -21509,7 +21649,7 @@
       "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "パワーチャージ1個ごとにクリティカルダメージ倍率が{critical_strike_multiplier_+_per_power_charge}%される",
+          "stat": "パワーチャージ1個ごとにクリティカルダメージ倍率 {critical_strike_multiplier_+_per_power_charge}%",
           "stats": {
             "critical_strike_multiplier_+_per_power_charge": 500
           }
@@ -21522,7 +21662,7 @@
       },
       "stat_text": {
         "chance_to_gain_power_charge_on_rare_or_unique_enemy_hit_%": "投射物がレアまたはユニークの敵にヒットを与えた時に20%の確率でパワーチャージを1個獲得する",
-        "critical_strike_multiplier_+_per_power_charge": "パワーチャージ1個ごとにクリティカルダメージ倍率が+20%される",
+        "critical_strike_multiplier_+_per_power_charge": "パワーチャージ1個ごとにクリティカルダメージ倍率 +20%",
         "critical_strike_chance_+%_final_per_power_charge_from_power_siphon": "パワーチャージ1個ごとにクリティカル率が10%上昇する",
         "active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value\nquality_display_spell_damage_to_attack_damage_is_gem": "150%のアーケインマイト",
         "kill_enemy_on_hit_if_under_10%_life": "カリングストライク"
@@ -21812,7 +21952,7 @@
       "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "パワーチャージ1個ごとにクリティカルダメージ倍率が{critical_strike_multiplier_+_per_power_charge}%される",
+          "stat": "パワーチャージ1個ごとにクリティカルダメージ倍率 {critical_strike_multiplier_+_per_power_charge}%",
           "stats": {
             "critical_strike_multiplier_+_per_power_charge": 500
           }
@@ -21825,7 +21965,7 @@
       },
       "stat_text": {
         "chance_to_gain_power_charge_on_rare_or_unique_enemy_hit_%": "投射物がレアまたはユニークの敵にヒットを与えた時にパワーチャージを1個獲得する",
-        "critical_strike_multiplier_+_per_power_charge": "パワーチャージ1個ごとにクリティカルダメージ倍率が+25%される",
+        "critical_strike_multiplier_+_per_power_charge": "パワーチャージ1個ごとにクリティカルダメージ倍率 +25%",
         "critical_strike_chance_+%_final_per_power_charge_from_power_siphon": "パワーチャージ1個ごとにクリティカル率が20%上昇する",
         "active_skill_additive_spell_damage_modifiers_apply_to_attack_damage_at_%_value\nquality_display_spell_damage_to_attack_damage_is_gem": "150%のアーケインマイト",
         "power_siphon_fire_at_all_targets": "近くの敵それぞれに投射物を放つ",
@@ -24072,8 +24212,8 @@
       "damage_multiplier": null
     },
     "tooltip_order": [
-      "base_chance_to_ignite_%",
       "skill_physical_damage_%_to_convert_to_fire",
+      "base_chance_to_ignite_%",
       "active_skill_ignite_damage_+%_final\nquality_display_active_skill_ignite_damage_is_gem"
     ],
     "tags": [
@@ -24190,8 +24330,8 @@
     },
     "tooltip_order": [
       "added_fire_damage_to_attacks_equal_to_%_maximum_life",
-      "base_chance_to_ignite_%",
       "skill_physical_damage_%_to_convert_to_fire",
+      "base_chance_to_ignite_%",
       "active_skill_ignite_damage_+%_final\nquality_display_active_skill_ignite_damage_is_gem"
     ],
     "tags": [
@@ -24332,9 +24472,9 @@
       "damage_multiplier": null
     },
     "tooltip_order": [
-      "base_chance_to_ignite_%",
       "projectile_base_number_of_targets_to_pierce",
       "skill_physical_damage_%_to_convert_to_fire",
+      "base_chance_to_ignite_%",
       "global_always_hit",
       "active_skill_ignite_damage_+%_final\nquality_display_active_skill_ignite_damage_is_gem"
     ],
@@ -24454,7 +24594,7 @@
       "letter": "S",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "敵にヒットするスキルまたは元素状態異常を引き起こすスペルをサポートする。",
+      "support_text": "敵にヒットするスキルまたは元素状態異常を引き起こすスキルをサポートする。",
       "excluded_types": null,
       "added_types": [
         "Area"
@@ -24547,7 +24687,7 @@
       "letter": "B",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "マナをリザーブする、ブレッシングタイプのスキルをサポートする。",
+      "support_text": "リザーブするブレッシング以外のスキルをサポートする。",
       "excluded_types": [
         "Blessing"
       ],
@@ -24872,7 +25012,7 @@
       "letter": "X",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "敵にヒットを与えるスキルをサポートする。敵がこのスキルで攻撃された後、残りのライフが10%以下になると、その敵は死亡する。",
+      "support_text": "敵にヒットを与えるスキルをサポートする。このスキルのヒットを受けた後に敵のライフが最大ライフの10%以下になる場合、その敵を即座に倒すようになる",
       "excluded_types": null,
       "added_types": null,
       "added_minion_types": null
@@ -25040,7 +25180,7 @@
       "letter": "i",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "投射物を放つアタックスキルをサポートする。筋力から来る物理近接ダメージを増加すると、物理投射物ダメージも増加する。",
+      "support_text": "投射物を放つアタックスキルをサポートする。筋力由来の物理近接ダメージの増加により、物理投射物ダメージも増加するようになる。",
       "excluded_types": null,
       "added_types": null,
       "added_minion_types": null
@@ -25126,7 +25266,7 @@
       "letter": "w",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "スペルスキルをサポートする。筋力による物理近接ダメージを増加すると、スペルダメージも増加する。",
+      "support_text": "スペルスキルをサポートする。筋力由来の物理近接ダメージの増加により、スペルダメージも増加するようになる。",
       "excluded_types": null,
       "added_types": null,
       "added_minion_types": null
@@ -25201,7 +25341,7 @@
       "letter": "f",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "アタックスキルをサポートする。ライフが満タンの時に、サポートされたスキルによって与えられたダメージ全てにボーナスが付与される。",
+      "support_text": "アタックスキルをサポートする。フルライフ状態の間、サポートされたスキルによって与えられたすべてのダメージにボーナスを付与する。",
       "excluded_types": null,
       "added_types": null,
       "added_minion_types": null
@@ -25275,6 +25415,11 @@
         },
         {
           "id": "is_totem",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "skill_is_spell_totemified",
           "type": "implicit",
           "value": 1
         }
@@ -25918,7 +26063,7 @@
       "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "トーテムライフが{totem_life_+%_final}%上昇する",
+          "stat": "トーテムのライフが{totem_life_+%_final}%上昇する",
           "stats": {
             "totem_life_+%_final": 1000
           }
@@ -26618,7 +26763,7 @@
         "dex": null
       },
       "stat_text": {
-        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップの持続時間 4秒",
+        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップは4秒持続する",
         "traps_do_not_explode_on_timeout": "トラップは持続時間終了時に作動しない",
         "is_trap": ""
       },
@@ -26743,7 +26888,7 @@
         "dex": null
       },
       "stat_text": {
-        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップの持続時間 4秒",
+        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップは4秒持続する",
         "bear_trap_damage_taken_+%_from_traps_and_mines": "敵はトラップまたはマインのヒットから受けるダメージが25%増加する",
         "bear_trap_movement_speed_+%_final": "デバフが開始した時に敵の移動スピードが80%低下する",
         "base_skill_effect_duration": "基礎持続時間は3.00秒",
@@ -26920,7 +27065,7 @@
         "dex": null
       },
       "stat_text": {
-        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップの持続時間 4秒",
+        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップは4秒持続する",
         "impale_on_hit_%_chance": "ヒット時に敵を串刺しにする",
         "apply_enemy_impale_damage_to_nearby_enemies_on_killing_blow_%_chance": "キリングブローは敵に付与した串刺しを周囲の敵に反射ダメージとして与える",
         "no_movement_speed": "敵をその場に固定する",
@@ -27164,7 +27309,7 @@
       "damage_effectiveness": 160,
       "quality_stats": [
         {
-          "stat": "トラップ作動範囲が{trap_trigger_radius_+%}%増加する",
+          "stat": "トラップトリガーの効果範囲が{trap_trigger_radius_+%}%増加する",
           "stats": {
             "trap_trigger_radius_+%": 4000
           }
@@ -27176,7 +27321,7 @@
         "dex": null
       },
       "stat_text": {
-        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップの持続時間 4秒",
+        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップは4秒持続する",
         "base_skill_effect_duration": "基礎持続時間は1.75秒",
         "spell_damage_modifiers_apply_to_skill_dot": "スペルダメージのモッドはこのスキルの継続ダメージ効果にも適用される",
         "is_trap": ""
@@ -27348,7 +27493,7 @@
       "damage_effectiveness": 160,
       "quality_stats": [
         {
-          "stat": "トラップ作動範囲が{trap_trigger_radius_+%}%増加する",
+          "stat": "トラップトリガーの効果範囲が{trap_trigger_radius_+%}%増加する",
           "stats": {
             "trap_trigger_radius_+%": 4000
           }
@@ -27360,7 +27505,7 @@
         "dex": null
       },
       "stat_text": {
-        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップの持続時間 4秒",
+        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップは4秒持続する",
         "trap_%_chance_to_trigger_twice": "50%の確率でトラップが追加で1回作動する",
         "is_trap": ""
       },
@@ -27614,10 +27759,10 @@
       "base_fire_damage_to_deal_per_minute",
       "base_skill_effect_duration",
       "spell_minimum_base_fire_damage\nspell_maximum_base_fire_damage",
-      "is_trap",
-      "throw_traps_in_circle_radius",
       "number_of_additional_traps_allowed",
-      "number_of_additional_traps_to_throw"
+      "number_of_additional_traps_to_throw",
+      "is_trap",
+      "throw_traps_in_circle_radius"
     ],
     "tags": [
       "trap",
@@ -27677,7 +27822,7 @@
       "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "トーテムライフが{totem_life_+%_final}%上昇する",
+          "stat": "トーテムのライフが{totem_life_+%_final}%上昇する",
           "stats": {
             "totem_life_+%_final": 1000
           }
@@ -27810,7 +27955,7 @@
       "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "トーテムライフが{totem_life_+%_final}%上昇する",
+          "stat": "トーテムのライフが{totem_life_+%_final}%上昇する",
           "stats": {
             "totem_life_+%_final": 1000
           }
@@ -27947,7 +28092,7 @@
       "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "投射物のスピードが{active_skill_projectile_speed_+%_final}%上昇する",
+          "stat": "投射物スピードが{active_skill_projectile_speed_+%_final}%上昇する",
           "stats": {
             "active_skill_projectile_speed_+%_final": 1000
           }
@@ -28096,7 +28241,7 @@
       },
       "stat_text": {
         "maximum_number_of_blades_left_in_ground": "一度に最大40の残存する刃を地面に残せる",
-        "ethereal_knives_blade_left_in_ground_for_every_X_projectiles": "放たれたそれぞれの投射物は残存する刃として地面に残る",
+        "ethereal_knives_blade_left_in_ground_for_every_X_projectiles": "放たれたそれぞれの投射物が残存する刃として地面に残る",
         "base_skill_effect_duration": "基礎持続時間は6.00秒"
       },
       "stats": [
@@ -28349,7 +28494,7 @@
       "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "盲目の効果が{blind_effect_+%}%増加する",
+          "stat": "[Blind|盲目]の効果が{blind_effect_+%}%増加する",
           "stats": {
             "blind_effect_+%": 500
           }
@@ -28361,7 +28506,7 @@
         "dex": null
       },
       "stat_text": {
-        "global_chance_to_blind_on_hit_%": "サポートされたスキルは10%の確率でヒット時に敵を盲目にする"
+        "global_chance_to_blind_on_hit_%": "サポートされたスキルは10%の確率でヒット時に敵を[Blind|盲目]にする"
       },
       "stats": [
         {
@@ -29018,8 +29163,8 @@
       "spell_minimum_base_cold_damage\nspell_maximum_base_cold_damage",
       "base_skill_effect_duration",
       "base_cold_damage_to_deal_per_minute",
-      "spell_damage_modifiers_apply_to_skill_dot",
       "modifiers_to_projectile_count_do_not_apply",
+      "spell_damage_modifiers_apply_to_skill_dot",
       "active_skill_base_area_of_effect_radius",
       "active_skill_base_secondary_area_of_effect_radius",
       "arctic_breath_maximum_number_of_skulls_allowed",
@@ -29106,7 +29251,7 @@
         "dex": 0
       },
       "stat_text": {
-        "arc_damage_+%_final_for_each_remaining_chain": "残りの連鎖回数1回ごとにヒットと状態異常のダメージが15%上昇する"
+        "arc_damage_+%_final_for_each_remaining_chain": "連鎖の残り回数の数ごとにヒットと状態異常のダメージが15%上昇する"
       },
       "stats": [
         {
@@ -29372,7 +29517,7 @@
         "dex": 0
       },
       "stat_text": {
-        "arc_damage_+%_final_for_each_remaining_chain": "残りの連鎖回数1回ごとにヒットと状態異常のダメージが50%上昇する",
+        "arc_damage_+%_final_for_each_remaining_chain": "連鎖の残り回数の数ごとにヒットと状態異常のダメージが50%上昇する",
         "number_of_chains": "+6回連鎖する"
       },
       "stats": [
@@ -29511,7 +29656,7 @@
         "base_chance_to_shock_%": "100%の確率で敵を感電させる",
         "lightning_ailment_effect_+%": "雷系状態異常の効果が100%増加する",
         "lightning_ailment_duration_+%": "雷系状態異常の持続時間が100%増加する",
-        "arc_damage_+%_final_for_each_remaining_chain": "残りの連鎖回数1回ごとにヒットと状態異常のダメージが15%上昇する",
+        "arc_damage_+%_final_for_each_remaining_chain": "連鎖の残り回数の数ごとにヒットと状態異常のダメージが15%上昇する",
         "base_skill_effect_duration": "基礎持続時間は4.00秒"
       },
       "stats": [
@@ -29595,8 +29740,8 @@
       "spell_minimum_base_lightning_damage\nspell_maximum_base_lightning_damage",
       "lightning_ailment_duration_+%",
       "base_skill_effect_duration",
-      "base_chance_to_shock_%",
       "number_of_chains",
+      "base_chance_to_shock_%",
       "arc_damage_+%_final_for_each_remaining_chain",
       "lightning_ailment_effect_+%"
     ],
@@ -30002,10 +30147,10 @@
       "base_skill_effect_duration",
       "skill_effect_duration_+%",
       "modifiers_to_skill_effect_duration_also_affect_soul_prevention_duration",
-      "base_mana_regeneration_rate_per_minute",
-      "base_energy_shield_regeneration_rate_per_minute",
       "vaal_arctic_armour_damage_taken_+%_final_from_hits",
-      "vaal_arctic_armour_number_of_hits_absorbed"
+      "vaal_arctic_armour_number_of_hits_absorbed",
+      "base_mana_regeneration_rate_per_minute",
+      "base_energy_shield_regeneration_rate_per_minute"
     ],
     "tags": [
       "dexterity",
@@ -30179,9 +30324,9 @@
       "always_pierce",
       "base_totem_duration",
       "base_number_of_projectiles",
+      "skill_physical_damage_%_to_convert_to_fire",
       "is_totem",
       "base_projectile_speed_+%",
-      "skill_physical_damage_%_to_convert_to_fire",
       "consecrated_ground_immune_to_curses"
     ],
     "tags": [
@@ -30366,10 +30511,10 @@
       "spell_minimum_base_physical_damage\nspell_maximum_base_physical_damage",
       "always_pierce",
       "base_totem_duration",
-      "is_totem",
       "holy_flame_totem_consecrated_ground_area_+%",
       "modifiers_to_projectile_count_do_not_apply",
       "skill_physical_damage_%_to_convert_to_fire",
+      "is_totem",
       "active_skill_projectile_speed_+%_final",
       "consecrated_ground_immune_to_curses"
     ],
@@ -31151,7 +31296,7 @@
       "letter": "Y",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "投射物スキルをサポートし、その投射物が敵に当たった際に貫通しなかった場合、2個の投射物に分岐させる。",
+      "support_text": "投射物スキルをサポートし、その投射物が敵に最初にヒットしたが貫通しなかった時に投射物が二個の投射物に分岐するようにする。",
       "excluded_types": null,
       "added_types": null,
       "added_minion_types": null
@@ -32700,7 +32845,7 @@
         "cyclone_movement_speed_+%_final_per_stage": "ステージごと移動スピードが10%低下する",
         "cyclone_attack_speed_+%_final_per_stage": "ステージごとにアタックスピードが25%上昇する",
         "cyclone_gain_stage_every_x_ms_while_channelling": "チャネリング中0.4秒ごとにステージを1獲得する",
-        "cyclone_max_number_of_stages": "最大ステージ数 5"
+        "cyclone_max_number_of_stages": "ステージの最大数 5"
       },
       "stats": [
         {
@@ -33061,7 +33206,7 @@
       "letter": "3",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "近接アタックスキルをサポートし、スキル使用時に2回繰り返す。それぞれの攻撃対象はランダムに選択される。ヴァ―ルスキル、チャネリングスキル、トラベルスキル、報復スキル、トリガーされるスキルはサポートされない。",
+      "support_text": "近接アタックスキルをサポートし、スキル使用時に2回繰り返すようにする。それぞれの攻撃対象はランダムに選択される。ヴァ―ルスキル、チャネリングスキル、トラベルスキル、報復スキル、トリガーされるスキルはサポートできない。",
       "excluded_types": [
         "Vaal",
         "NonRepeatable",
@@ -33169,7 +33314,7 @@
       "letter": "k",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "スペルスキルをサポートし、そのスペルをキャストした際にスキルが繰り返される。ヴァ―ルスキル、トーテムスキル、チャネリングスキル、トリガーされるスキル、即時発動スキル、ブリンクスキルおよびリザーブするスキルはサポートされない。",
+      "support_text": "スペルスキルをサポートし、そのスペルをキャストした時にスペルを繰り返すようにする。ヴァ―ルスキル、トーテムスキル、チャネリングスキル、トリガーされるスキル、即時発動スキル、報復スキル、ブリンクスキルおよびリザーブするスキルはサポートできない。",
       "excluded_types": [
         "SummonsTotem",
         "Trapped",
@@ -33286,7 +33431,7 @@
       "letter": "S",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "近接ストライクスキルをサポートし、近接攻撃がヒットした際、スプラッシュダメージを与える。",
+      "support_text": "近接ストライクスキルをサポートし、近接ストライクでヒットを与えたそれぞれの対象の周囲にスプラッシュダメージを与えるようにする。",
       "excluded_types": null,
       "added_types": [
         "Area"
@@ -33423,7 +33568,7 @@
       "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "召喚できるトーテムの最大数 {number_of_additional_totems_allowed}",
+          "stat": "トーテム最大召喚数 {number_of_additional_totems_allowed}",
           "stats": {
             "number_of_additional_totems_allowed": 100
           }
@@ -33436,7 +33581,7 @@
       },
       "stat_text": {
         "base_totem_duration": "トーテムは8秒持続する",
-        "number_of_additional_totems_allowed": "召喚できるトーテムの最大数 +2",
+        "number_of_additional_totems_allowed": "トーテム最大召喚数 +2",
         "is_totem": "このスキルを使用するトーテム1体を召喚する",
         "spell_damage_modifiers_apply_to_skill_dot": "スペルダメージのモッドはこのスキルの継続ダメージ効果にも適用される"
       },
@@ -33764,7 +33909,7 @@
       "letter": "b",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "敵にヒットするスキルまたは燃焼ダメージを直接与えるスキルをサポートする。",
+      "support_text": "敵にヒットを与えるスキルまたは燃焼ダメージを直接与えるスキルをサポートする。",
       "excluded_types": null,
       "added_types": null,
       "added_minion_types": null
@@ -33936,7 +34081,7 @@
       "letter": "&",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "敵にヒットするスキルと、呪術スキルの両方をサポートしなければならない。もう片方のスキルが敵にヒットした際に、呪術が付与される。トーテム、トラップ、マインで使用されるスキルはサポートできない。ミニオンはこの方法で呪術を付与することはできない。",
+      "support_text": "機能させるには敵にヒットを与えるスキルと、呪術呪いスキルの両方をサポートしなければならない。呪術でないほうのスキルで敵にヒットを当てた時にその敵に呪術を付与する。トーテム、トラップ、マインをサポートできない。ミニオンはこの方法で呪術を付与することはできない。",
       "excluded_types": [
         "Trapped",
         "RemoteMined",
@@ -34420,7 +34565,7 @@
       "letter": "&",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "アタックスキルと、スペルスキルの両方をサポートしなければならない。アタックスキルが敵にクリティカルヒットした際に、スペルスキルをトリガーする。トーテム、トラップおよびマインはサポートできない。ヴァ―ルスキル、チャネリングスキルおよびリザーブするスキルはトリガーされない。",
+      "support_text": "機能させるにはアタックスキルと、スペルスキルの両方をサポートしなければならない。アタックスキルで敵にクリティカルストライクを与えた時に、そのアタックはスペルをトリガーする。トーテム、トラップおよびマインはサポートできない。ヴァ―ルスキル、チャネリングスキルおよびリザーブするスキルはトリガーされない。",
       "excluded_types": [
         "Trapped",
         "RemoteMined",
@@ -34506,7 +34651,7 @@
       "letter": "&",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "近接アタックスキルと、スペルスキルの両方をサポートしなければならない。アタックスキルが敵を倒した際に、スペルスキルをトリガーする。トーテム、トラップおよびマインはサポートされない。ヴァ―ルスキル、チャネリングスキルおよびリザーブするスキルはトリガーされない。",
+      "support_text": "機能させるには近接アタックスキルと、スペルスキルの両方をサポートしなければならない。アタックスキルが敵を倒した時に、そのアタックはスペルスキルをトリガーする。トーテム、トラップおよびマインはサポートされない。ヴァ―ルスキル、チャネリングスキルおよびリザーブするスキルはトリガーされない。",
       "excluded_types": [
         "Trapped",
         "RemoteMined",
@@ -34755,7 +34900,7 @@
         "dex": null
       },
       "stat_text": {
-        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップの持続時間 4秒",
+        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップは4秒持続する",
         "base_number_of_projectiles": "9個の投射物を放つ",
         "base_chance_to_shock_%": "20%の確率で敵を感電させる",
         "projectiles_nova": "放射状に投射物を放つ",
@@ -34936,7 +35081,7 @@
         "dex": null
       },
       "stat_text": {
-        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップの持続時間 4秒",
+        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップは4秒持続する",
         "base_chance_to_shock_%": "20%の確率で敵を感電させる",
         "base_number_of_projectiles": "5個の投射物を放つ",
         "projectile_chain_from_terrain_chance_%": "投射物は地形と衝突した時に連鎖することができる",
@@ -35043,9 +35188,9 @@
       "always_pierce",
       "base_trap_duration\nquality_display_trap_duration_is_gem",
       "base_number_of_projectiles",
+      "number_of_chains",
       "is_trap",
       "base_chance_to_shock_%",
-      "number_of_chains",
       "projectile_chain_from_terrain_chance_%",
       "trap_%_chance_to_trigger_twice",
       "critical_strike_chance_+%_vs_shocked_enemies"
@@ -35132,7 +35277,7 @@
         "dex": null
       },
       "stat_text": {
-        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップの持続時間 4秒",
+        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップは4秒持続する",
         "base_number_of_projectiles": "9個の投射物を放つ",
         "base_skill_effect_duration": "基礎持続時間は4.00秒",
         "shocked_ground_base_magnitude_override": "感電領域は受けるダメージを15%増加させる",
@@ -35279,7 +35424,7 @@
   },
   {
     "active_skill": {
-      "description": "起爆すると使用者をマインの位置にテレポートさせるマインを投げる。脱出地点と到着地点に敵を盲目状態にする煙幕を発生させ、移動スピードに一時的なバフを与える。他のブリンクスキルとクールダウンを共有する。",
+      "description": "起爆すると使用者をマインの位置にテレポートさせるマインを投げる。脱出地点と到着地点に敵を[Blind|盲目]状態にする煙幕を発生させ、移動スピードに一時的なバフを与える。他のブリンクスキルとクールダウンを共有する。",
       "display_name": "スモークマイン",
       "id": "smoke_mine",
       "is_manually_casted": true,
@@ -35422,9 +35567,9 @@
       "additive_mine_duration_modifiers_apply_to_buff_effect_duration",
       "is_remote_mine",
       "disable_mine_detonation_cascade",
-      "base_movement_velocity_+%",
       "mine_cannot_rearm",
-      "mine_detonates_instantly"
+      "mine_detonates_instantly",
+      "base_movement_velocity_+%"
     ],
     "tags": [
       "mine",
@@ -35904,9 +36049,9 @@
     "tooltip_order": [
       "thrown_shield_secondary_projectile_damage_+%_final",
       "off_hand_local_minimum_added_physical_damage\noff_hand_local_maximum_added_physical_damage",
-      "off_hand_minimum_added_physical_damage_per_15_shield_armour_and_evasion_rating\noff_hand_maximum_added_physical_damage_per_15_shield_armour_and_evasion_rating",
       "number_of_additional_projectiles",
-      "primary_projectile_chains_+"
+      "primary_projectile_chains_+",
+      "off_hand_minimum_added_physical_damage_per_15_shield_armour_and_evasion_rating\noff_hand_maximum_added_physical_damage_per_15_shield_armour_and_evasion_rating"
     ],
     "tags": [
       "dexterity",
@@ -35975,7 +36120,7 @@
       "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "投射物のスピードが{active_skill_projectile_speed_+%_final}%上昇する",
+          "stat": "投射物スピードが{active_skill_projectile_speed_+%_final}%上昇する",
           "stats": {
             "active_skill_projectile_speed_+%_final": 1000
           }
@@ -36122,7 +36267,7 @@
       "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "投射物のスピードが{active_skill_projectile_speed_+%_final}%上昇する",
+          "stat": "投射物スピードが{active_skill_projectile_speed_+%_final}%上昇する",
           "stats": {
             "active_skill_projectile_speed_+%_final": 1000
           }
@@ -36214,8 +36359,8 @@
     "tooltip_order": [
       "thrown_shield_secondary_projectile_damage_+%_final",
       "off_hand_local_minimum_added_physical_damage\noff_hand_local_maximum_added_physical_damage",
-      "off_hand_minimum_added_physical_damage_per_15_shield_armour_and_evasion_rating\noff_hand_maximum_added_physical_damage_per_15_shield_armour_and_evasion_rating",
       "number_of_additional_projectiles",
+      "off_hand_minimum_added_physical_damage_per_15_shield_armour_and_evasion_rating\noff_hand_maximum_added_physical_damage_per_15_shield_armour_and_evasion_rating",
       "active_skill_projectile_speed_+%_final",
       "stationary_shield_throw_projectiles_per_interval"
     ],
@@ -36520,7 +36665,7 @@
         "dex": null
       },
       "stat_text": {
-        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップの持続時間 4秒",
+        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップは4秒持続する",
         "is_trap": "",
         "projectiles_nova": "放射状に投射物を放つ"
       },
@@ -36927,7 +37072,7 @@
       "letter": "d",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "持続するスキルをサポートする。",
+      "support_text": "持続時間を持つスキルをサポートする。",
       "excluded_types": null,
       "added_types": null,
       "added_minion_types": null
@@ -37034,7 +37179,7 @@
       "letter": "!",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "死亡時、サポートされたスペルをそれぞれトリガーする。トーテム、トラップ、マインで使用されるスキルはサポートできない。ヴァ―ルスキル、チャネリングスキルおよびリザーブするスキルはトリガーされない。",
+      "support_text": "プレイヤーキャラクターが死亡した時にサポートされたスペルのそれぞれをトリガーする。トーテム、トラップ、マインで使用されるスキルはサポートできない。ヴァ―ルスキル、チャネリングスキルおよびリザーブするスキルはトリガーされない。",
       "excluded_types": [
         "Minion",
         "Trapped",
@@ -37149,7 +37294,7 @@
       "letter": "!",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "サポートされたスキルはそれぞれ受けたダメージを記録し、トータルが閾値に達するとトリガーする。トーテム、トラップ、マインはサポートされない。ヴァ―ルスキル、チャネリングスキル、リザーブするスキルはトリガーされない。",
+      "support_text": "サポートされたスペルのそれぞれはプレイヤーが受けたダメージを記録し、受けたダメージの合計が閾値に到達するとトリガーされる。トーテム、トラップ、マインで使用されるスキルはサポートできない。ヴァ―ルスキル、チャネリングスキルおよびリザーブするスキルはトリガーされない。",
       "excluded_types": [
         "Trapped",
         "RemoteMined",
@@ -37246,7 +37391,7 @@
       "letter": "!",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "スタンされた際に、サポートされたスキルがトリガーする可能性がある。トーテム、トラップ、マインで使用されるスキルはサポートできない。ヴァ―ルスキル、チャネリングスキル、リザーブするスキルはトリガーされない。",
+      "support_text": "スタンを受けた時にサポートされたスキルのそれぞれが一定確率でトリガーされる。トーテム、トラップ、マインで使用されるスキルはサポートできない。ヴァ―ルスキル、チャネリングスキル、リザーブするスキルはトリガーされない。",
       "excluded_types": [
         "Trapped",
         "RemoteMined",
@@ -39044,8 +39189,8 @@
     "tooltip_order": [
       "spell_minimum_base_lightning_damage\nspell_maximum_base_lightning_damage",
       "base_skill_effect_duration",
-      "modifiers_to_skill_effect_duration_also_affect_soul_prevention_duration",
-      "vaal_storm_call_base_delay_ms"
+      "vaal_storm_call_base_delay_ms",
+      "modifiers_to_skill_effect_duration_also_affect_soul_prevention_duration"
     ],
     "tags": [
       "intelligence",
@@ -40117,7 +40262,7 @@
       },
       "stat_text": {
         "active_skill_base_area_of_effect_radius": "基礎半径は2m",
-        "active_skill_projectile_speed_+%_final": "投射物のスピードが100%上昇する",
+        "active_skill_projectile_speed_+%_final": "投射物スピードが100%上昇する",
         "modifiers_to_projectile_count_do_not_apply": "投射物の数のモッドはこのスキルには適用されない"
       },
       "stats": [
@@ -40534,9 +40679,9 @@
     },
     "tooltip_order": [
       "spell_minimum_base_fire_damage\nspell_maximum_base_fire_damage",
+      "number_of_chains",
       "base_chance_to_ignite_%",
-      "burn_damage_+%",
-      "number_of_chains"
+      "burn_damage_+%"
     ],
     "tags": [
       "intelligence",
@@ -40768,8 +40913,8 @@
     "tooltip_order": [
       "base_number_of_raging_spirits_allowed",
       "base_skill_effect_duration",
-      "minions_cannot_taunt_enemies",
-      "summoned_raging_spirit_chance_to_spawn_additional_minion_%"
+      "summoned_raging_spirit_chance_to_spawn_additional_minion_%",
+      "minions_cannot_taunt_enemies"
     ],
     "tags": [
       "intelligence",
@@ -41290,7 +41435,7 @@
       "letter": "+",
       "supports_gems_only": true,
       "support_name": "",
-      "support_text": "スキルジェムをサポートする。このジェムがレベル2以上になると、サポートされたスキルにコストおよびリザーブの乗数が適用される。ジェム由来ではないスキルはサポートされない。",
+      "support_text": "スキルジェムをサポートする。このジェムがレベル2以上になると、サポートされたスキルにコストおよびリザーブ倍率を適用する。ジェム由来ではないスキルはサポートされない。",
       "excluded_types": [
         "SkillGrantedBySupport"
       ],
@@ -41795,9 +41940,9 @@
     "tooltip_order": [
       "base_skill_effect_duration",
       "offering_skill_effect_duration_per_corpse",
-      "offering_spells_effect_+%",
       "spirit_offering_critical_strike_chance_+%",
-      "spirit_offering_critical_strike_multiplier_+"
+      "spirit_offering_critical_strike_multiplier_+",
+      "offering_spells_effect_+%"
     ],
     "tags": [
       "minion",
@@ -42125,7 +42270,7 @@
         "dex": null
       },
       "stat_text": {
-        "support_overpowered_base_duration_ms": "サポートされたスキルがブロックされた時に敵に怯みを付与する",
+        "support_overpowered_base_duration_ms": "サポートされたスキルがブロックされた時に敵に怯みを4秒間付与する",
         "apply_overpowered_on_enemy_block_reduced_block_and_spell_block_%": "怯みはアタックブロック率およびスペルブロック率を-5%にする"
       },
       "stats": [
@@ -43255,8 +43400,8 @@
       "damage_multiplier": null
     },
     "tooltip_order": [
-      "base_projectile_speed_+%",
-      "tornado_shot_num_of_secondary_projectiles\nquality_display_tornado_shot_is_gem"
+      "tornado_shot_num_of_secondary_projectiles\nquality_display_tornado_shot_is_gem",
+      "base_projectile_speed_+%"
     ],
     "tags": [
       "dexterity",
@@ -43392,8 +43537,8 @@
     "tooltip_order": [
       "base_number_of_arrows\nquality_display_base_additional_arrows_is_gem",
       "base_number_of_arrows\nquality_display_base_additional_arrows_is_gem\nartillery_ballista_number_of_arrows_is_equal_to_number_of_nearby_targets",
-      "projectiles_nova",
       "quality_display_tornado_shot_is_gem",
+      "projectiles_nova",
       "projectiles_rain"
     ],
     "tags": [
@@ -43492,7 +43637,7 @@
       "letter": "G",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "自身および味方に影響するオーラスキルをサポートし、味方に対するオーラ効果を増加させるが、自身への影響を完全に阻害する。呪いオーラ、敵にのみ影響するオーラはサポートできない。トーテムで使用されるスキルはサポートできない。ミニオンのスキルには影響しない。",
+      "support_text": "プレイヤーおよび味方に影響するオーラスキルをサポートし、味方に対するオーラ効果を増加させるが、プレイヤーが影響を受けられなくする。呪いオーラ、敵にのみ影響するオーラはサポートできない。トーテムで使用されるスキルはサポートできない。ミニオンのスキルには影響しない。",
       "excluded_types": [
         "SummonsTotem",
         "AppliesCurse",
@@ -43710,7 +43855,7 @@
       },
       "stat_text": {
         "active_skill_base_area_of_effect_radius": "基礎半径は1.2m",
-        "damage_cannot_be_reflected": "ダメージは反射されない"
+        "damage_cannot_be_reflected": "ダメージが反射されなくなる"
       },
       "stats": [
         {
@@ -44073,7 +44218,7 @@
       "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "毒性の最大値が{maximum_virulence_stacks}される",
+          "stat": "毒性の最大値 {maximum_virulence_stacks}",
           "stats": {
             "maximum_virulence_stacks": 250
           }
@@ -44175,10 +44320,10 @@
       "herald_of_agony_add_stack_on_poison",
       "herald_of_agony_poison_damage_+%_final",
       "maximum_virulence_stacks\nquality_display_herald_of_agony_is_gem",
-      "minions_cannot_taunt_enemies",
       "scorpion_minion_attack_speed_+%",
       "scorpion_minion_physical_damage_+%",
-      "scorpion_minion_minimum_added_physical_damage\nscorpion_minion_maximum_added_physical_damage"
+      "scorpion_minion_minimum_added_physical_damage\nscorpion_minion_maximum_added_physical_damage",
+      "minions_cannot_taunt_enemies"
     ],
     "tags": [
       "dexterity",
@@ -44269,7 +44414,7 @@
         "dex": 0
       },
       "stat_text": {
-        "base_number_of_champions_of_light_allowed": "浄化のセンチネル最大召喚数4",
+        "base_number_of_champions_of_light_allowed": "ピュリティのセンチネルの最大召喚数 4",
         "herald_of_light_summon_champion_on_unique_or_rare_enemy_hit_%": "プレイヤーがレアまたはユニークの敵をヒットした時に20%の確率でピュリティのセンチネルを召喚する",
         "base_skill_effect_duration": "基礎持続時間は12.00秒",
         "herald_of_light_summon_champion_on_kill": "プレイヤーが敵を撃破するとピュリティのセンチネルを召喚する"
@@ -44544,7 +44689,7 @@
       "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "クリティカルダメージ倍率が{base_critical_strike_multiplier_+}%される",
+          "stat": "クリティカルダメージ倍率 {base_critical_strike_multiplier_+}%",
           "stats": {
             "base_critical_strike_multiplier_+": 2000
           }
@@ -44683,7 +44828,7 @@
       "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "クリティカルダメージ倍率が{base_critical_strike_multiplier_+}%される",
+          "stat": "クリティカルダメージ倍率 {base_critical_strike_multiplier_+}%",
           "stats": {
             "base_critical_strike_multiplier_+": 2000
           }
@@ -44969,7 +45114,7 @@
       "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "クリティカルダメージ倍率が{base_critical_strike_multiplier_+}%される",
+          "stat": "クリティカルダメージ倍率 {base_critical_strike_multiplier_+}%",
           "stats": {
             "base_critical_strike_multiplier_+": 2000
           }
@@ -46752,10 +46897,10 @@
     },
     "tooltip_order": [
       "off_hand_local_minimum_added_physical_damage\noff_hand_local_maximum_added_physical_damage",
+      "skill_physical_damage_%_to_convert_to_cold",
       "retaliation_base_use_window_duration_ms",
       "off_hand_minimum_added_physical_damage_per_15_shield_armour_and_evasion_rating\noff_hand_maximum_added_physical_damage_per_15_shield_armour_and_evasion_rating",
       "always_freeze",
-      "skill_physical_damage_%_to_convert_to_cold",
       "global_always_hit",
       "active_skill_ailment_damage_+%_final",
       "active_skill_base_area_of_effect_radius",
@@ -47230,10 +47375,10 @@
       "damage_multiplier": null
     },
     "tooltip_order": [
-      "skill_physical_damage_%_to_convert_to_lightning",
-      "base_skill_effect_duration",
       "static_strike_base_zap_frequency_ms",
       "static_strike_zap_speed_+%",
+      "skill_physical_damage_%_to_convert_to_lightning",
+      "base_skill_effect_duration",
       "number_of_chains",
       "static_strike_beam_damage_+%_final",
       "static_strike_number_of_beam_targets"
@@ -48940,7 +49085,7 @@
       },
       "stat_text": {
         "base_number_of_golems_allowed": "ゴーレム最大召喚数 1",
-        "fire_golem_grants_area_of_effect_+%": "ゴーレムは効果範囲20%増加を付与する"
+        "fire_golem_grants_area_of_effect_+%": "ゴーレムは効果範囲15%増加を付与する"
       },
       "stats": [
         {
@@ -48971,7 +49116,7 @@
         {
           "id": "fire_golem_grants_area_of_effect_+%",
           "type": "additional",
-          "value": 20
+          "value": 15
         },
         {
           "id": "infinite_minion_duration",
@@ -49382,7 +49527,7 @@
       },
       "stat_text": {
         "base_number_of_golems_allowed": "ゴーレム最大召喚数 1",
-        "lightning_golem_grants_attack_and_cast_speed_+%": "ゴーレムはアタックスピードおよびキャストスピード10%増加を付与する"
+        "lightning_golem_grants_attack_and_cast_speed_+%": "ゴーレムはアタックスピードおよびキャストスピード8%増加を付与する"
       },
       "stats": [
         {
@@ -49403,7 +49548,7 @@
         {
           "id": "lightning_golem_grants_attack_and_cast_speed_+%",
           "type": "additional",
-          "value": 10
+          "value": 8
         },
         {
           "id": "base_display_minion_actor_level",
@@ -49708,7 +49853,7 @@
       "letter": "A",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "呪術スキルをサポートし、使用者の周囲の範囲内すべての敵に影響を与えるオーラに変化させる。",
+      "support_text": "呪術スキルをサポートし、プレイヤーの周囲の範囲内すべての敵に影響を与えるオーラに変化させる。",
       "excluded_types": [
         "Trapped",
         "RemoteMined",
@@ -50279,7 +50424,7 @@
         "infernal_cry_%_max_life_as_fire_on_death": "爆発はモンスターの最大ライフの8%と同量の基礎火ダメージを与える",
         "infernal_cry_physical_damage_%_to_add_as_fire_per_5_power_up_to_cap": "バフはパワー5ごとに物理ダメージの5%を\n追加火ダメージとして獲得を付与する、最大パワー25",
         "skill_empowers_next_x_melee_attacks": "プレイヤーが次に行う近接アタック6回を奮起する",
-        "damage_cannot_be_reflected": "ダメージは反射されない",
+        "damage_cannot_be_reflected": "ダメージが反射されなくなる",
         "warcry_count_power_from_enemies": "範囲内の敵のパワー合計を計算する",
         "infernal_cry_empowered_attacks_trigger_combust_display": "奮起したアタックは最初に近接ヒットを与えた時にコンバストをトリガーする"
       },
@@ -50371,12 +50516,12 @@
       "base_skill_effect_duration",
       "damage_cannot_be_reflected",
       "base_cooldown_speed_+%",
-      "base_secondary_skill_effect_duration",
       "warcry_count_power_from_enemies",
       "infernal_cry_%_max_life_as_fire_on_death",
       "infernal_cry_physical_damage_%_to_add_as_fire_per_5_power_up_to_cap",
       "skill_empowers_next_x_melee_attacks",
-      "infernal_cry_empowered_attacks_trigger_combust_display"
+      "infernal_cry_empowered_attacks_trigger_combust_display",
+      "base_secondary_skill_effect_duration"
     ],
     "tags": [
       "warcry",
@@ -50583,7 +50728,7 @@
       "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "{chance_to_scorch_%}%の確率で敵に焦げを付与する",
+          "stat": "{chance_to_scorch_%}%の確率で焦げを付与する",
           "stats": {
             "chance_to_scorch_%": 1000
           }
@@ -51348,7 +51493,7 @@
       "letter": "K",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "自らヒットするタイプのスキルをサポートする。トーテム、トラップ、マインの使用するスキルはサポートされない。",
+      "support_text": "プレイヤー自身が使用し敵にヒットを与えるスキルをサポートする。トーテム、トラップ、マインの使用するスキルはサポートされない。",
       "excluded_types": [
         "Trapped",
         "RemoteMined",
@@ -51571,7 +51716,7 @@
       "letter": "K",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "自らヒットするタイプのスキルをサポートする。トーテム、トラップ、マインの使用するスキルはサポートされない。",
+      "support_text": "プレイヤー自身が使用し敵にヒットを与えるスキルをサポートする。トーテム、トラップ、マインの使用するスキルはサポートされない。",
       "excluded_types": [
         "Trapped",
         "RemoteMined",
@@ -51897,7 +52042,7 @@
       "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "{chance_to_freeze_shock_ignite_%}%の確率で凍結、感電および発火させる",
+          "stat": "{chance_to_freeze_shock_ignite_%}%の確率で凍結、感電および発火を付与する",
           "stats": {
             "chance_to_freeze_shock_ignite_%": 1000
           }
@@ -52067,7 +52212,7 @@
       "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "{chance_to_freeze_shock_ignite_%}%の確率で凍結、感電および発火させる",
+          "stat": "{chance_to_freeze_shock_ignite_%}%の確率で凍結、感電および発火を付与する",
           "stats": {
             "chance_to_freeze_shock_ignite_%": 1000
           }
@@ -52239,7 +52384,7 @@
         "dex": null
       },
       "stat_text": {
-        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップの持続時間 4秒",
+        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップは4秒持続する",
         "active_skill_base_area_of_effect_radius": "基礎半径は1.8m",
         "active_skill_base_secondary_area_of_effect_radius": "基礎二次的半径は0.9m",
         "active_skill_base_tertiary_area_of_effect_radius": "基礎三次半径は0.6m",
@@ -52394,7 +52539,7 @@
         "dex": null
       },
       "stat_text": {
-        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップの持続時間 2秒",
+        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップは2秒持続する",
         "active_skill_base_area_of_effect_radius": "基礎半径は1.8m",
         "active_skill_base_secondary_area_of_effect_radius": "基礎二次的半径は1.2m",
         "is_trap": ""
@@ -52687,7 +52832,7 @@
       "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "火継続ダメージ倍率が{fire_dot_multiplier_+}%される",
+          "stat": "火継続ダメージ倍率 {fire_dot_multiplier_+}%",
           "stats": {
             "fire_dot_multiplier_+": 1000
           }
@@ -52790,9 +52935,9 @@
       "base_fire_damage_to_deal_per_minute",
       "base_skill_effect_duration",
       "base_number_of_arrows\nquality_display_base_additional_arrows_is_gem",
-      "projectile_damage_modifiers_apply_to_skill_dot",
       "modifiers_to_projectile_count_do_not_apply",
       "skill_physical_damage_%_to_convert_to_fire",
+      "projectile_damage_modifiers_apply_to_skill_dot",
       "active_skill_base_area_of_effect_radius",
       "active_skill_base_secondary_area_of_effect_radius",
       "fire_dot_multiplier_+"
@@ -55680,8 +55825,8 @@
       "orb_of_storms_base_channelling_bolt_frequency_ms",
       "active_skill_base_area_of_effect_radius",
       "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius",
-      "projectile_number_to_split",
-      "orb_of_storms_maximum_number_of_hits"
+      "orb_of_storms_maximum_number_of_hits",
+      "projectile_number_to_split"
     ],
     "tags": [
       "lightning",
@@ -55929,7 +56074,7 @@
       },
       "stat_text": {
         "base_number_of_golems_allowed": "ゴーレム最大召喚数 1",
-        "stone_golem_grants_defences_+%": "ゴーレムは防御力20%増加を付与する"
+        "stone_golem_grants_defences_+%": "ゴーレムは防御力16%増加を付与する"
       },
       "stats": [
         {
@@ -55960,7 +56105,7 @@
         {
           "id": "stone_golem_grants_defences_+%",
           "type": "additional",
-          "value": 20
+          "value": 16
         },
         {
           "id": "infinite_minion_duration",
@@ -58575,7 +58720,7 @@
       "letter": "r",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "持続時間を持つスキルまたは敵にヒットした際に状態異常を付与するスキルをサポートする。",
+      "support_text": "持続時間を持つスキルまたは敵にヒットを与え状態異常を付与するスキルをサポートする。",
       "excluded_types": null,
       "added_types": null,
       "added_minion_types": null
@@ -58683,7 +58828,7 @@
       "letter": "L",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "トラップスキルをサポートし、追加のトラップをターゲットエリア周辺にランダムに投げる。",
+      "support_text": "トラップスキルをサポートし、サポートされたスキルで対象とした地点の周囲にランダムに追加のトラップを投げるようにする。",
       "excluded_types": null,
       "added_types": null,
       "added_minion_types": null
@@ -58895,7 +59040,7 @@
       "stat_text": {
         "base_totem_duration": "トーテムは12秒持続する",
         "summon_totem_cast_speed_+%": "トーテム設置スピードが50%増加する",
-        "number_of_additional_totems_allowed": "召喚できるトーテムの最大数 +1",
+        "number_of_additional_totems_allowed": "トーテム最大召喚数 +1",
         "is_totem": "このスキルを使用するトーテム1体を召喚する"
       },
       "stats": [
@@ -59203,7 +59348,7 @@
         "dex": 0
       },
       "stat_text": {
-        "shockwave_slam_explosion_damage_+%_final": "衝撃波の与えるダメージが40%低下する",
+        "shockwave_slam_explosion_damage_+%_final": "ショックウェーブのダメージが40%低下する",
         "sunder_wave_radius_+_per_step": "波動の範囲は前回の波動の範囲ごとに半径+0.2mを獲得する",
         "sunder_wave_max_steps": "波動は5箇所の範囲にダメージを与える",
         "sunder_wave_min_steps": "波動は2箇所の範囲にダメージを与えるまで止めることができない",
@@ -59363,7 +59508,7 @@
         "dex": 0
       },
       "stat_text": {
-        "shockwave_slam_explosion_damage_+%_final": "衝撃波の与えるダメージが40%低下する",
+        "shockwave_slam_explosion_damage_+%_final": "ショックウェーブのダメージが40%低下する",
         "sunder_wave_max_steps": "波動は6箇所の範囲にダメージを与える",
         "sunder_shockwave_limit_per_cascade": "波動はそれぞれの範囲内の敵最大3体から衝撃波を放つ",
         "sunder_wave_delay_+%": "波動の範囲間の遅延が75%減少する"
@@ -59510,7 +59655,7 @@
         "dex": 0
       },
       "stat_text": {
-        "shockwave_slam_explosion_damage_+%_final": "衝撃波の与えるダメージが40%低下する",
+        "shockwave_slam_explosion_damage_+%_final": "ショックウェーブのダメージが40%低下する",
         "sunder_wave_radius_+_per_step\nsunder_number_of_fake_chains": "波動は最大3回リスタートできる\n波動の範囲は前回の波動の範囲ごとに半径+0.1mを獲得する",
         "sunder_wave_max_steps": "波動は4箇所の範囲にダメージを与える",
         "sunder_wave_min_steps": "波動は2箇所の範囲にダメージを与えるまで止めることができない",
@@ -60158,7 +60303,7 @@
       "letter": "F",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "ヒットするスキル、敵を燃やすスキルまたは元素異常を付与するスキルをサポートする。",
+      "support_text": "敵にヒットを与えるスキル、敵を燃焼させるスキルまたは敵に元素系状態異常を付与するスキルをサポートする。",
       "excluded_types": null,
       "added_types": null,
       "added_minion_types": null
@@ -60459,7 +60604,7 @@
   },
   {
     "active_skill": {
-      "description": "指定した位置の周囲のスケルトンミニオンからライフを取り除き、その周囲の敵に混沌ダメージを与える。この効果は使用者の他の近くのスケルトンにも連鎖する。対象とした位置にも使用者の近くにもスケルトンがいなければ、ダメージを与えるために使用者自身のライフが犠牲となる。",
+      "description": "指定した位置の周囲またはプレイヤーの近くのスケルトンミニオンからライフを取り除き、その周囲の敵に混沌ダメージを与える。この効果は使用者の他の近くのスケルトンにも連鎖するビームを放つ。対象とした位置にも使用者の近くにもスケルトンがいなければ、ダメージを与えるために使用者自身のライフを代わりに捧げる。",
       "display_name": "ダークバーゲン",
       "id": "dark_pact",
       "is_manually_casted": true,
@@ -60579,8 +60724,8 @@
     },
     "tooltip_order": [
       "spell_minimum_base_chaos_damage\nspell_maximum_base_chaos_damage",
-      "skeletal_chains_aoe_%_health_dealt_as_chaos_damage\nquality_display_dark_pact_is_gem",
       "number_of_chains",
+      "skeletal_chains_aoe_%_health_dealt_as_chaos_damage\nquality_display_dark_pact_is_gem",
       "skeletal_chains_no_minions_targets_self",
       "skeletal_chains_no_minions_damage_+%_final"
     ],
@@ -60781,7 +60926,7 @@
       "stat_text": {
         "base_skill_effect_duration": "基礎持続時間は1.50秒",
         "fire_beam_additional_stack_damage_+%_final\nquality_display_firebeam_is_gem": "デバフのステージを追加することでダメージの80%を追加する",
-        "display_max_fire_beam_stacks": "燃焼のデバフは最大20ステージまで貯まる",
+        "display_max_fire_beam_stacks": "燃焼のデバフは最大8ステージまで貯まる",
         "base_fire_damage_resistance_%": "火の曝露は火耐性-25%を付与する",
         "spell_damage_modifiers_apply_to_skill_dot": "スペルダメージのモッドはこのスキルの継続ダメージ効果にも適用される"
       },
@@ -60919,7 +61064,7 @@
       "stat_text": {
         "base_skill_effect_duration": "基礎持続時間は4.00秒",
         "fire_beam_additional_stack_damage_+%_final\nquality_display_firebeam_is_gem": "デバフのステージを追加することでダメージの10%を追加する",
-        "display_max_fire_beam_stacks": "燃焼のデバフは最大20ステージまで貯まる",
+        "display_max_fire_beam_stacks": "燃焼のデバフは最大8ステージまで貯まる",
         "spell_damage_modifiers_apply_to_skill_dot": "スペルダメージのモッドはこのスキルの継続ダメージ効果にも適用される"
       },
       "stats": [
@@ -61065,7 +61210,7 @@
       "letter": "W",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "チャネリングスキルと、チャネリングしないスペルスキルを両方サポートしなければならない。チャネリングスキルは、チャネリング中にスペルを定期的に発動する。トーテム、トラップおよびマインで使用されるスキルはサポートできない。ヴァ―ルスキルおよびリザーブするスキルはトリガーできない。",
+      "support_text": "機能させるにはチャネリングスキルと、チャネリング以外のスペルスキルを両方サポートしなければならない。チャネリングスキルは、チャネリング中にスペルを定期的にトリガーさせる。トーテム、トラップおよびマインで使用されるスキルはサポートできない。ヴァ―ルスキルおよびリザーブするスキルはトリガーできない。",
       "excluded_types": [
         "SummonsTotem",
         "DisallowTriggerSupports"
@@ -61863,7 +62008,7 @@
       "letter": "a",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "ダメージを与えるスキルまたは持続するスキルをサポートする。",
+      "support_text": "ダメージを与えるスキルまたは持続時間を持つスキルをサポートする。",
       "excluded_types": null,
       "added_types": null,
       "added_minion_types": null
@@ -62235,7 +62380,7 @@
       "letter": "U",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "敵にヒットするスキルまたは元素状態異常を引き起こすスキルをサポートする。",
+      "support_text": "敵にヒットを与える、または敵に状態異常を付与するスキルをサポートする。",
       "excluded_types": null,
       "added_types": null,
       "added_minion_types": null
@@ -62441,7 +62586,7 @@
       "letter": "u",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "近接攻撃またはスラムスキルをサポートする。サポートされたスキルの3撃目は、より強力になる。",
+      "support_text": "近接ストライクまたはスラムスキルをサポートする。サポートされたアタックを3回使用するごとにそのスキルはより強力になる。",
       "excluded_types": [
         "Channel",
         "NoRuthless",
@@ -62603,7 +62748,7 @@
       },
       "stat_text": {
         "support_arcane_surge_base_duration_ms": "アーケインサージは4秒間持続する",
-        "support_arcane_surge_cast_speed_+%\nsupport_arcane_surge_mana_regeneration_rate_+%": "アーケインサージはキャストスピードの20%増加を付与する\nアーケインサージはマナ自動回復レートの30%増加を付与する"
+        "support_arcane_surge_cast_speed_+%\nsupport_arcane_surge_mana_regeneration_rate_+%": "アーケインサージはキャストスピード20%増加を付与する\nアーケインサージはマナ自動回復レート30%増加を付与する"
       },
       "stats": [
         {
@@ -62677,7 +62822,7 @@
       "letter": "N",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "サポートされたスキルはそれぞれ使用したマナの量を記録し、その合計が閾値に達するとバフを付与する。トーテム、トラップ、マインおよびマナリザーブするスキルはこのサポートによって発動されない。",
+      "support_text": "サポートされたスキルのそれぞれはプレイヤーがそのスキルで使用したマナの量を記録し、使用したマナの合計値が閾値に到達した時にバフを付与する。トーテム、トラップ、マインまたはリザーブするスキルをサポートできない。",
       "excluded_types": [
         "Trapped",
         "RemoteMined",
@@ -62779,8 +62924,8 @@
       "damage_multiplier": null
     },
     "tooltip_order": [
-      "corpse_explosion_monster_life_%",
       "skill_physical_damage_%_to_convert_to_fire",
+      "corpse_explosion_monster_life_%",
       "active_skill_attack_speed_+%_final"
     ],
     "tags": [
@@ -64087,7 +64232,7 @@
       "letter": "b",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "チャネリングスキルをサポートする。チャネリング中はダメージから守られる。ミニオンのスキルには影響しない。",
+      "support_text": "チャネリングスキルをサポートする。サポートされたスキルのチャネリング中にプレイヤーをダメージから保護する。ミニオンのスキルには影響しない。",
       "excluded_types": null,
       "added_types": null,
       "added_minion_types": null
@@ -64191,7 +64336,7 @@
       "letter": "=",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "使用者から投射物を放つスキルをサポートする。副次的効果により他の場所から放たれる投射物には影響しない。投射物を螺旋状に放つスキルはサポートできない。",
+      "support_text": "プレイヤーから投射物を放つスキルをサポートする。副次的効果により他の場所から放たれる投射物には影響しない。投射物を螺旋状に放つスキルはサポートできない。",
       "excluded_types": [
         "ProjectileSpiral",
         "SingleMainProjectile",
@@ -64296,7 +64441,7 @@
       "letter": "p",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "対象となる地点に効果範囲を生成するスペルスキルをサポートする。ヴァールスキルまたはトーテム、トラップ、マインで使用されるスキルはサポートできない。ミニオンのスキルには影響しない。",
+      "support_text": "対象とした地点の周囲の範囲に効果を適用するスペルスキルをサポートする。ヴァールスキルまたはトーテム、トラップ、マインで使用されるスキルはサポートできない。ミニオンのスキルには影響しない。",
       "excluded_types": [
         "SummonsTotem",
         "Trapped",
@@ -64396,7 +64541,7 @@
       "letter": "A",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "近接ストライクスキルをサポートし、追加の対象を同時にストライクする。使用者から最短距離の敵が追加の対象となる。ミニオンアタックスキルをサポートした場合、ミニオンのスキルは追加の対象をストライクしない。ヴァールスキルまたはトリガーされるスキルはサポートできない。",
+      "support_text": "近接ストライクスキルをサポートし、追加の対象に同時にストライクを与えるようにする。プレイヤーから最短距離の敵が追加の対象となる。ミニオンアタックスキルをサポートした場合、ミニオンのスキルは追加の対象にストライクを与えない。ヴァールスキルまたはトリガーされるスキルはサポートできない。",
       "excluded_types": [
         "InbuiltTrigger",
         "Triggered",
@@ -64437,7 +64582,7 @@
         "dex": 0
       },
       "stat_text": {
-        "support_ghost_base_duration": "ファンタズムは15秒持続する",
+        "support_ghost_base_duration": "ファンタズムは15秒間持続する",
         "chance_to_summon_support_ghost_on_hitting_rare_or_unique_%": "サポートされたスキルまたはサポートされたスキルによるファンタズム以外のミニオンが\nレアまたはユニークの敵をヒットすると20%の確率でファンタズムを召喚する"
       },
       "stats": [
@@ -64519,7 +64664,7 @@
       "letter": "G",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "敵をヒットまたはミニオンを生成するスキルをサポートする。これらスキルまたはミニオンが敵を倒した時、またはレア、ユニークの敵をヒットした時、物理ダメージを与え貫通する投射物を放つファンタズムミニオンを召喚する確率を得る。",
+      "support_text": "敵にヒットを与えるスキルまたはミニオンを生成するスキルをサポートする。これらのスキルまたはミニオンが敵を倒した時、またはレア、ユニークの敵にヒットを与えた時に一定確率でファンタズムミニオンを召喚する。ファンタズムは物理ダメージを与え貫通する投射物スペルを放つ。",
       "excluded_types": [
         "MinionsPersistWhenSkillRemoved"
       ],
@@ -64922,7 +65067,7 @@
         "dex": null
       },
       "stat_text": {
-        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップの持続時間 4秒",
+        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップは4秒持続する",
         "skill_physical_damage_%_to_convert_to_fire": "物理ダメージの50%を火ダメージに変換する",
         "is_trap": ""
       },
@@ -65038,8 +65183,8 @@
     "tooltip_order": [
       "spell_minimum_base_physical_damage\nspell_maximum_base_physical_damage",
       "base_trap_duration\nquality_display_trap_duration_is_gem",
-      "is_trap",
       "skill_physical_damage_%_to_convert_to_fire",
+      "is_trap",
       "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius",
       "active_skill_base_secondary_area_of_effect_radius",
       "active_skill_tertiary_area_of_effect_description_mode\nactive_skill_base_tertiary_area_of_effect_radius",
@@ -65121,7 +65266,7 @@
         "dex": null
       },
       "stat_text": {
-        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップの持続時間 4秒",
+        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップは4秒持続する",
         "skill_physical_damage_%_to_convert_to_fire": "物理ダメージの50%を火ダメージに変換する",
         "is_trap": ""
       },
@@ -65237,8 +65382,8 @@
     "tooltip_order": [
       "spell_minimum_base_physical_damage\nspell_maximum_base_physical_damage",
       "base_trap_duration\nquality_display_trap_duration_is_gem",
-      "is_trap",
       "skill_physical_damage_%_to_convert_to_fire",
+      "is_trap",
       "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius",
       "active_skill_base_secondary_area_of_effect_radius",
       "active_skill_tertiary_area_of_effect_description_mode\nactive_skill_base_tertiary_area_of_effect_radius",
@@ -65319,7 +65464,7 @@
         "dex": null
       },
       "stat_text": {
-        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップの持続時間 4秒",
+        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップは4秒持続する",
         "active_skill_trap_throwing_speed_+%_final": "トラップ投擲スピードが30%低下する",
         "base_stun_duration_+%": "敵に対するスタン持続時間が50%増加する",
         "is_trap": ""
@@ -65491,7 +65636,7 @@
         "dex": null
       },
       "stat_text": {
-        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップの持続時間 4秒",
+        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップは4秒持続する",
         "base_skill_effect_duration": "基礎持続時間は3.00秒",
         "active_skill_base_area_of_effect_radius": "基礎半径は3m",
         "ice_siphon_trap_max_beam_targets\nquality_display_ice_siphon_trap_is_gem": "最寄りの敵10体にビームを適用する",
@@ -65674,7 +65819,7 @@
         "dex": null
       },
       "stat_text": {
-        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップの持続時間 4秒",
+        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップは4秒持続する",
         "base_skill_effect_duration": "基礎持続時間は3.00秒",
         "is_trap": "",
         "spell_damage_modifiers_apply_to_skill_dot": "スペルダメージのモッドはこのスキルの継続ダメージ効果にも適用される"
@@ -65838,7 +65983,7 @@
         "dex": null
       },
       "stat_text": {
-        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップの持続時間 4秒",
+        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップは4秒持続する",
         "base_skill_effect_duration": "基礎持続時間は3.50秒",
         "flamethrower_trap_damage_+%_final_vs_burning_enemies": "燃焼状態の敵に対するヒットおよび状態異常のダメージが25%上昇する",
         "flamethrower_tower_trap_number_of_flamethrowers": "4本の炎を出す",
@@ -66003,7 +66148,7 @@
         "dex": null
       },
       "stat_text": {
-        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップの持続時間 4秒",
+        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップは4秒持続する",
         "base_skill_effect_duration": "基礎持続時間は2.00秒",
         "flamethrower_tower_trap_number_of_flamethrowers": "5本の炎を出す",
         "is_trap": ""
@@ -66160,7 +66305,7 @@
         "dex": null
       },
       "stat_text": {
-        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップの持続時間 4秒",
+        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップは4秒持続する",
         "base_skill_effect_duration": "基礎持続時間は3.50秒",
         "lightning_tower_trap_number_of_beams\nquality_display_lightning_tower_trap_is_gem": "3箇所のエリアに落雷する",
         "is_trap": "",
@@ -66254,9 +66399,9 @@
       "spell_minimum_base_lightning_damage\nspell_maximum_base_lightning_damage",
       "base_trap_duration\nquality_display_trap_duration_is_gem",
       "base_skill_effect_duration",
-      "is_trap",
       "lightning_tower_trap_base_interval_duration_ms",
       "modifiers_to_trap_throw_speed_apply_to_lightning_spire_trap_frequency",
+      "is_trap",
       "critical_strike_chance_+%_vs_shocked_enemies",
       "lightning_tower_trap_number_of_beams\nquality_display_lightning_tower_trap_is_gem",
       "lightning_tower_trap_number_of_beams\nlightning_tower_trap_interval_duration_ms\nquality_display_lightning_tower_trap_is_gem"
@@ -66342,7 +66487,7 @@
         "dex": null
       },
       "stat_text": {
-        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップの持続時間 4秒",
+        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップは4秒持続する",
         "base_skill_effect_duration": "基礎持続時間は1.00秒",
         "lightning_tower_trap_number_of_beams\nquality_display_lightning_tower_trap_is_gem": "2箇所のエリアに落雷する",
         "lightning_tower_trap_base_interval_duration_ms": "0.40秒ごとに雷を放つ",
@@ -66426,8 +66571,8 @@
       "spell_minimum_base_lightning_damage\nspell_maximum_base_lightning_damage",
       "base_trap_duration\nquality_display_trap_duration_is_gem",
       "base_skill_effect_duration",
-      "is_trap",
       "lightning_tower_trap_base_interval_duration_ms",
+      "is_trap",
       "trap_%_chance_to_trigger_twice",
       "lightning_tower_trap_number_of_beams\nquality_display_lightning_tower_trap_is_gem"
     ],
@@ -66512,7 +66657,7 @@
         "dex": null
       },
       "stat_text": {
-        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップの持続時間 4秒",
+        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップは4秒持続する",
         "base_skill_effect_duration": "基礎持続時間は3.50秒",
         "lightning_tower_trap_number_of_beams\nquality_display_lightning_tower_trap_is_gem": "8箇所のエリアに落雷する",
         "lightning_tower_trap_base_interval_duration_ms": "1.00秒ごとに雷を放つ",
@@ -66596,8 +66741,8 @@
       "spell_minimum_base_lightning_damage\nspell_maximum_base_lightning_damage",
       "base_trap_duration\nquality_display_trap_duration_is_gem",
       "base_skill_effect_duration",
-      "is_trap",
       "lightning_tower_trap_base_interval_duration_ms",
+      "is_trap",
       "lightning_tower_trap_number_of_beams\nquality_display_lightning_tower_trap_is_gem",
       "lightning_tower_trap_number_of_beams\nlightning_tower_trap_interval_duration_ms\nquality_display_lightning_tower_trap_is_gem"
     ],
@@ -66680,7 +66825,7 @@
         "dex": null
       },
       "stat_text": {
-        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップの持続時間 4秒",
+        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップは4秒持続する",
         "base_skill_effect_duration": "基礎持続時間は3.50秒",
         "phys_cascade_trap_number_of_cascades\nquality_display_phys_cascade_trap_is_gem": "5個の衝撃波を放つ",
         "phys_cascade_trap_base_interval_duration_ms": "0.9秒ごとに衝撃波を放つ",
@@ -66770,9 +66915,9 @@
       "spell_minimum_base_physical_damage\nspell_maximum_base_physical_damage",
       "base_trap_duration\nquality_display_trap_duration_is_gem",
       "base_skill_effect_duration",
-      "is_trap",
       "modifiers_to_trap_throw_speed_apply_to_seismic_trap_frequency",
       "phys_cascade_trap_base_interval_duration_ms",
+      "is_trap",
       "phys_cascade_trap_number_of_cascades\nquality_display_phys_cascade_trap_is_gem",
       "phys_cascade_trap_number_of_cascades\nphys_cascade_trap_interval_duration_ms\nquality_display_phys_cascade_trap_is_gem"
     ],
@@ -66854,7 +66999,7 @@
         "dex": null
       },
       "stat_text": {
-        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップの持続時間 4秒",
+        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップは4秒持続する",
         "phys_cascade_trap_number_of_cascades\nquality_display_phys_cascade_trap_is_gem": "3個の衝撃波を放つ",
         "is_trap": ""
       },
@@ -67671,7 +67816,7 @@
         "base_totem_duration": "トーテムは6秒持続する",
         "summon_totem_cast_speed_+%": "トーテム設置スピードが50%増加する",
         "slam_ancestor_totem_grant_owner_melee_damage_+%_final": "トーテムがアクティブな時近接ダメージが32%上昇する",
-        "number_of_additional_totems_allowed": "召喚できるトーテムの最大数 +1",
+        "number_of_additional_totems_allowed": "トーテム最大召喚数 +1",
         "is_totem": "このスキルを使用するトーテム1体を召喚する",
         "modifiers_to_totem_duration_also_affect_soul_prevention_duration": "トーテム持続時間のモッドはこのスキルのソウル獲得不能にも適用される"
       },
@@ -68824,7 +68969,7 @@
         "base_skill_effect_duration": "基礎持続時間は1.00秒",
         "base_number_of_arrows\nquality_display_base_additional_arrows_is_gem": "5本の矢を放つ",
         "skill_physical_damage_%_to_convert_to_chaos": "物理ダメージの60%を混沌ダメージに変換する",
-        "rain_of_spores_vines_movement_speed_+%_final\nminimum_rain_of_spores_movement_speed_+%_final_cap": "それぞれの胞子嚢は近くの敵の移動スピードを5%ずつ、最大5%低下させる",
+        "rain_of_spores_vines_movement_speed_+%_final\nminimum_rain_of_spores_movement_speed_+%_final_cap": "それぞれの胞子嚢は近くの敵の移動スピードを5%低下を付与する、最大30%",
         "projectile_damage_modifiers_apply_to_skill_dot": "投射物ダメージのモッドはこのスキルの継続ダメージ効果にも適用される"
       },
       "stats": [
@@ -68910,8 +69055,8 @@
       "base_chaos_damage_to_deal_per_minute",
       "base_skill_effect_duration",
       "base_number_of_arrows\nquality_display_base_additional_arrows_is_gem",
-      "projectile_damage_modifiers_apply_to_skill_dot",
       "skill_physical_damage_%_to_convert_to_chaos",
+      "projectile_damage_modifiers_apply_to_skill_dot",
       "rain_of_spores_vines_movement_speed_+%_final\nminimum_rain_of_spores_movement_speed_+%_final_cap"
     ],
     "tags": [
@@ -69258,8 +69403,8 @@
       "base_chaos_damage_to_deal_per_minute",
       "base_skill_effect_duration",
       "base_number_of_arrows\nquality_display_base_additional_arrows_is_gem",
-      "projectile_damage_modifiers_apply_to_skill_dot",
       "skill_physical_damage_%_to_convert_to_chaos",
+      "projectile_damage_modifiers_apply_to_skill_dot",
       "toxic_rain_spores_apply_withered"
     ],
     "tags": [
@@ -69344,7 +69489,7 @@
         "dex": 0
       },
       "stat_text": {
-        "base_number_of_relics_allowed": "ホーリーレリック最大召喚数1",
+        "base_number_of_relics_allowed": "ホーリーレリック最大召喚数 1",
         "minions_cannot_taunt_enemies": "ミニオンは敵を挑発することができない"
       },
       "stats": [
@@ -69484,7 +69629,7 @@
         "dex": 0
       },
       "stat_text": {
-        "base_number_of_relics_allowed": "ホーリーレリック最大召喚数2",
+        "base_number_of_relics_allowed": "ホーリーレリック最大召喚数 2",
         "minions_cannot_taunt_enemies": "ミニオンは敵を挑発することができない"
       },
       "stats": [
@@ -69766,7 +69911,7 @@
       "letter": "B",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "敵を冷却または冷却を付与する領域を生成するスキルをサポートする。",
+      "support_text": "敵を冷却するスキルまたは冷却領域を生成するスキルをサポートする。",
       "excluded_types": null,
       "added_types": null,
       "added_minion_types": null
@@ -69816,7 +69961,7 @@
     "stat_translation_file": "stat_translations/skill",
     "static": {
       "crit_chance": 750,
-      "damage_effectiveness": -20,
+      "damage_effectiveness": -30,
       "quality_stats": [
         {
           "stat": "ステージの最大数が{frost_fury_max_number_of_stages}される",
@@ -69838,6 +69983,7 @@
         "frost_fury_fire_speed_+%_final_while_channelling": "チャネリング中は投射物を放つ頻度が80%上昇する",
         "base_skill_effect_duration": "基礎持続時間は1.60秒",
         "base_chance_to_freeze_%": "25%の確率で敵を凍結させる",
+        "base_number_of_projectiles": "2個の投射物を放つ",
         "display_frost_fury_additive_cast_speed_modifiers_apply_to_fire_speed": "キャストスピードの増減のモッドは代わりに投射物の頻度に適用される"
       },
       "stats": [
@@ -69899,7 +70045,7 @@
         {
           "id": "base_number_of_projectiles",
           "type": "additional",
-          "value": null
+          "value": 2
         },
         {
           "id": "base_is_projectile",
@@ -72183,9 +72329,9 @@
     "tooltip_order": [
       "spell_minimum_base_physical_damage\nspell_maximum_base_physical_damage",
       "base_skill_effect_duration",
+      "skill_physical_damage_%_to_convert_to_fire",
       "active_skill_base_radius_+",
       "active_skill_ground_consecration_radius_+",
-      "skill_physical_damage_%_to_convert_to_fire",
       "sanctify_wave_damage_+%_final\nquality_display_sanctify_is_gem"
     ],
     "tags": [
@@ -72340,8 +72486,8 @@
     "tooltip_order": [
       "spell_minimum_base_physical_damage\nspell_maximum_base_physical_damage",
       "base_skill_effect_duration",
-      "active_skill_ground_consecration_radius_+",
       "skill_physical_damage_%_to_convert_to_fire",
+      "active_skill_ground_consecration_radius_+",
       "sanctify_wave_damage_+%_final\nquality_display_sanctify_is_gem"
     ],
     "tags": [
@@ -73193,7 +73339,7 @@
       "letter": "g",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "敵にヒットすを与えるスキルをサポートし、それらのヒットで与えたダメージに基づいてエナジーシールドをリーチする。",
+      "support_text": "敵にヒットを与えるスキルをサポートし、それらのヒットで与えたダメージに基づいてエナジーシールドをリーチする。",
       "excluded_types": null,
       "added_types": null,
       "added_minion_types": null
@@ -73697,7 +73843,7 @@
       "stat_text": {
         "skill_physical_damage_%_to_convert_to_lightning": "物理ダメージの50%を雷ダメージに変換する",
         "divine_tempest_hit_damage_+%_final_per_stage\ndivine_tempest_ailment_damage_+%_final_per_stage": "最初のステージの後ステージごとにビームのヒットダメージが250%上昇する\n最初のステージの後ステージごとにビームの状態異常ダメージが105%上昇する",
-        "divine_tempest_base_number_of_nearby_enemies_to_zap": "ステージを獲得した時に近くの敵に5ダメージを与える"
+        "divine_tempest_base_number_of_nearby_enemies_to_zap": "ステージを獲得した時に近くの敵5体にダメージを与える"
       },
       "stats": [
         {
@@ -73833,7 +73979,7 @@
       "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "ステージを獲得した時に近くの敵に{divine_tempest_base_number_of_nearby_enemies_to_zap}ダメージを与える",
+          "stat": "ステージを獲得した時に近くの敵{divine_tempest_base_number_of_nearby_enemies_to_zap}体にダメージを与える",
           "stats": {
             "divine_tempest_base_number_of_nearby_enemies_to_zap": 200
           }
@@ -74390,7 +74536,7 @@
       "letter": "T",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "使用者自身がキャストするスペルスキルをサポートする。トリガーされるスキル、ヴァールスキル、即時発動のスキル、チャネリングスキル、リザーブするスキル、ミニオンを生成するスキルまたはトーテム、トラップ、マインで使用されるスキルはサポートできない。",
+      "support_text": "プレイヤー自身がキャストするスペルスキルをサポートする。トリガーされるスキル、ヴァールスキル、即時発動のスキル、チャネリングスキル、リザーブするスキル、ミニオンを生成するスキルまたはトーテム、トラップ、マインで使用されるスキルはサポートできない。",
       "excluded_types": [
         "Trapped",
         "RemoteMined",
@@ -74499,7 +74645,7 @@
       "letter": "q",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "スペルスキルをサポートし、キャスト時にその効果を再び起こす。クールダウンを持つスキル、トリガーされるスキル、ブランドスキル、ヴァールスキル、チャネリングスキル、リザーブするスキルまたはトーテム、トラップ、マインで使用されるスキルはサポートできない。ミニオンのスキルには影響しない。",
+      "support_text": "スペルスキルをサポートし、キャスト時にその効果が再発動するようにする。クールダウンを持つスキル、トリガーされるスキル、ブランドスキル、ヴァールスキル、チャネリングスキル、リザーブするスキルまたはトーテム、トラップ、マインで使用されるスキルはサポートできない。ミニオンのスキルには影響しない。",
       "excluded_types": [
         "SummonsTotem",
         "Trapped",
@@ -74621,8 +74767,8 @@
       "base_skill_effect_duration",
       "base_cooldown_speed_+%",
       "display_this_skill_cooldown_does_not_recover_during_buff",
-      "display_skill_buff_grants_bleeding_immunity",
-      "quick_guard_damage_absorbed_%\nquick_guard_damage_absorb_limit"
+      "quick_guard_damage_absorbed_%\nquick_guard_damage_absorb_limit",
+      "display_skill_buff_grants_bleeding_immunity"
     ],
     "tags": [
       "strength",
@@ -74741,8 +74887,8 @@
     "tooltip_order": [
       "base_skill_effect_duration",
       "display_this_skill_cooldown_does_not_recover_during_buff",
-      "display_skill_buff_grants_bleeding_immunity",
-      "quick_guard_damage_absorbed_%\nquick_guard_damage_absorb_limit"
+      "quick_guard_damage_absorbed_%\nquick_guard_damage_absorb_limit",
+      "display_skill_buff_grants_bleeding_immunity"
     ],
     "tags": [
       "intelligence",
@@ -76153,7 +76299,7 @@
       "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "アタックのヒット時に憤怒を{gain_x_rage_on_attack_hit}獲得する",
+          "stat": "アタックヒット時に憤怒を{gain_x_rage_on_attack_hit}獲得する",
           "stats": {
             "gain_x_rage_on_attack_hit": 50
           }
@@ -76166,7 +76312,7 @@
       },
       "stat_text": {
         "chain_strike_cone_radius_+_per_x_rage": "憤怒5ごとに効果半径 0.1m",
-        "gain_x_rage_on_attack_hit": "アタックのヒット時に憤怒を2獲得する"
+        "gain_x_rage_on_attack_hit": "アタックヒット時に憤怒を2獲得する"
       },
       "stats": [
         {
@@ -78541,8 +78687,8 @@
       "active_skill_withered_base_duration_ms",
       "display_removes_and_grants_elusive_when_used",
       "display_this_skill_cooldown_does_not_recover_during_buff",
-      "phase_through_objects",
-      "slither_wither_stacks\nquality_display_withering_step_is_gem"
+      "slither_wither_stacks\nquality_display_withering_step_is_gem",
+      "phase_through_objects"
     ],
     "tags": [
       "dexterity",
@@ -80119,7 +80265,7 @@
         "maximum_number_of_snapping_adder_projectiles\nquality_display_venom_gyre_is_gem": "キャッチできる投射物の最大数 30個",
         "skill_physical_damage_%_to_convert_to_chaos": "物理ダメージの60%を混沌ダメージに変換する",
         "base_chance_to_poison_on_hit_%": "ヒット時に40%の確率で毒を付与する",
-        "active_skill_returning_projectile_damage_+%_final\nquality_display_active_skill_returning_damage_is_gem": "回帰する投射物のヒットおよび状態異常のダメージが75%低下する",
+        "active_skill_returning_projectile_damage_+%_final\nquality_display_active_skill_returning_damage_is_gem": "回帰する投射物のヒットと状態異常のダメージが75%低下する",
         "snapping_adder_%_chance_to_retain_projectile_on_release": "ワールリングブレードで放った各回収された投射物は40%の確率で温存される",
         "base_skill_effect_duration": "基礎持続時間は12.00秒",
         "returning_projectiles_always_pierce": "回帰する投射物は全ての対象を貫通する",
@@ -81076,12 +81222,12 @@
       "damage_multiplier": null
     },
     "tooltip_order": [
-      "skill_buff_effect_+%",
       "tethered_enemies_take_attack_projectile_damage_taken_+%",
       "tethered_movement_speed_+%_final_per_rope",
       "tethered_movement_speed_+%_final_per_rope_vs_rare",
       "tethered_movement_speed_+%_final_per_rope_vs_unique",
-      "tethering_arrow_display_rope_limit"
+      "tethering_arrow_display_rope_limit",
+      "skill_buff_effect_+%"
     ],
     "tags": [
       "dexterity",
@@ -81252,8 +81398,8 @@
       "attack_skills_additional_ballista_totems_allowed",
       "base_number_of_arrows\nquality_display_base_additional_arrows_is_gem",
       "base_number_of_arrows\nquality_display_base_additional_arrows_is_gem\nartillery_ballista_number_of_arrows_is_equal_to_number_of_nearby_targets",
-      "is_totem\nis_ranged_attack_totem",
-      "skill_physical_damage_%_to_convert_to_fire"
+      "skill_physical_damage_%_to_convert_to_fire",
+      "is_totem\nis_ranged_attack_totem"
     ],
     "tags": [
       "dexterity",
@@ -81432,8 +81578,8 @@
       "attack_skills_additional_ballista_totems_allowed",
       "base_number_of_arrows\nquality_display_base_additional_arrows_is_gem",
       "base_number_of_arrows\nquality_display_base_additional_arrows_is_gem\nartillery_ballista_number_of_arrows_is_equal_to_number_of_nearby_targets",
-      "is_totem\nis_ranged_attack_totem",
       "skill_physical_damage_%_to_convert_to_fire",
+      "is_totem\nis_ranged_attack_totem",
       "artillery_ballista_cross_strafe_pattern"
     ],
     "tags": [
@@ -81519,7 +81665,7 @@
       },
       "stat_text": {
         "base_totem_duration": "トーテムは8秒持続する",
-        "base_number_of_arrows\nquality_display_base_additional_arrows_is_gem\nartillery_ballista_number_of_arrows_is_equal_to_number_of_nearby_targets": "1体の対象に最大5本の矢を放つ",
+        "base_number_of_arrows\nquality_display_base_additional_arrows_is_gem\nartillery_ballista_number_of_arrows_is_equal_to_number_of_nearby_targets": "異なる対象に最大5本の矢を放つ",
         "skill_physical_damage_%_to_convert_to_fire": "物理ダメージの100%を火ダメージに変換する",
         "is_totem\nis_ranged_attack_totem": "このスキルを使用するバリスタトーテム1体を召喚する"
       },
@@ -81611,8 +81757,8 @@
       "base_totem_duration",
       "attack_skills_additional_ballista_totems_allowed",
       "base_number_of_arrows\nquality_display_base_additional_arrows_is_gem\nartillery_ballista_number_of_arrows_is_equal_to_number_of_nearby_targets",
-      "is_totem\nis_ranged_attack_totem",
-      "skill_physical_damage_%_to_convert_to_fire"
+      "skill_physical_damage_%_to_convert_to_fire",
+      "is_totem\nis_ranged_attack_totem"
     ],
     "tags": [
       "dexterity",
@@ -85977,7 +86123,7 @@
       "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "投射物は{kinetic_wand_base_number_of_zig_zags}回方向を変える",
+          "stat": "投射物は方向を{kinetic_wand_base_number_of_zig_zags}回変える",
           "stats": {
             "kinetic_wand_base_number_of_zig_zags": 50
           }
@@ -85989,7 +86135,7 @@
         "dex": 0
       },
       "stat_text": {
-        "kinetic_wand_base_number_of_zig_zags": "投射物は3回方向を変える",
+        "kinetic_wand_base_number_of_zig_zags": "投射物は方向を3回変える",
         "number_of_additional_projectiles": "追加の投射物を2個放つ",
         "kinetic_bolt_forks_apply_to_zig_zags": "投射物を分岐させるモッドは代わりに投射物が方向を変える回数を追加する"
       },
@@ -88078,10 +88224,10 @@
       },
       "stat_text": {
         "base_secondary_skill_effect_duration": "合計6.00秒の持続時間中、浮遊状態でいることができる",
-        "base_tertiary_skill_effect_duration": "基礎デバフ持続時間は2.00秒",
+        "base_tertiary_skill_effect_duration": "デバフの基礎持続時間は2.00秒",
         "base_sigil_repeat_frequency_ms": "付着状態の時に0.25秒ごとにアクティベートする",
         "immolation_brand_burn_damage_+%_final_per_stage\nquality_display_wintertide_brand_is_gem": "ステージごとにデバフのダメージが20%上昇する",
-        "winter_brand_max_number_of_stages": "最大ステージ数 20",
+        "winter_brand_max_number_of_stages": "ステージの最大数 20",
         "active_skill_brands_allowed_on_enemy_+": "1体の敵に付着できるブランドの数が追加で1個増える",
         "base_skill_effect_duration": "合計2.00秒の持続時間中、付着状態でいることができる",
         "additive_cast_speed_modifiers_apply_to_sigil_repeat_frequency": "キャストスピードの増減はこのスキルのアクティベート頻度にも適用される",
@@ -88182,11 +88328,11 @@
       "base_cold_damage_to_deal_per_minute",
       "active_skill_brands_allowed_on_enemy_+",
       "spell_damage_modifiers_apply_to_skill_dot",
+      "immolation_brand_burn_damage_+%_final_per_stage\nquality_display_wintertide_brand_is_gem",
+      "winter_brand_max_number_of_stages",
       "base_secondary_skill_effect_duration",
       "base_skill_effect_duration",
-      "base_tertiary_skill_effect_duration",
-      "immolation_brand_burn_damage_+%_final_per_stage\nquality_display_wintertide_brand_is_gem",
-      "winter_brand_max_number_of_stages"
+      "base_tertiary_skill_effect_duration"
     ],
     "tags": [
       "intelligence",
@@ -90159,7 +90305,7 @@
       },
       "stat_text": {
         "frost_globe_absorb_damage_%_enemy_in_bubble": "範囲内の敵が範囲内のプレイヤーまたは味方に与えたヒットダメージの20%をプレイヤーのライフまたはエナジーシールドの前にフロストシールドのライフで受ける",
-        "frost_globe_max_stages": "最大ステージ数 4",
+        "frost_globe_max_stages": "ステージの最大数 4",
         "frost_globe_absorb_damage_%_enemy_outside_bubble": "範囲外の敵が範囲内のプレイヤーまたは味方に与えたヒットダメージの60%をプレイヤーのライフまたはエナジーシールドの前にフロストシールドのライフで受ける",
         "frost_globe_stage_gain_interval_ms": "プレイヤーがエナジーシールドを失っている時に0.3秒ごとにステージを1獲得する",
         "base_skill_effect_duration": "基礎持続時間は10.00秒"
@@ -90640,7 +90786,7 @@
         "dex": 0
       },
       "stat_text": {
-        "circle_of_power_max_stages\nquality_display_circle_of_power_is_gem": "最大ステージ 4",
+        "circle_of_power_max_stages\nquality_display_circle_of_power_is_gem": "ステージの最大数 4",
         "base_skill_effect_duration": "基礎持続時間は12.00秒",
         "display_sigil_of_power_stage_gain_delay": "ステージを獲得する間隔として最低1秒必要"
       },
@@ -90886,8 +91032,8 @@
       "base_secondary_skill_effect_duration",
       "spell_damage_modifiers_apply_to_skill_dot",
       "wall_maximum_length\nquality_display_wall_length_is_gem",
-      "flame_wall_minimum_added_fire_damage\nflame_wall_maximum_added_fire_damage",
-      "number_of_allowed_firewalls\nquality_display_firewall_is_gem"
+      "number_of_allowed_firewalls\nquality_display_firewall_is_gem",
+      "flame_wall_minimum_added_fire_damage\nflame_wall_maximum_added_fire_damage"
     ],
     "tags": [
       "intelligence",
@@ -92135,7 +92281,7 @@
       },
       "stat_text": {
         "skill_physical_damage_%_to_convert_to_cold\nactive_skill_display_suppress_physical_to_cold_damage_conversion": "",
-        "hydro_sphere_base_pulse_frequency_ms": "スフィアが凍結、感電、脆弱、消耗状態の時0.4秒ごとにパルスを放つ",
+        "hydro_sphere_base_pulse_frequency_ms": "スフィアが凍結、感電、脆弱または消耗状態の時に0.4秒ごとにパルスを発生させる",
         "base_secondary_skill_effect_duration": "サブの基礎持続時間は4.00秒",
         "water_sphere_cold_lightning_exposure_%": "水浸しの敵は曝露（冷気）および曝露（雷）を受け、その耐性が-10%される",
         "hydrosphere_hit_cooldown_ms": "1秒ごとに1回だけヒットを受けることができる",
@@ -93080,8 +93226,8 @@
       "spell_minimum_base_physical_damage\nspell_maximum_base_physical_damage",
       "base_physical_damage_to_deal_per_minute",
       "base_skill_effect_duration",
-      "spell_damage_modifiers_apply_to_skill_dot",
       "number_of_chains",
+      "spell_damage_modifiers_apply_to_skill_dot",
       "blood_tendrils_beam_count\nquality_display_exsanguinate_beam_targets_is_gem"
     ],
     "tags": [
@@ -93912,7 +94058,7 @@
         "dex": 0
       },
       "stat_text": {
-        "support_base_lifetap_buff_duration\nquality_display_lifetap_is_gem": "ライフタップは+4秒持続する",
+        "support_base_lifetap_buff_duration\nquality_display_lifetap_is_gem": "ライフタップは4秒持続する",
         "base_skill_cost_life_instead_of_mana": "サポートされたスキルはマナの代わりにライフをコストとする"
       },
       "stats": [
@@ -95897,8 +96043,8 @@
       "damage_multiplier": null
     },
     "tooltip_order": [
-      "base_chance_to_freeze_%",
       "skill_physical_damage_%_to_convert_to_cold",
+      "base_chance_to_freeze_%",
       "glacial_hammer_third_hit_freeze_as_though_dealt_damage_+%",
       "melee_range_+",
       "cold_ailment_duration_+%",
@@ -96503,9 +96649,9 @@
     "tooltip_order": [
       "thrown_shield_secondary_projectile_damage_+%_final",
       "off_hand_local_minimum_added_physical_damage\noff_hand_local_maximum_added_physical_damage",
-      "off_hand_minimum_added_physical_damage_per_15_shield_armour_and_evasion_rating\noff_hand_maximum_added_physical_damage_per_15_shield_armour_and_evasion_rating",
       "number_of_additional_projectiles",
-      "number_of_chains"
+      "number_of_chains",
+      "off_hand_minimum_added_physical_damage_per_15_shield_armour_and_evasion_rating\noff_hand_maximum_added_physical_damage_per_15_shield_armour_and_evasion_rating"
     ],
     "tags": [
       "dexterity",
@@ -96667,7 +96813,7 @@
       "stat_text": {
         "maximum_number_of_snapping_adder_projectiles": "キャッチできる投射物の最大数が+30個される",
         "skill_physical_damage_%_to_convert_to_chaos": "物理ダメージの60%を混沌ダメージに変換する",
-        "active_skill_returning_projectile_damage_+%_final\nquality_display_active_skill_returning_damage_is_gem": "回帰する投射物のヒットおよび状態異常のダメージが75%低下する",
+        "active_skill_returning_projectile_damage_+%_final\nquality_display_active_skill_returning_damage_is_gem": "回帰する投射物のヒットと状態異常のダメージが75%低下する",
         "snapping_adder_%_chance_to_retain_projectile_on_release": "ワールリングブレードで放った各回収された投射物は40%の確率で温存される",
         "base_skill_effect_duration": "基礎持続時間は12.00秒",
         "returning_projectiles_always_pierce": "回帰する投射物は全ての対象を貫通する",
@@ -97355,7 +97501,7 @@
         "base_skill_effect_duration": "基礎持続時間は1.00秒",
         "base_number_of_arrows": "放つ矢の数が+5本される",
         "skill_physical_damage_%_to_convert_to_chaos": "物理ダメージの60%を混沌ダメージに変換する",
-        "rain_of_spores_vines_movement_speed_+%_final\nminimum_rain_of_spores_movement_speed_+%_final_cap": "それぞれの胞子嚢は近くの敵の移動スピードを5%ずつ、最大5%低下させる",
+        "rain_of_spores_vines_movement_speed_+%_final\nminimum_rain_of_spores_movement_speed_+%_final_cap": "それぞれの胞子嚢は近くの敵の移動スピードを5%低下を付与する、最大30%",
         "projectile_damage_modifiers_apply_to_skill_dot": "投射物ダメージのモッドはこのスキルの継続ダメージ効果にも適用される"
       },
       "stats": [
@@ -97440,8 +97586,8 @@
       "base_chaos_damage_to_deal_per_minute",
       "base_skill_effect_duration",
       "base_number_of_arrows",
-      "projectile_damage_modifiers_apply_to_skill_dot",
       "skill_physical_damage_%_to_convert_to_chaos",
+      "projectile_damage_modifiers_apply_to_skill_dot",
       "rain_of_spores_vines_movement_speed_+%_final\nminimum_rain_of_spores_movement_speed_+%_final_cap"
     ],
     "tags": [
@@ -98820,7 +98966,7 @@
       "stat_text": {
         "skill_physical_damage_%_to_convert_to_lightning": "物理ダメージの50%を雷ダメージに変換する",
         "divine_tempest_hit_damage_+%_final_per_stage\ndivine_tempest_ailment_damage_+%_final_per_stage": "最初のステージの後ステージごとにビームのヒットダメージが100%上昇する\n最初のステージの後ステージごとにビームの状態異常ダメージが70%上昇する",
-        "divine_tempest_base_number_of_nearby_enemies_to_zap": "ステージを獲得した時に近くの敵に5ダメージを与える",
+        "divine_tempest_base_number_of_nearby_enemies_to_zap": "ステージを獲得した時に近くの敵5体にダメージを与える",
         "divine_tempest_stage_on_hitting_normal_magic_%_chance": "ノーマルまたはマジックの敵にヒットを与えると40%の確率で追加のステージを獲得する",
         "divine_tempest_damage_+%_final_while_channelling": "チャネリング中のダメージが40%低下する",
         "divine_tempest_stage_on_hitting_rare_unique": "レアまたはユニークの敵にヒットを与えると追加のステージを獲得する"
@@ -100005,8 +100151,8 @@
       "base_skill_effect_duration",
       "spell_minimum_base_fire_damage\nspell_maximum_base_fire_damage",
       "corpse_erruption_base_maximum_number_of_geyers",
-      "corpse_explosion_monster_life_%",
-      "number_of_additional_projectiles"
+      "number_of_additional_projectiles",
+      "corpse_explosion_monster_life_%"
     ],
     "tags": [
       "dexterity",
@@ -100237,7 +100383,7 @@
       },
       "stat_text": {
         "skill_physical_damage_%_to_convert_to_cold\nactive_skill_display_suppress_physical_to_cold_damage_conversion": "",
-        "hydro_sphere_base_pulse_frequency_ms": "スフィアが凍結、感電、脆弱、消耗状態の時0.4秒ごとにパルスを放つ",
+        "hydro_sphere_base_pulse_frequency_ms": "スフィアが凍結、感電、脆弱または消耗状態の時に0.4秒ごとにパルスを発生させる",
         "base_secondary_skill_effect_duration": "サブの基礎持続時間は4.00秒",
         "water_sphere_cold_lightning_exposure_%": "水浸しの敵は曝露（冷気）および曝露（雷）を受け、その耐性が-10%される",
         "hydrosphere_hit_cooldown_ms": "1秒ごとに1回だけヒットを受けることができる",
@@ -101237,8 +101383,8 @@
       "always_pierce",
       "base_totem_duration",
       "base_number_of_projectiles",
-      "is_totem",
       "skill_physical_damage_%_to_convert_to_fire",
+      "is_totem",
       "consecrated_ground_immune_to_curses"
     ],
     "tags": [
@@ -101394,8 +101540,8 @@
       "base_totem_duration",
       "attack_skills_additional_ballista_totems_allowed",
       "base_number_of_arrows",
-      "is_totem\nis_ranged_attack_totem",
-      "skill_physical_damage_%_to_convert_to_fire"
+      "skill_physical_damage_%_to_convert_to_fire",
+      "is_totem\nis_ranged_attack_totem"
     ],
     "tags": [
       "dexterity",
@@ -101467,7 +101613,7 @@
       },
       "stat_text": {
         "base_totem_duration": "トーテムは8秒持続する",
-        "number_of_additional_totems_allowed": "召喚できるトーテムの最大数 +1",
+        "number_of_additional_totems_allowed": "トーテム最大召喚数 +1",
         "is_totem\nis_ranged_attack_totem": "このスキルを使用するバリスタトーテム1体を召喚する"
       },
       "stats": [
@@ -102471,10 +102617,10 @@
       "spell_minimum_base_lightning_damage\nspell_maximum_base_lightning_damage",
       "base_trap_duration",
       "base_skill_effect_duration",
-      "is_trap",
-      "trap_trigger_radius_+%",
       "lightning_tower_trap_base_interval_duration_ms",
       "modifiers_to_trap_throw_speed_apply_to_lightning_spire_trap_frequency",
+      "is_trap",
+      "trap_trigger_radius_+%",
       "critical_strike_chance_+%_vs_shocked_enemies",
       "lightning_tower_trap_number_of_beams"
     ],
@@ -104097,10 +104243,10 @@
     "tooltip_order": [
       "base_skill_effect_duration",
       "warcry_speed_+%",
-      "physical_damage_reduction_%_per_endurance_charge",
-      "resist_all_elements_%_per_endurance_charge",
       "warcry_count_power_from_enemies",
-      "endurance_charge_granted_per_X_monster_power_during_endurance_warcry"
+      "endurance_charge_granted_per_X_monster_power_during_endurance_warcry",
+      "physical_damage_reduction_%_per_endurance_charge",
+      "resist_all_elements_%_per_endurance_charge"
     ],
     "tags": [
       "warcry",
@@ -104335,8 +104481,8 @@
     },
     "tooltip_order": [
       "spell_minimum_base_lightning_damage\nspell_maximum_base_lightning_damage",
-      "skill_effect_duration_+%",
-      "max_number_of_lightning_warp_markers"
+      "max_number_of_lightning_warp_markers",
+      "skill_effect_duration_+%"
     ],
     "tags": [
       "intelligence",
@@ -104593,7 +104739,7 @@
   },
   {
     "active_skill": {
-      "description": "起爆すると使用者をマインの位置にテレポートさせるマインを投げる。脱出地点と到着地点に敵を盲目状態にする煙幕を発生させ、移動スピードに一時的なバフを与える。他のブリンクスキルとクールダウンを共有する。",
+      "description": "起爆すると使用者をマインの位置にテレポートさせるマインを投げる。脱出地点と到着地点に敵を[Blind|盲目]状態にする煙幕を発生させ、移動スピードに一時的なバフを与える。他のブリンクスキルとクールダウンを共有する。",
       "display_name": "スモークマイン",
       "id": "smoke_mine",
       "is_manually_casted": true,
@@ -104730,9 +104876,9 @@
       "additive_mine_duration_modifiers_apply_to_buff_effect_duration",
       "is_remote_mine",
       "disable_mine_detonation_cascade",
-      "base_movement_velocity_+%",
       "mine_cannot_rearm",
-      "mine_detonates_instantly"
+      "mine_detonates_instantly",
+      "base_movement_velocity_+%"
     ],
     "tags": [
       "mine",
@@ -105697,6 +105843,11 @@
           "id": "is_totem",
           "type": "implicit",
           "value": 1
+        },
+        {
+          "id": "skill_is_spell_totemified",
+          "type": "implicit",
+          "value": 1
         }
       ],
       "vaal": null,
@@ -105772,7 +105923,7 @@
         "dex": null
       },
       "stat_text": {
-        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップの持続時間 15秒",
+        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップは15秒持続する",
         "disable_skill_if_melee_attack": "サポートされたアタックスキルは近接武器で使用することができない"
       },
       "stats": [
@@ -106221,7 +106372,7 @@
         "dex": null
       },
       "stat_text": {
-        "global_chance_to_blind_on_hit_%": "サポートされたスキルは10%の確率でヒット時に敵を盲目にする"
+        "global_chance_to_blind_on_hit_%": "サポートされたスキルは10%の確率でヒット時に敵を[Blind|盲目]にする"
       },
       "stats": [
         {
@@ -106295,7 +106446,7 @@
         "dex": 0
       },
       "stat_text": {
-        "support_base_lifetap_buff_duration\nquality_display_lifetap_is_gem": "ライフタップは+4秒持続する",
+        "support_base_lifetap_buff_duration\nquality_display_lifetap_is_gem": "ライフタップは4秒持続する",
         "base_skill_cost_life_instead_of_mana": "サポートされたスキルはマナの代わりにライフをコストとする"
       },
       "stats": [
@@ -106501,7 +106652,7 @@
       "letter": "d",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "持続するスキルをサポートする。",
+      "support_text": "持続時間を持つスキルをサポートする。",
       "excluded_types": null,
       "added_types": null,
       "added_minion_types": null
@@ -107029,8 +107180,8 @@
     "tooltip_order": [
       "spell_minimum_base_lightning_damage\nspell_maximum_base_lightning_damage",
       "base_skill_effect_duration",
-      "corpse_explosion_monster_life_%_lightning",
       "skill_lightning_damage_%_to_convert_to_chaos",
+      "corpse_explosion_monster_life_%_lightning",
       "voltaxic_burst_hit_and_ailment_damage_+%_final_per_stack\nquality_display_voltaxic_burst_is_gem"
     ],
     "tags": [
@@ -107285,7 +107436,7 @@
         "rage_slash_maximum_vortices": "レイジストームの最大数 1",
         "rage_slash_vortex_attack_speed_+%_final": "レイジストームは250%上昇した頻度でヒットする",
         "active_skill_base_area_of_effect_radius": "基礎半径は2.2m",
-        "rage_storm_scaling_rage_hundred_times_base_cost": "毎秒憤怒を3失う",
+        "rage_storm_scaling_rage_hundred_times_base_cost": "1秒ごとに憤怒を3失う",
         "rage_storm_scaling_rage_loss_+%_per_second": "1秒ごとに憤怒喪失レートが20%上昇する"
       },
       "stats": [
@@ -107483,8 +107634,8 @@
       "damage_multiplier": null
     },
     "tooltip_order": [
-      "projectiles_nova\nskill_display_single_base_projectile",
       "spectral_spiral_weapon_base_number_of_bounces",
+      "projectiles_nova\nskill_display_single_base_projectile",
       "projectile_damage_+%_final_if_pierced_enemy",
       "spectral_helix_rotations_%"
     ],
@@ -107574,7 +107725,7 @@
       "stat_text": {
         "spectral_spiral_weapon_base_number_of_bounces": "最大3回までバウンスする\n投射物の数のモッドは代わりにバウンスの回数に適用される",
         "spectral_helix_rotations_%": "4.25周まで螺旋運動をする",
-        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップの持続時間 4秒",
+        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップは4秒持続する",
         "throw_X_additional_traps_if_dual_wielding": "二刀流であれば追加で最大1個のトラップを投げる",
         "trap_throwing_speed_+%_while_wielding_2hand": "両手武器を装備中にトラップ投擲スピードが25%減少する",
         "projectiles_nova\nskill_display_single_base_projectile": "",
@@ -107662,9 +107813,9 @@
     "tooltip_order": [
       "throw_X_additional_traps_if_dual_wielding",
       "base_trap_duration\nquality_display_trap_duration_is_gem",
+      "spectral_spiral_weapon_base_number_of_bounces",
       "is_trap",
       "projectiles_nova\nskill_display_single_base_projectile",
-      "spectral_spiral_weapon_base_number_of_bounces",
       "projectile_damage_+%_final_if_pierced_enemy",
       "spectral_helix_rotations_%",
       "trap_throwing_speed_+%_while_wielding_2hand"
@@ -108056,7 +108207,7 @@
       },
       "stat_text": {
         "skill_physical_damage_%_to_convert_to_lightning": "このスペルおよびミニオンは物理ダメージの50%を雷ダメージに変換する",
-        "base_max_number_of_absolution_sentinels": "赦免のセンチネルの最大召喚数 3",
+        "base_max_number_of_absolution_sentinels": "アブソリューションのセンチネル最大召喚数 3",
         "base_secondary_skill_effect_duration": "サブの基礎持続時間は15.00秒",
         "absolution_blast_chance_to_summon_on_hitting_rare_or_unique_%": "レアまたはユニークの敵をヒット時に25%の確率でアブソリューションのセンチネルを召喚する",
         "base_skill_effect_duration": "基礎持続時間は3.00秒"
@@ -108141,8 +108292,8 @@
       "base_secondary_skill_effect_duration",
       "base_max_number_of_absolution_sentinels",
       "absolution_blast_chance_to_summon_on_hitting_rare_or_unique_%",
-      "skill_physical_damage_%_to_convert_to_lightning",
-      "minion_cooldown_recovery_+%"
+      "minion_cooldown_recovery_+%",
+      "skill_physical_damage_%_to_convert_to_lightning"
     ],
     "tags": [
       "strength",
@@ -108232,7 +108383,7 @@
       },
       "stat_text": {
         "skill_physical_damage_%_to_convert_to_lightning": "物理ダメージの50%を雷ダメージに変換する",
-        "base_max_number_of_absolution_sentinels": "赦免のセンチネルの最大召喚数 2",
+        "base_max_number_of_absolution_sentinels": "アブソリューションのセンチネル最大召喚数 2",
         "base_secondary_skill_effect_duration": "サブの基礎持続時間は15.00秒",
         "absolution_blast_chance_to_summon_on_hitting_rare_or_unique_%": "レアまたはユニークの敵をヒット時に25%の確率でアブソリューションのセンチネルを召喚する",
         "base_skill_effect_duration": "基礎持続時間は3.00秒",
@@ -109045,7 +109196,7 @@
         "dex": 0
       },
       "stat_text": {
-        "support_ghost_base_duration": "ファンタズムは15秒持続する",
+        "support_ghost_base_duration": "ファンタズムは15秒間持続する",
         "chance_to_summon_support_ghost_on_hitting_rare_or_unique_%": "サポートされたスキルまたはサポートされたスキルによるファンタズム以外のミニオンが\nレアまたはユニークの敵をヒットすると10%の確率でファンタズムを召喚する"
       },
       "stats": [
@@ -109120,7 +109271,7 @@
       "letter": "G",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "敵をヒットまたはミニオンを生成するスキルをサポートする。これらスキルまたはミニオンが敵を倒した時、またはレア、ユニークの敵をヒットした時、物理ダメージを与え貫通する投射物を放つファンタズムミニオンを召喚する確率を得る。",
+      "support_text": "敵をヒットまたはミニオンを生成するスキルをサポートする。これらスキルまたはミニオンが敵を倒した時、またはレア、ユニークの敵をヒットした時、物理ダメージを与え貫通する投射物を放つファンタズムミニオンを一定確率で召喚する。",
       "excluded_types": [
         "MinionsPersistWhenSkillRemoved"
       ],
@@ -109188,7 +109339,7 @@
       },
       "stat_text": {
         "base_totem_duration": "トーテムは8秒持続する",
-        "number_of_additional_totems_allowed": "召喚できるトーテムの最大数 +1",
+        "number_of_additional_totems_allowed": "トーテム最大召喚数 +1",
         "is_totem": "このスキルを使用するトーテム1体を召喚する",
         "spell_damage_modifiers_apply_to_skill_dot": "スペルダメージのモッドはこのスキルの継続ダメージ効果にも適用される"
       },
@@ -109494,8 +109645,8 @@
     },
     "tooltip_order": [
       "minimum_added_fire_damage_vs_ignited_enemies\nmaximum_added_fire_damage_vs_ignited_enemies",
-      "base_chance_to_ignite_%",
-      "skill_physical_damage_%_to_convert_to_fire"
+      "skill_physical_damage_%_to_convert_to_fire",
+      "base_chance_to_ignite_%"
     ],
     "tags": [
       "dexterity",
@@ -109632,8 +109783,8 @@
     "tooltip_order": [
       "base_chaos_damage_to_deal_per_minute",
       "base_skill_effect_duration",
-      "projectile_damage_modifiers_apply_to_skill_dot",
-      "skill_physical_damage_%_to_convert_to_chaos"
+      "skill_physical_damage_%_to_convert_to_chaos",
+      "projectile_damage_modifiers_apply_to_skill_dot"
     ],
     "tags": [
       "dexterity",
@@ -110814,7 +110965,7 @@
   },
   {
     "active_skill": {
-      "description": "指定した位置の周囲のスケルトンミニオンからライフを取り除き、その周囲の敵に混沌ダメージを与える。この効果は使用者の他の近くのスケルトンにも連鎖する。対象とした位置にも使用者の近くにもスケルトンがいなければ、ダメージを与えるために使用者自身のライフが犠牲となる。",
+      "description": "指定した位置の周囲またはプレイヤーの近くのスケルトンミニオンからライフを取り除き、その周囲の敵に混沌ダメージを与える。この効果は使用者の他の近くのスケルトンにも連鎖するビームを放つ。対象とした位置にも使用者の近くにもスケルトンがいなければ、ダメージを与えるために使用者自身のライフを代わりに捧げる。",
       "display_name": "ダークバーゲン",
       "id": "dark_pact",
       "is_manually_casted": true,
@@ -110922,8 +111073,8 @@
     },
     "tooltip_order": [
       "spell_minimum_base_chaos_damage\nspell_maximum_base_chaos_damage",
-      "skeletal_chains_aoe_%_health_dealt_as_chaos_damage",
       "number_of_chains",
+      "skeletal_chains_aoe_%_health_dealt_as_chaos_damage",
       "skeletal_chains_no_minions_targets_self"
     ],
     "tags": [
@@ -111890,9 +112041,9 @@
       },
       "stat_text": {
         "base_skill_effect_duration": "基礎持続時間は1.00秒",
-        "base_max_number_of_dominated_normal_monsters": "ノーマルの支配のセンチネルの最大召喚数 5",
-        "base_max_number_of_dominated_magic_monsters": "マジックの支配のセンチネルの最大召喚数 3",
-        "base_max_number_of_dominated_rare_monsters": "レアの支配のセンチネルの最大召喚数 1",
+        "base_max_number_of_dominated_normal_monsters": "ノーマルの支配のセンチネル最大召喚数 5",
+        "base_max_number_of_dominated_magic_monsters": "マジックの支配のセンチネル最大召喚数 3",
+        "base_max_number_of_dominated_rare_monsters": "レアの支配のセンチネル最大召喚数 1",
         "base_secondary_skill_effect_duration": "サブの基礎持続時間は10.00秒"
       },
       "stats": [
@@ -112109,8 +112260,8 @@
     "tooltip_order": [
       "base_skill_effect_duration",
       "attack_minimum_added_fire_damage\nattack_maximum_added_fire_damage",
-      "corpse_explosion_monster_life_%",
       "skill_physical_damage_%_to_convert_to_fire",
+      "corpse_explosion_monster_life_%",
       "active_skill_base_area_of_effect_radius",
       "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius",
       "infernal_blow_explosion_damage_%_of_total_per_stack"
@@ -112186,7 +112337,7 @@
         "dex": 0
       },
       "stat_text": {
-        "shockwave_slam_explosion_damage_+%_final": "衝撃波の与えるダメージが40%低下する",
+        "shockwave_slam_explosion_damage_+%_final": "ショックウェーブのダメージが40%低下する",
         "sunder_wave_radius_+_per_step": "波動の範囲は前回の波動の範囲ごとに半径+0.2mを獲得する",
         "sunder_wave_max_steps": "波動は5箇所の範囲にダメージを与える",
         "sunder_wave_min_steps": "波動は2箇所の範囲にダメージを与えるまで止めることができない",
@@ -114395,7 +114546,7 @@
       },
       "stat_text": {
         "skill_physical_damage_%_to_convert_to_chaos": "物理ダメージの60%を混沌ダメージに変換する",
-        "critical_poison_dot_multiplier_+": "クリティカルストライクによる毒継続ダメージ倍率が+50%される",
+        "critical_poison_dot_multiplier_+": "クリティカルストライクによる毒の継続ダメージ倍率 +50%",
         "base_chance_to_poison_on_hit_%": "ヒット時に60%の確率で毒を付与する",
         "active_skill_projectile_damage_+%_final_for_each_remaining_chain": "連鎖の残り回数ごとに投射物のダメージが5%上昇する"
       },
@@ -115141,10 +115292,10 @@
     },
     "tooltip_order": [
       "base_skill_effect_duration",
-      "base_secondary_skill_effect_duration",
       "skill_empowers_next_x_melee_attacks\nskill_empower_limitation_specifier_for_stat_description",
       "ambush_additional_critical_strike_chance_permyriad",
-      "vanishing_ambush_critical_strike_multiplier_+"
+      "vanishing_ambush_critical_strike_multiplier_+",
+      "base_secondary_skill_effect_duration"
     ],
     "tags": [
       "critical",
@@ -115368,7 +115519,7 @@
         "dex": null
       },
       "stat_text": {
-        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップの持続時間 4秒",
+        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップは4秒持続する",
         "base_weapon_trap_total_rotation_%\nquality_display_blade_trap_is_gem": "4回回転する",
         "weapon_trap_total_rotation_%_if_dual_wielding": "二刀流中は回転回数が+1回される",
         "weapon_trap_rotation_speed_+%_if_dual_wielding": "二刀流中は回転スピードが25%増加する",
@@ -115466,9 +115617,9 @@
     "tooltip_order": [
       "base_trap_duration\nquality_display_trap_duration_is_gem",
       "base_weapon_trap_total_rotation_%\nquality_display_blade_trap_is_gem",
-      "is_trap",
       "weapon_trap_rotation_speed_+%_if_dual_wielding",
       "weapon_trap_total_rotation_%_if_dual_wielding",
+      "is_trap",
       "active_skill_base_area_of_effect_radius"
     ],
     "tags": [
@@ -115540,7 +115691,7 @@
         "dex": null
       },
       "stat_text": {
-        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップの持続時間 4秒",
+        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップは4秒持続する",
         "base_skill_effect_duration": "基礎持続時間は3.50秒",
         "is_trap": ""
       },
@@ -115686,7 +115837,7 @@
       "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "このスキルによる出血は{faster_bleed_%}%速くダメージを与える",
+          "stat": "このスキルによる出血がダメージを与える速度が{faster_bleed_%}%[DamageFaster|速くなる]",
           "stats": {
             "faster_bleed_%": 500
           }
@@ -115698,10 +115849,10 @@
         "dex": null
       },
       "stat_text": {
-        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップの持続時間 4秒",
+        "base_trap_duration\nquality_display_trap_duration_is_gem": "トラップは4秒持続する",
         "base_weapon_trap_total_rotation_%\nquality_display_blade_trap_is_gem": "1回回転する",
         "bleed_on_hit_with_attacks_%": "25%の確率で出血を付与する",
-        "faster_bleed_%": "このスキルによる出血は50%速くダメージを与える",
+        "faster_bleed_%": "このスキルによる出血がダメージを与える速度が50%[DamageFaster|速くなる]",
         "is_trap": ""
       },
       "stats": [
@@ -116236,9 +116387,9 @@
     },
     "tooltip_order": [
       "skill_physical_damage_%_to_convert_to_lightning",
-      "base_stun_threshold_reduction_+%",
       "modifiers_to_projectile_count_do_not_apply",
       "prismatic_rain_beam_base_frequency_ms",
+      "base_stun_threshold_reduction_+%",
       "number_of_allowed_storm_arrows",
       "storm_rain_pulse_count\nquality_display_storm_rain_is_gem"
     ],
@@ -116308,7 +116459,7 @@
       "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "より近くの対象に与えるダメージが最大{shield_crush_damage_+%_final_from_distance}%上昇する",
+          "stat": "より近くにいる敵に対してヒットダメージが最大{shield_crush_damage_+%_final_from_distance}%上昇する",
           "stats": {
             "shield_crush_damage_+%_final_from_distance": 500
           }
@@ -117738,7 +117889,7 @@
       "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "フラスコチャージの消費量が{flask_charges_used_+%/negate}%減少する",
+          "stat": "フラスコチャージ消費量が{flask_charges_used_+%/negate}%減少する",
           "stats": {
             "flask_charges_used_+%": -750
           }
@@ -117750,7 +117901,7 @@
         "dex": null
       },
       "stat_text": {
-        "additional_base_critical_strike_chance": "クリティカル率が+6%される",
+        "additional_base_critical_strike_chance": "クリティカル率 +6%",
         "flask_throw_charges_used_per_projectile": "ルビー、サファイアおよびトパーズのフラスコからチャージを消費できる\n可能であれば有効な各タイプのフラスコ1個から放つ投射物ごとに1チャージを消費する",
         "active_skill_base_area_of_effect_radius": "基礎半径は1.8m"
       },
@@ -117922,7 +118073,7 @@
       "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "フラスコチャージの消費量が{flask_charges_used_+%/negate}%減少する",
+          "stat": "フラスコチャージ消費量が{flask_charges_used_+%/negate}%減少する",
           "stats": {
             "flask_charges_used_+%": -750
           }
@@ -117934,7 +118085,7 @@
         "dex": null
       },
       "stat_text": {
-        "additional_base_critical_strike_chance": "クリティカル率が+10%される",
+        "additional_base_critical_strike_chance": "クリティカル率 +10%",
         "flask_throw_charges_used_per_projectile": "ルビー、サファイアおよびトパーズのフラスコからチャージを消費できる\n可能であれば有効な各タイプのフラスコ1個から放つ投射物ごとに1チャージを消費する",
         "active_skill_base_area_of_effect_radius": "基礎半径は1.8m"
       },
@@ -118437,7 +118588,7 @@
         "dex": 0
       },
       "stat_text": {
-        "active_skill_projectile_speed_+%_final": "投射物のスピードが50%上昇する",
+        "active_skill_projectile_speed_+%_final": "投射物スピードが50%上昇する",
         "eye_of_winter_base_explosion_shards\neye_of_winter_count_shards_while_flying_instead": "投射物の飛行中と飛行が終わった時に螺旋状に12個の破片を放つ",
         "display_eye_of_winter_projectile_modifier": "投射物の数のモッドは破片にのみ適用される",
         "quality_display_freezing_pulse_damage_at_long_range_is_gem": ""
@@ -118588,7 +118739,7 @@
       "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "ヒット時に{withered_on_hit_for_2_seconds_%_chance}%の確率で2秒間衰弱を付与する",
+          "stat": "ヒット時に{withered_on_hit_for_2_seconds_%_chance}%の確率で衰弱を2秒間付与する",
           "stats": {
             "withered_on_hit_for_2_seconds_%_chance": 1000
           }
@@ -118600,7 +118751,7 @@
         "dex": null
       },
       "stat_text": {
-        "additional_base_critical_strike_chance": "クリティカル率が+6%される",
+        "additional_base_critical_strike_chance": "クリティカル率 +6%",
         "base_chance_to_poison_on_hit_%": "ヒット時に40%の確率で毒を付与する",
         "display_flask_throw_allowed_flask_types\nflask_throw_charges_used_per_projectile": "可能であればライフフラスコ1個から放つ投射物ごとに1チャージを消費する",
         "active_skill_base_area_of_effect_radius": "基礎半径は1.8m"
@@ -118764,7 +118915,7 @@
       "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "ヒット時に{withered_on_hit_for_2_seconds_%_chance}%の確率で2秒間衰弱を付与する",
+          "stat": "ヒット時に{withered_on_hit_for_2_seconds_%_chance}%の確率で衰弱を2秒間付与する",
           "stats": {
             "withered_on_hit_for_2_seconds_%_chance": 1000
           }
@@ -118776,7 +118927,7 @@
         "dex": null
       },
       "stat_text": {
-        "additional_base_critical_strike_chance": "クリティカル率が+6%される",
+        "additional_base_critical_strike_chance": "クリティカル率 +6%",
         "base_chance_to_poison_on_hit_%": "ヒット時に40%の確率で毒を付与する",
         "display_flask_throw_allowed_flask_types\nflask_throw_charges_used_per_projectile": "可能であればライフフラスコ1個から放つ投射物ごとに8チャージを消費する",
         "active_skill_base_area_of_effect_radius": "基礎半径は1.8m",
@@ -118949,7 +119100,7 @@
       "skill_totem_life_multiplier": null
     },
     "base_item": {
-      "display_name": "[DNT] Call of the Wild",
+      "display_name": "[DNT - UNUSED] Call of the Wild",
       "experience_type": "GemProgression28",
       "id": "Metadata/Items/Gems/SkillGemCallOfTheWild",
       "max_level": 20,
@@ -118957,7 +119108,7 @@
     },
     "cast_time": 850,
     "color": "g",
-    "display_name": "[DNT] Call of the Wild",
+    "display_name": "[DNT - UNUSED] Call of the Wild",
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
@@ -119101,8 +119252,8 @@
     },
     "tooltip_order": [
       "debuff_time_passed_+%",
-      "unaffected_by_temporal_chains",
-      "spell_cast_time_cannot_be_modified"
+      "spell_cast_time_cannot_be_modified",
+      "unaffected_by_temporal_chains"
     ],
     "tags": [
       "dexterity",
@@ -119183,7 +119334,7 @@
         "number_of_tornados_allowed": "トルネードの最大数 1",
         "tornado_maximum_number_of_hits": "一次的持続時間中、投射物のヒットを最大20回まで受けることができる",
         "base_skill_effect_duration": "基礎持続時間は1.50秒",
-        "tornado_hinder": "範囲内の敵は阻害を受け、移動スピードが-1%減少する"
+        "tornado_hinder": "範囲内の敵は阻害を受ける"
       },
       "stats": [
         {
@@ -119271,9 +119422,9 @@
     },
     "tooltip_order": [
       "spell_minimum_base_physical_damage\nspell_maximum_base_physical_damage",
+      "tornado_base_damage_interval_ms",
       "base_skill_effect_duration",
       "base_secondary_skill_effect_duration",
-      "tornado_base_damage_interval_ms",
       "tornado_maximum_number_of_hits",
       "tornado_damage_absorbed_%",
       "tornado_hinder",
@@ -119368,7 +119519,7 @@
         "number_of_tornados_allowed": "トルネードの最大数 3",
         "base_skill_effect_duration": "基礎持続時間は4.00秒",
         "elemental_strike_physical_damage_%_to_convert": "物理ダメージの100%を火、冷気または雷ダメージに変換する",
-        "tornado_hinder": "範囲内の敵は阻害を受け、移動スピードが-1%減少する"
+        "tornado_hinder": "範囲内の敵は阻害を受ける"
       },
       "stats": [
         {
@@ -119446,8 +119597,8 @@
     },
     "tooltip_order": [
       "spell_minimum_base_physical_damage\nspell_maximum_base_physical_damage",
-      "base_skill_effect_duration",
       "tornado_base_damage_interval_ms",
+      "base_skill_effect_duration",
       "elemental_strike_physical_damage_%_to_convert",
       "tornado_hinder",
       "tornado_movement_speed_+%",
@@ -119763,7 +119914,7 @@
         "dex": 0
       },
       "stat_text": {
-        "flame_link_added_fire_damage_from_life_%": "リンクの対象はリンク使用プレイヤーの最大ライフの5%と同量の追加火ダメージを獲得する",
+        "flame_link_added_fire_damage_from_life_%": "リンクの対象はリンク使用プレイヤーの最大ライフの3%と同量の追加火ダメージを獲得する",
         "display_link_stuff": "対象が範囲から離れるか4秒間視界の外にいるとリンクは切れる\n対象1体につきどのリンク元からも受けられるリンクは最大1リンク\nリンクの対象が死ねばプレイヤーも死ぬ"
       },
       "stats": [
@@ -119780,7 +119931,7 @@
         {
           "id": "flame_link_added_fire_damage_from_life_%",
           "type": "constant",
-          "value": 5
+          "value": 3
         },
         {
           "id": "base_skill_effect_duration",
@@ -119823,6 +119974,128 @@
       "duration",
       "link",
       "fire"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": {
+      "act": 4,
+      "classes": [
+        "サイオン"
+      ],
+      "quest": "封印の解除"
+    },
+    "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "味方プレイヤーを対象として、使用者と相手を一定時間リンクさせるバフを付与する。リンクしている間、相手は使用者のマナに基づいて追加の雷ダメージを与える。リンクしている際に相手が死亡した場合、使用者も死亡する。トリガーすることはできず、トーテム、トラップまたはマインで使用することはできない。",
+      "display_name": "アーケインリンク",
+      "id": "arcane_link",
+      "is_manually_casted": true,
+      "is_skill_totem": false,
+      "stat_conversions": {},
+      "types": [
+        "Spell",
+        "Buff",
+        "Duration",
+        "Link",
+        "Lightning",
+        "Arcane"
+      ],
+      "weapon_restrictions": [],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "アーケインリンク",
+      "experience_type": "GemProgression34",
+      "id": "Metadata/Items/Gems/SkillGemArcaneLink",
+      "max_level": 20,
+      "release_state": "released"
+    },
+    "cast_time": 500,
+    "color": "b",
+    "display_name": "アーケインリンク",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/buff_skill",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [
+        {
+          "stat": "基礎持続時間は{base_skill_effect_duration/milliseconds_to_seconds_2dp}秒",
+          "stats": {
+            "base_skill_effect_duration": 75000
+          }
+        }
+      ],
+      "stat_requirements": {
+        "int": null,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "arcane_link_added_lightning_damage_from_mana_%": "リンクの対象はプレイヤーの最大マナの3%と同量の追加雷ダメージを獲得する",
+        "display_link_stuff": "対象が範囲から離れるか4秒間視界の外にいるとリンクは切れる\n対象1体につきどのリンク元からも受けられるリンクは最大1リンク\nリンクの対象が死ねばプレイヤーも死ぬ"
+      },
+      "stats": [
+        {
+          "id": "arcane_link_minimum_lightning_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "arcane_link_maximum_lightning_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "arcane_link_added_lightning_damage_from_mana_%",
+          "type": "constant",
+          "value": 3
+        },
+        {
+          "id": "base_skill_effect_duration",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "skill_cost_over_time_is_not_removed_with_skill",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "display_link_stuff",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "base_skill_effect_duration",
+      "arcane_link_added_lightning_damage_from_mana_%",
+      "arcane_link_minimum_lightning_damage\narcane_link_maximum_lightning_damage",
+      "display_link_stuff"
+    ],
+    "tags": [
+      "intelligence",
+      "grants_active_skill",
+      "spell",
+      "duration",
+      "link",
+      "lightning",
+      "arcane"
     ],
     "secondary_granted_effect": null,
     "quest_reward": {
@@ -121104,8 +121377,8 @@
       "galvanic_field_retargeting_delay_ms",
       "galvanic_field_damage_+%_final_per_5%_increased_damage_taken_from_shock",
       "galvanic_field_radius_+_per_10%_increased_damage_taken_from_shock",
-      "base_chance_to_shock_%_from_skill\nquality_display_shock_chance_from_skill_is_gem",
-      "galvanic_field_maximum_number_of_spheres"
+      "galvanic_field_maximum_number_of_spheres",
+      "base_chance_to_shock_%_from_skill\nquality_display_shock_chance_from_skill_is_gem"
     ],
     "tags": [
       "intelligence",
@@ -121828,8 +122101,8 @@
     },
     "tooltip_order": [
       "base_number_of_projectiles",
-      "active_skill_area_of_effect_+%_final",
       "skill_physical_damage_%_to_convert_to_fire",
+      "active_skill_area_of_effect_+%_final",
       "vaal_volcanic_fissure_crack_repeat_count"
     ],
     "tags": [
@@ -122120,7 +122393,7 @@
       "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "近くの敵1体ごとに半径 +{cleave_+1_base_radius_per_nearby_enemy_up_to_10/locations_to_metres}m、最大+1m",
+          "stat": "近くの敵1体ごとに半径 {cleave_+1_base_radius_per_nearby_enemy_up_to_10/locations_to_metres}m、最大+1m",
           "stats": {
             "cleave_+1_base_radius_per_nearby_enemy_up_to_10": 50
           }
@@ -122419,10 +122692,10 @@
       "always_pierce",
       "base_chaos_damage_to_deal_per_minute",
       "base_skill_effect_duration",
+      "skill_physical_damage_%_to_convert_to_chaos",
       "projectile_damage_modifiers_apply_to_skill_dot",
       "modifiers_to_skill_effect_duration_also_affect_soul_prevention_duration",
       "active_skill_base_radius_+",
-      "skill_physical_damage_%_to_convert_to_chaos",
       "global_always_hit"
     ],
     "tags": [
@@ -122520,7 +122793,7 @@
         "base_number_of_projectiles": "9個の投射物を放つ",
         "number_of_chains": "+8回連鎖する",
         "active_skill_base_radius_+": "半径 +0.4m",
-        "molten_strike_projectiles_chain_when_impacting_ground": "投射物は地面に衝突した時に連鎖することができる\n投射物は連鎖する時に方向を変えない",
+        "molten_strike_projectiles_chain_when_impacting_ground": "投射物は地面に衝突した時に連鎖できる\n投射物は連鎖する時に方向を変えない",
         "global_always_hit": "回避されない"
       },
       "stats": [
@@ -122597,9 +122870,9 @@
     },
     "tooltip_order": [
       "base_number_of_projectiles",
-      "active_skill_base_radius_+",
       "number_of_chains",
       "skill_physical_damage_%_to_convert_to_fire",
+      "active_skill_base_radius_+",
       "global_always_hit",
       "active_skill_hit_ailment_damage_with_projectile_+%_final",
       "molten_strike_projectiles_chain_when_impacting_ground"
@@ -122965,8 +123238,8 @@
     "tooltip_order": [
       "base_skill_effect_duration",
       "base_secondary_skill_effect_duration",
-      "modifiers_to_skill_effect_duration_also_affect_soul_prevention_duration",
       "skill_physical_damage_%_to_convert_to_chaos",
+      "modifiers_to_skill_effect_duration_also_affect_soul_prevention_duration",
       "base_chance_to_poison_on_hit_%",
       "base_poison_duration_+%",
       "maximum_number_of_snapping_adder_projectiles\nvaal_venom_gyre_instantly_capture_maximum_projectiles\nvaal_venom_gyre_capture_x_projectiles_per_second",
@@ -122988,7 +123261,7 @@
   },
   {
     "active_skill": {
-      "description": "雷を呼び寄せ武器にまとって近接攻撃を行い、周囲の敵にその周囲にダメージを与える稲妻を降らせる。敵に当たるとオーラを付与する。使用するには剣、斧、メイス、セプターまたはスタッフを装備するか素手状態である必要がある。",
+      "description": "雷を呼び寄せ武器にまとって近接攻撃を行い、周囲の敵にダメージを与える稲妻を降らせる。敵に当たるとオーラを付与する。使用するには剣、斧、メイス、セプターまたはスタッフを装備するか素手状態である必要がある。",
       "display_name": "ヴァールスマイト",
       "id": "vaal_smite",
       "is_manually_casted": true,
@@ -123280,7 +123553,7 @@
       "stat_text": {
         "vaal_charged_attack_damage_taken_+%_final": "チャネリング中は受けるダメージが50%低下する",
         "vaal_charged_attack_radius_+_per_stage": "円の基礎半径は1m\nステージごとに円の半径が+0.5mされる\n円の半径の合計が9mに達した時にチャネリングが止まる",
-        "global_chance_to_blind_on_hit_%": "ヒット時に100%の確率で盲目を付与する",
+        "global_chance_to_blind_on_hit_%": "ヒット時に100%の確率で[Blind|盲目]を付与する",
         "global_always_hit": "回避されない"
       },
       "stats": [
@@ -123692,11 +123965,11 @@
     },
     "tooltip_order": [
       "base_skill_effect_duration",
-      "modifiers_to_skill_effect_duration_also_affect_soul_prevention_duration",
       "base_number_of_animated_weapons_allowed\nquality_display_animate_weapon_is_gem",
+      "modifiers_to_skill_effect_duration_also_affect_soul_prevention_duration",
       "vaal_animate_weapon_minimum_level_requirement\nanimate_item_maximum_level_requirement",
-      "active_skill_minion_damage_+%_final",
-      "vaal_animate_weapon_raise_up_to_X_weapons_as_uniques"
+      "vaal_animate_weapon_raise_up_to_X_weapons_as_uniques",
+      "active_skill_minion_damage_+%_final"
     ],
     "tags": [
       "dexterity",
@@ -123877,9 +124150,9 @@
       "always_pierce",
       "skill_physical_damage_%_to_convert_to_lightning",
       "base_number_of_arrows\nquality_display_base_additional_arrows_is_gem",
-      "projectiles_barrage",
       "vaal_lightning_arrow_number_of_redirects",
       "vaal_lightning_arrow_fork_and_chain_modifiers_apply_to_number_of_redirects",
+      "projectiles_barrage",
       "lightning_arrow_maximum_number_of_extra_targets",
       "projectiles_cannot_split"
     ],
@@ -124301,8 +124574,8 @@
     },
     "tooltip_order": [
       "base_skill_effect_duration",
-      "modifiers_to_skill_effect_duration_also_affect_soul_prevention_duration",
       "skill_physical_damage_%_to_convert_to_cold",
+      "modifiers_to_skill_effect_duration_also_affect_soul_prevention_duration",
       "maximum_number_of_vaal_ice_shot_mirages",
       "skill_area_angle_+%",
       "vaal_ice_shot_modifiers_to_projectile_count_do_not_apply_to_mirages"
@@ -124543,7 +124816,7 @@
       "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "トーテムライフが{totem_life_+%_final}%上昇する",
+          "stat": "トーテムのライフが{totem_life_+%_final}%上昇する",
           "stats": {
             "totem_life_+%_final": 1000
           }
@@ -124557,7 +124830,7 @@
       "stat_text": {
         "base_totem_duration": "トーテムは4秒持続する",
         "vaal_rejuvenation_totem_%_damage_taken_applied_to_totem_instead": "オーラの影響を受けている対象に対するヒットダメージの40%が対象の前にトーテムのライフで受ける",
-        "number_of_additional_totems_allowed": "召喚できるトーテムの最大数 +1",
+        "number_of_additional_totems_allowed": "トーテム最大召喚数 +1",
         "active_skill_area_of_effect_+%_final": "効果範囲が30%低下する",
         "is_totem": "このスキルを使用するトーテム1体を召喚する",
         "modifiers_to_totem_duration_also_affect_soul_prevention_duration": "トーテム持続時間のモッドはこのスキルのソウル獲得不能にも適用される"
@@ -125322,14 +125595,14 @@
       "base_fire_damage_to_deal_per_minute",
       "base_skill_effect_duration",
       "base_number_of_projectiles",
-      "projectile_damage_modifiers_apply_to_skill_dot",
       "skill_physical_damage_%_to_convert_to_fire",
+      "projectile_damage_modifiers_apply_to_skill_dot",
       "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius",
       "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius",
       "active_skill_tertiary_area_of_effect_description_mode\nactive_skill_base_tertiary_area_of_effect_radius",
-      "base_secondary_skill_effect_duration",
       "napalm_arrow_detonation_hit_damage_+%_final",
-      "napalm_arrow_maximum_number_of_unprimed_arrows_allowed"
+      "napalm_arrow_maximum_number_of_unprimed_arrows_allowed",
+      "base_secondary_skill_effect_duration"
     ],
     "tags": [
       "dexterity",
@@ -126092,7 +126365,7 @@
     },
     "base_item": {
       "display_name": "キネティックフューシレイド",
-      "experience_type": "GemProgression10",
+      "experience_type": "GemProgression12",
       "id": "Metadata/Items/Gems/SkillGemKineticFusillade",
       "max_level": 20,
       "release_state": "released"
@@ -126252,7 +126525,7 @@
     },
     "base_item": {
       "display_name": "キネティックフューシレイド",
-      "experience_type": "GemProgression10",
+      "experience_type": "GemProgression12",
       "id": "Metadata/Items/Gems/SkillGemKineticFusillade",
       "max_level": 20,
       "release_state": "released"
@@ -127040,9 +127313,9 @@
     "tooltip_order": [
       "base_skill_effect_duration",
       "base_holy_strike_maximum_number_of_animated_weapons",
+      "minion_melee_range_+",
       "active_skill_minion_damage_+%_final",
-      "skill_physical_damage_%_to_convert_to_lightning",
-      "minion_melee_range_+"
+      "skill_physical_damage_%_to_convert_to_lightning"
     ],
     "tags": [
       "strength",
@@ -127109,7 +127382,7 @@
         "dex": 0
       },
       "stat_text": {
-        "discus_slam_damage_+%_final_for_shockwave": "爆発の与えるヒットと状態異常のダメージが100%上昇する",
+        "discus_slam_damage_+%_final_for_shockwave": "爆発はヒットと状態異常のダメージが100%上昇する",
         "skill_physical_damage_%_to_convert_to_fire": "物理ダメージの50%を火ダメージに変換する",
         "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius": "基礎爆破半径は2.6m",
         "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius": "インプロージョンの基礎半径は1.2m",
@@ -127220,8 +127493,8 @@
       "off_hand_local_minimum_added_physical_damage\noff_hand_local_maximum_added_physical_damage",
       "off_hand_minimum_added_physical_damage_per_15_shield_armour\noff_hand_maximum_added_physical_damage_per_15_shield_armour",
       "base_skill_effect_duration",
-      "active_skill_base_radius_+",
       "skill_physical_damage_%_to_convert_to_fire",
+      "active_skill_base_radius_+",
       "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius",
       "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius",
       "discus_slam_damage_+%_final_for_shockwave"
@@ -127419,8 +127692,8 @@
       "off_hand_local_minimum_added_physical_damage\noff_hand_local_maximum_added_physical_damage",
       "off_hand_minimum_added_physical_damage_per_15_shield_armour\noff_hand_maximum_added_physical_damage_per_15_shield_armour",
       "base_skill_effect_duration",
-      "active_skill_base_radius_+",
       "skill_physical_damage_%_to_convert_to_fire",
+      "active_skill_base_radius_+",
       "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius",
       "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius",
       "discus_slam_maximum_orb_count_allowed",
@@ -130084,7 +130357,7 @@
       },
       "stat_text": {
         "base_spell_repeat_count": "サポートされたスキルは1回追加で繰り返す",
-        "skills_sacrifice_all_but_one_life_and_energy_shield_on_use": "サポートされたスキルは使用時にライフとエナジシールドを1以外捧げる"
+        "skills_sacrifice_all_but_one_life_and_energy_shield_on_use": "サポートされたスキルは使用時にライフとエナジシールドを最大値の20%以外すべて捧げる"
       },
       "stats": [
         {
@@ -133805,14 +134078,14 @@
         "dex": 0
       },
       "stat_text": {
-        "random_nearby_minion_gain_a_soul_eater_soul_on_X_life_spent": "サポートされたスペルの起動時コストとしてプレイヤーが\nライフを200使用するごとに近くのミニオン1体はソウルを1獲得する",
+        "random_nearby_minion_gain_a_charge_on_X_life_spent": "サポートされたスペルで400のライフを起動時コストとして使用するごとに6m以内のミニオンはパワーチャージ、フレンジーチャージまたはエンデュランスチャージを獲得する",
         "base_skill_cost_life_instead_of_mana": "サポートされたスキルはマナの代わりにライフをコストとする"
       },
       "stats": [
         {
-          "id": "random_nearby_minion_gain_a_soul_eater_soul_on_X_life_spent",
+          "id": "random_nearby_minion_gain_a_charge_on_X_life_spent",
           "type": "additional",
-          "value": 200
+          "value": 400
         },
         {
           "id": "base_skill_cost_life_instead_of_mana",
@@ -133835,7 +134108,7 @@
     "tooltip_order": [
       "base_life_cost_+%",
       "base_skill_cost_life_instead_of_mana",
-      "random_nearby_minion_gain_a_soul_eater_soul_on_X_life_spent"
+      "random_nearby_minion_gain_a_charge_on_X_life_spent"
     ],
     "tags": [
       "low_max_level",
@@ -133855,9 +134128,10 @@
       "letter": ">",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "ブレッシング以外のスペルをサポートする。",
+      "support_text": "スペルをサポートする。即時スキルまたはブレッシングスペルをサポートしない。",
       "excluded_types": [
-        "Blessing"
+        "Blessing",
+        "Instant"
       ],
       "added_types": null,
       "added_minion_types": null
@@ -134048,6 +134322,819 @@
         "SummonsTotem",
         "CreatesMinion"
       ],
+      "added_types": null,
+      "added_minion_types": null
+    }
+  },
+  {
+    "active_skill": null,
+    "base_item": {
+      "display_name": "重荷サポート",
+      "experience_type": "GemProgressionSingleLevel",
+      "id": "Metadata/Items/Gems/SupportGemEncumbrance",
+      "max_level": 1,
+      "release_state": "released"
+    },
+    "cast_time": null,
+    "color": "w",
+    "display_name": "重荷サポート",
+    "is_support": true,
+    "stat_translation_file": "stat_translations/support_gem",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": 0,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": null,
+      "stats": [],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": 200,
+      "cooldown_bypass_type": null,
+      "required_level": 1,
+      "experience": 0,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [],
+    "tags": [
+      "low_max_level",
+      "support"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": {
+      "allowed_types": null,
+      "letter": "!",
+      "supports_gems_only": false,
+      "support_name": "",
+      "support_text": "全てのスキルをサポートする。ジェム由来でないスキルをサポートできない。",
+      "excluded_types": [
+        "SkillGrantedBySupport"
+      ],
+      "added_types": null,
+      "added_minion_types": null
+    }
+  },
+  {
+    "active_skill": null,
+    "base_item": {
+      "display_name": "締め付けサポート",
+      "experience_type": "GemProgressionSingleLevel",
+      "id": "Metadata/Items/Gems/SupportGemConstriction",
+      "max_level": 1,
+      "release_state": "released"
+    },
+    "cast_time": null,
+    "color": "w",
+    "display_name": "締め付けサポート",
+    "is_support": true,
+    "stat_translation_file": "stat_translations/support_gem",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": 0,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "display_constriction_other_supports_do_not_apply": "サポートされたスキルは他のサポートでサポートできなくなる"
+      },
+      "stats": [
+        {
+          "id": "display_constriction_other_supports_do_not_apply",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": 100,
+      "cooldown_bypass_type": null,
+      "required_level": 1,
+      "experience": 0,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "display_constriction_other_supports_do_not_apply"
+    ],
+    "tags": [
+      "low_max_level",
+      "support"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": {
+      "allowed_types": null,
+      "letter": "!",
+      "supports_gems_only": false,
+      "support_name": "",
+      "support_text": "全てのスキルをサポートする。ジェム由来でないスキルをサポートできない。",
+      "excluded_types": [
+        "SkillGrantedBySupport"
+      ],
+      "added_types": null,
+      "added_minion_types": null
+    }
+  },
+  {
+    "active_skill": null,
+    "base_item": {
+      "display_name": "徴税サポート",
+      "experience_type": "GemProgressionSingleLevel",
+      "id": "Metadata/Items/Gems/SupportGemTaxation",
+      "max_level": 1,
+      "release_state": "released"
+    },
+    "cast_time": null,
+    "color": "w",
+    "display_name": "徴税サポート",
+    "is_support": true,
+    "stat_translation_file": "stat_translations/support_gem",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": 0,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "from_support_skill_gem_attribute_requirements_+%_final": "サポートされたスキルの能力値要求が100%上昇する"
+      },
+      "stats": [
+        {
+          "id": "from_support_skill_gem_attribute_requirements_+%_final",
+          "type": "constant",
+          "value": 100
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": 100,
+      "cooldown_bypass_type": null,
+      "required_level": 1,
+      "experience": 0,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "from_support_skill_gem_attribute_requirements_+%_final"
+    ],
+    "tags": [
+      "low_max_level",
+      "support"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": {
+      "allowed_types": null,
+      "letter": "!",
+      "supports_gems_only": false,
+      "support_name": "",
+      "support_text": "全てのスキルをサポートする。ジェム由来でないスキルをサポートできない。",
+      "excluded_types": [
+        "SkillGrantedBySupport"
+      ],
+      "added_types": null,
+      "added_minion_types": null
+    }
+  },
+  {
+    "active_skill": null,
+    "base_item": {
+      "display_name": "減衰サポート",
+      "experience_type": "GemProgressionSingleLevel",
+      "id": "Metadata/Items/Gems/SupportGemDiminishment",
+      "max_level": 1,
+      "release_state": "released"
+    },
+    "cast_time": null,
+    "color": "w",
+    "display_name": "減衰サポート",
+    "is_support": true,
+    "stat_translation_file": "stat_translations/support_gem",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": 0,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "supported_active_skill_gem_quality_%": "サポートされたスキルジェムの品質 -20%"
+      },
+      "stats": [
+        {
+          "id": "supported_active_skill_gem_quality_%",
+          "type": "constant",
+          "value": -20
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": 100,
+      "cooldown_bypass_type": null,
+      "required_level": 1,
+      "experience": 0,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "supported_active_skill_gem_quality_%"
+    ],
+    "tags": [
+      "low_max_level",
+      "support"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": {
+      "allowed_types": null,
+      "letter": "!",
+      "supports_gems_only": false,
+      "support_name": "",
+      "support_text": "全てのスキルをサポートする。ジェム由来でないスキルをサポートできない。",
+      "excluded_types": [
+        "SkillGrantedBySupport"
+      ],
+      "added_types": null,
+      "added_minion_types": null
+    }
+  },
+  {
+    "active_skill": null,
+    "base_item": {
+      "display_name": "脱力サポート",
+      "experience_type": "GemProgressionSingleLevel",
+      "id": "Metadata/Items/Gems/SupportGemDisempower",
+      "max_level": 1,
+      "release_state": "released"
+    },
+    "cast_time": null,
+    "color": "w",
+    "display_name": "脱力サポート",
+    "is_support": true,
+    "stat_translation_file": "stat_translations/support_gem",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": 0,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "supported_active_skill_gem_level_+": "サポートされたスキルジェムのレベル -1"
+      },
+      "stats": [
+        {
+          "id": "supported_active_skill_gem_level_+",
+          "type": "constant",
+          "value": -1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": 100,
+      "cooldown_bypass_type": null,
+      "required_level": 1,
+      "experience": 0,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "supported_active_skill_gem_level_+"
+    ],
+    "tags": [
+      "low_max_level",
+      "support"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": {
+      "allowed_types": null,
+      "letter": "!",
+      "supports_gems_only": false,
+      "support_name": "",
+      "support_text": "全てのスキルをサポートする。ジェム由来でないスキルをサポートできない。",
+      "excluded_types": [
+        "SkillGrantedBySupport"
+      ],
+      "added_types": null,
+      "added_minion_types": null
+    }
+  },
+  {
+    "active_skill": null,
+    "base_item": {
+      "display_name": "倦怠サポート",
+      "experience_type": "GemProgressionSingleLevel",
+      "id": "Metadata/Items/Gems/SupportGemLethargy",
+      "max_level": 1,
+      "release_state": "released"
+    },
+    "cast_time": null,
+    "color": "w",
+    "display_name": "倦怠サポート",
+    "is_support": true,
+    "stat_translation_file": "stat_translations/support_gem",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": 0,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "gain_malignant_madness_on_skill_use": "サポートされたスキルは使用時にプレイヤーに悪意の狂気を付与する"
+      },
+      "stats": [
+        {
+          "id": "gain_malignant_madness_on_skill_use",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": 100,
+      "cooldown_bypass_type": null,
+      "required_level": 1,
+      "experience": 0,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "gain_malignant_madness_on_skill_use"
+    ],
+    "tags": [
+      "low_max_level",
+      "support"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": {
+      "allowed_types": null,
+      "letter": "!",
+      "supports_gems_only": false,
+      "support_name": "",
+      "support_text": "全てのスキルをサポートする。",
+      "excluded_types": null,
+      "added_types": null,
+      "added_minion_types": null
+    }
+  },
+  {
+    "active_skill": null,
+    "base_item": {
+      "display_name": "贖罪サポート",
+      "experience_type": "GemProgressionSingleLevel",
+      "id": "Metadata/Items/Gems/SupportGemPenance",
+      "max_level": 1,
+      "release_state": "released"
+    },
+    "cast_time": null,
+    "color": "w",
+    "display_name": "贖罪サポート",
+    "is_support": true,
+    "stat_translation_file": "stat_translations/support_gem",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": 0,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "skills_sacrifice_all_but_one_life_and_energy_shield_on_use": "サポートされたスキルは使用時にライフとエナジシールドを最大値の20%以外すべて捧げる"
+      },
+      "stats": [
+        {
+          "id": "skills_sacrifice_all_but_one_life_and_energy_shield_on_use",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": 100,
+      "cooldown_bypass_type": null,
+      "required_level": 1,
+      "experience": 0,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "skills_sacrifice_all_but_one_life_and_energy_shield_on_use"
+    ],
+    "tags": [
+      "low_max_level",
+      "support"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": {
+      "allowed_types": null,
+      "letter": "!",
+      "supports_gems_only": false,
+      "support_name": "",
+      "support_text": "全てのスキルをサポートする。",
+      "excluded_types": null,
+      "added_types": null,
+      "added_minion_types": null
+    }
+  },
+  {
+    "active_skill": null,
+    "base_item": {
+      "display_name": "無効化サポート",
+      "experience_type": "GemProgressionSingleLevel",
+      "id": "Metadata/Items/Gems/SupportGemNullification",
+      "max_level": 1,
+      "release_state": "released"
+    },
+    "cast_time": null,
+    "color": "w",
+    "display_name": "無効化サポート",
+    "is_support": true,
+    "stat_translation_file": "stat_translations/support_gem",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": 0,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "cannot_inflict_status_ailments": "サポートされたスキルは元素系状態異常を付与することができない"
+      },
+      "stats": [
+        {
+          "id": "cannot_inflict_status_ailments",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": 100,
+      "cooldown_bypass_type": null,
+      "required_level": 1,
+      "experience": 0,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "cannot_inflict_status_ailments"
+    ],
+    "tags": [
+      "low_max_level",
+      "support"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": {
+      "allowed_types": [
+        "Damage",
+        "Attack",
+        "NonHitChill"
+      ],
+      "letter": "!",
+      "supports_gems_only": false,
+      "support_name": "",
+      "support_text": "敵にヒットを与えるスキルおよび元素系状態異常を付与するスキルをサポートする。",
+      "excluded_types": null,
+      "added_types": null,
+      "added_minion_types": null
+    }
+  },
+  {
+    "active_skill": null,
+    "base_item": {
+      "display_name": "凡庸サポート",
+      "experience_type": "GemProgressionSingleLevel",
+      "id": "Metadata/Items/Gems/SupportGemMediocrity",
+      "max_level": 1,
+      "release_state": "released"
+    },
+    "cast_time": null,
+    "color": "w",
+    "display_name": "凡庸サポート",
+    "is_support": true,
+    "stat_translation_file": "stat_translations/support_gem",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": 0,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "global_cannot_crit": "サポートされたスキルはクリティカルストライクを与えられなくなる"
+      },
+      "stats": [
+        {
+          "id": "global_cannot_crit",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": 100,
+      "cooldown_bypass_type": null,
+      "required_level": 1,
+      "experience": 0,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "global_cannot_crit"
+    ],
+    "tags": [
+      "low_max_level",
+      "support"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": {
+      "allowed_types": [
+        "Damage",
+        "Attack"
+      ],
+      "letter": "!",
+      "supports_gems_only": false,
+      "support_name": "",
+      "support_text": "敵にヒットを与えるスキルをサポートする。",
+      "excluded_types": null,
+      "added_types": null,
+      "added_minion_types": null
+    }
+  },
+  {
+    "active_skill": null,
+    "base_item": {
+      "display_name": "無力サポート",
+      "experience_type": "GemProgressionSingleLevel",
+      "id": "Metadata/Items/Gems/SupportGemImpotence",
+      "max_level": 1,
+      "release_state": "released"
+    },
+    "cast_time": null,
+    "color": "w",
+    "display_name": "無力サポート",
+    "is_support": true,
+    "stat_translation_file": "stat_translations/support_gem",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": 0,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "support_impotence_damage_+%_final": "サポートされたスキルのダメージが50%低下する"
+      },
+      "stats": [
+        {
+          "id": "support_impotence_damage_+%_final",
+          "type": "constant",
+          "value": -50
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": 100,
+      "cooldown_bypass_type": null,
+      "required_level": 1,
+      "experience": 0,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "support_impotence_damage_+%_final"
+    ],
+    "tags": [
+      "low_max_level",
+      "support"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": {
+      "allowed_types": [
+        "Damage",
+        "Attack",
+        "DamageOverTime"
+      ],
+      "letter": "!",
+      "supports_gems_only": false,
+      "support_name": "",
+      "support_text": "敵にダメージを与えるスキルをサポートする。",
+      "excluded_types": null,
+      "added_types": null,
+      "added_minion_types": null
+    }
+  },
+  {
+    "active_skill": null,
+    "base_item": {
+      "display_name": "困窮サポート",
+      "experience_type": "GemProgressionSingleLevel",
+      "id": "Metadata/Items/Gems/SupportGemDestitution",
+      "max_level": 1,
+      "release_state": "released"
+    },
+    "cast_time": null,
+    "color": "w",
+    "display_name": "困窮サポート",
+    "is_support": true,
+    "stat_translation_file": "stat_translations/support_gem",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": 0,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "base_killed_monster_dropped_item_rarity_+%": "サポートされたスキルで倒した敵のドロップしたアイテムの[PlayerItemRarity|レアリティ] -50%"
+      },
+      "stats": [
+        {
+          "id": "base_killed_monster_dropped_item_rarity_+%",
+          "type": "constant",
+          "value": -50
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": 100,
+      "cooldown_bypass_type": null,
+      "required_level": 1,
+      "experience": 0,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "base_killed_monster_dropped_item_rarity_+%"
+    ],
+    "tags": [
+      "low_max_level",
+      "support"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": {
+      "allowed_types": [
+        "Damage",
+        "Attack",
+        "DamageOverTime",
+        "KillNoDamageModifiers"
+      ],
+      "letter": "!",
+      "supports_gems_only": false,
+      "support_name": "",
+      "support_text": "敵を倒せるスキルをサポートする。",
+      "excluded_types": null,
+      "added_types": null,
+      "added_minion_types": null
+    }
+  },
+  {
+    "active_skill": null,
+    "base_item": {
+      "display_name": "貧困サポート",
+      "experience_type": "GemProgressionSingleLevel",
+      "id": "Metadata/Items/Gems/SupportGemPoverty",
+      "max_level": 1,
+      "release_state": "released"
+    },
+    "cast_time": null,
+    "color": "w",
+    "display_name": "貧困サポート",
+    "is_support": true,
+    "stat_translation_file": "stat_translations/support_gem",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": 0,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "base_killed_monster_dropped_item_quantity_+%": "サポートされたスキルにより撃破された敵がドロップするアイテムの数量が50%減少する"
+      },
+      "stats": [
+        {
+          "id": "base_killed_monster_dropped_item_quantity_+%",
+          "type": "constant",
+          "value": -50
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": 100,
+      "cooldown_bypass_type": null,
+      "required_level": 1,
+      "experience": 0,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "base_killed_monster_dropped_item_quantity_+%"
+    ],
+    "tags": [
+      "low_max_level",
+      "support"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": {
+      "allowed_types": [
+        "Damage",
+        "Attack",
+        "DamageOverTime",
+        "KillNoDamageModifiers"
+      ],
+      "letter": "!",
+      "supports_gems_only": false,
+      "support_name": "",
+      "support_text": "敵を倒せるスキルをサポートする。",
+      "excluded_types": null,
       "added_types": null,
       "added_minion_types": null
     }
@@ -134255,9 +135342,9 @@
       "stat_text": {
         "graft_skill_xoph_geyser_explosion_maximum_geysers": "噴出孔の最大数 9",
         "graft_skill_xoph_geyser_explosion_number_of_projectiles_to_erupt": "プレイヤーがウォークライを使用した時に噴出孔は投射物を2個放つ",
-        "base_number_of_projectiles": "1個の投射物を放つ",
+        "base_number_of_projectiles": "投射物を1個放つ",
         "active_skill_base_secondary_area_of_effect_radius": "基礎二次的半径は4.5m",
-        "additional_base_critical_strike_chance": "クリティカル率が+8%される",
+        "additional_base_critical_strike_chance": "クリティカル率 +8%",
         "active_skill_projectile_damage_+%_final": "投射物のダメージが50%低下する",
         "active_skill_base_area_of_effect_radius": "基礎半径は3m"
       },
@@ -134433,7 +135520,7 @@
       },
       "stat_text": {
         "cover_in_ash_on_hit_%": "ヒット時に敵を灰まみれにする",
-        "additional_base_critical_strike_chance": "クリティカル率が+8%される"
+        "additional_base_critical_strike_chance": "クリティカル率 +8%"
       },
       "stats": [
         {
@@ -134645,7 +135732,7 @@
       "stat_text": {
         "active_skill_base_area_of_effect_radius": "基礎半径は2m",
         "graft_skill_uulnetol_hand_slam_number_of_hands_to_create": "4本の手を生成する",
-        "additional_base_critical_strike_chance": "クリティカル率が+8%される",
+        "additional_base_critical_strike_chance": "クリティカル率 +8%",
         "always_stun": "敵をスタンさせる"
       },
       "stats": [
@@ -134779,7 +135866,7 @@
         "active_skill_base_area_of_effect_radius": "基礎半径は4.5m",
         "impale_on_hit_%_chance": "ヒット時に敵を串刺しにする",
         "active_skill_base_secondary_area_of_effect_radius": "基礎二次的半径は1.7m",
-        "additional_base_critical_strike_chance": "クリティカル率が+8%される",
+        "additional_base_critical_strike_chance": "クリティカル率 +8%",
         "global_bleed_on_hit": "出血を付与する"
       },
       "stats": [
@@ -135697,9 +136784,9 @@
     },
     "tooltip_order": [
       "spell_minimum_base_cold_damage\nspell_maximum_base_cold_damage",
+      "tornado_base_damage_interval_ms",
       "base_skill_effect_duration",
       "base_secondary_skill_effect_duration",
-      "tornado_base_damage_interval_ms",
       "active_skill_base_area_of_effect_radius",
       "active_skill_base_secondary_area_of_effect_radius",
       "number_of_tornados_allowed"
@@ -135904,7 +136991,7 @@
       "stat_text": {
         "base_skill_effect_duration": "基礎持続時間は10.00秒",
         "active_skill_base_area_of_effect_radius": "基礎半径は4.5m",
-        "base_graft_skill_tul_summon_maximum_allowed_demons": "ハイヴボーンの最大数は30"
+        "base_graft_skill_tul_summon_maximum_allowed_demons": "ハイヴボーンの最大数 30"
       },
       "stats": [
         {
@@ -136352,8 +137439,7 @@
         "dex": null
       },
       "stat_text": {
-        "support_focus_channel_cost_+%_final_per_second_channelling_up_to_100%": "サポートされたスキルはチャネリングするごとに毎秒コストが上昇し、最大100%上昇する",
-        "support_focus_channel_damage_+%_final_per_second_channelling_up_to_60%": "サポートされたスキルはチャネリングするごとに毎秒ダメージが上昇し、最大60%上昇する"
+        "support_focus_channel_cost_+%_final_per_second_channelling_up_to_100%": "サポートされたスキルはチャネリングするごとに毎秒コストが20%上昇する、最大100%"
       },
       "stats": [
         {
@@ -137194,7 +138280,9 @@
         "dex": 0
       },
       "stat_text": {
-        "skill_empowers_next_x_spells_cast": "プレイヤーが次回キャストするスペル6回分を[EmpoweredSpell|強化]する"
+        "skill_empowers_next_x_spells_cast": "プレイヤーが次回キャストするスペル6回分を[EmpoweredSpell|強化]する",
+        "pact_skill_additional_beam_only_chains": "強化されたスキルによるビームは追加で4回連鎖する",
+        "pact_skill_grant_x_additional_projectiles_fired_in_nova": "強化されたスキルは投射物を追加で4個放つ\n強化されたスキルは投射物を放射状に放つ"
       },
       "stats": [
         {
@@ -137210,12 +138298,12 @@
         {
           "id": "pact_skill_additional_beam_only_chains",
           "type": "additional",
-          "value": null
+          "value": 4
         },
         {
           "id": "pact_skill_grant_x_additional_projectiles_fired_in_nova",
           "type": "additional",
-          "value": null
+          "value": 4
         },
         {
           "id": "pact_skill_grant_x_cascades_to_do_in_spiral",

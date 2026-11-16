@@ -989,38 +989,18 @@
       {
         "condition": [
           {
-            "min": 1,
+            "min": null,
             "max": null,
             "negated": null
           }
         ],
         "format": [
-          "#"
+          "+#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "{0}% erhöhte Seltenheit fallen gelassener Gegenstände von Gegnern, die durch Kreaturen getötet wurden",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "{0}% verringerte Seltenheit fallen gelassener Gegenstände von Gegnern, die durch Kreaturen getötet wurden",
+        "string": "{0}% zur [PlayerItemRarity|Seltenheit] fallen gelassener Gegenstände von Gegnern, die durch Kreaturen getötet wurden",
         "reminder_text": null,
         "is_markup": null
       }
@@ -1816,7 +1796,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Kreaturen haben {0}% verlängerte Brenndauer bei Gegnern",
+        "string": "Kreaturen haben {0}% verlängerte Entzündungsdauer bei Gegnern",
         "reminder_text": null,
         "is_markup": null
       },
@@ -1836,7 +1816,7 @@
             "negate"
           ]
         ],
-        "string": "Kreaturen haben {0}% verkürzte Brenndauer bei Gegnern",
+        "string": "Kreaturen haben {0}% verkürzte Entzündungsdauer bei Gegnern",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2876,7 +2856,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Das Vergiften von nicht vergifteten Gegnern mit Kreaturen wendet ein zusätzliches Gift an",
+        "string": "Kreaturen, die nicht vergiftete Gegner vergiften, wenden ein zusätzliches Gift an",
         "reminder_text": "(Gift verursacht Chaosschaden über Zeit, basierend auf dem gesamten physischen Schaden und Chaosschaden der Fertigkeit. Mehrere Instanzen von Gift werden gestapelt)",
         "is_markup": null
       },
@@ -2894,7 +2874,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Das Vergiften von nicht vergifteten Gegnern mit Kreaturen wendet {0} zusätzliche Gifte an",
+        "string": "Kreaturen, die nicht vergiftete Gegner vergiften, wenden {0} zusätzliche Gifte an",
         "reminder_text": "(Gift verursacht Chaosschaden über Zeit, basierend auf dem gesamten physischen Schaden und Chaosschaden der Fertigkeit. Mehrere Instanzen von Gift werden gestapelt)",
         "is_markup": null
       }
@@ -6055,8 +6035,8 @@
         "index_handlers": [
           []
         ],
-        "string": "Kreaturen haben {0}% Chance, Gegner bei Treffer zu blenden",
-        "reminder_text": "(Geblendet sein bewirkt 20% weniger Treffgenauigkeit und Ausweichwert, für 4 Sekunden)",
+        "string": "Kreaturen haben {0}% Chance, Gegner bei Treffer zu [Blind|blenden]",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -6091,7 +6071,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Kreaturen haben {0}% verlängerte Blenddauer",
+        "string": "Kreaturen haben {0}% verlängerte [Blind|Blend]dauer",
         "reminder_text": null,
         "is_markup": null
       },
@@ -6111,7 +6091,7 @@
             "negate"
           ]
         ],
-        "string": "Kreaturen haben {0}% verkürzte Blenddauer",
+        "string": "Kreaturen haben {0}% verkürzte [Blind|Blend]dauer",
         "reminder_text": null,
         "is_markup": null
       }
@@ -7343,7 +7323,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Kreaturen verursachen {0}% mehr Schaden bei Treffer",
+        "string": "Kreaturen verursachen {0}% mehr Schaden mit Treffern",
         "reminder_text": null,
         "is_markup": null
       },
@@ -7363,7 +7343,7 @@
             "negate"
           ]
         ],
-        "string": "Kreaturen verursachen {0}% weniger Schaden bei Treffer",
+        "string": "Kreaturen verursachen {0}% weniger Schaden mit Treffern",
         "reminder_text": null,
         "is_markup": null
       }
@@ -8813,6 +8793,42 @@
         ],
         "string": "Kreaturen können keine elementaren Beeinträchtigungen verursachen",
         "reminder_text": "(Elementare Beeinträchtigungen sind: entzündet, versengt, unterkühlt, eingefroren, zerbrechlich, geschockt und ausgelaugt)",
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "global_cannot_crit"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Kreaturen verursachen nie kritische Treffer",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -10467,7 +10483,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% erhöhte kritische Trefferchance gegen geblendete Gegner",
+        "string": "{0}% erhöhte kritische Trefferchance gegen [Blind|geblendete] Gegner",
         "reminder_text": null,
         "is_markup": null
       },
@@ -10487,7 +10503,7 @@
             "negate"
           ]
         ],
-        "string": "{0}% verringerte kritische Trefferchance gegen geblendete Gegner",
+        "string": "{0}% verringerte kritische Trefferchance gegen [Blind|geblendete] Gegner",
         "reminder_text": null,
         "is_markup": null
       }
@@ -11005,7 +11021,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Durch Kreaturen angewendete schädigende Beeinträchtigungen verursachen ihren Schaden {0}% schneller",
+        "string": "Schädigende Beeinträchtigungen, die von Kreaturen verursacht werden, verursachen den Schaden {0}% schneller",
         "reminder_text": "(Beeinträchtigungen, die Schaden verursachen, sind: blutend, entzündet und vergiftet)",
         "is_markup": null
       }
@@ -15545,6 +15561,62 @@
   {
     "English": null,
     "ids": [
+      "support_impotence_damage_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Kreaturen verursachen {0}% mehr Schaden",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Kreaturen verursachen {0}% weniger Schaden",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "support_more_duration_skill_effect_duration_+%_final"
     ],
     "trade_stats": null,
@@ -15621,7 +15693,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Durch Kreaturen verstümmelte Gegner erleiden {0}% erhöhten physischen Schaden",
+        "string": "Kreaturen verursachen {0}% mehr physischen Schaden",
         "reminder_text": null,
         "is_markup": null
       },
@@ -15641,7 +15713,7 @@
             "negate"
           ]
         ],
-        "string": "Durch Kreaturen verstümmelte Gegner erleiden {0}% verringerten physischen Schaden",
+        "string": "Kreaturen verursachen {0}% weniger physischen Schaden",
         "reminder_text": null,
         "is_markup": null
       }
@@ -17141,8 +17213,8 @@
             "milliseconds_to_seconds"
           ]
         ],
-        "string": "Kreaturen haben {0}% Chance, für {1} Sekunden Ansturm zu erhalten, wenn sie einen einzigartigen Gegner treffen",
-        "reminder_text": "(Ansturm gewährt 20% erhöhte Angriffs-, Zauber- und Bewegungsgeschwindigkeit)",
+        "string": "Kreaturen haben {0}% Chance, für {1} Sekunden [Onslaught|Ansturm] zu erhalten, wenn sie einen einzigartigen Gegner treffen",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -17195,8 +17267,8 @@
             "milliseconds_to_seconds"
           ]
         ],
-        "string": "Kreaturen haben {0}% Chance, beim Verursachen eines tödlichen Schlags\nfür {2} Sekunden Ansturm zu gewähren",
-        "reminder_text": "(Ansturm gewährt 20% erhöhte Angriffs-, Zauber- und Bewegungsgeschwindigkeit)",
+        "string": "Kreaturen haben {0}% Chance, beim Verursachen eines tödlichen Schlags\nfür {2} Sekunden [Onslaught|Ansturm] zu erhalten",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -22481,6 +22553,18 @@
         "id": "explicit.stat_2783958145",
         "text": "#% more Maximum Life",
         "type": "explicit",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_1214601201",
+        "text": "#% more Maximum Life",
+        "type": "implicit",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_137377270",
+        "text": "#% more Maximum Life",
+        "type": "implicit",
         "option": null
       }
     ],

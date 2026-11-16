@@ -988,38 +988,18 @@
       {
         "condition": [
           {
-            "min": 1,
+            "min": null,
             "max": null,
             "negated": null
           }
         ],
         "format": [
-          "#"
+          "+#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "{0}% d'Augmentation de la Rareté des Objets cédés par les Ennemis Tués par les Créatures",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "{0}% de Réduction de la Rareté des Objets cédés par les Ennemis Tués par les Créatures",
+        "string": "{0}% à la [PlayerItemRarity|Rareté] des Objets cédés par les Ennemis Tués par les Créatures",
         "reminder_text": null,
         "is_markup": null
       }
@@ -8827,6 +8807,42 @@
   {
     "English": null,
     "ids": [
+      "global_cannot_crit"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Les Créatures n'infligent jamais de Coups critiques",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "global_poison_on_hit"
     ],
     "trade_stats": null,
@@ -15545,6 +15561,62 @@
   {
     "English": null,
     "ids": [
+      "support_impotence_damage_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Les Créatures ont {0}% Davantage de Dégâts",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Les Créatures ont {0}% de Perte de Dégâts",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "support_more_duration_skill_effect_duration_+%_final"
     ],
     "trade_stats": null,
@@ -17641,7 +17713,7 @@
           []
         ],
         "string": "Les Créatures ont {0}% de chances d'infliger Flétrissement au Toucher",
-        "reminder_text": "(Flétrissure applique 6% d'Augmentation des Dégâts de chaos subis et peut être cumulé jusqu'à 15 fois)",
+        "reminder_text": "(Flétrissement applique 6% d'Augmentation des Dégâts de chaos subis et peut être cumulé jusqu'à 15 fois)",
         "is_markup": null
       },
       {
@@ -17659,7 +17731,7 @@
           []
         ],
         "string": "Les Créatures infligent Flétrissement au Toucher",
-        "reminder_text": "(Flétrissure applique 6% d'Augmentation des Dégâts de chaos subis et peut être cumulé jusqu'à 15 fois)",
+        "reminder_text": "(Flétrissement applique 6% d'Augmentation des Dégâts de chaos subis et peut être cumulé jusqu'à 15 fois)",
         "is_markup": null
       }
     ],
@@ -17695,7 +17767,7 @@
           []
         ],
         "string": "Les Créatures ont {0}% de chances d'infliger Flétrissement au Toucher",
-        "reminder_text": "(Flétrissure applique 6% d'Augmentation des Dégâts de chaos subis et peut être cumulé jusqu'à 15 fois)",
+        "reminder_text": "(Flétrissement applique 6% d'Augmentation des Dégâts de chaos subis et peut être cumulé jusqu'à 15 fois)",
         "is_markup": null
       },
       {
@@ -17713,7 +17785,7 @@
           []
         ],
         "string": "Les Créatures infligent Flétrissement au Toucher",
-        "reminder_text": "(Flétrissure applique 6% d'Augmentation des Dégâts de chaos subis et peut être cumulé jusqu'à 15 fois)",
+        "reminder_text": "(Flétrissement applique 6% d'Augmentation des Dégâts de chaos subis et peut être cumulé jusqu'à 15 fois)",
         "is_markup": null
       }
     ],
@@ -17749,7 +17821,7 @@
           []
         ],
         "string": "Le Scorpion de l'Agonie a {0}% de chances d'infliger Flétrissement pendant 2 secondes au Toucher",
-        "reminder_text": "(Flétrissure applique 6% d'Augmentation des Dégâts de chaos subis et peut être cumulé jusqu'à 15 fois)",
+        "reminder_text": "(Flétrissement applique 6% d'Augmentation des Dégâts de chaos subis et peut être cumulé jusqu'à 15 fois)",
         "is_markup": null
       },
       {
@@ -17767,7 +17839,7 @@
           []
         ],
         "string": "Le Scorpion de l'Agonie inflige Flétrissement pendant 2 secondes au Toucher",
-        "reminder_text": "(Flétrissure applique 6% d'Augmentation des Dégâts de chaos subis et peut être cumulé jusqu'à 15 fois)",
+        "reminder_text": "(Flétrissement applique 6% d'Augmentation des Dégâts de chaos subis et peut être cumulé jusqu'à 15 fois)",
         "is_markup": null
       }
     ],
@@ -22481,6 +22553,18 @@
         "id": "explicit.stat_2783958145",
         "text": "#% more Maximum Life",
         "type": "explicit",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_1214601201",
+        "text": "#% more Maximum Life",
+        "type": "implicit",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_137377270",
+        "text": "#% more Maximum Life",
+        "type": "implicit",
         "option": null
       }
     ],

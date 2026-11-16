@@ -661,38 +661,18 @@
       {
         "condition": [
           {
-            "min": 1,
+            "min": null,
             "max": null,
             "negated": null
           }
         ],
         "format": [
-          "#"
+          "+#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "{0}% erhöhte Seltenheit fallen gelassener Gegenstände von Gegnern, die durch Kreaturen oder diesen Angriff getötet wurden",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "{0}% verringerte Seltenheit fallen gelassener Gegenstände von Gegnern, die durch Kreaturen oder diesen Angriff getötet wurden",
+        "string": "{0}% zur [PlayerItemRarity|Seltenheit] fallen gelassener Gegenstände von Gegnern, die durch Kreaturen oder diesen Angriff getötet wurden",
         "reminder_text": null,
         "is_markup": null
       }
@@ -1042,7 +1022,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Dieser Angriff und Kreaturen gewähren {0}% verlängerte Brenndauer bei Gegnern",
+        "string": "Dieser Angriff und Kreaturen gewähren {0}% verlängerte Entzündungsdauer bei Gegnern",
         "reminder_text": null,
         "is_markup": null
       },
@@ -1062,7 +1042,7 @@
             "negate"
           ]
         ],
-        "string": "Dieser Angriff und Kreaturen gewähren {0}% verkürzte Brenndauer bei Gegnern",
+        "string": "Dieser Angriff und Kreaturen gewähren {0}% verkürzte Entzündungsdauer bei Gegnern",
         "reminder_text": null,
         "is_markup": null
       }
@@ -1666,8 +1646,8 @@
         "index_handlers": [
           []
         ],
-        "string": "Dieser Angriff und Kreaturen haben {0}% Chance, Gegner bei Treffer zu blenden",
-        "reminder_text": "(Geblendet sein bewirkt 20% weniger Treffgenauigkeit und Ausweichwert, für 4 Sekunden)",
+        "string": "Dieser Angriff und Kreaturen haben {0}% Chance, Gegner bei Treffer zu [Blind|blenden]",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -1702,7 +1682,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Dieser Angriff und Kreaturen gewähren {0}% erhöhte Blenddauer",
+        "string": "Dieser Angriff und Kreaturen gewähren {0}% verlängerte [Blind|Blend]dauer",
         "reminder_text": null,
         "is_markup": null
       },
@@ -1722,7 +1702,7 @@
             "negate"
           ]
         ],
-        "string": "Dieser Angriff und Kreaturen gewähren {0}% verringerte Blenddauer",
+        "string": "Dieser Angriff und Kreaturen gewähren {0}% verkürzte [Blind|Blend]dauer",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3755,6 +3735,42 @@
   {
     "English": null,
     "ids": [
+      "global_cannot_crit"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Dieser Angriff und Kreaturen verursachen nie kritische Treffer",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "additional_base_critical_strike_chance"
     ],
     "trade_stats": null,
@@ -3939,7 +3955,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Maximal {0} beschworener seltene Wächter der Beherrschung",
+        "string": "Maximal {0} beschworene seltene Wächter der Beherrschung",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4545,7 +4561,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Von Kreaturen abgefeuerte Projektile haben {0}% Chance auf ein zusätzliches Projektil beim Aufgabeln",
+        "string": "Von Kreaturen abgefeuerte Projektile haben {0}% Chance auf ein zusätzliches Projektil bei der Gabelung",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4637,7 +4653,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% erhöhte kritische Trefferchance gegen geblendete Gegner",
+        "string": "{0}% erhöhte kritische Trefferchance gegen [Blind|geblendete] Gegner",
         "reminder_text": null,
         "is_markup": null
       },
@@ -4657,7 +4673,7 @@
             "negate"
           ]
         ],
-        "string": "{0}% verringerte kritische Trefferchance gegen geblendete Gegner",
+        "string": "{0}% verringerte kritische Trefferchance gegen [Blind|geblendete] Gegner",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5121,7 +5137,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Von diesem Angriff oder von Kreaturen verursachte schädigende Beeinträchtigungen verursachen den Schaden {0}% schneller",
+        "string": "Von diesem Angriff oder von Kreaturen verursachte schädigende Beeinträchtigungen verursachen den Schaden {0}% [DamageFaster|schneller]",
         "reminder_text": "(Beeinträchtigungen, die Schaden verursachen, sind: blutend, entzündet und vergiftet)",
         "is_markup": null
       }
@@ -5775,7 +5791,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Unterstützte Fertigkeiten verursachen {0}% mehr physischen Schaden",
+        "string": "Dieser Angriff und Kreaturen verursachen {0}% mehr physischen Schaden",
         "reminder_text": null,
         "is_markup": null
       }
@@ -6641,7 +6657,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Durch unterstützte Fertigkeiten oder durch Kreaturen unterkühlte Gegner erleiden {0}% erhöhten Kälteschaden über Zeit",
+        "string": "Von unterstützten Fertigkeiten oder von Kreaturen unterkühlte Gegner erleiden {0}% erhöhten Kälteschaden über Zeit",
         "reminder_text": null,
         "is_markup": null
       },
@@ -6661,7 +6677,7 @@
             "negate"
           ]
         ],
-        "string": "Durch unterstützte Fertigkeiten oder durch Kreaturen unterkühlte Gegner erleiden {0}% verringerten Kälteschaden über Zeit",
+        "string": "Von unterstützten Fertigkeiten oder von Kreaturen unterkühlte Gegner erleiden {0}% verringerten Kälteschaden über Zeit",
         "reminder_text": null,
         "is_markup": null
       }
@@ -6697,7 +6713,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Durch unterstützte Fertigkeiten oder durch Kreaturen unterkühlte Gegner erleiden erhöhten Kälteschaden durch die Unterkühlungswirkung",
+        "string": "Von unterstützten Fertigkeiten oder von Kreaturen unterkühlte Gegner erleiden erhöhten Kälteschaden durch die Unterkühlungswirkung",
         "reminder_text": null,
         "is_markup": null
       }
@@ -6958,6 +6974,62 @@
           ]
         ],
         "string": "Dieser Angriff und Kreaturen verursachen {0}% weniger Kälteschaden über Zeit",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_impotence_damage_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Dieser Angriff und Kreaturen verursachen {0}% mehr Schaden",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Dieser Angriff und Kreaturen verursachen {0}% weniger Schaden",
         "reminder_text": null,
         "is_markup": null
       }
@@ -8006,8 +8078,8 @@
             "milliseconds_to_seconds"
           ]
         ],
-        "string": "Dieser Angriff und Kreaturen haben {0}% Chance, für {1} Sekunden Ansturm zu gewähren, wenn Ihr einen einzigartigen Gegner trefft",
-        "reminder_text": "(Ansturm gewährt 20% erhöhte Angriffs-, Zauber- und Bewegungsgeschwindigkeit)",
+        "string": "Dieser Angriff und Kreaturen haben {0}% Chance, für {1} Sekunden [Onslaught|Ansturm] zu gewähren, wenn Ihr einen einzigartigen Gegner trefft",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -8060,8 +8132,8 @@
             "milliseconds_to_seconds"
           ]
         ],
-        "string": "Dieser Angriff und Kreaturen haben {0}% Chance, beim Verursachen eines tödlichen Schlags\nfür {2} Sekunden Ansturm zu gewähren",
-        "reminder_text": "(Ansturm gewährt 20% erhöhte Angriffs-, Zauber- und Bewegungsgeschwindigkeit)",
+        "string": "Dieser Angriff und Kreaturen haben {0}% Chance, beim Verursachen eines tödlichen Schlags\nfür {2} Sekunden [Onslaught|Ansturm] zu gewähren",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -12918,6 +12990,18 @@
         "id": "explicit.stat_2783958145",
         "text": "#% more Maximum Life",
         "type": "explicit",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_1214601201",
+        "text": "#% more Maximum Life",
+        "type": "implicit",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_137377270",
+        "text": "#% more Maximum Life",
+        "type": "implicit",
         "option": null
       }
     ],

@@ -3687,6 +3687,86 @@
   {
     "English": null,
     "ids": [
+      "arcane_link_added_lightning_damage_from_mana_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "เป้าหมายที่ประสาน ได้รับ เสริมความเสียหาย สายฟ้า เท่ากับ {0}% ของ มานาสูงสุดของคุณ",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "arcane_link_minimum_lightning_damage",
+      "arcane_link_maximum_lightning_damage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "เป้าหมายที่ประสาน ได้รับ เสริมความเสียหาย สายฟ้า {0} ถึง {1}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "area_damage_+%"
     ],
     "trade_stats": null,
@@ -3971,7 +4051,7 @@
         "index_handlers": [
           []
         ],
-        "string": "เพิ่มความเร็วในการโจมตีและร่าย {0}% ขณะที่มีสถานะ เร่งราวี",
+        "string": "เพิ่มความเร็วในการโจมตีและร่าย {0}% ขณะที่มีสถานะ [Onslaught|เร่งราวี]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -3991,7 +4071,7 @@
             "negate"
           ]
         ],
-        "string": "ลดความเร็วในการโจมตีและร่าย {0}% ขณะที่มีสถานะ เร่งราวี",
+        "string": "ลดความเร็วในการโจมตีและร่าย {0}% ขณะที่มีสถานะ [Onslaught|เร่งราวี]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5424,38 +5504,18 @@
       {
         "condition": [
           {
-            "min": 1,
+            "min": null,
             "max": null,
             "negated": null
           }
         ],
         "format": [
-          "#"
+          "+#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "เพิ่มระดับความหายากของ ไอเทม ที่ดรอปจากศัตรูที่ถูกสังหาร {0}%",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "ลดระดับความหายากของ ไอเทม ที่ดรอปจากศัตรูที่ถูกสังหาร {0}%",
+        "string": "[PlayerItemRarity|ระดับความหายาก]ของไอเทม ที่ดรอปจากศัตรูที่ถูกสังหาร {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -7526,6 +7586,60 @@
           ]
         ],
         "string": "ลดระยะเวลาของสถานะ ตาบอด {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "blood_flower_maximum_flowers"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "สร้าง ดอก ได้สูงสุด {0} ดอก",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "สร้าง ดอก ได้สูงสุด {0} ดอก",
         "reminder_text": null,
         "is_markup": null
       }
@@ -10266,7 +10380,7 @@
         "index_handlers": [
           []
         ],
-        "string": "โพรเจกไทล์1 ใน {0} ลูกที่ยิงออกไป อยู่บนพื้นเป็น มีดค้างพื้น 1 เล่ม",
+        "string": "โพรเจกไทล์ 1 ใน {0} ลูกที่ยิงออกไป อยู่บนพื้นเป็น มีดค้างพื้น 1 เล่ม",
         "reminder_text": "(มีดค้างพื้น จะยังคงอยู่บนพื้นในช่วงระยะเวลาหนึ่งซึ่งสามารถถูกใช้งานโดยสกิลอื่นได้ และหากมันถูกปลุกเสกขึ้นมามันจะถือว่าเป็นมีดชนิดหนึ่ง)",
         "is_markup": null
       }
@@ -10356,8 +10470,8 @@
         "index_handlers": [
           []
         ],
-        "string": "สถานะ เลือดไหล ที่คุณสร้าง สร้างความเสียหาย เร็วขึ้น {0}%",
-        "reminder_text": "(จะสร้างความเสียหายสุทธิเท่าเดิม ในระยะเวลาสั้นลง)",
+        "string": "สถานะ เลือดไหล ที่คุณสร้าง สร้างความเสียหาย [DamageFaster|เร็วขึ้น] {0}%",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -10392,8 +10506,8 @@
         "index_handlers": [
           []
         ],
-        "string": "สถานะ ลุกไหม้ สร้างความเสียหาย เร็วขึ้น {0}%",
-        "reminder_text": "(จะสร้างความเสียหายสุทธิเท่าเดิม ในระยะเวลาสั้นลง)",
+        "string": "สถานะ ลุกไหม้ สร้างความเสียหาย [DamageFaster|เร็วขึ้น] {0}%",
+        "reminder_text": null,
         "is_markup": null
       },
       {
@@ -10412,7 +10526,7 @@
             "negate"
           ]
         ],
-        "string": "สถานะ ลุกไหม้ สร้างความเสียหาย ช้าลง {0}%",
+        "string": "สถานะ ลุกไหม้ สร้างความเสียหาย [DamageSlower|ช้าลง] {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -10437,7 +10551,7 @@
       {
         "condition": [
           {
-            "min": null,
+            "min": 1,
             "max": null,
             "negated": null
           }
@@ -10448,8 +10562,28 @@
         "index_handlers": [
           []
         ],
-        "string": "สถานะ พิษ ที่คุณสร้าง สร้างความเสียหาย เร็วขึ้น {0}%",
-        "reminder_text": "(จะสร้างความเสียหายสุทธิเท่าเดิม ในระยะเวลาสั้นลง)",
+        "string": "สถานะ [Poison|พิษ] ที่คุณสร้าง สร้างความเสียหาย [DamageFaster|เร็วขึ้น] {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "สถานะ [Poison|พิษ] ที่คุณสร้าง สร้างความเสียหาย [DamageSlower|ช้าลง] {0}%",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -22823,6 +22957,18 @@
         "id": "explicit.stat_2783958145",
         "text": "#% more Maximum Life",
         "type": "explicit",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_1214601201",
+        "text": "#% more Maximum Life",
+        "type": "implicit",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_137377270",
+        "text": "#% more Maximum Life",
+        "type": "implicit",
         "option": null
       }
     ],

@@ -132,6 +132,146 @@
   },
   {
     "active_skill": {
+      "description": "ปลดปล่อยลูกไฟออกไปข้างหน้าที่จะสร้างดีบัฟความเสียหาย ไฟ ต่อเนื่องระยะเวลาสั้นที่รุนแรงต่อศัตรูในพื้นที่รอบตัวมัน",
+      "display_name": "บอลไฟแห่งรังสี (Fireball of Radiation)",
+      "id": "fireball_alt_x",
+      "is_manually_casted": true,
+      "is_skill_totem": false,
+      "stat_conversions": {
+        "fireball_cast_speed_+%": "base_cast_speed_+%",
+        "fireball_damage_+%": "damage_+%",
+        "fireball_and_rolling_magma_modifiers_to_projectile_count_do_not_apply": "modifiers_to_projectile_count_do_not_apply",
+        "fireball_and_rolling_magma_active_skill_area_of_effect_+%_final": "active_skill_area_of_effect_+%_final"
+      },
+      "types": [
+        "Projectile",
+        "ProjectilesFromUser",
+        "Spell",
+        "Damage",
+        "Area",
+        "Trappable",
+        "Totemable",
+        "Mineable",
+        "Multicastable",
+        "Triggerable",
+        "CanRapidFire",
+        "AreaSpell",
+        "DamageOverTime",
+        "Duration",
+        "Fire"
+      ],
+      "weapon_restrictions": [],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "บอลไฟ (Fireball)",
+      "experience_type": "GemProgression1",
+      "id": "Metadata/Items/Gems/SkillGemFireball",
+      "max_level": 20,
+      "release_state": "released"
+    },
+    "cast_time": 750,
+    "color": "b",
+    "display_name": "บอลไฟแห่งรังสี (Fireball of Radiation)",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/skill",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [
+        {
+          "stat": "รัศมีพื้นฐาน {active_skill_base_area_of_effect_radius/locations_to_metres} เมตร",
+          "stats": {
+            "active_skill_base_area_of_effect_radius": 100
+          }
+        }
+      ],
+      "stat_requirements": {
+        "int": null,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "active_skill_projectile_speed_+%_final": "ลดความเร็วโพรเจกไทล์ อีก 70%",
+        "base_skill_effect_duration": "ระยะเวลาพื้นฐาน 1.00 วินาที",
+        "quality_display_active_skill_ignite_damage_is_gem": "",
+        "spell_damage_modifiers_apply_to_skill_dot": "ม็อดที่ส่งผลต่อ ความเสียหาย เวท ส่งผลต่อ ความเสียหายต่อเนื่อง ของสกิลนี้"
+      },
+      "stats": [
+        {
+          "id": "base_fire_damage_to_deal_per_minute",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "active_skill_projectile_speed_+%_final",
+          "type": "constant",
+          "value": -70
+        },
+        {
+          "id": "base_skill_effect_duration",
+          "type": "constant",
+          "value": 1000
+        },
+        {
+          "id": "active_skill_base_area_of_effect_radius",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "base_is_projectile",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "quality_display_active_skill_ignite_damage_is_gem",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "spell_damage_modifiers_apply_to_skill_dot",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "base_fire_damage_to_deal_per_minute",
+      "base_skill_effect_duration",
+      "spell_damage_modifiers_apply_to_skill_dot",
+      "active_skill_base_area_of_effect_radius",
+      "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius\nactive_skill_area_of_effect_radius",
+      "quality_display_active_skill_ignite_damage_is_gem",
+      "active_skill_projectile_speed_+%_final"
+    ],
+    "tags": [
+      "intelligence",
+      "grants_active_skill",
+      "projectile",
+      "spell",
+      "area",
+      "duration",
+      "fire"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": "alt_x",
+    "support_gem": null
+  },
+  {
+    "active_skill": {
       "description": "ยิงลูกไฟออกไปชุดหนึ่งเป็นเกลียวรอบตัวผู้ร่าย",
       "display_name": "วาล์ บอลไฟ (Vaal Fireball)",
       "id": "vaal_fireball",
@@ -5624,7 +5764,7 @@
       "stat_text": {
         "frenzy_skill_attack_damage_+%_final_per_frenzy_charge\nquality_display_frenzy_is_gem": "เพิ่มความเสียหาย โจมตี อีก 5% ต่อจำนวน Frenzy Charge",
         "frenzy_skill_attack_speed_+%_final_per_frenzy_charge\nquality_display_active_skill_attack_speed_per_frenzy_is_gem": "เพิ่มความเร็วในการโจมตี อีก 5% ต่อจำนวน Frenzy Charge",
-        "frenzy_consume_charges_to_onslaught_for_ms_per_charge": "ขณะที่ Frenzy Charge เต็ม กลืนกิน Frenzy Charge ทั้งหมดเมื่อปะทะ\nเพื่อรับสถานะ เร่งราวี 1 วินาที ต่อจำนวน Charge ที่กลืนกิน"
+        "frenzy_consume_charges_to_onslaught_for_ms_per_charge": "ขณะที่ Frenzy Charge เต็ม กลืนกิน Frenzy Charge ทั้งหมดเมื่อปะทะ เพื่อรับสถานะ [Onslaught|เร่งราวี] 1 วินาที ต่อจำนวน Charge ที่กลืนกิน"
       },
       "stats": [
         {
@@ -6325,8 +6465,8 @@
     },
     "tooltip_order": [
       "spell_minimum_base_fire_damage\nspell_maximum_base_fire_damage",
-      "corpse_explosion_monster_life_permillage_fire",
       "volatile_dead_base_number_of_corpses_to_consume",
+      "corpse_explosion_monster_life_permillage_fire",
       "active_skill_base_area_of_effect_radius",
       "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius",
       "volatile_dead_core_movement_speed_+%",
@@ -6489,8 +6629,8 @@
     "tooltip_order": [
       "base_skill_effect_duration",
       "spell_minimum_base_fire_damage\nspell_maximum_base_fire_damage",
-      "corpse_explosion_monster_life_permillage_fire",
       "volatile_dead_base_number_of_corpses_to_consume",
+      "corpse_explosion_monster_life_permillage_fire",
       "active_skill_base_area_of_effect_radius",
       "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius\nactive_skill_area_of_effect_radius",
       "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius",
@@ -6646,8 +6786,8 @@
     },
     "tooltip_order": [
       "spell_minimum_base_fire_damage\nspell_maximum_base_fire_damage",
-      "corpse_explosion_monster_life_permillage_fire",
       "volatile_dead_base_number_of_corpses_to_consume",
+      "corpse_explosion_monster_life_permillage_fire",
       "active_skill_base_area_of_effect_radius",
       "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius",
       "volatile_dead_core_movement_speed_+%",
@@ -8947,9 +9087,9 @@
     "tooltip_order": [
       "base_chaos_damage_to_deal_per_minute",
       "base_skill_effect_duration",
+      "skill_physical_damage_%_to_convert_to_chaos",
       "projectile_damage_modifiers_apply_to_skill_dot",
-      "active_skill_base_radius_+",
-      "skill_physical_damage_%_to_convert_to_chaos"
+      "active_skill_base_radius_+"
     ],
     "tags": [
       "dexterity",
@@ -9086,8 +9226,8 @@
       "damage_multiplier": null
     },
     "tooltip_order": [
-      "active_skill_base_radius_+",
       "skill_physical_damage_%_to_convert_to_chaos",
+      "active_skill_base_radius_+",
       "base_chance_to_poison_on_hit_%"
     ],
     "tags": [
@@ -13139,8 +13279,8 @@
     },
     "tooltip_order": [
       "base_skill_effect_duration",
-      "corpse_explosion_monster_life_%",
       "skill_physical_damage_%_to_convert_to_fire",
+      "corpse_explosion_monster_life_%",
       "active_skill_base_area_of_effect_radius",
       "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius",
       "infernal_blow_explosion_damage_%_of_total_per_stack\nquality_display_infernal_blow_is_gem"
@@ -13432,8 +13572,8 @@
       "damage_multiplier": null
     },
     "tooltip_order": [
-      "base_chance_to_freeze_%",
       "skill_physical_damage_%_to_convert_to_cold",
+      "base_chance_to_freeze_%",
       "glacial_hammer_third_hit_freeze_as_though_dealt_damage_+%",
       "cold_ailment_duration_+%",
       "cold_ailment_effect_+%"
@@ -13558,8 +13698,8 @@
       "damage_multiplier": null
     },
     "tooltip_order": [
-      "base_critical_strike_multiplier_+",
       "skill_physical_damage_%_to_convert_to_cold",
+      "base_critical_strike_multiplier_+",
       "glacial_hammer_third_hit_always_crits"
     ],
     "tags": [
@@ -13720,9 +13860,9 @@
     },
     "tooltip_order": [
       "base_skill_effect_duration",
+      "skill_physical_damage_%_to_convert_to_cold",
       "modifiers_to_skill_effect_duration_also_affect_soul_prevention_duration",
       "base_chance_to_freeze_%",
-      "skill_physical_damage_%_to_convert_to_cold",
       "freeze_as_though_dealt_damage_+%",
       "global_always_hit",
       "cold_ailment_duration_+%",
@@ -15429,7 +15569,7 @@
       "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "เพิ่มระดับความหายากของ ไอเทม ที่ดรอปจากศัตรูที่ถูกสังหารด้วย สกิลที่เสริม {base_killed_monster_dropped_item_rarity_+%}%",
+          "stat": "[PlayerItemRarity|ระดับความหายาก]ของไอเทม ที่ดรอปจากศัตรูที่ถูกสังหารด้วย สกิลที่เสริม {base_killed_monster_dropped_item_rarity_+%}%",
           "stats": {
             "base_killed_monster_dropped_item_rarity_+%": 500
           }
@@ -17010,8 +17150,8 @@
     "tooltip_order": [
       "spell_minimum_base_lightning_damage\nspell_maximum_base_lightning_damage",
       "base_cast_speed_+%",
-      "skill_effect_duration_+%",
-      "max_number_of_lightning_warp_markers"
+      "max_number_of_lightning_warp_markers",
+      "skill_effect_duration_+%"
     ],
     "tags": [
       "intelligence",
@@ -20970,8 +21110,8 @@
     },
     "tooltip_order": [
       "spell_minimum_base_lightning_damage\nspell_maximum_base_lightning_damage",
-      "base_chance_to_shock_%",
       "number_of_chains",
+      "base_chance_to_shock_%",
       "shield_spell_block_%",
       "skill_display_buff_grants_shock_immunity"
     ],
@@ -21110,9 +21250,9 @@
       "base_skill_effect_duration",
       "active_skill_always_reserves_unmodifiable_X%_of_mana",
       "skill_has_added_lightning_damage_equal_to_%_of_maximum_mana",
+      "mana_infused_staff_base_trigger_interval_ms",
       "active_skill_buff_mana_cost_+%_final_to_grant",
-      "active_skill_buff_block_chance_+%_final_to_grant",
-      "mana_infused_staff_base_trigger_interval_ms"
+      "active_skill_buff_block_chance_+%_final_to_grant"
     ],
     "tags": [
       "intelligence",
@@ -21271,9 +21411,9 @@
       "base_skill_effect_duration",
       "skill_effect_duration_+%",
       "display_this_skill_cooldown_does_not_recover_during_buff",
-      "base_physical_damage_reduction_rating",
       "molten_shell_damage_absorbed_%\nmolten_shell_damage_absorb_limit_%_of_armour\nmolten_shell_max_damage_absorbed",
-      "molten_shell_%_of_absorbed_damage_dealt_as_reflected_fire"
+      "molten_shell_%_of_absorbed_damage_dealt_as_reflected_fire",
+      "base_physical_damage_reduction_rating"
     ],
     "tags": [
       "strength",
@@ -21441,9 +21581,9 @@
       "base_skill_effect_duration",
       "skill_effect_duration_+%",
       "modifiers_to_skill_effect_duration_also_affect_soul_prevention_duration",
-      "base_physical_damage_reduction_rating",
       "molten_shell_damage_absorbed_%\nmolten_shell_damage_absorb_limit_%_of_armour\nmolten_shell_max_damage_absorbed",
-      "molten_shell_%_of_absorbed_damage_dealt_as_reflected_fire\ndisplay_vaal_molten_shell_alternate_description"
+      "molten_shell_%_of_absorbed_damage_dealt_as_reflected_fire\ndisplay_vaal_molten_shell_alternate_description",
+      "base_physical_damage_reduction_rating"
     ],
     "tags": [
       "strength",
@@ -24072,8 +24212,8 @@
       "damage_multiplier": null
     },
     "tooltip_order": [
-      "base_chance_to_ignite_%",
       "skill_physical_damage_%_to_convert_to_fire",
+      "base_chance_to_ignite_%",
       "active_skill_ignite_damage_+%_final\nquality_display_active_skill_ignite_damage_is_gem"
     ],
     "tags": [
@@ -24190,8 +24330,8 @@
     },
     "tooltip_order": [
       "added_fire_damage_to_attacks_equal_to_%_maximum_life",
-      "base_chance_to_ignite_%",
       "skill_physical_damage_%_to_convert_to_fire",
+      "base_chance_to_ignite_%",
       "active_skill_ignite_damage_+%_final\nquality_display_active_skill_ignite_damage_is_gem"
     ],
     "tags": [
@@ -24332,9 +24472,9 @@
       "damage_multiplier": null
     },
     "tooltip_order": [
-      "base_chance_to_ignite_%",
       "projectile_base_number_of_targets_to_pierce",
       "skill_physical_damage_%_to_convert_to_fire",
+      "base_chance_to_ignite_%",
       "global_always_hit",
       "active_skill_ignite_damage_+%_final\nquality_display_active_skill_ignite_damage_is_gem"
     ],
@@ -25238,7 +25378,7 @@
         "dex": 0
       },
       "stat_text": {
-        "base_totem_duration": "โทเทม คงอยู่ 8 วินาที",
+        "base_totem_duration": "โทเทม มีระยะเวลา 8 วินาที",
         "support_spell_totem_cast_speed_+%_final": "สกิลที่เสริม มีความเร็วในการร่าย ลดลง อีก 40%",
         "is_totem": "สกิลที่เสริม จะอัญเชิญ โทเทม 1 เสา ที่ใช้ สกิลนั้น"
       },
@@ -25275,6 +25415,11 @@
         },
         {
           "id": "is_totem",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "skill_is_spell_totemified",
           "type": "implicit",
           "value": 1
         }
@@ -25628,7 +25773,7 @@
         "dex": 0
       },
       "stat_text": {
-        "base_totem_duration": "โทเทม คงอยู่ 8 วินาที",
+        "base_totem_duration": "โทเทม มีระยะเวลา 8 วินาที",
         "base_global_chance_to_knockback_%": "มีโอกาส ผลักศัตรูออกไป 25% เมื่อปะทะ",
         "active_skill_base_area_of_effect_radius": "รัศมีพื้นฐาน 2.4 เมตร",
         "is_totem": "อัญเชิญ โทเทม 1 เสา ที่ใช้ สกิลนี้"
@@ -25777,7 +25922,7 @@
         "dex": 0
       },
       "stat_text": {
-        "base_totem_duration": "โทเทม คงอยู่ 8 วินาที",
+        "base_totem_duration": "โทเทม มีระยะเวลา 8 วินาที",
         "active_skill_base_area_of_effect_radius": "รัศมีพื้นฐาน 2.6 เมตร",
         "nova_spells_cast_at_target_location\nnova_spells_cast_at_target_location_description_mode": "",
         "is_totem": "อัญเชิญ โทเทม 1 เสา ที่ใช้ สกิลนี้"
@@ -25930,7 +26075,7 @@
         "dex": 0
       },
       "stat_text": {
-        "base_totem_duration": "โทเทม คงอยู่ 8 วินาที",
+        "base_totem_duration": "โทเทม มีระยะเวลา 8 วินาที",
         "is_totem": "อัญเชิญ โทเทม 1 เสา ที่ใช้ สกิลนี้"
       },
       "stats": [
@@ -26921,7 +27066,7 @@
       },
       "stat_text": {
         "base_trap_duration\nquality_display_trap_duration_is_gem": "กับดัก คงอยู่ 4 วินาที",
-        "impale_on_hit_%_chance": "สร้างสถานะสถานะ ทิ่มแทง ต่อศัตรูเมื่อปะทะ",
+        "impale_on_hit_%_chance": "สร้างสถานะ ทิ่มแทง ต่อศัตรูเมื่อปะทะ",
         "apply_enemy_impale_damage_to_nearby_enemies_on_killing_blow_%_chance": "การลงมือสังหาร ทำให้สถานะ ทิ่มแทง บนตัวศัตรู สะท้อนความเสียหายไปยังศัตรูรอบตัว",
         "no_movement_speed": "ล็อกศัตรูอยู่กับที่",
         "traps_do_not_explode_on_timeout": "กับดัก ไม่ทริกเกอร์ เมื่อหมดระยะเวลา",
@@ -27614,10 +27759,10 @@
       "base_fire_damage_to_deal_per_minute",
       "base_skill_effect_duration",
       "spell_minimum_base_fire_damage\nspell_maximum_base_fire_damage",
-      "is_trap",
-      "throw_traps_in_circle_radius",
       "number_of_additional_traps_allowed",
-      "number_of_additional_traps_to_throw"
+      "number_of_additional_traps_to_throw",
+      "is_trap",
+      "throw_traps_in_circle_radius"
     ],
     "tags": [
       "trap",
@@ -27689,7 +27834,7 @@
         "dex": 0
       },
       "stat_text": {
-        "base_totem_duration": "โทเทม คงอยู่ 8 วินาที",
+        "base_totem_duration": "โทเทม มีระยะเวลา 8 วินาที",
         "totems_cannot_evade": "โอเทมที่อัญเชิญจาก สกิลนี้ ไม่สามารถหลบหลีกได้",
         "is_totem": "อัญเชิญ โทเทม 1 เสา ที่ใช้ สกิลนี้"
       },
@@ -27822,7 +27967,7 @@
         "dex": 0
       },
       "stat_text": {
-        "base_totem_duration": "โทเทม คงอยู่ 8 วินาที",
+        "base_totem_duration": "โทเทม มีระยะเวลา 8 วินาที",
         "is_totem": "อัญเชิญ โทเทม 1 เสา ที่ใช้ สกิลนี้"
       },
       "stats": [
@@ -27947,7 +28092,7 @@
       "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "เพิ่มความเร็วของโพรเจกไทล์ อีก {active_skill_projectile_speed_+%_final}%",
+          "stat": "เพิ่มความเร็วโพรเจกไทล์ อีก {active_skill_projectile_speed_+%_final}%",
           "stats": {
             "active_skill_projectile_speed_+%_final": 1000
           }
@@ -29018,8 +29163,8 @@
       "spell_minimum_base_cold_damage\nspell_maximum_base_cold_damage",
       "base_skill_effect_duration",
       "base_cold_damage_to_deal_per_minute",
-      "spell_damage_modifiers_apply_to_skill_dot",
       "modifiers_to_projectile_count_do_not_apply",
+      "spell_damage_modifiers_apply_to_skill_dot",
       "active_skill_base_area_of_effect_radius",
       "active_skill_base_secondary_area_of_effect_radius",
       "arctic_breath_maximum_number_of_skulls_allowed",
@@ -29595,8 +29740,8 @@
       "spell_minimum_base_lightning_damage\nspell_maximum_base_lightning_damage",
       "lightning_ailment_duration_+%",
       "base_skill_effect_duration",
-      "base_chance_to_shock_%",
       "number_of_chains",
+      "base_chance_to_shock_%",
       "arc_damage_+%_final_for_each_remaining_chain",
       "lightning_ailment_effect_+%"
     ],
@@ -30002,10 +30147,10 @@
       "base_skill_effect_duration",
       "skill_effect_duration_+%",
       "modifiers_to_skill_effect_duration_also_affect_soul_prevention_duration",
-      "base_mana_regeneration_rate_per_minute",
-      "base_energy_shield_regeneration_rate_per_minute",
       "vaal_arctic_armour_damage_taken_+%_final_from_hits",
-      "vaal_arctic_armour_number_of_hits_absorbed"
+      "vaal_arctic_armour_number_of_hits_absorbed",
+      "base_mana_regeneration_rate_per_minute",
+      "base_energy_shield_regeneration_rate_per_minute"
     ],
     "tags": [
       "dexterity",
@@ -30079,7 +30224,7 @@
         "dex": 0
       },
       "stat_text": {
-        "base_totem_duration": "โทเทม คงอยู่ 8 วินาที",
+        "base_totem_duration": "โทเทม มีระยะเวลา 8 วินาที",
         "skill_physical_damage_%_to_convert_to_fire": "แปลงความเสียหาย กายภาพ 50% เป็น ไฟ",
         "is_totem": "อัญเชิญ โทเทม 1 เสา ที่ใช้ สกิลนี้",
         "always_pierce": "โพรเจกไทล์ เจาะทะลุ ทุกเป้าหมาย",
@@ -30179,9 +30324,9 @@
       "always_pierce",
       "base_totem_duration",
       "base_number_of_projectiles",
+      "skill_physical_damage_%_to_convert_to_fire",
       "is_totem",
       "base_projectile_speed_+%",
-      "skill_physical_damage_%_to_convert_to_fire",
       "consecrated_ground_immune_to_curses"
     ],
     "tags": [
@@ -30266,7 +30411,7 @@
         "dex": 0
       },
       "stat_text": {
-        "base_totem_duration": "โทเทม คงอยู่ 8 วินาที",
+        "base_totem_duration": "โทเทม มีระยะเวลา 8 วินาที",
         "skill_physical_damage_%_to_convert_to_fire": "แปลงความเสียหาย กายภาพ 50% เป็น ไฟ",
         "is_totem": "อัญเชิญ โทเทม 1 เสา ที่ใช้ สกิลนี้",
         "always_pierce": "โพรเจกไทล์ เจาะทะลุ ทุกเป้าหมาย",
@@ -30366,10 +30511,10 @@
       "spell_minimum_base_physical_damage\nspell_maximum_base_physical_damage",
       "always_pierce",
       "base_totem_duration",
-      "is_totem",
       "holy_flame_totem_consecrated_ground_area_+%",
       "modifiers_to_projectile_count_do_not_apply",
       "skill_physical_damage_%_to_convert_to_fire",
+      "is_totem",
       "active_skill_projectile_speed_+%_final",
       "consecrated_ground_immune_to_curses"
     ],
@@ -30426,7 +30571,7 @@
         "dex": null
       },
       "stat_text": {
-        "base_totem_duration": "โทเทม คงอยู่ 8 วินาที",
+        "base_totem_duration": "โทเทม มีระยะเวลา 8 วินาที",
         "support_attack_totem_attack_speed_+%_final": "สกิลที่เสริม มีความเร็วในการโจมตี ลดลง อีก 50%",
         "attack_skills_additional_ballista_totems_allowed": "สกิลที่เสริม มีจำนวน โทเทมหน้าไม้อัญเชิญ สูงสุด +2 เสา",
         "disable_skill_if_melee_attack": "สกิลโจมตีที่เสริม ไม่สามารถใช้กับอาวุธประชิดได้",
@@ -33435,7 +33580,7 @@
         "dex": 0
       },
       "stat_text": {
-        "base_totem_duration": "โทเทม คงอยู่ 8 วินาที",
+        "base_totem_duration": "โทเทม มีระยะเวลา 8 วินาที",
         "number_of_additional_totems_allowed": "จำนวน โทเทมอัญเชิญ สูงสุด +2 เสา",
         "is_totem": "อัญเชิญ โทเทม 1 เสา ที่ใช้ สกิลนี้",
         "spell_damage_modifiers_apply_to_skill_dot": "ม็อดที่ส่งผลต่อ ความเสียหาย เวท ส่งผลต่อ ความเสียหายต่อเนื่อง ของสกิลนี้"
@@ -33575,7 +33720,7 @@
         "dex": 0
       },
       "stat_text": {
-        "base_totem_duration": "โทเทม คงอยู่ 8 วินาที",
+        "base_totem_duration": "โทเทม มีระยะเวลา 8 วินาที",
         "number_of_additional_totems_allowed_per_maximum_power_charge": "จำนวน โทเทมอัญเชิญ สูงสุด +1 เสา ต่อจำนวน Power Charge สูงสุด",
         "base_skill_effect_duration": "ระยะเวลาพื้นฐาน 4.00 วินาที",
         "searing_bond_totems_detonation_damage_over_time_+%_final_per_active_totem": "การจุดระเบิด สร้างความเสียหาย ติดไฟ เพิ่มขึ้น อีก 30% ต่อจำนวนโทเทมที่จุดระเบิด",
@@ -35043,9 +35188,9 @@
       "always_pierce",
       "base_trap_duration\nquality_display_trap_duration_is_gem",
       "base_number_of_projectiles",
+      "number_of_chains",
       "is_trap",
       "base_chance_to_shock_%",
-      "number_of_chains",
       "projectile_chain_from_terrain_chance_%",
       "trap_%_chance_to_trigger_twice",
       "critical_strike_chance_+%_vs_shocked_enemies"
@@ -35279,7 +35424,7 @@
   },
   {
     "active_skill": {
-      "description": "โยนทุ่นระเบิดที่จะเทเลพอร์ตคุณเมื่อจุดชนวน บดบังทั้งการหลบหนีและการมาถึงของคุณด้วยม่านควันที่สร้างสถานะ ตาบอด ต่อศัตรู และให้บัฟความเร็วในการเคลื่อนที่ชั่วคราวแก่คุณ ใช้คูลดาวน์ร่วมกับสกิล ก้าวพริบตา อื่นๆ",
+      "description": "โยนทุ่นระเบิดที่จะเทเลพอร์ตคุณเมื่อจุดชนวน บดบังทั้งการหลบหนีและการมาถึงของคุณด้วยม่านควันที่สร้างสถานะ [Blind|ตาบอด] ต่อศัตรู และให้บัฟความเร็วในการเคลื่อนที่ชั่วคราวแก่คุณ ใช้คูลดาวน์ร่วมกับสกิล ก้าวพริบตา อื่นๆ",
       "display_name": "ทุ่นระเบิดควัน (Smoke Mine)",
       "id": "smoke_mine",
       "is_manually_casted": true,
@@ -35422,9 +35567,9 @@
       "additive_mine_duration_modifiers_apply_to_buff_effect_duration",
       "is_remote_mine",
       "disable_mine_detonation_cascade",
-      "base_movement_velocity_+%",
       "mine_cannot_rearm",
-      "mine_detonates_instantly"
+      "mine_detonates_instantly",
+      "base_movement_velocity_+%"
     ],
     "tags": [
       "mine",
@@ -35904,9 +36049,9 @@
     "tooltip_order": [
       "thrown_shield_secondary_projectile_damage_+%_final",
       "off_hand_local_minimum_added_physical_damage\noff_hand_local_maximum_added_physical_damage",
-      "off_hand_minimum_added_physical_damage_per_15_shield_armour_and_evasion_rating\noff_hand_maximum_added_physical_damage_per_15_shield_armour_and_evasion_rating",
       "number_of_additional_projectiles",
-      "primary_projectile_chains_+"
+      "primary_projectile_chains_+",
+      "off_hand_minimum_added_physical_damage_per_15_shield_armour_and_evasion_rating\noff_hand_maximum_added_physical_damage_per_15_shield_armour_and_evasion_rating"
     ],
     "tags": [
       "dexterity",
@@ -35975,7 +36120,7 @@
       "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "เพิ่มความเร็วของโพรเจกไทล์ อีก {active_skill_projectile_speed_+%_final}%",
+          "stat": "เพิ่มความเร็วโพรเจกไทล์ อีก {active_skill_projectile_speed_+%_final}%",
           "stats": {
             "active_skill_projectile_speed_+%_final": 1000
           }
@@ -36122,7 +36267,7 @@
       "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "เพิ่มความเร็วของโพรเจกไทล์ อีก {active_skill_projectile_speed_+%_final}%",
+          "stat": "เพิ่มความเร็วโพรเจกไทล์ อีก {active_skill_projectile_speed_+%_final}%",
           "stats": {
             "active_skill_projectile_speed_+%_final": 1000
           }
@@ -36214,8 +36359,8 @@
     "tooltip_order": [
       "thrown_shield_secondary_projectile_damage_+%_final",
       "off_hand_local_minimum_added_physical_damage\noff_hand_local_maximum_added_physical_damage",
-      "off_hand_minimum_added_physical_damage_per_15_shield_armour_and_evasion_rating\noff_hand_maximum_added_physical_damage_per_15_shield_armour_and_evasion_rating",
       "number_of_additional_projectiles",
+      "off_hand_minimum_added_physical_damage_per_15_shield_armour_and_evasion_rating\noff_hand_maximum_added_physical_damage_per_15_shield_armour_and_evasion_rating",
       "active_skill_projectile_speed_+%_final",
       "stationary_shield_throw_projectiles_per_interval"
     ],
@@ -39044,8 +39189,8 @@
     "tooltip_order": [
       "spell_minimum_base_lightning_damage\nspell_maximum_base_lightning_damage",
       "base_skill_effect_duration",
-      "modifiers_to_skill_effect_duration_also_affect_soul_prevention_duration",
-      "vaal_storm_call_base_delay_ms"
+      "vaal_storm_call_base_delay_ms",
+      "modifiers_to_skill_effect_duration_also_affect_soul_prevention_duration"
     ],
     "tags": [
       "intelligence",
@@ -40117,7 +40262,7 @@
       },
       "stat_text": {
         "active_skill_base_area_of_effect_radius": "รัศมีพื้นฐาน 2 เมตร",
-        "active_skill_projectile_speed_+%_final": "เพิ่มความเร็วของโพรเจกไทล์ อีก 100%",
+        "active_skill_projectile_speed_+%_final": "เพิ่มความเร็วโพรเจกไทล์ อีก 100%",
         "modifiers_to_projectile_count_do_not_apply": "ม็อดที่ส่งผลต่อ จำนวนโพรเจกไทล์ ไม่ส่งผลต่อ สกิลนี้"
       },
       "stats": [
@@ -40534,9 +40679,9 @@
     },
     "tooltip_order": [
       "spell_minimum_base_fire_damage\nspell_maximum_base_fire_damage",
+      "number_of_chains",
       "base_chance_to_ignite_%",
-      "burn_damage_+%",
-      "number_of_chains"
+      "burn_damage_+%"
     ],
     "tags": [
       "intelligence",
@@ -40768,8 +40913,8 @@
     "tooltip_order": [
       "base_number_of_raging_spirits_allowed",
       "base_skill_effect_duration",
-      "minions_cannot_taunt_enemies",
-      "summoned_raging_spirit_chance_to_spawn_additional_minion_%"
+      "summoned_raging_spirit_chance_to_spawn_additional_minion_%",
+      "minions_cannot_taunt_enemies"
     ],
     "tags": [
       "intelligence",
@@ -41153,7 +41298,7 @@
       },
       "stat_text": {
         "base_skill_effect_duration": "ระยะเวลาพื้นฐาน 4.00 วินาที",
-        "flame_surge_burning_ground_on_ignite_damage_%\nquality_display_alt_flame_whip_is_gem": "การสร้างสถานะ ลุกไหม้ ต่อศัตรู สร้าง พื้นลุกไหม้ แต่ไม่เกิน 1 ครั้งต่อวินาที\nพื้นลุกไหม้ สร้างความเสียหาย ไฟ 50 ต่อจำนวนวินาทีของสถานะ ลุกไหม้ ที่สร้าง",
+        "flame_surge_burning_ground_on_ignite_damage_%\nquality_display_alt_flame_whip_is_gem": "การสร้างสถานะ ลุกไหม้ ต่อศัตรู สร้าง พื้นลุกไหม้ แต่ไม่เกิน 1 ครั้งต่อวินาที\nพื้นลุกไหม้ สร้างความเสียหาย ไฟ 50% ต่อจำนวนวินาทีของสถานะ ลุกไหม้ ที่สร้าง",
         "base_chance_to_ignite_%": "มีโอกาสสร้างสถานะ ลุกไหม้ ต่อศัตรู 25%"
       },
       "stats": [
@@ -41795,9 +41940,9 @@
     "tooltip_order": [
       "base_skill_effect_duration",
       "offering_skill_effect_duration_per_corpse",
-      "offering_spells_effect_+%",
       "spirit_offering_critical_strike_chance_+%",
-      "spirit_offering_critical_strike_multiplier_+"
+      "spirit_offering_critical_strike_multiplier_+",
+      "offering_spells_effect_+%"
     ],
     "tags": [
       "minion",
@@ -43255,8 +43400,8 @@
       "damage_multiplier": null
     },
     "tooltip_order": [
-      "base_projectile_speed_+%",
-      "tornado_shot_num_of_secondary_projectiles\nquality_display_tornado_shot_is_gem"
+      "tornado_shot_num_of_secondary_projectiles\nquality_display_tornado_shot_is_gem",
+      "base_projectile_speed_+%"
     ],
     "tags": [
       "dexterity",
@@ -43392,8 +43537,8 @@
     "tooltip_order": [
       "base_number_of_arrows\nquality_display_base_additional_arrows_is_gem",
       "base_number_of_arrows\nquality_display_base_additional_arrows_is_gem\nartillery_ballista_number_of_arrows_is_equal_to_number_of_nearby_targets",
-      "projectiles_nova",
       "quality_display_tornado_shot_is_gem",
+      "projectiles_nova",
       "projectiles_rain"
     ],
     "tags": [
@@ -44175,10 +44320,10 @@
       "herald_of_agony_add_stack_on_poison",
       "herald_of_agony_poison_damage_+%_final",
       "maximum_virulence_stacks\nquality_display_herald_of_agony_is_gem",
-      "minions_cannot_taunt_enemies",
       "scorpion_minion_attack_speed_+%",
       "scorpion_minion_physical_damage_+%",
-      "scorpion_minion_minimum_added_physical_damage\nscorpion_minion_maximum_added_physical_damage"
+      "scorpion_minion_minimum_added_physical_damage\nscorpion_minion_maximum_added_physical_damage",
+      "minions_cannot_taunt_enemies"
     ],
     "tags": [
       "dexterity",
@@ -46752,10 +46897,10 @@
     },
     "tooltip_order": [
       "off_hand_local_minimum_added_physical_damage\noff_hand_local_maximum_added_physical_damage",
+      "skill_physical_damage_%_to_convert_to_cold",
       "retaliation_base_use_window_duration_ms",
       "off_hand_minimum_added_physical_damage_per_15_shield_armour_and_evasion_rating\noff_hand_maximum_added_physical_damage_per_15_shield_armour_and_evasion_rating",
       "always_freeze",
-      "skill_physical_damage_%_to_convert_to_cold",
       "global_always_hit",
       "active_skill_ailment_damage_+%_final",
       "active_skill_base_area_of_effect_radius",
@@ -47230,10 +47375,10 @@
       "damage_multiplier": null
     },
     "tooltip_order": [
-      "skill_physical_damage_%_to_convert_to_lightning",
-      "base_skill_effect_duration",
       "static_strike_base_zap_frequency_ms",
       "static_strike_zap_speed_+%",
+      "skill_physical_damage_%_to_convert_to_lightning",
+      "base_skill_effect_duration",
       "number_of_chains",
       "static_strike_beam_damage_+%_final",
       "static_strike_number_of_beam_targets"
@@ -48940,7 +49085,7 @@
       },
       "stat_text": {
         "base_number_of_golems_allowed": "อัญเชิญ โกเลม ได้สูงสุด 1 ตัว",
-        "fire_golem_grants_area_of_effect_+%": "โกเลมมอบม็อด: เพิ่มพื้นที่ส่งผล 20%"
+        "fire_golem_grants_area_of_effect_+%": "โกเลมมอบม็อด: เพิ่มพื้นที่ส่งผล 15%"
       },
       "stats": [
         {
@@ -48971,7 +49116,7 @@
         {
           "id": "fire_golem_grants_area_of_effect_+%",
           "type": "additional",
-          "value": 20
+          "value": 15
         },
         {
           "id": "infinite_minion_duration",
@@ -49382,7 +49527,7 @@
       },
       "stat_text": {
         "base_number_of_golems_allowed": "อัญเชิญ โกเลม ได้สูงสุด 1 ตัว",
-        "lightning_golem_grants_attack_and_cast_speed_+%": "โกเลมมอบม็อด: เพิ่มความเร็วในการโจมตีและร่าย 10%"
+        "lightning_golem_grants_attack_and_cast_speed_+%": "โกเลมมอบม็อด: เพิ่มความเร็วในการโจมตีและร่าย 8%"
       },
       "stats": [
         {
@@ -49403,7 +49548,7 @@
         {
           "id": "lightning_golem_grants_attack_and_cast_speed_+%",
           "type": "additional",
-          "value": 10
+          "value": 8
         },
         {
           "id": "base_display_minion_actor_level",
@@ -50371,12 +50516,12 @@
       "base_skill_effect_duration",
       "damage_cannot_be_reflected",
       "base_cooldown_speed_+%",
-      "base_secondary_skill_effect_duration",
       "warcry_count_power_from_enemies",
       "infernal_cry_%_max_life_as_fire_on_death",
       "infernal_cry_physical_damage_%_to_add_as_fire_per_5_power_up_to_cap",
       "skill_empowers_next_x_melee_attacks",
-      "infernal_cry_empowered_attacks_trigger_combust_display"
+      "infernal_cry_empowered_attacks_trigger_combust_display",
+      "base_secondary_skill_effect_duration"
     ],
     "tags": [
       "warcry",
@@ -51649,7 +51794,7 @@
         "dex": 0
       },
       "stat_text": {
-        "display_projectiles_chain_when_impacting_ground": "โพรเจกไทล์สามารถ ชิ่ง เมื่อตกถึงพื้น\nโพรเจกไทล์จะไม่เปลี่ยนทิศทางเมื่อ ชิ่ง"
+        "display_projectiles_chain_when_impacting_ground": "โพรเจกไทล์สามารถ ชิ่ง เมื่อกระทบพื้น\nโพรเจกไทล์จะไม่เปลี่ยนทิศทางเมื่อ ชิ่ง"
       },
       "stats": [
         {
@@ -52790,9 +52935,9 @@
       "base_fire_damage_to_deal_per_minute",
       "base_skill_effect_duration",
       "base_number_of_arrows\nquality_display_base_additional_arrows_is_gem",
-      "projectile_damage_modifiers_apply_to_skill_dot",
       "modifiers_to_projectile_count_do_not_apply",
       "skill_physical_damage_%_to_convert_to_fire",
+      "projectile_damage_modifiers_apply_to_skill_dot",
       "active_skill_base_area_of_effect_radius",
       "active_skill_base_secondary_area_of_effect_radius",
       "fire_dot_multiplier_+"
@@ -55117,7 +55262,7 @@
         "dex": null
       },
       "stat_text": {
-        "base_totem_duration": "โทเทม คงอยู่ 8 วินาที",
+        "base_totem_duration": "โทเทม มีระยะเวลา 8 วินาที",
         "is_totem\nis_ranged_attack_totem": "อัญเชิญ โทเทมเครื่องยิง 1 เสา ที่ใช้ สกิลนี้"
       },
       "stats": [
@@ -55266,7 +55411,7 @@
         "dex": null
       },
       "stat_text": {
-        "base_totem_duration": "โทเทม คงอยู่ 8 วินาที",
+        "base_totem_duration": "โทเทม มีระยะเวลา 8 วินาที",
         "number_of_additional_forks_base": "โพรเจกไทล์ แบ่งตัว ได้ 1 ครั้ง",
         "is_totem\nis_ranged_attack_totem": "อัญเชิญ โทเทมเครื่องยิง 1 เสา ที่ใช้ สกิลนี้",
         "projectiles_fork": "โพรเจกไทล์ แบ่งตัว"
@@ -55424,7 +55569,7 @@
       },
       "stat_text": {
         "totem_placement_range_+%": "เพิ่มระยะในการวางโทเทม 300%",
-        "base_totem_duration": "โทเทม คงอยู่ 4 วินาที",
+        "base_totem_duration": "โทเทม มีระยะเวลา 4 วินาที",
         "totem_fire_in_formation": "โทเทม สลายตัวหลังจากที่โจมตีครั้งเดียว"
       },
       "stats": [
@@ -55680,8 +55825,8 @@
       "orb_of_storms_base_channelling_bolt_frequency_ms",
       "active_skill_base_area_of_effect_radius",
       "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius",
-      "projectile_number_to_split",
-      "orb_of_storms_maximum_number_of_hits"
+      "orb_of_storms_maximum_number_of_hits",
+      "projectile_number_to_split"
     ],
     "tags": [
       "lightning",
@@ -55929,7 +56074,7 @@
       },
       "stat_text": {
         "base_number_of_golems_allowed": "อัญเชิญ โกเลม ได้สูงสุด 1 ตัว",
-        "stone_golem_grants_defences_+%": "โกเลมมอบม็อด: เพิ่มค่าป้องกัน 20%"
+        "stone_golem_grants_defences_+%": "โกเลมมอบม็อด: เพิ่มค่าป้องกัน 16%"
       },
       "stats": [
         {
@@ -55960,7 +56105,7 @@
         {
           "id": "stone_golem_grants_defences_+%",
           "type": "additional",
-          "value": 20
+          "value": 16
         },
         {
           "id": "infinite_minion_duration",
@@ -58756,7 +58901,7 @@
         "dex": 0
       },
       "stat_text": {
-        "base_totem_duration": "โทเทม คงอยู่ 12 วินาที",
+        "base_totem_duration": "โทเทม มีระยะเวลา 12 วินาที",
         "summon_totem_cast_speed_+%": "เพิ่มความเร็วในการวางโทเทม 50%",
         "is_totem": "อัญเชิญ โทเทม 1 เสา ที่ใช้ สกิลนี้"
       },
@@ -58893,7 +59038,7 @@
         "dex": 0
       },
       "stat_text": {
-        "base_totem_duration": "โทเทม คงอยู่ 12 วินาที",
+        "base_totem_duration": "โทเทม มีระยะเวลา 12 วินาที",
         "summon_totem_cast_speed_+%": "เพิ่มความเร็วในการวางโทเทม 50%",
         "number_of_additional_totems_allowed": "จำนวน โทเทมอัญเชิญ สูงสุด +1 เสา",
         "is_totem": "อัญเชิญ โทเทม 1 เสา ที่ใช้ สกิลนี้"
@@ -59054,7 +59199,7 @@
         "dex": 0
       },
       "stat_text": {
-        "base_totem_duration": "โทเทม คงอยู่ 12 วินาที",
+        "base_totem_duration": "โทเทม มีระยะเวลา 12 วินาที",
         "summon_totem_cast_speed_+%": "เพิ่มความเร็วในการวางโทเทม 50%",
         "melee_range_+": "ระยะการฟาดประชิด +1 เมตร",
         "is_totem": "อัญเชิญ โทเทม 1 เสา ที่ใช้ สกิลนี้"
@@ -60459,7 +60604,7 @@
   },
   {
     "active_skill": {
-      "description": "เวทนี้ กำจัดพลังชีวิต บางส่วนออกจาก มิเนียนโครงกระดูก ที่อยู่ใกล้คุณหรือตำแหน่งเป้าหมายเพื่อสร้างความเสียหาย เคออส ในพื้นที่รอบๆ มัน โดยผลนี้จะชิ่งไปยัง โครงกระดูก ตัวอื่นๆ ของคุณที่อยู่ใกล้ หากคุณไม่มี โครงกระดูก ที่อยู่ใกล้กับคุณหรือตำแหน่งเป้าหมาย มันจะ สละพลังชีวิต ของคุณเพื่อสร้างความเสียหายแทน",
+      "description": "เวทนี้ กำจัดพลังชีวิต บางส่วนออกจาก มิเนียนโครงกระดูก ที่อยู่ใกล้คุณหรือตำแหน่งเป้าหมายเพื่อสร้างความเสียหาย เคออส ในพื้นที่รอบๆ มัน โดยผลนี้จะส่งลำแสงชิ่งไปยัง โครงกระดูก ตัวอื่นๆ ของคุณที่อยู่ใกล้ หากคุณไม่มี โครงกระดูก ที่อยู่ใกล้กับคุณหรือตำแหน่งเป้าหมาย มันจะ สละพลังชีวิต ของคุณเพื่อสร้างความเสียหายแทน",
       "display_name": "คำมั่นมืด (Dark Bargain)",
       "id": "dark_pact",
       "is_manually_casted": true,
@@ -60579,8 +60724,8 @@
     },
     "tooltip_order": [
       "spell_minimum_base_chaos_damage\nspell_maximum_base_chaos_damage",
-      "skeletal_chains_aoe_%_health_dealt_as_chaos_damage\nquality_display_dark_pact_is_gem",
       "number_of_chains",
+      "skeletal_chains_aoe_%_health_dealt_as_chaos_damage\nquality_display_dark_pact_is_gem",
       "skeletal_chains_no_minions_targets_self",
       "skeletal_chains_no_minions_damage_+%_final"
     ],
@@ -62779,8 +62924,8 @@
       "damage_multiplier": null
     },
     "tooltip_order": [
-      "corpse_explosion_monster_life_%",
       "skill_physical_damage_%_to_convert_to_fire",
+      "corpse_explosion_monster_life_%",
       "active_skill_attack_speed_+%_final"
     ],
     "tags": [
@@ -65038,8 +65183,8 @@
     "tooltip_order": [
       "spell_minimum_base_physical_damage\nspell_maximum_base_physical_damage",
       "base_trap_duration\nquality_display_trap_duration_is_gem",
-      "is_trap",
       "skill_physical_damage_%_to_convert_to_fire",
+      "is_trap",
       "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius",
       "active_skill_base_secondary_area_of_effect_radius",
       "active_skill_tertiary_area_of_effect_description_mode\nactive_skill_base_tertiary_area_of_effect_radius",
@@ -65237,8 +65382,8 @@
     "tooltip_order": [
       "spell_minimum_base_physical_damage\nspell_maximum_base_physical_damage",
       "base_trap_duration\nquality_display_trap_duration_is_gem",
-      "is_trap",
       "skill_physical_damage_%_to_convert_to_fire",
+      "is_trap",
       "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius",
       "active_skill_base_secondary_area_of_effect_radius",
       "active_skill_tertiary_area_of_effect_description_mode\nactive_skill_base_tertiary_area_of_effect_radius",
@@ -66254,9 +66399,9 @@
       "spell_minimum_base_lightning_damage\nspell_maximum_base_lightning_damage",
       "base_trap_duration\nquality_display_trap_duration_is_gem",
       "base_skill_effect_duration",
-      "is_trap",
       "lightning_tower_trap_base_interval_duration_ms",
       "modifiers_to_trap_throw_speed_apply_to_lightning_spire_trap_frequency",
+      "is_trap",
       "critical_strike_chance_+%_vs_shocked_enemies",
       "lightning_tower_trap_number_of_beams\nquality_display_lightning_tower_trap_is_gem",
       "lightning_tower_trap_number_of_beams\nlightning_tower_trap_interval_duration_ms\nquality_display_lightning_tower_trap_is_gem"
@@ -66426,8 +66571,8 @@
       "spell_minimum_base_lightning_damage\nspell_maximum_base_lightning_damage",
       "base_trap_duration\nquality_display_trap_duration_is_gem",
       "base_skill_effect_duration",
-      "is_trap",
       "lightning_tower_trap_base_interval_duration_ms",
+      "is_trap",
       "trap_%_chance_to_trigger_twice",
       "lightning_tower_trap_number_of_beams\nquality_display_lightning_tower_trap_is_gem"
     ],
@@ -66596,8 +66741,8 @@
       "spell_minimum_base_lightning_damage\nspell_maximum_base_lightning_damage",
       "base_trap_duration\nquality_display_trap_duration_is_gem",
       "base_skill_effect_duration",
-      "is_trap",
       "lightning_tower_trap_base_interval_duration_ms",
+      "is_trap",
       "lightning_tower_trap_number_of_beams\nquality_display_lightning_tower_trap_is_gem",
       "lightning_tower_trap_number_of_beams\nlightning_tower_trap_interval_duration_ms\nquality_display_lightning_tower_trap_is_gem"
     ],
@@ -66770,9 +66915,9 @@
       "spell_minimum_base_physical_damage\nspell_maximum_base_physical_damage",
       "base_trap_duration\nquality_display_trap_duration_is_gem",
       "base_skill_effect_duration",
-      "is_trap",
       "modifiers_to_trap_throw_speed_apply_to_seismic_trap_frequency",
       "phys_cascade_trap_base_interval_duration_ms",
+      "is_trap",
       "phys_cascade_trap_number_of_cascades\nquality_display_phys_cascade_trap_is_gem",
       "phys_cascade_trap_number_of_cascades\nphys_cascade_trap_interval_duration_ms\nquality_display_phys_cascade_trap_is_gem"
     ],
@@ -67668,7 +67813,7 @@
         "dex": 0
       },
       "stat_text": {
-        "base_totem_duration": "โทเทม คงอยู่ 6 วินาที",
+        "base_totem_duration": "โทเทม มีระยะเวลา 6 วินาที",
         "summon_totem_cast_speed_+%": "เพิ่มความเร็วในการวางโทเทม 50%",
         "slam_ancestor_totem_grant_owner_melee_damage_+%_final": "เพิ่มความเสียหาย ประชิด อีก 32% ขณะที่มี โทเทม ทำงานอยู่",
         "number_of_additional_totems_allowed": "จำนวน โทเทมอัญเชิญ สูงสุด +1 เสา",
@@ -68910,8 +69055,8 @@
       "base_chaos_damage_to_deal_per_minute",
       "base_skill_effect_duration",
       "base_number_of_arrows\nquality_display_base_additional_arrows_is_gem",
-      "projectile_damage_modifiers_apply_to_skill_dot",
       "skill_physical_damage_%_to_convert_to_chaos",
+      "projectile_damage_modifiers_apply_to_skill_dot",
       "rain_of_spores_vines_movement_speed_+%_final\nminimum_rain_of_spores_movement_speed_+%_final_cap"
     ],
     "tags": [
@@ -69258,8 +69403,8 @@
       "base_chaos_damage_to_deal_per_minute",
       "base_skill_effect_duration",
       "base_number_of_arrows\nquality_display_base_additional_arrows_is_gem",
-      "projectile_damage_modifiers_apply_to_skill_dot",
       "skill_physical_damage_%_to_convert_to_chaos",
+      "projectile_damage_modifiers_apply_to_skill_dot",
       "toxic_rain_spores_apply_withered"
     ],
     "tags": [
@@ -69816,7 +69961,7 @@
     "stat_translation_file": "stat_translations/skill",
     "static": {
       "crit_chance": 750,
-      "damage_effectiveness": -20,
+      "damage_effectiveness": -30,
       "quality_stats": [
         {
           "stat": "จำนวนสเตจสูงสุด {frost_fury_max_number_of_stages}",
@@ -69838,6 +69983,7 @@
         "frost_fury_fire_speed_+%_final_while_channelling": "เพิ่มความถี่ของการยิงโพรเจกไทล์ อีก 80% ขณะแชนเนล",
         "base_skill_effect_duration": "ระยะเวลาพื้นฐาน 1.60 วินาที",
         "base_chance_to_freeze_%": "มีโอกาสสร้างสถานะ แช่แข็ง ต่อศัตรู 25%",
+        "base_number_of_projectiles": "ยิงโพรเจกไทล์ 2 ลูก",
         "display_frost_fury_additive_cast_speed_modifiers_apply_to_fire_speed": "การเพิ่มและลด ความเร็วในการร่าย ส่งผลต่อ ความถี่ของโพรเจกไทล์ เช่นกัน"
       },
       "stats": [
@@ -69899,7 +70045,7 @@
         {
           "id": "base_number_of_projectiles",
           "type": "additional",
-          "value": null
+          "value": 2
         },
         {
           "id": "base_is_projectile",
@@ -72183,9 +72329,9 @@
     "tooltip_order": [
       "spell_minimum_base_physical_damage\nspell_maximum_base_physical_damage",
       "base_skill_effect_duration",
+      "skill_physical_damage_%_to_convert_to_fire",
       "active_skill_base_radius_+",
       "active_skill_ground_consecration_radius_+",
-      "skill_physical_damage_%_to_convert_to_fire",
       "sanctify_wave_damage_+%_final\nquality_display_sanctify_is_gem"
     ],
     "tags": [
@@ -72340,8 +72486,8 @@
     "tooltip_order": [
       "spell_minimum_base_physical_damage\nspell_maximum_base_physical_damage",
       "base_skill_effect_duration",
-      "active_skill_ground_consecration_radius_+",
       "skill_physical_damage_%_to_convert_to_fire",
+      "active_skill_ground_consecration_radius_+",
       "sanctify_wave_damage_+%_final\nquality_display_sanctify_is_gem"
     ],
     "tags": [
@@ -74621,8 +74767,8 @@
       "base_skill_effect_duration",
       "base_cooldown_speed_+%",
       "display_this_skill_cooldown_does_not_recover_during_buff",
-      "display_skill_buff_grants_bleeding_immunity",
-      "quick_guard_damage_absorbed_%\nquick_guard_damage_absorb_limit"
+      "quick_guard_damage_absorbed_%\nquick_guard_damage_absorb_limit",
+      "display_skill_buff_grants_bleeding_immunity"
     ],
     "tags": [
       "strength",
@@ -74741,8 +74887,8 @@
     "tooltip_order": [
       "base_skill_effect_duration",
       "display_this_skill_cooldown_does_not_recover_during_buff",
-      "display_skill_buff_grants_bleeding_immunity",
-      "quick_guard_damage_absorbed_%\nquick_guard_damage_absorb_limit"
+      "quick_guard_damage_absorbed_%\nquick_guard_damage_absorb_limit",
+      "display_skill_buff_grants_bleeding_immunity"
     ],
     "tags": [
       "intelligence",
@@ -78541,8 +78687,8 @@
       "active_skill_withered_base_duration_ms",
       "display_removes_and_grants_elusive_when_used",
       "display_this_skill_cooldown_does_not_recover_during_buff",
-      "phase_through_objects",
-      "slither_wither_stacks\nquality_display_withering_step_is_gem"
+      "slither_wither_stacks\nquality_display_withering_step_is_gem",
+      "phase_through_objects"
     ],
     "tags": [
       "dexterity",
@@ -80411,7 +80557,7 @@
         "dex": null
       },
       "stat_text": {
-        "base_totem_duration": "โทเทม คงอยู่ 8 วินาที",
+        "base_totem_duration": "โทเทม มีระยะเวลา 8 วินาที",
         "base_number_of_arrows\nquality_display_base_additional_arrows_is_gem": "ยิงศร 3 ดอก",
         "is_totem\nis_ranged_attack_totem": "อัญเชิญ โทเทมเครื่องยิง 1 เสา ที่ใช้ สกิลนี้"
       },
@@ -80573,7 +80719,7 @@
         "dex": null
       },
       "stat_text": {
-        "base_totem_duration": "โทเทม คงอยู่ 8 วินาที",
+        "base_totem_duration": "โทเทม มีระยะเวลา 8 วินาที",
         "base_number_of_arrows\nquality_display_base_additional_arrows_is_gem": "ยิงศร 3 ดอก",
         "attacks_impale_on_hit_%_chance": "มีโอกาสสร้างสถานะ ทิ่มแทง ต่อศัตรู 40% เมื่อปะทะ",
         "steel_ammo_consumed_per_use_by_totem": "การโจมตีของโทเทม กลืนกิน สะเก็ดเหล็กของคุณ สูงสุด 1 สะเก็ด",
@@ -81076,12 +81222,12 @@
       "damage_multiplier": null
     },
     "tooltip_order": [
-      "skill_buff_effect_+%",
       "tethered_enemies_take_attack_projectile_damage_taken_+%",
       "tethered_movement_speed_+%_final_per_rope",
       "tethered_movement_speed_+%_final_per_rope_vs_rare",
       "tethered_movement_speed_+%_final_per_rope_vs_unique",
-      "tethering_arrow_display_rope_limit"
+      "tethering_arrow_display_rope_limit",
+      "skill_buff_effect_+%"
     ],
     "tags": [
       "dexterity",
@@ -81163,7 +81309,7 @@
         "dex": null
       },
       "stat_text": {
-        "base_totem_duration": "โทเทม คงอยู่ 8 วินาที",
+        "base_totem_duration": "โทเทม มีระยะเวลา 8 วินาที",
         "base_number_of_arrows\nquality_display_base_additional_arrows_is_gem": "ยิงศร 6 ดอก",
         "skill_physical_damage_%_to_convert_to_fire": "แปลงความเสียหาย กายภาพ 100% เป็น ไฟ",
         "is_totem\nis_ranged_attack_totem": "อัญเชิญ โทเทมเครื่องยิง 1 เสา ที่ใช้ สกิลนี้"
@@ -81252,8 +81398,8 @@
       "attack_skills_additional_ballista_totems_allowed",
       "base_number_of_arrows\nquality_display_base_additional_arrows_is_gem",
       "base_number_of_arrows\nquality_display_base_additional_arrows_is_gem\nartillery_ballista_number_of_arrows_is_equal_to_number_of_nearby_targets",
-      "is_totem\nis_ranged_attack_totem",
-      "skill_physical_damage_%_to_convert_to_fire"
+      "skill_physical_damage_%_to_convert_to_fire",
+      "is_totem\nis_ranged_attack_totem"
     ],
     "tags": [
       "dexterity",
@@ -81337,7 +81483,7 @@
         "dex": null
       },
       "stat_text": {
-        "base_totem_duration": "โทเทม คงอยู่ 8 วินาที",
+        "base_totem_duration": "โทเทม มีระยะเวลา 8 วินาที",
         "base_number_of_arrows\nquality_display_base_additional_arrows_is_gem": "ยิงศร 6 ดอก",
         "skill_physical_damage_%_to_convert_to_fire": "แปลงความเสียหาย กายภาพ 100% เป็น ไฟ",
         "is_totem\nis_ranged_attack_totem": "อัญเชิญ โทเทมเครื่องยิง 1 เสา ที่ใช้ สกิลนี้",
@@ -81432,8 +81578,8 @@
       "attack_skills_additional_ballista_totems_allowed",
       "base_number_of_arrows\nquality_display_base_additional_arrows_is_gem",
       "base_number_of_arrows\nquality_display_base_additional_arrows_is_gem\nartillery_ballista_number_of_arrows_is_equal_to_number_of_nearby_targets",
-      "is_totem\nis_ranged_attack_totem",
       "skill_physical_damage_%_to_convert_to_fire",
+      "is_totem\nis_ranged_attack_totem",
       "artillery_ballista_cross_strafe_pattern"
     ],
     "tags": [
@@ -81518,7 +81664,7 @@
         "dex": null
       },
       "stat_text": {
-        "base_totem_duration": "โทเทม คงอยู่ 8 วินาที",
+        "base_totem_duration": "โทเทม มีระยะเวลา 8 วินาที",
         "base_number_of_arrows\nquality_display_base_additional_arrows_is_gem\nartillery_ballista_number_of_arrows_is_equal_to_number_of_nearby_targets": "ยิงศร 5 ดอก ไปยังเป้าหมายที่แตกต่างกัน",
         "skill_physical_damage_%_to_convert_to_fire": "แปลงความเสียหาย กายภาพ 100% เป็น ไฟ",
         "is_totem\nis_ranged_attack_totem": "อัญเชิญ โทเทมเครื่องยิง 1 เสา ที่ใช้ สกิลนี้"
@@ -81611,8 +81757,8 @@
       "base_totem_duration",
       "attack_skills_additional_ballista_totems_allowed",
       "base_number_of_arrows\nquality_display_base_additional_arrows_is_gem\nartillery_ballista_number_of_arrows_is_equal_to_number_of_nearby_targets",
-      "is_totem\nis_ranged_attack_totem",
-      "skill_physical_damage_%_to_convert_to_fire"
+      "skill_physical_damage_%_to_convert_to_fire",
+      "is_totem\nis_ranged_attack_totem"
     ],
     "tags": [
       "dexterity",
@@ -88182,11 +88328,11 @@
       "base_cold_damage_to_deal_per_minute",
       "active_skill_brands_allowed_on_enemy_+",
       "spell_damage_modifiers_apply_to_skill_dot",
+      "immolation_brand_burn_damage_+%_final_per_stage\nquality_display_wintertide_brand_is_gem",
+      "winter_brand_max_number_of_stages",
       "base_secondary_skill_effect_duration",
       "base_skill_effect_duration",
-      "base_tertiary_skill_effect_duration",
-      "immolation_brand_burn_damage_+%_final_per_stage\nquality_display_wintertide_brand_is_gem",
-      "winter_brand_max_number_of_stages"
+      "base_tertiary_skill_effect_duration"
     ],
     "tags": [
       "intelligence",
@@ -90886,8 +91032,8 @@
       "base_secondary_skill_effect_duration",
       "spell_damage_modifiers_apply_to_skill_dot",
       "wall_maximum_length\nquality_display_wall_length_is_gem",
-      "flame_wall_minimum_added_fire_damage\nflame_wall_maximum_added_fire_damage",
-      "number_of_allowed_firewalls\nquality_display_firewall_is_gem"
+      "number_of_allowed_firewalls\nquality_display_firewall_is_gem",
+      "flame_wall_minimum_added_fire_damage\nflame_wall_maximum_added_fire_damage"
     ],
     "tags": [
       "intelligence",
@@ -93080,8 +93226,8 @@
       "spell_minimum_base_physical_damage\nspell_maximum_base_physical_damage",
       "base_physical_damage_to_deal_per_minute",
       "base_skill_effect_duration",
-      "spell_damage_modifiers_apply_to_skill_dot",
       "number_of_chains",
+      "spell_damage_modifiers_apply_to_skill_dot",
       "blood_tendrils_beam_count\nquality_display_exsanguinate_beam_targets_is_gem"
     ],
     "tags": [
@@ -94978,7 +95124,7 @@
         "dex": 0
       },
       "stat_text": {
-        "base_totem_duration": "โทเทม คงอยู่ 12 วินาที",
+        "base_totem_duration": "โทเทม มีระยะเวลา 12 วินาที",
         "summon_totem_cast_speed_+%": "เพิ่มความเร็วในการวางโทเทม 50%",
         "is_totem": "อัญเชิญ โทเทม 1 เสา ที่ใช้ สกิลนี้"
       },
@@ -95120,7 +95266,7 @@
         "dex": 0
       },
       "stat_text": {
-        "base_totem_duration": "โทเทม คงอยู่ 12 วินาที",
+        "base_totem_duration": "โทเทม มีระยะเวลา 12 วินาที",
         "summon_totem_cast_speed_+%": "เพิ่มความเร็วในการวางโทเทม 50%",
         "melee_range_+": "ระยะการฟาดประชิด +1 เมตร",
         "is_totem": "อัญเชิญ โทเทม 1 เสา ที่ใช้ สกิลนี้"
@@ -95897,8 +96043,8 @@
       "damage_multiplier": null
     },
     "tooltip_order": [
-      "base_chance_to_freeze_%",
       "skill_physical_damage_%_to_convert_to_cold",
+      "base_chance_to_freeze_%",
       "glacial_hammer_third_hit_freeze_as_though_dealt_damage_+%",
       "melee_range_+",
       "cold_ailment_duration_+%",
@@ -96503,9 +96649,9 @@
     "tooltip_order": [
       "thrown_shield_secondary_projectile_damage_+%_final",
       "off_hand_local_minimum_added_physical_damage\noff_hand_local_maximum_added_physical_damage",
-      "off_hand_minimum_added_physical_damage_per_15_shield_armour_and_evasion_rating\noff_hand_maximum_added_physical_damage_per_15_shield_armour_and_evasion_rating",
       "number_of_additional_projectiles",
-      "number_of_chains"
+      "number_of_chains",
+      "off_hand_minimum_added_physical_damage_per_15_shield_armour_and_evasion_rating\noff_hand_maximum_added_physical_damage_per_15_shield_armour_and_evasion_rating"
     ],
     "tags": [
       "dexterity",
@@ -97440,8 +97586,8 @@
       "base_chaos_damage_to_deal_per_minute",
       "base_skill_effect_duration",
       "base_number_of_arrows",
-      "projectile_damage_modifiers_apply_to_skill_dot",
       "skill_physical_damage_%_to_convert_to_chaos",
+      "projectile_damage_modifiers_apply_to_skill_dot",
       "rain_of_spores_vines_movement_speed_+%_final\nminimum_rain_of_spores_movement_speed_+%_final_cap"
     ],
     "tags": [
@@ -99650,7 +99796,7 @@
         "dex": 0
       },
       "stat_text": {
-        "display_projectiles_chain_when_impacting_ground": "โพรเจกไทล์สามารถ ชิ่ง เมื่อตกถึงพื้น\nโพรเจกไทล์จะไม่เปลี่ยนทิศทางเมื่อ ชิ่ง"
+        "display_projectiles_chain_when_impacting_ground": "โพรเจกไทล์สามารถ ชิ่ง เมื่อกระทบพื้น\nโพรเจกไทล์จะไม่เปลี่ยนทิศทางเมื่อ ชิ่ง"
       },
       "stats": [
         {
@@ -100005,8 +100151,8 @@
       "base_skill_effect_duration",
       "spell_minimum_base_fire_damage\nspell_maximum_base_fire_damage",
       "corpse_erruption_base_maximum_number_of_geyers",
-      "corpse_explosion_monster_life_%",
-      "number_of_additional_projectiles"
+      "number_of_additional_projectiles",
+      "corpse_explosion_monster_life_%"
     ],
     "tags": [
       "dexterity",
@@ -101141,7 +101287,7 @@
         "dex": 0
       },
       "stat_text": {
-        "base_totem_duration": "โทเทม คงอยู่ 8 วินาที",
+        "base_totem_duration": "โทเทม มีระยะเวลา 8 วินาที",
         "base_number_of_projectiles": "ยิงโพรเจกไทล์ 3 ลูก",
         "skill_physical_damage_%_to_convert_to_fire": "แปลงความเสียหาย กายภาพ 50% เป็น ไฟ",
         "is_totem": "อัญเชิญ โทเทม 1 เสา ที่ใช้ สกิลนี้",
@@ -101237,8 +101383,8 @@
       "always_pierce",
       "base_totem_duration",
       "base_number_of_projectiles",
-      "is_totem",
       "skill_physical_damage_%_to_convert_to_fire",
+      "is_totem",
       "consecrated_ground_immune_to_curses"
     ],
     "tags": [
@@ -101311,7 +101457,7 @@
         "dex": null
       },
       "stat_text": {
-        "base_totem_duration": "โทเทม คงอยู่ 8 วินาที",
+        "base_totem_duration": "โทเทม มีระยะเวลา 8 วินาที",
         "base_number_of_arrows": "ยิงศร +5 ดอก",
         "attack_skills_additional_ballista_totems_allowed": "จำนวน โทเทมหน้าไม้อัญเชิญ สูงสุด +1 เสา",
         "skill_physical_damage_%_to_convert_to_fire": "แปลงความเสียหาย กายภาพ 100% เป็น ไฟ",
@@ -101394,8 +101540,8 @@
       "base_totem_duration",
       "attack_skills_additional_ballista_totems_allowed",
       "base_number_of_arrows",
-      "is_totem\nis_ranged_attack_totem",
-      "skill_physical_damage_%_to_convert_to_fire"
+      "skill_physical_damage_%_to_convert_to_fire",
+      "is_totem\nis_ranged_attack_totem"
     ],
     "tags": [
       "dexterity",
@@ -101466,7 +101612,7 @@
         "dex": null
       },
       "stat_text": {
-        "base_totem_duration": "โทเทม คงอยู่ 8 วินาที",
+        "base_totem_duration": "โทเทม มีระยะเวลา 8 วินาที",
         "number_of_additional_totems_allowed": "จำนวน โทเทมอัญเชิญ สูงสุด +1 เสา",
         "is_totem\nis_ranged_attack_totem": "อัญเชิญ โทเทมเครื่องยิง 1 เสา ที่ใช้ สกิลนี้"
       },
@@ -102471,10 +102617,10 @@
       "spell_minimum_base_lightning_damage\nspell_maximum_base_lightning_damage",
       "base_trap_duration",
       "base_skill_effect_duration",
-      "is_trap",
-      "trap_trigger_radius_+%",
       "lightning_tower_trap_base_interval_duration_ms",
       "modifiers_to_trap_throw_speed_apply_to_lightning_spire_trap_frequency",
+      "is_trap",
+      "trap_trigger_radius_+%",
       "critical_strike_chance_+%_vs_shocked_enemies",
       "lightning_tower_trap_number_of_beams"
     ],
@@ -104097,10 +104243,10 @@
     "tooltip_order": [
       "base_skill_effect_duration",
       "warcry_speed_+%",
-      "physical_damage_reduction_%_per_endurance_charge",
-      "resist_all_elements_%_per_endurance_charge",
       "warcry_count_power_from_enemies",
-      "endurance_charge_granted_per_X_monster_power_during_endurance_warcry"
+      "endurance_charge_granted_per_X_monster_power_during_endurance_warcry",
+      "physical_damage_reduction_%_per_endurance_charge",
+      "resist_all_elements_%_per_endurance_charge"
     ],
     "tags": [
       "warcry",
@@ -104163,7 +104309,7 @@
         "dex": 0
       },
       "stat_text": {
-        "base_totem_duration": "โทเทม คงอยู่ 8 วินาที",
+        "base_totem_duration": "โทเทม มีระยะเวลา 8 วินาที",
         "is_totem": "อัญเชิญ โทเทม 1 เสา ที่ใช้ สกิลนี้"
       },
       "stats": [
@@ -104335,8 +104481,8 @@
     },
     "tooltip_order": [
       "spell_minimum_base_lightning_damage\nspell_maximum_base_lightning_damage",
-      "skill_effect_duration_+%",
-      "max_number_of_lightning_warp_markers"
+      "max_number_of_lightning_warp_markers",
+      "skill_effect_duration_+%"
     ],
     "tags": [
       "intelligence",
@@ -104593,7 +104739,7 @@
   },
   {
     "active_skill": {
-      "description": "โยนทุ่นระเบิดที่จะเทเลพอร์ตคุณเมื่อจุดชนวน บดบังทั้งการหลบหนีและการมาถึงของคุณด้วยม่านควันที่สร้างสถานะ ตาบอด ต่อศัตรู และให้บัฟความเร็วในการเคลื่อนที่ชั่วคราวแก่คุณ ใช้คูลดาวน์ร่วมกับสกิล ก้าวพริบตา อื่นๆ",
+      "description": "โยนทุ่นระเบิดที่จะเทเลพอร์ตคุณเมื่อจุดชนวน บดบังทั้งการหลบหนีและการมาถึงของคุณด้วยม่านควันที่สร้างสถานะ [Blind|ตาบอด] ต่อศัตรู และให้บัฟความเร็วในการเคลื่อนที่ชั่วคราวแก่คุณ ใช้คูลดาวน์ร่วมกับสกิล ก้าวพริบตา อื่นๆ",
       "display_name": "ทุ่นระเบิดควัน (Smoke Mine)",
       "id": "smoke_mine",
       "is_manually_casted": true,
@@ -104730,9 +104876,9 @@
       "additive_mine_duration_modifiers_apply_to_buff_effect_duration",
       "is_remote_mine",
       "disable_mine_detonation_cascade",
-      "base_movement_velocity_+%",
       "mine_cannot_rearm",
-      "mine_detonates_instantly"
+      "mine_detonates_instantly",
+      "base_movement_velocity_+%"
     ],
     "tags": [
       "mine",
@@ -105518,7 +105664,7 @@
         "dex": null
       },
       "stat_text": {
-        "base_totem_duration": "โทเทม คงอยู่ 8 วินาที",
+        "base_totem_duration": "โทเทม มีระยะเวลา 8 วินาที",
         "support_attack_totem_attack_speed_+%_final": "สกิลที่เสริม มีความเร็วในการโจมตี ลดลง อีก 50%",
         "attack_skills_additional_ballista_totems_allowed": "สกิลที่เสริม มีจำนวน โทเทมหน้าไม้อัญเชิญ สูงสุด +1 เสา",
         "disable_skill_if_melee_attack": "สกิลโจมตีที่เสริม ไม่สามารถใช้กับอาวุธประชิดได้",
@@ -105658,7 +105804,7 @@
         "dex": 0
       },
       "stat_text": {
-        "base_totem_duration": "โทเทม คงอยู่ 8 วินาที",
+        "base_totem_duration": "โทเทม มีระยะเวลา 8 วินาที",
         "support_spell_totem_cast_speed_+%_final": "สกิลที่เสริม มีความเร็วในการร่าย ลดลง อีก 30%",
         "is_totem": "สกิลที่เสริม จะอัญเชิญ โทเทม 1 เสา ที่ใช้ สกิลนั้น"
       },
@@ -105695,6 +105841,11 @@
         },
         {
           "id": "is_totem",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "skill_is_spell_totemified",
           "type": "implicit",
           "value": 1
         }
@@ -107029,8 +107180,8 @@
     "tooltip_order": [
       "spell_minimum_base_lightning_damage\nspell_maximum_base_lightning_damage",
       "base_skill_effect_duration",
-      "corpse_explosion_monster_life_%_lightning",
       "skill_lightning_damage_%_to_convert_to_chaos",
+      "corpse_explosion_monster_life_%_lightning",
       "voltaxic_burst_hit_and_ailment_damage_+%_final_per_stack\nquality_display_voltaxic_burst_is_gem"
     ],
     "tags": [
@@ -107483,8 +107634,8 @@
       "damage_multiplier": null
     },
     "tooltip_order": [
-      "projectiles_nova\nskill_display_single_base_projectile",
       "spectral_spiral_weapon_base_number_of_bounces",
+      "projectiles_nova\nskill_display_single_base_projectile",
       "projectile_damage_+%_final_if_pierced_enemy",
       "spectral_helix_rotations_%"
     ],
@@ -107662,9 +107813,9 @@
     "tooltip_order": [
       "throw_X_additional_traps_if_dual_wielding",
       "base_trap_duration\nquality_display_trap_duration_is_gem",
+      "spectral_spiral_weapon_base_number_of_bounces",
       "is_trap",
       "projectiles_nova\nskill_display_single_base_projectile",
-      "spectral_spiral_weapon_base_number_of_bounces",
       "projectile_damage_+%_final_if_pierced_enemy",
       "spectral_helix_rotations_%",
       "trap_throwing_speed_+%_while_wielding_2hand"
@@ -107868,7 +108019,7 @@
         "dex": 0
       },
       "stat_text": {
-        "base_totem_duration": "โทเทม คงอยู่ 12 วินาที",
+        "base_totem_duration": "โทเทม มีระยะเวลา 12 วินาที",
         "summon_totem_cast_speed_+%": "สกิลที่เสริม มีความเร็วในการวางโทเทม เพิ่มขึ้น 50%",
         "support_ancestor_slam_totem_attack_speed_+%_final": "สกิลที่เสริม มีความเร็วในการโจมตี ลดลง อีก 30%",
         "is_totem": "สกิลที่เสริม จะอัญเชิญ โทเทม 1 เสา ที่ใช้ สกิลนั้น"
@@ -108141,8 +108292,8 @@
       "base_secondary_skill_effect_duration",
       "base_max_number_of_absolution_sentinels",
       "absolution_blast_chance_to_summon_on_hitting_rare_or_unique_%",
-      "skill_physical_damage_%_to_convert_to_lightning",
-      "minion_cooldown_recovery_+%"
+      "minion_cooldown_recovery_+%",
+      "skill_physical_damage_%_to_convert_to_lightning"
     ],
     "tags": [
       "strength",
@@ -109187,7 +109338,7 @@
         "dex": 0
       },
       "stat_text": {
-        "base_totem_duration": "โทเทม คงอยู่ 8 วินาที",
+        "base_totem_duration": "โทเทม มีระยะเวลา 8 วินาที",
         "number_of_additional_totems_allowed": "จำนวน โทเทมอัญเชิญ สูงสุด +1 เสา",
         "is_totem": "อัญเชิญ โทเทม 1 เสา ที่ใช้ สกิลนี้",
         "spell_damage_modifiers_apply_to_skill_dot": "ม็อดที่ส่งผลต่อ ความเสียหาย เวท ส่งผลต่อ ความเสียหายต่อเนื่อง ของสกิลนี้"
@@ -109310,7 +109461,7 @@
         "dex": 0
       },
       "stat_text": {
-        "base_totem_duration": "โทเทม คงอยู่ 8 วินาที",
+        "base_totem_duration": "โทเทม มีระยะเวลา 8 วินาที",
         "base_global_chance_to_knockback_%": "มีโอกาส ผลักศัตรูออกไป 25% เมื่อปะทะ",
         "active_skill_base_area_of_effect_radius": "รัศมีพื้นฐาน 2.4 เมตร",
         "is_totem": "อัญเชิญ โทเทม 1 เสา ที่ใช้ สกิลนี้"
@@ -109494,8 +109645,8 @@
     },
     "tooltip_order": [
       "minimum_added_fire_damage_vs_ignited_enemies\nmaximum_added_fire_damage_vs_ignited_enemies",
-      "base_chance_to_ignite_%",
-      "skill_physical_damage_%_to_convert_to_fire"
+      "skill_physical_damage_%_to_convert_to_fire",
+      "base_chance_to_ignite_%"
     ],
     "tags": [
       "dexterity",
@@ -109632,8 +109783,8 @@
     "tooltip_order": [
       "base_chaos_damage_to_deal_per_minute",
       "base_skill_effect_duration",
-      "projectile_damage_modifiers_apply_to_skill_dot",
-      "skill_physical_damage_%_to_convert_to_chaos"
+      "skill_physical_damage_%_to_convert_to_chaos",
+      "projectile_damage_modifiers_apply_to_skill_dot"
     ],
     "tags": [
       "dexterity",
@@ -110199,7 +110350,7 @@
       "stat_text": {
         "base_number_of_projectiles": "ยิงโพรเจกไทล์ 10 ลูก",
         "maximum_number_of_blades_left_in_ground": "ทิ้งมีดค้างพื้น ได้พร้อมกันสูงสุด 40 เล่ม",
-        "ethereal_knives_blade_left_in_ground_for_every_X_projectiles": "โพรเจกไทล์1 ใน 3 ลูกที่ยิงออกไป อยู่บนพื้นเป็น มีดค้างพื้น 1 เล่ม",
+        "ethereal_knives_blade_left_in_ground_for_every_X_projectiles": "โพรเจกไทล์ 1 ใน 3 ลูกที่ยิงออกไป อยู่บนพื้นเป็น มีดค้างพื้น 1 เล่ม",
         "blades_left_in_ground_+%_final_if_not_hand_cast": "ทิ้ง มีดค้างพื้น ลดลง อีก 50% หากคุณไม่ได้ร่ายเวทนี้ด้วยตัวเอง",
         "base_skill_effect_duration": "ระยะเวลาพื้นฐาน 6.00 วินาที"
       },
@@ -110814,7 +110965,7 @@
   },
   {
     "active_skill": {
-      "description": "เวทนี้ กำจัดพลังชีวิต บางส่วนออกจาก มิเนียนโครงกระดูก ที่อยู่ใกล้คุณหรือตำแหน่งเป้าหมายเพื่อสร้างความเสียหาย เคออส ในพื้นที่รอบๆ มัน โดยผลนี้จะชิ่งไปยัง โครงกระดูก ตัวอื่นๆ ของคุณที่อยู่ใกล้ หากคุณไม่มี โครงกระดูก ที่อยู่ใกล้กับคุณหรือตำแหน่งเป้าหมาย มันจะ สละพลังชีวิต ของคุณเพื่อสร้างความเสียหายแทน",
+      "description": "เวทนี้ กำจัดพลังชีวิต บางส่วนออกจาก มิเนียนโครงกระดูก ที่อยู่ใกล้คุณหรือตำแหน่งเป้าหมายเพื่อสร้างความเสียหาย เคออส ในพื้นที่รอบๆ มัน โดยผลนี้จะส่งลำแสงชิ่งไปยัง โครงกระดูก ตัวอื่นๆ ของคุณที่อยู่ใกล้ หากคุณไม่มี โครงกระดูก ที่อยู่ใกล้กับคุณหรือตำแหน่งเป้าหมาย มันจะ สละพลังชีวิต ของคุณเพื่อสร้างความเสียหายแทน",
       "display_name": "คำมั่นมืด (Dark Bargain)",
       "id": "dark_pact",
       "is_manually_casted": true,
@@ -110922,8 +111073,8 @@
     },
     "tooltip_order": [
       "spell_minimum_base_chaos_damage\nspell_maximum_base_chaos_damage",
-      "skeletal_chains_aoe_%_health_dealt_as_chaos_damage",
       "number_of_chains",
+      "skeletal_chains_aoe_%_health_dealt_as_chaos_damage",
       "skeletal_chains_no_minions_targets_self"
     ],
     "tags": [
@@ -112109,8 +112260,8 @@
     "tooltip_order": [
       "base_skill_effect_duration",
       "attack_minimum_added_fire_damage\nattack_maximum_added_fire_damage",
-      "corpse_explosion_monster_life_%",
       "skill_physical_damage_%_to_convert_to_fire",
+      "corpse_explosion_monster_life_%",
       "active_skill_base_area_of_effect_radius",
       "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius",
       "infernal_blow_explosion_damage_%_of_total_per_stack"
@@ -115141,10 +115292,10 @@
     },
     "tooltip_order": [
       "base_skill_effect_duration",
-      "base_secondary_skill_effect_duration",
       "skill_empowers_next_x_melee_attacks\nskill_empower_limitation_specifier_for_stat_description",
       "ambush_additional_critical_strike_chance_permyriad",
-      "vanishing_ambush_critical_strike_multiplier_+"
+      "vanishing_ambush_critical_strike_multiplier_+",
+      "base_secondary_skill_effect_duration"
     ],
     "tags": [
       "critical",
@@ -115466,9 +115617,9 @@
     "tooltip_order": [
       "base_trap_duration\nquality_display_trap_duration_is_gem",
       "base_weapon_trap_total_rotation_%\nquality_display_blade_trap_is_gem",
-      "is_trap",
       "weapon_trap_rotation_speed_+%_if_dual_wielding",
       "weapon_trap_total_rotation_%_if_dual_wielding",
+      "is_trap",
       "active_skill_base_area_of_effect_radius"
     ],
     "tags": [
@@ -115686,7 +115837,7 @@
       "damage_effectiveness": null,
       "quality_stats": [
         {
-          "stat": "สถานะ เลือดไหล ที่สร้างจาก สกิลนี้ สร้างความเสียหาย เร็วขึ้น {faster_bleed_%}%",
+          "stat": "สถานะ เลือดไหล ที่สร้างจาก สกิลนี้ สร้างความเสียหาย [DamageFaster|เร็วขึ้น] {faster_bleed_%}%",
           "stats": {
             "faster_bleed_%": 500
           }
@@ -115701,7 +115852,7 @@
         "base_trap_duration\nquality_display_trap_duration_is_gem": "กับดัก คงอยู่ 4 วินาที",
         "base_weapon_trap_total_rotation_%\nquality_display_blade_trap_is_gem": "หมุน 1 รอบ",
         "bleed_on_hit_with_attacks_%": "มีโอกาสสร้างสถานะ เลือดไหล 25%",
-        "faster_bleed_%": "สถานะ เลือดไหล ที่สร้างจาก สกิลนี้ สร้างความเสียหาย เร็วขึ้น 50%",
+        "faster_bleed_%": "สถานะ เลือดไหล ที่สร้างจาก สกิลนี้ สร้างความเสียหาย [DamageFaster|เร็วขึ้น] 50%",
         "is_trap": ""
       },
       "stats": [
@@ -116236,9 +116387,9 @@
     },
     "tooltip_order": [
       "skill_physical_damage_%_to_convert_to_lightning",
-      "base_stun_threshold_reduction_+%",
       "modifiers_to_projectile_count_do_not_apply",
       "prismatic_rain_beam_base_frequency_ms",
+      "base_stun_threshold_reduction_+%",
       "number_of_allowed_storm_arrows",
       "storm_rain_pulse_count\nquality_display_storm_rain_is_gem"
     ],
@@ -118437,7 +118588,7 @@
         "dex": 0
       },
       "stat_text": {
-        "active_skill_projectile_speed_+%_final": "เพิ่มความเร็วของโพรเจกไทล์ อีก 50%",
+        "active_skill_projectile_speed_+%_final": "เพิ่มความเร็วโพรเจกไทล์ อีก 50%",
         "eye_of_winter_base_explosion_shards\neye_of_winter_count_shards_while_flying_instead": "ยิง โพรเจกไทล์สะเก็ด ออกมาเป็นเกลียว 12 ลูก ขณะเดินทาง แล้วสิ้นสุดลง",
         "display_eye_of_winter_projectile_modifier": "ม็อดที่ส่งผลต่อ จำนวนโพรเจกไทล์ ส่งผลต่อ สะเก็ด เพียงเท่านั้น",
         "quality_display_freezing_pulse_damage_at_long_range_is_gem": ""
@@ -118949,7 +119100,7 @@
       "skill_totem_life_multiplier": null
     },
     "base_item": {
-      "display_name": "[DNT] Call of the Wild",
+      "display_name": "[DNT - UNUSED] Call of the Wild",
       "experience_type": "GemProgression28",
       "id": "Metadata/Items/Gems/SkillGemCallOfTheWild",
       "max_level": 20,
@@ -118957,7 +119108,7 @@
     },
     "cast_time": 850,
     "color": "g",
-    "display_name": "[DNT] Call of the Wild",
+    "display_name": "[DNT - UNUSED] Call of the Wild",
     "is_support": false,
     "stat_translation_file": "stat_translations/skill",
     "static": {
@@ -119101,8 +119252,8 @@
     },
     "tooltip_order": [
       "debuff_time_passed_+%",
-      "unaffected_by_temporal_chains",
-      "spell_cast_time_cannot_be_modified"
+      "spell_cast_time_cannot_be_modified",
+      "unaffected_by_temporal_chains"
     ],
     "tags": [
       "dexterity",
@@ -119271,9 +119422,9 @@
     },
     "tooltip_order": [
       "spell_minimum_base_physical_damage\nspell_maximum_base_physical_damage",
+      "tornado_base_damage_interval_ms",
       "base_skill_effect_duration",
       "base_secondary_skill_effect_duration",
-      "tornado_base_damage_interval_ms",
       "tornado_maximum_number_of_hits",
       "tornado_damage_absorbed_%",
       "tornado_hinder",
@@ -119446,8 +119597,8 @@
     },
     "tooltip_order": [
       "spell_minimum_base_physical_damage\nspell_maximum_base_physical_damage",
-      "base_skill_effect_duration",
       "tornado_base_damage_interval_ms",
+      "base_skill_effect_duration",
       "elemental_strike_physical_damage_%_to_convert",
       "tornado_hinder",
       "tornado_movement_speed_+%",
@@ -119763,7 +119914,7 @@
         "dex": 0
       },
       "stat_text": {
-        "flame_link_added_fire_damage_from_life_%": "เป้าหมายที่ประสาน ได้รับ เสริมความเสียหาย ไฟ เท่ากับ 5% ของ พลังชีวิตสูงสุดของคุณ",
+        "flame_link_added_fire_damage_from_life_%": "เป้าหมายที่ประสาน ได้รับ เสริมความเสียหาย ไฟ เท่ากับ 3% ของ พลังชีวิตสูงสุดของคุณ",
         "display_link_stuff": "การประสาน จะหมดพลังหากเป้าหมายออกจากระยะหรือทัศนวิสัย 4 วินาที\nรับการประสานจากต้นทางใดๆ ได้สูงสุด 1 สาย ต่อเป้าหมาย\nคุณตายหาก เป้าหมายที่ประสาน ตาย"
       },
       "stats": [
@@ -119780,7 +119931,7 @@
         {
           "id": "flame_link_added_fire_damage_from_life_%",
           "type": "constant",
-          "value": 5
+          "value": 3
         },
         {
           "id": "base_skill_effect_duration",
@@ -119823,6 +119974,128 @@
       "duration",
       "link",
       "fire"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": {
+      "act": 4,
+      "classes": [
+        "Scion"
+      ],
+      "quest": "ทำลายคาถาผนึก"
+    },
+    "discriminator": null,
+    "support_gem": null
+  },
+  {
+    "active_skill": {
+      "description": "เลือกเพื่อนผู้เล่นให้เป็นเป้าหมายเพื่อสร้างบัฟที่ประสานคุณเข้ากับเขาเป็นระยะเวลาหนึ่ง เมื่อประสานกันแล้ว เขาจะสร้างความเสียหาย สายฟ้า เพิ่มเติมตาม มานา ของคุณ หากเป้าหมายตายขณะที่ประสาน คุณจะตายตามเช่นกัน สกิลนี้ไม่สามารถถูกทริกเกอร์ได้ หรือใช้โดย โทเทม, กับดัก หรือ ทุ่นระเบิด ได้",
+      "display_name": "ประสานอาคม (Arcane Link)",
+      "id": "arcane_link",
+      "is_manually_casted": true,
+      "is_skill_totem": false,
+      "stat_conversions": {},
+      "types": [
+        "Spell",
+        "Buff",
+        "Duration",
+        "Link",
+        "Lightning",
+        "Arcane"
+      ],
+      "weapon_restrictions": [],
+      "minion_types": null,
+      "skill_totem_life_multiplier": null
+    },
+    "base_item": {
+      "display_name": "ประสานอาคม (Arcane Link)",
+      "experience_type": "GemProgression34",
+      "id": "Metadata/Items/Gems/SkillGemArcaneLink",
+      "max_level": 20,
+      "release_state": "released"
+    },
+    "cast_time": 500,
+    "color": "b",
+    "display_name": "ประสานอาคม (Arcane Link)",
+    "is_support": false,
+    "stat_translation_file": "stat_translations/buff_skill",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [
+        {
+          "stat": "ระยะเวลาพื้นฐาน {base_skill_effect_duration/milliseconds_to_seconds_2dp} วินาที",
+          "stats": {
+            "base_skill_effect_duration": 75000
+          }
+        }
+      ],
+      "stat_requirements": {
+        "int": null,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "arcane_link_added_lightning_damage_from_mana_%": "เป้าหมายที่ประสาน ได้รับ เสริมความเสียหาย สายฟ้า เท่ากับ 3% ของ มานาสูงสุดของคุณ",
+        "display_link_stuff": "การประสาน จะหมดพลังหากเป้าหมายออกจากระยะหรือทัศนวิสัย 4 วินาที\nรับการประสานจากต้นทางใดๆ ได้สูงสุด 1 สาย ต่อเป้าหมาย\nคุณตายหาก เป้าหมายที่ประสาน ตาย"
+      },
+      "stats": [
+        {
+          "id": "arcane_link_minimum_lightning_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "arcane_link_maximum_lightning_damage",
+          "type": "float",
+          "value": null
+        },
+        {
+          "id": "arcane_link_added_lightning_damage_from_mana_%",
+          "type": "constant",
+          "value": 3
+        },
+        {
+          "id": "base_skill_effect_duration",
+          "type": "additional",
+          "value": null
+        },
+        {
+          "id": "skill_cost_over_time_is_not_removed_with_skill",
+          "type": "implicit",
+          "value": 1
+        },
+        {
+          "id": "display_link_stuff",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": null,
+      "cooldown_bypass_type": null,
+      "required_level": null,
+      "experience": null,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "base_skill_effect_duration",
+      "arcane_link_added_lightning_damage_from_mana_%",
+      "arcane_link_minimum_lightning_damage\narcane_link_maximum_lightning_damage",
+      "display_link_stuff"
+    ],
+    "tags": [
+      "intelligence",
+      "grants_active_skill",
+      "spell",
+      "duration",
+      "link",
+      "lightning",
+      "arcane"
     ],
     "secondary_granted_effect": null,
     "quest_reward": {
@@ -121104,8 +121377,8 @@
       "galvanic_field_retargeting_delay_ms",
       "galvanic_field_damage_+%_final_per_5%_increased_damage_taken_from_shock",
       "galvanic_field_radius_+_per_10%_increased_damage_taken_from_shock",
-      "base_chance_to_shock_%_from_skill\nquality_display_shock_chance_from_skill_is_gem",
-      "galvanic_field_maximum_number_of_spheres"
+      "galvanic_field_maximum_number_of_spheres",
+      "base_chance_to_shock_%_from_skill\nquality_display_shock_chance_from_skill_is_gem"
     ],
     "tags": [
       "intelligence",
@@ -121828,8 +122101,8 @@
     },
     "tooltip_order": [
       "base_number_of_projectiles",
-      "active_skill_area_of_effect_+%_final",
       "skill_physical_damage_%_to_convert_to_fire",
+      "active_skill_area_of_effect_+%_final",
       "vaal_volcanic_fissure_crack_repeat_count"
     ],
     "tags": [
@@ -122419,10 +122692,10 @@
       "always_pierce",
       "base_chaos_damage_to_deal_per_minute",
       "base_skill_effect_duration",
+      "skill_physical_damage_%_to_convert_to_chaos",
       "projectile_damage_modifiers_apply_to_skill_dot",
       "modifiers_to_skill_effect_duration_also_affect_soul_prevention_duration",
       "active_skill_base_radius_+",
-      "skill_physical_damage_%_to_convert_to_chaos",
       "global_always_hit"
     ],
     "tags": [
@@ -122520,7 +122793,7 @@
         "base_number_of_projectiles": "ยิงโพรเจกไทล์ 9 ลูก",
         "number_of_chains": "ชิ่ง +8 ครั้ง",
         "active_skill_base_radius_+": "รัศมี +0.4 เมตร",
-        "molten_strike_projectiles_chain_when_impacting_ground": "โพรเจกไทล์สามารถ ชิ่ง เมื่อตกถึงพื้น\\โพรเจกไทล์จะไม่เปลี่ยนทิศทางเมื่อ ชิ่ง",
+        "molten_strike_projectiles_chain_when_impacting_ground": "โพรเจกไทล์สามารถ ชิ่ง เมื่อกระทบพื้น\nโพรเจกไทล์จะไม่เปลี่ยนทิศทางเมื่อ ชิ่ง",
         "global_always_hit": "ไม่สามารถหลบหลีกได้"
       },
       "stats": [
@@ -122597,9 +122870,9 @@
     },
     "tooltip_order": [
       "base_number_of_projectiles",
-      "active_skill_base_radius_+",
       "number_of_chains",
       "skill_physical_damage_%_to_convert_to_fire",
+      "active_skill_base_radius_+",
       "global_always_hit",
       "active_skill_hit_ailment_damage_with_projectile_+%_final",
       "molten_strike_projectiles_chain_when_impacting_ground"
@@ -122965,8 +123238,8 @@
     "tooltip_order": [
       "base_skill_effect_duration",
       "base_secondary_skill_effect_duration",
-      "modifiers_to_skill_effect_duration_also_affect_soul_prevention_duration",
       "skill_physical_damage_%_to_convert_to_chaos",
+      "modifiers_to_skill_effect_duration_also_affect_soul_prevention_duration",
       "base_chance_to_poison_on_hit_%",
       "base_poison_duration_+%",
       "maximum_number_of_snapping_adder_projectiles\nvaal_venom_gyre_instantly_capture_maximum_projectiles\nvaal_venom_gyre_capture_x_projectiles_per_second",
@@ -123692,11 +123965,11 @@
     },
     "tooltip_order": [
       "base_skill_effect_duration",
-      "modifiers_to_skill_effect_duration_also_affect_soul_prevention_duration",
       "base_number_of_animated_weapons_allowed\nquality_display_animate_weapon_is_gem",
+      "modifiers_to_skill_effect_duration_also_affect_soul_prevention_duration",
       "vaal_animate_weapon_minimum_level_requirement\nanimate_item_maximum_level_requirement",
-      "active_skill_minion_damage_+%_final",
-      "vaal_animate_weapon_raise_up_to_X_weapons_as_uniques"
+      "vaal_animate_weapon_raise_up_to_X_weapons_as_uniques",
+      "active_skill_minion_damage_+%_final"
     ],
     "tags": [
       "dexterity",
@@ -123877,9 +124150,9 @@
       "always_pierce",
       "skill_physical_damage_%_to_convert_to_lightning",
       "base_number_of_arrows\nquality_display_base_additional_arrows_is_gem",
-      "projectiles_barrage",
       "vaal_lightning_arrow_number_of_redirects",
       "vaal_lightning_arrow_fork_and_chain_modifiers_apply_to_number_of_redirects",
+      "projectiles_barrage",
       "lightning_arrow_maximum_number_of_extra_targets",
       "projectiles_cannot_split"
     ],
@@ -124301,8 +124574,8 @@
     },
     "tooltip_order": [
       "base_skill_effect_duration",
-      "modifiers_to_skill_effect_duration_also_affect_soul_prevention_duration",
       "skill_physical_damage_%_to_convert_to_cold",
+      "modifiers_to_skill_effect_duration_also_affect_soul_prevention_duration",
       "maximum_number_of_vaal_ice_shot_mirages",
       "skill_area_angle_+%",
       "vaal_ice_shot_modifiers_to_projectile_count_do_not_apply_to_mirages"
@@ -124326,7 +124599,7 @@
   {
     "active_skill": {
       "description": "ฝนลูกไฟจำนวนตายตัวตกลงเป็นเกลียว จบลงด้วยลูกไฟตรงกลางที่ตกกระทบตำแหน่งเป้าหมาย ลูกไฟจะระเบิดเมื่อตกถึงพื้น สร้างความเสียหายต่อศัตรูที่อยู่ใกล้ และทิ้ง พื้นลุกไหม้ ที่สร้างความเสียหาย ไฟ ต่อเนื่อง",
-      "display_name": "วาล์ พายุไฟ (Firestorm)",
+      "display_name": "วาล์ พายุไฟ (Vaal Firestorm)",
       "id": "vaal_fire_storm",
       "is_manually_casted": true,
       "is_skill_totem": false,
@@ -124555,7 +124828,7 @@
         "dex": 0
       },
       "stat_text": {
-        "base_totem_duration": "โทเทม คงอยู่ 4 วินาที",
+        "base_totem_duration": "โทเทม มีระยะเวลา 4 วินาที",
         "vaal_rejuvenation_totem_%_damage_taken_applied_to_totem_instead": "รับความเสียหาย ปะทะ ต่อเป้าหมายที่ได้รับผลจากออร่า 40% ด้วย พลังชีวิตของ โทเทม ก่อนเป้าหมาย",
         "number_of_additional_totems_allowed": "จำนวน โทเทมอัญเชิญ สูงสุด +1 เสา",
         "active_skill_area_of_effect_+%_final": "ลดพื้นที่ส่งผล อีก 30%",
@@ -125322,14 +125595,14 @@
       "base_fire_damage_to_deal_per_minute",
       "base_skill_effect_duration",
       "base_number_of_projectiles",
-      "projectile_damage_modifiers_apply_to_skill_dot",
       "skill_physical_damage_%_to_convert_to_fire",
+      "projectile_damage_modifiers_apply_to_skill_dot",
       "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius",
       "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius",
       "active_skill_tertiary_area_of_effect_description_mode\nactive_skill_base_tertiary_area_of_effect_radius",
-      "base_secondary_skill_effect_duration",
       "napalm_arrow_detonation_hit_damage_+%_final",
-      "napalm_arrow_maximum_number_of_unprimed_arrows_allowed"
+      "napalm_arrow_maximum_number_of_unprimed_arrows_allowed",
+      "base_secondary_skill_effect_duration"
     ],
     "tags": [
       "dexterity",
@@ -126092,7 +126365,7 @@
     },
     "base_item": {
       "display_name": "กระหน่ำจลนศาสตร์ (Kinetic Fusillade)",
-      "experience_type": "GemProgression10",
+      "experience_type": "GemProgression12",
       "id": "Metadata/Items/Gems/SkillGemKineticFusillade",
       "max_level": 20,
       "release_state": "released"
@@ -126252,7 +126525,7 @@
     },
     "base_item": {
       "display_name": "กระหน่ำจลนศาสตร์ (Kinetic Fusillade)",
-      "experience_type": "GemProgression10",
+      "experience_type": "GemProgression12",
       "id": "Metadata/Items/Gems/SkillGemKineticFusillade",
       "max_level": 20,
       "release_state": "released"
@@ -127040,9 +127313,9 @@
     "tooltip_order": [
       "base_skill_effect_duration",
       "base_holy_strike_maximum_number_of_animated_weapons",
+      "minion_melee_range_+",
       "active_skill_minion_damage_+%_final",
-      "skill_physical_damage_%_to_convert_to_lightning",
-      "minion_melee_range_+"
+      "skill_physical_damage_%_to_convert_to_lightning"
     ],
     "tags": [
       "strength",
@@ -127220,8 +127493,8 @@
       "off_hand_local_minimum_added_physical_damage\noff_hand_local_maximum_added_physical_damage",
       "off_hand_minimum_added_physical_damage_per_15_shield_armour\noff_hand_maximum_added_physical_damage_per_15_shield_armour",
       "base_skill_effect_duration",
-      "active_skill_base_radius_+",
       "skill_physical_damage_%_to_convert_to_fire",
+      "active_skill_base_radius_+",
       "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius",
       "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius",
       "discus_slam_damage_+%_final_for_shockwave"
@@ -127419,8 +127692,8 @@
       "off_hand_local_minimum_added_physical_damage\noff_hand_local_maximum_added_physical_damage",
       "off_hand_minimum_added_physical_damage_per_15_shield_armour\noff_hand_maximum_added_physical_damage_per_15_shield_armour",
       "base_skill_effect_duration",
-      "active_skill_base_radius_+",
       "skill_physical_damage_%_to_convert_to_fire",
+      "active_skill_base_radius_+",
       "active_skill_area_of_effect_description_mode\nactive_skill_base_area_of_effect_radius",
       "active_skill_secondary_area_of_effect_description_mode\nactive_skill_base_secondary_area_of_effect_radius",
       "discus_slam_maximum_orb_count_allowed",
@@ -130084,7 +130357,7 @@
       },
       "stat_text": {
         "base_spell_repeat_count": "สกิลที่เสริม เกิดซ้ำ เพิ่มเติม 1 ครั้ง",
-        "skills_sacrifice_all_but_one_life_and_energy_shield_on_use": "สกิลที่เสริม สละพลังชีวิตและโล่พลังงาน ของคุณทั้งหมดจนเหลือ 1 เมื่อใช้งาน"
+        "skills_sacrifice_all_but_one_life_and_energy_shield_on_use": "สกิลที่เสริม สละพลังชีวิตและโล่พลังงาน ของคุณทั้งหมดจนเหลือ 20% เมื่อใช้งาน"
       },
       "stats": [
         {
@@ -133805,14 +134078,14 @@
         "dex": 0
       },
       "stat_text": {
-        "random_nearby_minion_gain_a_soul_eater_soul_on_X_life_spent": "มิเนียนที่อยู่ใกล้ 1 ตัว ได้รับวิญญาณ 1 ดวง ต่อพลังชีวิต 200 ที่จ่ายไปกับค่าใช้งานเริ่มแรกของเวทที่เสริม",
+        "random_nearby_minion_gain_a_charge_on_X_life_spent": "มิเนียน 1 ตัวในระยะ 6 เมตร ได้รับ Power, Frenzy หรือ Endurance Charge 1 ลูก ต่อการจ่ายพลังชีวิต 400 ไปกับ ค่าใช้งานเริ่มแรกของเวทที่เสริม",
         "base_skill_cost_life_instead_of_mana": "สกิลที่เสริม ใช้งาน พลังชีวิต แทน มานา"
       },
       "stats": [
         {
-          "id": "random_nearby_minion_gain_a_soul_eater_soul_on_X_life_spent",
+          "id": "random_nearby_minion_gain_a_charge_on_X_life_spent",
           "type": "additional",
-          "value": 200
+          "value": 400
         },
         {
           "id": "base_skill_cost_life_instead_of_mana",
@@ -133835,7 +134108,7 @@
     "tooltip_order": [
       "base_life_cost_+%",
       "base_skill_cost_life_instead_of_mana",
-      "random_nearby_minion_gain_a_soul_eater_soul_on_X_life_spent"
+      "random_nearby_minion_gain_a_charge_on_X_life_spent"
     ],
     "tags": [
       "low_max_level",
@@ -133855,9 +134128,10 @@
       "letter": ">",
       "supports_gems_only": false,
       "support_name": "",
-      "support_text": "ใช้เสริม เวทที่ไม่ใช่พร",
+      "support_text": "ใช้เสริม สกิลเวท ไม่สามรถเสริมเวทที่ส่งผลทันทีหรือพรได้",
       "excluded_types": [
-        "Blessing"
+        "Blessing",
+        "Instant"
       ],
       "added_types": null,
       "added_minion_types": null
@@ -134048,6 +134322,819 @@
         "SummonsTotem",
         "CreatesMinion"
       ],
+      "added_types": null,
+      "added_minion_types": null
+    }
+  },
+  {
+    "active_skill": null,
+    "base_item": {
+      "display_name": "หินเสริม Encumbrance",
+      "experience_type": "GemProgressionSingleLevel",
+      "id": "Metadata/Items/Gems/SupportGemEncumbrance",
+      "max_level": 1,
+      "release_state": "released"
+    },
+    "cast_time": null,
+    "color": "w",
+    "display_name": "หินเสริม Encumbrance",
+    "is_support": true,
+    "stat_translation_file": "stat_translations/support_gem",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": 0,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": null,
+      "stats": [],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": 200,
+      "cooldown_bypass_type": null,
+      "required_level": 1,
+      "experience": 0,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [],
+    "tags": [
+      "low_max_level",
+      "support"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": {
+      "allowed_types": null,
+      "letter": "!",
+      "supports_gems_only": false,
+      "support_name": "",
+      "support_text": "ใช้เสริมหินสกิลทุกชนิด\r\nไม่สามารถเสริมสกิลที่ไม่ได้มาจากหินสกิลได้",
+      "excluded_types": [
+        "SkillGrantedBySupport"
+      ],
+      "added_types": null,
+      "added_minion_types": null
+    }
+  },
+  {
+    "active_skill": null,
+    "base_item": {
+      "display_name": "หินเสริม Constriction",
+      "experience_type": "GemProgressionSingleLevel",
+      "id": "Metadata/Items/Gems/SupportGemConstriction",
+      "max_level": 1,
+      "release_state": "released"
+    },
+    "cast_time": null,
+    "color": "w",
+    "display_name": "หินเสริม Constriction",
+    "is_support": true,
+    "stat_translation_file": "stat_translations/support_gem",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": 0,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "display_constriction_other_supports_do_not_apply": "สกิลที่เสริม ไม่สามารถเสริมได้ด้วย หินเสริมอื่น"
+      },
+      "stats": [
+        {
+          "id": "display_constriction_other_supports_do_not_apply",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": 100,
+      "cooldown_bypass_type": null,
+      "required_level": 1,
+      "experience": 0,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "display_constriction_other_supports_do_not_apply"
+    ],
+    "tags": [
+      "low_max_level",
+      "support"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": {
+      "allowed_types": null,
+      "letter": "!",
+      "supports_gems_only": false,
+      "support_name": "",
+      "support_text": "ใช้เสริมหินสกิลทุกชนิด\r\nไม่สามารถเสริมสกิลที่ไม่ได้มาจากหินสกิลได้",
+      "excluded_types": [
+        "SkillGrantedBySupport"
+      ],
+      "added_types": null,
+      "added_minion_types": null
+    }
+  },
+  {
+    "active_skill": null,
+    "base_item": {
+      "display_name": "หินเสริม Taxation",
+      "experience_type": "GemProgressionSingleLevel",
+      "id": "Metadata/Items/Gems/SupportGemTaxation",
+      "max_level": 1,
+      "release_state": "released"
+    },
+    "cast_time": null,
+    "color": "w",
+    "display_name": "หินเสริม Taxation",
+    "is_support": true,
+    "stat_translation_file": "stat_translations/support_gem",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": 0,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "from_support_skill_gem_attribute_requirements_+%_final": "สกิลที่เสริม มีเงื่อนไขค่าคุณสมบัติที่ต้องการ เพิ่มขึ้น อีก 100%"
+      },
+      "stats": [
+        {
+          "id": "from_support_skill_gem_attribute_requirements_+%_final",
+          "type": "constant",
+          "value": 100
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": 100,
+      "cooldown_bypass_type": null,
+      "required_level": 1,
+      "experience": 0,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "from_support_skill_gem_attribute_requirements_+%_final"
+    ],
+    "tags": [
+      "low_max_level",
+      "support"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": {
+      "allowed_types": null,
+      "letter": "!",
+      "supports_gems_only": false,
+      "support_name": "",
+      "support_text": "ใช้เสริมหินสกิลทุกชนิด\r\nไม่สามารถเสริมสกิลที่ไม่ได้มาจากหินสกิลได้",
+      "excluded_types": [
+        "SkillGrantedBySupport"
+      ],
+      "added_types": null,
+      "added_minion_types": null
+    }
+  },
+  {
+    "active_skill": null,
+    "base_item": {
+      "display_name": "หินเสริม Diminishment",
+      "experience_type": "GemProgressionSingleLevel",
+      "id": "Metadata/Items/Gems/SupportGemDiminishment",
+      "max_level": 1,
+      "release_state": "released"
+    },
+    "cast_time": null,
+    "color": "w",
+    "display_name": "หินเสริม Diminishment",
+    "is_support": true,
+    "stat_translation_file": "stat_translations/support_gem",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": 0,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "supported_active_skill_gem_quality_%": "ค่าคุณภาพของ หินสกิล ที่เสริม -20%"
+      },
+      "stats": [
+        {
+          "id": "supported_active_skill_gem_quality_%",
+          "type": "constant",
+          "value": -20
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": 100,
+      "cooldown_bypass_type": null,
+      "required_level": 1,
+      "experience": 0,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "supported_active_skill_gem_quality_%"
+    ],
+    "tags": [
+      "low_max_level",
+      "support"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": {
+      "allowed_types": null,
+      "letter": "!",
+      "supports_gems_only": false,
+      "support_name": "",
+      "support_text": "ใช้เสริมหินสกิลทุกชนิด\r\nไม่สามารถเสริมสกิลที่ไม่ได้มาจากหินสกิลได้",
+      "excluded_types": [
+        "SkillGrantedBySupport"
+      ],
+      "added_types": null,
+      "added_minion_types": null
+    }
+  },
+  {
+    "active_skill": null,
+    "base_item": {
+      "display_name": "หินเสริม Disempower",
+      "experience_type": "GemProgressionSingleLevel",
+      "id": "Metadata/Items/Gems/SupportGemDisempower",
+      "max_level": 1,
+      "release_state": "released"
+    },
+    "cast_time": null,
+    "color": "w",
+    "display_name": "หินเสริม Disempower",
+    "is_support": true,
+    "stat_translation_file": "stat_translations/support_gem",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": 0,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "supported_active_skill_gem_level_+": "เลเวลของ หินสกิล ที่เสริม -1"
+      },
+      "stats": [
+        {
+          "id": "supported_active_skill_gem_level_+",
+          "type": "constant",
+          "value": -1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": 100,
+      "cooldown_bypass_type": null,
+      "required_level": 1,
+      "experience": 0,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "supported_active_skill_gem_level_+"
+    ],
+    "tags": [
+      "low_max_level",
+      "support"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": {
+      "allowed_types": null,
+      "letter": "!",
+      "supports_gems_only": false,
+      "support_name": "",
+      "support_text": "ใช้เสริมหินสกิลทุกชนิด\r\nไม่สามารถเสริมสกิลที่ไม่ได้มาจากหินสกิลได้",
+      "excluded_types": [
+        "SkillGrantedBySupport"
+      ],
+      "added_types": null,
+      "added_minion_types": null
+    }
+  },
+  {
+    "active_skill": null,
+    "base_item": {
+      "display_name": "หินเสริม Lethargy",
+      "experience_type": "GemProgressionSingleLevel",
+      "id": "Metadata/Items/Gems/SupportGemLethargy",
+      "max_level": 1,
+      "release_state": "released"
+    },
+    "cast_time": null,
+    "color": "w",
+    "display_name": "หินเสริม Lethargy",
+    "is_support": true,
+    "stat_translation_file": "stat_translations/support_gem",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": 0,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "gain_malignant_madness_on_skill_use": "สกิลที่เสริม ให้สถานะ ความบ้าคลั่งอันร้ายแรง ให้กับคุณ เมื่อใช้งาน"
+      },
+      "stats": [
+        {
+          "id": "gain_malignant_madness_on_skill_use",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": 100,
+      "cooldown_bypass_type": null,
+      "required_level": 1,
+      "experience": 0,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "gain_malignant_madness_on_skill_use"
+    ],
+    "tags": [
+      "low_max_level",
+      "support"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": {
+      "allowed_types": null,
+      "letter": "!",
+      "supports_gems_only": false,
+      "support_name": "",
+      "support_text": "ใช้เสริมสกิลทุกชนิด",
+      "excluded_types": null,
+      "added_types": null,
+      "added_minion_types": null
+    }
+  },
+  {
+    "active_skill": null,
+    "base_item": {
+      "display_name": "หินเสริม Penance",
+      "experience_type": "GemProgressionSingleLevel",
+      "id": "Metadata/Items/Gems/SupportGemPenance",
+      "max_level": 1,
+      "release_state": "released"
+    },
+    "cast_time": null,
+    "color": "w",
+    "display_name": "หินเสริม Penance",
+    "is_support": true,
+    "stat_translation_file": "stat_translations/support_gem",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": 0,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "skills_sacrifice_all_but_one_life_and_energy_shield_on_use": "สกิลที่เสริม สละพลังชีวิตและโล่พลังงาน ของคุณทั้งหมดจนเหลือ 20% เมื่อใช้งาน"
+      },
+      "stats": [
+        {
+          "id": "skills_sacrifice_all_but_one_life_and_energy_shield_on_use",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": 100,
+      "cooldown_bypass_type": null,
+      "required_level": 1,
+      "experience": 0,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "skills_sacrifice_all_but_one_life_and_energy_shield_on_use"
+    ],
+    "tags": [
+      "low_max_level",
+      "support"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": {
+      "allowed_types": null,
+      "letter": "!",
+      "supports_gems_only": false,
+      "support_name": "",
+      "support_text": "ใช้เสริมสกิลทุกชนิด",
+      "excluded_types": null,
+      "added_types": null,
+      "added_minion_types": null
+    }
+  },
+  {
+    "active_skill": null,
+    "base_item": {
+      "display_name": "หินเสริม Nullification",
+      "experience_type": "GemProgressionSingleLevel",
+      "id": "Metadata/Items/Gems/SupportGemNullification",
+      "max_level": 1,
+      "release_state": "released"
+    },
+    "cast_time": null,
+    "color": "w",
+    "display_name": "หินเสริม Nullification",
+    "is_support": true,
+    "stat_translation_file": "stat_translations/support_gem",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": 0,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "cannot_inflict_status_ailments": "สกิลที่เสริม ไม่สามารถสร้าง สถานะเจ็บป่วยธาตุ ได้"
+      },
+      "stats": [
+        {
+          "id": "cannot_inflict_status_ailments",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": 100,
+      "cooldown_bypass_type": null,
+      "required_level": 1,
+      "experience": 0,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "cannot_inflict_status_ailments"
+    ],
+    "tags": [
+      "low_max_level",
+      "support"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": {
+      "allowed_types": [
+        "Damage",
+        "Attack",
+        "NonHitChill"
+      ],
+      "letter": "!",
+      "supports_gems_only": false,
+      "support_name": "",
+      "support_text": "ใช้เสริมสกิลที่ปะทะศัตรูหรือสกิลที่สร้าง สถานะเจ็บป่วยธาตุ",
+      "excluded_types": null,
+      "added_types": null,
+      "added_minion_types": null
+    }
+  },
+  {
+    "active_skill": null,
+    "base_item": {
+      "display_name": "หินเสริม Mediocrity",
+      "experience_type": "GemProgressionSingleLevel",
+      "id": "Metadata/Items/Gems/SupportGemMediocrity",
+      "max_level": 1,
+      "release_state": "released"
+    },
+    "cast_time": null,
+    "color": "w",
+    "display_name": "หินเสริม Mediocrity",
+    "is_support": true,
+    "stat_translation_file": "stat_translations/support_gem",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": 0,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "global_cannot_crit": "สกิลที่เสริม ไม่สามารถคริติคอลได้"
+      },
+      "stats": [
+        {
+          "id": "global_cannot_crit",
+          "type": "implicit",
+          "value": 1
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": 100,
+      "cooldown_bypass_type": null,
+      "required_level": 1,
+      "experience": 0,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "global_cannot_crit"
+    ],
+    "tags": [
+      "low_max_level",
+      "support"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": {
+      "allowed_types": [
+        "Damage",
+        "Attack"
+      ],
+      "letter": "!",
+      "supports_gems_only": false,
+      "support_name": "",
+      "support_text": "ใช้เสริมสกิลที่ปะทะศัตรู",
+      "excluded_types": null,
+      "added_types": null,
+      "added_minion_types": null
+    }
+  },
+  {
+    "active_skill": null,
+    "base_item": {
+      "display_name": "หินเสริม Impotence",
+      "experience_type": "GemProgressionSingleLevel",
+      "id": "Metadata/Items/Gems/SupportGemImpotence",
+      "max_level": 1,
+      "release_state": "released"
+    },
+    "cast_time": null,
+    "color": "w",
+    "display_name": "หินเสริม Impotence",
+    "is_support": true,
+    "stat_translation_file": "stat_translations/support_gem",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": 0,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "support_impotence_damage_+%_final": "สกิลที่เสริม สร้างความเสียหาย ลดลง อีก 50%"
+      },
+      "stats": [
+        {
+          "id": "support_impotence_damage_+%_final",
+          "type": "constant",
+          "value": -50
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": 100,
+      "cooldown_bypass_type": null,
+      "required_level": 1,
+      "experience": 0,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "support_impotence_damage_+%_final"
+    ],
+    "tags": [
+      "low_max_level",
+      "support"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": {
+      "allowed_types": [
+        "Damage",
+        "Attack",
+        "DamageOverTime"
+      ],
+      "letter": "!",
+      "supports_gems_only": false,
+      "support_name": "",
+      "support_text": "ใช้เสริมสกิลที่สร้างความเสียหายต่อศัตรู",
+      "excluded_types": null,
+      "added_types": null,
+      "added_minion_types": null
+    }
+  },
+  {
+    "active_skill": null,
+    "base_item": {
+      "display_name": "หินเสริม Destitution",
+      "experience_type": "GemProgressionSingleLevel",
+      "id": "Metadata/Items/Gems/SupportGemDestitution",
+      "max_level": 1,
+      "release_state": "released"
+    },
+    "cast_time": null,
+    "color": "w",
+    "display_name": "หินเสริม Destitution",
+    "is_support": true,
+    "stat_translation_file": "stat_translations/support_gem",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": 0,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "base_killed_monster_dropped_item_rarity_+%": "[PlayerItemRarity|ระดับความหายาก]ของไอเทม ที่ดรอปจากศัตรูที่ถูกสังหารด้วย สกิลที่เสริม -50%"
+      },
+      "stats": [
+        {
+          "id": "base_killed_monster_dropped_item_rarity_+%",
+          "type": "constant",
+          "value": -50
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": 100,
+      "cooldown_bypass_type": null,
+      "required_level": 1,
+      "experience": 0,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "base_killed_monster_dropped_item_rarity_+%"
+    ],
+    "tags": [
+      "low_max_level",
+      "support"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": {
+      "allowed_types": [
+        "Damage",
+        "Attack",
+        "DamageOverTime",
+        "KillNoDamageModifiers"
+      ],
+      "letter": "!",
+      "supports_gems_only": false,
+      "support_name": "",
+      "support_text": "ใช้เสริมสกิลที่สังหารศัตรูได้",
+      "excluded_types": null,
+      "added_types": null,
+      "added_minion_types": null
+    }
+  },
+  {
+    "active_skill": null,
+    "base_item": {
+      "display_name": "หินเสริม Poverty",
+      "experience_type": "GemProgressionSingleLevel",
+      "id": "Metadata/Items/Gems/SupportGemPoverty",
+      "max_level": 1,
+      "release_state": "released"
+    },
+    "cast_time": null,
+    "color": "w",
+    "display_name": "หินเสริม Poverty",
+    "is_support": true,
+    "stat_translation_file": "stat_translations/support_gem",
+    "static": {
+      "crit_chance": null,
+      "damage_effectiveness": null,
+      "quality_stats": [],
+      "stat_requirements": {
+        "int": 0,
+        "str": 0,
+        "dex": 0
+      },
+      "stat_text": {
+        "base_killed_monster_dropped_item_quantity_+%": "ลดจำนวนของ ไอเทม ที่ดรอปจากศัตรูที่ถูกสังหารด้วย สกิลที่เสริม 50%"
+      },
+      "stats": [
+        {
+          "id": "base_killed_monster_dropped_item_quantity_+%",
+          "type": "constant",
+          "value": -50
+        }
+      ],
+      "vaal": null,
+      "costs": null,
+      "attack_speed_multiplier": null,
+      "cooldown": null,
+      "stored_uses": null,
+      "cost_multiplier": 100,
+      "cooldown_bypass_type": null,
+      "required_level": 1,
+      "experience": 0,
+      "reservations": null,
+      "damage_multiplier": null
+    },
+    "tooltip_order": [
+      "base_killed_monster_dropped_item_quantity_+%"
+    ],
+    "tags": [
+      "low_max_level",
+      "support"
+    ],
+    "secondary_granted_effect": null,
+    "quest_reward": null,
+    "discriminator": null,
+    "support_gem": {
+      "allowed_types": [
+        "Damage",
+        "Attack",
+        "DamageOverTime",
+        "KillNoDamageModifiers"
+      ],
+      "letter": "!",
+      "supports_gems_only": false,
+      "support_name": "",
+      "support_text": "ใช้เสริมสกิลที่สังหารศัตรูได้",
+      "excluded_types": null,
       "added_types": null,
       "added_minion_types": null
     }
@@ -134777,7 +135864,7 @@
         "graft_skill_uulnet_bone_spires_max_spires_allowed": "เรียก ยอดกระดูก ได้สูงสุด 20 ชิ้น",
         "base_skill_effect_duration": "ระยะเวลาพื้นฐาน 8.00 วินาที",
         "active_skill_base_area_of_effect_radius": "รัศมีพื้นฐาน 4.5 เมตร",
-        "impale_on_hit_%_chance": "สร้างสถานะสถานะ ทิ่มแทง ต่อศัตรูเมื่อปะทะ",
+        "impale_on_hit_%_chance": "สร้างสถานะ ทิ่มแทง ต่อศัตรูเมื่อปะทะ",
         "active_skill_base_secondary_area_of_effect_radius": "รัศมีรองพื้นฐาน 1.7 เมตร",
         "additional_base_critical_strike_chance": "โอกาสคริติคอล +8%",
         "global_bleed_on_hit": "สร้างสถานะ เลือดไหล"
@@ -135697,9 +136784,9 @@
     },
     "tooltip_order": [
       "spell_minimum_base_cold_damage\nspell_maximum_base_cold_damage",
+      "tornado_base_damage_interval_ms",
       "base_skill_effect_duration",
       "base_secondary_skill_effect_duration",
-      "tornado_base_damage_interval_ms",
       "active_skill_base_area_of_effect_radius",
       "active_skill_base_secondary_area_of_effect_radius",
       "number_of_tornados_allowed"
@@ -137193,7 +138280,9 @@
         "dex": 0
       },
       "stat_text": {
-        "skill_empowers_next_x_spells_cast": "[EmpoweredSpell|เสริมฤทธิ์]ให้กับ เวทที่คุณร่าย 6 ครั้งถัดไป"
+        "skill_empowers_next_x_spells_cast": "[EmpoweredSpell|เสริมฤทธิ์]ให้กับ เวทที่คุณร่าย 6 ครั้งถัดไป",
+        "pact_skill_additional_beam_only_chains": "ลำแสงจากสกิลที่ถูกเสริมฤทธิ์ ชิ่ง เพิ่มเติม 4 ครั้ง",
+        "pact_skill_grant_x_additional_projectiles_fired_in_nova": "สกิลที่ถูกเสริมฤทธิ์ ยิงโพรเจกไทล์ เพิ่มเติม 4 ลูก\nสกิลที่ถูกเสริมฤทธิ์ ยิงโพรเจกไทล์เป็นวงกลม"
       },
       "stats": [
         {
@@ -137209,12 +138298,12 @@
         {
           "id": "pact_skill_additional_beam_only_chains",
           "type": "additional",
-          "value": null
+          "value": 4
         },
         {
           "id": "pact_skill_grant_x_additional_projectiles_fired_in_nova",
           "type": "additional",
-          "value": null
+          "value": 4
         },
         {
           "id": "pact_skill_grant_x_cascades_to_do_in_spiral",

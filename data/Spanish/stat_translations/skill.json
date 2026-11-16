@@ -6374,7 +6374,7 @@
             "negate"
           ]
         ],
-        "string": "Área de efecto reducida un {0}% con habilidades cuerpo a cuerpo mientras el tótem esté activo",
+        "string": "Área de efecto aumentada un {0}% con habilidades cuerpo a cuerpo mientras el tótem esté activo",
         "reminder_text": null,
         "is_markup": null
       }
@@ -9523,38 +9523,18 @@
       {
         "condition": [
           {
-            "min": 1,
+            "min": null,
             "max": null,
             "negated": null
           }
         ],
         "format": [
-          "#"
+          "+#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "Rareza de los objetos arrojados por los enemigos asesinados aumentada un {0}%",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "Rareza de los objetos arrojados por los enemigos asesinados reducida un {0}%",
+        "string": "{0}% a la [PlayerItemRarity|rareza] de los objetos que arrojan los enemigos derrotados",
         "reminder_text": null,
         "is_markup": null
       }
@@ -10130,7 +10110,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Ganas 1 corteza cada segundo si no te ha golpeado un ataque de un enemigo recientemente\nPierdes 1 corteza cuando te golpea un ataque de un enemigo\nCantidad máxima de corteza: {0}",
+        "string": "Ganas 2 de Corteza cada segundo si no has recibido ningún golpe de un ataque enemigo recientemente\nPierdes 1 de Corteza cuando recibes un golpe de un ataque enemigo\nMáximo de cortezas: {0}",
         "reminder_text": "(Recientemente se refiere a los últimos 4 segundos)",
         "is_markup": null
       }
@@ -14209,6 +14189,42 @@
         ],
         "string": "No puede infligir estados alterados elementales",
         "reminder_text": "(Los estados alterados elementales son quemado, calcinado, escarchado, congelado, frágil, electrocutado y debilitado)",
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "global_cannot_crit"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Nunca infliges golpes críticos",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -20517,7 +20533,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Gana el {0}% del daño físico como daño de hielo extra por cada\nnengarce verde que tengan los guantes equipados",
+        "string": "Gana el {0}% del daño físico como daño de hielo extra por cada\nengarce verde que tengan los guantes equipados",
         "reminder_text": null,
         "is_markup": null
       }
@@ -20553,7 +20569,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Gana el {0}% del daño físico como daño de rayo extra por cada\nnengarce azul que tengan los guantes equipados",
+        "string": "Gana el {0}% del daño físico como daño de rayo extra por cada\nengarce azul que tengan los guantes equipados",
         "reminder_text": null,
         "is_markup": null
       }
@@ -20589,7 +20605,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Gana el {0}% del daño físico como daño de caos extra por cada\nnengarce blanco que tengan los guantes equipados",
+        "string": "Gana el {0}% del daño físico como daño de caos extra por cada\nengarce blanco que tengan los guantes equipados",
         "reminder_text": null,
         "is_markup": null
       }
@@ -26217,7 +26233,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Los tótems reflejan el {0}% de su vida máxima como daño de fuego a\nlos enemigos cercanos cuando son golpeados",
+        "string": "Los tótems reflejan el {0}% de su vida máxima como daño de fuego a los enemigos que se encuentran en un radio base de 1.8 metros cuando estos los golpean",
         "reminder_text": null,
         "is_markup": null
       }
@@ -26748,7 +26764,7 @@
             "negate"
           ]
         ],
-        "string": "Inflige un {0}% menos de daño agregado",
+        "string": "Inflige un {0}% más de daño agregado",
         "reminder_text": null,
         "is_markup": null
       }
@@ -28689,6 +28705,142 @@
           ]
         ],
         "string": "El radio de las dentelladas de los percebes es de {2} metros",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 11,
+            "max": 11,
+            "negated": null
+          },
+          {
+            "min": 10,
+            "max": 10,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [
+            "locations_to_metres"
+          ],
+          []
+        ],
+        "string": "El radio base de selección de objetivos es de {1} metro",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 11,
+            "max": 11,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          [
+            "locations_to_metres"
+          ],
+          []
+        ],
+        "string": "El radio base de selección de objetivos es de {1} metros",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 11,
+            "max": 11,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 10,
+            "max": 10,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "ignore",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          [
+            "locations_to_metres"
+          ]
+        ],
+        "string": "El radio de selección de objetivos es de {2} metro",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 11,
+            "max": 11,
+            "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": true
+          },
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore",
+          "ignore",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          [],
+          [
+            "locations_to_metres"
+          ]
+        ],
+        "string": "El radio de selección de objetivos es de {2} metros",
         "reminder_text": null,
         "is_markup": null
       }
@@ -33472,7 +33624,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Efecto del efecto beneficioso del tótem de ancestro aumentado un {0}%",
+        "string": "Efecto beneficioso del tótem de ancestro aumentado un {0}%",
         "reminder_text": null,
         "is_markup": null
       },
@@ -33492,7 +33644,7 @@
             "negate"
           ]
         ],
-        "string": "Efecto del efecto beneficioso del tótem de ancestro reducido un {0}%",
+        "string": "Efecto beneficioso del tótem de ancestro reducido un {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -34026,7 +34178,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Efecto del efecto beneficioso mentado un {0}% por cada tatuaje de Arohongui asignado",
+        "string": "Efecto beneficioso aumentado un {0}% por cada tatuaje de Arohongui asignado",
         "reminder_text": null,
         "is_markup": null
       },
@@ -34046,7 +34198,7 @@
             "negate"
           ]
         ],
-        "string": "Efecto del efecto beneficioso reducido un {0}% por cada tatuaje de Arohongui asignado",
+        "string": "Efecto beneficioso reducido un {0}% por cada tatuaje de Arohongui asignado",
         "reminder_text": null,
         "is_markup": null
       }
@@ -34082,7 +34234,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Efecto del efecto beneficioso aumentado un {0}% por cada tatuaje de Hinekora asignado",
+        "string": "Efecto beneficioso aumentado un {0}% por cada tatuaje de Hinekora asignado",
         "reminder_text": null,
         "is_markup": null
       },
@@ -34102,7 +34254,7 @@
             "negate"
           ]
         ],
-        "string": "Efecto del efecto beneficioso reducido un {0}% por cada tatuaje de Hinekora asignado",
+        "string": "Efecto beneficioso reducido un {0}% por cada tatuaje de Hinekora asignado",
         "reminder_text": null,
         "is_markup": null
       }
@@ -34138,7 +34290,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Efecto del efecto beneficioso aumentado un {0}% por cada tatuaje de Kitava asignado",
+        "string": "Efecto beneficioso aumentado un {0}% por cada tatuaje de Kitava asignado",
         "reminder_text": null,
         "is_markup": null
       },
@@ -34158,7 +34310,7 @@
             "negate"
           ]
         ],
-        "string": "Efecto del efecto beneficioso reducido un {0}% por cada tatuaje de Kitava asignado",
+        "string": "Efecto beneficioso reducido un {0}% por cada tatuaje de Kitava asignado",
         "reminder_text": null,
         "is_markup": null
       }
@@ -34194,7 +34346,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Efecto del efecto beneficioso aumentado un {0}% por cada tatuaje de Ngamahu asignado",
+        "string": "Efecto beneficioso aumentado un {0}% por cada tatuaje de Ngamahu asignado",
         "reminder_text": null,
         "is_markup": null
       },
@@ -34214,7 +34366,7 @@
             "negate"
           ]
         ],
-        "string": "Efecto del efecto beneficioso reducido un {0}% por cada tatuaje de Ngamahu asignado",
+        "string": "Efecto beneficioso reducido un {0}% por cada tatuaje de Ngamahu asignado",
         "reminder_text": null,
         "is_markup": null
       }
@@ -34250,7 +34402,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Efecto del efecto beneficioso aumentado un {0}% por cada tatuaje de Ramako asignado",
+        "string": "Efecto beneficioso aumentado un {0}% por cada tatuaje de Ramako asignado",
         "reminder_text": null,
         "is_markup": null
       },
@@ -34270,7 +34422,7 @@
             "negate"
           ]
         ],
-        "string": "Efecto del efecto beneficioso reducido un {0}% por cada tatuaje de Ramako asignado",
+        "string": "Efecto beneficioso reducido un {0}% por cada tatuaje de Ramako asignado",
         "reminder_text": null,
         "is_markup": null
       }
@@ -34306,7 +34458,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Efecto del efecto beneficioso aumentado un {0}% por cada tatuaje de Rongokurai asignado",
+        "string": "Efecto beneficioso aumentado un {0}% por cada tatuaje de Rongokurai asignado",
         "reminder_text": null,
         "is_markup": null
       },
@@ -34326,7 +34478,7 @@
             "negate"
           ]
         ],
-        "string": "Efecto del efecto beneficioso reducido un {0}% por cada tatuaje de Rongokurai asignado",
+        "string": "Efecto beneficioso reducido un {0}% por cada tatuaje de Rongokurai asignado",
         "reminder_text": null,
         "is_markup": null
       }
@@ -34362,7 +34514,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Efecto del efecto beneficioso aumentado un {0}% por cada tatuaje de Tasalio asignado",
+        "string": "Efecto beneficioso aumentado un {0}% por cada tatuaje de Tasalio asignado",
         "reminder_text": null,
         "is_markup": null
       },
@@ -34382,7 +34534,7 @@
             "negate"
           ]
         ],
-        "string": "Efecto del efecto beneficioso reducido un {0}% por cada tatuaje de Tasalio asignado",
+        "string": "Efecto beneficioso reducido un {0}% por cada tatuaje de Tasalio asignado",
         "reminder_text": null,
         "is_markup": null
       }
@@ -34418,7 +34570,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Efecto del efecto beneficioso aumentado un {0}% por cada tatuaje de Tawhoa asignado",
+        "string": "Efecto beneficioso aumentado un {0}% por cada tatuaje de Tawhoa asignado",
         "reminder_text": null,
         "is_markup": null
       },
@@ -34438,7 +34590,7 @@
             "negate"
           ]
         ],
-        "string": "Efecto del efecto beneficioso reducido un {0}% por cada tatuaje de Tawhoa asignado",
+        "string": "Efecto beneficioso reducido un {0}% por cada tatuaje de Tawhoa asignado",
         "reminder_text": null,
         "is_markup": null
       }
@@ -34474,7 +34626,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Efecto del efecto beneficioso aumentado un {0}% por cada tatuaje de Tukohama asignado",
+        "string": "Efecto beneficioso aumentado un {0}% por cada tatuaje de Tukohama asignado",
         "reminder_text": null,
         "is_markup": null
       },
@@ -34494,7 +34646,7 @@
             "negate"
           ]
         ],
-        "string": "Efecto del efecto beneficioso reducido un {0}% por cada tatuaje de Tukohama asignado",
+        "string": "Efecto beneficioso reducido un {0}% por cada tatuaje de Tukohama asignado",
         "reminder_text": null,
         "is_markup": null
       }
@@ -34530,7 +34682,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Efecto del efecto beneficioso aumentado un {0}% por cada tatuaje de Valako asignado",
+        "string": "Efecto beneficioso aumentado un {0}% por cada tatuaje de Valako asignado",
         "reminder_text": null,
         "is_markup": null
       },
@@ -34550,7 +34702,7 @@
             "negate"
           ]
         ],
-        "string": "Efecto del efecto beneficioso reducido un {0}% por cada tatuaje de Valako asignado",
+        "string": "Efecto beneficioso reducido un {0}% por cada tatuaje de Valako asignado",
         "reminder_text": null,
         "is_markup": null
       }
@@ -39206,6 +39358,96 @@
   {
     "English": null,
     "ids": [
+      "virtual_blood_flower_maximum_flowers"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Máximo de brotes: {0}",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Máximo de brotes: {0}",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "blood_flower_physical_dot_multiplier_+_to_grant"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Los brotes otorgan {0}% al multiplicador de daño físico degenerativo",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "blood_ground_leaving_area_lasts_for_ms"
     ],
     "trade_stats": null,
@@ -39289,7 +39531,7 @@
             "divide_by_one_hundred"
           ]
         ],
-        "string": "El efecto beneficioso otorga un {0}% del daño elemental absorbido como vida",
+        "string": "El efecto beneficioso otorga un {0}% del daño elemental de los ataques absorbido como vida",
         "reminder_text": null,
         "is_markup": null
       }
@@ -51399,6 +51641,44 @@
   {
     "English": null,
     "ids": [
+      "every_1_second_nearby_enemies_withered_for_X_ms_to_grant"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "milliseconds_to_seconds"
+          ]
+        ],
+        "string": "Cada segundo, aplica [Withered|marchitamiento] a los enemigos cercanos durante {0} segundos",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "excommunicate_on_melee_attack_hit_for_X_ms"
     ],
     "trade_stats": null,
@@ -56926,6 +57206,42 @@
   {
     "English": null,
     "ids": [
+      "gain_malignant_madness_on_skill_use"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Ganas Locura maligna al usarla",
+        "reminder_text": "(Locura maligna reduce el daño y la velocidad de acción un 10%, durante 8 segundos)",
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "gain_overloaded_intensity_for_x_ms_after_losing_6_intensity"
     ],
     "trade_stats": null,
@@ -57475,7 +57791,7 @@
           [],
           []
         ],
-        "string": "El estallido final inflige +{0}% más de daño",
+        "string": "No puede empujar a los enemigos únicos más de una vez por segundo\nEl estallido final inflige un {0}% más de daño\nEl estallido final tiene un 100% más de radio\nEl estallido final no puede empujar",
         "reminder_text": null,
         "is_markup": null
       },
@@ -58396,6 +58712,60 @@
           ]
         ],
         "string": "Los proyectiles infligen un {0}% menos de daño con sus golpes por cada punto de intensidad",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "grim_bonfire_maximum_bonfires"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0} al máximo de Piras del cazador de brujas",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "+#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0} al máximo de Piras del cazador de brujas",
         "reminder_text": null,
         "is_markup": null
       }
@@ -62641,7 +63011,7 @@
             "milliseconds_to_seconds"
           ]
         ],
-        "string": "La coraza no se puede reaplicar al mismo objetivo durante {0} segundos después de la explosión",
+        "string": "La coraza no se puede volver a aplicar al mismo objetivo durante {0} segundos después de la explosión",
         "reminder_text": null,
         "is_markup": null
       }
@@ -64829,6 +65199,24 @@
     "Portuguese": null,
     "Russian": null,
     "Spanish": [
+      {
+        "condition": [
+          {
+            "min": 2000000000,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Esta habilidad se activará cuando hayas gastado un total de maná infinito en ataques de arco que no estén asistidos por Flechas manaforjadas",
+        "reminder_text": null,
+        "is_markup": null
+      },
       {
         "condition": [
           {
@@ -67379,7 +67767,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Los esbirros tienen {0}% al máximo de todas de las resistencias elementales",
+        "string": "Los esbirros tienen {0}% a todas las resistencias elementales máximas",
         "reminder_text": "(Las resistencias máximas no pueden superar el 90%)",
         "is_markup": null
       }
@@ -67803,7 +68191,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Los esbirros tienen el efecto de Marchito aumentado un {0}%",
+        "string": "Los esbirros tienen el efecto del marchitamiento aumentado un {0}%",
         "reminder_text": "(Marchito aplica \"Daño de caos recibido aumentado un 6%\", y puede aplicarse hasta 15 veces)",
         "is_markup": null
       },
@@ -67823,7 +68211,7 @@
             "negate"
           ]
         ],
-        "string": "Los esbirros tienen el efecto de Marchito reducido un {0}%",
+        "string": "Los esbirros tienen el efecto del marchitamiento reducido un {0}%",
         "reminder_text": "(Marchito aplica \"Daño de caos recibido aumentado un 6%\", y puede aplicarse hasta 15 veces)",
         "is_markup": null
       }
@@ -74162,7 +74550,7 @@
   {
     "English": null,
     "ids": [
-      "random_nearby_minion_gain_a_soul_eater_soul_on_X_life_spent"
+      "random_nearby_minion_gain_a_charge_on_X_life_spent"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -74187,8 +74575,8 @@
         "index_handlers": [
           []
         ],
-        "string": "Un esbirro cercano gana un alma por cada {0} de vida gastada en los costos iniciales de este hechizo",
-        "reminder_text": "(Cada alma otorga velocidades de ataque y de lanzamiento de hechizos aumentadas un 5%. Pierdes 1 alma cada 0.5 segundos si no has devorado ningún alma recientemente. Puedes consumir un máximo de 45 almas)",
+        "string": "Un esbirro que esté a menos de 6 metros gana una carga de poder, frenesí o aguante por cada {0} de vida que gastes en los costos iniciales de este hechizo",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -75250,7 +75638,8 @@
   {
     "English": null,
     "ids": [
-      "sand_mirage_triggered_skill_damage_+%_final"
+      "sand_mirage_triggered_skill_damage_+%_final",
+      "sand_mirage_description_mode"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -75267,15 +75656,22 @@
             "min": 1,
             "max": null,
             "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
           }
         ],
         "format": [
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
+          [],
           []
         ],
-        "string": "Las habilidades usadas por los Espejismos suspendidos infligen un {0}% más de daño",
+        "string": "Las habilidades que usan los espejismos suspendidos infligen un {0}% más de daño",
         "reminder_text": null,
         "is_markup": null
       },
@@ -75285,17 +75681,76 @@
             "min": null,
             "max": -1,
             "negated": null
+          },
+          {
+            "min": 0,
+            "max": 0,
+            "negated": null
           }
         ],
         "format": [
-          "#"
+          "#",
+          "ignore"
         ],
         "index_handlers": [
           [
             "negate"
-          ]
+          ],
+          []
         ],
-        "string": "Las habilidades usadas por los Espejismos suspendidos infligen un {0}% menos de daño",
+        "string": "Las habilidades que usan los espejismos suspendidos infligen un {0}% menos de daño",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "Las habilidades que usan los espejismos temporales infligen un {0}% más de daño",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          },
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "ignore"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ],
+          []
+        ],
+        "string": "Las habilidades que usan los espejismos temporales infligen un {0}% menos de daño",
         "reminder_text": null,
         "is_markup": null
       }
@@ -76921,6 +77376,42 @@
   {
     "English": null,
     "ids": [
+      "skill_can_be_used_by_temporal_mirage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Esta habilidad solo la puede usar un espejismo temporal",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "skill_code_movement_speed_+%_final"
     ],
     "trade_stats": null,
@@ -77718,7 +78209,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Sacrifica toda tu vida y escudo de energía menos 1 al usarse",
+        "string": "Sacrificas toda tu vida y escudo de energía máximos menos el 20 % al usarla",
         "reminder_text": null,
         "is_markup": null
       }
@@ -78715,7 +79206,7 @@
         "index_handlers": [
           []
         ],
-        "string": "La velocidad de lanzamiento de esta habilidad no se puede modificar",
+        "string": "La velocidad de lanzamiento de este hechizo no se puede modificar",
         "reminder_text": null,
         "is_markup": null
       }
@@ -78787,7 +79278,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Esta habilidad se activa con un modificador de fabricación",
+        "string": "Este hechizo se activa con un modificador de fabricación",
         "reminder_text": null,
         "is_markup": null
       }
@@ -88268,7 +88759,7 @@
             "negate"
           ]
         ],
-        "string": "Los enemigos atrapados reciben el daño de proyectiles de los golpes de ataque aumentado un {0}%",
+        "string": "Los enemigos atrapados reciben el daño de proyectiles de los golpes de ataque reducido un {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -89762,7 +90253,7 @@
         "index_handlers": [
           []
         ],
-        "string": "El pulso tiene el área de efecto aumentada un {0}% por cada 0,1s de duración del aturdimiento, hasta un 400%",
+        "string": "El pulso tiene el área de efecto aumentada un {0}% por cada 0.1s de duración del aturdimiento, hasta un 400%",
         "reminder_text": null,
         "is_markup": null
       },
@@ -89782,7 +90273,7 @@
             "negate"
           ]
         ],
-        "string": "El pulso tiene el área de efecto reducida un {0}% por cada 0,1s de duración del aturdimiento, hasta un 400%",
+        "string": "El pulso tiene el área de efecto reducida un {0}% por cada 0.1s de duración del aturdimiento",
         "reminder_text": null,
         "is_markup": null
       }
@@ -90450,7 +90941,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Esta habilidad se activa cuando muere un enemigo que tú hayas quemado",
+        "string": "Este hechizo se activa cuando muere un enemigo que tú hayas quemado",
         "reminder_text": null,
         "is_markup": null
       }
@@ -102349,6 +102840,18 @@
         "id": "explicit.stat_2783958145",
         "text": "#% more Maximum Life",
         "type": "explicit",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_1214601201",
+        "text": "#% more Maximum Life",
+        "type": "implicit",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_137377270",
+        "text": "#% more Maximum Life",
+        "type": "implicit",
         "option": null
       }
     ],

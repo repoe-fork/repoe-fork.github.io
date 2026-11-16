@@ -654,38 +654,18 @@
       {
         "condition": [
           {
-            "min": 1,
+            "min": null,
             "max": null,
             "negated": null
           }
         ],
         "format": [
-          "#"
+          "+#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "{0}% increased Rarity of Items Dropped by enemies Slain by Minions or This Attack",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "{0}% reduced Rarity of Items Dropped by enemies Slain by Minions or This Attack",
+        "string": "{0}% to [PlayerItemRarity|Rarity] of Items Dropped by enemies Slain by Minions or This Attack",
         "reminder_text": null,
         "is_markup": null
       }
@@ -1659,8 +1639,8 @@
         "index_handlers": [
           []
         ],
-        "string": "This Attack and Minions have {0}% chance to Blind enemies on hit",
-        "reminder_text": "(Being Blinded causes 20% less Accuracy Rating and Evasion Rating, for 4 seconds)",
+        "string": "This Attack and Minions have {0}% chance to [Blind] enemies on hit",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -1695,7 +1675,7 @@
         "index_handlers": [
           []
         ],
-        "string": "This Attack and Minions have {0}% increased Blinding duration",
+        "string": "This Attack and Minions have {0}% increased [Blind|Blinding] duration",
         "reminder_text": null,
         "is_markup": null
       },
@@ -1715,7 +1695,7 @@
             "negate"
           ]
         ],
-        "string": "This Attack and Minions have {0}% reduced Blinding duration",
+        "string": "This Attack and Minions have {0}% reduced [Blind|Blinding] duration",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3763,6 +3743,42 @@
           }
         ],
         "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "This Attack and Minions never deal Critical Strikes",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "global_cannot_crit"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
           "+#"
         ],
         "index_handlers": [
@@ -4630,7 +4646,7 @@
         "index_handlers": [
           []
         ],
-        "string": "This Attack and Minions have {0}% increased Critical Strike Chance against Blinded Enemies",
+        "string": "This Attack and Minions have {0}% increased Critical Strike Chance against [Blind|Blinded] Enemies",
         "reminder_text": null,
         "is_markup": null
       },
@@ -4650,7 +4666,7 @@
             "negate"
           ]
         ],
-        "string": "This Attack and Minions have {0}% reduced Critical Strike Chance against Blinded Enemies",
+        "string": "This Attack and Minions have {0}% reduced Critical Strike Chance against [Blind|Blinded] Enemies",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4775,6 +4791,12 @@
         "id": "explicit.stat_2118708619",
         "text": "#% increased Damage if you have Consumed a corpse Recently",
         "type": "explicit",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_2118708619",
+        "text": "#% increased Damage if you have Consumed a corpse Recently",
+        "type": "implicit",
         "option": null
       }
     ],
@@ -5121,7 +5143,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Damaging Ailments inflicted with this Attack or by Minions deal damage {0}% faster",
+        "string": "Damaging Ailments inflicted with this Attack or by Minions deal damage {0}% [DamageFaster|Faster]",
         "reminder_text": "(Ailments that deal Damage are Bleeding, Ignited, and Poisoned)",
         "is_markup": null
       }
@@ -5811,7 +5833,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Chill enemies when they are Shocked by Hits from this Attack or Minon, reducing Action Speed by Shock Effect",
+        "string": "Chill enemies when they are Shocked by Hits from this Attack or Minion, reducing Action Speed by Shock Effect",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5847,7 +5869,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Shock enemies when they are Chilled by Hits from this Attack or Minon, increasing Damage taken by Chill Effect",
+        "string": "Shock enemies when they are Chilled by Hits from this Attack or Minion, increasing Damage taken by Chill Effect",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5985,7 +6007,14 @@
       "killing_blow_consumes_corpse_restore_x_life",
       "killing_blow_consumes_corpse_restore_x_mana"
     ],
-    "trade_stats": null,
+    "trade_stats": [
+      {
+        "id": "implicit.stat_1218107074",
+        "text": "Killing Blows Consume corpses to Recover # Life and # Mana",
+        "type": "implicit",
+        "option": null
+      }
+    ],
     "hidden": null,
     "French": null,
     "German": null,
@@ -6964,6 +6993,62 @@
     ],
     "ids": [
       "support_hypothermia_cold_damage_over_time_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "This Attack and Minions deal {0}% more Damage",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "This Attack and Minions deal {0}% less Damage",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "ids": [
+      "support_impotence_damage_+%_final"
     ],
     "trade_stats": null,
     "hidden": null,
@@ -8005,8 +8090,8 @@
             "milliseconds_to_seconds"
           ]
         ],
-        "string": "This Attack and Minions have {0}% chance to gain Onslaught for {1} seconds when you Hit a Unique Enemy",
-        "reminder_text": "(Onslaught grants 20% increased Attack, Cast, and Movement Speed)",
+        "string": "This Attack and Minions have {0}% chance to gain [Onslaught] for {1} seconds when you Hit a Unique Enemy",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -8058,8 +8143,8 @@
             "milliseconds_to_seconds"
           ]
         ],
-        "string": "This Attack and Minions have {0}% chance to gain Onslaught for {2} seconds on\ndealing a Killing Blow",
-        "reminder_text": "(Onslaught grants 20% increased Attack, Cast, and Movement Speed)",
+        "string": "This Attack and Minions have {0}% chance to gain [Onslaught] for {2} seconds on\ndealing a Killing Blow",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -12964,6 +13049,18 @@
         "id": "explicit.stat_2783958145",
         "text": "#% more Maximum Life",
         "type": "explicit",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_1214601201",
+        "text": "#% more Maximum Life",
+        "type": "implicit",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_137377270",
+        "text": "#% more Maximum Life",
+        "type": "implicit",
         "option": null
       }
     ],

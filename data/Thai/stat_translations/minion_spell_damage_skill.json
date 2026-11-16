@@ -445,38 +445,18 @@
       {
         "condition": [
           {
-            "min": 1,
+            "min": null,
             "max": null,
             "negated": null
           }
         ],
         "format": [
-          "#"
+          "+#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "เพิ่มระดับความหายากของ ไอเทมที่ดรอปจากศัตรูที่ถูกสังหารด้วย เวทนี้หรือมิเนียน {0}%",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "ลดระดับความหายากของ ไอเทมที่ดรอปจากศัตรูที่ถูกสังหารด้วย เวทนี้หรือมิเนียน {0}%",
+        "string": "[PlayerItemRarity|ระดับความหายาก]ของไอเทม ที่ดรอปจากศัตรูที่ถูกสังหารด้วย เวทนี้หรือมิเนียน {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -1994,6 +1974,42 @@
   {
     "English": null,
     "ids": [
+      "global_cannot_crit"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "เวทนี้และมิเนียน ไม่สามารถคริติคอลได้",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "global_poison_on_hit"
     ],
     "trade_stats": null,
@@ -3362,7 +3378,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Chill enemies when they are Shocked by Hits from this Spell or Minon, reducing Action Speed by Shock Effect",
+        "string": "สร้างสถานะ หนาวเย็น ต่อศัตรูที่ติดสถานะ ช็อค จากการปะทะของเวทนี้หรือมิเนียน ซึ่งจะลดความเร็วในการกระทำของมัน เท่ากับ ผลของสถานะ ช็อค",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3398,7 +3414,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Shock enemies when they are Chilled by Hits from this Spell or Minon, increasing Damage taken by Chill Effect",
+        "string": "สร้างสถานะ ช็อค ต่อศัตรูที่ติดสถานะ หนาวเย็น จากการปะทะของเวทนี้หรือมิเนียน ซึ่งจะเพิ่มความเสียหายที่ได้รับ เท่ากับ ผลของสถานะ หนาวเย็น",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4086,6 +4102,62 @@
         ],
         "string": "ลดระยะเวลาของ สถานะเจ็บป่วย ที่สร้างด้วย เวทนี้หรือมิเนียน อีก {0}%",
         "reminder_text": "(สถานะเจ็บป่วย ประกอบด้วย เลือดไหล, ลุกไหม้, แผดเผา, หนาวเย็น, แช่แข็ง, เปราะ, ช็อค, อ่อนแรง, พิษ)",
+        "is_markup": null
+      }
+    ],
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "support_impotence_damage_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "เวทนี้และมิเนียน สร้างความเสียหาย เพิ่มขึ้น อีก {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "เวทนี้และมิเนียน สร้างความเสียหาย ลดลง อีก {0}%",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -9226,6 +9298,18 @@
         "id": "explicit.stat_2783958145",
         "text": "#% more Maximum Life",
         "type": "explicit",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_1214601201",
+        "text": "#% more Maximum Life",
+        "type": "implicit",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_137377270",
+        "text": "#% more Maximum Life",
+        "type": "implicit",
         "option": null
       }
     ],

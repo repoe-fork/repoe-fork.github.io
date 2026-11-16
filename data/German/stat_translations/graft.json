@@ -1410,8 +1410,8 @@
         "index_handlers": [
           []
         ],
-        "string": "Schädigende Beeinträchtigungen, die durch Fertigkeiten verursacht werden, die von diesem Transplantat benutzt werden, verursachen den Schaden {0}% schneller",
-        "reminder_text": "(Der Gesamtschaden bleibt gleich, jedoch wird dieser über eine kürzere Dauer verursacht)",
+        "string": "Schädigende Beeinträchtigungen, die durch Fertigkeiten verursacht werden, die von diesem Transplantat benutzt werden, verursachen den Schaden {0}% [DamageFaster|schneller]",
+        "reminder_text": "(Beeinträchtigungen, die Schaden verursachen, sind: blutend, entzündet und vergiftet)",
         "is_markup": null
       }
     ],
@@ -2598,8 +2598,8 @@
         "index_handlers": [
           []
         ],
-        "string": "Kreaturen, die von diesem Transplantat beschworen wurden, haben {0}% Chance, bei Treffer zu blenden",
-        "reminder_text": "(Geblendet sein bewirkt 20% weniger Treffgenauigkeit und Ausweichwert, für 4 Sekunden)",
+        "string": "Kreaturen, die von diesem Transplantat beschworen wurden, haben {0}% Chance, bei Treffer zu [Blind|blenden]",
+        "reminder_text": null,
         "is_markup": null
       },
       {
@@ -2616,8 +2616,8 @@
         "index_handlers": [
           []
         ],
-        "string": "Kreaturen, die von diesem Transplantat beschworen wurden, blenden bei Treffer",
-        "reminder_text": "(Geblendet sein bewirkt 20% weniger Treffgenauigkeit und Ausweichwert, für 4 Sekunden)",
+        "string": "Kreaturen, die von diesem Transplantat beschworen wurden, [Blind|blenden] bei Treffer",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -2762,7 +2762,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Projektile, die von diesem Transplantat erzeugt werden und die durchbohrt haben, verursachen {0} mehr Schaden",
+        "string": "Projektile, die von diesem Transplantat erzeugt werden und die durchbohrt haben, verursachen {0}% mehr Schaden",
         "reminder_text": null,
         "is_markup": null
       },
@@ -2782,7 +2782,7 @@
             "negate"
           ]
         ],
-        "string": "Projektile, die von diesem Transplantat erzeugt werden und die durchbohrt haben, verursachen {0} weniger Schaden",
+        "string": "Projektile, die von diesem Transplantat erzeugt werden und die durchbohrt haben, verursachen {0}% weniger Schaden",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4685,38 +4685,18 @@
       {
         "condition": [
           {
-            "min": 1,
+            "min": null,
             "max": null,
             "negated": null
           }
         ],
         "format": [
-          "#"
+          "+#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "{0}% erhöhte Seltenheit gefundener Gegenstände von Schwarmgeborenen Monstern",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "{0}% verringerte Seltenheit gefundener Gegenstände von Schwarmgeborenen Monstern",
+        "string": "{0}% zur [PlayerItemRarity|Gegenstandsseltenheit] von Schwarmgeborenen Monstern",
         "reminder_text": null,
         "is_markup": null
       }
@@ -9542,6 +9522,18 @@
         "id": "explicit.stat_2783958145",
         "text": "#% more Maximum Life",
         "type": "explicit",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_1214601201",
+        "text": "#% more Maximum Life",
+        "type": "implicit",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_137377270",
+        "text": "#% more Maximum Life",
+        "type": "implicit",
         "option": null
       }
     ],

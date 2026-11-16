@@ -664,38 +664,18 @@
       {
         "condition": [
           {
-            "min": 1,
+            "min": null,
             "max": null,
             "negated": null
           }
         ],
         "format": [
-          "#"
+          "+#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "{0}% de aumento da Raridade de Itens Derrubados por inimigos Mortos por Lacaios ou Esse Ataque",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "{0}% de redução da Raridade de Itens Derrubados por inimigos Mortos por Lacaios ou Esse Ataque",
+        "string": "{0}% à [PlayerItemRarity|raridade] de itens largados por inimigos mortos por lacaios ou por este ataque",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3743,6 +3723,42 @@
           []
         ],
         "string": "Convoca um Fantasma quando essa Habilidade, ou Lacaios não Fantasmas, causarem um Golpe Mortal",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "global_cannot_crit"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Este ataque e estes lacaios nunca causam golpes críticos",
         "reminder_text": null,
         "is_markup": null
       }
@@ -6973,6 +6989,62 @@
   {
     "English": null,
     "ids": [
+      "support_impotence_damage_+%_final"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Este Ataque e Lacaios causam {0}% mais Dano",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Este Ataque e Lacaios causam {0}% menos Dano",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "support_maimed_enemies_physical_damage_taken_+%"
     ],
     "trade_stats": null,
@@ -8009,8 +8081,8 @@
             "milliseconds_to_seconds"
           ]
         ],
-        "string": "Este Ataque e Lacaios têm {0}% de chance de ganhar Agressividade por {1} segundos quando você Acertar um Inimigo Único",
-        "reminder_text": "(Agressividade concede um aumento de 20% das Velocidades de Ataque, Conjuração e Movimento)",
+        "string": "Este Ataque e Lacaios têm {0}% de chance de ganhar [Onslaught|Agressividade] por {1} segundos quando você Acertar um Inimigo Único",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -8063,8 +8135,8 @@
             "milliseconds_to_seconds"
           ]
         ],
-        "string": "Este Ataque e Lacaios têm {0}% de chance de conceder Agressividade por {2} segundos ao\ncausar um Golpe Fatal",
-        "reminder_text": "(Agressividade concede um aumento de 20% das Velocidades de Ataque, Conjuração e Movimento)",
+        "string": "Este Ataque e Lacaios têm {0}% de chance de conceder [Onslaught|Agressividade] por {2} segundos ao\ncausar um Golpe Fatal",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -12918,6 +12990,18 @@
         "id": "explicit.stat_2783958145",
         "text": "#% more Maximum Life",
         "type": "explicit",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_1214601201",
+        "text": "#% more Maximum Life",
+        "type": "implicit",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_137377270",
+        "text": "#% more Maximum Life",
+        "type": "implicit",
         "option": null
       }
     ],

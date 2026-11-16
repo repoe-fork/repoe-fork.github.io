@@ -50,6 +50,62 @@
   {
     "English": null,
     "ids": [
+      "map_drop_scaling_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "{0}% erhöhte [AtlasDropScaling|Atlasbeute] in diesem Gebiet",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "{0}% verringerte [AtlasDropScaling|Atlasbeute] in diesem Gebiet",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "map_item_drop_quantity_+%",
       "chart_quantity_voyage_display_stat"
     ],
@@ -283,7 +339,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Die Modifikatoren zur Menge gefundener Gegenstände im Gebiet gelten auch für deren Seltenheit",
+        "string": "Modifikatoren für [AtlasDropScaling|Atlasbeute] in diesem Gebiet gelten auch für die Gegenstandsseltenheit",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2148,7 +2204,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Seltene Monster im Gebiet lassen einen zusätzlichen Skarabäus fallen",
+        "string": "Seltene Monster im Gebiet lassen einen zusätzlichen [Thread|Faden] fallen",
         "reminder_text": null,
         "is_markup": null
       },
@@ -2166,7 +2222,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Seltene Monster im Gebiet lassen {0} zusätzliche Skarabäen fallen",
+        "string": "Seltene Monster im Gebiet lassen {0} zusätzliche [Thread|Fäden] fallen",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3063,6 +3119,42 @@
   {
     "English": null,
     "ids": [
+      "map_area_is_tormented"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Gebiete sind [TormentedArea|gequält]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "map_atlas_boss_pack_replacement_chance_%"
     ],
     "trade_stats": null,
@@ -3797,7 +3889,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Befallene Karten werden stattdessen als Extrem befallene Karten fallen gelassen",
+        "string": "Befallene Karten werden stattdessen als extrem befallene Karten fallen gelassen",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3995,8 +4087,8 @@
         "index_handlers": [
           []
         ],
-        "string": "Finaler Kartenboss hat {0}% erhöhte Widerstandsfähigkeit pro gestohlener Weissagungskarte",
-        "reminder_text": "(Je höher die Widerstandsfähigkeit eines Monsters ist, desto weniger Schaden erleidet es. Ein Monster mit 100% erhöhter Widerstandsfähigkeit erleidet 50% weniger Schaden, ein Monster mit 200% erhöhter Widerstandsfähigkeit erleidet 67% weniger Schaden, und so weiter. Eine verringerte Widerstandsfähigkeit bewirkt, dass ein Monster mehr Schaden erleidet.)",
+        "string": "Finaler Kartenboss hat {0}% erhöhte Hartnäckigkeit pro gestohlener Weissagungskarte",
+        "reminder_text": "(Je höher die Hartnäckigkeit eines Monsters ist, desto weniger Schaden erleidet es. Ein Monster mit 100% erhöhter Hartnäckigkeit erleidet 50% weniger Schaden, ein Monster mit 200% erhöhter Hartnäckigkeit erleidet 67% weniger Schaden, und so weiter. Eine verringerte Hartnäckigkeit bewirkt, dass ein Monster mehr Schaden erleidet.)",
         "is_markup": null
       }
     ],
@@ -5937,42 +6029,6 @@
   {
     "English": null,
     "ids": [
-      "map_harbinger_scarab_empower"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "Vorboten im Gebiet beschwören Ermächtigte Obelisken",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": null,
-    "Traditional Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "map_harbinger_single_currency_type"
     ],
     "trade_stats": null,
@@ -6461,7 +6517,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Legion-Monster können mehrmals aus der Stase herausgebrochen werden\nLegion-Monster erhalten erhöhten Schwierigkeitsgrad und Belohnung für jedes Mal, wenn sie herausgebrochen werden",
+        "string": "Legion-Monster können mehrmals aus der Stase befreit werden\nLegion-Monster erhalten erhöhten Schwierigkeitsgrad und Belohnungen für jedes Mal, das sie befreit werden",
         "reminder_text": null,
         "is_markup": null
       }
@@ -6861,7 +6917,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Gebiet enthält einen zusätzlichen Geistererscheinung-Schrein",
+        "string": "Gebiet enthält einen zusätzlichen [ApparitionShrine|Geistererscheinungs-Schrein]",
         "reminder_text": null,
         "is_markup": null
       },
@@ -6879,7 +6935,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Gebiet enthält {0} zusätzliche Geistererscheinung-Schreine",
+        "string": "Gebiet enthält {0} zusätzliche [ApparitionShrine|Geistererscheinungs-Schreine]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -7457,7 +7513,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Seltene Monster, die ursprüngliche Bewohner sind, sind von Essenzen eingeschlossen",
+        "string": "Seltene Monster, die ursprüngliche Bewohner sind, sind [Calcified|kalzifiziert]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -7619,7 +7675,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Gaben von Ritual-Altären können {0} Mal kostenlos gewürfelt werden",
+        "string": "Gaben von Ritual-Altären in Euren Karten können {0} zusätzliches Mal kostenlos gewürfelt werden",
         "reminder_text": null,
         "is_markup": null
       },
@@ -7637,7 +7693,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Gaben von Ritual-Altären können {0} Mal kostenlos gewürfelt werden",
+        "string": "Gaben von Ritual-Altären in Euren Karten können {0} zusätzliche Male kostenlos gewürfelt werden",
         "reminder_text": null,
         "is_markup": null
       }
@@ -7891,7 +7947,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% mehr gefundene Skarabäen im Gebiet",
+        "string": "{0}% mehr gefundene [Thread|Fäden] im Gebiet",
         "reminder_text": null,
         "is_markup": null
       },
@@ -7911,7 +7967,7 @@
             "negate"
           ]
         ],
-        "string": "{0}% weniger gefundene Skarabäen im Gebiet",
+        "string": "{0}% weniger gefundene [Thread|Fäden] im Gebiet",
         "reminder_text": null,
         "is_markup": null
       }
@@ -7947,7 +8003,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% mehr gefundene Skarabäen im Gebiet",
+        "string": "{0}% mehr gefundene [Thread|Fäden] im Gebiet",
         "reminder_text": null,
         "is_markup": null
       },
@@ -7967,7 +8023,7 @@
             "negate"
           ]
         ],
-        "string": "{0}% weniger gefundene Skarabäen im Gebiet",
+        "string": "{0}% weniger gefundene [Thread|Fäden] im Gebiet",
         "reminder_text": null,
         "is_markup": null
       }
@@ -8393,7 +8449,7 @@
             "divide_by_one_hundred_2dp_if_required"
           ]
         ],
-        "string": "{0}% Chance, Karten in Skarabäen umzuwandeln",
+        "string": "{0}% Chance, Karten in [Thread|Fäden] umzuwandeln",
         "reminder_text": null,
         "is_markup": null
       }
@@ -8505,7 +8561,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Syndikatsmitglieder haben {0}% Chance, bei Tod einen zusätzlichen Skarabäus fallen zu lassen",
+        "string": "Syndikatsmitglieder haben {0}% Chance, bei Tod einen zusätzlichen [Thread|Faden] fallen zu lassen",
         "reminder_text": null,
         "is_markup": null
       },
@@ -8523,7 +8579,43 @@
         "index_handlers": [
           []
         ],
-        "string": "Syndikatsmitglieder lassen bei Tod einen zusätzlichen Skarabäus fallen",
+        "string": "Syndikatsmitglieder lassen bei Tod einen zusätzlichen [Thread|Faden] fallen",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_terror_shrines"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Gebiet wird beherrscht von [TerrorShrines|Schreinen der Schrecken]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -9101,7 +9193,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Einzigartige Bosse verursachen {0}% erhöhten Schaden pro 1% Gruppengröße der Karte",
+        "string": "Einzigartige Bosse verursachen {0}% erhöhten Schaden pro 1% Karten-Gruppengröße",
         "reminder_text": null,
         "is_markup": null
       },
@@ -9121,7 +9213,7 @@
             "negate"
           ]
         ],
-        "string": "Einzigartige Bosse verursachen {0}% verringerten Schaden pro 1% Gruppengröße der Karte",
+        "string": "Einzigartige Bosse verursachen {0}% verringerten Schaden pro 1% Karten-Gruppengröße",
         "reminder_text": null,
         "is_markup": null
       }
@@ -9159,7 +9251,7 @@
             "divide_by_one_hundred_2dp_if_required"
           ]
         ],
-        "string": "{0}% erhöhte Seltenheit von Gegenständen von einzigartigen Bossen pro 1% Gruppengröße der Karte",
+        "string": "{0}% erhöhte Seltenheit von Gegenständen von einzigartigen Bossen pro 1% Karten-Gruppengröße",
         "reminder_text": null,
         "is_markup": null
       },
@@ -9180,7 +9272,7 @@
             "divide_by_one_hundred_2dp_if_required"
           ]
         ],
-        "string": "{0}% verringerte Seltenheit von Gegenständen von einzigartigen Bossen pro 1% Gruppengröße der Karte",
+        "string": "{0}% verringerte Seltenheit von Gegenständen von einzigartigen Bossen pro 1% Karten-Gruppengröße",
         "reminder_text": null,
         "is_markup": null
       }
@@ -9216,8 +9308,8 @@
         "index_handlers": [
           []
         ],
-        "string": "Einzigartige Bosse haben {0} erhöhte Widerstandskraft pro 1% Gruppengröße der Karte",
-        "reminder_text": "(Je höher die Widerstandsfähigkeit eines Monsters ist, desto weniger Schaden erleidet es. Ein Monster mit 100% erhöhter Widerstandsfähigkeit erleidet 50% weniger Schaden, ein Monster mit 200% erhöhter Widerstandsfähigkeit erleidet 67% weniger Schaden, und so weiter. Eine verringerte Widerstandsfähigkeit bewirkt, dass ein Monster mehr Schaden erleidet.)",
+        "string": "Einzigartige Bosse haben {0}% erhöhte Hartnäckigkeit pro 1% Karten-Gruppengröße",
+        "reminder_text": "(Je höher die Hartnäckigkeit eines Monsters ist, desto weniger Schaden erleidet es. Ein Monster mit 100% erhöhter Hartnäckigkeit erleidet 50% weniger Schaden, ein Monster mit 200% erhöhter Hartnäckigkeit erleidet 67% weniger Schaden, und so weiter. Eine verringerte Hartnäckigkeit bewirkt, dass ein Monster mehr Schaden erleidet.)",
         "is_markup": null
       },
       {
@@ -9236,8 +9328,8 @@
             "negate"
           ]
         ],
-        "string": "Einzigartige Bosse haben {0} verringerte Widerstandskraft pro 1% Gruppengröße der Karte",
-        "reminder_text": "(Je höher die Widerstandsfähigkeit eines Monsters ist, desto weniger Schaden erleidet es. Ein Monster mit 100% erhöhter Widerstandsfähigkeit erleidet 50% weniger Schaden, ein Monster mit 200% erhöhter Widerstandsfähigkeit erleidet 67% weniger Schaden, und so weiter. Eine verringerte Widerstandsfähigkeit bewirkt, dass ein Monster mehr Schaden erleidet.)",
+        "string": "Einzigartige Bosse haben {0}% verringerte Hartnäckigkeit pro 1% Karten-Gruppengröße",
+        "reminder_text": "(Je höher die Hartnäckigkeit eines Monsters ist, desto weniger Schaden erleidet es. Ein Monster mit 100% erhöhter Hartnäckigkeit erleidet 50% weniger Schaden, ein Monster mit 200% erhöhter Hartnäckigkeit erleidet 67% weniger Schaden, und so weiter. Eine verringerte Hartnäckigkeit bewirkt, dass ein Monster mehr Schaden erleidet.)",
         "is_markup": null
       }
     ],
@@ -14312,6 +14404,18 @@
         "id": "explicit.stat_2783958145",
         "text": "#% more Maximum Life",
         "type": "explicit",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_1214601201",
+        "text": "#% more Maximum Life",
+        "type": "implicit",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_137377270",
+        "text": "#% more Maximum Life",
+        "type": "implicit",
         "option": null
       }
     ],

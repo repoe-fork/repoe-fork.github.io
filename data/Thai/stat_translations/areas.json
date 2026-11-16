@@ -50,6 +50,62 @@
   {
     "English": null,
     "ids": [
+      "map_drop_scaling_+%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "เพิ่ม[AtlasDropScaling|แอตลาสดรอป]ในด่านนี้ {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "ลด[AtlasDropScaling|แอตลาสดรอป]ในด่านนี้ {0}%",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "map_item_drop_quantity_+%",
       "chart_quantity_voyage_display_stat"
     ],
@@ -289,7 +345,7 @@
         "index_handlers": [
           []
         ],
-        "string": "ม็อดของด่านนี้ ที่ส่งผลต่อ จำนวนของไอเทมที่พบ จะส่งผลต่อ ระดับความหายาก เช่นกัน",
+        "string": "ม็อดของด่านนี้ ที่ส่งผลต่อ [AtlasDropScaling|แอตลาสดรอป] จะส่งผลต่อ ระดับความหายากของไอเทม เช่นกัน",
         "reminder_text": null,
         "is_markup": null
       }
@@ -883,7 +939,7 @@
             "divide_by_one_hundred"
           ]
         ],
-        "string": "เพิ่มระดับความหายากของ ไอเทม {0}%",
+        "string": "เพิ่มระดับความหายากของไอเทม {0}%",
         "reminder_text": null,
         "is_markup": null
       },
@@ -904,7 +960,7 @@
             "divide_by_one_hundred"
           ]
         ],
-        "string": "ลดระดับความหายากของ ไอเทม {0}%",
+        "string": "ลดระดับความหายากของไอเทม {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2154,7 +2210,7 @@
         "index_handlers": [
           []
         ],
-        "string": "มอนสเตอร์แรร์ ในด่าน ดรอป สคารับ เพิ่มเติม 1 ตัว",
+        "string": "มอนสเตอร์แรร์ ในด่าน ดรอป [Thread|สายใย] เพิ่มเติม 1 ชิ้น",
         "reminder_text": null,
         "is_markup": null
       },
@@ -2172,7 +2228,7 @@
         "index_handlers": [
           []
         ],
-        "string": "มอนสเตอร์แรร์ ในด่าน ดรอป สคารับ เพิ่มเติม {0} ตัว",
+        "string": "มอนสเตอร์แรร์ ในด่าน ดรอป [Thread|สายใย] เพิ่มเติม {0} ชิ้น",
         "reminder_text": null,
         "is_markup": null
       }
@@ -2658,7 +2714,7 @@
         "index_handlers": [
           []
         ],
-        "string": "หลุม[ContainsAbyss|อะบิส] ในด่านที่ไม่ใช่หลุมสุดท้าย จะสร้าง [AbyssalCrystal|คริสตัลอะบิส] 1 ชิ้น เมื่อมันปิดตัว",
+        "string": "หลุม[ContainsAbyss|อะบิส] ที่ไม่ใช่หลุมสุดท้ายในด่าน จะสร้าง [AbyssalCrystal|คริสตัลอะบิส] 1 ชิ้น เมื่อมันปิดตัว",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3063,6 +3119,42 @@
   {
     "English": null,
     "ids": [
+      "map_area_is_tormented"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ด่านเป็น ด่าน[TormentedArea|ผีตายโหง]",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "map_atlas_boss_pack_replacement_chance_%"
     ],
     "trade_stats": null,
@@ -3217,7 +3309,7 @@
         "index_handlers": [
           []
         ],
-        "string": "เป้าหมายองค์กรอิมมอร์ทัล ที่ถูกสอบสวน มีโอกาสไม่สูญเสีย ยศ {0}% เมื่อสอบสวนสำเร็จ",
+        "string": "เป้าหมายองค์กรอิมมอร์ทัล ที่ถูกสอบสวนในด่าน\nมีโอกาสไม่สูญเสีย ยศ {0}% เมื่อสอบสวนสำเร็จ",
         "reminder_text": null,
         "is_markup": null
       },
@@ -3235,7 +3327,7 @@
         "index_handlers": [
           []
         ],
-        "string": "เป้าหมายองค์กรอิมมอร์ทัล ที่ถูกสอบสวน ไม่สูญเสีย ยศ เมื่อสอบสวนสำเร็จ",
+        "string": "เป้าหมายองค์กรอิมมอร์ทัล ที่ถูกสอบสวนในด่าน ไม่สูญเสีย ยศ เมื่อสอบสวนสำเร็จ",
         "reminder_text": null,
         "is_markup": null
       }
@@ -5937,42 +6029,6 @@
   {
     "English": null,
     "ids": [
-      "map_harbinger_scarab_empower"
-    ],
-    "trade_stats": null,
-    "hidden": null,
-    "French": null,
-    "German": null,
-    "Japanese": null,
-    "Korean": null,
-    "Portuguese": null,
-    "Russian": null,
-    "Spanish": null,
-    "Thai": [
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": null,
-            "negated": null
-          }
-        ],
-        "format": [
-          "ignore"
-        ],
-        "index_handlers": [
-          []
-        ],
-        "string": "ฮาร์บินเจอร์ ในด่าน เรียก แท่งศิลาเพิ่มพลัง",
-        "reminder_text": null,
-        "is_markup": null
-      }
-    ],
-    "Traditional Chinese": null
-  },
-  {
-    "English": null,
-    "ids": [
       "map_harbinger_single_currency_type"
     ],
     "trade_stats": null,
@@ -6867,7 +6923,7 @@
         "index_handlers": [
           []
         ],
-        "string": "ด่านมี แท่นบูชาผีสาง เพิ่มเติม 1 แท่น",
+        "string": "ด่านมี [ApparitionShrine|แท่นบูชาร่างเงา] เพิ่มเติม 1 แท่น",
         "reminder_text": null,
         "is_markup": null
       },
@@ -6885,7 +6941,7 @@
         "index_handlers": [
           []
         ],
-        "string": "ด่านมี แท่นบูชาผีสาง เพิ่มเติม {0} แท่น",
+        "string": "ด่านมี [ApparitionShrine|แท่นบูชาร่างเงา] เพิ่มเติม {0} แท่น",
         "reminder_text": null,
         "is_markup": null
       }
@@ -7247,7 +7303,7 @@
         "index_handlers": [
           []
         ],
-        "string": "ม็อดของผู้เล่นต่อ ระดับความหายากของ ไอเทม ไม่ส่งผลต่อด่าน",
+        "string": "ม็อดของผู้เล่นต่อ ระดับความหายากของไอเทม ไม่ส่งผลต่อด่าน",
         "reminder_text": null,
         "is_markup": null
       }
@@ -7463,7 +7519,7 @@
         "index_handlers": [
           []
         ],
-        "string": "มอนสเตอร์แรร์ ที่เป็นเจ้าถิ่นตามธรรมชาติของด่าน ถูกจองจำด้วย เอสเซนส์",
+        "string": "มอนสเตอร์แรร์ ที่เป็นผู้อาศัยตามธรรมชาติ [Calcified|จับผลึก]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -7625,7 +7681,7 @@
         "index_handlers": [
           []
         ],
-        "string": "การสุ่มของสนองบรรณาการที่ แท่นพิธีกรรม สุ่มได้ฟรีใน {0} ครั้งแรก",
+        "string": "การสุ่มของสนองบรรณาการที่ แท่นพิธีกรรม ในแผนที่ของคุณ ไม่มีค่าสุ่ม เพิ่มเติม {0} ครั้ง",
         "reminder_text": null,
         "is_markup": null
       },
@@ -7643,7 +7699,7 @@
         "index_handlers": [
           []
         ],
-        "string": "การสุ่มของสนองบรรณาการที่ แท่นพิธีกรรม สุ่มได้ฟรีใน {0} ครั้งแรก",
+        "string": "การสุ่มของสนองบรรณาการที่ แท่นพิธีกรรม ในแผนที่ของคุณ ไม่มีค่าสุ่ม เพิ่มเติม {0} ครั้ง",
         "reminder_text": null,
         "is_markup": null
       }
@@ -7897,7 +7953,7 @@
         "index_handlers": [
           []
         ],
-        "string": "เพิ่ม สคารับ ที่พบในด่าน อีก {0}%",
+        "string": "เพิ่ม [Thread|สายใย] ที่พบในด่าน อีก {0}%",
         "reminder_text": null,
         "is_markup": null
       },
@@ -7917,7 +7973,7 @@
             "negate"
           ]
         ],
-        "string": "ลด สคารับ ที่พบในด่าน อีก {0}%",
+        "string": "ลด [Thread|สายใย] ที่พบในด่าน อีก {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -7953,7 +8009,7 @@
         "index_handlers": [
           []
         ],
-        "string": "เพิ่ม สคารับ ที่พบในด่าน อีก {0}%",
+        "string": "เพิ่ม [Thread|สายใย] ที่พบในด่าน อีก {0}%",
         "reminder_text": null,
         "is_markup": null
       },
@@ -7973,7 +8029,7 @@
             "negate"
           ]
         ],
-        "string": "ลด สคารับ ที่พบในด่าน อีก {0}%",
+        "string": "ลด [Thread|สายใย] ที่พบในด่าน อีก {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -8399,7 +8455,7 @@
             "divide_by_one_hundred_2dp_if_required"
           ]
         ],
-        "string": "มีโอกาสแปลง แผนที่ เป็น สคารับ {0}%",
+        "string": "มีโอกาสแปลง แผนที่ เป็น [Thread|สายใย] {0}%",
         "reminder_text": null,
         "is_markup": null
       }
@@ -8511,7 +8567,7 @@
         "index_handlers": [
           []
         ],
-        "string": "สมาชิกองค์กรอิมมอร์ทัล มีโอกาสดรอป สคารับ เพิ่มเติม 1 ตัว {0}% เมื่อถูกสยบ",
+        "string": "สมาชิกองค์กรอิมมอร์ทัล มีโอกาสดรอป [Thread|สายใย] เพิ่มเติม 1 ชิ้น {0}% เมื่อถูกสยบ",
         "reminder_text": null,
         "is_markup": null
       },
@@ -8529,7 +8585,43 @@
         "index_handlers": [
           []
         ],
-        "string": "สมาชิกองค์กรอิมมอร์ทัล ดรอป สคารับ เพิ่มเติม 1 ตัว เมื่อถูกสยบ",
+        "string": "สมาชิกองค์กรอิมมอร์ทัล ดรอป [Thread|สายใย] เพิ่มเติม 1 ชิ้น เมื่อถูกสยบ",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "map_terror_shrines"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": null,
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "ignore"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "ด่าน ถูกครอบงำด้วย [TerrorShrines|แท่นบูชาสยองขวัญ]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -14312,6 +14404,18 @@
         "id": "explicit.stat_2783958145",
         "text": "#% more Maximum Life",
         "type": "explicit",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_1214601201",
+        "text": "#% more Maximum Life",
+        "type": "implicit",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_137377270",
+        "text": "#% more Maximum Life",
+        "type": "implicit",
         "option": null
       }
     ],

@@ -3375,7 +3375,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% Chance, eine Energie-Ladung bei Tötung zu erhalten",
+        "string": "{0}% Chance, bei Tötung eine Energie-Ladung zu erhalten",
         "reminder_text": null,
         "is_markup": null
       }
@@ -3687,6 +3687,86 @@
   {
     "English": null,
     "ids": [
+      "arcane_link_added_lightning_damage_from_mana_%"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Verbundenes Ziel verursacht zusätzlichen Blitzschaden in Höhe von {0}% Eures maximalen Manas",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "arcane_link_minimum_lightning_damage",
+      "arcane_link_maximum_lightning_damage"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          },
+          {
+            "min": null,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#",
+          "#"
+        ],
+        "index_handlers": [
+          [],
+          []
+        ],
+        "string": "Verbundenes Ziel verursacht {0} bis {1} zusätzlichen Blitzschaden",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
       "area_damage_+%"
     ],
     "trade_stats": null,
@@ -3965,7 +4045,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% erhöhte Angriffs- und Zaubergeschwindigkeit während Ansturm",
+        "string": "{0}% erhöhte Angriffs- und Zaubergeschwindigkeit, während Ihr [Onslaught|Ansturm] habt",
         "reminder_text": null,
         "is_markup": null
       },
@@ -3985,7 +4065,7 @@
             "negate"
           ]
         ],
-        "string": "{0}% verringerte Angriffs- und Zaubergeschwindigkeit während Ansturm",
+        "string": "{0}% verringerte Angriffs- und Zaubergeschwindigkeit, während Ihr [Onslaught|Ansturm] habt",
         "reminder_text": null,
         "is_markup": null
       }
@@ -4957,7 +5037,7 @@
           [],
           []
         ],
-        "string": "Gegner bei Treffer immer einfrieren",
+        "string": "Friert Gegner bei Treffer immer ein",
         "reminder_text": "(Einfrieren verringert die gegnerische Aktionsgeschwindigkeit auf Null und verhindert jede Handlung. Die Dauer ist abhängig vom Kälteschaden des Treffers)",
         "is_markup": null
       },
@@ -4982,7 +5062,7 @@
           [],
           []
         ],
-        "string": "Immer einfrieren",
+        "string": "Friert immer ein",
         "reminder_text": "(Einfrieren verringert die gegnerische Aktionsgeschwindigkeit auf Null und verhindert jede Handlung. Die Dauer ist abhängig vom Kälteschaden des Treffers)",
         "is_markup": null
       },
@@ -5418,38 +5498,18 @@
       {
         "condition": [
           {
-            "min": 1,
+            "min": null,
             "max": null,
             "negated": null
           }
         ],
         "format": [
-          "#"
+          "+#"
         ],
         "index_handlers": [
           []
         ],
-        "string": "{0}% erhöhte Seltenheit fallen gelassener Gegenstände von getöteten Gegnern",
-        "reminder_text": null,
-        "is_markup": null
-      },
-      {
-        "condition": [
-          {
-            "min": null,
-            "max": -1,
-            "negated": null
-          }
-        ],
-        "format": [
-          "#"
-        ],
-        "index_handlers": [
-          [
-            "negate"
-          ]
-        ],
-        "string": "{0}% verringerte Seltenheit fallen gelassener Gegenstände von getöteten Gegnern",
+        "string": "{0}% zur [PlayerItemRarity|Seltenheit] fallen gelassener Gegenstände von getöteten Gegnern",
         "reminder_text": null,
         "is_markup": null
       }
@@ -7499,7 +7559,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% verlängerte Blenddauer",
+        "string": "{0}% verlängerte [Blind|Blend]dauer",
         "reminder_text": null,
         "is_markup": null
       },
@@ -7519,7 +7579,61 @@
             "negate"
           ]
         ],
-        "string": "{0}% verkürzte Blenddauer",
+        "string": "{0}% verkürzte [Blind|Blend]dauer",
+        "reminder_text": null,
+        "is_markup": null
+      }
+    ],
+    "Japanese": null,
+    "Korean": null,
+    "Portuguese": null,
+    "Russian": null,
+    "Spanish": null,
+    "Thai": null,
+    "Traditional Chinese": null
+  },
+  {
+    "English": null,
+    "ids": [
+      "blood_flower_maximum_flowers"
+    ],
+    "trade_stats": null,
+    "hidden": null,
+    "French": null,
+    "German": [
+      {
+        "condition": [
+          {
+            "min": 1,
+            "max": 1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Maximal {0} Blüte",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": 2,
+            "max": null,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          []
+        ],
+        "string": "Maximal {0} Blüten",
         "reminder_text": null,
         "is_markup": null
       }
@@ -7649,7 +7763,7 @@
           [],
           []
         ],
-        "string": "Erzeugt {0} Stachel",
+        "string": "Erzeugt {0} Stacheln",
         "reminder_text": null,
         "is_markup": null
       },
@@ -7676,7 +7790,7 @@
           ],
           []
         ],
-        "string": "Erzeugt {0} weniger Stacheln",
+        "string": "Erzeugt {0} Stacheln weniger",
         "reminder_text": null,
         "is_markup": null
       }
@@ -8058,7 +8172,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Erhaltet eine Raserei-Ladung bei Tötung eines eingefrorenen Gegners",
+        "string": "Erhaltet bei Tötung eines eingefrorenen Gegners eine Raserei-Ladung",
         "reminder_text": null,
         "is_markup": null
       }
@@ -8428,7 +8542,7 @@
             "negate"
           ]
         ],
-        "string": "{0}% verringerte Schaden mit Treffern und Beeinträchtigungen für jede verbleibende Verkettung",
+        "string": "{0}% weniger Schaden mit Treffern und Beeinträchtigungen für jede verbleibende Verkettung",
         "reminder_text": null,
         "is_markup": null
       }
@@ -8612,7 +8726,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% erhöhte Wirkung von Geweihtem Boden",
+        "string": "{0}% erhöhte Wirkung von geweihtem Boden",
         "reminder_text": null,
         "is_markup": null
       }
@@ -8704,7 +8818,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% erhöhte Fläche von Geweihtem Boden",
+        "string": "{0}% erhöhte Fläche von geweihtem Boden",
         "reminder_text": null,
         "is_markup": null
       },
@@ -8724,7 +8838,7 @@
             "negate"
           ]
         ],
-        "string": "{0}% verringerte Fläche von Geweihtem Boden",
+        "string": "{0}% verringerte Fläche von geweihtem Boden",
         "reminder_text": null,
         "is_markup": null
       }
@@ -9110,7 +9224,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% mehr Bewegungsgeschwindigkeit während des Maximums an Phasen",
+        "string": "{0}% mehr Bewegungsgeschwindigkeit, während Ihr maximale Phasen habt",
         "reminder_text": null,
         "is_markup": null
       },
@@ -9130,7 +9244,7 @@
             "negate"
           ]
         ],
-        "string": "{0}% weniger Bewegungsgeschwindigkeit während des Maximums an Phasen",
+        "string": "{0}% weniger Bewegungsgeschwindigkeit, während Ihr maximale Phasen habt",
         "reminder_text": null,
         "is_markup": null
       }
@@ -9932,7 +10046,7 @@
             "milliseconds_to_seconds_1dp"
           ]
         ],
-        "string": "Gewährt Schemenform für {0} Sekunden",
+        "string": "Gewährt für {0} Sekunden Schemenform",
         "reminder_text": null,
         "is_markup": null
       }
@@ -9970,7 +10084,7 @@
             "milliseconds_to_seconds_2dp"
           ]
         ],
-        "string": "Dieser Zauber verliert 1 Intensität alle 0.5 Sekunden, während Ihr Euch bewegt, oder sofort, wenn Ihr Euch teleportiert",
+        "string": "Dieser Zauber verliert 1 Intensität alle 0.5 Sekunden, während Ihr in Bewegung seid, oder sofort, wenn Ihr Euch teleportiert",
         "reminder_text": null,
         "is_markup": null
       }
@@ -10350,8 +10464,8 @@
         "index_handlers": [
           []
         ],
-        "string": "Durch Euch verursachtes Bluten verursacht den Schaden {0}% schneller",
-        "reminder_text": "(Der Gesamtschaden bleibt gleich, jedoch wird dieser über eine kürzere Dauer verursacht)",
+        "string": "Von Euch verursachtes Bluten verursacht den Schaden {0}% [DamageFaster|schneller]",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -10386,8 +10500,8 @@
         "index_handlers": [
           []
         ],
-        "string": "Entzündungen verursachen den Schaden {0}% schneller",
-        "reminder_text": "(Der Gesamtschaden bleibt gleich, jedoch wird dieser über eine kürzere Dauer verursacht)",
+        "string": "Entzündungen verursachen den Schaden {0}% [DamageFaster|schneller]",
+        "reminder_text": null,
         "is_markup": null
       },
       {
@@ -10406,7 +10520,7 @@
             "negate"
           ]
         ],
-        "string": "Entzündungen verursachen den Schaden {0}% langsamer",
+        "string": "Entzündungen verursachen den Schaden {0}% [DamageSlower|langsamer]",
         "reminder_text": null,
         "is_markup": null
       }
@@ -10431,7 +10545,7 @@
       {
         "condition": [
           {
-            "min": null,
+            "min": 1,
             "max": null,
             "negated": null
           }
@@ -10442,8 +10556,28 @@
         "index_handlers": [
           []
         ],
-        "string": "Durch Euch verursachte Vergiftungen verursachen den Schaden {0}% schneller",
-        "reminder_text": "(Der Gesamtschaden bleibt gleich, jedoch wird dieser über eine kürzere Dauer verursacht)",
+        "string": "Von Euch angewendetes [Poison|Gift] verursacht den Schaden {0}% [DamageFaster|schneller]",
+        "reminder_text": null,
+        "is_markup": null
+      },
+      {
+        "condition": [
+          {
+            "min": null,
+            "max": -1,
+            "negated": null
+          }
+        ],
+        "format": [
+          "#"
+        ],
+        "index_handlers": [
+          [
+            "negate"
+          ]
+        ],
+        "string": "Von Euch angewendetes [Poison|Gift] verursacht den Schaden {0}% [DamageSlower|langsamer]",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -10872,8 +11006,8 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% Chance, Gegner bei Treffer zu blenden",
-        "reminder_text": "(Geblendet sein bewirkt 20% weniger Treffgenauigkeit und Ausweichwert, für 4 Sekunden)",
+        "string": "{0}% Chance, Gegner bei Treffer zu [Blind|blenden]",
+        "reminder_text": null,
         "is_markup": null
       }
     ],
@@ -12498,7 +12632,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% erhöhte Fläche von Geweihtem Boden",
+        "string": "{0}% erhöhte Fläche von geweihtem Boden",
         "reminder_text": null,
         "is_markup": null
       },
@@ -12518,7 +12652,7 @@
             "negate"
           ]
         ],
-        "string": "{0}% verringerte Fläche von Geweihtem Boden",
+        "string": "{0}% verringerte Fläche von geweihtem Boden",
         "reminder_text": null,
         "is_markup": null
       }
@@ -12688,7 +12822,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% verlängerte Brenndauer bei Gegnern",
+        "string": "{0}% verlängerte Entzündungsdauer bei Gegnern",
         "reminder_text": null,
         "is_markup": null
       },
@@ -12708,7 +12842,7 @@
             "negate"
           ]
         ],
-        "string": "{0}% verkürzte Brenndauer bei Gegnern",
+        "string": "{0}% verkürzte Entzündungsdauer bei Gegnern",
         "reminder_text": null,
         "is_markup": null
       }
@@ -12744,7 +12878,7 @@
         "index_handlers": [
           []
         ],
-        "string": "Verliert Intensität mit {0}% erhöhter Frequenz, während in Bewegung",
+        "string": "Verliert Intensität mit {0}% erhöhter Frequenz, während Ihr in Bewegung seid",
         "reminder_text": null,
         "is_markup": null
       },
@@ -12764,7 +12898,7 @@
             "negate"
           ]
         ],
-        "string": "Verliert Intensität mit {0}% verringerter Frequenz, während in Bewegung",
+        "string": "Verliert Intensität mit {0}% verringerter Frequenz, während Ihr in Bewegung seid",
         "reminder_text": null,
         "is_markup": null
       }
@@ -13886,7 +14020,7 @@
         "index_handlers": [
           []
         ],
-        "string": "{0}% erhöhter physischer Nahkampfschaden gegen blutende Gegner",
+        "string": "{0}% erhöhter Nahkampfschaden gegen blutende Gegner",
         "reminder_text": null,
         "is_markup": null
       },
@@ -13906,7 +14040,7 @@
             "negate"
           ]
         ],
-        "string": "{0}% verringerter physischer Nahkampfschaden gegen blutende Gegner",
+        "string": "{0}% verringerter Nahkampfschaden gegen blutende Gegner",
         "reminder_text": null,
         "is_markup": null
       }
@@ -22823,6 +22957,18 @@
         "id": "explicit.stat_2783958145",
         "text": "#% more Maximum Life",
         "type": "explicit",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_1214601201",
+        "text": "#% more Maximum Life",
+        "type": "implicit",
+        "option": null
+      },
+      {
+        "id": "implicit.stat_137377270",
+        "text": "#% more Maximum Life",
+        "type": "implicit",
         "option": null
       }
     ],
